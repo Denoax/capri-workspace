@@ -1,0 +1,13 @@
+[project]
+name = "codex-three-role-workflow"
+version = "0.1.0"
+description = "Experimental native three-role controller with measured context recovery"
+requires-python = ">=3.11"
+dependencies = ["websockets==17.1"]
+
+[tool.setuptools]
+package-dir = {"" = "controller"}
+packages = ["loop"]
+
+[tool.setuptools.data-files]
+"share/codex-three-role-workflow" = ["controller/policies/reference-led-design.md"]

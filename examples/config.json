@@ -1,0 +1,37 @@
+{
+  "settings": {
+    "binary": "codex",
+    "auth_file": "/absolute/operator-selected/existing-auth.json",
+    "state_dir": "/absolute/private/native-state",
+    "efforts": {
+      "thinker": "medium",
+      "doer": "medium",
+      "reviewer": "high"
+    }
+  },
+  "controller": "/absolute/curated-project/controller",
+  "roles": {
+    "thinker": {
+      "workspace": "/absolute/workflow-home/fixtures/example",
+      "inputs": "/absolute/thinker-inputs"
+    },
+    "doer": {
+      "workspace": "/absolute/isolated-candidate",
+      "inputs": "/absolute/doer-inputs"
+    },
+    "reviewer": {
+      "workspace": "/absolute/sealed-candidate",
+      "inputs": "/absolute/reviewer-inputs"
+    }
+  },
+  "home": "/absolute/workflow-home",
+  "workflow": {
+    "notes": "/absolute/private-observable-notes",
+    "codex_binary": "/absolute/existing/codex",
+    "authorized_repositories": [
+      "/absolute/workflow-home/fixtures/example"
+    ],
+    "production_automation": "DISABLED_PENDING_QUALIFICATION",
+    "instruction_paths": []
+  }
+}
