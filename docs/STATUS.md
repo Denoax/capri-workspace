@@ -20,3 +20,7 @@ V4 was approved and merged through PR #2 at `beac62ac9223a01ae90c9e8380bb7805d9c
 Focused local checks cover source integrity, static editions, actual image loading, 390/768/1440 px in dark/light, keyboard disclosures/links and reduced-motion fallback. Repeated browser loop recordings exist; uninterrupted perceptual motion and hosted GitHub UI/media behavior remain unverified. GitHub's authenticated Markdown API rendering is a separate, narrower check.
 
 Approved-main [CI run 39964880216](https://github.com/Denoax/capri/actions/runs/39964880216) failed the unchanged collector-confinement diagnostic and skipped the required runtime suite. No runtime requalification or green CI result is claimed by this art task.
+
+## V6 presentation candidate
+
+V6 builds on unaccepted V5 `658c7882149282b416bbe31ea005464031d7aeb5`, without treating it as merged. It replaces the root's explanation placement with Capri's context comparison, a 16-second handoff guide, a complete static comic and fixture A teaching example. [Full lesson and evidence limits](CAPRI_EXPLAINS.md). Approved hero bytes and all runtime/profile/lock/CI files are preserved. Native qualification, evaluation denominators and existing isolation failure remain unchanged. The testing push delivers a review candidate; Mani's visual acceptance and main integration remain separate.

@@ -74,3 +74,13 @@ python tools/check_capri_presentation.py
 Media requirements pin Pillow 12.3.0 and fontTools 4.60.1. The V5 builder writes only `showcase/capri/afterimage`; it does not rebuild approved graphics or alter runtime dependencies, configuration, CI or locks. `COMPOSITION.json` records frame/mask/timing choices; static SVG masters use the existing OFL glyphs and have PNG alternatives. [Still README](README_STATIC.md) and [still Afterimage](AFTERIMAGE_STATIC.md) embed no GIFs.
 
 The optional STL typography object is omitted because authenticated hosted viewer inspection is unavailable to this candidate. No character model, rig or rotatable hosted result is claimed. Public anime redistribution and the code license remain unresolved; private review does not clear them.
+
+## V6 character guide
+
+The root explanation uses whole source-frame insets: source 1/frame 97 (opening/Thinker), source 14/frame 0 (hands beside the handoff), and source 12/frame 5 (review). The existing selected-source hashes and uploader credits remain in [SOURCES.json](../showcase/capri/SOURCES.json). Insets retain the complete source boxes and are never mirrored or used as a purported complete cutout rig. No character frames, missing anatomy or visual media were generated.
+
+[Editable outlined SVGs, delivery media and build hashes](../showcase/capri/explainer/BUILD.json) are built by [build_capri_explainer.py](../tools/build_capri_explainer.py). Desktop and portrait guides each run for 16 seconds, with 3.6-second reading holds and 0.4-second moves. One shared palette per guide avoids palette pumping. The complete static comic contains every beat. Speech is original educational copy, not canon dialogue.
+
+Barlow Regular adds a readable speech face alongside the existing Barlow Condensed display face. Its source is [Google Fonts' Barlow directory](https://github.com/google/fonts/tree/main/ofl/barlow); copyright 2017 The Barlow Project Authors. Both are covered by the bundled [SIL OFL notice](../showcase/capri/fonts/OFL.txt). Underlying anime redistribution rights remain unverified.
+
+Rebuild V6 in the same separate media environment with `python tools/build_capri_explainer.py`, then run `python tools/check_capri_presentation.py`. No network or runtime session is used by the builder.

@@ -16,7 +16,10 @@ def embedded_images(text):
 def main():
     errors=[];links=0
     for path in [ROOT/'README.md',*sorted((ROOT/'docs').glob('*.md'))]:
-        text=path.read_text();targets=re.findall(r'!?\[[^\]]*\]\(([^\s)]+)\)',text)+re.findall(r'(?:src|srcset|href)="([^"]+)"',text)
+        text=path.read_text()
+        anchors=re.findall(r'<a\s+(?:id|name)="([^"]+)"',text)
+        if len(anchors)!=len(set(anchors)):errors.append('Duplicate native anchor: '+path.name)
+        targets=re.findall(r'!?\[[^\]]*\]\(([^\s)]+)\)',text)+re.findall(r'(?:src|srcset|href)="([^"]+)"',text)
         for target in targets:
             url=urlsplit(target)
             if url.scheme or url.netloc:continue
@@ -33,7 +36,7 @@ def main():
         if any(urlsplit(x).path.lower().endswith('.gif') for x in embedded_images(path.read_text())):
             errors.append('Static edition embeds animated media: '+path.name)
     root_motion=[x for x in embedded_images((ROOT/'README.md').read_text()) if urlsplit(x).path.endswith('.gif')]
-    if root_motion!=['showcase/capri/hero.gif']:errors.append('Root README must retain only the approved hero loop')
+    if root_motion!=['showcase/capri/hero.gif','showcase/capri/explainer/guide-mobile.gif','showcase/capri/explainer/guide.gif']:errors.append('Root README must retain the hero and one responsive guide')
     sources=json.loads((MEDIA/'SOURCES.json').read_text());selected=sources['selected']
     recipe=json.loads((MEDIA/'afterimage/COMPOSITION.json').read_text())
     added_ids={x['source'] for x in recipe['stills'].values()}|{recipe['motion']['source']}
@@ -75,6 +78,26 @@ def main():
             if name=='interlude.png' and list(im.size)!=recipe['motion']['delivery_size']:errors.append('Interlude still size mismatch')
     for path in (MEDIA/'afterimage').glob('*.svg'):
         if re.search(r'<(?:text|script|animate|foreignObject)\b',path.read_text()):errors.append('Unsupported/unoutlined SVG content: '+path.name)
+    explainer=json.loads((MEDIA/'explainer/BUILD.json').read_text())
+    if len({(p['source'],p['frame']) for p in explainer['poses']})<3:
+        errors.append('Explainer needs three recorded instructor poses')
+    for name,record in explainer['outputs'].items():
+        path=MEDIA/'explainer'/name
+        if path.stat().st_size!=record['bytes'] or hashlib.sha256(path.read_bytes()).hexdigest()!=record['sha256']:
+            errors.append('Explainer build hash mismatch: '+name)
+        if path.suffix=='.svg' and re.search(r'<(?:text|script|animate|foreignObject)\b',path.read_text()):
+            errors.append('Unsupported/unoutlined explainer SVG: '+name)
+        if path.suffix=='.gif':
+            with Image.open(path) as im:
+                duration=0
+                for i in range(im.n_frames):im.seek(i);im.load();duration+=im.info.get('duration',0)
+                if duration!=16000 or im.info.get('loop')!=0:errors.append('Guide timing/loop mismatch: '+name)
+                assets.append({'path':'explainer/'+name,'size':list(im.size),'bytes':path.stat().st_size,'frames':im.n_frames,'duration_ms':duration})
+    if not (MEDIA/'fonts/Barlow-Regular.ttf').is_file():errors.append('Missing regular speech font')
+    lesson=(ROOT/'docs/CAPRI_EXPLAINS.md').read_text()
+    if len(re.findall(r'^## [1-6]\.',lesson,re.M))!=6:errors.append('Incomplete six-lesson native transcript')
+    if any(urlsplit(x).path.lower().endswith('.gif') for x in embedded_images(lesson)):
+        errors.append('Full native lesson must stay static')
     result={'status':'FAIL' if errors else 'PASS','local_links':links,'assets':assets,'errors':errors,'scope':'Documentation targets and delivery formats/timing; not runtime qualification or visual acceptance'}
     print(json.dumps(result,indent=2));return bool(errors)
 

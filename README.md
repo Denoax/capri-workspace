@@ -1,6 +1,8 @@
 <img src="showcase/capri/hero.gif" alt="CAPRI — her green face, expressive eyes, jagged silhouette and long magenta hands." width="1000">
 
-A three-session Codex workflow for research, scoped implementation and independent review. You make the final decision.
+**Give the plan, the patch and the review their own context.**
+
+CAPRI coordinates three Codex sessions: one to research and scope, one to build a candidate, and one to review it against the request. Explicit handoffs carry the decisions forward. You decide what ships.
 
 <p align="center">
   <a href="#quickstart"><img src="showcase/capri/identity/nav-start.svg" width="160" alt="Start — offline setup"></a>
@@ -11,31 +13,57 @@ A three-session Codex workflow for research, scoped implementation and independe
 
 <p align="center"><a href="docs/README_STATIC.md">Static edition</a> · <a href="docs/STATUS.md">Development status</a> · <a href="docs/ASSETS.md">Art credits</a></p>
 
+<picture>
+  <source media="(max-width: 600px)" srcset="showcase/capri/explainer/context-mobile.svg">
+  <img src="showcase/capri/explainer/context.svg" alt="Capri: One task. Three focused conversations. I'll show you what moves between them. Compare one growing conversation with purpose-specific Thinker, Doer and Reviewer contexts; originals remain retrievable." width="1200">
+</picture>
+
+A **context** is the information a role can work with: instructions, source, conversation history and tool results. Separate contexts let each role focus on its purpose. Useful handoffs retain the original request, latest corrections, relevant source, constraints and checks; exploratory bulk need not fill every recipient's conversation. [Why select context?](docs/CAPRI_EXPLAINS.md#why-select-context)
+
 <a id="the-loop"></a>
-<h2>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="showcase/capri/identity/chapter-loop-dark.svg">
-  <img src="showcase/capri/identity/chapter-loop-light.svg" alt="Three voices" width="1000">
-</picture>
-</h2>
+
+## Follow the handoff
 
 <picture>
-  <source media="(max-width: 600px)" srcset="showcase/capri/identity/loop-map-mobile.svg">
-  <img src="showcase/capri/identity/loop-map.svg" alt="Thinker researches; Doer implements; Reviewer verifies; Thinker reports; the human decides. Uncertain execution holds for reconciliation." width="1000">
+  <source media="(max-width: 600px)" srcset="showcase/capri/explainer/guide-mobile.gif">
+  <img src="showcase/capri/explainer/guide.gif" alt="Capri guides four beats: Thinker plans with source and acceptance checks; Doer carries the correction into a scoped candidate; Reviewer checks request, patch and evidence; Thinker reports and the human decides. Uncertain effects hold for reconciliation. Complete static lesson follows." width="1200">
 </picture>
 
-The **Thinker** researches and scopes. The **Doer** works on an isolated candidate. A fresh **Reviewer** checks the sealed result and evidence. The Thinker reports back; you decide what happens next. This map describes the workflow, not a completed qualification run.
+[Complete static edition](docs/README_STATIC.md) · [All six lessons and native transcript](docs/CAPRI_EXPLAINS.md) · [What is proven here?](docs/CAPRI_EXPLAINS.md#what-is-proven-here)
+
+1. **Thinker → Doer:** the scoped task, original request and corrections, source identity, acceptance checks and open questions.
+2. **Doer → Reviewer:** the candidate, checks and known limits, together with the request and constraints. A fresh review context helps separate building from checking; using the same model can still share blind spots.
+3. **Reviewer → Thinker → you:** findings and evidence become a report. Current CAPRI stages are ordered with **one write owner**. Separate sessions do not mean simultaneous editing. Uncertain effects hold for reconciliation. [Implementation boundaries](ARCHITECTURE.md).
 
 <details>
-<summary><strong>Inside the loop</strong> — models, context and ownership</summary>
+<summary><strong>Read all four beats in one still</strong></summary>
 
-All three roles request `gpt-6.1-sol`. The selected profile uses medium Thinker/Doer effort and high Reviewer effort. One owner controls writes. Frozen contracts, checkpoints and source checks bind each handoff to its inputs.
+<picture>
+  <source media="(max-width: 600px)" srcset="showcase/capri/explainer/comic-mobile.svg">
+  <img src="showcase/capri/explainer/comic.svg" alt="Complete four-beat static comic. Thinker: task, source and checks. Doer: candidate, checks and limits. Reviewer: findings and evidence. Thinker report: human decision, no automatic next task. Uncertain effects hold." width="1200">
+</picture>
 
-Recent-request footprint, cumulative usage and exact context occupancy are different measurements. Exact occupancy stays **UNKNOWN** where the runtime cannot establish it. Stale inputs or uncertain effects hold work for reconciliation. Formal outcomes stop at `AWAITING_HUMAN`; no successor task starts automatically.
-
-[Native profile](NATIVE_PROFILE.md) · [Architecture](ARCHITECTURE.md) · [Evaluation](EVALUATION.md)
+The numbered transcript above conveys every stage without waiting for motion. The [full lesson](docs/CAPRI_EXPLAINS.md) explains the inner tool loop and review limits too. GitHub has no custom playback controls here; the static edition embeds no animated media.
 
 </details>
+
+## A correction that must travel
+
+**Illustration from fixture A — expected behavior, not a completed live run.** The first request says `label(text)` trims outer whitespace, preserves case and internal spaces, rejects non-strings, and uses `Anonymous` for blank text. The latest correction changes the blank label to **`Untitled`**; compatible earlier rules remain. Only `label.py` may change. [Original request](evaluation/fixtures/A/INITIAL.md) · [Correction](evaluation/fixtures/A/CORRECTION.md).
+
+| Input | Expected check after the correction |
+| :--- | :--- |
+| `"   "` | `"Untitled"` |
+| `"  MiX  Case  "` | `"MiX  Case"` |
+| `None` | raises `TypeError` |
+
+The Doer's packet carries the correction with the original rules. The Reviewer checks both against the candidate and evidence. A summary saying only “implement a label function” loses the decision that matters. [Walk through the packet](docs/CAPRI_EXPLAINS.md#3-carry-decisions-with-the-packet).
+
+## When is the extra coordination worth it?
+
+Research-heavy work, evolving requirements and changes with checkable outcomes can benefit from focused roles and explicit handoffs. That is the hypothesis behind CAPRI, **not a measured speed or cost advantage**. Coordination itself takes tokens and time. One well-structured session can suit a small, clear task. Broader research finds outcomes depend on task structure and coordination design; it does not benchmark this project. [Research and limits](docs/CAPRI_EXPLAINS.md#when-to-try-it).
+
+**Experimental:** original evaluation: **8 scheduled, 2 started, 1 graded, 1 aborted, 6 unrun**. The graded row passed 8/8 held-out checks. Repaired-source comparison: **8 scheduled, 0 started, 8 unrun**. Native qualification and independent final review remain pending at the recorded cutoff. The approved-main CI isolation check failed and the runtime suite was skipped. [What is proven here?](docs/CAPRI_EXPLAINS.md#what-is-proven-here) · [Evaluation](EVALUATION.md) · [Status](docs/STATUS.md).
 
 <a id="quickstart"></a>
 <h2>
@@ -91,23 +119,6 @@ Native use additionally requires the qualified Codex CLI 0.163.0/profile, existi
 <a href="docs/README.md"><img src="showcase/capri/afterimage/path-index.svg" alt="Reading paths — setup, architecture, ownership, recovery and evaluation" width="230"></a>
 
 [Browse the documentation by task](docs/README.md), with a responsive ownership and reconciliation map.
-
-<details>
-<summary><strong>Read the handoff map as Mermaid</strong></summary>
-
-```mermaid
-flowchart TD
-    T["Thinker: research and scope"] --> D["Doer: isolated candidate"]
-    D --> R["Reviewer: sealed result"]
-    R --> P["Thinker: report"]
-    P --> H["Human decision"]
-    D -- "uncertain effects" --> F["Hold for reconciliation"]
-    R -- "uncertain effects" --> F
-```
-
-The diagram shows intended stage order and the uncertainty branch. It does not claim a successful live run.
-
-</details>
 
 > [!IMPORTANT]
 > **Experimental.** Native lifecycle/recovery qualification, the separate repaired-source comparison and final independent review remain pending at the recorded source cutoff. The current CI isolation prerequisite is failing; the runtime suite was skipped. See [current status](docs/STATUS.md).

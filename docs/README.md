@@ -42,3 +42,5 @@ Recent-request footprint, cumulative usage and exact context occupancy are diffe
 > **Experimental.** Current-source native qualification and final independent review remain pending. Existing CI fails its isolation prerequisite and skips the runtime suite. This navigation artwork is not evidence of a successful run. [Current limits](STATUS.md).
 
 [Implementation guide](../IMPLEMENTATION_README.md) · [Art and motion](AFTERIMAGE.md) · [Credits and build instructions](ASSETS.md)
+
+[Capri explains CAPRI](CAPRI_EXPLAINS.md) — six lessons, native transcript, worked correction and evidence limits.

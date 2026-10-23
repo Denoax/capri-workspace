@@ -55,3 +55,11 @@ The README sources and official platform guidance were inspected for this execut
 - `afterimage/ownership*.svg`: source identity, one write owner and uncertain-effect hold, grounded in architecture and the maintenance contract. The approved role map still defines stage order.
 
 Actual sizes, captures and verification limits belong in the V5 review packet. A local preview or decoded sheet does not certify hosted GitHub behavior, uninterrupted perceptual motion or human visual approval.
+
+## V6 instructor and explanation
+
+- Mani's user-described *Dr. STONE* small-instructor/roadmap premise motivates Capri appearing at the active part of the lesson. [Official STONE ROAD episode premise](https://dr-stone.jp/story/1st/08/) confirms the roadmap context; no shot-by-shot animation study or recreation is claimed. Borrowed principle: a character guides attention through a stable explanation. All bubbles/connectors and teaching dialogue here are original.
+- Nicky Case's [Explorable Explanations design patterns](https://blog.ncase.me/explorable-explanations-4-more-design-patterns/) motivate a concrete prediction before revealing the fixture answer. Implemented as a native keyboard-accessible disclosure, not an inert interactive-looking diagram.
+- Existing Capri source 1/14/12 frames supply expression, hand gesture and review intervention. Full boxes preserve their actual silhouettes and marks. Regular Barlow speech, stable role geometry and long holds keep teaching legible. Portrait compositions reorganize the roles rather than reducing a wide chart to unreadable text.
+
+The static comic and native transcript carry the whole lesson. GitHub [does not support inline SVG animation](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files); motion is delivered as GIF, with static SVG masters. Local preview playback controls are review tools, not GitHub features.

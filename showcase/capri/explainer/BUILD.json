@@ -1,0 +1,139 @@
+{
+  "version": 6,
+  "poses": [
+    {
+      "source": 1,
+      "frame": 97,
+      "treatment": "whole source-frame inset; no mirroring, invented anatomy or generative fill"
+    },
+    {
+      "source": 14,
+      "frame": 0,
+      "treatment": "whole source-frame inset; no mirroring, invented anatomy or generative fill"
+    },
+    {
+      "source": 12,
+      "frame": 5,
+      "treatment": "whole source-frame inset; no mirroring, invented anatomy or generative fill"
+    }
+  ],
+  "overview_duration_ms": 16000,
+  "reading_hold_ms": 3600,
+  "transition_ms": 400,
+  "outputs": {
+    "comic-mobile.png": {
+      "bytes": 275340,
+      "sha256": "90f8415adea37ae60ec48e310716ba94be4044190579efa869dfaf34ff7f5d59"
+    },
+    "comic-mobile.svg": {
+      "bytes": 1002725,
+      "sha256": "d7341c0ab49f597ce08c5defe96c03eaae05c2f4ad143f847a106e3b62ac8b16"
+    },
+    "comic.png": {
+      "bytes": 270557,
+      "sha256": "db6a7b69e6d75926ad0f22f89baabcddab134e175680f207b7fe52ef678fb151"
+    },
+    "comic.svg": {
+      "bytes": 1002986,
+      "sha256": "5654d661f22ea701d5368b662e8d1d658b5861ddbdd86a23cdd26244eba6a9e3"
+    },
+    "context-mobile.png": {
+      "bytes": 184874,
+      "sha256": "7fbeb2b59cfec74561fe19813bf6038fcc5ed0fb0f1b6c85d00601e9ab0dcae0"
+    },
+    "context-mobile.svg": {
+      "bytes": 395233,
+      "sha256": "46c414b8e2bb8f7375f2cb461bbab6bf637479e82b78a515e33ac8ecdca79f78"
+    },
+    "context.png": {
+      "bytes": 213226,
+      "sha256": "bf8741916cadd2a60f6c79ce0779d80197be4804c63cba4f37a00c682a641b9a"
+    },
+    "context.svg": {
+      "bytes": 419495,
+      "sha256": "1fa62139be16e5ea23a42a693a0b25bfb807c7c39502235554bbf9a1a705d181"
+    },
+    "guide-beat-1.png": {
+      "bytes": 165064,
+      "sha256": "84ea1e7805e789d19ef7bdf34b63410e97156374b717364e14e73e8fe59d855a"
+    },
+    "guide-beat-1.svg": {
+      "bytes": 380333,
+      "sha256": "9af31f562cafa9220bf905002c21f0cc35e06bf2779350609e86f18763a5a4ed"
+    },
+    "guide-beat-2.png": {
+      "bytes": 217944,
+      "sha256": "40be2bfb10f6c319d1e823ee1d599e72c6d1dff1b1b29c9a08e7b6d940faa069"
+    },
+    "guide-beat-2.svg": {
+      "bytes": 352422,
+      "sha256": "b8a32b6d2b2a3ae336c0af913e212e82d64c687d65bfc2da6c72da03405dfb32"
+    },
+    "guide-beat-3.png": {
+      "bytes": 193983,
+      "sha256": "300e4a7b1b7dc4bd23fd06a17f521caa74ef7d6d93dde2e90e17944e9ea46185"
+    },
+    "guide-beat-3.svg": {
+      "bytes": 300007,
+      "sha256": "674862b64c9d0f75a5dd5b9c7a1cfb8637fb49330d2a181aaadb49dc3ef5e999"
+    },
+    "guide-beat-4.png": {
+      "bytes": 193716,
+      "sha256": "c0c4ea96a894c142bcac2bd566d747c8d85caeec624454db695167892d74206a"
+    },
+    "guide-beat-4.svg": {
+      "bytes": 301106,
+      "sha256": "1219537f1418e295f8142b5287cc95f8f0984b7caeba52d181199c067f984138"
+    },
+    "guide-mobile-beat-1.png": {
+      "bytes": 133682,
+      "sha256": "fd090a0c19509a8e8bce5eaa206d0344d986871201407e83904f7988fae13ca4"
+    },
+    "guide-mobile-beat-1.svg": {
+      "bytes": 382517,
+      "sha256": "333013baceb2e809c9d45fecbd5734e04a136066d1bb29209cc94c8c2f218ea5"
+    },
+    "guide-mobile-beat-2.png": {
+      "bytes": 166647,
+      "sha256": "4201df4cb4722abc38f46c7c32faab2cda7873a9f6397792509e4c063cec0346"
+    },
+    "guide-mobile-beat-2.svg": {
+      "bytes": 348143,
+      "sha256": "47ff31bf422320fcc328c967f9862e2ab73388fc10bdd2f26a8fa45c42e90b6a"
+    },
+    "guide-mobile-beat-3.png": {
+      "bytes": 154162,
+      "sha256": "0809890a9e733bb896016920f69a1ccfe670207472cf2d6aa51727b95f63092c"
+    },
+    "guide-mobile-beat-3.svg": {
+      "bytes": 302183,
+      "sha256": "78142a966542bd1c9bd4f9080e798001e28476b7ef2693cdb6ef4616805c439c"
+    },
+    "guide-mobile-beat-4.png": {
+      "bytes": 154058,
+      "sha256": "f40a98ec566d6c6216b204386ee0e57608cc21f933a55bcca75aab1578e363ba"
+    },
+    "guide-mobile-beat-4.svg": {
+      "bytes": 303282,
+      "sha256": "48f225eecaa97c0dad3702c71a49b1ed2816cb81f8d4c65e0307c190422e1a1a"
+    },
+    "guide-mobile.gif": {
+      "bytes": 266727,
+      "sha256": "806cc78754399f742c4a10b56c5b02ce0a25c9db1ad2be6ad60aea1d8bb1c1d2"
+    },
+    "guide-mobile.png": {
+      "bytes": 271019,
+      "sha256": "5a10a70831a7a2d4edff1d3e412fd7bfc822842d9e31de8a035908d1c1d92b10"
+    },
+    "guide.gif": {
+      "bytes": 364162,
+      "sha256": "9b3d72fcf6af95e13938b0e987a5bbc15d299f84ce16d39c4174ad5c56a02fe0"
+    },
+    "guide.png": {
+      "bytes": 266616,
+      "sha256": "256604c6698288d9017c7b6ebfda784579eb11a365f45151a0c5114ac5ed9091"
+    }
+  },
+  "scope": "Deterministic source-derived illustration; no live run, speed/cost measurement or visual approval",
+  "font": "Barlow Regular and Barlow Condensed ExtraBold Italic; bundled SIL OFL notice"
+}
