@@ -14,9 +14,11 @@ jobs:
           python3 -m venv "$RUNNER_TEMP/workflow-venv"
           "$RUNNER_TEMP/workflow-venv/bin/python" -m pip install --require-hashes -r requirements.lock
       - name: Diagnose and probe unchanged collector confinement
-        run: "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/collector_diagnostics.py --output "$RUNNER_TEMP/ci-evidence"
+        run: |
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/collector_diagnostics.py --output "$RUNNER_TEMP/ci-evidence"
       - name: Required supported-host suite
-        run: "$RUNNER_TEMP/workflow-venv/bin/python" -B -m unittest discover -s controller/tests -v
+        run: |
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B -m unittest discover -s controller/tests -v
       - name: Preserve namespace diagnostics even on failure
         if: always()
         uses: actions/upload-artifact@v4
