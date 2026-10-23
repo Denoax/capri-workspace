@@ -20,7 +20,7 @@ from loop.util import Rejected, atomic, redact, now, tree, identity
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', required=True, type=Path)
-    parser.add_argument('command', choices=('start', 'status', 'attach', 'stop', 'recontract', 'continue', 'prepare-maintenance', 'recover-startup', 'finish-review', 'maintenance', 'resume-runtime'))
+    parser.add_argument('command', choices=('start', 'status', 'attach', 'stop', 'recontract', 'continue', 'prepare-maintenance', 'recover-startup', 'finish-review', 'maintenance', 'resume-runtime', 'fence-owner-intake'))
     parser.add_argument('--role', choices=ROLES)
     parser.add_argument('--action',choices=('compact-role','replace-role','checkpoint-runtime','reconcile-maintenance'))
     parser.add_argument('--prepared', type=Path)
@@ -35,6 +35,11 @@ def main():
     root = Path(settings.state_dir).resolve()
     registry = root / 'registry.json'
     owner = root / 'supervisor.json'
+    if args.command == 'fence-owner-intake':
+        if not args.binding:raise Rejected('Exact stopped owner-intake binding required')
+        from loop.native_owner_fence import fence
+        print(json.dumps(fence(config,json.loads(args.binding.read_text()),Path(__file__).resolve().parent,check_only=args.check)),flush=True)
+        return
     if args.command == 'prepare-maintenance':
         if not args.binding:raise Rejected('Exact native maintenance binding required')
         from loop.native_startup import prepare

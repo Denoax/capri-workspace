@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Install declared Python and isolation prerequisites
         run: |
           sudo apt-get update
@@ -15,7 +17,7 @@ jobs:
           "$RUNNER_TEMP/workflow-venv/bin/python" -m pip install --require-hashes -r requirements.lock
       - name: Diagnose and probe unchanged collector confinement
         run: |
-          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/collector_diagnostics.py --output "$RUNNER_TEMP/ci-evidence"
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/collector_diagnostics.py --ci-kernel-logs --output "$RUNNER_TEMP/ci-evidence"
       - name: Required supported-host suite
         run: |
           "$RUNNER_TEMP/workflow-venv/bin/python" -B -m unittest discover -s controller/tests -v

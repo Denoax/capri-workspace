@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from datetime import datetime, timezone
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'controller'))
 from loop.collector import check_command
 from loop.util import write_json
@@ -23,7 +24,9 @@ def command(args):
 
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',required=True,type=Path);args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',required=True,type=Path)
+    parser.add_argument('--ci-kernel-logs',action='store_true',help='Read post-probe kernel/AppArmor logs using noninteractive sudo on an ephemeral CI runner; changes no policy')
+    args=parser.parse_args()
     args.output.mkdir(parents=True,exist_ok=True)
     report={'origin':'ACTUAL_HOST_DIAGNOSTICS','platform':platform.platform(),'kernel':platform.release(),'python':sys.version,'executable':sys.executable,
         'runner':{key:os.environ.get(key,'UNKNOWN') for key in ('ImageOS','ImageVersion','RUNNER_OS','RUNNER_ARCH')},'policy_files':{},
@@ -33,9 +36,20 @@ def main():
         except OSError as ex:report['policy_files'][name]='UNAVAILABLE: '+str(ex)
     names=('user','mnt','pid','net');outer={name:os.readlink('/proc/self/ns/'+name) for name in names}
     script="import json,os,socket;print(json.dumps({'namespaces':{n:os.readlink('/proc/self/ns/'+n) for n in "+repr(names)+"},'interfaces':socket.if_nameindex()}))"
+    probe_started=datetime.now(timezone.utc).isoformat()
     with tempfile.TemporaryDirectory() as temp:
         checkout=Path(temp)/'checkout';checkout.mkdir()
         result=check_command(checkout,['python3','-c',script],args.output/'collector-probe',timeout=10)
+    probe_finished=datetime.now(timezone.utc).isoformat()
+    after=[command(['journalctl','-k','--no-pager','--since',probe_started])]
+    if args.ci_kernel_logs:
+        after += [command(['sudo','-n','journalctl','-k','--no-pager','--since',probe_started]),
+                  command(['sudo','-n','aa-status','--json']),
+                  command(['apparmor_parser','--version'])]
+    report.update(probe_started_at=probe_started,probe_finished_at=probe_finished,after_probe_commands=after)
+    for name in ('/etc/apparmor.d/bwrap','/etc/apparmor.d/bwrap-userns-restrict','/sys/kernel/security/apparmor/profiles'):
+        try:report['policy_files'][name]=Path(name).read_text()[-16000:]
+        except OSError as ex:report['policy_files'][name]='UNAVAILABLE: '+str(ex)
     try:observed=json.loads((args.output/'collector-probe/stdout.txt').read_text())
     except (ValueError,OSError):observed={}
     valid=result['exit']==0 and not result['timeout'] and result['source_unchanged'] and all(observed.get('namespaces',{}).get(name)!=outer[name] for name in names) and set(observed.get('namespaces',{}))==set(names) and all(name=='lo' for _,name in observed.get('interfaces',[]))

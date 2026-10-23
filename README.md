@@ -1,3 +1,5 @@
+Current experimental intake/recovery changes and qualification limits: [NATIVE_INTAKE.md](NATIVE_INTAKE.md).
+
 # Codex three-role workflow
 
 An experimental deterministic controller coordinates three native Codex terminal
