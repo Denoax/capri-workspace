@@ -14,7 +14,7 @@ The selected profile requests `gpt-6.1-sol` for all three roles, with medium Thi
 
 ## Quickstart
 
-From a checkout of this branch, start with offline inspection. Requires Linux x86_64, Python 3.11+ with pip/venv, bubblewrap and working user, mount, PID and network namespaces.
+From a checkout of `main`, start with offline inspection. Requires Linux x86_64, Python 3.11+ with pip/venv, bubblewrap and working user, mount, PID and network namespaces.
 
 ```sh
 python3 -m venv .venv
@@ -31,7 +31,7 @@ Native use additionally needs the qualified Codex CLI 0.163.0/profile, existing 
 
 Experimental. Current-source native startup/lifecycle/recovery qualification, the separate v2 comparison and final independent review remain pending at the recorded source cutoff. Recent-request footprint, cumulative usage and unknown exact context occupancy are distinct. See [client support](../CLIENT_SUPPORT.md), [evaluation](../EVALUATION.md) and [current status](STATUS.md).
 
-No source-bound product demo was available for this candidate. The banner is actual character footage, not a controller recording. Code-license selection and public character-art redistribution remain unresolved. This private presentation candidate awaits Mani’s visual review.
+No source-bound product demo was available for this presentation. The banner is actual character footage, not a controller recording. Code-license selection and public character-art redistribution remain unresolved. The repository remains private while those release boundaries remain open.
 
 ## Credits
 

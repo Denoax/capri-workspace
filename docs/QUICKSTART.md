@@ -1,6 +1,6 @@
 # Start with the existing project
 
-This correction belongs to the original native workflow repository, ID 1429595311. It is a private local presentation branch on the current stabilization source, not another export or product. Use a checkout of this branch; the previous Denoax/capri snapshot is historical presentation evidence.
+Use `main` in the private [Denoax/capri](https://github.com/Denoax/capri) repository, ID 1429595311. It combines the current committed stabilization source and V3 presentation on the original implementation history. The previous public snapshot is preserved as [capri-presentation-v1-retired](https://github.com/Denoax/capri-presentation-v1-retired); see the [consolidation record](CONSOLIDATION.md).
 
 ## Offline inspection
 

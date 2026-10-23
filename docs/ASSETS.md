@@ -1,6 +1,6 @@
 # Character and display sources
 
-This private candidate follows Mani's supplied V3 composition. Actual Capri footage, eyes, jaw, magenta silhouette and long hands define the first image. The previous abstract graphics and the provisional V2 two-panel/head-sprite direction are not used. No generated media, synthetic substitute character or persistent face tearing is included.
+This private repository follows Mani's supplied V3 composition. Actual Capri footage, eyes, jaw, magenta silhouette and long hands define the first image. The previous abstract graphics and the provisional V2 two-panel/head-sprite direction are not used. No generated media, synthetic substitute character or persistent face tearing is included.
 
 ## Selected footage
 
@@ -9,7 +9,7 @@ Only two sources from the larger research collection are shipped here. The colle
 - **Hero — source 19, BluRei:** [original Tenor page](https://tenor.com/view/cyberpunk-2077-cyberpunk-cyberpunk-edgerunners-capri-gif-3999370720653516186). Actual 498×281 rendition, 120 frames, 4 seconds. Source acting and complete source-image box are retained beneath the specified diagonal composition. No uploader mark is deliberately erased. The full source is in [sources](../showcase/capri/sources/capri-19.gif).
 - **Workflow — source 12, emdzejus:** [original Tenor page](https://tenor.com/view/cyberpunk-cyberpunk-edgerunners-cyberpunk-2077-capri-capricorn-gif-3649282024278917159). Actual 498×281 rendition, 11 frames, 1.1 seconds; the supplied representative still provides the eye/face edge. [Full source](../showcase/capri/sources/capri-12.gif).
 
-Uploader credit identifies the upload, not ownership of the underlying anime. Character footage belongs to the relevant creators/rights holders. No asset-specific public software-brand redistribution grant is established. This completed character-led candidate stays private for review; unclear rights do not trigger a character-free substitute. No creator has been contacted.
+Uploader credit identifies the upload, not ownership of the underlying anime. Character footage belongs to the relevant creators/rights holders. No asset-specific public software-brand redistribution grant is established. The consolidated repository stays private; unclear rights do not trigger a character-free substitute. No creator has been contacted.
 
 ## Composition and editable sources
 
