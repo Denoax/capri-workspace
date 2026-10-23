@@ -1,0 +1,94 @@
+{
+  "version": 5,
+  "recipe": "COMPOSITION.json",
+  "motion": {
+    "source_duration_ms": 4300,
+    "delivery_duration_ms": 5300,
+    "source_frames": 43,
+    "authored_image_only_cut_ms": 80
+  },
+  "outputs": {
+    "expression.png": {
+      "bytes": 490866,
+      "sha256": "26b1b235f45391e256e5e1a330cd7e42d1a851b4bfe5bd45dfdb7b45df0167d0"
+    },
+    "expression.svg": {
+      "bytes": 111024,
+      "sha256": "2e0328142f956d8bc20b836549bfd6c0a3c2d39db529c18b433e3422c60c585d"
+    },
+    "gesture-hand-layer.png": {
+      "bytes": 181533,
+      "sha256": "79f4a39f81438e5bef1c98b3033da23b3158c0eed77374bbbb8c22b022e0f33b"
+    },
+    "gesture.png": {
+      "bytes": 496268,
+      "sha256": "7365190f3a1d066aaae530d54b47c0f2822ffca8f1b215fa57b14e6f30037ef6"
+    },
+    "gesture.svg": {
+      "bytes": 337363,
+      "sha256": "4d96104469930371d82e985a91cdd29727e2eb243b566cfbdf6eb4c30a5bc20e"
+    },
+    "interlude-overlay.png": {
+      "bytes": 9543,
+      "sha256": "fad1662513a9d21dc51f1234aa5d9c5465078d87476e2604e6e895a74f2f0516"
+    },
+    "interlude-overlay.svg": {
+      "bytes": 4235,
+      "sha256": "3d8b7f1859cbc2b8e463a39ef0f6cfdddefe34adce19a98d7e9bdd7e7b656459"
+    },
+    "interlude.gif": {
+      "bytes": 3714365,
+      "sha256": "00ff514e5998e4030eb03a7f6a8d6ee9a3f871ab6b47844301347881a19fb79c"
+    },
+    "interlude.png": {
+      "bytes": 280863,
+      "sha256": "baa50e4de861b1ab570ff960c5cd9dac72f6c57057a81f6085bf5a6c864293b9"
+    },
+    "interlude.svg": {
+      "bytes": 96849,
+      "sha256": "dca763b8a92a9ba05e6a9b09e016f22e793f1573c43ca8e2aca63ee8062ade5c"
+    },
+    "movement.png": {
+      "bytes": 750617,
+      "sha256": "1dc17c1d4110ff790f84ea65c7d35cf83833ca6ae454dc2c7a52b70ad0c9dafd"
+    },
+    "movement.svg": {
+      "bytes": 108890,
+      "sha256": "e1bdfab9c1a72f9f3d4fcc919f4b2fbbf423094d9e125442a9af7e04a7ed5916"
+    },
+    "ownership-mobile.svg": {
+      "bytes": 55944,
+      "sha256": "79e3a940fecb93c5f8fa7a5f8feb534ec2bccc7308f10275ead4207b665da153"
+    },
+    "ownership.svg": {
+      "bytes": 45163,
+      "sha256": "253c3defb01d2aada6b0be41c9ba8bfb68da68e68741d1a13c3ddff938489cec"
+    },
+    "path-architecture.svg": {
+      "bytes": 5100,
+      "sha256": "e00f970cb128218b0cdadb364d640f2743c56bb7fa1f6516e741f00b17043875"
+    },
+    "path-context.svg": {
+      "bytes": 4139,
+      "sha256": "82b8829ef6cd7e05e10eb805e8e00bb9eea1ff5f35999c8c4e552e50b402c2ab"
+    },
+    "path-evaluation.svg": {
+      "bytes": 3538,
+      "sha256": "a0e2ad7b1c61269ba12b961c7fd9b7d9078d36792cc12cca657ed07bed6cf7fc"
+    },
+    "path-index.svg": {
+      "bytes": 5340,
+      "sha256": "32b3c436c6ee207020949a13141e1463feb1da9c71bd279dc34c746dcc0150f9"
+    },
+    "path-recovery.svg": {
+      "bytes": 3596,
+      "sha256": "71be37f708c6d590fa6cfb8d5378634d9a7983145a124ee13b92f61bd1f8053a"
+    },
+    "path-setup.svg": {
+      "bytes": 2494,
+      "sha256": "7889d3c2c0dd7183ed81185c815d84b26ca81de63239c1648d44b8c6f152c9b6"
+    }
+  },
+  "scope": "Deterministic media-only composition; not runtime evidence or visual approval",
+  "rights": "Private candidate; underlying anime redistribution unverified"
+}

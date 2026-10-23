@@ -1,0 +1,204 @@
+{
+  "version": 5,
+  "stills": {
+    "expression": {
+      "source": 1,
+      "frame": 97,
+      "title": "CAPRI",
+      "size": [
+        1000,
+        960
+      ]
+    },
+    "gesture": {
+      "source": 14,
+      "frame": 0,
+      "title": "HANDS",
+      "size": [
+        1000,
+        660
+      ]
+    },
+    "movement": {
+      "source": 20,
+      "frame": 101,
+      "title": "MOTION",
+      "size": [
+        1000,
+        820
+      ]
+    }
+  },
+  "gesture_mask": {
+    "source_size": [
+      498,
+      281
+    ],
+    "method": "Hand-authored hand-only foreground layer over the complete unchanged source-image box. Full-figure matte was rejected because it lost dark anatomy. No reconstructed pixels.",
+    "outline": [
+      [
+        391,
+        181
+      ],
+      [
+        399,
+        178
+      ],
+      [
+        415,
+        170
+      ],
+      [
+        432,
+        162
+      ],
+      [
+        439,
+        163
+      ],
+      [
+        450,
+        167
+      ],
+      [
+        462,
+        168
+      ],
+      [
+        461,
+        171
+      ],
+      [
+        452,
+        175
+      ],
+      [
+        450,
+        177
+      ],
+      [
+        463,
+        173
+      ],
+      [
+        475,
+        168
+      ],
+      [
+        482,
+        168
+      ],
+      [
+        486,
+        172
+      ],
+      [
+        478,
+        177
+      ],
+      [
+        467,
+        181
+      ],
+      [
+        479,
+        179
+      ],
+      [
+        489,
+        180
+      ],
+      [
+        496,
+        185
+      ],
+      [
+        495,
+        188
+      ],
+      [
+        485,
+        190
+      ],
+      [
+        464,
+        190
+      ],
+      [
+        481,
+        194
+      ],
+      [
+        490,
+        196
+      ],
+      [
+        494,
+        200
+      ],
+      [
+        489,
+        203
+      ],
+      [
+        475,
+        203
+      ],
+      [
+        448,
+        199
+      ],
+      [
+        456,
+        208
+      ],
+      [
+        470,
+        219
+      ],
+      [
+        466,
+        222
+      ],
+      [
+        457,
+        216
+      ],
+      [
+        441,
+        205
+      ],
+      [
+        430,
+        199
+      ],
+      [
+        415,
+        196
+      ]
+    ]
+  },
+  "motion": {
+    "source": 14,
+    "source_frames": [
+      0,
+      42
+    ],
+    "opening_hold_ms": 400,
+    "closing_hold_ms": 200,
+    "image_bound_ink_cut_ms": 80,
+    "return_hold_ms": 320,
+    "delivery_size": [
+      640,
+      421
+    ],
+    "colors": 96,
+    "source_timing": "Original 43 frames at 100 ms. Holds added outside the acting; no synthetic character frames. One 80 ms ink cut affects only the image box."
+  },
+  "palette": {
+    "ink": "#100a19",
+    "magenta": "#ff1265",
+    "green": "#28fb86",
+    "paper": "#f4f1ee"
+  }
+}

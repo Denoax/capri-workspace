@@ -69,6 +69,8 @@ Native use additionally requires the qualified Codex CLI 0.163.0/profile, existi
 
 <a href="docs/AFTERIMAGE.md"><img src="showcase/capri/identity/afterimage.svg" alt="Afterimage — three actual Capri poses. Open the character art page." width="1000"></a>
 
+[Enter Afterimage](docs/AFTERIMAGE.md) — new expression, hand and movement compositions, one motion interlude, and the retained triptych and poster. [Still art edition](docs/AFTERIMAGE_STATIC.md).
+
 <a id="field-notes"></a>
 <h2>
 <picture>
@@ -85,6 +87,10 @@ Native use additionally requires the qualified Codex CLI 0.163.0/profile, existi
 | [Development status](docs/STATUS.md) | What has and has not been qualified |
 | [Contributing](CONTRIBUTING.md) | How to work on the project |
 | [Security](SECURITY.md) | Boundaries and reporting |
+
+<a href="docs/README.md"><img src="showcase/capri/afterimage/path-index.svg" alt="Reading paths — setup, architecture, ownership, recovery and evaluation" width="230"></a>
+
+[Browse the documentation by task](docs/README.md), with a responsive ownership and reconciliation map.
 
 <details>
 <summary><strong>Read the handoff map as Mermaid</strong></summary>

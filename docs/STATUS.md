@@ -12,3 +12,11 @@ Correction V3, 23 October 2026. **Private CAPRI repository**, with the character
 - No standalone character model or rig is shipped or claimed. Earlier V2 media and its cropped-head experiment are preserved privately; they are not the V3 visual foundation.
 - Responsive, keyboard and reduced-motion checks were performed on the local review preview. Static alternatives, editable SVGs and normal-speed review playback are supplied. Continuous perceptual playback and a hosted GitHub visual review remain unverified; frame checks cannot award visual approval.
 - Code licensing and character-art rights remain separate and unresolved for public distribution. [Asset record](ASSETS.md) · [Consolidation map](CONSOLIDATION.md).
+
+## V5 presentation candidate
+
+V4 was approved and merged through PR #2 at `beac62ac9223a01ae90c9e8380bb7805d9c97a94`. V5 expands [Afterimage](AFTERIMAGE.md) and adds a [documentation index](README.md) on a separate local presentation branch. The approved hero, identity graphics, runtime, configuration, CI and locks are preserved. V5 is unmerged and awaits Mani's visual review.
+
+Focused local checks cover source integrity, static editions, actual image loading, 390/768/1440 px in dark/light, keyboard disclosures/links and reduced-motion fallback. Repeated browser loop recordings exist; uninterrupted perceptual motion and hosted GitHub UI/media behavior remain unverified. GitHub's authenticated Markdown API rendering is a separate, narrower check.
+
+Approved-main [CI run 39964880216](https://github.com/Denoax/capri/actions/runs/39964880216) failed the unchanged collector-confinement diagnostic and skipped the required runtime suite. No runtime requalification or green CI result is claimed by this art task.

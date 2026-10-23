@@ -5,11 +5,11 @@ A three-session Codex workflow for research, scoped implementation and independe
 <p align="center">
   <a href="#quickstart"><img src="../showcase/capri/identity/nav-start.svg" width="160" alt="Start — offline setup"></a>
   <a href="#the-loop"><img src="../showcase/capri/identity/nav-loop.svg" width="160" alt="The loop — roles and handoffs"></a>
-  <a href="../docs/AFTERIMAGE.md"><img src="../showcase/capri/identity/nav-art.svg" width="160" alt="Afterimage — Capri art and motion"></a>
+  <a href="AFTERIMAGE_STATIC.md"><img src="../showcase/capri/identity/nav-art.svg" width="160" alt="Afterimage — Capri art and motion"></a>
   <a href="#field-notes"><img src="../showcase/capri/identity/nav-docs.svg" width="160" alt="Field notes — implementation documentation"></a>
 </p>
 
-<p align="center"><a href="../docs/README_STATIC.md">Static edition</a> · <a href="../docs/STATUS.md">Development status</a> · <a href="../docs/ASSETS.md">Art credits</a></p>
+<p align="center"><a href="../README.md">Animated edition</a> · <a href="STATUS.md">Development status</a> · <a href="ASSETS.md">Art credits</a></p>
 
 <a id="the-loop"></a>
 <h2>
@@ -56,7 +56,7 @@ PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s controller/tests -v
 
 These tests use disposable fixtures and do not call models or require authentication. A failed isolation prerequisite remains a failure.
 
-[Full setup and diagnostics](../docs/QUICKSTART.md) · [Host requirements](../ENVIRONMENT.md)
+[Full setup and diagnostics](QUICKSTART.md) · [Host requirements](../ENVIRONMENT.md)
 
 <details>
 <summary><strong>Before launching native sessions</strong></summary>
@@ -67,7 +67,9 @@ Native use additionally requires the qualified Codex CLI 0.163.0/profile, existi
 
 </details>
 
-<a href="../docs/AFTERIMAGE.md"><img src="../showcase/capri/identity/afterimage.svg" alt="Afterimage — three actual Capri poses. Open the character art page." width="1000"></a>
+<a href="AFTERIMAGE_STATIC.md"><img src="../showcase/capri/identity/afterimage.svg" alt="Afterimage — three actual Capri poses. Open the character art page." width="1000"></a>
+
+[Enter Afterimage](AFTERIMAGE_STATIC.md) — new expression, hand and movement compositions, one motion interlude, and the retained triptych and poster. [Still art edition](AFTERIMAGE_STATIC.md).
 
 <a id="field-notes"></a>
 <h2>
@@ -82,9 +84,13 @@ Native use additionally requires the qualified Codex CLI 0.163.0/profile, existi
 | [Architecture](../ARCHITECTURE.md) | Ownership, confinement, handoffs and recovery |
 | [Implementation guide](../IMPLEMENTATION_README.md) | Existing commands and the native startup path |
 | [Evaluation](../EVALUATION.md) | Trial definitions, evidence and comparison limits |
-| [Development status](../docs/STATUS.md) | What has and has not been qualified |
+| [Development status](STATUS.md) | What has and has not been qualified |
 | [Contributing](../CONTRIBUTING.md) | How to work on the project |
 | [Security](../SECURITY.md) | Boundaries and reporting |
+
+<a href="README.md"><img src="../showcase/capri/afterimage/path-index.svg" alt="Reading paths — setup, architecture, ownership, recovery and evaluation" width="230"></a>
+
+[Browse the documentation by task](README.md), with a responsive ownership and reconciliation map.
 
 <details>
 <summary><strong>Read the handoff map as Mermaid</strong></summary>
@@ -104,12 +110,12 @@ The diagram shows intended stage order and the uncertainty branch. It does not c
 </details>
 
 > [!IMPORTANT]
-> **Experimental.** Native lifecycle/recovery qualification, the separate repaired-source comparison and final independent review remain pending at the recorded source cutoff. The current CI isolation prerequisite is failing; the runtime suite was skipped. See [current status](../docs/STATUS.md).
+> **Experimental.** Native lifecycle/recovery qualification, the separate repaired-source comparison and final independent review remain pending at the recorded source cutoff. The current CI isolation prerequisite is failing; the runtime suite was skipped. See [current status](STATUS.md).
 
 No source-bound product demo was available. Character animation is artwork, not a controller recording.
 
-**Mani Marami Milani** · [Afterimage](../docs/AFTERIMAGE.md) · [Sources and edits](../docs/ASSETS.md) · [Presentation references](../docs/DESIGN_REFERENCES.md)
+**Mani Marami Milani** · [Afterimage](AFTERIMAGE_STATIC.md) · [Sources and edits](ASSETS.md) · [Presentation references](DESIGN_REFERENCES.md)
 
 Unofficial Capri-inspired fan project; unaffiliated with CD PROJEKT RED, TRIGGER or Netflix. Code licensing and public character-art redistribution remain unresolved.[^art]
 
-[^art]: The hero uses BluRei's source 19; the expression footage uses emdzejus's source 12. Barlow Condensed is bundled under its OFL notice. Uploader attribution does not establish underlying anime-image ownership. [Full asset record](../docs/ASSETS.md).
+[^art]: The hero uses BluRei's source 19; the expression footage uses emdzejus's source 12. Barlow Condensed is bundled under its OFL notice. Uploader attribution does not establish underlying anime-image ownership. [Full asset record](ASSETS.md).

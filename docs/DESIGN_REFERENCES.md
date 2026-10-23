@@ -34,3 +34,24 @@ The finished composition uses image-link navigation, dark/light chapter images, 
 - Existing source 12 is used directly for the expression loop. No new character source, generated art, fabricated anatomy or complete standalone model is introduced.
 
 The identity builder reads only already-selected character footage and the bundled OFL font. It writes only the identity graphics. The original V3 builder remains separate and the approved hero is not rebuilt by this change. Source image rights and the private visibility boundary remain documented in [ASSETS.md](ASSETS.md).
+
+## V5 expansion
+
+The supplied V5 research and approved PR #2 define the direction. No new visual generation or unrelated moodboard replaces the accepted identity.
+
+| Inspected primary reference | Specific adaptation | Output |
+| --- | --- | --- |
+| [adi1090x/polybar-themes README](https://github.com/adi1090x/polybar-themes/blob/master/README.md) | Broad establishing art, supporting studies in native disclosures; keep the collection away from root setup. No badges or wallpaper are imported. | Expanded [Afterimage](AFTERIMAGE.md), retained collection disclosure |
+| [Ghostty README](https://github.com/ghostty-org/ghostty/blob/main/README.md) | Direct product sentence and useful destinations around a strong identity. | Unchanged opening and compact [Field notes](README.md) |
+| [GitHub image guidance](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files) and [disclosures](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) | Static SVG/PNG, real anchors and details; GIF motion, no SVG scripting or fake image controls. | Separate reading-path links and static editions |
+
+The README sources and official platform guidance were inspected for this execution. The handoff's end-4/daisyUI findings remain supplied research, not additional live interaction claims. No reference assets or UI code are copied.
+
+- `afterimage/expression.svg`: source 1 frame 97, asymmetric portrait, offset frame, open ink space and one outlined word.
+- `afterimage/gesture.svg`: source 14 frame 0, full source box and hand-only foreground layer; the damaged full-figure matte was discarded.
+- `afterimage/movement.svg`: source 20 frame 101, a full environmental counterpoint.
+- `afterimage/interlude.gif`: all source-14 acting at original cadence, outside holds, one 80 ms image-only ink cut, fixed title and repeated-opening seam. Root motion stays unchanged.
+- `afterimage/path-*.svg`: individual graphics inside real HTML anchors, with native text alternatives.
+- `afterimage/ownership*.svg`: source identity, one write owner and uncertain-effect hold, grounded in architecture and the maintenance contract. The approved role map still defines stage order.
+
+Actual sizes, captures and verification limits belong in the V5 review packet. A local preview or decoded sheet does not certify hosted GitHub behavior, uninterrupted perceptual motion or human visual approval.

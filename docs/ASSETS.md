@@ -4,7 +4,7 @@ This private repository follows Mani's supplied V3 composition. Actual Capri foo
 
 ## Selected footage
 
-Only two sources from the larger research collection are shipped here. The collection contains overlapping scenes/crops; twenty downloaded files does not mean twenty unique scenes. Files 4 and 18 show D and file 6 is a meme; all are excluded from branding.
+Approved pieces use sources 12/19; V5 selects 1/14/20 as recorded below. The collection contains overlapping scenes/crops; twenty downloaded files does not mean twenty unique scenes. Files 4 and 18 show D and file 6 is a meme; all are excluded from branding.
 
 - **Hero — source 19, BluRei:** [original Tenor page](https://tenor.com/view/cyberpunk-2077-cyberpunk-cyberpunk-edgerunners-capri-gif-3999370720653516186). Actual 498×281 rendition, 120 frames, 4 seconds. Source acting and complete source-image box are retained beneath the specified diagonal composition. No uploader mark is deliberately erased. The full source is in [sources](../showcase/capri/sources/capri-19.gif).
 - **Workflow — source 12, emdzejus:** [original Tenor page](https://tenor.com/view/cyberpunk-cyberpunk-edgerunners-cyberpunk-2077-capri-capricorn-gif-3649282024278917159). Actual 498×281 rendition, 11 frames, 1.1 seconds; the supplied representative still provides the eye/face edge. [Full source](../showcase/capri/sources/capri-12.gif).
@@ -42,3 +42,35 @@ python tools/check_capri_presentation.py
 ```
 
 The identity builder requires Pillow and fontTools in a media-only environment. It does not alter controller dependency files, start models or replace the V3 hero builder. See [presentation references](DESIGN_REFERENCES.md) for the inspected design sources and [identity BUILD.json](../showcase/capri/identity/BUILD.json) for export details.
+
+## V5 Afterimage
+
+V5 builds on approved main `beac62ac9223a01ae90c9e8380bb7805d9c97a94`. The hero, identity navigation, chapter graphics, role maps, triptych and poster are preserved byte-for-byte. Only sources 1, 14 and 20 are added. Complete selected GIFs, uploader links and SHA256s are in [SOURCES.json](../showcase/capri/SOURCES.json).
+
+| Source / uploader | Actual selected frames | Adaptation |
+| --- | --- | --- |
+| 1 · kiraGIFtendency | Frame 97, 4050 ms; 443×498 original | Asymmetric portrait, full source box and outlined CAPRI lettering. An upper-body crop, not a complete body. |
+| 14 · emdzejus | Frame 0 for the still; all 43 frames, 0–4300 ms for motion; 498×281 original | Complete source box, with a manual hand-only foreground layer crossing an authored frame. No full-body sprite. |
+| 20 · Strawhat131331 | Frame 101, 3370 ms; 498×281 original | Environmental movement study, including the other figure and industrial scene. |
+
+Sources 3 and 22 were inspected as decoded sequences but not selected. The source-14/19 material overlaps in gestures; these uploads are not presented as newly discovered independent scenes. Stills and motion retain their complete source-image boxes and original marks. Uploader attribution does not clear underlying anime rights.
+
+The interlude is **640×421, 5300 ms**: original 4300 ms acting, 400 ms extra opening hold, 200 ms extra closing hold, one 80 ms image-bound ink cut, then 320 ms on the opening pose. The title stays fixed. A shared 96-color palette avoids per-frame palette changes. The PNG uses the same first pose and composition. No optical flow or synthetic character frames are used. The root embeds only its unchanged hero; the new loop is on Afterimage.
+
+The full-figure matte experiment damaged dark limbs and was rejected. The final composition retains the original image and uses only a small hand foreground layer. [Coordinates and timing](../showcase/capri/afterimage/COMPOSITION.json) · [Export manifest](../showcase/capri/afterimage/BUILD.json).
+
+### Build the expansion
+
+Use a separate media environment and the system `rsvg-convert` executable:
+
+```sh
+python3 -m venv .venv-media
+. .venv-media/bin/activate
+python -m pip install -r requirements-media.txt
+python tools/build_capri_afterimage.py
+python tools/check_capri_presentation.py
+```
+
+Media requirements pin Pillow 12.3.0 and fontTools 4.60.1. The V5 builder writes only `showcase/capri/afterimage`; it does not rebuild approved graphics or alter runtime dependencies, configuration, CI or locks. `COMPOSITION.json` records frame/mask/timing choices; static SVG masters use the existing OFL glyphs and have PNG alternatives. [Still README](README_STATIC.md) and [still Afterimage](AFTERIMAGE_STATIC.md) embed no GIFs.
+
+The optional STL typography object is omitted because authenticated hosted viewer inspection is unavailable to this candidate. No character model, rig or rotatable hosted result is claimed. Public anime redistribution and the code license remain unresolved; private review does not clear them.
