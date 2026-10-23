@@ -1,0 +1,11 @@
+# One maintained project
+
+[Denoax/capri](https://github.com/Denoax/capri) is the maintained private repository, with `main` as its default branch. It retains the original implementation repository **ID 1429595311**, formerly named `Denoax/codex-three-role-workflow`. V3 was integrated on committed stabilization source `f7e374cbe0644284d79846356015d0eabd38e67c`, preserving the original parent history and all development branches. No new repository, fork or automatic export pipeline was created.
+
+[Denoax/capri-presentation-v1-retired](https://github.com/Denoax/capri-presentation-v1-retired), repository **ID 1430976731**, is the archived public presentation snapshot, formerly named `Denoax/capri`. Its history through `31ea266` is preserved with a retirement notice. Its rejected graphics and stale runtime were not merged back. Useful purpose/role/setup documentation was reconciled against current source; runtime, tests, profile, examples, CI and implementation docs come from the newer original repository. The exact source README is preserved as [IMPLEMENTATION_README.md](../IMPLEMENTATION_README.md). [Presentation decisions](PRESENTATION_DECISIONS.md) records the visual rejection and replacement.
+
+The presentation was pushed and merged into `main` after Mani's explicit integration instruction on 23 October 2026. Active uncommitted implementation work was not copied, reset, stashed or overwritten. Existing development branch heads were retained. No running session was controlled or notified by the presentation task.
+
+Both histories were privately bundled before cutover. The detached snapshot was renamed to free the CAPRI name; the original implementation repository was then renamed to `capri`. GitHub does not merge repository identities, issues or stars. The historical archive is not a maintained second product.
+
+The original repository remains private. No history was deleted or force-pushed, and neither repository changed visibility. A public release still requires review of reachable history, branches, Actions logs/artifacts and other exposed surfaces. Character-asset reuse and code licensing remain separate unresolved boundaries. No runtime acceptance or new qualification phase is implied by this consolidation.

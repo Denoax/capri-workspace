@@ -1,0 +1,21 @@
+{
+  "composition": "Supplied V3: diagonal ink field, outlined Barlow title, actual Capri source 19; source 12 workflow edge",
+  "renderer": "rsvg-convert; Pillow 12.3.0",
+  "font": "Barlow Condensed ExtraBold Italic; OFL-1.1 notice bundled; vector letters outlined",
+  "delivery": [
+    1000,
+    343
+  ],
+  "master": [
+    1400,
+    480
+  ],
+  "duration_ms": 4000,
+  "sampling_fps": 12,
+  "palette_colors": 96,
+  "palette_strategy": "One shared palette sampled across the full loop",
+  "source_processing": "Source sequence resampled at original overall pace; enlarged from 498x281 into the specified composition, not an HD master; no generated/interpolated frames or face tearing",
+  "static_poster": "Supplied 45%-source-frame pose in hero.svg; distinct from animation frame zero",
+  "rights": "PRIVATE_REVIEW_ONLY; character-art redistribution unverified",
+  "human_visual_approval": "PENDING"
+}
