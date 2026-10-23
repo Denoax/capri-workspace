@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "method": "Supplied AI-assisted upper-body poses; original pixel canvases preserved, near-opaque alpha normalized. No new generation, keying, anatomy or warp.",
+  "landmarks_source_pixels": {
+    "explain": {
+      "eyes": [
+        [
+          711,
+          323
+        ],
+        [
+          846,
+          378
+        ]
+      ],
+      "mouth": [
+        742,
+        433
+      ],
+      "chest": [
+        748,
+        651
+      ],
+      "tip": [
+        1362,
+        848
+      ]
+    },
+    "point": {
+      "eyes": [
+        [
+          764,
+          414
+        ],
+        [
+          910,
+          407
+        ]
+      ],
+      "mouth": [
+        832,
+        497
+      ],
+      "chest": [
+        831,
+        660
+      ],
+      "tip": [
+        1490,
+        426
+      ]
+    },
+    "inspect": {
+      "eyes": [
+        [
+          643,
+          417
+        ],
+        [
+          749,
+          380
+        ]
+      ],
+      "mouth": [
+        720,
+        465
+      ],
+      "chest": [
+        755,
+        701
+      ],
+      "tip": [
+        678,
+        517
+      ]
+    }
+  },
+  "alignment": "Eye midpoint and 44-logical-unit inter-eye span, measured on original canvases. Perspective differs; inspect human visual fit.",
+  "poses": {
+    "explain": {
+      "source_sha256": "ddd3f430264d6a5c162fbc8323d9bb6b58e7dc9f9091b552c48085471d55ef1b",
+      "master_sha256": "94353606a2579f465c88b188fcdb7e864a25748ada8eeae7295079c6ce42554c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "scale": 0.3018375098508156
+    },
+    "point": {
+      "source_sha256": "5f6eb3a4a952c8c077b013dede3991ba60ab22a4cdd66ef57503aa11184b0896",
+      "master_sha256": "d58f6558e3747ae46b0a54db203b3f22d801b8d87cf718bebfbc1f64d43e95d2",
+      "dimensions": [
+        1669,
+        942
+      ],
+      "scale": 0.3010240731704528
+    },
+    "inspect": {
+      "source_sha256": "aa227115c1d8635d3124db2ed628566b757a1957add4ea3c84435eb7f9c9a63a",
+      "master_sha256": "97abfca18fd33dc19ff17f4f004da29911f5b95ad9cff21e5e82fb5e9ad65bc5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "scale": 0.39190540350891356
+    }
+  }
+}

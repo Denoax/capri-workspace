@@ -1,5 +1,9 @@
 # Current status
 
+**V8 presentation candidate, 23 October 2026:** isolated testing branch `testing/capri-v8-composition-01a1688d`, based on V7 `15e9d6af3e3e070bbdadf275340692cc5e341c11`. Main remains separate. V8 adds three poses, a shared-clock editorial lesson and a compact root reading order. Runtime qualification/evaluation remains unchanged. The current V8 CI outcome is recorded with the testing-branch review after push; historical failures below are not a rerun. [Method and limits](CAPRI_ACTOR.md).
+
+## Historical source and qualification record
+
 Correction V3, 23 October 2026. **Private CAPRI repository**, with the character-led presentation integrated into `main` on stabilization commit `f7e374cbe0644284d79846356015d0eabd38e67c`. [Denoax/capri](https://github.com/Denoax/capri) retains the original implementation repository identity and history. The detached public snapshot is retired; see the [consolidation record](CONSOLIDATION.md). Repository integration does not establish runtime qualification or clear public redistribution rights.
 
 - Runtime, tests, profiles, dependency locks, current architecture and evaluation docs are preserved from the selected current source. The original README is preserved as [IMPLEMENTATION_README.md](../IMPLEMENTATION_README.md).

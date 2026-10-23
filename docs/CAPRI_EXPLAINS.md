@@ -2,11 +2,11 @@
 
 [Back to the README](../README.md) · [Complete static edition](README_STATIC.md) · [What is proven here?](#what-is-proven-here)
 
-Capri's speech is original teaching copy, not a quotation from the show. The pictures are illustrations, not controller screenshots. V7's transparent actor uses an authorized AI-edited pose with authored hand articulation; [asset provenance and limits](CAPRI_ACTOR.md). The user-described *Dr. STONE* explanation premise informs the character-as-instructor approach; no shots, dialogue or audio are reproduced from that series. [Design references](DESIGN_REFERENCES.md).
+Capri's speech is original teaching copy, not a quotation from the show. The pictures are illustrations, not controller screenshots. V8 uses three supplied AI-assisted upper-body poses, normalized landmarks and authored local motion; [asset provenance and limits](CAPRI_ACTOR.md). The user-described *Dr. STONE* explanation premise informs the character-as-instructor approach; no shots, dialogue or audio are reproduced from that series. [Design references](DESIGN_REFERENCES.md).
 
 <picture>
-  <source media="(max-width: 600px)" srcset="../showcase/capri/explainer/comic-mobile.svg">
-  <img src="../showcase/capri/explainer/comic.svg" alt="Complete static comic: plan, build, review, report to human; uncertain effects hold. Transcript follows." width="1200">
+  <source media="(max-width: 600px)" srcset="../showcase/capri/scene/portrait-static.svg">
+  <img src="../showcase/capri/scene/wide-static.svg" alt="Complete static comic: plan, build, review, report to human; uncertain effects hold. Transcript follows." width="1200">
 </picture>
 
 <a id="why-select-context"></a>
@@ -91,6 +91,6 @@ The single graded v1 row passed **8/8 held-out checks**. The separate M0 canary 
 
 Current-source native lifecycle/research/recovery qualification and independent final review remain pending at the recorded cutoff. Approved-main [CI run 39964880216](https://github.com/Denoax/capri/actions/runs/39964880216) failed collector confinement; the required runtime suite was skipped. No green runtime result is claimed. [Status](STATUS.md).
 
-V6 is a testing-branch presentation candidate. V5 was not merged or accepted. Approved main, runtime, profiles, dependency locks and CI are preserved. The repository is private; code licensing and public character-art redistribution remain unresolved. [Assets and rights](ASSETS.md).
+V8 is a testing-branch presentation candidate built on V7; no visual acceptance or main integration is implied. V5 was not merged or accepted. Approved main, runtime, profiles, dependency locks and CI are preserved. The repository is private; code licensing and public character-art redistribution remain unresolved. [Assets and rights](ASSETS.md).
 
 [Try the offline quickstart](QUICKSTART.md) · [Character art](AFTERIMAGE.md) · [Readable static README](README_STATIC.md)

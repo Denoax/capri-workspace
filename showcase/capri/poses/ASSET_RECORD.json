@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-23",
+  "purpose": "V8 local Codex handoff; not implemented repository assets yet",
+  "generation": "Built-in image generation/editing, one request per distinct pose; pointing framing correction was a separate edit",
+  "permission": {
+    "quote": "you may use AGI for this",
+    "scope": "Existing transparent Capri character task, continued for the requested different poses. No generated UI, diagrams, benchmark or unrelated imagery."
+  },
+  "identity": "Unofficial Capri-inspired AI-assisted fan-art studies, not official sheets, extracted original frames, a full-body rig or a 3D model",
+  "selected": [
+    {
+      "pose": "explain",
+      "path": "assets/pose-studies/capri-explain.png",
+      "sha256": "ddd3f430264d6a5c162fbc8323d9bb6b58e7dc9f9091b552c48085471d55ef1b",
+      "bytes": 1929292,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 846098,
+      "alpha_over_128_bbox": [
+        112,
+        11,
+        1461,
+        1014
+      ],
+      "status": "visually inspected as static study over ink/paper; production fidelity, normalised anchors and motion remain to be checked"
+    },
+    {
+      "pose": "point",
+      "path": "assets/pose-studies/capri-point.png",
+      "sha256": "5f6eb3a4a952c8c077b013dede3991ba60ab22a4cdd66ef57503aa11184b0896",
+      "bytes": 837167,
+      "dimensions": [
+        1669,
+        942
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1117393,
+      "alpha_over_128_bbox": [
+        243,
+        54,
+        1498,
+        911
+      ],
+      "status": "visually inspected as static study over ink/paper; production fidelity, normalised anchors and motion remain to be checked"
+    },
+    {
+      "pose": "inspect",
+      "path": "assets/pose-studies/capri-inspect.png",
+      "sha256": "aa227115c1d8635d3124db2ed628566b757a1957add4ea3c84435eb7f9c9a63a",
+      "bytes": 1831488,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "fully_transparent_pixels": 947548,
+      "alpha_over_128_bbox": [
+        219,
+        41,
+        1470,
+        988
+      ],
+      "status": "visually inspected as static study over ink/paper; production fidelity, normalised anchors and motion remain to be checked"
+    }
+  ],
+  "references": [
+    {
+      "path": "references/character/source-1-frame-50.png",
+      "sha256": "83c56511efd90a490df9fcb1b3cbc26b023e970784c8e4b68023919c56c5b0af",
+      "method": "Decoded unaltered frame from supplied V7 reference GIF. Source URLs and underlying-rights limits retained in V7_SOURCES.json."
+    },
+    {
+      "path": "references/character/source-14-frame-0.png",
+      "sha256": "6aedc5b5ec5d3ad6f53b1fd7c1eb5cca6ac6569f21ab78369b286f2bde3a5ed0",
+      "method": "Decoded unaltered frame from supplied V7 reference GIF. Source URLs and underlying-rights limits retained in V7_SOURCES.json."
+    },
+    {
+      "path": "references/character/source-19-frame-16.png",
+      "sha256": "a47ad539e9eac699a8f29daa6b1a7d61f5a1ef1b86dba47963aa90315c9806b6",
+      "method": "Decoded unaltered frame from supplied V7 reference GIF. Source URLs and underlying-rights limits retained in V7_SOURCES.json."
+    }
+  ],
+  "prompts": [
+    "assets/pose-studies/PROMPT_1.txt",
+    "assets/pose-studies/PROMPT_2.txt",
+    "assets/pose-studies/PROMPT_2_FRAMING_FIX.txt",
+    "assets/pose-studies/PROMPT_3.txt"
+  ],
+  "review_notes": [
+    "Distinct head/expression, shoulder/torso direction and hand silhouette were visually checked.",
+    "Initial point pose clipped a top hair tip; selected point file is a framing correction with alpha>128 bounds fully inside its canvas.",
+    "Normalise apparent head scale and measure actual anchors before integration; supplied studies are not a ready-made animation rig.",
+    "RGB in fully transparent pixels may contain colour. Inspect composited alpha rather than keying black or magenta RGB.",
+    "Public character-art redistribution rights are not established; preserve existing credits and private visibility."
+  ],
+  "approval": "Not user-approved production assets; no continuous motion or hosted V8 rendering is claimed."
+}

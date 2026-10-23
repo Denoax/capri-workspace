@@ -36,7 +36,7 @@ def main():
         if any(urlsplit(x).path.lower().endswith('.gif') for x in embedded_images(path.read_text())):
             errors.append('Static edition embeds animated media: '+path.name)
     root_motion=[x for x in embedded_images((ROOT/'README.md').read_text()) if urlsplit(x).path.endswith('.gif')]
-    if root_motion!=['showcase/capri/hero.gif','showcase/capri/explainer/guide-mobile.gif','showcase/capri/explainer/guide.gif']:errors.append('Root README must retain the hero and one responsive guide')
+    if root_motion!=['showcase/capri/hero.gif','showcase/capri/scene/portrait.gif','showcase/capri/scene/wide.gif']:errors.append('Root README must retain the hero and one responsive guide')
     sources=json.loads((MEDIA/'SOURCES.json').read_text());selected=sources['selected']
     recipe=json.loads((MEDIA/'afterimage/COMPOSITION.json').read_text())
     added_ids={x['source'] for x in recipe['stills'].values()}|{recipe['motion']['source']}
@@ -137,6 +137,8 @@ def main():
     if len(re.findall(r'^## [1-6]\.',lesson,re.M))!=6:errors.append('Incomplete six-lesson native transcript')
     if any(urlsplit(x).path.lower().endswith('.gif') for x in embedded_images(lesson)):
         errors.append('Full native lesson must stay static')
+    from check_capri_scene import check_scene
+    errors.extend(check_scene())
     result={'status':'FAIL' if errors else 'PASS','local_links':links,'assets':assets,'errors':errors,'scope':'Documentation targets and delivery formats/timing; not runtime qualification or visual acceptance'}
     print(json.dumps(result,indent=2));return bool(errors)
 

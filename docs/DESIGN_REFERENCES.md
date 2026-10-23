@@ -69,3 +69,12 @@ The static comic and native transcript carry the whole lesson. GitHub [does not 
 Preserve the V6 panels Mani described as “not bad” in the handoff. Replace only the character insets with the explicitly authorized edited-pose actor. Source 14 supplies the hand/pose reference; the supplied AI edit is the selected raster and is labelled separately. Source-mask trials did not meet fidelity needs, so coherent hand-layer articulation uses the allowed alternative. No per-frame generative series or new visual system is introduced.
 
 Numeric bars are authored SVG on a shared zero baseline, with assumed units and worked-example language attached. The curated-single-session baseline and cache reversal explain the mechanism; no generated infographic or CAPRI benchmark is claimed. [Calculator and caveats](CONTEXT_BUDGET.md).
+
+
+## V8 composition candidate — 23 October 2026
+
+V8 preserves the approved hero and all earlier source/master assets. Three supplied AI-assisted upper-body studies now drive a single editorial stage, compact tail-free dialogue and a packet with an anchor-derived leader. No new generated imagery, runtime/fixture/CI/lock changes, public release or human acceptance is implied. [Pose provenance and build](CAPRI_ACTOR.md). Earlier V7 root panels remain in `showcase/capri/explainer/` and Git history; they are retired from the root.
+
+Source-to-implementation: the supplied V8 research observes Nicky Case's persistent teaching scene, Charm's identity → explanation → setup order, IBM's sentence case/alignment/spacing, Carbon/Rive's explicit entry/hold/exit and Motion Canvas's derived anchor relationships. Adapted in original Python/SVG/JS; no third-party artwork, code, branding or fonts are imported. Official IBM typography, Carbon motion and Motion Canvas anchor docs were re-read; Nicky Case's live title was inspected. The handoff's deeper interactive observations are attributed research, not a new playback claim.
+
+[IBM type basics](https://www.ibm.com/design/language/typography/type-basics/) · [Carbon motion](https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview) · [Motion Canvas Layout](https://motion-canvas.io/api/2d/components/Layout/) · [The Evolution of Trust](https://ncase.me/trust/)

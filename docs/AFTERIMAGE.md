@@ -66,3 +66,8 @@ The hand foreground mask contains original source pixels and a manually authored
 </details>
 
 [Editable compositions and timing](../showcase/capri/afterimage/COMPOSITION.json) · [Rebuild](../tools/build_capri_afterimage.py) · [Sources and exact frame ranges](ASSETS.md#v5-afterimage) · [Design adaptation](DESIGN_REFERENCES.md#v5-expansion)
+
+
+## V8: explain, point, inspect
+
+[Three-pose study and alpha masters](CAPRI_ACTOR.md) — distinct upper-body fan-art studies used in the actual root lesson, with measured anchors and original prompts. The compositions above and V7 masters remain recoverable.

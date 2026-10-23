@@ -1,4 +1,46 @@
-# Capri's transparent actor
+# Capri: three poses, one scene
+
+[Back to the lesson](../README.md#the-loop) · [Full art record](ASSETS.md)
+
+The root lesson uses **explain, point and inspect**, three supplied AI-assisted fan-art studies. They differ in head angle, shoulder/torso direction and arm silhouette. They are upper-body studies, not official model sheets, extracted animation, a 3D model or a complete rig. Human visual approval is pending.
+
+| Explain | Point | Inspect |
+| :--- | :--- | :--- |
+| ![Open-palmed explain pose](../showcase/capri/poses/explain.png) | ![Directed pointing pose](../showcase/capri/poses/point.png) | ![Thinking inspect pose](../showcase/capri/poses/inspect.png) |
+
+[Ink, paper and checkerboard proof](../showcase/capri/poses/alpha-proof.png) · [Measured anchors](../showcase/capri/poses/ANCHORS.json) · [Original studies and exact prompts](../showcase/capri/poses/references) · [Supplied provenance](../showcase/capri/poses/ASSET_RECORD.json) · [Original reference frames](../showcase/capri/poses/original-references)
+
+## Source and alignment
+
+Mani's explicit character-art generation exception continues for these poses. The handoff supplied them; V8 performs **no new model generation**. Original studies and prompts remain byte-identical. Only near-opaque alpha (249–254) is normalized to 255; black anatomy is retained. No flattened image is keyed, no missing body is invented and no face is elastically morphed. Source crops remain; the stage adds no further clipping at normal poses.
+
+Eye pairs, mouth, chest and active fingertip are measured in each source's original canvas. A similarity transform matches the eye midpoint and a 44-unit apparent inter-eye span. The complete face/hairstyle differs with perspective; geometric equality alone is not a fidelity approval. Scene-space anchors derive from the same transform used to render the pose. Captions are intentionally tail-free, clear of hair and hands. The Build leader starts at the actual transformed fingertip and ends at the current correction packet.
+
+## One clock and reproducible media
+
+`sample_scene(time_ms, layout)` in [the builder](../tools/build_capri_scene.py) owns pose, caption, active phase, packet, gesture and anchors. Wide and portrait exports share all four semantic beats. The local player samples its **60 Hz JSON master**; the GIF samples that same pure function at **25 Hz, 40 ms moving intervals**. Identical reading holds merge and are reported separately from motion. No source-acting FPS is claimed.
+
+The 18-second teaching loop uses four 4-second reading/acting beats and four 500 ms boundaries. A brief 8-unit exit and opacity reduction precede a hidden pose/caption change, then a matched-eye reveal. Only one complete face is rendered at a time. The last-to-first boundary retains explain, so there is no long return trip or blank actor. A small 16-unit packet reveal accompanies the opening of each beat. Captions stay fixed while read. This authored replay is not a controller action or approval.
+
+Full RGBA pose masters remain editable. Complete GIF scenes are **opaque ink-backed compositions**, not transparent actors. A shared palette prevents per-frame palette flashing. [Scene master and actual text bounds](../showcase/capri/scene/SCENE.json) · [Hashes and bytes](../showcase/capri/scene/BUILD.json). Anchor overlays sit alongside the four static beats in the scene directory.
+
+## Build
+
+Use Pillow/fontTools from the existing media environment, system `rsvg-convert`, **PyGObject, Pango, Pycairo and Fontconfig** (system media tools; runtime requirements and locks stay unchanged). Bundled Barlow fonts are registered only in the builder process. Pango shapes/kerning precede Cairo outline conversion; actual ink bounds guard text fit. Do not substitute manual glyph advances.
+
+```sh
+python tools/build_capri_scene.py
+python tools/build_capri_static.py
+python tools/check_capri_presentation.py
+```
+
+Pause retains the player's sampled state; resume continues from that time. Previous/next, backward seek and reduced motion select a complete scene without reconstructing earlier events. GitHub gets portable GIF/SVG media, native transcript and static route, without custom controls. Mechanical checks and recorded playback do not establish perceived smoothness. Continuous perceptual review and physical-device review must be reported separately.
+
+## Preserved V7 actor and method
+
+The earlier one-pose wrist articulation remains recoverable below and in its unchanged masters. It is retired from the root lesson.
+
+### V7 transparent actor
 
 [Back to the guide](../README.md#the-loop) · [Full art record](ASSETS.md).
 

@@ -90,3 +90,10 @@ Rebuild V6 in the same separate media environment with `python tools/build_capri
 V7 replaces rectangular character insets with the [transparent actor and alpha masters](CAPRI_ACTOR.md), preserving the panel/hero direction. The supplied edited pose is explicitly recorded as an AI edit, never compared with original-footage hashes as if identical. Original source integrity checks remain. Hand-layer articulation keeps face identity fixed and is reported as authored 2D motion. [Recipe and build record](../showcase/capri/actor/ANIMATION.json).
 
 [Worked numeric lesson](CONTEXT_BUDGET.md) uses original outlined SVG, an editable six-call scenario and an offline calculator. Every chart labels the counts as assumptions, not CAPRI usage; cache caveats remain visible. Runtime evaluation, profiles and dependencies are unchanged.
+
+
+## V8 composition candidate — 23 October 2026
+
+V8 preserves the approved hero and all earlier source/master assets. Three supplied AI-assisted upper-body studies now drive a single editorial stage, compact tail-free dialogue and a packet with an anchor-derived leader. No new generated imagery, runtime/fixture/CI/lock changes, public release or human acceptance is implied. [Pose provenance and build](CAPRI_ACTOR.md). Earlier V7 root panels remain in `showcase/capri/explainer/` and Git history; they are retired from the root.
+
+[Source-to-implementation record](DESIGN_REFERENCES.md#v8-composition-candidate--23-october-2026).

@@ -1,0 +1,2685 @@
+{
+  "schema_version": 1,
+  "duration_ms": 18000,
+  "master_hz": 60,
+  "gif_hz": 25,
+  "beats": [
+    {
+      "id": "plan",
+      "role": "Thinker",
+      "pose": "explain",
+      "title": "Make the brief useful.",
+      "caption": [
+        "Give each role",
+        "what it needs."
+      ],
+      "body": [
+        "Select the request, source",
+        "and acceptance checks."
+      ],
+      "packet": [
+        "Request + latest corrections",
+        "Relevant source + edit scope",
+        "Acceptance checks + questions"
+      ]
+    },
+    {
+      "id": "build",
+      "role": "Doer",
+      "pose": "point",
+      "title": "Carry the correction.",
+      "caption": [
+        "Keep the correction",
+        "with the task."
+      ],
+      "body": [
+        "Build a scoped candidate.",
+        "Keep compatible rules intact."
+      ],
+      "packet": [
+        "label.py only",
+        "blank \u2192 Untitled",
+        "Case, spacing, type rules retained"
+      ]
+    },
+    {
+      "id": "review",
+      "role": "Reviewer",
+      "pose": "inspect",
+      "title": "Check request and patch.",
+      "caption": [
+        "Check the request",
+        "against the patch."
+      ],
+      "body": [
+        "Review the candidate with",
+        "its source and evidence."
+      ],
+      "packet": [
+        "Request + correction + patch",
+        "Checks + known limits",
+        "Uncertain effects? Hold."
+      ]
+    },
+    {
+      "id": "decide",
+      "role": "Thinker \u2192 human",
+      "pose": "explain",
+      "title": "You decide what ships.",
+      "caption": [
+        "You decide",
+        "what ships."
+      ],
+      "body": [
+        "The report brings findings,",
+        "checks and limits back to you."
+      ],
+      "packet": [
+        "Findings + check evidence",
+        "Limits + open questions",
+        "Human decision; no auto-approval"
+      ]
+    }
+  ],
+  "layouts": {
+    "wide": {
+      "size": [
+        1200,
+        600
+      ],
+      "eye": [
+        256,
+        224
+      ],
+      "content": [
+        600,
+        120
+      ],
+      "packet": [
+        600,
+        328,
+        568,
+        160
+      ],
+      "caption": [
+        32,
+        464,
+        496,
+        88
+      ]
+    },
+    "portrait": {
+      "size": [
+        600,
+        1000
+      ],
+      "eye": [
+        256,
+        224
+      ],
+      "content": [
+        32,
+        608
+      ],
+      "packet": [
+        32,
+        784,
+        536,
+        160
+      ],
+      "caption": [
+        32,
+        464,
+        536,
+        88
+      ]
+    }
+  },
+  "landmarks": {
+    "explain": {
+      "eyes": [
+        [
+          711,
+          323
+        ],
+        [
+          846,
+          378
+        ]
+      ],
+      "mouth": [
+        742,
+        433
+      ],
+      "chest": [
+        748,
+        651
+      ],
+      "tip": [
+        1362,
+        848
+      ]
+    },
+    "point": {
+      "eyes": [
+        [
+          764,
+          414
+        ],
+        [
+          910,
+          407
+        ]
+      ],
+      "mouth": [
+        832,
+        497
+      ],
+      "chest": [
+        831,
+        660
+      ],
+      "tip": [
+        1490,
+        426
+      ]
+    },
+    "inspect": {
+      "eyes": [
+        [
+          643,
+          417
+        ],
+        [
+          749,
+          380
+        ]
+      ],
+      "mouth": [
+        720,
+        465
+      ],
+      "chest": [
+        755,
+        701
+      ],
+      "tip": [
+        678,
+        517
+      ]
+    }
+  },
+  "boundary": "160 ms out / 40 ms hidden / 200 ms in / 100 ms settle. Replay retains explain pose.",
+  "alpha": "Complete delivery scene is opaque ink. Separate pose masters remain RGBA.",
+  "typography": {
+    "renderer": "Pango 1.58.2 / Cairo 1.18.6",
+    "fonts": "Bundled Barlow, application-only Fontconfig registration",
+    "shaping": "PangoCairo.layout_path, actual ink extents, kerning; not glyph advances"
+  },
+  "text_bounds": [
+    {
+      "text": "Plan",
+      "x": 600,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 744,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 888,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 1032,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Thinker",
+      "x": 600,
+      "y": 80,
+      "size": 26,
+      "bounds": [
+        86,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Make the brief useful.",
+      "x": 600,
+      "y": 120,
+      "size": 52,
+      "bounds": [
+        477,
+        41
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "Select the request, source",
+      "x": 600,
+      "y": 192,
+      "size": 30,
+      "bounds": [
+        341,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "and acceptance checks.",
+      "x": 600,
+      "y": 232,
+      "size": 30,
+      "bounds": [
+        311,
+        27
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "One write owner. Ordered stages. Uncertain effects hold for reconciliation.",
+      "x": 32,
+      "y": 572,
+      "size": 23,
+      "bounds": [
+        733,
+        22
+      ],
+      "max_width": 1136
+    },
+    {
+      "text": "Give each role",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        160,
+        21
+      ],
+      "max_width": 280
+    },
+    {
+      "text": "what it needs.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        161,
+        21
+      ],
+      "max_width": 280
+    },
+    {
+      "text": "Request + latest corrections",
+      "x": 624,
+      "y": 352,
+      "size": 30,
+      "bounds": [
+        362,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Relevant source + edit scope",
+      "x": 624,
+      "y": 396,
+      "size": 30,
+      "bounds": [
+        367,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Acceptance checks + questions",
+      "x": 624,
+      "y": 440,
+      "size": 30,
+      "bounds": [
+        410,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Plan",
+      "x": 600,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 744,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 888,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 1032,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Thinker",
+      "x": 600,
+      "y": 80,
+      "size": 26,
+      "bounds": [
+        86,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Make the brief useful.",
+      "x": 600,
+      "y": 120,
+      "size": 52,
+      "bounds": [
+        477,
+        41
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "Select the request, source",
+      "x": 600,
+      "y": 192,
+      "size": 30,
+      "bounds": [
+        341,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "and acceptance checks.",
+      "x": 600,
+      "y": 232,
+      "size": 30,
+      "bounds": [
+        311,
+        27
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "One write owner. Ordered stages. Uncertain effects hold for reconciliation.",
+      "x": 32,
+      "y": 572,
+      "size": 23,
+      "bounds": [
+        733,
+        22
+      ],
+      "max_width": 1136
+    },
+    {
+      "text": "Give each role",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        160,
+        21
+      ],
+      "max_width": 280
+    },
+    {
+      "text": "what it needs.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        161,
+        21
+      ],
+      "max_width": 280
+    },
+    {
+      "text": "Request + latest corrections",
+      "x": 624,
+      "y": 352,
+      "size": 30,
+      "bounds": [
+        362,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Relevant source + edit scope",
+      "x": 624,
+      "y": 396,
+      "size": 30,
+      "bounds": [
+        367,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Acceptance checks + questions",
+      "x": 624,
+      "y": 440,
+      "size": 30,
+      "bounds": [
+        410,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Plan",
+      "x": 600,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 744,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 888,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 1032,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Doer",
+      "x": 600,
+      "y": 80,
+      "size": 26,
+      "bounds": [
+        52,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Carry the correction.",
+      "x": 600,
+      "y": 120,
+      "size": 52,
+      "bounds": [
+        462,
+        51
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "Build a scoped candidate.",
+      "x": 600,
+      "y": 192,
+      "size": 30,
+      "bounds": [
+        323,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "Keep compatible rules intact.",
+      "x": 600,
+      "y": 232,
+      "size": 30,
+      "bounds": [
+        377,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "One write owner. Ordered stages. Uncertain effects hold for reconciliation.",
+      "x": 32,
+      "y": 572,
+      "size": 23,
+      "bounds": [
+        733,
+        22
+      ],
+      "max_width": 1136
+    },
+    {
+      "text": "Keep the correction",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        227,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "with the task.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        156,
+        21
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "label.py only",
+      "x": 624,
+      "y": 352,
+      "size": 30,
+      "bounds": [
+        156,
+        27
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "blank \u2192 Untitled",
+      "x": 624,
+      "y": 396,
+      "size": 30,
+      "bounds": [
+        211,
+        23
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Case, spacing, type rules retained",
+      "x": 624,
+      "y": 440,
+      "size": 30,
+      "bounds": [
+        430,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Plan",
+      "x": 600,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 744,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 888,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 1032,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Doer",
+      "x": 600,
+      "y": 80,
+      "size": 26,
+      "bounds": [
+        52,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Carry the correction.",
+      "x": 600,
+      "y": 120,
+      "size": 52,
+      "bounds": [
+        462,
+        51
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "Build a scoped candidate.",
+      "x": 600,
+      "y": 192,
+      "size": 30,
+      "bounds": [
+        323,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "Keep compatible rules intact.",
+      "x": 600,
+      "y": 232,
+      "size": 30,
+      "bounds": [
+        377,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "One write owner. Ordered stages. Uncertain effects hold for reconciliation.",
+      "x": 32,
+      "y": 572,
+      "size": 23,
+      "bounds": [
+        733,
+        22
+      ],
+      "max_width": 1136
+    },
+    {
+      "text": "Keep the correction",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        227,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "with the task.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        156,
+        21
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "label.py only",
+      "x": 624,
+      "y": 352,
+      "size": 30,
+      "bounds": [
+        156,
+        27
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "blank \u2192 Untitled",
+      "x": 624,
+      "y": 396,
+      "size": 30,
+      "bounds": [
+        211,
+        23
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Case, spacing, type rules retained",
+      "x": 624,
+      "y": 440,
+      "size": 30,
+      "bounds": [
+        430,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Plan",
+      "x": 600,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 744,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 888,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 1032,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Reviewer",
+      "x": 600,
+      "y": 80,
+      "size": 26,
+      "bounds": [
+        103,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Check request and patch.",
+      "x": 600,
+      "y": 120,
+      "size": 52,
+      "bounds": [
+        567,
+        50
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "Review the candidate with",
+      "x": 600,
+      "y": 192,
+      "size": 30,
+      "bounds": [
+        336,
+        23
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "its source and evidence.",
+      "x": 600,
+      "y": 232,
+      "size": 30,
+      "bounds": [
+        308,
+        23
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "One write owner. Ordered stages. Uncertain effects hold for reconciliation.",
+      "x": 32,
+      "y": 572,
+      "size": 23,
+      "bounds": [
+        733,
+        22
+      ],
+      "max_width": 1136
+    },
+    {
+      "text": "Check the request",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        208,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "against the patch.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        206,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "Request + correction + patch",
+      "x": 624,
+      "y": 352,
+      "size": 30,
+      "bounds": [
+        369,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Checks + known limits",
+      "x": 624,
+      "y": 396,
+      "size": 30,
+      "bounds": [
+        283,
+        23
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Uncertain effects? Hold.",
+      "x": 624,
+      "y": 440,
+      "size": 30,
+      "bounds": [
+        310,
+        23
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Plan",
+      "x": 600,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 744,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 888,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 1032,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Reviewer",
+      "x": 600,
+      "y": 80,
+      "size": 26,
+      "bounds": [
+        103,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Check request and patch.",
+      "x": 600,
+      "y": 120,
+      "size": 52,
+      "bounds": [
+        567,
+        50
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "Review the candidate with",
+      "x": 600,
+      "y": 192,
+      "size": 30,
+      "bounds": [
+        336,
+        23
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "its source and evidence.",
+      "x": 600,
+      "y": 232,
+      "size": 30,
+      "bounds": [
+        308,
+        23
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "One write owner. Ordered stages. Uncertain effects hold for reconciliation.",
+      "x": 32,
+      "y": 572,
+      "size": 23,
+      "bounds": [
+        733,
+        22
+      ],
+      "max_width": 1136
+    },
+    {
+      "text": "Check the request",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        208,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "against the patch.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        206,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "Request + correction + patch",
+      "x": 624,
+      "y": 352,
+      "size": 30,
+      "bounds": [
+        369,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Checks + known limits",
+      "x": 624,
+      "y": 396,
+      "size": 30,
+      "bounds": [
+        283,
+        23
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Uncertain effects? Hold.",
+      "x": 624,
+      "y": 440,
+      "size": 30,
+      "bounds": [
+        310,
+        23
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Plan",
+      "x": 600,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 744,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 888,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 1032,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Thinker \u2192 human",
+      "x": 600,
+      "y": 80,
+      "size": 26,
+      "bounds": [
+        197,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "You decide what ships.",
+      "x": 600,
+      "y": 120,
+      "size": 52,
+      "bounds": [
+        507,
+        51
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "The report brings findings,",
+      "x": 600,
+      "y": 192,
+      "size": 30,
+      "bounds": [
+        338,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "checks and limits back to you.",
+      "x": 600,
+      "y": 232,
+      "size": 30,
+      "bounds": [
+        381,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "One write owner. Ordered stages. Uncertain effects hold for reconciliation.",
+      "x": 32,
+      "y": 572,
+      "size": 23,
+      "bounds": [
+        733,
+        22
+      ],
+      "max_width": 1136
+    },
+    {
+      "text": "You decide",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        126,
+        21
+      ],
+      "max_width": 240
+    },
+    {
+      "text": "what ships.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        132,
+        26
+      ],
+      "max_width": 240
+    },
+    {
+      "text": "Findings + check evidence",
+      "x": 624,
+      "y": 352,
+      "size": 30,
+      "bounds": [
+        338,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Limits + open questions",
+      "x": 624,
+      "y": 396,
+      "size": 30,
+      "bounds": [
+        305,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Human decision; no auto-approval",
+      "x": 624,
+      "y": 440,
+      "size": 30,
+      "bounds": [
+        438,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Plan",
+      "x": 600,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 744,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 888,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 1032,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Thinker \u2192 human",
+      "x": 600,
+      "y": 80,
+      "size": 26,
+      "bounds": [
+        197,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "You decide what ships.",
+      "x": 600,
+      "y": 120,
+      "size": 52,
+      "bounds": [
+        507,
+        51
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "The report brings findings,",
+      "x": 600,
+      "y": 192,
+      "size": 30,
+      "bounds": [
+        338,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "checks and limits back to you.",
+      "x": 600,
+      "y": 232,
+      "size": 30,
+      "bounds": [
+        381,
+        28
+      ],
+      "max_width": 568
+    },
+    {
+      "text": "One write owner. Ordered stages. Uncertain effects hold for reconciliation.",
+      "x": 32,
+      "y": 572,
+      "size": 23,
+      "bounds": [
+        733,
+        22
+      ],
+      "max_width": 1136
+    },
+    {
+      "text": "You decide",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        126,
+        21
+      ],
+      "max_width": 240
+    },
+    {
+      "text": "what ships.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        132,
+        26
+      ],
+      "max_width": 240
+    },
+    {
+      "text": "Findings + check evidence",
+      "x": 624,
+      "y": 352,
+      "size": 30,
+      "bounds": [
+        338,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Limits + open questions",
+      "x": 624,
+      "y": 396,
+      "size": 30,
+      "bounds": [
+        305,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Human decision; no auto-approval",
+      "x": 624,
+      "y": 440,
+      "size": 30,
+      "bounds": [
+        438,
+        28
+      ],
+      "max_width": 520
+    },
+    {
+      "text": "Plan",
+      "x": 32,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 176,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 320,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 464,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Thinker",
+      "x": 32,
+      "y": 568,
+      "size": 26,
+      "bounds": [
+        86,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Make the brief useful.",
+      "x": 32,
+      "y": 608,
+      "size": 48,
+      "bounds": [
+        441,
+        38
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Select the request, source",
+      "x": 32,
+      "y": 680,
+      "size": 30,
+      "bounds": [
+        341,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "and acceptance checks.",
+      "x": 32,
+      "y": 720,
+      "size": 30,
+      "bounds": [
+        311,
+        27
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "One write owner. Ordered stages.",
+      "x": 32,
+      "y": 972,
+      "size": 23,
+      "bounds": [
+        326,
+        22
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Give each role",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        160,
+        21
+      ],
+      "max_width": 280
+    },
+    {
+      "text": "what it needs.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        161,
+        21
+      ],
+      "max_width": 280
+    },
+    {
+      "text": "Request + latest corrections",
+      "x": 56,
+      "y": 808,
+      "size": 30,
+      "bounds": [
+        362,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Relevant source + edit scope",
+      "x": 56,
+      "y": 852,
+      "size": 30,
+      "bounds": [
+        367,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Acceptance checks + questions",
+      "x": 56,
+      "y": 896,
+      "size": 30,
+      "bounds": [
+        410,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Plan",
+      "x": 32,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 176,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 320,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 464,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Thinker",
+      "x": 32,
+      "y": 568,
+      "size": 26,
+      "bounds": [
+        86,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Make the brief useful.",
+      "x": 32,
+      "y": 608,
+      "size": 48,
+      "bounds": [
+        441,
+        38
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Select the request, source",
+      "x": 32,
+      "y": 680,
+      "size": 30,
+      "bounds": [
+        341,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "and acceptance checks.",
+      "x": 32,
+      "y": 720,
+      "size": 30,
+      "bounds": [
+        311,
+        27
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "One write owner. Ordered stages.",
+      "x": 32,
+      "y": 972,
+      "size": 23,
+      "bounds": [
+        326,
+        22
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Give each role",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        160,
+        21
+      ],
+      "max_width": 280
+    },
+    {
+      "text": "what it needs.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        161,
+        21
+      ],
+      "max_width": 280
+    },
+    {
+      "text": "Request + latest corrections",
+      "x": 56,
+      "y": 808,
+      "size": 30,
+      "bounds": [
+        362,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Relevant source + edit scope",
+      "x": 56,
+      "y": 852,
+      "size": 30,
+      "bounds": [
+        367,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Acceptance checks + questions",
+      "x": 56,
+      "y": 896,
+      "size": 30,
+      "bounds": [
+        410,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Plan",
+      "x": 32,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 176,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 320,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 464,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Doer",
+      "x": 32,
+      "y": 568,
+      "size": 26,
+      "bounds": [
+        52,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Carry the correction.",
+      "x": 32,
+      "y": 608,
+      "size": 48,
+      "bounds": [
+        427,
+        47
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Build a scoped candidate.",
+      "x": 32,
+      "y": 680,
+      "size": 30,
+      "bounds": [
+        323,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Keep compatible rules intact.",
+      "x": 32,
+      "y": 720,
+      "size": 30,
+      "bounds": [
+        377,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "One write owner. Ordered stages.",
+      "x": 32,
+      "y": 972,
+      "size": 23,
+      "bounds": [
+        326,
+        22
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Keep the correction",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        227,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "with the task.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        156,
+        21
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "label.py only",
+      "x": 56,
+      "y": 808,
+      "size": 30,
+      "bounds": [
+        156,
+        27
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "blank \u2192 Untitled",
+      "x": 56,
+      "y": 852,
+      "size": 30,
+      "bounds": [
+        211,
+        23
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Case, spacing, type rules retained",
+      "x": 56,
+      "y": 896,
+      "size": 30,
+      "bounds": [
+        430,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Plan",
+      "x": 32,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 176,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 320,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 464,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Doer",
+      "x": 32,
+      "y": 568,
+      "size": 26,
+      "bounds": [
+        52,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Carry the correction.",
+      "x": 32,
+      "y": 608,
+      "size": 48,
+      "bounds": [
+        427,
+        47
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Build a scoped candidate.",
+      "x": 32,
+      "y": 680,
+      "size": 30,
+      "bounds": [
+        323,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Keep compatible rules intact.",
+      "x": 32,
+      "y": 720,
+      "size": 30,
+      "bounds": [
+        377,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "One write owner. Ordered stages.",
+      "x": 32,
+      "y": 972,
+      "size": 23,
+      "bounds": [
+        326,
+        22
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Keep the correction",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        227,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "with the task.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        156,
+        21
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "label.py only",
+      "x": 56,
+      "y": 808,
+      "size": 30,
+      "bounds": [
+        156,
+        27
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "blank \u2192 Untitled",
+      "x": 56,
+      "y": 852,
+      "size": 30,
+      "bounds": [
+        211,
+        23
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Case, spacing, type rules retained",
+      "x": 56,
+      "y": 896,
+      "size": 30,
+      "bounds": [
+        430,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Plan",
+      "x": 32,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 176,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 320,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 464,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Reviewer",
+      "x": 32,
+      "y": 568,
+      "size": 26,
+      "bounds": [
+        103,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Check request + patch.",
+      "x": 32,
+      "y": 608,
+      "size": 48,
+      "bounds": [
+        471,
+        46
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Review the candidate with",
+      "x": 32,
+      "y": 680,
+      "size": 30,
+      "bounds": [
+        336,
+        23
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "its source and evidence.",
+      "x": 32,
+      "y": 720,
+      "size": 30,
+      "bounds": [
+        308,
+        23
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "One write owner. Ordered stages.",
+      "x": 32,
+      "y": 972,
+      "size": 23,
+      "bounds": [
+        326,
+        22
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Check the request",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        208,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "against the patch.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        206,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "Request + correction + patch",
+      "x": 56,
+      "y": 808,
+      "size": 30,
+      "bounds": [
+        369,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Checks + known limits",
+      "x": 56,
+      "y": 852,
+      "size": 30,
+      "bounds": [
+        283,
+        23
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Uncertain effects? Hold.",
+      "x": 56,
+      "y": 896,
+      "size": 30,
+      "bounds": [
+        310,
+        23
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Plan",
+      "x": 32,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 176,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 320,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 464,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Reviewer",
+      "x": 32,
+      "y": 568,
+      "size": 26,
+      "bounds": [
+        103,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Check request + patch.",
+      "x": 32,
+      "y": 608,
+      "size": 48,
+      "bounds": [
+        471,
+        46
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Review the candidate with",
+      "x": 32,
+      "y": 680,
+      "size": 30,
+      "bounds": [
+        336,
+        23
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "its source and evidence.",
+      "x": 32,
+      "y": 720,
+      "size": 30,
+      "bounds": [
+        308,
+        23
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "One write owner. Ordered stages.",
+      "x": 32,
+      "y": 972,
+      "size": 23,
+      "bounds": [
+        326,
+        22
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "Check the request",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        208,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "against the patch.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        206,
+        26
+      ],
+      "max_width": 336
+    },
+    {
+      "text": "Request + correction + patch",
+      "x": 56,
+      "y": 808,
+      "size": 30,
+      "bounds": [
+        369,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Checks + known limits",
+      "x": 56,
+      "y": 852,
+      "size": 30,
+      "bounds": [
+        283,
+        23
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Uncertain effects? Hold.",
+      "x": 56,
+      "y": 896,
+      "size": 30,
+      "bounds": [
+        310,
+        23
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Plan",
+      "x": 32,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 176,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 320,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 464,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Thinker \u2192 human",
+      "x": 32,
+      "y": 568,
+      "size": 26,
+      "bounds": [
+        197,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "You decide what ships.",
+      "x": 32,
+      "y": 608,
+      "size": 48,
+      "bounds": [
+        471,
+        47
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "The report brings findings,",
+      "x": 32,
+      "y": 680,
+      "size": 30,
+      "bounds": [
+        338,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "checks and limits back to you.",
+      "x": 32,
+      "y": 720,
+      "size": 30,
+      "bounds": [
+        381,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "One write owner. Ordered stages.",
+      "x": 32,
+      "y": 972,
+      "size": 23,
+      "bounds": [
+        326,
+        22
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "You decide",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        126,
+        21
+      ],
+      "max_width": 240
+    },
+    {
+      "text": "what ships.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        132,
+        26
+      ],
+      "max_width": 240
+    },
+    {
+      "text": "Findings + check evidence",
+      "x": 56,
+      "y": 808,
+      "size": 30,
+      "bounds": [
+        338,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Limits + open questions",
+      "x": 56,
+      "y": 852,
+      "size": 30,
+      "bounds": [
+        305,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Human decision; no auto-approval",
+      "x": 56,
+      "y": 896,
+      "size": 30,
+      "bounds": [
+        438,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Plan",
+      "x": 32,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        47,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Build",
+      "x": 176,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        55,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Review",
+      "x": 320,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        81,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Decide",
+      "x": 464,
+      "y": 32,
+      "size": 27,
+      "bounds": [
+        78,
+        21
+      ],
+      "max_width": null
+    },
+    {
+      "text": "Thinker \u2192 human",
+      "x": 32,
+      "y": 568,
+      "size": 26,
+      "bounds": [
+        197,
+        20
+      ],
+      "max_width": null
+    },
+    {
+      "text": "You decide what ships.",
+      "x": 32,
+      "y": 608,
+      "size": 48,
+      "bounds": [
+        471,
+        47
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "The report brings findings,",
+      "x": 32,
+      "y": 680,
+      "size": 30,
+      "bounds": [
+        338,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "checks and limits back to you.",
+      "x": 32,
+      "y": 720,
+      "size": 30,
+      "bounds": [
+        381,
+        28
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "One write owner. Ordered stages.",
+      "x": 32,
+      "y": 972,
+      "size": 23,
+      "bounds": [
+        326,
+        22
+      ],
+      "max_width": 536
+    },
+    {
+      "text": "You decide",
+      "x": 56,
+      "y": 480,
+      "size": 27,
+      "bounds": [
+        126,
+        21
+      ],
+      "max_width": 240
+    },
+    {
+      "text": "what ships.",
+      "x": 56,
+      "y": 514,
+      "size": 27,
+      "bounds": [
+        132,
+        26
+      ],
+      "max_width": 240
+    },
+    {
+      "text": "Findings + check evidence",
+      "x": 56,
+      "y": 808,
+      "size": 30,
+      "bounds": [
+        338,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Limits + open questions",
+      "x": 56,
+      "y": 852,
+      "size": 30,
+      "bounds": [
+        305,
+        28
+      ],
+      "max_width": 488
+    },
+    {
+      "text": "Human decision; no auto-approval",
+      "x": 56,
+      "y": 896,
+      "size": 30,
+      "bounds": [
+        438,
+        28
+      ],
+      "max_width": 488
+    }
+  ]
+}

@@ -27,3 +27,10 @@ This unseen V5 expansion remains a local presentation candidate for Mani's visua
 ## V7 direction from the handoff
 
 The V7 handoff records Mani’s feedback that the panels are “not bad”, with requests for transparent character presence, smoother movement and inspectable numbers. Preserve the panel/hero direction; this is not full V6 visual acceptance. AI assistance is authorized for the particular character asset. The selected approach uses the supplied edited pose with fixed face and articulated hands after source-mask prototypes showed fidelity defects. Original source hashes, fixture semantics, frozen evidence and human review remain authoritative.
+
+
+## V8 composition candidate — 23 October 2026
+
+V8 preserves the approved hero and all earlier source/master assets. Three supplied AI-assisted upper-body studies now drive a single editorial stage, compact tail-free dialogue and a packet with an anchor-derived leader. No new generated imagery, runtime/fixture/CI/lock changes, public release or human acceptance is implied. [Pose provenance and build](CAPRI_ACTOR.md). Earlier V7 root panels remain in `showcase/capri/explainer/` and Git history; they are retired from the root.
+
+[Source-to-implementation record](DESIGN_REFERENCES.md#v8-composition-candidate--23-october-2026).
