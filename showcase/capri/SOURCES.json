@@ -1,0 +1,52 @@
+{
+  "selected": [
+    {
+      "source": "https://tenor.com/view/cyberpunk-cyberpunk-edgerunners-cyberpunk-2077-capri-capricorn-gif-3649282024278917159",
+      "uploader": "emdzejus",
+      "path": "assets/capri-12.gif",
+      "media": "https://media1.tenor.com/m/MqTaqpZdACcAAAAC/cyberpunk-cyberpunk-edgerunners.gif",
+      "description": "The perfect Cyberpunk Cyberpunk edgerunners Cyberpunk 2077 Animated GIF for your conversation. Discover and Share the best GIFs on Tenor.",
+      "status": "downloaded; visual check pending",
+      "sha256": "05df112d650cfbfdd4a41916faa0b61fcae55d68c481711efbaf15d659abd5fc",
+      "bytes": 97863,
+      "dimensions": [
+        498,
+        281
+      ],
+      "frames": 11,
+      "duration_ms": 1100,
+      "inspection": "Five decoded samples per clip visually inspected; full playback not qualified",
+      "finding": "Clear eyes/face close-up; preferred workflow edge image.",
+      "rights": "Anime excerpt. Downloaded reference copy; no redistribution grant established. Uploader is not presumed rights holder.",
+      "candidate_path": "sources/capri-12.gif"
+    },
+    {
+      "source": "https://tenor.com/view/cyberpunk-2077-cyberpunk-cyberpunk-edgerunners-capri-gif-3999370720653516186",
+      "uploader": "BluRei",
+      "path": "assets/capri-19.gif",
+      "media": "https://media1.tenor.com/m/N4CeexmmnZoAAAAC/cyberpunk-2077-cyberpunk.gif",
+      "description": "The perfect Cyberpunk 2077 Cyberpunk Cyberpunk edgerunners Animated GIF for your conversation. Discover and Share the best GIFs on Tenor.",
+      "status": "downloaded; visual check pending",
+      "sha256": "f40d1e6b1c3fdb1374d988fe07f18b6c3f2a42010aabc72ed5bcb30d79dac17b",
+      "bytes": 5278347,
+      "dimensions": [
+        498,
+        281
+      ],
+      "frames": 120,
+      "duration_ms": 4000,
+      "inspection": "Five decoded samples per clip visually inspected; full playback not qualified",
+      "finding": "Face, torso and extended hands; chosen hero source.",
+      "rights": "Anime excerpt. Downloaded reference copy; no redistribution grant established. Uploader is not presumed rights holder.",
+      "candidate_path": "sources/capri-19.gif"
+    }
+  ],
+  "excluded": [
+    "4: D-only",
+    "18: D-only",
+    "6: captioned meme"
+  ],
+  "source_collection": "20 downloaded files with overlapping scenes; only sources 19 and 12 used here",
+  "rights": "PRIVATE_REVIEW_ONLY; anime public redistribution unverified",
+  "font": "Barlow Condensed ExtraBold Italic, OFL-1.1; included notice"
+}

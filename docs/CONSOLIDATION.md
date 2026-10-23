@@ -1,0 +1,11 @@
+# One maintained project
+
+V3 continues the already-created V2 presentation worktree; it does not restart consolidation. This presentation branch belongs to the original implementation repository, **ID 1429595311**, currently named `Denoax/codex-three-role-workflow`. Its base is current stabilization commit `f7e374cbe0644284d79846356015d0eabd38e67c`; the same Git common directory and parent history are retained. It is not a new repository, fork or automatic export pipeline.
+
+`Denoax/capri`, repository ID 1430976731 at `31ea266`, is the detached historical presentation snapshot. Its rejected graphics and stale runtime are not merged back. Useful purpose/role/setup documentation is reconciled against current source; runtime, tests, profile, examples, CI and implementation docs come from the newer original repository. The exact current README is preserved as [IMPLEMENTATION_README.md](../IMPLEMENTATION_README.md). [Presentation decisions](PRESENTATION_DECISIONS.md) records the visual rejection and replacement.
+
+The completed correction will be reviewed as a presentation-only branch/patch of this codebase. Uncommitted active implementation work is not copied, reset, stashed or overwritten. If the stabilization owner publishes a newer completed source, rebase this branch and reconcile source/status docs before integration. No running session was controlled or notified by this branch.
+
+The intended cutover keeps the original implementation repository identity/history as CAPRI and retires the detached snapshot as historical evidence. Both histories are privately bundled first. Rename/archive/redirect operations must use stable repository IDs and recheck current names, branches, visibility and pending work. GitHub does not merge two repository identities, issues or stars. The implementation stays private until its complete reachable history and exposed surfaces are cleared; character-asset reuse and code licensing are separate boundaries.
+
+No remote rename, archive, deletion, force-push, visibility change or public character-art publication has been performed by this local correction. The private review contains the concrete reconciliation and history/surface audit. That audit and the completed candidate precede any consequential cutover decision; no new controller gate or qualification phase is introduced.
