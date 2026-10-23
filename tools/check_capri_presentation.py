@@ -21,6 +21,8 @@ def main():
             elif url.fragment and dest.suffix=='.md':
                 headings=re.findall(r'^#{1,6}\s+(.+)$',dest.read_text(),re.M)
                 slugs={re.sub(r'[^\w\- ]','',h.lower()).replace(' ','-') for h in headings}
+                # The editorial README uses documented custom anchors for image headings.
+                slugs.update(re.findall(r'<a\s+(?:id|name)="([^"]+)"',dest.read_text()))
                 if url.fragment not in slugs:errors.append(f'Broken heading: {path.name} -> {target}')
             links+=1
     static=(ROOT/'docs/README_STATIC.md').read_text()
