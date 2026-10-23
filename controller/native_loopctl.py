@@ -20,8 +20,9 @@ from loop.util import Rejected, atomic, redact, now, tree, identity
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', required=True, type=Path)
-    parser.add_argument('command', choices=('start', 'status', 'attach', 'stop', 'recontract', 'continue'))
+    parser.add_argument('command', choices=('start', 'status', 'attach', 'stop', 'recontract', 'continue', 'prepare-maintenance', 'recover-startup', 'finish-review', 'maintenance', 'resume-runtime'))
     parser.add_argument('--role', choices=ROLES)
+    parser.add_argument('--action',choices=('compact-role','replace-role','checkpoint-runtime','reconcile-maintenance'))
     parser.add_argument('--prepared', type=Path)
     parser.add_argument('--prepared-sha256')
     parser.add_argument('--defer-review', action='store_true')
@@ -34,6 +35,29 @@ def main():
     root = Path(settings.state_dir).resolve()
     registry = root / 'registry.json'
     owner = root / 'supervisor.json'
+    if args.command == 'prepare-maintenance':
+        if not args.binding:raise Rejected('Exact native maintenance binding required')
+        from loop.native_startup import prepare
+        print(json.dumps(prepare(config,json.loads(args.binding.read_text()),Path(__file__).resolve().parent,check_only=args.check)),flush=True)
+        return
+    if args.command == 'recover-startup':
+        if not args.prepared or not args.prepared_sha256:raise Rejected('Exact derived receipt/hash required')
+        from loop.native_startup import run_recovery
+        return run_recovery(config,args,Path(__file__).resolve().parent)
+    if args.command == 'resume-runtime':
+        if not args.prepared or not args.prepared_sha256:raise Rejected('Exact runtime checkpoint receipt/hash required')
+        from loop.native_resume import run_resume
+        return run_resume(config,args,Path(__file__).resolve().parent)
+    if args.command == 'maintenance':
+        if not args.binding or not args.action:raise Rejected('Bound parent maintenance action required')
+        from loop.native_operator import request_review
+        print(json.dumps(request_review(root,json.loads(args.binding.read_text()),args.action)),flush=True)
+        return
+    if args.command == 'finish-review':
+        if not args.binding:raise Rejected('Exact sealed review/evidence binding required')
+        from loop.native_operator import request_review
+        print(json.dumps(request_review(root,json.loads(args.binding.read_text()))),flush=True)
+        return
     if args.command == 'continue':
         from loop.native_continuation import run_prepared
         return run_prepared(config, args, Path(__file__).resolve().parent)
@@ -55,20 +79,17 @@ def main():
         finally:
             store.close()
         return
-    if args.command in ('status', 'attach'):
-        rows = json.loads(registry.read_text())
-        if args.command == 'status':
-            for row in rows.values():
-                row['process_alive_matching'] = process_identity(row['pid']) == row['process_identity']
-                row['completion'] = 'NOT_INFERRED_FROM_LIVENESS'
-            print(json.dumps(rows, indent=2))
-        else:
-            if not args.role:
-                raise Rejected('--role required')
-            row = rows[args.role]
-            command = [settings.executable()]
-            command += ['--remote', row['endpoint']] if row.get('empty', True) else ['resume', '--remote', row['endpoint'], row['thread']]
-            print(shlex.join(command))
+    if args.command == 'status':
+        from loop.native_status import native_status
+        print(json.dumps(native_status(root,settings,home=config['home']),indent=2))
+        return
+    if args.command == 'attach':
+        rows=json.loads(registry.read_text())
+        if not args.role:raise Rejected('--role required')
+        row=rows[args.role]
+        command=[settings.executable()]
+        command+=['--remote',row['endpoint']] if row.get('empty',True) else ['resume','--remote',row['endpoint'],row['thread']]
+        print(shlex.join(command))
         return
     if args.command == 'stop':
         saved = json.loads(owner.read_text())
@@ -95,7 +116,7 @@ def main():
     home = Path(config['home']).resolve()
     workflow = config['workflow']
     store = Store(home)
-    engine = Engine(store,workflow)
+    engine = Engine(store,workflow,defer_review=args.defer_review)
     adapter = NativeAdapter(engine,settings,evidence_check=capture_complete)
     engine.adapter = adapter
     slots = adapter.slots
@@ -132,12 +153,12 @@ def main():
             with store.transaction():
                 event = store.event(None,'HUMAN_REQUEST',dict(owner=owner_id,text=human_text,origin='FOREGROUND_CONTROLLING_TTY',time=now()))
             request = dict(text=human_text,event=event,origin='FOREGROUND_CONTROLLING_TTY')
-            token = capability(store,owner_id,dict(repo=str(Path(repo).resolve()),request=request,key=owner_id+':1'))
+            token = adapter.create_held_capability(owner_id,dict(repo=str(Path(repo).resolve()),request=request,key=owner_id+':1'))
             for role in ROLES:
                 spec = config['roles'][role]
                 slots.start_role(role, workspace if role=='thinker' else spec['workspace'], inputs if role=='thinker' else spec['inputs'],config['controller'],
                     mcp=token if role=='thinker' else None,intake_socket=intake.path if role=='thinker' else None)
-            adapter.register_thinker(owner_id,token)
+            adapter.register_thinker(owner_id,token,held=True)
             terminals.sync(slots.save())
             slots.mapping_changed = terminals.sync
             if not args.headless:

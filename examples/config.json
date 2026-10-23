@@ -7,6 +7,13 @@
       "thinker": "medium",
       "doer": "medium",
       "reviewer": "high"
+    },
+    "context_policy": {
+      "checkpoint": 0.6,
+      "compact": 0.75,
+      "hold": 0.85,
+      "reserve": 16000,
+      "max_age": 30
     }
   },
   "controller": "/absolute/curated-project/controller",

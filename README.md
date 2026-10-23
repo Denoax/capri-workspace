@@ -8,8 +8,8 @@ The accepted original checkout is not the development candidate.
 Python 3.11+, Linux namespaces, bubblewrap and the qualified Codex CLI 0.163.0
 profile are the current target. Native transport uses websockets 17.1. Existing
 Codex authentication is mounted read-only; no new provider or API billing is
-required. Native selector, full lifecycle, research and recovery qualification
-are still pending. This is not a production cutover or a public release.
+required. Current-source native startup, lifecycle, research and recovery qualification
+remain pending; see CLIENT_SUPPORT.md and the source-bound parent receipts. This is not a production cutover or a public release.
 
 ## Offline checks
 
@@ -97,8 +97,7 @@ startup or a consumed claim requires explicit checked recovery, never a blind
 retry. Old processes/endpoints and uncertain attempts must be reconciled first.
 Headless continuation requires all three clients to attach within the implemented
 15-second window; it does not bypass attachment checks. `attach` prints a client
-command for the operator to execute. `status` reports recorded process identities,
-not task completion.
+command for the operator to execute. `status` reads validated durable context and process records without making telemetry fresh. It does not infer task completion.
 
 Use `--defer-review` on `continue` while parent qualification is pending. The
 engine verifies the exact sealed candidate, records `NATIVE_QUALIFICATION_PENDING`
@@ -114,6 +113,68 @@ withhold writes until lifecycle, source, originals, questions, checks, lease and
 fresh usage are validated. There is no general automatic CLI resume guarantee.
 These implementation boundaries and synthetic checks remain distinct from
 current-source native end-to-end qualification.
+
+## Source-bound native maintenance
+
+Stabilization adds a separate native-only recovery admission. It keeps the old
+core re-contract receipt and one-shot claim consumed. The trusted parent binds
+an accounted stopped pre-probe launch, exact old/new source, controller/config,
+registry/generations, materials and a new single-line maintenance scope. Checks
+use SQLite read-only mode without initializing or migrating runtime state.
+
+```sh
+python3 controller/native_loopctl.py --config /absolute/native-config.json prepare-maintenance --binding /absolute/maintenance-binding.json --check
+python3 controller/native_loopctl.py --config /absolute/native-config.json prepare-maintenance --binding /absolute/maintenance-binding.json
+python3 controller/native_loopctl.py --config /absolute/native-config.json recover-startup --prepared /absolute/prepared.json --prepared-sha256 RECEIPT_SHA256 --check
+python3 controller/native_loopctl.py --config /absolute/native-config.json recover-startup --prepared /absolute/prepared.json --prepared-sha256 RECEIPT_SHA256
+```
+
+Preparation captures genuine foreground scope only after pure checks. It creates
+no model/backend and never resets or reclaims the old claim. A consumed native
+launch intent returns a hold. A duplicate or lost response cannot start another
+turn. No general recovery from an unaccounted old launch is implied. Startup
+creates held capabilities before any role process and revokes them on cleanup.
+Foreign owner context ledgers remain unchanged; same-owner history is retained.
+
+The new route always stops implementation at `CANDIDATE_SEALED` for parent
+qualification and evaluation. It serves a private parent-only operator socket
+on the same supervisor/main thread, with no model mount or second controller.
+The parent prepares an exact sealed-task/version/owner/packet/source/controller/
+supervisor binding. Maintenance also binds idle Doer thread/generation. Final
+review binds at most ten indexed evidence bundles, each <=24000 bytes and total
+<=120000 bytes, including INDEX.json; all eight N01-N08 are required.
+
+```sh
+python3 controller/native_loopctl.py --config /absolute/native-config.json maintenance --action compact-role --binding /absolute/role-binding.json
+python3 controller/native_loopctl.py --config /absolute/native-config.json maintenance --action replace-role --binding /absolute/role-binding.json
+python3 controller/native_loopctl.py --config /absolute/native-config.json maintenance --action checkpoint-runtime --binding /absolute/role-binding.json
+python3 controller/native_loopctl.py --config /absolute/native-config.json resume-runtime --prepared /absolute/runtime-checkpoint.json --prepared-sha256 RECEIPT_SHA256 --check
+python3 controller/native_loopctl.py --config /absolute/native-config.json resume-runtime --prepared /absolute/runtime-checkpoint.json --prepared-sha256 RECEIPT_SHA256
+python3 controller/native_loopctl.py --config /absolute/native-config.json finish-review --binding /absolute/review-binding.json
+```
+
+`checkpoint-runtime` saves current originals, scope, registry, owner/Doer
+checkpoints and stops the existing supervisor. Resume requires exact old process
+and endpoint exits, unchanged artifacts/source/config and a one-shot restart
+intent. It resumes the same Thinker/Doer rollouts at generation+1, creates a fresh
+empty Reviewer, then measures and rereads originals before any work. It returns
+to the qualification hold. This route still needs current-source live evidence.
+
+A timeout/uncertain operation stays recorded and prevents review or ordinary
+work. Status exposes the journal separately from telemetry. A narrow parent
+`maintenance --action reconcile-maintenance` may fence a stopped read-only Doer
+compaction using `uncertain_key`: exact process exit, unchanged source/inputs and
+pre-operation checkpoint are mandatory. It does not resume or reuse that thread.
+A separate `replace-role` binding with `reconciled_key` creates a fresh read-only
+Doer and retains the old ledger/counters/probes and fence lineage; measurement and
+original rereads must succeed before recovery is recorded. Unknown write turns,
+active/reused processes, modified source, questions and final human gates cannot
+use this route. Other uncertainty remains held for a separate supported scope.
+
+Only after qualification/evaluation does `finish-review` run the one fresh formal
+Reviewer and same Thinker report using the existing Engine. Every completed
+formal outcome stops at AWAITING_HUMAN. A missing/incomplete review remains
+BLOCKED. None of these commands accepts, integrates or starts a successor.
 
 ## Rollback and legacy route
 

@@ -47,9 +47,9 @@ class Policy:
     expected_window: int = 475000
 
     def __post_init__(self):
-        if not 0 < self.checkpoint < self.compact < self.hold <= 1:
+        if any(type(v) not in (int,float) or not math.isfinite(v) for v in (self.checkpoint,self.compact,self.hold)) or not 0 < self.checkpoint < self.compact < self.hold <= 1:
             raise Rejected('Invalid provisional pressure thresholds')
-        if type(self.reserve) is not int or self.reserve < 0 or not math.isfinite(self.max_age) or self.max_age <= 0:
+        if type(self.reserve) is not int or self.reserve < 0 or type(self.max_age) not in (int,float) or not math.isfinite(self.max_age) or self.max_age <= 0:
             raise Rejected('Invalid context reserve/freshness')
         if type(self.expected_window) is not int or self.expected_window <= 12000:
             raise Rejected('Invalid effective runtime window')
@@ -73,12 +73,21 @@ class ContextState:
         self.restart = False
         self.probe_used = False
         self.recovery_probes = []
+        self.soft_checkpoint = None
+        self.reconciliations = []
         if self.path.exists():
             saved = json.loads(self.path.read_text())
             if saved.get('sha256') != identity(saved.get('state')):
                 raise Rejected('Context ledger tampered; reconcile without resetting budgets')
             state = saved['state']
             saved_binding = UsageIdentity(**state['identity'])
+            if state.get('policy') is not None and state['policy'] != asdict(self.policy):
+                raise Rejected('Persisted context policy changed; new source-bound scope required')
+            for key in ('task','revision','model','producer','schema'):
+                if getattr(saved_binding,key) != getattr(self.identity,key):
+                    raise Rejected('Persisted context task/revision/profile identity differs')
+            self.soft_checkpoint=state.get('soft_checkpoint')
+            self.reconciliations=state.get('reconciliations',[])
             if saved_binding.thread == self.identity.thread and saved_binding.task == self.identity.task:
                 self.identity = replace(self.identity, epoch=max(self.identity.epoch, saved_binding.epoch))
             self.reading, self.order = state['reading'], state['order']
@@ -91,8 +100,18 @@ class ContextState:
     def persist(self):
         state = dict(identity=asdict(self.identity), reading=self.reading, order=self.order,
             last_observed=self.last_observed, seen=self.seen, rehydrating=self.rehydrating,
-            compaction=self.compaction, restart=self.restart, probe_used=self.probe_used, recovery_probes=self.recovery_probes)
+            compaction=self.compaction, restart=self.restart, probe_used=self.probe_used, recovery_probes=self.recovery_probes,
+            policy=asdict(self.policy),soft_checkpoint=self.soft_checkpoint,reconciliations=self.reconciliations)
         atomic(self.path, json.dumps({'state': state, 'sha256': identity(state)}, sort_keys=True) + '\n')
+
+    def fence_prior_compaction(self,proof):
+        if proof.get('kind')!='DEAD_READ_ONLY_COMPACTION_FENCE' or proof.get('new_thread')!=self.identity.thread or proof.get('old_thread')==self.identity.thread:
+            raise Rejected('Exact fresh-thread compaction fence required')
+        if self.compaction and self.compaction.get('thread') not in (None,proof['old_thread']):
+            raise Rejected('Compaction belongs to another unreconciled thread')
+        self.reconciliations.append(dict(proof=proof,prior_compaction=self.compaction))
+        self.compaction=None;self.restart=self.rehydrating=True
+        self.persist()
 
     def bind_turn(self, binding):
         with self.lock:
@@ -159,7 +178,9 @@ class ContextState:
             action = 'HOLD' if pressure >= self.policy.hold else 'COMPACT' if pressure >= self.policy.compact else 'CHECKPOINT' if pressure >= self.policy.checkpoint else 'ALLOW'
             return {**result, 'action': action, 'reason': 'LATEST_FOOTPRINT_ESTIMATE',
                 'pressure_estimate': pressure, 'native_ui_used_estimate': min(1, ui),
-                'headroom_estimate': max(0, window-footprint-pending-checkpoint_payload-self.policy.reserve)}
+                'headroom_estimate': max(0, window-footprint-pending-checkpoint_payload-self.policy.reserve),
+                'native_ui_baseline':12000,'estimator':'UTF8_BYTES_POLICY_ESTIMATE_FOR_PENDING_AND_CHECKPOINT',
+                'policy_values':asdict(self.policy)}
 
     def startup_probe(self, *, phase, payload_bytes, max_tools, max_seconds, explicit=False):
         with self.lock:
@@ -206,7 +227,11 @@ class ContextState:
                 observed_at=r['observed_at'] if r else None,
                 freshness_seconds=self.clock()-r['observed_at'] if r else None,
                 exact_active_occupancy='UNKNOWN', action=self.decision(),
-                rehydrating=self.rehydrating, compaction=self.compaction)
+                rehydrating=self.rehydrating, compaction=self.compaction,
+                cumulative_billing=r.get('cumulative_billing') if r else None,
+                cached_input=r.get('cached_input') if r else None,raw=r.get('raw') if r else None,
+                policy=asdict(self.policy),policy_hash=identity(asdict(self.policy)),
+                soft_checkpoint=self.soft_checkpoint,native_ui_baseline=12000)
 
     def compaction_event(self, method, thread, turn, item_id):
         with self.lock:
@@ -320,3 +345,17 @@ def derive_checkpoint(parent, target, current_authority, transition):
     receipt = {'parent_sha256': parent_seal, 'derived_sha256': target.validate(current_authority), 'transition': transition}
     atomic(target.path.with_suffix('.lineage.json'), json.dumps(receipt, sort_keys=True), exclusive=True)
     return receipt
+
+
+def configured_policy(settings):
+    return settings.policy() if callable(getattr(settings,'policy',None)) else Policy()
+
+
+def persisted_status(path, *, clock=time.time):
+    """Observe a durable ledger without initialization, writes or freshening it."""
+    path=Path(path);saved=json.loads(path.read_text());data=saved.get('state')
+    if path.is_symlink() or saved.get('sha256')!=identity(data):raise Rejected('Invalid durable context ledger')
+    state=ContextState.__new__(ContextState)
+    state.path=path;state.identity=UsageIdentity(**data['identity']);state.policy=Policy(**data.get('policy',{}));state.clock=clock;state.lock=threading.RLock()
+    for name,default in [('reading',None),('order',-1),('last_observed',-1),('seen',[]),('rehydrating',False),('compaction',None),('restart',False),('probe_used',False),('recovery_probes',[]),('soft_checkpoint',None)]:setattr(state,name,data.get(name,default))
+    return state.status()

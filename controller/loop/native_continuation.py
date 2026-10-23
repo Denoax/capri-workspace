@@ -180,7 +180,7 @@ class PreparedNativeContinuation:
                 b.lineage = row.get('lineage', []) + [dict(old_thread=row['thread'],
                     new_thread=b.thread, old_generation=row['generation'], new_generation=b.generation,
                     prepared_sha256=self.expected_hash, reason='EXPLICIT_PREPARED_CONTINUATION')]
-        self.adapter.register_thinker(self.owner, token)
+        self.adapter.register_thinker(self.owner, token,held=True)
         self.adapter.prepared_owner = self.owner
         self.adapter.prepared_hash = self.expected_hash
         return slots.save()
@@ -190,6 +190,31 @@ class PreparedNativeContinuation:
             raise Rejected('Restart owner mismatch')
         return self.adapter.restart_backend(task, role, checkpoint,
             expected_pid=expected_pid, expected_process=expected_process)
+
+
+def check_unclaimed_continuation(config,args,controller):
+    """Inspect the original route without Store/Notes/runtime initialization."""
+    from types import SimpleNamespace
+    from .native_startup import ReadOnlyState,check_owner_ledger
+    from .engine import Engine
+    raw=Path(args.prepared).read_bytes()
+    if digest(raw)!=args.prepared_sha256:raise Rejected('Prepared receipt hash drift')
+    receipt=json.loads(raw)
+    if receipt.get('route')!='NATIVE_APP_SERVER_ONLY' or identity(config)!=receipt['binding']['config_hash']:
+        raise Rejected('Prepared native route/configuration mismatch')
+    verifier=SimpleNamespace(config=config['workflow'])
+    verifier.verify_inputs=lambda task:Engine.verify_inputs(verifier,task)
+    with ReadOnlyState(config['home']) as view:
+        parent,_,saved=inspect_binding(view,verifier,receipt['binding'],controller)
+        if saved!=receipt['prepared']:raise Rejected('Prepared core receipt mismatch')
+        if view.db.execute("SELECT seq FROM events WHERE task=? AND kind='RECONTRACT_THINKER_INTENT'",(parent['id'],)).fetchone():
+            raise Rejected('Original launch claim consumed; use separately bound native maintenance recovery')
+    owner=saved['lineage']['successor_owner'];root=Path(config['settings']['state_dir'])
+    if root.resolve()!=Path(receipt['binding']['registry']).parent.resolve():raise Rejected('Exact predecessor runtime required')
+    check_owner_ledger(root,owner)
+    for destination in (Path(config['home'])/'workspace/thinker'/owner,Path(config['home'])/'inputs/thinker'/owner):
+        if destination.exists():raise Rejected('Prior snapshot exists; no overwrite or blind launch retry')
+    return dict(status='NATIVE_CONTINUATION_CHECKED',owner=owner,model_dispatch='NOT_STARTED',state_initialized=False)
 
 
 def run_prepared(config, args, controller):
@@ -208,6 +233,10 @@ def run_prepared(config, args, controller):
     from .native_lineage import PROJECTED_KEYS
     if not args.prepared or not args.prepared_sha256:
         raise Rejected('Exact prepared path and SHA-256 required')
+    checked=check_unclaimed_continuation(config,args,controller)
+    if args.check:
+        print(json.dumps(checked),flush=True)
+        return
     store = Store(Path(config['home']).resolve())
     adapter = intake = terminals = None
     try:
@@ -220,9 +249,6 @@ def run_prepared(config, args, controller):
             continuation = PreparedNativeContinuation(store, engine, adapter, config,
                 args.prepared, args.prepared_sha256, controller)
             receipt, saved, instruction = continuation.check()
-            if args.check:
-                print(json.dumps(dict(status='NATIVE_CONTINUATION_CHECKED', model_dispatch='NOT_STARTED')))
-                return
             owner = saved['lineage']['successor_owner']
             workspace, inputs = snapshot(store.home, saved['repo'], owner, config=config['workflow'])
             if tree(workspace) != tree(saved['repo']):
@@ -242,7 +268,7 @@ def run_prepared(config, args, controller):
                 atomic(safe_path(inputs, name), data, exclusive=True)
             intake = NativeIntake(store.home, config['workflow'])
             intake.start()
-            token = capability(store, owner, dict(repo=saved['repo'], request=request, key=owner+':native-revision'))
+            token = adapter.create_held_capability(owner, dict(repo=saved['repo'], request=request, key=owner+':native-revision'))
             terminals = NativeTerminals(adapter.slots, headless=args.headless)
             continuation.launch(workspace, inputs, token, intake.path)
             atomic(root/'supervisor.json', json.dumps(dict(pid=os.getpid(),

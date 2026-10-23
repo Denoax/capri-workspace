@@ -17,6 +17,7 @@ class Settings:
     state_dir: str
     model: str = MODEL
     efforts: dict = field(default_factory=lambda: dict(thinker='medium', doer='medium', reviewer='high'))
+    context_policy: dict = field(default_factory=dict)
     binary_sha256: str = '399ff69c431c066e40de318fba45c2b07f45a76b19939d247ee4828fc70c4215'
 
     def __post_init__(self):
@@ -26,7 +27,17 @@ class Settings:
             raise Rejected('Effort not supported by supplied model profile')
         if not all(isinstance(x, str) and x for x in (self.binary, self.auth_file, self.state_dir)):
             raise Rejected('Explicit executable, existing auth mount and private state directory required')
+        from .context import Policy
+        allowed={'checkpoint','compact','hold','reserve','max_age'}
+        if not isinstance(self.context_policy,dict) or not set(self.context_policy)<=allowed:
+            raise Rejected('Unknown context policy key; runtime window is profile-pinned')
+        selected=Policy(**self.context_policy)
+        object.__setattr__(self,'context_policy',MappingProxyType({key:getattr(selected,key) for key in allowed}))
         object.__setattr__(self, 'efforts', MappingProxyType(dict(self.efforts)))
+
+    def policy(self):
+        from .context import Policy
+        return Policy(**dict(self.context_policy))
 
     def executable(self):
         value = shutil.which(self.binary)

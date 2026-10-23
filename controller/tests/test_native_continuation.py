@@ -162,7 +162,7 @@ class ProductContinuationTests(NativeContinuationTests):
             calls.append((role,kw))
             backends[role]=SimpleNamespace(thread='old-'+role,generation=4,phase='read')
         slots=SimpleNamespace(root=self.prior,backends=backends,start_role=start,restore_saved_role=restore,save=lambda:rows)
-        adapter=SimpleNamespace(slots=slots,register_thinker=lambda *args:None)
+        adapter=SimpleNamespace(slots=slots,register_thinker=lambda *args,**kwargs:None)
         product=PreparedNativeContinuation(self.store,self.engine,adapter,config,prepared['receipt'],prepared['receipt_sha256'],self.controller)
         return product,calls,prepared
 

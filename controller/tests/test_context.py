@@ -336,6 +336,109 @@ class NativeOwnerIntegrationTests(unittest.TestCase):
         self.adapter.thinker_owner='different-owner'
         with self.assertRaises(Rejected):self.adapter.thinker_turn('report',report_task='no-task')
 
+
+    def test_new_owner_preserves_foreign_legacy_binding_and_budget_ledger(self):
+        self.adapter.register_thinker('owner',self.token)
+        legacy=self.root/'private'/'thinker'
+        binding=b'{"owner":"previous-owner","marker":"preserve-exactly"}'
+        ledger=b'{"marker":"preserved-predecessor-budget-history"}'
+        (legacy/'owner-binding.json').write_bytes(binding)
+        (legacy/'owner-context.json').write_bytes(ledger)
+        state,frozen=self.adapter.prepare_owner_context()
+        self.assertEqual(state.identity.task,'owner:owner')
+        self.assertNotEqual(state.path,legacy/'owner-context.json')
+        self.assertIsNone(state.reading)
+        self.assertEqual((legacy/'owner-binding.json').read_bytes(),binding)
+        self.assertEqual((legacy/'owner-context.json').read_bytes(),ledger)
+        (self.repo/'module.py').write_text('different source')
+        with self.assertRaises(Rejected):self.adapter.prepare_owner_context()
+
+    def test_same_owner_reuses_legacy_budget_history_without_freshness_reset(self):
+        self.adapter.register_thinker('owner',self.token)
+        state,frozen=self.adapter.prepare_owner_context()
+        state.probe_used=True
+        state.persist()
+        legacy=self.root/'private'/'thinker'
+        (legacy/'owner-binding.json').write_text(json.dumps(frozen,sort_keys=True))
+        (legacy/'owner-context.json').write_bytes(state.path.read_bytes())
+        preserved=(legacy/'owner-context.json').read_bytes()
+        self.adapter.context_states={}
+        restored,_=self.adapter.prepare_owner_context()
+        self.assertEqual(restored.path,legacy/'owner-context.json')
+        self.assertTrue(restored.probe_used)
+        self.assertTrue(restored.rehydrating)
+        self.assertTrue(restored.restart)
+        self.assertEqual((legacy/'owner-context.json').read_bytes(),preserved)
+
+    def test_unknown_legacy_ownership_keeps_new_owner_held(self):
+        self.adapter.register_thinker('owner',self.token)
+        legacy=self.root/'private'/'thinker'/'owner-binding.json'
+        legacy.write_text('{"unattributed":"do not discard"}')
+        preserved=legacy.read_bytes()
+        with self.assertRaises(Rejected):self.adapter.prepare_owner_context()
+        self.assertEqual(legacy.read_bytes(),preserved)
+
+    def owner_ready(self,footprint=285000):
+        from dataclasses import replace
+        import time
+        from unittest.mock import Mock
+        for name in ('REFERENCE_LED_DESIGN.md','preserved-requirements.json','successor-request.json'):
+            (self.inputs/name).write_text('{}')
+        self.adapter.register_thinker('owner',self.token)
+        self.adapter.planned_compactions=set();self.adapter.operation_deadline=time.monotonic()+240;self.adapter.operation_tools=6
+        self.adapter.slots.save=lambda:None
+        state,_=self.adapter.prepare_owner_context();state.clock=lambda:1000
+        state.identity=replace(state.identity,turn='turn');reading=usage(footprint);reading['params']['threadId']=self.backend.thread;state.update(reading,state.identity,1,1000)
+        return state
+
+    def test_owner_soft_threshold_saves_once_and_preserves_scope_budget(self):
+        state=self.owner_ready();deadline=self.adapter.operation_deadline
+        self.assertEqual(self.adapter.owner_idle_maintenance([])['action'],'CHECKPOINT')
+        saved=state.soft_checkpoint.copy();self.assertTrue(self.adapter.owner_soft_allows(state.decision()))
+        self.adapter.owner_idle_maintenance([]);self.assertEqual(saved,state.soft_checkpoint)
+        self.assertEqual(deadline,self.adapter.operation_deadline);self.assertEqual(self.adapter.operation_tools,6)
+
+    def test_owner_compaction_withholds_tools_and_rereads_originals(self):
+        from unittest.mock import Mock
+        state=self.owner_ready(350000);calls=[];deadline=self.adapter.operation_deadline
+        def compact(**kwargs):
+            self.assertEqual(self.store.db.execute('SELECT enabled FROM capabilities').fetchone()[0],0)
+            self.assertLessEqual(kwargs['max_seconds'],60);state.restart=state.rehydrating=True
+        self.backend.compact=Mock(side_effect=compact)
+        def dispatch(payload,**kwargs):
+            calls.append(kwargs)
+            if kwargs.get('probe'):
+                reading=usage(10000);reading['params']['threadId']=self.backend.thread;state.update(reading,state.identity,2,1000)
+        self.adapter.owner_dispatch=dispatch
+        self.assertEqual(self.adapter.owner_idle_maintenance([])['action'],'ALLOW')
+        self.assertEqual(len(calls),2);self.assertEqual(len(calls[1]['recovery_originals']),3)
+        self.assertFalse(state.rehydrating);self.assertEqual(deadline,self.adapter.operation_deadline);self.assertEqual(self.adapter.operation_tools,6)
+        self.assertEqual(self.store.db.execute('SELECT enabled FROM capabilities').fetchone()[0],1)
+
+    def test_owner_compaction_timeout_stays_held_and_cannot_repeat(self):
+        from unittest.mock import Mock
+        self.owner_ready(350000);self.backend.compact=Mock(side_effect=Rejected('SYNTHETIC uncertain timeout'))
+        with self.assertRaises(Rejected):self.adapter.owner_idle_maintenance([])
+        with self.assertRaises(Rejected):self.adapter.owner_idle_maintenance([])
+        self.backend.compact.assert_called_once()
+        self.assertEqual(self.store.db.execute('SELECT enabled FROM capabilities').fetchone()[0],0)
+        self.assertEqual(self.store.db.execute("SELECT count(*) FROM events WHERE kind='NATIVE_OWNER_COMPACTION_UNCERTAIN'").fetchone()[0],1)
+
+    def test_owner_cached_context_rejects_process_identity_drift(self):
+        self.owner_ready();self.backend.start_identity='reused-pid'
+        with self.assertRaises(Rejected):self.adapter.prepare_owner_context()
+
+    def test_fresh_thread_fence_preserves_counters_probes_and_uncertain_original(self):
+        from loop.context import ContextState
+        state=self.owner_ready();state.compaction={'thread':self.backend.thread,'item':'synthetic-pending'};state.probe_used=True;state.recovery_probes=['preserved-probe'];state.persist()
+        old=state.path.read_bytes();new_identity=replace(state.identity,thread='fresh-thread',role_generation=state.identity.role_generation+1)
+        fresh=ContextState(state.path,new_identity,clock=lambda:1000)
+        fresh.fence_prior_compaction(dict(kind='DEAD_READ_ONLY_COMPACTION_FENCE',old_thread=self.backend.thread,new_thread='fresh-thread',receipt='synthetic-sealed-proof'))
+        self.assertEqual(fresh.order,state.order);self.assertEqual(fresh.seen,state.seen);self.assertTrue(fresh.probe_used);self.assertEqual(fresh.recovery_probes,['preserved-probe'])
+        self.assertIsNone(fresh.compaction);self.assertTrue(fresh.restart);self.assertTrue(fresh.rehydrating)
+        self.assertEqual(fresh.reconciliations[-1]['prior_compaction']['item'],'synthetic-pending')
+        self.assertNotEqual(old,fresh.path.read_bytes())
+
 class NativeStageWiringTests(unittest.TestCase):
     def test_read_grader_requires_actual_paired_command_content_not_echo(self):
         from loop.native import grade_original_reads,original_read_command

@@ -49,7 +49,3 @@ Parent owns remaining qualification, eight-trial evaluation, curated private
 export/actual CI logs, final source freeze, sole formal review, exact bound
 Thinker report, review ZIP and Obsidian receipt. Restricted-role documentation
 remains PENDING until that owner saves it. No acceptance or integration follows.
-
-## Current curated development export
-
-Reusable code and tests are copied byte-for-byte from source `189889d0635f4113e809b8e91724f58b263c6bdff1cd06e6c17b9f50f62d5bd7`. The existing development history is preserved from `983ebbdb8ff3148765263ec7d78b1aad2ed4f750`. Parent documentation adds this export cutoff and its offline results. Raw private specifications, auth, sessions/state, personal notes and evidence archives stay outside Git. EXPORT_SOURCE.json binds selected original and exported hashes. No acceptance, integration or public release is implied.

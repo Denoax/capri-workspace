@@ -13,7 +13,7 @@ import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from loop.adapter import process_identity, terminate, validate_stream
-from loop.collector import assess_check, check_command, seal_zip, verify_zip
+from loop.collector import assess_check, check_command, seal_zip, verify_zip,unittest_evidence
 from loop.contract import record_id, validate
 from loop.engine import Engine
 from loop.notes import Notes
@@ -418,7 +418,8 @@ class EvidenceTests(IsolatedCase):
     def test_skipped_missing_failed_or_source_mutating_check_never_passes_F12_F15(self):
         spec = proposal()["checks"][0]
         baseline = {"exit": 1, "timeout": False, "source_unchanged": True, "skip_detected": False}
-        candidate = {**baseline, "exit": 0}
+        baseline['test_run']=unittest_evidence(spec['argv'],'','test_behavior (fixture.C.test_behavior) ... FAIL\nRan 1 test in 0.01s\nAssertionError: expected behavior\nFAILED (failures=1)\n')
+        candidate = {**baseline, "exit": 0, 'test_run':unittest_evidence(spec['argv'],'','test_behavior (fixture.C.test_behavior) ... ok\nRan 1 test in 0.01s\nOK\n')}
         self.assertEqual("PASS", assess_check(spec, baseline, candidate))
         self.assertEqual("FAIL", assess_check(spec, baseline, {**candidate, "exit": 1}))
         for altered in ({**candidate, "skip_detected": True}, {**candidate, "source_unchanged": False}, None):

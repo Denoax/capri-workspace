@@ -11,15 +11,37 @@ import zipfile
 from .util import Rejected, atomic, digest, identity, now, redact, safe_path, tree, write_json
 
 
+def unittest_evidence(argv,stdout,stderr):
+    """Recognize only Python unittest receipts; unknown runners stay unverified."""
+    module=any(argv[i:i+2]==['-m','unittest'] for i in range(len(argv)-1))
+    inline='-c' in argv and any('unittest.main(' in arg for arg in argv)
+    if not (module or inline):return None
+    text=stdout+'\n'+stderr
+    summaries=re.findall(r'^Ran (\d+) tests? in [^\n]+$',text,re.M)
+    tests=re.findall(r'^(test[^ \n]+) \(([^\n)]+)\) \.\.\. (ok|FAIL|ERROR|skipped[^\n]*)$',text,re.M)
+    ids=[row[1] for row in tests]
+    failed=re.search(r'^FAILED \(([^\n]+)\)$',text,re.M)
+    counts=dict((key,int(value)) for key,value in re.findall(r'(failures|errors|skipped)=(\d+)',failed.group(1) if failed else ''))
+    count=int(summaries[0]) if len(summaries)==1 else 0
+    complete=count>0 and len(ids)==count and len(set(ids))==count
+    assertion_failure=bool(re.search(r'^AssertionError(?::|$)',text,re.M))
+    outcome='PASSED' if complete and re.search(r'^OK$',text,re.M) else 'BEHAVIORAL_FAILURE' if complete and counts.get('failures',0)>0 and counts.get('errors',0)==0 and assertion_failure else 'EMPTY_BROKEN_OR_UNRECOGNIZED'
+    return dict(framework='python-unittest',argv_hash=identity(argv),count=count,test_ids=sorted(ids),complete=complete,outcome=outcome,failures=counts.get('failures',0),errors=counts.get('errors',0))
+
+
 def check_command(repo, argv, directory, timeout=60):
     """No auth, controller, original checkout, sockets, or network in a test process."""
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=True)
     before = tree(repo)
+    executed_argv=list(argv)
+    for index in range(len(executed_argv)-1):
+        if executed_argv[index:index+2]==['-m','unittest'] and '-v' not in executed_argv and '--verbose' not in executed_argv:
+            executed_argv.insert(index+2,'-v');break
     cmd = ["/usr/bin/bwrap", "--die-with-parent", "--new-session", "--unshare-all", "--ro-bind", "/usr", "/usr", "--symlink", "usr/bin", "/bin",
            "--symlink", "usr/lib", "/lib", "--symlink", "usr/lib", "/lib64", "--ro-bind", "/etc", "/etc", "--proc", "/proc", "--dev", "/dev",
            "--tmpfs", "/tmp", "--bind", str(Path(repo).resolve()), "/workspace", "--clearenv", "--setenv", "PATH", "/usr/bin:/bin",
-           "--setenv", "HOME", "/tmp", "--setenv", "PYTHONDONTWRITEBYTECODE", "1", "--chdir", "/workspace", *argv]
+           "--setenv", "HOME", "/tmp", "--setenv", "PYTHONDONTWRITEBYTECODE", "1", "--chdir", "/workspace", *executed_argv]
     started = now()
     clock = time.monotonic()
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, start_new_session=True)
@@ -35,7 +57,7 @@ def check_command(repo, argv, directory, timeout=60):
     atomic(directory / "stdout.txt", out)
     atomic(directory / "stderr.txt", err)
     after = tree(repo)
-    result = {"argv": argv, "confinement_argv": cmd, "cwd": "/workspace", "host_checkout": str(repo), "start": started, "end": now(),
+    result = {"argv": argv, "executed_argv":executed_argv,"test_run":unittest_evidence(argv,out,err), "confinement_argv": cmd, "cwd": "/workspace", "host_checkout": str(repo), "start": started, "end": now(),
               "duration_seconds": time.monotonic() - clock, "exit": process.returncode, "timeout": timed_out,
               "source_before": identity(before), "source_after": identity(after), "source_unchanged": before == after,
               "stdout_sha256": digest(out.encode()), "stderr_sha256": digest(err.encode()),
@@ -49,8 +71,14 @@ def assess_check(spec, baseline, candidate):
         return "UNVERIFIED"
     if candidate["exit"] != spec["expected_exit"]:
         return "FAIL"
-    if spec["baseline_must_fail"] and (baseline["exit"] == spec["expected_exit"] or baseline["timeout"] or not baseline["source_unchanged"]):
-        return "UNVERIFIED"
+    if spec["baseline_must_fail"]:
+        if baseline["exit"] == spec["expected_exit"] or baseline["timeout"] or not baseline["source_unchanged"] or baseline.get('skip_detected'):
+            return "UNVERIFIED"
+        before,after=baseline.get('test_run'),candidate.get('test_run')
+        if not before or not after or not before['complete'] or not after['complete']:
+            return "UNVERIFIED"
+        if before['outcome']!='BEHAVIORAL_FAILURE' or after['outcome']!='PASSED' or before['test_ids']!=after['test_ids'] or before['argv_hash']!=after['argv_hash']:
+            return "UNVERIFIED"
     return "PASS"
 
 

@@ -77,7 +77,7 @@ class CompletionTests(unittest.TestCase):
         a=NativeAdapter.__new__(NativeAdapter); a.engine=self.engine; a.store=self.store
         a.capture=None;a.capture_lock=threading.Lock();a.context_states={};a.context_order={};a.preflight=None
         a.settings=SimpleNamespace(model='gpt-6.1-sol',state_dir=str(self.root/'state'))
-        a.prepare_stage=lambda *args:None; a.evidence_check=lambda *args:checks
+        a.prepare_stage=lambda *args,**kwargs:None; a.evidence_check=lambda *args:checks
         def dispatch(binding,payload,observe_execution=None,**kw):
             if disconnect:raise Rejected('synthetic disconnect')
             life=self.lifecycle(a.capture,final,unfinished)

@@ -65,6 +65,31 @@ including FAIL or UNVERIFIED, seals/reports/stops at `AWAITING_HUMAN`; further
 repair requires an authorized revision. Delivery and Obsidian documentation
 remain PENDING until the parent owner saves the corresponding receipts.
 
-## Parent offline cutoff for this export
+## Stabilization v1 candidate
 
-Source `189889d0635f4113e809b8e91724f58b263c6bdff1cd06e6c17b9f50f62d5bd7` passed all228 tests on the supported host and all228 in a separate no-network/no-auth collector, without skips or source changes. The same-wire invalid-ACK classification regression passes on this source and fails on preserved predecessor90379. The missing-terminal control stays uncertain. These are bounded technical results; actual CI, live qualification/evaluation and sole final formal review are reported separately in the source-bound private evidence delivery. Frozen C2 retains its absent-original-test limitation.
+The original eight-row runset is preserved: eight scheduled, two started, one
+graded (8/8 held-out checks), one aborted, six unrun. M0 is a separate canary and
+is excluded from these denominators. The comparison is incomplete; incompatible
+sources and retries are never pooled. Parent receipts contain the exact cutoff.
+
+The repaired source has a separate v2 schedule with the same eight fixture,
+policy, repeat and ordering rows. It is not yet executed: 0 started, 0 graded,
+0 aborted, 8 unrun. Freeze the implementation identity, original fixture/grader
+hashes and limits before the first live trial; the parent holds grader contents
+outside role mounts. Baseline retains safety gates and passive telemetry. A
+compaction timeout remains an abort and stops serial evaluation while effects
+are uncertain; no longer budget or silent replacement row is allowed.
+
+Stabilization offline controls reproduced two behavioral assertion failures on
+preserved source 189889d0635f4113e809b8e91724f58b263c6bdff1cd06e6c17b9f50f62d5bd7
+and passed the same two controls on the candidate through the unchanged trusted
+collector: foreign-owner startup admission and zero-discovery baseline evidence.
+The actual supported-host namespace diagnostic also passed. Exact final source,
+full-suite counts, CI status and raw commands belong in the parent review index.
+Neither these results nor historical captures qualify current-source native
+execution, lifecycle recovery, research, v2 retention or a formal review.
+
+The archived C2 baseline executed zero tests and exited 5. Its old false PASS is
+preserved and annotated UNVERIFIED, never silently rewritten. The new comparable
+regression controls are separately identified. Unknown test frameworks, setup or
+import failures, skips and timeouts cannot establish baseline regression proof.
