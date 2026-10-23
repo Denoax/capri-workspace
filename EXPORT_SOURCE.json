@@ -1,6 +1,6 @@
 {
   "origin": "CURATED_PRIVATE_SUBSET_NOT_FULL_RUNTIME_OR_ACCEPTANCE",
-  "full_source": "c5d6bd23fc772228f4fa968e87d2206ac6cc05b8ec7826303625abd18ca2e0c0",
+  "full_source": "c72c9b8973a0eb8acce115dad20ce206619e643d7d4aace6042c921bc8dff25f",
   "controller": "377359160f4fb41c9c012f3380f05b128f054d8858778d5f289ac7548cd4dd69",
   "selected": {
     ".github/workflows/tests.yml": {
@@ -15,10 +15,6 @@
       "sha256": "0baf74b030f66260de7479cabd7c5268cef1a13b5162b0dac8bad155970b5658",
       "mode": 420
     },
-    "CI_ENVIRONMENT.md": {
-      "sha256": "c28e6770d65de22ccf632f2ea8139c8a45b666a40b00911a3027e630e875b09d",
-      "mode": 420
-    },
     "CLIENT_SUPPORT.md": {
       "sha256": "9ad80496d20a8d8486ad67371987dba268cd43d39bc0db08e63b5cee9bc654c8",
       "mode": 420
@@ -28,7 +24,7 @@
       "mode": 420
     },
     "ENVIRONMENT.md": {
-      "sha256": "6906125dfca2ac25ac8bfb2a5950aade404be124f283725738ce8f36074b0b18",
+      "sha256": "cefddb58fa0132151909e0e4f25b2e7d861d824ffdc31ac1ca0cca5c9507c300",
       "mode": 420
     },
     "EVALUATION.md": {
@@ -280,7 +276,7 @@
       "mode": 420
     },
     "examples/ci/bwrap.apparmor": {
-      "sha256": "207718b9493de69630ceeaace2c6338c50f4efbc7ca577c17c1ee55e1bbc4b03",
+      "sha256": "e59bc2e1e7fce148cdfd1566fe563efa54c736eec8776482eeeb0d9728b1e560",
       "mode": 420
     },
     "examples/config.json": {

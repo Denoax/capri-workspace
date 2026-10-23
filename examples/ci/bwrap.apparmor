@@ -1,4 +1,4 @@
-# CI-only policy for the disposable Ubuntu runner. See CI_ENVIRONMENT.md.
+# CI-only policy for the disposable Ubuntu runner. See ENVIRONMENT.md.
 # The launcher may construct its namespaces; executed children retain an
 # additional profile that denies capabilities, including in nested userns.
 abi <abi/4.0>,
