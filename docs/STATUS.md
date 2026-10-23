@@ -24,3 +24,7 @@ Approved-main [CI run 39964880216](https://github.com/Denoax/capri/actions/runs/
 ## V6 presentation candidate
 
 V6 builds on unaccepted V5 `658c7882149282b416bbe31ea005464031d7aeb5`, without treating it as merged. It replaces the root's explanation placement with Capri's context comparison, a 16-second handoff guide, a complete static comic and fixture A teaching example. [Full lesson and evidence limits](CAPRI_EXPLAINS.md). Approved hero bytes and all runtime/profile/lock/CI files are preserved. Native qualification, evaluation denominators and existing isolation failure remain unchanged. The testing push delivers a review candidate; Mani's visual acceptance and main integration remain separate.
+
+## V7 presentation candidate
+
+V7 builds on V6 `f859295f509b4af5228869648748179dc63ad04a`. It adds a reusable transparent actor/alpha masters, authored 24 Hz hand articulation and path sampling, plus an assumed six-request numeric lesson and cache sensitivity. [Actor method and limits](CAPRI_ACTOR.md) · [Worked assumptions](CONTEXT_BUDGET.md). The supplied AI edit is authorized for this character asset; it is not exact source footage or a complete rig. No new runtime efficacy claim or trial is made. Frozen evaluation/CI limits and main remain separate from this testing candidate.

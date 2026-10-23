@@ -1,139 +1,225 @@
 {
-  "version": 6,
+  "version": 7,
   "poses": [
     {
-      "source": 1,
-      "frame": 97,
-      "treatment": "whole source-frame inset; no mirroring, invented anatomy or generative fill"
+      "source": 14,
+      "frame": 0,
+      "actor_sample": 0,
+      "treatment": "AI-edited reference pose with transparent articulated hand layers; not exact anime pixels"
     },
     {
       "source": 14,
       "frame": 0,
-      "treatment": "whole source-frame inset; no mirroring, invented anatomy or generative fill"
+      "actor_sample": 12,
+      "treatment": "AI-edited reference pose with transparent articulated hand layers; not exact anime pixels"
     },
     {
-      "source": 12,
-      "frame": 5,
-      "treatment": "whole source-frame inset; no mirroring, invented anatomy or generative fill"
+      "source": 14,
+      "frame": 0,
+      "actor_sample": 36,
+      "treatment": "AI-edited reference pose with transparent articulated hand layers; not exact anime pixels"
     }
   ],
   "overview_duration_ms": 16000,
-  "reading_hold_ms": 3600,
-  "transition_ms": 400,
+  "reading_hold_ms": 3500,
+  "transition_ms": 500,
+  "active_path_samples_per_second": 24,
+  "actor_samples_per_second": 24,
+  "actor_method": "Authored palm rotations of a fixed edited pose; not interpolated source acting",
   "outputs": {
     "comic-mobile.png": {
-      "bytes": 275340,
-      "sha256": "90f8415adea37ae60ec48e310716ba94be4044190579efa869dfaf34ff7f5d59"
+      "bytes": 220985,
+      "sha256": "61b794678409034a779db252815c159e02089b2ce26cdc3b8d863b77ddc1732d"
     },
     "comic-mobile.svg": {
-      "bytes": 1002725,
-      "sha256": "d7341c0ab49f597ce08c5defe96c03eaae05c2f4ad143f847a106e3b62ac8b16"
+      "bytes": 1144857,
+      "sha256": "6dfb526eef6c8a751a14880b53d2b6fe16841cbbfef8cf74aaf4dac466a1a115"
     },
     "comic.png": {
-      "bytes": 270557,
-      "sha256": "db6a7b69e6d75926ad0f22f89baabcddab134e175680f207b7fe52ef678fb151"
+      "bytes": 200871,
+      "sha256": "5e4a2b23349a40f44fd544764e6eac3766f22638cbb0d0f5c5e6e87d07c2ca37"
     },
     "comic.svg": {
-      "bytes": 1002986,
-      "sha256": "5654d661f22ea701d5368b662e8d1d658b5861ddbdd86a23cdd26244eba6a9e3"
+      "bytes": 1145118,
+      "sha256": "c8f1ed4be2ab9e213a305fc72c78e8480312eef9f462360ee13be8ea15fe118a"
     },
     "context-mobile.png": {
-      "bytes": 184874,
-      "sha256": "7fbeb2b59cfec74561fe19813bf6038fcc5ed0fb0f1b6c85d00601e9ab0dcae0"
+      "bytes": 215886,
+      "sha256": "f9eeba9141cf9578e08688890ead8f89695f56fa2d42a9e25f6524bd123986fa"
     },
     "context-mobile.svg": {
-      "bytes": 395233,
-      "sha256": "46c414b8e2bb8f7375f2cb461bbab6bf637479e82b78a515e33ac8ecdca79f78"
+      "bytes": 390075,
+      "sha256": "cfe9f9e8da15cda3b1e31e0c27556248a563fec444535a3bf8b33d305dc35a80"
     },
     "context.png": {
-      "bytes": 213226,
-      "sha256": "bf8741916cadd2a60f6c79ce0779d80197be4804c63cba4f37a00c682a641b9a"
+      "bytes": 198111,
+      "sha256": "82adf4e1fb4584ea32ee306dfeffb754cb81ed3d1c155f674eb65a36a295319a"
     },
     "context.svg": {
-      "bytes": 419495,
-      "sha256": "1fa62139be16e5ea23a42a693a0b25bfb807c7c39502235554bbf9a1a705d181"
+      "bytes": 400623,
+      "sha256": "1b94cb4a90f8b966e31c1eb6bb7216f0f8855e2afa30df6ed62fb5c94146b963"
+    },
+    "guide-base.png": {
+      "bytes": 99956,
+      "sha256": "0246ad0ecf294941823281ac0a1310a286c37114158e926026c450105028ba98"
+    },
+    "guide-base.svg": {
+      "bytes": 100927,
+      "sha256": "9e77636ec409bbc5e0768416b37c44dd4b4c2bc31638157006ec05a76d77dc15"
     },
     "guide-beat-1.png": {
-      "bytes": 165064,
-      "sha256": "84ea1e7805e789d19ef7bdf34b63410e97156374b717364e14e73e8fe59d855a"
+      "bytes": 166460,
+      "sha256": "f56bae4a88c500f3ee050a7a0f806d14ce2d4f690579648dafa9c2df02727142"
     },
     "guide-beat-1.svg": {
-      "bytes": 380333,
-      "sha256": "9af31f562cafa9220bf905002c21f0cc35e06bf2779350609e86f18763a5a4ed"
+      "bytes": 361461,
+      "sha256": "d235123d73e8537c214e55f2731006110e637eaf8af292b2197f34505abc0d14"
     },
     "guide-beat-2.png": {
-      "bytes": 217944,
-      "sha256": "40be2bfb10f6c319d1e823ee1d599e72c6d1dff1b1b29c9a08e7b6d940faa069"
+      "bytes": 173317,
+      "sha256": "7b56d0e93decba59d757e16f194e752b8f7ce930db118ae85017757d25306d7d"
     },
     "guide-beat-2.svg": {
-      "bytes": 352422,
-      "sha256": "b8a32b6d2b2a3ae336c0af913e212e82d64c687d65bfc2da6c72da03405dfb32"
+      "bytes": 373938,
+      "sha256": "f711f1caddc2fe34b558d0164afd201cc875cd852b22dffbcd798e134bf653c9"
     },
     "guide-beat-3.png": {
-      "bytes": 193983,
-      "sha256": "300e4a7b1b7dc4bd23fd06a17f521caa74ef7d6d93dde2e90e17944e9ea46185"
+      "bytes": 170078,
+      "sha256": "13c94c6e63bb853d346795cedf380ee8d84fbc1a1b49ad964159a111f2536bdf"
     },
     "guide-beat-3.svg": {
-      "bytes": 300007,
-      "sha256": "674862b64c9d0f75a5dd5b9c7a1cfb8637fb49330d2a181aaadb49dc3ef5e999"
+      "bytes": 369751,
+      "sha256": "48588f13221368933bc62aace54088fb0c996b9513ff52d159ca6bcd5b001ab4"
     },
     "guide-beat-4.png": {
-      "bytes": 193716,
-      "sha256": "c0c4ea96a894c142bcac2bd566d747c8d85caeec624454db695167892d74206a"
+      "bytes": 169793,
+      "sha256": "a40e11c94bae2f7ae984263685f6493cb477155f21d09db8626955261a1e6744"
     },
     "guide-beat-4.svg": {
-      "bytes": 301106,
-      "sha256": "1219537f1418e295f8142b5287cc95f8f0984b7caeba52d181199c067f984138"
+      "bytes": 370850,
+      "sha256": "caf7eb8ba1c574ba3d825c621c71a854820cc37eb5ade2722abfccf0d1faa6b7"
+    },
+    "guide-mobile-base.png": {
+      "bytes": 86018,
+      "sha256": "5cb46a1408a45fc1163158c0f4c2cdca49827c97f7fc07b772b3fd15c8cf0799"
+    },
+    "guide-mobile-base.svg": {
+      "bytes": 103110,
+      "sha256": "9f2abca34606f0f035f15a55d41408986d464d12143046de1b42752197ffb159"
     },
     "guide-mobile-beat-1.png": {
-      "bytes": 134750,
-      "sha256": "04c1c58a8a726c0b5f2930142fe0d23cfb51682cf63f27737e9a014820f8308d"
+      "bytes": 135181,
+      "sha256": "976a970a581fe30313519df31a780276cb921143a45f77fe25c442ce8547f850"
     },
     "guide-mobile-beat-1.svg": {
-      "bytes": 382518,
-      "sha256": "8adfee959173a898906da73aa83b49f5f1772e8979cd05d663a2b8b4b5a11ca8"
+      "bytes": 363646,
+      "sha256": "dced165b148ed93059b93cb5079c98f61b733e01700964790ad0c55f4610a8cc"
     },
     "guide-mobile-beat-2.png": {
-      "bytes": 166679,
-      "sha256": "e728ea4711b9d299b393623f585b92afc4781d81974fb3dfd52a96dea6934789"
+      "bytes": 135926,
+      "sha256": "16dfc557b0280b5c4d346590067c7f068f196cdfa0cac023a2cf225c265dc9f6"
     },
     "guide-mobile-beat-2.svg": {
-      "bytes": 345756,
-      "sha256": "8372d7d8168f1391c7710744a85e7e791304fb363663b29838059884b0261a9a"
+      "bytes": 367272,
+      "sha256": "dbb82c60f52a577475a160796b0098f23841275fded5059d85228ff189dcb755"
     },
     "guide-mobile-beat-3.png": {
-      "bytes": 154826,
-      "sha256": "e718576089de684ab46e654efacd81e0c1b42fa1461edf328c15963a232021fe"
+      "bytes": 138181,
+      "sha256": "08306d0a04cc2158d8df1783dd806373a0fc98564b17e3472763d3833fd10523"
     },
     "guide-mobile-beat-3.svg": {
-      "bytes": 302185,
-      "sha256": "ffd69992c3f504fd813d09771d3319f7b958d22e0474e10c26279dbb71058d78"
+      "bytes": 371929,
+      "sha256": "f462f0d9274f10c86609c930f96ee00677f3b0ab492d6ddc6714534b154c9248"
     },
     "guide-mobile-beat-4.png": {
-      "bytes": 154722,
-      "sha256": "58ef77f4f39b4e28450b7c9e31730bf74a2caccff4829c05135521ba782efbb4"
+      "bytes": 138081,
+      "sha256": "34b922f20da3a9886bd1aa414e63d25b7a4e9ce90903f94a7526cb387c6c61ea"
     },
     "guide-mobile-beat-4.svg": {
-      "bytes": 303284,
-      "sha256": "dae03f03f104f765c86c6150d09fad67c18c45a31d94d32db862838f549a8204"
+      "bytes": 373028,
+      "sha256": "d7b3df32535bc044bfce495e91d90dabfc70d38c5747d34a66ae66fecac0e580"
+    },
+    "guide-mobile-overlay-1.png": {
+      "bytes": 20902,
+      "sha256": "72e4fa01d40e664ec5ed9187f47cfdb6038742040ed0da824f9df22fbe676f7a"
+    },
+    "guide-mobile-overlay-1.svg": {
+      "bytes": 22338,
+      "sha256": "471d3f84ed0f2f4739c018490d6ad0dc353f563c15c4a9adabfb0d73490bf358"
+    },
+    "guide-mobile-overlay-2.png": {
+      "bytes": 21923,
+      "sha256": "ed563d38103cb6cfe5535e40b1c6c650faea108b8d6a664e67b7f351ff5ca021"
+    },
+    "guide-mobile-overlay-2.svg": {
+      "bytes": 23012,
+      "sha256": "8b17920efa2eef9bbad1fa22379f11550de8fbecd56558d47247d67ae43b0af4"
+    },
+    "guide-mobile-overlay-3.png": {
+      "bytes": 25061,
+      "sha256": "8e1e75f2bd27c075e90abb4a180bf597ebc9e32b56ada1c4236794813a87e641"
+    },
+    "guide-mobile-overlay-3.svg": {
+      "bytes": 27565,
+      "sha256": "fc433dc7ad88ad44d5993cd3b5365e48cd36900c1d971160b0d609a8fa9e4caf"
+    },
+    "guide-mobile-overlay-4.png": {
+      "bytes": 24884,
+      "sha256": "df47185687d078995c122343de002036ef77a795f3a7a0ef0283dc48db476cfc"
+    },
+    "guide-mobile-overlay-4.svg": {
+      "bytes": 28664,
+      "sha256": "53c8f5da20f11590cc5925373f1586cbeeb54b245da4fd8e63eeb74c70f6a69a"
     },
     "guide-mobile.gif": {
-      "bytes": 262064,
-      "sha256": "5b0d263b40d752564fc8d12acf700103eb6a196ddf6e778bf4bec2da0432bc87"
+      "bytes": 774734,
+      "sha256": "53bc906c3b3ec757c3a37d13abd430701217a586363619450ccee1e1c3081e3e"
     },
     "guide-mobile.png": {
-      "bytes": 271019,
-      "sha256": "5a10a70831a7a2d4edff1d3e412fd7bfc822842d9e31de8a035908d1c1d92b10"
+      "bytes": 217862,
+      "sha256": "4722145eae710dd04a43f1fc2a20c79473a59a0c314fb957699a50d5d11178d8"
+    },
+    "guide-overlay-1.png": {
+      "bytes": 24008,
+      "sha256": "f60d0af266cae9b34566cfde2a03b173743926805f4d74a87dc0612eb539bdc6"
+    },
+    "guide-overlay-1.svg": {
+      "bytes": 22337,
+      "sha256": "eb026225686252b11dde4c8c6d77e938aaf1c3fd568399c578b04346f0e32572"
+    },
+    "guide-overlay-2.png": {
+      "bytes": 32101,
+      "sha256": "4387432d79cfa7a407417a30f916db60104b9886cbd3231ac6a760d80a7763f7"
+    },
+    "guide-overlay-2.svg": {
+      "bytes": 31861,
+      "sha256": "524b379d9044aa7eaf53980260a998fa7928f25d6be38d8088509b33727e27e0"
+    },
+    "guide-overlay-3.png": {
+      "bytes": 28013,
+      "sha256": "79548ffb50f984606ffe1c017752c3c6c82c1c6f422c7707b7cbd3f7a29c587d"
+    },
+    "guide-overlay-3.svg": {
+      "bytes": 27568,
+      "sha256": "bb5535bf0c39c3876279a7c67ee38a8108396f805dc96b38b038e0d02ff9bfaf"
+    },
+    "guide-overlay-4.png": {
+      "bytes": 27734,
+      "sha256": "82cc3497dca1edf7d9b3e5dd0c718be63924547463e1510df23ce3f2209d4e45"
+    },
+    "guide-overlay-4.svg": {
+      "bytes": 28667,
+      "sha256": "dd2d69d09a49bf67808ee789aad45a6a8c50c48ce1b78a7a22224323658d9d92"
     },
     "guide.gif": {
-      "bytes": 364162,
-      "sha256": "9b3d72fcf6af95e13938b0e987a5bbc15d299f84ce16d39c4174ad5c56a02fe0"
+      "bytes": 986043,
+      "sha256": "8edf9fa5b07475b2c401df6cba62d4afe59c9aa5635028d3e58eb01981ee2bd6"
     },
     "guide.png": {
-      "bytes": 266616,
-      "sha256": "256604c6698288d9017c7b6ebfda784579eb11a365f45151a0c5114ac5ed9091"
+      "bytes": 197868,
+      "sha256": "4d5cee1437354f6cba3a92cec362372cbf4b4761c238276fb60403c5c56f5270"
     }
   },
-  "scope": "Deterministic source-derived illustration; no live run, speed/cost measurement or visual approval",
-  "font": "Barlow Regular and Barlow Condensed ExtraBold Italic; bundled SIL OFL notice"
+  "scope": "Worked illustration, not a live run or performance/visual approval",
+  "font": "Bundled Barlow Regular and Barlow Condensed under SIL OFL"
 }

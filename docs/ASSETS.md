@@ -84,3 +84,9 @@ The root explanation uses whole source-frame insets: source 1/frame 97 (opening/
 Barlow Regular adds a readable speech face alongside the existing Barlow Condensed display face. Its source is [Google Fonts' Barlow directory](https://github.com/google/fonts/tree/main/ofl/barlow); copyright 2017 The Barlow Project Authors. Both are covered by the bundled [SIL OFL notice](../showcase/capri/fonts/OFL.txt). Underlying anime redistribution rights remain unverified.
 
 Rebuild V6 in the same separate media environment with `python tools/build_capri_explainer.py`, then run `python tools/check_capri_presentation.py`. No network or runtime session is used by the builder.
+
+## V7 transparent actor and quantitative lesson
+
+V7 replaces rectangular character insets with the [transparent actor and alpha masters](CAPRI_ACTOR.md), preserving the panel/hero direction. The supplied edited pose is explicitly recorded as an AI edit, never compared with original-footage hashes as if identical. Original source integrity checks remain. Hand-layer articulation keeps face identity fixed and is reported as authored 2D motion. [Recipe and build record](../showcase/capri/actor/ANIMATION.json).
+
+[Worked numeric lesson](CONTEXT_BUDGET.md) uses original outlined SVG, an editable six-call scenario and an offline calculator. Every chart labels the counts as assumptions, not CAPRI usage; cache caveats remain visible. Runtime evaluation, profiles and dependencies are unchanged.

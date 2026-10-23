@@ -44,3 +44,5 @@ Recent-request footprint, cumulative usage and exact context occupancy are diffe
 [Implementation guide](../IMPLEMENTATION_README.md) · [Art and motion](AFTERIMAGE.md) · [Credits and build instructions](ASSETS.md)
 
 [Capri explains CAPRI](CAPRI_EXPLAINS.md) — six lessons, native transcript, worked correction and evidence limits.
+
+[Context budget](CONTEXT_BUDGET.md) — editable worked numbers and cache sensitivity. [Transparent actor](CAPRI_ACTOR.md) — alpha masters, provenance and actual cadence.

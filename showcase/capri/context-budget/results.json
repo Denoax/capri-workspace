@@ -1,0 +1,47 @@
+{
+  "evidence_class": "ILLUSTRATIVE_ASSUMPTIONS_NOT_MODEL_RUN",
+  "not_measured": [
+    "CAPRI performance",
+    "task quality",
+    "model retention",
+    "actual billing",
+    "latency"
+  ],
+  "calls_per_policy": 6,
+  "total_assumed_input_tokens": {
+    "growing_history": 180000,
+    "curated_single_session": 90000,
+    "scoped_roles": 60000
+  },
+  "peak_assumed_request_tokens": {
+    "growing_history": 50000,
+    "curated_single_session": 20000,
+    "scoped_roles": 12000
+  },
+  "scoped_input_reduction_percent": {
+    "growing_history": 66.66666666666667,
+    "curated_single_session": 33.333333333333336
+  },
+  "cache_sensitivity": [
+    {
+      "hypothetical_cached_relative_rate": "1",
+      "growing_weighted_input_units": 180000.0,
+      "scoped_weighted_input_units": 60000.0,
+      "scoped_reduction_percent": 66.66666666666667
+    },
+    {
+      "hypothetical_cached_relative_rate": "0.10",
+      "growing_weighted_input_units": 63000.0,
+      "scoped_weighted_input_units": 60000.0,
+      "scoped_reduction_percent": 4.761904761904762
+    },
+    {
+      "hypothetical_cached_relative_rate": "0.05",
+      "growing_weighted_input_units": 56500.0,
+      "scoped_weighted_input_units": 60000.0,
+      "scoped_reduction_percent": -6.1946902654867255
+    }
+  ],
+  "negative_reduction_means": "Scoped weighted input is higher under those assumptions",
+  "display_rule": "Label every chart as a worked example with assumed counts, not a measured CAPRI run"
+}

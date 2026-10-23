@@ -1,0 +1,2442 @@
+[
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 1,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 2,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 3,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 4,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 5,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 6,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 7,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 8,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 9,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 10,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 11,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 12,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 13,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 14,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 15,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 16,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 17,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 18,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 19,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 20,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 21,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 22,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 23,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 24,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 25,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 26,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 27,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 28,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 29,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 30,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 31,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 32,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 33,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 34,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 35,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 36,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 37,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 38,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 39,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 40,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 41,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 42,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 43,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 44,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 45,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 46,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 1,
+    "actor_sample": 47,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading_hold",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316,
+      126
+    ],
+    "delay_ms": 1500
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      132.1389
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      149.1111
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      174.75
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      206.8889
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      243.3611
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      282.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      320.6389
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      357.1111
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      389.25
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      414.8889
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      431.8611
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 1,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      438.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 1,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 2,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 3,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 4,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 5,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 6,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 7,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 8,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 9,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 10,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 11,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 12,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 13,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 14,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 15,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 16,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 17,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 18,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 19,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 20,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 21,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 22,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 23,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 24,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 25,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 26,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 27,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 28,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 29,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 30,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 31,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 32,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 33,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 34,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 35,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 36,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 37,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 38,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 39,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 40,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 41,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 42,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 43,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 44,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 45,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 46,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 2,
+    "actor_sample": 47,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading_hold",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316,
+      438
+    ],
+    "delay_ms": 1500
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      444.1389
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      461.1111
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      486.75
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      518.8889
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      555.3611
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      594.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      632.6389
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      669.1111
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      701.25
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      726.8889
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      743.8611
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 2,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 1,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 2,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 3,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 4,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 5,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 6,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 7,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 8,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 9,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 10,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 11,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 12,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 13,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 14,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 15,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 16,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 17,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 18,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 19,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 20,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 21,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 22,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 23,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 24,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 25,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 26,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 27,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 28,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 29,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 30,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 31,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 32,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 33,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 34,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 35,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 36,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 37,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 38,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 39,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 40,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 41,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 42,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 43,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 44,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 45,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 46,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 3,
+    "actor_sample": 47,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading_hold",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 1500
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "stationary_transition",
+    "beat": 3,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      750.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 1,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 2,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 3,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 4,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 5,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 6,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 7,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 8,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 9,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 10,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 11,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 12,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 13,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 14,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 15,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 16,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 17,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 18,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 19,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 20,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 21,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 22,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 23,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 24,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 25,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 26,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 27,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 28,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 29,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 30,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 31,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 32,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 33,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 34,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 35,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 36,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 37,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 38,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 39,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 40,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 41,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 42,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 43,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 44,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 45,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 46,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading",
+    "beat": 4,
+    "actor_sample": 47,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "reading_hold",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316,
+      750
+    ],
+    "delay_ms": 1500
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      737.7222
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      703.7778
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      652.5
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      588.2222
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      515.2778
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      438.0
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      360.7222
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      287.7778
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      223.5
+    ],
+    "delay_ms": 50
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      172.2222
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      138.2778
+    ],
+    "delay_ms": 40
+  },
+  {
+    "phase": "travel",
+    "beat": 4,
+    "actor_sample": 0,
+    "position": [
+      316.0,
+      126.0
+    ],
+    "delay_ms": 40
+  }
+]

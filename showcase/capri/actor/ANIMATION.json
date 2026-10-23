@@ -1,0 +1,98 @@
+{
+  "reference": "references/capri-source14-cutout-candidate.png",
+  "reference_sha256": "287cdc4f29ed065a180e6a680a8731c634bd9256cf7b993e18e7265495473904",
+  "working_source_size": [
+    498,
+    281
+  ],
+  "padding": 32,
+  "samples_per_second": 24,
+  "duration_ms": 2000,
+  "right_palm": {
+    "pivot": [
+      402,
+      183
+    ],
+    "amplitude_degrees": 8,
+    "phase_radians": 0,
+    "outline": [
+      [
+        389,
+        178
+      ],
+      [
+        415,
+        157
+      ],
+      [
+        470,
+        150
+      ],
+      [
+        505,
+        153
+      ],
+      [
+        505,
+        243
+      ],
+      [
+        454,
+        241
+      ],
+      [
+        418,
+        207
+      ],
+      [
+        398,
+        197
+      ]
+    ]
+  },
+  "left_palm": {
+    "pivot": [
+      111,
+      138
+    ],
+    "amplitude_degrees": 6,
+    "phase_radians": 1.0471975511965976,
+    "outline": [
+      [
+        29,
+        144
+      ],
+      [
+        52,
+        118
+      ],
+      [
+        85,
+        89
+      ],
+      [
+        111,
+        104
+      ],
+      [
+        129,
+        127
+      ],
+      [
+        117,
+        147
+      ],
+      [
+        88,
+        150
+      ],
+      [
+        49,
+        155
+      ]
+    ]
+  },
+  "method": "Deterministic two-palm articulation of the supplied AI-edited source-14 pose. Face/hair/body pixels stay fixed. Motion is reference-guided authored animation, not extracted 24 FPS anime acting or independently generated frames.",
+  "crop_limit": "Original upper-body crop remains; no missing anatomy invented. Padding prevents new hand clipping.",
+  "source_mask_trials": "CPU optical-flow/GrabCut and manual source-pixel mask trials were inspected but rejected for room contamination or dark-anatomy holes; no trial raster is used in delivery."
+}

@@ -15,7 +15,6 @@ ROOT = Path(__file__).resolve().parents[1]
 MEDIA = ROOT / "showcase/capri"
 OUT = MEDIA / "explainer"
 INK, PAPER, PINK, GREEN, MUTED = "#100a19", "#f4f1ee", "#ff1265", "#28fb86", "#bcb7c6"
-POSES = [(1, 97), (14, 0), (12, 5)]
 BUBBLES = [
     ["Plan here.", "Name the task, sources", "and acceptance checks."],
     ["Build here.", "Carry the correction", "with the handoff."],
@@ -30,13 +29,17 @@ class Art:
         for name, filename in [("body", "Barlow-Regular.ttf"), ("display", "BarlowCondensed-ExtraBoldItalic.ttf")]:
             font = TTFont(MEDIA / "fonts" / filename)
             self.fonts[name] = (font.getGlyphSet(), font.getBestCmap(), font["head"].unitsPerEm)
+        self.output = OUT
+        self.actor_frames = []
+        with Image.open(MEDIA / "actor/actor-rgba.png") as actor:
+            for i in range(actor.n_frames):
+                actor.seek(i)
+                self.actor_frames.append(actor.convert("RGBA").copy())
         self.poses = []
-        for source, frame in POSES:
-            with Image.open(MEDIA / "sources" / f"capri-{source}.gif") as im:
-                im.seek(frame)
-                stream = BytesIO()
-                im.convert("RGB").save(stream, "PNG", optimize=True)
-                self.poses.append(base64.b64encode(stream.getvalue()).decode())
+        for index in [0, 12, 36]:
+            stream = BytesIO()
+            self.actor_frames[index].save(stream, "PNG", optimize=True)
+            self.poses.append(base64.b64encode(stream.getvalue()).decode())
 
     def text(self, text, x, y, size=30, color=PAPER, face="body"):
         glyphs, cmap, units = self.fonts[face]
@@ -53,7 +56,7 @@ class Art:
         return "".join(self.text(line, x, y + n * size * leading, size, color, face) for n, line in enumerate(lines))
 
     def pose(self, index, x, y, w, h):
-        # Whole source box, no mirrored marks, inferred anatomy or synthetic frames.
+        # Transparent edited-pose actor; provenance and articulation in actor/ANIMATION.json.
         return f'<image x="{x}" y="{y}" width="{w}" height="{h}" preserveAspectRatio="xMidYMid meet" href="data:image/png;base64,{self.poses[index]}"/>'
 
     def bubble(self, lines, x, y, w, h, size=30, tail="top"):
@@ -68,31 +71,32 @@ class Art:
     def rule(x, y, w, color=PAPER):
         return f'<path d="M{x} {y}h{w}" stroke="{color}" stroke-width="2"/>'
 
-    def save(self, name, w, h, body, title):
-        svg = OUT / f"{name}.svg"
-        svg.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"><title>{html.escape(title)}</title><rect width="{w}" height="{h}" fill="{INK}"/>{body}</svg>\n')
-        subprocess.run(["rsvg-convert", str(svg), "-o", str(OUT / f"{name}.png")], check=True)
+    def save(self, name, w, h, body, title, transparent=False):
+        svg = self.output / f"{name}.svg"
+        background = "" if transparent else f'<rect width="{w}" height="{h}" fill="{INK}"/>'
+        svg.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img"><title>{html.escape(title)}</title>{background}{body}</svg>\n')
+        subprocess.run(["rsvg-convert", str(svg), "-o", str(self.output / f"{name}.png")], check=True)
 
 
 def context(art, mobile):
     if mobile:
-        w, h = 600, 1100
-        body = art.pose(0, 20, 12, 210, 240)
-        body += art.bubble(["One task.", "Three focused", "conversations."], 238, 38, 342, 173, 32, "left")
-        body += art.text("WHAT EACH ROLE CAN WORK WITH", 25, 299, 40, GREEN, "display")
-        body += art.text("One growing conversation", 25, 354, 32)
-        body += art.rule(25, 374, 550, PINK)
-        body += art.lines(["Request + corrections + sources", "+ exploration + logs + failed attempts"], 25, 416, 29)
-        body += art.text("Select by purpose", 25, 530, 52, GREEN, "display")
-        for y, role, content in [(600,"THINKER",["Task, sources, scope, checks"]), (733,"DOER",["Scoped change + latest correction"]), (866,"REVIEWER",["Request, candidate, evidence"])]:
+        w, h = 600, 1300
+        body = art.pose(0, 24, 0, 552, 270)
+        body += art.bubble(["One task. Three focused", "conversations.", "Keep the instructions and evidence."], 24, 292, 552, 145, 29, "right")
+        body += art.text("WHAT EACH ROLE CAN WORK WITH", 25, 499, 40, GREEN, "display")
+        body += art.text("One growing conversation", 25, 554, 32)
+        body += art.rule(25, 574, 550, PINK)
+        body += art.lines(["Request + corrections + sources", "+ exploration + logs + failed attempts"], 25, 616, 29)
+        body += art.text("Select by purpose", 25, 730, 52, GREEN, "display")
+        for y, role, content in [(800,"THINKER",["Task, sources, scope, checks"]), (933,"DOER",["Scoped change + latest correction"]), (1066,"REVIEWER",["Request, candidate, evidence"])]:
             body += art.rule(25, y-38, 550, MUTED)
             body += art.text(role, 25, y+6, 45, PAPER, "display")
             body += art.lines(content, 25, y+49, 29)
-        body += art.lines(["Originals stay retrievable.", "Exploration need not fill every handoff."], 25, 1010, 29, GREEN)
+        body += art.lines(["Originals stay retrievable.", "Exploration need not fill every handoff."], 25, 1210, 29, GREEN)
     else:
         w, h = 1200, 760
-        body = art.pose(0, 22, 12, 205, 230)
-        body += art.bubble(["One task. Three focused conversations.", "I'll show you what moves between them."], 260, 46, 904, 151, 38, "left")
+        body = art.pose(0, 16, 22, 330, 215)
+        body += art.bubble(["One task. Three focused conversations.", "I'll show you what moves between them."], 362, 46, 802, 151, 33, "left")
         body += art.text("CONTEXT = WHAT A ROLE CAN WORK WITH", 32, 298, 56, GREEN, "display")
         body += art.text("One growing conversation", 32, 370, 34)
         body += art.rule(32, 389, 470, PINK)
@@ -141,7 +145,6 @@ def geometry(art, mobile):
 def guide(art, mobile):
     w, h, base, positions, bubbles = geometry(art, mobile)
     prefix = "guide-mobile" if mobile else "guide"
-    holds = []
     for i in range(4):
         x,y,pw,ph = positions[i]
         bx,by,bw,bh = bubbles[i]
@@ -156,24 +159,50 @@ def guide(art, mobile):
         body += f'<path d="M{x+pw-14} {y+ph-7}L{bx+bw-27} {by-13}" stroke="{PINK}" stroke-width="3"/>'
         body += art.bubble(BUBBLES[i],bx,by,bw,bh,27 if mobile else 29, "right" if mobile else "top")
         art.save(f"{prefix}-beat-{i+1}",w,h,body,"Capri guide, beat " + str(i+1) + "; illustrative workflow, not live execution")
-        holds.append(Image.open(OUT / f"{prefix}-beat-{i+1}.png").convert("RGB"))
-    # 16-second overview. Stable labels and long holds; only the source inset moves.
-    frames, durations = [], []
+    # Four stable 3.5-second reading holds and 0.5-second travel intervals.
+    # The actor has its own authored 24 Hz hand animation; path and acting are distinct.
+    from build_capri_actor import delays
+    art.save(prefix+"-base",w,h,base,"Stable guide geometry")
+    background=Image.open(OUT/f"{prefix}-base.png").convert("RGBA")
+    overlays=[]
+    for i,(bx,by,bw,bh) in enumerate(bubbles):
+        body=art.bubble(BUBBLES[i],bx,by,bw,bh,27 if mobile else 29,"right" if mobile else "top")
+        if i==1:
+            if mobile:body+=art.text("PACKET: Untitled",24,587,27,GREEN)
+            else:
+                body+=f'<path d="M800 304h365v125H800Z" fill="none" stroke="{GREEN}" stroke-width="2"/>'
+                body+=art.lines(["HANDOFF PACKET","label.py only","blank -> Untitled"],820,338,28,GREEN)
+        art.save(f"{prefix}-overlay-{i+1}",w,h,body,"Editable speech and packet overlay",transparent=True)
+        overlays.append(Image.open(OUT/f"{prefix}-overlay-{i+1}.png").convert("RGBA"))
+    def compose(index,position,overlay=None):
+        x,y,pw,ph=position
+        frame=background.copy();actor=art.actor_frames[index%len(art.actor_frames)]
+        ratio=min(pw/actor.width,ph/actor.height)
+        resized=actor.resize((round(actor.width*ratio),round(actor.height*ratio)),Image.Resampling.LANCZOS)
+        frame.alpha_composite(resized,(round(x+(pw-resized.width)/2),round(y+(ph-resized.height)/2)))
+        if overlay is not None:frame.alpha_composite(overlay)
+        return frame.convert("RGB")
+    frames=[];durations=[];timeline=[]
     for i in range(4):
-        frames.append(holds[i]);durations.append(3600)
-        nxt = (i+1)%4
-        for n in range(1,5):
-            t = n/4
-            x,y,pw,ph = positions[i]
-            nx,ny,_,_ = positions[nxt]
-            body = base + art.pose(min(nxt,2),x+(nx-x)*t,y+(ny-y)*t,pw,ph)
-            art.save(f"{prefix}-transit",w,h,body,"Capri follows the handoff path")
-            frames.append(Image.open(OUT/f"{prefix}-transit.png").convert("RGB"));durations.append(100)
-    atlas = Image.new("RGB", (240*len(frames), round(h*240/w)))
-    for i,frame in enumerate(frames):atlas.paste(frame.resize((240,atlas.height)),(240*i,0))
-    palette = atlas.quantize(colors=256,method=Image.Quantize.MEDIANCUT)
-    indexed = [im.quantize(palette=palette,dither=Image.Dither.NONE) for im in frames]
+        # One quiet two-second gesture, followed by a readable still hold.
+        for n,delay in enumerate(delays(48)):
+            frames.append(compose(n,positions[i],overlays[i]));durations.append(delay)
+            timeline.append({"phase":"reading","beat":i+1,"actor_sample":n,"position":list(positions[i][:2]),"delay_ms":delay})
+        frames.append(compose(0,positions[i],overlays[i]));durations.append(1500)
+        timeline.append({"phase":"reading_hold","beat":i+1,"actor_sample":0,"position":list(positions[i][:2]),"delay_ms":1500})
+        nxt=(i+1)%4;x,y,pw,ph=positions[i];nx,ny,_,_=positions[nxt]
+        # Keep the pointing pose through travel so arrival cannot reset a hand phase.
+        for n,delay in enumerate(delays(12)):
+            t=(n+1)/12;t=t*t*(3-2*t)
+            pos=(x+(nx-x)*t,y+(ny-y)*t,pw,ph)
+            frames.append(compose(0,pos));durations.append(delay)
+            timeline.append({"phase":"travel" if (x,y)!=(nx,ny) else "stationary_transition","beat":i+1,"actor_sample":0,"position":[round(pos[0],4),round(pos[1],4)],"delay_ms":delay})
+    atlas=Image.new("RGB",(160*len(frames),round(h*160/w)))
+    for i,frame in enumerate(frames):atlas.paste(frame.resize((160,atlas.height)),(160*i,0))
+    palette=atlas.quantize(colors=256,method=Image.Quantize.MEDIANCUT)
+    indexed=[frame.quantize(palette=palette,dither=Image.Dither.NONE) for frame in frames]
     indexed[0].save(OUT/f"{prefix}.gif",save_all=True,append_images=indexed[1:],duration=durations,loop=0,optimize=True,disposal=1)
+    (OUT/f"{prefix}-timeline.json").write_text(json.dumps(timeline,indent=2)+"\n")
     # Poster is a complete four-beat comic, not the animation's first frame.
     if mobile:
         body = art.text("THE WHOLE HANDOFF",24,62,52,GREEN,"display")
@@ -197,7 +226,6 @@ def guide(art, mobile):
             body += art.text(["Task + source + checks","Candidate + checks + limits","Findings + evidence","Human decision; no automatic next task"][i],x,y+271,29)
         body += art.lines(["Uncertain effects? Hold and reconcile. This teaching diagram is not a live run."],30,886,30)
         art.save("comic",1200,930,body,"Complete static guide: all four beats and uncertainty branch")
-    for suffix in ["svg","png"]:(OUT/f"{prefix}-transit.{suffix}").unlink()
     # A .png sibling is the complete lesson for local pause/reduced-motion fallback.
     Image.open(OUT/("comic-mobile.png" if mobile else "comic.png")).save(OUT/f"{prefix}.png",optimize=True)
 
@@ -212,8 +240,8 @@ def main():
     for mobile in [False,True]:
         context(art,mobile)
         guide(art,mobile)
-    outputs={p.name:{"bytes":p.stat().st_size,"sha256":hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(OUT.iterdir()) if p.suffix in {"svg",".svg",".png",".gif"}}
-    record={"version":6,"poses":[{"source":s,"frame":f,"treatment":"whole source-frame inset; no mirroring, invented anatomy or generative fill"} for s,f in POSES],"overview_duration_ms":16000,"reading_hold_ms":3600,"transition_ms":400,"outputs":outputs,"scope":"Deterministic source-derived illustration; no live run, speed/cost measurement or visual approval","font":"Barlow Regular and Barlow Condensed ExtraBold Italic; bundled SIL OFL notice"}
+    outputs={p.name:{"bytes":p.stat().st_size,"sha256":hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(OUT.iterdir()) if p.suffix in {".svg",".png",".gif"}}
+    record={"version":7,"poses":[{"source":14,"frame":0,"actor_sample":sample,"treatment":"AI-edited reference pose with transparent articulated hand layers; not exact anime pixels"} for sample in [0,12,36]],"overview_duration_ms":16000,"reading_hold_ms":3500,"transition_ms":500,"active_path_samples_per_second":24,"actor_samples_per_second":24,"actor_method":"Authored palm rotations of a fixed edited pose; not interpolated source acting","outputs":outputs,"scope":"Worked illustration, not a live run or performance/visual approval","font":"Bundled Barlow Regular and Barlow Condensed under SIL OFL"}
     (OUT/"BUILD.json").write_text(json.dumps(record,indent=2)+"\n")
     print(json.dumps({"files":len(outputs),"motion_ms":16000,"motion_bytes":{p.name:p.stat().st_size for p in OUT.glob("*.gif")}},indent=2))
 

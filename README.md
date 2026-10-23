@@ -15,7 +15,7 @@ CAPRI coordinates three Codex sessions: one to research and scope, one to build 
 
 <picture>
   <source media="(max-width: 600px)" srcset="showcase/capri/explainer/context-mobile.svg">
-  <img src="showcase/capri/explainer/context.svg" alt="Capri: One task. Three focused conversations. I'll show you what moves between them. Compare one growing conversation with purpose-specific Thinker, Doer and Reviewer contexts; originals remain retrievable." width="1200">
+  <img src="showcase/capri/explainer/context.svg" alt="Capri: One task. Three focused conversations. Keep the instructions and evidence. Compare one growing conversation with purpose-specific Thinker, Doer and Reviewer contexts; originals remain retrievable." width="1200">
 </picture>
 
 A **context** is the information a role can work with: instructions, source, conversation history and tool results. Separate contexts let each role focus on its purpose. Useful handoffs retain the original request, latest corrections, relevant source, constraints and checks; exploratory bulk need not fill every recipient's conversation. [Why select context?](docs/CAPRI_EXPLAINS.md#why-select-context)
@@ -47,6 +47,48 @@ The numbered transcript above conveys every stage without waiting for motion. Th
 
 </details>
 
+## Keep the next decision supplied with the right context
+
+**Worked example — assumed input tokens, not a measured CAPRI run.** All three policies below have six requests. The budgets include the handoff/review input assumed for each call; whether those budgets preserve sufficient information and answer quality has not been tested.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="showcase/capri/context-budget/budget-mobile.svg">
+  <img src="showcase/capri/context-budget/budget.svg" alt="Worked example, assumed input tokens over six requests, not a measured CAPRI run. Growing conversation 180000; curated single session 90000; scoped roles 60000. Common zero baseline. Scoped inputs are 66.7 percent below growing and 33.3 percent below curated under these assumptions. This does not measure bills, latency or quality; cache reuse can reverse cost ordering." width="1200">
+</picture>
+
+The totals are **180,000 growing-history**, **90,000 curated-single-session** and **60,000 scoped-role input tokens**. Scoped inputs are **66.7% lower** than growing history and **33.3% lower** than the curated single-session example, under these assumptions. Good context management helps a single session too; agent count alone does not produce these differences. [Editable inputs, calculator and full assumptions](docs/CONTEXT_BUDGET.md).
+
+**Fewer input tokens do not automatically mean a lower bill.** In the hypothetical cache case, growing history contains 50,000 uncached + 130,000 cached tokens, while all 60,000 scoped tokens miss cache. At a hypothetical cached relative rate of `0.05`, growing history uses **56,500 weighted input units**, below scoped inputs' **60,000**. These are normalized example units, not prices or observed usage. Outputs, reasoning charges, tools, retries, wall time and quality are excluded.
+
+<details>
+<summary><strong>Inspect all six requests and the cache sensitivity</strong></summary>
+
+**Worked example — assumed input tokens, not a measured CAPRI run.**
+
+| Request | Growing history | Curated single session | Scoped role contexts | Scoped role |
+| :--- | ---: | ---: | ---: | :--- |
+| 1 | 10,000 | 10,000 | 10,000 | Thinker: plan |
+| 2 | 18,000 | 12,000 | 8,000 | Doer: inspect |
+| 3 | 26,000 | 14,000 | 10,000 | Doer: implement |
+| 4 | 34,000 | 16,000 | 12,000 | Doer: checks |
+| 5 | 42,000 | 18,000 | 8,000 | Reviewer |
+| 6 | 50,000 | 20,000 | 12,000 | Thinker: report |
+| **Total** | **180,000** | **90,000** | **60,000** | Six calls included |
+
+Growing history starts at 10,000 tokens and appends 8,000 per request. Curated and scoped budgets assume sufficient relevant material fits in their listed inputs. Largest assumed request: **50,000 → 12,000** tokens; this is an input-footprint illustration, not exact active-context occupancy or a tokenizer measurement. Equal calls do not establish equal work, output or quality.
+
+For hypothetical cached relative rate `r`, weighted input is `uncached + r × cached`:
+
+| Hypothetical r | Growing weighted input | Scoped weighted input | Scoped difference |
+| :--- | ---: | ---: | :--- |
+| 1.00 | 180,000 | 60,000 | 66.7% lower |
+| 0.10 | 63,000 | 60,000 | 4.8% lower |
+| 0.05 | 56,500 | 60,000 | 6.2% higher |
+
+Perfect reusable prefixes in the growing case and all misses in the scoped case are deliberately explicit assumptions. None of these coefficients is a current provider price. [Reproduce the arithmetic](docs/CONTEXT_BUDGET.md#reproduce-the-example).
+
+</details>
+
 ## A correction that must travel
 
 **Illustration from fixture A — expected behavior, not a completed live run.** The first request says `label(text)` trims outer whitespace, preserves case and internal spaces, rejects non-strings, and uses `Anonymous` for blank text. The latest correction changes the blank label to **`Untitled`**; compatible earlier rules remain. Only `label.py` may change. [Original request](evaluation/fixtures/A/INITIAL.md) · [Correction](evaluation/fixtures/A/CORRECTION.md).
@@ -56,6 +98,16 @@ The numbered transcript above conveys every stage without waiting for motion. Th
 | `"   "` | `"Untitled"` |
 | `"  MiX  Case  "` | `"MiX  Case"` |
 | `None` | raises `TypeError` |
+
+**Authored packing examples — not observed model failures.**
+
+> **Incomplete brief:** “Trim text and return Anonymous for blanks.”
+
+This carries a superseded blank rule and omits the internal-space, case, type and scope constraints.
+
+> **Complete handoff:** “Only change label.py. Trim outer whitespace; preserve case and internal whitespace. **Latest correction: blank/whitespace-only input returns Untitled.** Non-strings raise TypeError. Keep the [original request](evaluation/fixtures/A/INITIAL.md) and [correction](evaluation/fixtures/A/CORRECTION.md) retrievable.”
+
+The missing rule is absent from the supplied brief; this is information loss during packing, not cache-driven instruction deletion. Prefix caching reuses processing for matching prefixes. It does not delete instructions or remove cached input from logical context. [Context selection, compaction and caching](docs/CONTEXT_BUDGET.md#three-different-mechanisms).
 
 The Doer's packet carries the correction with the original rules. The Reviewer checks both against the candidate and evidence. A summary saying only “implement a label function” loses the decision that matters. [Walk through the packet](docs/CAPRI_EXPLAINS.md#3-carry-decisions-with-the-packet).
 
@@ -123,7 +175,7 @@ Native use additionally requires the qualified Codex CLI 0.163.0/profile, existi
 > [!IMPORTANT]
 > **Experimental.** Native lifecycle/recovery qualification, the separate repaired-source comparison and final independent review remain pending at the recorded source cutoff. The current CI isolation prerequisite is failing; the runtime suite was skipped. See [current status](docs/STATUS.md).
 
-No source-bound product demo was available. Character animation is artwork, not a controller recording.
+No source-bound product demo was available. Character animation is artwork, not a controller recording. The transparent actor uses an authorized AI-edited reference with authored hand gestures; it is not a complete-body rig. [Actor sources and motion](docs/CAPRI_ACTOR.md).
 
 **Mani Marami Milani** · [Afterimage](docs/AFTERIMAGE.md) · [Sources and edits](docs/ASSETS.md) · [Presentation references](docs/DESIGN_REFERENCES.md)
 

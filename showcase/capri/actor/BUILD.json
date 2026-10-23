@@ -1,0 +1,321 @@
+{
+  "version": 7,
+  "method": "Deterministic two-palm articulation of the supplied AI-edited source-14 pose. Face/hair/body pixels stay fixed. Motion is reference-guided authored animation, not extracted 24 FPS anime acting or independently generated frames.",
+  "reference_sha256": "287cdc4f29ed065a180e6a680a8731c634bd9256cf7b993e18e7265495473904",
+  "source_reference": {
+    "source": 14,
+    "frame": 0,
+    "supporting_identity_source": 20,
+    "supporting_frame": 101
+  },
+  "crop_limit": "Original upper-body crop remains; no missing anatomy invented. Padding prevents new hand clipping.",
+  "frames": 48,
+  "distinct_decoded_frames": 48,
+  "duration_ms": 2000,
+  "decoded_delays_ms": [
+    40,
+    40,
+    40,
+    50,
+    40,
+    40,
+    40,
+    40,
+    50,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    50,
+    40,
+    40,
+    40,
+    40,
+    50,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    50,
+    40,
+    40,
+    40,
+    40,
+    50,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    50,
+    40,
+    40,
+    40,
+    40,
+    50,
+    40,
+    40,
+    40
+  ],
+  "sample_rate_hz": 24.0,
+  "gif_transparency": "binary index 0, reserved palette entry, disposal 2; all decoded masks compared",
+  "face_pixels_unchanged": true,
+  "transforms_degrees": [
+    {
+      "left_palm": 5.196152,
+      "right_palm": 0.0
+    },
+    {
+      "left_palm": 5.543277,
+      "right_palm": 1.04421
+    },
+    {
+      "left_palm": 5.795555,
+      "right_palm": 2.070552
+    },
+    {
+      "left_palm": 5.948669,
+      "right_palm": 3.061467
+    },
+    {
+      "left_palm": 6.0,
+      "right_palm": 4.0
+    },
+    {
+      "left_palm": 5.948669,
+      "right_palm": 4.870091
+    },
+    {
+      "left_palm": 5.795555,
+      "right_palm": 5.656854
+    },
+    {
+      "left_palm": 5.543277,
+      "right_palm": 6.346827
+    },
+    {
+      "left_palm": 5.196152,
+      "right_palm": 6.928203
+    },
+    {
+      "left_palm": 4.76012,
+      "right_palm": 7.391036
+    },
+    {
+      "left_palm": 4.242641,
+      "right_palm": 7.727407
+    },
+    {
+      "left_palm": 3.652569,
+      "right_palm": 7.931559
+    },
+    {
+      "left_palm": 3.0,
+      "right_palm": 8.0
+    },
+    {
+      "left_palm": 2.296101,
+      "right_palm": 7.931559
+    },
+    {
+      "left_palm": 1.552914,
+      "right_palm": 7.727407
+    },
+    {
+      "left_palm": 0.783157,
+      "right_palm": 7.391036
+    },
+    {
+      "left_palm": 0.0,
+      "right_palm": 6.928203
+    },
+    {
+      "left_palm": -0.783157,
+      "right_palm": 6.346827
+    },
+    {
+      "left_palm": -1.552914,
+      "right_palm": 5.656854
+    },
+    {
+      "left_palm": -2.296101,
+      "right_palm": 4.870091
+    },
+    {
+      "left_palm": -3.0,
+      "right_palm": 4.0
+    },
+    {
+      "left_palm": -3.652569,
+      "right_palm": 3.061467
+    },
+    {
+      "left_palm": -4.242641,
+      "right_palm": 2.070552
+    },
+    {
+      "left_palm": -4.76012,
+      "right_palm": 1.04421
+    },
+    {
+      "left_palm": -5.196152,
+      "right_palm": 0.0
+    },
+    {
+      "left_palm": -5.543277,
+      "right_palm": -1.04421
+    },
+    {
+      "left_palm": -5.795555,
+      "right_palm": -2.070552
+    },
+    {
+      "left_palm": -5.948669,
+      "right_palm": -3.061467
+    },
+    {
+      "left_palm": -6.0,
+      "right_palm": -4.0
+    },
+    {
+      "left_palm": -5.948669,
+      "right_palm": -4.870091
+    },
+    {
+      "left_palm": -5.795555,
+      "right_palm": -5.656854
+    },
+    {
+      "left_palm": -5.543277,
+      "right_palm": -6.346827
+    },
+    {
+      "left_palm": -5.196152,
+      "right_palm": -6.928203
+    },
+    {
+      "left_palm": -4.76012,
+      "right_palm": -7.391036
+    },
+    {
+      "left_palm": -4.242641,
+      "right_palm": -7.727407
+    },
+    {
+      "left_palm": -3.652569,
+      "right_palm": -7.931559
+    },
+    {
+      "left_palm": -3.0,
+      "right_palm": -8.0
+    },
+    {
+      "left_palm": -2.296101,
+      "right_palm": -7.931559
+    },
+    {
+      "left_palm": -1.552914,
+      "right_palm": -7.727407
+    },
+    {
+      "left_palm": -0.783157,
+      "right_palm": -7.391036
+    },
+    {
+      "left_palm": -0.0,
+      "right_palm": -6.928203
+    },
+    {
+      "left_palm": 0.783157,
+      "right_palm": -6.346827
+    },
+    {
+      "left_palm": 1.552914,
+      "right_palm": -5.656854
+    },
+    {
+      "left_palm": 2.296101,
+      "right_palm": -4.870091
+    },
+    {
+      "left_palm": 3.0,
+      "right_palm": -4.0
+    },
+    {
+      "left_palm": 3.652569,
+      "right_palm": -3.061467
+    },
+    {
+      "left_palm": 4.242641,
+      "right_palm": -2.070552
+    },
+    {
+      "left_palm": 4.76012,
+      "right_palm": -1.04421
+    }
+  ],
+  "ai_provenance": "Supplied built-in image edit is the pose source. No new generative frame calls; deterministic palm articulation. Not exact anime pixels or a complete rig.",
+  "outputs": {
+    "actor-alpha.png": {
+      "bytes": 440641,
+      "sha256": "de24756e623400a19eea4fe810ddd1fa036569d65e215515c4d52ba23d94a98b"
+    },
+    "actor-rgb.png": {
+      "bytes": 3406550,
+      "sha256": "0470828702ac4bb032f63447bd458ccd6e2052661949f1864110a4c4c6f4634e"
+    },
+    "actor-rgba.png": {
+      "bytes": 4202602,
+      "sha256": "595ec43f9ffc4f0e0a6cf28474afdcbce14ca347235871eb89198d769467164e"
+    },
+    "actor.png": {
+      "bytes": 178600,
+      "sha256": "ecde1e34d3ba651e228c29cc9b3d14a9911430223af5f16c05a58caaf3feb309"
+    },
+    "body-mask.png": {
+      "bytes": 11477,
+      "sha256": "a4bbc5ab498c0acbf94d0790d356d96c8baad43f1f16e2794492b1ab2da6b7ee"
+    },
+    "body.png": {
+      "bytes": 175387,
+      "sha256": "77a2973149a6b3b48d17a5b00650795b500d46c0290558ea1b34904b7d3b047f"
+    },
+    "left_palm-mask.png": {
+      "bytes": 1913,
+      "sha256": "5662cd32752d5eb3b3eb94b23950e5ad4db99eec8eb80cb1cfad9fe0ab7b5088"
+    },
+    "left_palm.png": {
+      "bytes": 170185,
+      "sha256": "2f830c2b5c4e3947f923f06b002f942f60f247f11e297b407f4f62b333e70ecb"
+    },
+    "matte-proof.png": {
+      "bytes": 972301,
+      "sha256": "9791e6859fcae91c23f53366de901fad48293b440dfbb0339b80ef8f8cab0cbc"
+    },
+    "pose-alpha.png": {
+      "bytes": 14165,
+      "sha256": "7024a3ac4ed99e48e2281aa60ad63a6948cb966535b81ea92ffb691e2eede8a1"
+    },
+    "pose-rgba.png": {
+      "bytes": 177376,
+      "sha256": "ff9586030ef6e89c5f24d7a97dd0387adf40b508bd62bd969acd5f7c370c8f9a"
+    },
+    "right_palm-mask.png": {
+      "bytes": 2147,
+      "sha256": "f79399a470e8d3a15a054ae4c045c5966e70cc6bca0e2f6045054349641f0e95"
+    },
+    "right_palm.png": {
+      "bytes": 170312,
+      "sha256": "6c9223818784ef6d7b0cc7f907219271c2c141ae5e8318fd336bb6e3dcbbb69f"
+    },
+    "actor.gif": {
+      "bytes": 2439109,
+      "sha256": "3fe20cd27f49f91e23203e4e35dd585afcdedafd0d9a3b0f51f1659ca0eba7db"
+    }
+  }
+}

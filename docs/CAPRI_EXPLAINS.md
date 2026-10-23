@@ -2,7 +2,7 @@
 
 [Back to the README](../README.md) · [Complete static edition](README_STATIC.md) · [What is proven here?](#what-is-proven-here)
 
-Capri's speech is original teaching copy, not a quotation from the show. The pictures are source-derived illustrations, not controller screenshots. The user-described *Dr. STONE* explanation premise informs the character-as-instructor approach; no shots, dialogue or audio are reproduced from that series. [Design references](DESIGN_REFERENCES.md).
+Capri's speech is original teaching copy, not a quotation from the show. The pictures are illustrations, not controller screenshots. V7's transparent actor uses an authorized AI-edited pose with authored hand articulation; [asset provenance and limits](CAPRI_ACTOR.md). The user-described *Dr. STONE* explanation premise informs the character-as-instructor approach; no shots, dialogue or audio are reproduced from that series. [Design references](DESIGN_REFERENCES.md).
 
 <picture>
   <source media="(max-width: 600px)" srcset="../showcase/capri/explainer/comic-mobile.svg">
@@ -38,6 +38,8 @@ These are separate sessions with controlled stage order and one write owner, not
 A useful packet binds the task to its original request, latest corrections, source identity and applicable instructions; defines allowed changes and acceptance checks; and includes open questions, evidence and uncertainty. Exploration can stay local, but recipients must be able to retrieve authoritative originals. CAPRI checkpoints bind these inputs; a model summary alone is not sufficient authority. [Checkpoint and context code](../controller/loop/context.py) · [Native original-input handling](../controller/loop/native.py).
 
 Within an active role, tool feedback forms a smaller loop: **inspect → act → observe → next permitted step**. This inner loop does not grant a new role, a new task or permission beyond the frozen task boundary. Stage transitions and human decisions belong to the outer workflow. [Architecture](../ARCHITECTURE.md).
+
+See the [worked six-request comparison](CONTEXT_BUDGET.md) for context growth, a strong curated-single-session baseline, cache sensitivity and authored examples of omitted requirements.
 
 ## 4. Keep the latest correction
 

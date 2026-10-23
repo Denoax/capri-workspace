@@ -1,0 +1,26 @@
+{
+  "evidence_class": "ILLUSTRATIVE_ASSUMPTIONS_NOT_MODEL_RUN",
+  "unit": "assumed input tokens summed across requests",
+  "calls": 6,
+  "policies": {
+    "growing_history": [10000, 18000, 26000, 34000, 42000, 50000],
+    "curated_single_session": [10000, 12000, 14000, 16000, 18000, 20000],
+    "scoped_roles": [10000, 8000, 10000, 12000, 8000, 12000]
+  },
+  "scoped_call_roles": ["Thinker: plan", "Doer: inspect", "Doer: implement", "Doer: checks", "Reviewer", "Thinker: report"],
+  "cache_sensitivity": {
+    "growing_history_uncached": 50000,
+    "growing_history_cached": 130000,
+    "scoped_roles_uncached": 60000,
+    "scoped_roles_cached": 0,
+    "hypothetical_cached_relative_rates": ["1", "0.10", "0.05"]
+  },
+  "assumptions": [
+    "Each policy has six calls; equality of task quality or output work is not established.",
+    "Listed input budgets include the handoff/review context assumed for each call.",
+    "The scoped/curated budgets are assumed to hold sufficient relevant material; this has not been tested.",
+    "The growing cache case assumes perfect reusable prefixes; the scoped cache case deliberately assumes all inputs miss.",
+    "Cache relative rates are hypothetical normalized coefficients, not actual model prices.",
+    "Output/reasoning charges, cache writes, tool charges, retries, wall time and human work are outside this input-only example."
+  ]
+}

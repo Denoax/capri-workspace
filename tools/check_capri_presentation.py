@@ -2,7 +2,7 @@
 """Focused documentation/media checks; no controller launch or aesthetic score."""
 from pathlib import Path
 from urllib.parse import unquote,urlsplit
-import hashlib,json,re,sys
+import hashlib,json,re,sys,runpy
 from PIL import Image
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -79,8 +79,8 @@ def main():
     for path in (MEDIA/'afterimage').glob('*.svg'):
         if re.search(r'<(?:text|script|animate|foreignObject)\b',path.read_text()):errors.append('Unsupported/unoutlined SVG content: '+path.name)
     explainer=json.loads((MEDIA/'explainer/BUILD.json').read_text())
-    if len({(p['source'],p['frame']) for p in explainer['poses']})<3:
-        errors.append('Explainer needs three recorded instructor poses')
+    if len({p['actor_sample'] for p in explainer['poses']})<3:
+        errors.append('Explainer needs three recorded edited-actor pose selections')
     for name,record in explainer['outputs'].items():
         path=MEDIA/'explainer'/name
         if path.stat().st_size!=record['bytes'] or hashlib.sha256(path.read_bytes()).hexdigest()!=record['sha256']:
@@ -93,6 +93,45 @@ def main():
                 for i in range(im.n_frames):im.seek(i);im.load();duration+=im.info.get('duration',0)
                 if duration!=16000 or im.info.get('loop')!=0:errors.append('Guide timing/loop mismatch: '+name)
                 assets.append({'path':'explainer/'+name,'size':list(im.size),'bytes':path.stat().st_size,'frames':im.n_frames,'duration_ms':duration})
+    actor=json.loads((MEDIA/'actor/BUILD.json').read_text())
+    reference=MEDIA/'actor/references/capri-source14-cutout-candidate.png'
+    if hashlib.sha256(reference.read_bytes()).hexdigest()!=actor['reference_sha256']:
+        errors.append('Authorized AI-edit reference hash mismatch')
+    for name,entry in actor['outputs'].items():
+        path=MEDIA/'actor'/name
+        if path.stat().st_size!=entry['bytes'] or hashlib.sha256(path.read_bytes()).hexdigest()!=entry['sha256']:
+            errors.append('Actor output hash mismatch: '+name)
+    with Image.open(MEDIA/'actor/actor.gif') as gif,Image.open(MEDIA/'actor/actor-rgba.png') as master,Image.open(MEDIA/'actor/actor-rgb.png') as rgb,Image.open(MEDIA/'actor/actor-alpha.png') as alpha:
+        duration=0;unique=set();delays=[]
+        if gif.n_frames!=48 or master.n_frames!=48:errors.append('Actor must deliver 48 actual samples')
+        for i in range(gif.n_frames):
+            gif.seek(i);master.seek(i);rgb.seek(i);alpha.seek(i)
+            rebuilt=rgb.convert('RGBA');rebuilt.putalpha(alpha.convert('L'))
+            paper=Image.new('RGBA',rebuilt.size,'#f4f1ee')
+            if Image.alpha_composite(paper,rebuilt).tobytes()!=Image.alpha_composite(paper,master.convert('RGBA')).tobytes():errors.append('Separated RGB/alpha master mismatch at '+str(i))
+            decoded=gif.convert('RGBA')
+            expected=master.convert('RGBA').getchannel('A').point(lambda a:255 if a>=128 else 0)
+            if decoded.getchannel('A').tobytes()!=expected.tobytes():errors.append('Actor alpha/disposal trail at '+str(i))
+            if gif.disposal_method!=2:errors.append('Transparent actor clearing mode mismatch')
+            delays.append(gif.info['duration']);duration+=gif.info['duration'];unique.add(hashlib.sha256(decoded.tobytes()).hexdigest())
+        if duration!=2000 or len(unique)!=48 or set(delays)!={40,50}:errors.append('Actor decoded cadence/uniqueness mismatch')
+        assets.append({'path':'actor/actor.gif','bytes':(MEDIA/'actor/actor.gif').stat().st_size,'frames':gif.n_frames,'duration_ms':duration,'distinct_frames':len(unique),'delays_ms':sorted(set(delays))})
+    for name in ['guide','guide-mobile']:
+        timeline=json.loads((MEDIA/'explainer'/f'{name}-timeline.json').read_text())
+        if sum(f['delay_ms'] for f in timeline)!=16000:errors.append('Guide timeline duration mismatch')
+        for beat in [1,2,3,4]:
+            travel=[f for f in timeline if f['phase']=='travel' and f['beat']==beat]
+            if travel and (len(travel)!=12 or len({tuple(f['position']) for f in travel})!=12 or sum(f['delay_ms'] for f in travel)!=500):
+                errors.append('Guide active path sampling mismatch: '+name)
+    budget=MEDIA/'context-budget'
+    calc=runpy.run_path(str(budget/'calculate.py'))['calculate']
+    inputs=json.loads((budget/'scenario.json').read_text());results=json.loads((budget/'results.json').read_text())
+    if calc(inputs)!=results:errors.append('Worked arithmetic differs from editable scenario')
+    if results['evidence_class']!='ILLUSTRATIVE_ASSUMPTIONS_NOT_MODEL_RUN' or results['total_assumed_input_tokens']!={'growing_history':180000,'curated_single_session':90000,'scoped_roles':60000}:
+        errors.append('Worked-example labels/totals mismatch')
+    for path in budget.glob('*.svg'):
+        if 'not a measured CAPRI run' not in path.read_text() or re.search(r'<(?:text|script|animate|foreignObject)\b',path.read_text()):
+            errors.append('Chart must retain outlined worked-example label: '+path.name)
     if not (MEDIA/'fonts/Barlow-Regular.ttf').is_file():errors.append('Missing regular speech font')
     lesson=(ROOT/'docs/CAPRI_EXPLAINS.md').read_text()
     if len(re.findall(r'^## [1-6]\.',lesson,re.M))!=6:errors.append('Incomplete six-lesson native transcript')

@@ -63,3 +63,9 @@ Actual sizes, captures and verification limits belong in the V5 review packet. A
 - Existing Capri source 1/14/12 frames supply expression, hand gesture and review intervention. Full boxes preserve their actual silhouettes and marks. Regular Barlow speech, stable role geometry and long holds keep teaching legible. Portrait compositions reorganize the roles rather than reducing a wide chart to unreadable text.
 
 The static comic and native transcript carry the whole lesson. GitHub [does not support inline SVG animation](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files); motion is delivered as GIF, with static SVG masters. Local preview playback controls are review tools, not GitHub features.
+
+## V7 scoped continuation
+
+Preserve the V6 panels Mani described as “not bad” in the handoff. Replace only the character insets with the explicitly authorized edited-pose actor. Source 14 supplies the hand/pose reference; the supplied AI edit is the selected raster and is labelled separately. Source-mask trials did not meet fidelity needs, so coherent hand-layer articulation uses the allowed alternative. No per-frame generative series or new visual system is introduced.
+
+Numeric bars are authored SVG on a shared zero baseline, with assumed units and worked-example language attached. The curated-single-session baseline and cache reversal explain the mechanism; no generated infographic or CAPRI benchmark is claimed. [Calculator and caveats](CONTEXT_BUDGET.md).

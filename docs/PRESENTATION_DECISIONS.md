@@ -23,3 +23,7 @@ Use source 1's actual cropped portrait, source 14's gesture sequence and source 
 Field notes gains five real reading paths and an ownership/reconciliation topology. Technical documents remain unchanged and authoritative. Static editions contain no GIF embeds. The optional STL bonus is omitted without blocking the core.
 
 This unseen V5 expansion remains a local presentation candidate for Mani's visual review. Previous push/merge permission covered approved work; it does not authorize merging V5. Runtime/configuration/CI/locks and public visibility remain outside scope.
+
+## V7 direction from the handoff
+
+The V7 handoff records Mani’s feedback that the panels are “not bad”, with requests for transparent character presence, smoother movement and inspectable numbers. Preserve the panel/hero direction; this is not full V6 visual acceptance. AI assistance is authorized for the particular character asset. The selected approach uses the supplied edited pose with fixed face and articulated hands after source-mask prototypes showed fidelity defects. Original source hashes, fixture semantics, frozen evidence and human review remain authoritative.

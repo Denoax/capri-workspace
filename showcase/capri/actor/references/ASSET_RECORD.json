@@ -1,0 +1,87 @@
+{
+  "asset": "assets/capri-source14-cutout-candidate.png",
+  "sha256": "287cdc4f29ed065a180e6a680a8731c634bd9256cf7b993e18e7265495473904",
+  "bytes": 1496842,
+  "method": "Built-in image editing; transparent_background=true; exact prompt in CUTOUT_PROMPT.md",
+  "user_authorization": "Explicit AI permission for this Capri transparent animation task; other source rules remain",
+  "edit_target": {
+    "source": 14,
+    "frame": 0,
+    "reference": "references/source-14-frame-0.png"
+  },
+  "identity_reference": {
+    "source": 20,
+    "frame": 101,
+    "reference": "references/source-20-frame-101.png"
+  },
+  "original_source_records": [
+    {
+      "source": "https://tenor.com/view/cyberpunk-cyberpunk-edgerunners-cyberpunk-2077-capri-capricorn-gif-16452655038391929723",
+      "uploader": "emdzejus",
+      "path": "references/capri-14.gif",
+      "media": "https://media1.tenor.com/m/5FOSlmdkS3sAAAAC/cyberpunk-cyberpunk-edgerunners.gif",
+      "description": "The perfect Cyberpunk Cyberpunk edgerunners Cyberpunk 2077 Animated GIF for your conversation. Discover and Share the best GIFs on Tenor.",
+      "status": "Selected for private V5 candidate; decoded sequence inspected; perceptual playback unverified",
+      "sha256": "b729d125f86e53fadd4dcc3c73bc896296a0879e42351a3c64a5bea155dcaf6a",
+      "bytes": 3300670,
+      "dimensions": [
+        498,
+        281
+      ],
+      "frames": 43,
+      "duration_ms": 4300,
+      "inspection": "Five decoded samples per clip visually inspected; full playback not qualified",
+      "finding": "Full figure and extended hands; useful source-derived pose study.",
+      "rights": "Anime excerpt. Downloaded reference copy; no redistribution grant established. Uploader is not presumed rights holder.",
+      "handoff_path": "references/capri-14.gif",
+      "original_collection_path": "assets/capri-14.gif",
+      "candidate_path": "sources/capri-14.gif",
+      "use": "Gesture mask at frame 0; complete original 0\u20134300 ms acting for interlude"
+    },
+    {
+      "source": "https://tenor.com/view/capri-capri-cyberpunk-2-capri-cyberpunk-cyberpunk-2-cyberpunk-edgerunners-2-gif-13632704091127032668",
+      "uploader": "Strawhat131331",
+      "path": "references/capri-20.gif",
+      "media": "https://media1.tenor.com/m/vTEYJEekK1wAAAAC/capri-capri-cyberpunk-2.gif",
+      "description": "The perfect Capri Capri cyberpunk 2 Capri cyberpunk Animated GIF for your conversation. Discover and Share the best GIFs on Tenor.",
+      "status": "Selected for private V5 candidate; decoded sequence inspected; perceptual playback unverified",
+      "sha256": "1ce3e827455b9358c9f60ce1e1542cd75dfcff10b6d3ffd60a74c50b577248b2",
+      "bytes": 2150826,
+      "dimensions": [
+        498,
+        281
+      ],
+      "frames": 127,
+      "duration_ms": 4230,
+      "inspection": "Five decoded samples per clip visually inspected; full playback not qualified",
+      "finding": "Full movement through space; action reference.",
+      "rights": "Anime excerpt. Downloaded reference copy; no redistribution grant established. Uploader is not presumed rights holder.",
+      "handoff_path": "references/capri-20.gif",
+      "original_collection_path": "assets/capri-20.gif",
+      "candidate_path": "sources/capri-20.gif",
+      "use": "Movement still, frame 101 at 3370 ms; full environmental source-image box"
+    }
+  ],
+  "inspection": {
+    "mode": "RGBA",
+    "dimensions": [
+      1670,
+      942
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "fully_transparent_pixels": 698300,
+    "partly_transparent_pixels": 872532,
+    "opaque_pixels": 2308,
+    "visual": "Result displayed/inspected; source-pose geometry recognizable, but generated edit is not pixel-exact; mask/edge fidelity needs worker review"
+  },
+  "limits": [
+    "Static candidate, not a finished GIF",
+    "Not a complete-body rig; original crop boundaries retained",
+    "Upscaling does not create an original high-definition source",
+    "Animation and temporal mask consistency still require implementation",
+    "Underlying anime redistribution rights are not established by the upload or this edit"
+  ]
+}
