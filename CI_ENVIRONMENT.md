@@ -21,3 +21,13 @@ capabilities before the required full suite. Failed installation, missing child
 policy, failed probe or skipped suite remains a failure with diagnostic artifacts.
 Do not install this policy on Mani's daily workstation or treat CI as native
 model qualification.
+
+The first policy-qualified run (39974469228) cleared the kernel denials but
+reached a second prerequisite: `execvp python3: No such file or directory`.
+The collector's existing `/lib64 -> usr/lib` mapping expects the ELF loader at
+`/usr/lib/ld-linux-x86-64.so.2`; Ubuntu keeps it in `x86_64-linux-gnu` instead.
+The CI setup verifies Python's actual ELF interpreter and resolved loader,
+creates only that missing alias on the disposable runner, records it, and
+removes its own exact alias at cleanup. It refuses conflicting paths. The
+collector and its mount/namespace arguments remain unchanged. Ubuntu support
+therefore includes this declared environment prerequisite.

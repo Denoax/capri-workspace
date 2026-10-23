@@ -1,7 +1,7 @@
 {
   "origin": "CURATED_PRIVATE_SUBSET_NOT_FULL_RUNTIME_OR_ACCEPTANCE",
-  "full_source": "63ef7790e7aeddbbf7ead29f71c89fb17748169e3bcd1575cbff62098b0f3b09",
-  "controller": "9762d9445e1326ce2f8276f6ba89a2733a16255402adc52eed6c34ab33d9db9b",
+  "full_source": "c5d6bd23fc772228f4fa968e87d2206ac6cc05b8ec7826303625abd18ca2e0c0",
+  "controller": "377359160f4fb41c9c012f3380f05b128f054d8858778d5f289ac7548cd4dd69",
   "selected": {
     ".github/workflows/tests.yml": {
       "sha256": "fd85ec6525150cc60856ecc960a200d21c2573a9c96c11fcfb84151239392463",
@@ -16,7 +16,7 @@
       "mode": 420
     },
     "CI_ENVIRONMENT.md": {
-      "sha256": "871dd2f5f02ae16fc837ba137c09875143b88ba015d2f3fad9b2e225c40662b7",
+      "sha256": "c28e6770d65de22ccf632f2ea8139c8a45b666a40b00911a3027e630e875b09d",
       "mode": 420
     },
     "CLIENT_SUPPORT.md": {
@@ -188,7 +188,7 @@
       "mode": 420
     },
     "controller/tests/test_ci_profile.py": {
-      "sha256": "f09b249b0d9501767af6b885c4e1be512e88bfd19a7699bbf29a43a407fadbac",
+      "sha256": "17140d4873ffa9ef862b3dbebe9712b536a9159e3bd230637545fdff16389f7b",
       "mode": 420
     },
     "controller/tests/test_collector_regression.py": {
@@ -300,7 +300,7 @@
       "mode": 420
     },
     "tools/ci_bwrap_profile.py": {
-      "sha256": "54857e1fed0bd26ae532cee53dbecb80b40ce7be6970bf340b0d84955b9c2d28",
+      "sha256": "fc260e00685c5fa00ff0cb39f16c1db3c0a865b7ed1f9cd10a6b42a99f6fb571",
       "mode": 420
     },
     "tools/collector_diagnostics.py": {

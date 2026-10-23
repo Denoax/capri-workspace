@@ -7,6 +7,14 @@ module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 
 
 class EphemeralRunnerGuardTests(unittest.TestCase):
+    def test_loader_layout_must_be_exact_and_existing_alias_cannot_be_replaced(self):
+        headers='[Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]'
+        target='/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2'
+        self.assertTrue(module.loader_plan(headers,target,None)['created'])
+        self.assertFalse(module.loader_plan(headers,target,target)['created'])
+        for values in [('unknown',target,None),(headers,'/unknown',None),(headers,target,'/another-loader')]:
+            with self.assertRaises(RuntimeError):module.loader_plan(*values)
+
     def test_daily_host_self_hosted_wrong_repo_and_disabled_global_policy_reject(self):
         environment=dict(GITHUB_ACTIONS='true',RUNNER_ENVIRONMENT='github-hosted',GITHUB_REPOSITORY='Denoax/capri',GITHUB_RUN_ID='1')
         release='ID=ubuntu\nVERSION_ID="24.04"\n'
