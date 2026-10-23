@@ -1,83 +1,70 @@
-# Development qualification: incomplete
+# Evaluation and limits
 
-Cutoff: 2026-10-22. This private development export is not formally reviewed,
-human accepted, integrated, production qualified or ready for a public release.
-The local parent task is BLOCKED/UNVERIFIED. It has not reached AWAITING_HUMAN.
+Synthetic tests exercise protocol ordering, ACK-before-tools, budgets, admission,
+owner/capability holds, source identity, original-read grading, checkpoint tamper,
+lineage, context counters, freshness, thresholds and recovery holds. They do not
+establish live native behavior, research capability or semantic retention.
 
-## Offline evidence
+Parent-reported supported-host suites belong to their recorded predecessor
+sources, not this documentation revision. Earlier portability errors involved a
+personal skill path and a pending-question check after credential preparation;
+the shipped policy and early question guard address those paths while retaining
+the later race fence. An earlier restricted-host snapshot reported 172 tests
+with two namespace-runner failures. Retain those historical records; that is
+not a current full-suite count.
 
-The exact current private source identity is
-`90379f3d01ee175764c39a7095cf315bd7b2622d7e077c65d97c9f35994588bc`.
-All 180 tests passed on the supported Linux host and again under an isolated
-collector with no credentials or network, no skips and no source mutation.
-The collector used a separate disposable checkout. This is technical evidence,
-not independent formal review. Export portability checks are reported separately.
+The bounded S1 run restored source
+`dd106743bcf554eaba79aa02e7ec8b8f6044da8d1767d4d5a3115a2fac39c2e3`
+and reproduced the deferred-review fixture error: creating another task while
+its synthetic parent was held correctly triggered the real gate. Moving only
+that test into a fresh isolated fixture produced checkpoint
+`d9829247b37537fabd6350c68b474d9196027c8738cef1ef8675b634e7cf9b98`.
+Its 20 continuation and 13 completion tests passed locally. These are synthetic
+offline controls, not actual native qualification or a full-suite result.
 
-## Live observations and cutoff
+At S2 checkpoint
+`8746b8e7c8b8e0746315ee62500a3d46da35a63d2cced70040c96be5089c1f3e`,
+three portable checks passed. The new actual-collector namespace probe failed
+with `bwrap: loopback: Failed to create NETLINK_ROUTE socket: Operation not permitted`;
+both existing isolation runner tests also failed in this nested sandbox. No
+required check was skipped or weakened. CI now installs bubblewrap and probes
+user/mount/PID/network namespaces before the full suite. Supported-host execution
+and actual CI logs remain parent-owned and pending; a workflow edit does not
+establish CI success.
 
-Earlier live qualification used predecessor source identity
-`b9ca7e53b8d8a1210ee80f11684231f775c3d3ba87aaf6c4ae6fb941267c5990`.
-It observed three actual native Codex TUIs, separate role threads, the exact
-gpt-6.1-sol setting with medium/medium/high efforts, and a private local gateway.
-Native input was captured and held; the operator explicitly attested personally
-pasting the marker. No approval or model turn was inferred from client origin.
-Automatic frontend title-generation requests were held rather than run.
+Frozen C2 still requires a baseline failure. Its original source lacked the
+completion test, so zero discovered baseline tests cannot demonstrate regression
+failure. Preserve this UNVERIFIED limitation and separately labelled behavioral
+predecessor evidence; do not change the frozen check.
 
-An actual native recovery-profile command independently proved workspace write
-and network denial. Separate no-model sandbox commands proved controller/input
-write and private-path denial and the intended write-profile workspace access.
-The first live probe refused a policy-conflicting public-sentinel read and was
-retained as failed, with no command execution. No actual credentials were read.
+## Frozen small comparison
 
-A disposable managed fixture completed read-only preflight and native compaction
-lifecycle (including its completion and epoch change). Its next write remount
-failed during startup metadata generation handling, before implementation.
-The behavior grader therefore saw the unchanged fixture fail all eight checks;
-that is inability to execute, not a measured retention score. A prior mechanism
-setup had also been held by the unreconciled-backend guard. Failures were retained.
+The planned schedule is eight trials: two synthetic fixtures × baseline/managed
+policy × two repeats, alternating policy order and using one writer. Fixture A
+checks an exact behavior after compaction. Fixture B applies the latest correction
+after interruption/restart and checks duplicate effects. Use the same Sol model,
+efforts, tools, source and held-out deterministic checks. Baseline retains safety
+gates, native compaction and passive observation; managed adds context policy.
 
-A real fresh reported footprint of 272602 against runtime window 475000 crossed
-the provisional soft pressure once reserve was included. The controller withheld
-writes. A fresh Doer thread in the same slot retained lineage and original source,
-then passed a fresh probe and independently verified complete original-artifact
-rereads before the same process gained the write profile. Its observed subsequent
-request footprint was 58617. Exact active occupancy remains UNKNOWN; cached input
-was not subtracted and cumulative accounting was not used as occupancy. These
-observations are mechanisms, not a general quality or performance comparison.
+**Results: not run here; 0/8 trials executed by this role.** Parent qualification
+and the frozen schedule artifact remain authoritative. Preserve every abort,
+failure, retry, timing, usage gap and synthetic/genuine label. Report denominators
+and inability to execute separately from retention scores.
 
-The current source adds regressions and repairs for startup metadata generation
-handling and dead tmux panes whose PID field is empty. All 180 offline tests pass,
-but these repairs have not been rerun through the complete live qualification.
+Pending evidence includes native per-turn profile negatives, real search plus
+original-page inspection, full stage/restart/report traces, compaction/replacement
+and controller restart, tmux reconnection and actual eight-trial results. No
+hallucination-prevention, optimal-threshold, huge-context-quality or general
+superiority claim is supported. API model capacity and ChatGPT feature parity
+cannot be inferred from the selected model name.
 
-The repair turn completed within 240 seconds and 12 tools, then returned an ACK
-with the changed source identity and only four of eight frozen requirement IDs.
-The controller rejected it. The parent harness retained DISPATCH_UNCERTAIN even
-though terminal completion and exact three-file effects were observed. All owned
-backends exited; further model work is blocked by foreground-only reconciliation.
-The state was not manually rewritten to bypass that boundary.
+Parent must collect current-source native/CI/evaluation evidence before the sole
+fresh independent formal review. A deferred sealed-candidate hold starts no
+formal review and confers no acceptance. Every completed formal outcome,
+including FAIL or UNVERIFIED, seals/reports/stops at `AWAITING_HUMAN`; further
+repair requires an authorized revision. Delivery and Obsidian documentation
+remain PENDING until the parent owner saves the corresponding receipts.
 
-Hosted search and original-page inspection were observed in the earlier confined
-Thinker bootstrap. The complete new product research path, controller restart,
-product terminal reconnect, uncertain child-effect handling and sole independent
-formal review remain unqualified at this cutoff.
+## Parent offline cutoff for this export
 
-## Frozen comparison: 0 of 8 primary trials run
-
-The original schedule and deterministic fixtures/held-out grader are included in
-`evaluation/`. Two synthetic code fixtures, baseline/managed policies and two
-repeats give eight scheduled trials. Both conditions retain the native safety
-gates and exact model/effort; the baseline disables only the additional context
-manager. Orders alternate and there is one writer. Scripted corrections are
-synthetic and are never human approval.
-
-All eight primary rows are NOT_RUN because mechanism qualification was blocked.
-There is no success rate, treatment effect, retention comparison or superiority
-claim. Mechanism failures are listed above, separate from primary trial counts.
-The original negative grader controls failed on both unchanged fixture sources.
-Fixture B plans a restart at a completed read-only turn boundary and tests domain
-idempotence; it cannot prove reconciliation of an interrupted active command.
-
-Private raw captures, receipts, local paths, sessions, databases and review ZIPs
-remain outside this Git repository. The local partial evidence archive preserves
-the source, request and observed check records. It is labelled UNVERIFIED and
-does not claim a formal review or a final acceptance gate.
+Source `189889d0635f4113e809b8e91724f58b263c6bdff1cd06e6c17b9f50f62d5bd7` passed all228 tests on the supported host and all228 in a separate no-network/no-auth collector, without skips or source changes. The same-wire invalid-ACK classification regression passes on this source and fails on preserved predecessor90379. The missing-terminal control stays uncertain. These are bounded technical results; actual CI, live qualification/evaluation and sole final formal review are reported separately in the source-bound private evidence delivery. Frozen C2 retains its absent-original-test limitation.

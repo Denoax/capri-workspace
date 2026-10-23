@@ -35,3 +35,16 @@ Compaction requires matching item and successful terminal lifecycle; RPC ACK is
 insufficient. Internal native inference/tool loops cannot be atomically policed
 by the controller between notifications; automatic compaction holds continuation
 and requires reconciliation.
+
+`native_continuation` separates bound foreground preparation from one-shot native
+launch. It reuses core preparation/claim semantics and validates source,
+configuration, instruction materials, registry, task version/generation and
+reconciled attempts. The product route claims before starting processes, so an
+interrupted launch cannot automatically retry. Restoration retains role lineage
+and a fresh Reviewer without the legacy scheduler or successor-task authority.
+
+`Engine.finish_candidate` normally invokes review. Continuation's explicit
+`--defer-review` instead validates the exact seal/current authority, records
+`NATIVE_QUALIFICATION_PENDING` and retains `CANDIDATE_SEALED`. Parent-owned live
+qualification, evaluation and later final review remain separate operations.
+The hold is neither a formal outcome nor human acceptance.

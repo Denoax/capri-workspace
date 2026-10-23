@@ -146,6 +146,26 @@ class Backend:
                         # Backend approval requests never authorize permission expansion.
                         self._send({'id': value['id'], 'error': {'code': -32001, 'message': 'Approval unavailable'}})
                         continue
+                    idle_usage = value.get('method') == 'thread/tokenUsage/updated' and not self.active
+                    if idle_usage:
+                        # Resume/read RPCs replay the last completed turn's usage.
+                        # Preserve it, but only an admitted lifecycle can supply fresh
+                        # context telemetry. In particular, startup may precede slot
+                        # publication and still be bound to the retired ledger.
+                        params = value.get('params', {})
+                        expected_thread = self.thread or self.prior
+                        if (not expected_thread or params.get('threadId') != expected_thread or
+                                not isinstance(params.get('turnId'), str) or not params['turnId']):
+                            raise Rejected('Idle usage replay thread/turn mismatch')
+                        record = redact(json.dumps(dict(role=self.role, generation=self.generation,
+                            time=now(), provenance='IDLE_HISTORY_NOT_FRESH_USAGE', message=value))) + '\n'
+                        self.idle_usage_bytes = getattr(self, 'idle_usage_bytes', 0) + len(record.encode())
+                        if self.idle_usage_bytes > 32_000_000:
+                            raise Rejected('Idle usage receipt budget exceeded')
+                        with (self.root / 'idle-usage.jsonl').open('a') as stream:
+                            stream.write(record)
+                            stream.flush()
+                            os.fsync(stream.fileno())
                     if self.active:
                         self.turn_bytes += len(raw)
                         if self.turn_bytes > 32_000_000:
@@ -161,7 +181,11 @@ class Backend:
                     method = value.get('method', '')
                     item = value.get('params', {}).get('item', {})
                     if 'reasoning' not in method.lower() and item.get('type') != 'reasoning':
-                        self.observer(self.role, self.generation, value)
+                        observed = ({'method': 'native/idleUsageReceipt', 'params': {
+                            'threadId': value['params']['threadId'], 'turnId': value['params']['turnId'],
+                            'path': str(self.root / 'idle-usage.jsonl'),
+                            'provenance': 'IDLE_HISTORY_NOT_FRESH_USAGE'}} if idle_usage else value)
+                        self.observer(self.role, self.generation, observed)
                 for peer in peers:
                     try:
                         peer.put_nowait(value)
@@ -180,7 +204,7 @@ class Backend:
                         future.set_exception(Rejected(self.error))
 
     def dispatch(self, binding, payload, origin='controller', validate_output=None, independent_checks=None,
-                 max_seconds=240, max_tools=12, permissions='role'):
+                 max_seconds=240, max_tools=12, permissions='role', observe_execution=None):
         """Admission is a context manager holding controller fences for the full turn.
 
         Parent must atomically verify immutable contract/source, current owner,
@@ -223,6 +247,8 @@ class Backend:
                     if self.error:
                         raise Rejected(self.error)
                     time.sleep(.02)
+                if observe_execution:
+                    observe_execution(lifecycle)
                 return lifecycle.finish(validate_output or (lambda _: False), independent_checks or (lambda: False))
             except BaseException:
                 # Stop the owned process tree, including uncertain commands. No automatic retry.
@@ -1170,6 +1196,16 @@ class NativeAdapter:
             if expected['source']!=identity(before) or expected['step']!=saved['completed_steps'] or expected['previous_steps']!=t['packet']['steps'][:expected['step']]:
                 raise Rejected('Stage checkpoint does not match exact completed implementation')
         existing=self.slots.backends.get(slot)
+        if role == 'preflight' and getattr(self, 'prepared_owner', None):
+            if t['owner'] != self.prepared_owner or t['packet'].get('lineage', {}).get('full_core_lineage', {}).get('sha256') != self.prepared_hash:
+                raise Rejected('Preflight prepared owner/receipt mismatch')
+            if existing and existing.workspace.resolve() != Path(workspace).resolve():
+                if existing.active or existing.error or existing.phase != 'read':
+                    raise Rejected('Prior Doer slot is not reconciled read-only')
+                old = dict(thread=existing.thread, generation=existing.generation)
+                self.slots.remount(slot, inputs, phase='read', fresh=True, workspace=workspace)
+                self.store.event(task, 'NATIVE_PREFLIGHT_MOUNT', dict(old=old, new=self.slots.save()[slot]))
+                existing = self.slots.backends[slot]
         if not existing:
             if role=='doer':raise Rejected('Missing same visible Doer preflight slot')
             self.slots.start_role(slot,workspace,inputs,self.store.home/'controller')
@@ -1259,20 +1295,40 @@ class NativeAdapter:
                 self.store.db.execute('UPDATE attempts SET status=?,pid=?,start_identity=?,thread=? WHERE id=?',
                     ('RUNNING', b.proc.pid, b.start_identity, b.thread, aid))
             atomic(capture / 'prompt.md', redact(prompt), exclusive=True)
+            from .native_completion import retain_execution
             def validate_output(text):
-                value = json.loads(text) if schema else text
-                if schema:
-                    from .contract import fields
-                    fields(value, schema['properties'])
-                return True
+                try:
+                    value = json.loads(text) if schema else text
+                    if schema:
+                        from .contract import fields
+                        fields(value, schema['properties'])
+                    return True
+                except (ValueError, TypeError, KeyError):
+                    receipt['validation_failed'] = True
+                    raise
+            allowed = set(t['packet']['allowed_paths']) if role == 'doer' else set()
+            if role == 'doer':
+                stage_path = self.store.home/'artifacts'/task/'native-stage-state.json'
+                prior = json.loads(stage_path.read_text()) if stage_path.exists() else {}
+                index = prior.get('completed_steps', 0)
+                allowed = set(t['packet']['steps'][index]['allowed_paths'])
+            def observe_execution(lifecycle):
+                retain_execution(receipt, lifecycle, binding, capture, workspace, before, allowed,
+                    lambda: bool(self.evidence_check and self.evidence_check(slot, capture)))
             # Output schema is supplied through the inspected turn/start outputSchema field.
             b.output_schema = schema
             final = b.dispatch(binding, [{'type': 'text', 'text': prompt, 'text_elements': []}],
                 validate_output=validate_output,
-                independent_checks=lambda: bool(self.evidence_check and self.evidence_check(slot, capture)),max_seconds=self.remaining(),max_tools=self.remaining_tools())
+                independent_checks=lambda: bool(self.evidence_check and self.evidence_check(slot, capture)),max_seconds=self.remaining(),max_tools=self.remaining_tools(),
+                observe_execution=observe_execution)
             response = json.loads(final) if schema else final
+            if role in ('preflight', 'doer'):
+                try:
+                    self.engine.ack(t, response)
+                except (ValueError, TypeError, KeyError):
+                    receipt['validation_failed'] = True
+                    raise
             if role == 'preflight':
-                self.engine.ack(t, response)
                 if tree(workspace) != before:
                     raise Rejected('Read-only native preflight source mutation')
                 self.preflight = dict(task=task, generation=t['generation'], source=before, response=response)
@@ -1286,9 +1342,13 @@ class NativeAdapter:
             atomic(capture / 'final.json', redact(final), exclusive=True)
             return response, receipt
         except BaseException as ex:
+            receipt.update(status=('FAILED' if receipt.get('validation_failed') and
+                receipt.get('effects_accounted') else 'DISPATCH_UNCERTAIN'), failure=str(ex))
             if slot in self.slots.backends:
-                self.slots.backends[slot].close()
-            receipt.update(status='DISPATCH_UNCERTAIN', failure=str(ex))
+                try:
+                    self.slots.backends[slot].close()
+                except BaseException as cleanup:
+                    receipt.update(status='DISPATCH_UNCERTAIN', cleanup_failure=str(cleanup))
             raise
         finally:
             write_json(capture / 'receipt.json', receipt, exclusive=True)

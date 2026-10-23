@@ -8,8 +8,8 @@ The accepted original checkout is not the development candidate.
 Python 3.11+, Linux namespaces, bubblewrap and the qualified Codex CLI 0.163.0
 profile are the current target. Native transport uses websockets 17.1. Existing
 Codex authentication is mounted read-only; no new provider or API billing is
-required. Qualification is incomplete and the local attempt is blocked; see
-[EVALUATION.md](EVALUATION.md) for the exact cutoff and observed evidence. This is not a production cutover or a public release.
+required. Native selector, full lifecycle, research and recovery qualification
+are still pending. This is not a production cutover or a public release.
 
 ## Offline checks
 
@@ -22,10 +22,10 @@ PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s controller/tests -v
 
 Tests do not call models or require authentication or a vault. The full suite
 includes Linux namespace checks: namespace availability is a host prerequisite,
-not a reason to silently skip a required check. The exact current private source passed all 180 tests on both the supported
-host and an isolated no-network/no-auth collector, without skips or source
-changes. These checks do not establish live recovery or human approval.
-See EVALUATION.md for the qualification boundary.
+not a reason to silently skip a required check. CI installs bubblewrap and probes
+user, mount, PID and network namespaces through the actual collector before the
+full suite. Installation alone does not prove isolation. See EVALUATION.md for
+source-specific results, inherited evidence and outstanding host/CI checks.
 
 ## Native startup
 
@@ -69,6 +69,52 @@ pane before subsequent controller work. Unknown panes, reused process identities
 or an unrecorded server stop reconnection and cleanup. These controls have
 synthetic coverage; live tmux behavior remains for parent qualification.
 
+## Explicit native continuation
+
+The trusted parent prepares a binding to the held task/version/generation,
+candidate, controller/configuration, prior registry, exact one-line correction
+and original instruction materials. These examples are operator templates;
+replace paths and `RECEIPT_SHA256` with verified receipt values. They grant model
+roles no authority to dispatch or confirm anything.
+
+```sh
+python3 controller/native_loopctl.py --config /absolute/native-config.json recontract --binding /absolute/binding.json --check
+python3 controller/native_loopctl.py --config /absolute/native-config.json recontract --binding /absolute/binding.json
+python3 controller/native_loopctl.py --config /absolute/native-config.json continue --prepared /absolute/prepared.json --prepared-sha256 RECEIPT_SHA256 --check
+python3 controller/native_loopctl.py --config /absolute/native-config.json continue --prepared /absolute/prepared.json --prepared-sha256 RECEIPT_SHA256 --defer-review
+```
+
+`recontract --check` validates the binding without requesting input or preparing
+a revision. Preparation requires genuine foreground input when no matching core
+receipt exists; it reuses an exact committed receipt rather than asking again.
+Preparation starts neither models nor the legacy scheduler. `continue --check`
+checks the prepared route without claiming an owner or launching models.
+
+Actual `continue` claims the core-derived owner once, then performs checked role
+restoration for one native task. It preserves registry lineage, restores an
+existing Doer rollout when applicable, and creates a fresh Reviewer. Partial
+startup or a consumed claim requires explicit checked recovery, never a blind
+retry. Old processes/endpoints and uncertain attempts must be reconciled first.
+Headless continuation requires all three clients to attach within the implemented
+15-second window; it does not bypass attachment checks. `attach` prints a client
+command for the operator to execute. `status` reports recorded process identities,
+not task completion.
+
+Use `--defer-review` on `continue` while parent qualification is pending. The
+engine verifies the exact sealed candidate, records `NATIVE_QUALIFICATION_PENDING`
+and leaves the task at `CANDIDATE_SEALED`, with formal review not started and
+documentation PENDING. Without that flag, the engine normally invokes review
+after sealing. The flag is wired to continuation, not ordinary `start`. A hold
+does not qualify the source, approve it or automatically resume final review.
+Parent must finish qualification/evaluation before the sole formal review.
+Supervision remains active until stop; no successor task starts automatically.
+
+Restart/compaction/replacement recovery APIs preserve owner and role lineage and
+withhold writes until lifecycle, source, originals, questions, checks, lease and
+fresh usage are validated. There is no general automatic CLI resume guarantee.
+These implementation boundaries and synthetic checks remain distinct from
+current-source native end-to-end qualification.
+
 ## Rollback and legacy route
 
 Stop the isolated supervisor, verify owned processes have exited, and retain its
@@ -77,7 +123,7 @@ unchanged. Do not reset source, delete history, repair SQLite manually or infer
 human acceptance. The existing `controller/loopctl.py` exec adapter remains the
 labelled legacy route; it is not proof of three native sessions.
 
-Both review outcomes stop at `AWAITING_HUMAN`. The existing hash-bound decision
+Completed formal PASS, FAIL and UNVERIFIED outcomes stop at `AWAITING_HUMAN`. The existing hash-bound decision
 CLI remains the sole accept/revise/reject boundary. No merge, release, remote
 write, deployment or successor task follows automatically. Documentation remains
 PENDING until the parent owner saves its receipt. License choice is pending.

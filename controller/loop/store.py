@@ -230,10 +230,15 @@ class Store:
         content = identity(packet)
         with self.transaction():
             self.require_current(owner)
+            if len(json.dumps(packet).encode()) > 60000:
+                raise Rejected('Complete frozen contract exceeds byte budget')
             lineage = packet.get('lineage', {})
             inherited_answers = []
             if lineage.get('recontract_operation'):
                 saved = self.recontract_receipt(lineage['parent_task'])
+                if 'full_core_lineage' in lineage:
+                    from .native_lineage import resolve_native_lineage
+                    lineage = resolve_native_lineage(self.home, lineage, saved)
                 if not saved or saved['lineage'] != lineage or lineage['successor_owner'] != owner:
                     raise Rejected('Successor does not match the exact prepared re-contract')
                 parent = self.task(lineage['parent_task'])

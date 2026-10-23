@@ -20,8 +20,13 @@ from loop.util import Rejected, atomic, redact, now, tree, identity
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', required=True, type=Path)
-    parser.add_argument('command', choices=('start', 'status', 'attach', 'stop'))
+    parser.add_argument('command', choices=('start', 'status', 'attach', 'stop', 'recontract', 'continue'))
     parser.add_argument('--role', choices=ROLES)
+    parser.add_argument('--prepared', type=Path)
+    parser.add_argument('--prepared-sha256')
+    parser.add_argument('--defer-review', action='store_true')
+    parser.add_argument('--binding', type=Path, help='Frozen native re-contract binding')
+    parser.add_argument('--check', action='store_true', help='Check re-contract binding without input or state transition')
     parser.add_argument('--headless', action='store_true', help='Print exact attach commands without opening terminals')
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
@@ -29,6 +34,27 @@ def main():
     root = Path(settings.state_dir).resolve()
     registry = root / 'registry.json'
     owner = root / 'supervisor.json'
+    if args.command == 'continue':
+        from loop.native_continuation import run_prepared
+        return run_prepared(config, args, Path(__file__).resolve().parent)
+    if args.command == 'recontract':
+        if not args.binding:
+            raise Rejected('--binding is required for native re-contract')
+        from loop.store import Store
+        from loop.engine import Engine
+        from loop.native_continuation import prepare_native_revision
+        binding = json.loads(args.binding.read_text())
+        if identity(config) != binding['config_hash']:
+            raise Rejected('Native continuation configuration binding changed')
+        store = Store(Path(config['home']).resolve())
+        try:
+            result = prepare_native_revision(store, Engine(store,config['workflow']),
+                binding, Path(__file__).resolve().parent,
+                check_only=args.check)
+            print(json.dumps(result,indent=2),flush=True)
+        finally:
+            store.close()
+        return
     if args.command in ('status', 'attach'):
         rows = json.loads(registry.read_text())
         if args.command == 'status':

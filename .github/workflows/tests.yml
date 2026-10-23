@@ -10,7 +10,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install isolation prerequisite
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends bubblewrap
       - run: python -m pip install --require-hashes -r requirements.lock
+      - name: Probe required collector namespaces
+        run: python -B -m unittest discover -s controller/tests -p test_portability.py -k test_required_collector_namespaces -v
       - run: python -m unittest discover -s controller/tests -v
         env:
           PYTHONDONTWRITEBYTECODE: '1'

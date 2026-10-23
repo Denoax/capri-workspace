@@ -27,15 +27,29 @@ personal notes are not intended distributable content. Parent owns whitelist
 export, history scans, private remote operations and documentation receipts.
 Licensing and public release remain pending; this file grants no new license.
 
-## Curated export cutoff
+The bounded continuation reused preserved checkpoint
+`dd106743bcf554eaba79aa02e7ec8b8f6044da8d1767d4d5a3115a2fac39c2e3`
+rather than restoring the historical 90379 predecessor or reapplying completed
+patches. S1 applied only the bound fixture-isolation proposal after restoration;
+S2 changed only CI prerequisites and a real collector namespace probe. See
+EVALUATION.md for their exact checkpoints, local results and limitations. These
+changes preserve all frozen N01-N08 requirements and checks, including C2's
+absent-original-test limitation. Documentation edits are not fresh runtime or
+qualification evidence.
 
-This clean development history exports private candidate identity
-`90379f3d01ee175764c39a7095cf315bd7b2622d7e077c65d97c9f35994588bc`.
-Controller code and tests are copied byte-for-byte. The parent adapted README,
-EVALUATION and this provenance file to report the current blocked cutoff, and
-added the frozen synthetic evaluation fixtures/schedule/grader. EXPORT_SOURCE.json
-binds the original selected file hashes. Original private history is not imported.
-The old host-specific runtime.lock.json and private specifications, configuration,
-session/state stores, personal notes and raw evidence are excluded. Legacy output
-retains a cosmetic vault label in source; no vault data or path is exported.
-No applicable license was found; licensing and any public release remain pending.
+Supplied Thinker evidence records hosted search and original-page inspection on
+2026-10-23 of the Bubblewrap README, main (unpinned), sections User namespaces,
+Sandbox security, Usage and Sandboxing:
+https://github.com/containers/bubblewrap/blob/main/README.md . Its supported claim
+is that namespace isolation depends on the selected arguments; installation
+alone is insufficient. This is inherited research, not a source visit by this
+Doer, installed-version compatibility proof or supported-host/CI success.
+
+Parent owns remaining qualification, eight-trial evaluation, curated private
+export/actual CI logs, final source freeze, sole formal review, exact bound
+Thinker report, review ZIP and Obsidian receipt. Restricted-role documentation
+remains PENDING until that owner saves it. No acceptance or integration follows.
+
+## Current curated development export
+
+Reusable code and tests are copied byte-for-byte from source `189889d0635f4113e809b8e91724f58b263c6bdff1cd06e6c17b9f50f62d5bd7`. The existing development history is preserved from `983ebbdb8ff3148765263ec7d78b1aad2ed4f750`. Parent documentation adds this export cutoff and its offline results. Raw private specifications, auth, sessions/state, personal notes and evidence archives stay outside Git. EXPORT_SOURCE.json binds selected original and exported hashes. No acceptance, integration or public release is implied.
