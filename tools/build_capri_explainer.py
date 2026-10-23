@@ -58,6 +58,8 @@ class Art:
 
     def bubble(self, lines, x, y, w, h, size=30, tail="top"):
         tip = f'M{x+35} {y}l-16 -22 55 22' if tail == "top" else f'M{x} {y+50}l-22 18 22 18'
+        if tail == "right":
+            tip = f'M{x+w-85} {y}l55 -22 -16 22'
         return (f'<path d="{tip}" fill="{PAPER}"/>'
                 f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="18" fill="{PAPER}"/>'
                 + self.lines(lines, x+22, y+39, size, INK))
@@ -106,18 +108,18 @@ def context(art, mobile):
 
 def geometry(art, mobile):
     if mobile:
-        w, h = 600, 1220
+        w, h = 600, 1330
         body = art.text("PLAN  /  BUILD  /  REVIEW", 24, 61, 51, GREEN, "display")
         for i, (role, lines) in enumerate([( "THINKER", ["Research + scope", "Task / source / checks"]), ("DOER", ["Scoped candidate", "Patch / checks / limits"]), ("REVIEWER", ["Fresh review context", "Request + patch", "Evidence + limits"]) ]):
-            y = 106 + i*276
+            y = 106 + i*312
             body += art.rule(24, y, 552, MUTED)
             body += art.text(role, 24, y+55, 49, PAPER, "display")
             body += art.lines(lines, 24, y+96, 26)
-        body += art.rule(24, 1000, 552, GREEN)
-        body += art.text("THINKER REPORT  >  HUMAN DECISION", 24, 1053, 38, GREEN, "display")
-        body += art.lines(["One write owner. Ordered stages.", "Uncertain effects? Hold and reconcile."], 24, 1104, 28)
-        positions = [(316,126,260,148),(316,402,260,148),(316,678,260,148),(316,678,260,148)]
-        bubbles = [(24,292,552,115),(24,568,552,115),(24,844,552,115),(24,844,552,115)]
+        body += art.rule(24, 1100, 552, GREEN)
+        body += art.text("THINKER REPORT  >  HUMAN DECISION", 24, 1153, 38, GREEN, "display")
+        body += art.lines(["One write owner. Ordered stages.", "Uncertain effects? Hold and reconcile."], 24, 1204, 28)
+        positions = [(316,126,260,148),(316,438,260,148),(316,750,260,148),(316,750,260,148)]
+        bubbles = [(24,292,552,115),(24,604,552,115),(24,916,552,115),(24,916,552,115)]
     else:
         w, h = 1200, 850
         body = art.text("PLAN  /  BUILD  /  REVIEW", 30, 70, 66, GREEN, "display")
@@ -146,13 +148,13 @@ def guide(art, mobile):
         body = base + art.pose(min(i,2), x,y,pw,ph)
         if i == 1:
             if mobile:
-                body += art.text("PACKET: blank -> Untitled", 24, 551, 27, GREEN)
+                body += art.text("PACKET: Untitled", 24, 587, 27, GREEN)
             else:
                 body += f'<path d="M800 304h365v125H800Z" fill="none" stroke="{GREEN}" stroke-width="2"/>'
                 body += art.lines(["HANDOFF PACKET", "label.py only", "blank -> Untitled"], 820, 338, 28, GREEN)
         # The pointer touches the active handoff lane; source pose is never altered.
         body += f'<path d="M{x+pw-14} {y+ph-7}L{bx+bw-27} {by-13}" stroke="{PINK}" stroke-width="3"/>'
-        body += art.bubble(BUBBLES[i],bx,by,bw,bh,27 if mobile else 29)
+        body += art.bubble(BUBBLES[i],bx,by,bw,bh,27 if mobile else 29, "right" if mobile else "top")
         art.save(f"{prefix}-beat-{i+1}",w,h,body,"Capri guide, beat " + str(i+1) + "; illustrative workflow, not live execution")
         holds.append(Image.open(OUT / f"{prefix}-beat-{i+1}.png").convert("RGB"))
     # 16-second overview. Stable labels and long holds; only the source inset moves.
