@@ -1,10 +1,10 @@
 {
   "origin": "CURATED_PRIVATE_SUBSET_NOT_FULL_RUNTIME_OR_ACCEPTANCE",
-  "full_source": "6818a708a8cad9da37cbcc524cd30c48a0aee6f027813f926696d3be32299b5f",
-  "controller": "411a09a363e5515e7afc0ce4ea0bb57ad02d72eb10e0e0fb693caf0a5332afbb",
+  "full_source": "63ef7790e7aeddbbf7ead29f71c89fb17748169e3bcd1575cbff62098b0f3b09",
+  "controller": "9762d9445e1326ce2f8276f6ba89a2733a16255402adc52eed6c34ab33d9db9b",
   "selected": {
     ".github/workflows/tests.yml": {
-      "sha256": "39ccab381b83088402d96201907574b276506c14155daaa1d7f1f17759e2dd11",
+      "sha256": "fd85ec6525150cc60856ecc960a200d21c2573a9c96c11fcfb84151239392463",
       "mode": 420
     },
     ".gitignore": {
@@ -13,6 +13,10 @@
     },
     "ARCHITECTURE.md": {
       "sha256": "0baf74b030f66260de7479cabd7c5268cef1a13b5162b0dac8bad155970b5658",
+      "mode": 420
+    },
+    "CI_ENVIRONMENT.md": {
+      "sha256": "871dd2f5f02ae16fc837ba137c09875143b88ba015d2f3fad9b2e225c40662b7",
       "mode": 420
     },
     "CLIENT_SUPPORT.md": {
@@ -183,6 +187,10 @@
       "sha256": "7eeb396969a0107edd443ef0fd8f8f96384204d5ac5d37db4a0f77b66657508e",
       "mode": 420
     },
+    "controller/tests/test_ci_profile.py": {
+      "sha256": "f09b249b0d9501767af6b885c4e1be512e88bfd19a7699bbf29a43a407fadbac",
+      "mode": 420
+    },
     "controller/tests/test_collector_regression.py": {
       "sha256": "2d08d27e674fb314470e2c7fda6ee413913b17a7f78c182e86245b72cdaff783",
       "mode": 420
@@ -271,6 +279,10 @@
       "sha256": "5b04aa636171a2ef0cbf6f127a9a20d911945333a995b1d6742401b3423ff78f",
       "mode": 420
     },
+    "examples/ci/bwrap.apparmor": {
+      "sha256": "207718b9493de69630ceeaace2c6338c50f4efbc7ca577c17c1ee55e1bbc4b03",
+      "mode": 420
+    },
     "examples/config.json": {
       "sha256": "075bdb2a0b3df505393ad784b0f7b2dfab03e567eb4acf0108b55d9fd7768353",
       "mode": 420
@@ -287,8 +299,12 @@
       "sha256": "395a0cbc832e51c019afbfdd5a797220af835591acac81147268f424927b7720",
       "mode": 420
     },
+    "tools/ci_bwrap_profile.py": {
+      "sha256": "54857e1fed0bd26ae532cee53dbecb80b40ce7be6970bf340b0d84955b9c2d28",
+      "mode": 420
+    },
     "tools/collector_diagnostics.py": {
-      "sha256": "a8ff952024fae3622cb491b765a70f485a43c9fa170b425314279de4503fc49a",
+      "sha256": "470e93c18a251f59f12312efaa0a04f165ea9305979950ea82e2745eb6d1b6dd",
       "mode": 420
     }
   },

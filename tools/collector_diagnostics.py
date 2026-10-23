@@ -26,6 +26,7 @@ def command(args):
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--output',required=True,type=Path)
     parser.add_argument('--ci-kernel-logs',action='store_true',help='Read post-probe kernel/AppArmor logs using noninteractive sudo on an ephemeral CI runner; changes no policy')
+    parser.add_argument('--require-ci-profile',action='store_true',help='Require actual stacked child capability-denial policy in the disposable CI environment')
     args=parser.parse_args()
     args.output.mkdir(parents=True,exist_ok=True)
     report={'origin':'ACTUAL_HOST_DIAGNOSTICS','platform':platform.platform(),'kernel':platform.release(),'python':sys.version,'executable':sys.executable,
@@ -35,7 +36,10 @@ def main():
         try:report['policy_files'][name]=Path(name).read_text()[-16000:]
         except OSError as ex:report['policy_files'][name]='UNAVAILABLE: '+str(ex)
     names=('user','mnt','pid','net');outer={name:os.readlink('/proc/self/ns/'+name) for name in names}
-    script="import json,os,socket;print(json.dumps({'namespaces':{n:os.readlink('/proc/self/ns/'+n) for n in "+repr(names)+"},'interfaces':socket.if_nameindex()}))"
+    script=("import json,os,socket,pathlib\n"
+        "try: profile=pathlib.Path('/proc/self/attr/current').read_text()\n"
+        "except OSError as error: profile='UNAVAILABLE: '+str(error)\n"
+        "print(json.dumps({'namespaces':{n:os.readlink('/proc/self/ns/'+n) for n in "+repr(names)+"},'interfaces':socket.if_nameindex(),'apparmor':profile,'capabilities':[x for x in pathlib.Path('/proc/self/status').read_text().splitlines() if x.startswith('CapEff:')]}))")
     probe_started=datetime.now(timezone.utc).isoformat()
     with tempfile.TemporaryDirectory() as temp:
         checkout=Path(temp)/'checkout';checkout.mkdir()
@@ -53,7 +57,11 @@ def main():
     try:observed=json.loads((args.output/'collector-probe/stdout.txt').read_text())
     except (ValueError,OSError):observed={}
     valid=result['exit']==0 and not result['timeout'] and result['source_unchanged'] and all(observed.get('namespaces',{}).get(name)!=outer[name] for name in names) and set(observed.get('namespaces',{}))==set(names) and all(name=='lo' for _,name in observed.get('interfaces',[]))
+    child_policy=(all(name in observed.get('apparmor','') for name in ['capri-ci-bwrap','capri-ci-no-caps'])
+        and observed.get('capabilities')==['CapEff:\t0000000000000000'])
+    if args.require_ci_profile:valid=valid and child_policy
     report.update(status='SUPPORTED_COLLECTOR_PROBE' if valid else 'ISOLATION_PREREQUISITE_FAILED',outer_namespaces=outer,observed=observed,collector=result,
+        child_policy_required=args.require_ci_profile,child_policy_observed=child_policy,
         limitation='A successful probe does not certify the suite or model runtime. Failure has no inferred kernel-policy cause; unavailable denial logs remain unavailable.')
     write_json(args.output/'diagnostics.json',report)
     print(json.dumps({'status':report['status'],'diagnostics':str(args.output/'diagnostics.json'),'collector_exit':result['exit']}))

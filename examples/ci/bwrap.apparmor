@@ -1,0 +1,39 @@
+# CI-only policy for the disposable Ubuntu runner. See CI_ENVIRONMENT.md.
+# The launcher may construct its namespaces; executed children retain an
+# additional profile that denies capabilities, including in nested userns.
+abi <abi/4.0>,
+include <tunables/global>
+
+profile capri-ci-bwrap /usr/bin/bwrap flags=(attach_disconnected) {
+  capability,
+  file rwlkm /{**,},
+  network,
+  unix,
+  ptrace,
+  signal,
+  mqueue,
+  io_uring,
+  userns,
+  mount,
+  umount,
+  pivot_root,
+  dbus,
+  /** pix -> &capri-ci-bwrap//&capri-ci-no-caps,
+}
+
+profile capri-ci-no-caps flags=(attach_disconnected) {
+  file rwlkm /{**,},
+  network,
+  unix,
+  ptrace,
+  signal,
+  mqueue,
+  io_uring,
+  userns,
+  mount,
+  umount,
+  pivot_root,
+  dbus,
+  /** pix -> &capri-ci-no-caps,
+  audit deny capability,
+}

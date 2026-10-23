@@ -15,12 +15,21 @@ jobs:
           sudo apt-get install --yes --no-install-recommends python3 python3-venv bubblewrap libcap2-bin
           python3 -m venv "$RUNNER_TEMP/workflow-venv"
           "$RUNNER_TEMP/workflow-venv/bin/python" -m pip install --require-hashes -r requirements.lock
+      - name: Install scoped ephemeral bwrap policy
+        run: |
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/ci_bwrap_profile.py install --output "$RUNNER_TEMP/ci-evidence"
       - name: Diagnose and probe unchanged collector confinement
         run: |
-          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/collector_diagnostics.py --ci-kernel-logs --output "$RUNNER_TEMP/ci-evidence"
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/collector_diagnostics.py --ci-kernel-logs --require-ci-profile --output "$RUNNER_TEMP/ci-evidence"
       - name: Required supported-host suite
         run: |
           "$RUNNER_TEMP/workflow-venv/bin/python" -B -m unittest discover -s controller/tests -v
+      - name: Remove only the job's scoped policy
+        if: always()
+        run: |
+          if test -f "$RUNNER_TEMP/ci-evidence/ci-apparmor-profile.json"; then
+            "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/ci_bwrap_profile.py remove --output "$RUNNER_TEMP/ci-evidence"
+          fi
       - name: Preserve namespace diagnostics even on failure
         if: always()
         uses: actions/upload-artifact@v4
