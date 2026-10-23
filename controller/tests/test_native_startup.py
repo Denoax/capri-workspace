@@ -1,5 +1,6 @@
 """Native admission controls: synthetic fixtures only; never genuine input or a model."""
 import contextlib
+import copy
 import io
 import json
 from pathlib import Path
@@ -11,7 +12,7 @@ from unittest.mock import patch
 import test_controller
 from loop.engine import Engine
 from loop.cli import _prepare_recontract, _claim_recontract_thinker
-from loop.native_startup import ReadOnlyState, StartupJournal, preflight, prepare, check_owner_ledger
+from loop.native_startup import ReadOnlyState, StartupJournal, preflight, prepare, check_owner_ledger, startup_materials, inspect_material_failure
 from loop.util import Rejected, digest, identity, tree, write_json
 
 
@@ -54,6 +55,87 @@ class StartupTests(test_controller.IsolatedCase):
     def check(self):
         with patch('loop.native_startup.process_identity',return_value=None),patch('shutil.which',side_effect=lambda name:name):
             return preflight(self.cfg,self.binding,self.controller)
+
+    def material_packet(self, policy=None):
+        from loop.native_packet import prepare as prepare_packet
+        from loop.settings import policy_path
+        policy=policy_path(self.config).read_bytes() if policy is None else policy
+        requirements=[dict(id='N0'+str(n),text='Synthetic requirement '+str(n)) for n in range(1,9)]
+        folder=self.root/'packet'
+        index=prepare_packet(folder,originals={'REFERENCE_LED_DESIGN.md':policy},
+            classifications={'REFERENCE_LED_DESIGN.md':dict(category='current',reason='Exact test policy',sha256=digest(policy))},
+            requirements=requirements,proposal=dict(requirements=requirements),current_request=dict(human_answers=[]),answers=[],
+            binding=dict(active_originals=['REFERENCE_LED_DESIGN.md']))
+        self.binding['context_packet']=self.file(folder/'INDEX.json')
+        receipt=dict(scope_text='Synthetic scope',scope_event=99)
+        return receipt,folder,index
+
+    def test_complete_material_plan_contains_actual_policy_before_any_write(self):
+        from loop.settings import policy_path
+        receipt,folder,index=self.material_packet()
+        before=self.store.db.execute('select count(*) from events').fetchone()[0]
+        material,request=startup_materials(self.cfg,self.binding,receipt,self.root/'receipt.json','a'*64)
+        self.assertEqual(material['REFERENCE_LED_DESIGN.md'],policy_path(self.config).read_bytes())
+        self.assertEqual(json.loads(material['successor-request.json']),request)
+        self.assertEqual(material['current-context/INDEX.json'],(folder/'INDEX.json').read_bytes())
+        self.assertEqual(before,self.store.db.execute('select count(*) from events').fetchone()[0])
+        self.assertFalse(Path(self.binding['inputs']).exists())
+        self.assertFalse(Path(self.binding['workspace']).exists())
+
+    def test_wrong_mounted_policy_rejects_in_pure_material_plan(self):
+        receipt,_,_=self.material_packet(b'not the mounted policy')
+        before=self.store.db.execute('select count(*) from events').fetchone()[0]
+        with self.assertRaisesRegex(Rejected,'actual mounted input: REFERENCE_LED_DESIGN'):
+            startup_materials(self.cfg,self.binding,receipt,self.root/'receipt.json','a'*64)
+        self.assertEqual(before,self.store.db.execute('select count(*) from events').fetchone()[0])
+        self.assertFalse(Path(self.binding['inputs']).exists())
+
+    def failed_material_snapshot(self):
+        from loop.settings import policy_path
+        from loop.util import atomic
+        with patch('loop.native_startup.process_identity',return_value=None),patch('shutil.which',side_effect=lambda name:name),patch('loop.native_startup.require_human_tty',return_value=contextlib.nullcontext(SyntheticTTY('SYNTHETIC exact new maintenance scope'))):
+            result=prepare(self.cfg,self.binding,self.controller)
+        journal=StartupJournal(self.store,self.binding['operation'],self.binding)
+        launch=journal.append('LAUNCH_INTENT',dict(source=self.binding['source_hash']))
+        shutil.copytree(self.repo,self.binding['workspace'],ignore=shutil.ignore_patterns('.git'))
+        atomic(Path(self.binding['inputs'])/'REFERENCE_LED_DESIGN.md',policy_path(self.config).read_bytes(),exclusive=True)
+        error='Current-context original does not match actual mounted input: REFERENCE_LED_DESIGN.md'
+        failed=journal.append('FAILED_OR_UNCERTAIN',dict(last_proved='LAUNCH_INTENT',error=error,classification='STARTUP_REQUIRES_EFFECT_AUDIT',task=None))
+        config_file=self.root/'failed-config.json';write_json(config_file,self.cfg)
+        next_cfg=copy.deepcopy(self.cfg);next_cfg['settings']['state_dir']=str(self.root/'next-runtime')
+        next_binding=copy.deepcopy(self.binding)
+        next_binding['material_failure_predecessor']=dict(receipt=self.file(Path(result['receipt'])),config=self.file(config_file),launch_event=launch,failure_event=failed)
+        profile=dict(source=self.binding['source_hash'],receipt=result['receipt_sha256'],error=error)
+        return next_cfg,next_binding,profile
+
+    def test_exact_pre_model_snapshot_can_be_accounted_without_replaying_intent(self):
+        cfg,binding,profile=self.failed_material_snapshot()
+        before=self.store.db.execute('select count(*) from events').fetchone()[0]
+        with patch('loop.native_startup.MATERIAL_FAILURE_PROFILE',profile):
+            old,controller=inspect_material_failure(cfg,binding)
+        self.assertEqual(old,self.cfg);self.assertEqual(controller,self.controller)
+        self.assertEqual(before,self.store.db.execute('select count(*) from events').fetchone()[0])
+        self.assertEqual(1,sum(r['milestone']=='LAUNCH_INTENT' for r in StartupJournal(self.store,self.binding['operation'],self.binding).records()))
+
+    def test_unknown_snapshot_write_runtime_or_later_turn_cannot_use_material_recovery(self):
+        cfg,binding,profile=self.failed_material_snapshot()
+        with patch('loop.native_startup.MATERIAL_FAILURE_PROFILE',profile):
+            unknown=Path(self.binding['inputs'])/'unknown';unknown.write_text('not accounted')
+            with self.assertRaisesRegex(Rejected,'Unknown writes'):inspect_material_failure(cfg,binding)
+            unknown.unlink()  # Restore only this disposable test fixture for the next independent control.
+            runtime=Path(self.cfg['settings']['state_dir']);runtime.mkdir()
+            with self.assertRaisesRegex(Rejected,'runtime or intake'):inspect_material_failure(cfg,binding)
+            runtime.rmdir()
+            self.store.event(None,'NATIVE_OWNER_DISPATCH',dict(owner=self.owner))
+            with self.assertRaisesRegex(Rejected,'later native turn'):inspect_material_failure(cfg,binding)
+
+    def test_material_recovery_rejects_model_change_and_pending_question(self):
+        cfg,binding,profile=self.failed_material_snapshot()
+        with patch('loop.native_startup.MATERIAL_FAILURE_PROFILE',profile):
+            changed=copy.deepcopy(cfg);changed['settings']['model']='different-model'
+            with self.assertRaisesRegex(Rejected,'cannot change model'):inspect_material_failure(changed,binding)
+            self.store.ask_question(self.owner,'key',1,'SYNTHETIC question must hold')
+            with self.assertRaises(Rejected):inspect_material_failure(cfg,binding)
 
     def test_read_only_preflight_preserves_claims_events_capabilities_and_destinations(self):
         before=self.store.db.execute('select count(*) from events').fetchone()[0]
