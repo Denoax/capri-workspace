@@ -1,0 +1,12 @@
+{
+  "version": 4,
+  "typeface": "Bundled Barlow Condensed ExtraBold Italic; outlined glyphs",
+  "source_inputs": [
+    "sources/capri-12.gif",
+    "sources/capri-19.gif"
+  ],
+  "frame_policy": "Entire original-image boxes retained; source19 frames 12,54,92; source12 frame5",
+  "source_encoding": "JPEG quality87 for still compositions; original GIFs remain intact",
+  "rights": "Anime-image redistribution unverified; private repository",
+  "scope": "Original SVG composition and documentation only; not runtime proof"
+}
