@@ -28,9 +28,9 @@ jobs:
         run: |
           "$RUNNER_TEMP/workflow-venv/bin/python" -B -m unittest discover -s tests -v
           "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/benchmark_report.py evaluation/benchmark-v1/schedule.json
-      - name: Full unchanged isolated collector suites
+      - name: Required collector repeat with explicit host-only integration mapping
         run: |
-          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/run_offline_collector.py --suite runtime --output "$RUNNER_TEMP/ci-evidence/runtime-suite"
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/run_offline_collector.py --suite runtime-unit --output "$RUNNER_TEMP/ci-evidence/runtime-suite"
           "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/run_offline_collector.py --suite benchmark --output "$RUNNER_TEMP/ci-evidence/benchmark-suite"
       - name: Remove only the job's scoped policy
         if: always()

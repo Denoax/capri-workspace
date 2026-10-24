@@ -18,8 +18,8 @@
       "bytes": 3120
     },
     "ENVIRONMENT.md": {
-      "sha256": "cefddb58fa0132151909e0e4f25b2e7d861d824ffdc31ac1ca0cca5c9507c300",
-      "bytes": 4480
+      "sha256": "a07a62a72423dabd99791f95ec9cdbab74a624cf59caa9fd8f3351db23b8eb0d",
+      "bytes": 5451
     },
     "EVALUATION.md": {
       "sha256": "dc881aef0f901314539f6ac9fe078d8664f91d23612d0d20b54b896317096cac",
@@ -82,12 +82,20 @@
       "bytes": 6712
     },
     "docs/ALPHA_READINESS.md": {
-      "sha256": "9f196316f889f2a6d7b7f34c868c0da953257410680cc80000885cc14fe37f17",
-      "bytes": 2744
+      "sha256": "449cc18828465beda4b7c10de8615de2225abd2c70a1d2a522ed183fc1b3b6f6",
+      "bytes": 2912
     },
     "docs/STATUS.md": {
-      "sha256": "dc48b946e01941a6f66d31e0a656159f316f885835e2488c5470e855f68b67f6",
-      "bytes": 5061
+      "sha256": "a47c5b9d7692b65809b716cf407c2e6bbf1cfb43f682509964b7f223ae54e6b8",
+      "bytes": 5366
+    },
+    "tests/__init__.py": {
+      "sha256": "2dc6473889f30a49404629b3e2f82365082828caa06c19d2b113767e6a1cb020",
+      "bytes": 80
+    },
+    "tests/collector_runtime.py": {
+      "sha256": "cff26b2c029eb9bb2b53ecf3648b701827a03de2719a61bf33fe9b5c5f10acff",
+      "bytes": 1565
     },
     "tests/test_benchmark_report.py": {
       "sha256": "a9ffed7157eaa00b6400c8011ceadf40e4511ed4985f303c5221a8abecde5a2d",
@@ -126,8 +134,8 @@
       "bytes": 4788
     },
     "tools/run_offline_collector.py": {
-      "sha256": "fa841f4c989c9813f6d525d310f1260a65897d97d88006a25dc46f75955d373a",
-      "bytes": 1512
+      "sha256": "2149ddc01407bc96f8562bc2f53fdbcdcdc15126fd8cfb1ab16d4bbe5f7cd82a",
+      "bytes": 2216
     },
     "evaluation/benchmark-v1/prices.json": {
       "sha256": "1dac7769658565bf36b7be7c186045f92cc19b0d410e1cd316fbfb56ea81b43f",
@@ -362,9 +370,18 @@
       "bytes": 775
     },
     ".github/workflows/tests.yml": {
-      "sha256": "7dc730a489c19bb46ceeb0b0d161bc242e2c010acc35f5d26c54facf6e349295",
-      "bytes": 2364
+      "sha256": "a406a38bb771b95e246be58aec709b6e036c7c7f2b80bb3f45d7b591e3c82b83",
+      "bytes": 2398
     }
   },
-  "excluded": "Runtime/state/auth/keys/capabilities, raw private instruction packs/review archives/notes/history"
+  "excluded": "Runtime/state/auth/keys/capabilities, raw private instruction packs/review archives/notes/history",
+  "ci_suite_topology": {
+    "runtime_host": 343,
+    "runtime_collector_repeat": 339,
+    "explicit_host_only_integration_cases": 4,
+    "benchmark_host": 12,
+    "benchmark_collector": 12,
+    "isolation_profile": "UNCHANGED",
+    "full_343_collector_on_ubuntu_ci": "UNSUPPORTED_NESTING; first failure retained"
+  }
 }

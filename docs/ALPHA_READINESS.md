@@ -4,7 +4,7 @@ CAPRI is an experimental three-role native Codex controller. Updating `main` pub
 
 | Gate | Current evidence | Remaining work |
 | --- | --- | --- |
-| Deterministic controller correctness | V3 records 343 host and 343 isolated-collector tests, no skips. New commit CI must independently verify the exported tree. | Keep required tests and isolation checks green on the exact shipped commit. |
+| Deterministic controller correctness | V3 records 343 host and 343 isolated-collector tests on its supported local host. Ubuntu CI runs all 343 on host and repeats 339 under the unchanged collector; four sandbox-launch integration cases are explicitly host-only. | Keep every required test and isolation check green on the exact shipped commit; do not equate the Ubuntu repeat with a full 343 collector run. |
 | Stopped compaction accounting | Pure inspection, typed fence/preparation support and synthetic atomicity/identity tests exist. Actual fence has not executed. | Use the supported source-bound route on the user's installation after integration is concrete. |
 | Fresh native launch | V3 intentionally has no launch handler for the new prepared condition. | Connect the checked preparation to existing startup admission without old-intent replay or weaker guards. |
 | Context and recovery | Prior run produced a task and sealed source; compaction started but lacked its completion lifecycle before timeout. | Actual completion, reread, replacement, controller restart and negative controls on the final profile. |

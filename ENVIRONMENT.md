@@ -66,3 +66,9 @@ mount/namespace arguments remain unchanged. Ubuntu support includes this
 declared prerequisite. Run 39974943718 verified the actual interpreter/alias,
 child policy, all310 tests and cleanup; exact source/commit receipts belong
 in the parent evidence record. No VM runner is provisioned by this guide.
+# CI suite topology
+
+The Ubuntu CI profile allows the collector launcher to build its sandbox and retains an additional child profile denying capabilities. Four integration tests themselves launch collectors and cannot be repeated inside that child. CI runs the full runtime suite on the host, then repeats the compatible 339 cases inside the unchanged collector. `tests/collector_runtime.py` lists the four host-only cases explicitly and rejects discovery drift; they remain required and executed in the host suite. No unittest skip, profile relaxation or global user-namespace change is used. The 12 benchmark-accounting tests also run at both levels.
+
+The archived V3 full 343 collector pass on a different supported host remains separate evidence. `tools/run_offline_collector.py --suite runtime` retains the full-suite route for hosts supporting nested collectors; `--suite runtime-unit` names the Ubuntu CI repeat and must not be presented as a full-suite result.
+
