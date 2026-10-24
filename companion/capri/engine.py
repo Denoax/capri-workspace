@@ -21,7 +21,7 @@ class WorkEngine:
         self.valid=valid;self.dispatch=dispatch;self.event=event;self.tools=tools
         self.runner=TaskSandbox(self.directory/'control');self.proc=None;self.relay=None
         self.reader=None;self.stderr_reader=None;self.pending={};self.next_id=0;self.turn_done=None
-        self.thread_id=None;self.turn_id=None;self.text='';self.usage=None;self.calls=set();self.handles=[];self.held_handles=held_handles
+        self.thread_id=None;self.turn_id=None;self.text='';self.messages={};self.usage=None;self.calls=set();self.handles=[];self.held_handles=held_handles
         self.pin=json.loads((Path(__file__).parent.parent/'engine-pin.json').read_text())
 
     def binary(self):
@@ -100,12 +100,19 @@ class WorkEngine:
 
     async def run(self,objective):
         if not self.valid():raise Denied('Work lease revoked')
-        self.turn_done=asyncio.get_running_loop().create_future();self.text=''
+        self.turn_done=asyncio.get_running_loop().create_future();self.text='';self.messages={}
         result=await self.request('turn/start',{'threadId':self.thread_id,'input':[{'type':'text','text':objective}]})
         self.turn_id=result.get('turn',{}).get('id')
         terminal=await asyncio.wait_for(self.turn_done,1800)
         if terminal!='completed':raise Denied('Work turn '+terminal+'; inspect the journal before resuming')
         return {'text':self.text,'thread':self.thread_id,'status':terminal,'usage':self.usage,'model_requests':self.relay.requests}
+
+    def update_message(self,item_id,value,*,append):
+        if not isinstance(item_id,str) or not isinstance(value,str):raise Denied('Malformed work message')
+        messages={**self.messages,item_id:(self.messages.get(item_id,'')+value if append else value)}
+        text='\n\n'.join(v for v in messages.values() if v)
+        if len(text)>64000:raise Denied('Work response exceeds text budget')
+        self.messages=messages;self.text=text
 
     async def read_loop(self):
         error=None
@@ -129,16 +136,17 @@ class WorkEngine:
                     continue
                 if params.get('threadId') not in (None,self.thread_id):continue
                 if method=='item/agentMessage/delta':
-                    value=params.get('delta','')
-                    if not isinstance(value,str) or len(self.text)+len(value)>64000:raise Denied('Work response exceeds text budget')
-                    self.text+=value;await self.event('delta',{'text':self.text})
+                    self.update_message(params['itemId'],params.get('delta',''),append=True)
+                    await self.event('delta',{'text':self.text})
                 elif method=='thread/tokenUsage/updated':
                     self.usage=params.get('tokenUsage');await self.event('usage',{'usage':self.usage})
                 elif method=='turn/completed':
                     if self.turn_done and not self.turn_done.done():self.turn_done.set_result(params['turn']['status'])
                 elif method in ('item/started','item/completed'):
                     item=params.get('item',{})
-                    if item.get('type')=='agentMessage' and method=='item/completed' and not self.text:self.text=item.get('text','')[:64000]
+                    if item.get('type')=='agentMessage' and method=='item/completed':
+                        self.update_message(item['id'],item.get('text',''),append=False)
+                        await self.event('delta',{'text':self.text})
                     await self.event('item',{'type':item.get('type'),'status':item.get('status')})
         except asyncio.CancelledError:raise
         except Exception as e:error=e

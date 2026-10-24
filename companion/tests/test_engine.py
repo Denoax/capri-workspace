@@ -49,7 +49,7 @@ class NativeEngineTests(unittest.IsolatedAsyncioTestCase):
             try:
                 await engine.start();result=await engine.run('Edit the selected public fixture and verify it.')
                 self.assertEqual(result['status'],'completed');self.assertEqual(result['text'],'Fixture change verified.')
-                self.assertEqual((project/'answer.txt').read_text(),'42');self.assertEqual(len(calls),1);self.assertEqual(len(requests),2)
+                self.assertEqual((project/'answer.txt').read_text(),'42');self.assertEqual(len(calls),1);self.assertEqual(len(requests),2);self.assertEqual(engine.provider.calls,len(requests))
             finally:
                 await engine.close();await runner.stop();await client.aclose()
 
@@ -80,3 +80,17 @@ class NativeEngineTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual([c[0] for c in calls],['Bearer before-refresh','Bearer after-refresh'])
             self.assertIn('ORCHID42',json.dumps(calls[1][1]['input']))
             self.assertEqual(minimums,[1800,90,1800,90])
+
+class WorkMessageTests(unittest.IsolatedAsyncioTestCase):
+    async def test_multiple_streamed_blocks_and_a_final_without_deltas_keep_complete_paragraphs(self):
+        from types import SimpleNamespace
+        with tempfile.TemporaryDirectory(prefix='capri-message-') as folder:
+            async def event(*args):pass
+            async def dispatch(*args):raise AssertionError('No tools expected')
+            engine=WorkEngine(None,folder,'fixture-model',[],lambda:True,dispatch,event,[])
+            engine.thread_id='thread-fixture';engine.turn_done=asyncio.get_running_loop().create_future()
+            reader=asyncio.StreamReader();engine.proc=SimpleNamespace(stdout=reader)
+            notifications=[('item/agentMessage/delta',{'itemId':'first','delta':'Inspecting '}),('item/agentMessage/delta',{'itemId':'first','delta':'public files.'}),('item/completed',{'item':{'type':'agentMessage','id':'first','text':'Inspecting public files.'}}),('item/completed',{'item':{'type':'agentMessage','id':'final','text':'Both tests passed.'}}),('turn/completed',{'turn':{'status':'completed'}})]
+            for method,params in notifications:reader.feed_data((json.dumps({'method':method,'params':{'threadId':engine.thread_id,**params}})+'\n').encode())
+            reader.feed_eof();await engine.read_loop()
+            self.assertEqual(engine.text,'Inspecting public files.\n\nBoth tests passed.');self.assertEqual(engine.turn_done.result(),'completed')
