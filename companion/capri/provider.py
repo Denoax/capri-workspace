@@ -199,11 +199,11 @@ class PlanProvider:
             await self.listener.wait_closed()
             self.listener = None
 
-    async def access_token(self):
+    async def access_token(self, min_validity=90):
         async with self.lock:
             if not self.record:
                 raise Denied("Continue with ChatGPT first; offline test mode is active")
-            if self.record["expires_at"] < time.time() + 90:
+            if self.record["expires_at"] < time.time() + min_validity:
                 token = await self.request("POST", AUTH + "/api/accounts/oauth/token", data={"grant_type": "refresh_token",
                       "client_id": self.record["client_id"], "refresh_token": self.record["refresh_token"], "resource": API})
                 if "id_token" in token:
