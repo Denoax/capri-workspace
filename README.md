@@ -85,6 +85,8 @@ Native use additionally requires the qualified Codex CLI 0.163.0/profile, existi
 | [Development status](docs/STATUS.md) | What has and has not been qualified |
 | [Contributing](CONTRIBUTING.md) | How to work on the project |
 | [Security](SECURITY.md) | Boundaries and reporting |
+| [Alpha readiness](docs/ALPHA_READINESS.md) | Remaining release gates |
+| [Benchmark protocol](docs/BENCHMARK_PROTOCOL.md) | Quality, token use and cost accounting |
 
 <details>
 <summary><strong>Read the handoff map as Mermaid</strong></summary>
@@ -104,7 +106,7 @@ The diagram shows intended stage order and the uncertainty branch. It does not c
 </details>
 
 > [!IMPORTANT]
-> **Experimental.** Native lifecycle/recovery qualification, the separate repaired-source comparison and final independent review remain pending at the recorded source cutoff. The current CI isolation prerequisite is failing; the runtime suite was skipped. See [current status](docs/STATUS.md).
+> **Experimental.** The V3 stopped-recovery implementation is included. Native launch integration, completed recovery qualification, the repaired-source comparison and final independent review remain pending. The CI workflow checks both host and isolated-collector suites; inspect the exact commit result. See [current status](docs/STATUS.md).
 
 No source-bound product demo was available. Character animation is artwork, not a controller recording.
 

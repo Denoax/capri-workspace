@@ -23,6 +23,7 @@ class ReadOnlyState:
     require_current = Store.require_current
     questions = Store.questions
     recontract_receipt = Store.recontract_receipt
+    human_answers = Store.human_answers
 
     def __init__(self, home):
         self.home = Path(home).resolve()
@@ -86,7 +87,133 @@ def check_owner_ledger(root, owner, frozen=None):
                 context_sha256=digest(ledger.read_bytes()) if ledger.exists() else None)
 
 
-def preflight(config, binding, controller):
+def restored_request(binding, receipt, receipt_path, receipt_sha256):
+    from .native_lineage import PROJECTED_KEYS
+    old=json.loads(checked_file(binding['predecessor_receipt']).read_text())
+    lineage={key:old['prepared']['lineage'][key] for key in PROJECTED_KEYS}
+    lineage['full_core_lineage']=dict(path=binding['predecessor_receipt']['path'],
+        sha256=binding['predecessor_receipt']['sha256'],origin='ACTUAL_COMMITTED_CORE_FOREGROUND_RECONTRACT')
+    return dict(text=receipt['scope_text'],origin='FOREGROUND_NATIVE_MAINTENANCE_SCOPE',lineage=lineage,
+        corrections=[dict(text=receipt['scope_text'],origin='FOREGROUND_CONTROLLING_TTY',event=receipt['scope_event'])],
+        native_maintenance=dict(receipt=str(Path(receipt_path).resolve()),sha256=receipt_sha256,
+            scope_event=receipt['scope_event'],scope=receipt['scope_text']))
+
+
+def startup_materials(config,binding,receipt,receipt_path,receipt_sha256):
+    """Build exactly what will be mounted, without creating files or authority."""
+    from .settings import policy_path
+    request=restored_request(binding,receipt,receipt_path,receipt_sha256)
+    old=json.loads(checked_file(binding['predecessor_receipt']).read_text())
+    material={'REFERENCE_LED_DESIGN.md':policy_path(config['workflow']).read_bytes(),
+        'full-prepared.json':checked_file(binding['predecessor_receipt']).read_bytes(),
+        'maintenance-prepared.json':json.dumps(receipt,sort_keys=True).encode()+b'\n',
+        'original-request.json':json.dumps(old['prepared']['lineage']['preserved_request']).encode(),
+        'preserved-requirements.json':json.dumps(old['prepared']['lineage']['preserved_requirements']).encode(),
+        'successor-request.json':json.dumps(request).encode()}
+    for item in binding['materials']:
+        name='authority/'+item['name'];safe_path('/material-root',name)
+        if name in material:raise Rejected('Duplicate startup material name: '+name)
+        material[name]=checked_file(item).read_bytes()
+    if binding.get('context_packet'):
+        from .native_packet import load
+        folder=checked_file(binding['context_packet']).parent;index=load(folder)
+        for name,record in index['originals'].items():
+            if name not in material or digest(material[name])!=record['sha256']:
+                raise Rejected('Current-context original does not match actual mounted input: '+name)
+        material['current-context/INDEX.json']=(folder/'INDEX.json').read_bytes()
+        for section in index['sections']:
+            material['current-context/'+section['name']]=(folder/section['name']).read_bytes()
+    return material,request
+
+
+MATERIAL_FAILURE_PROFILE=dict(
+    source='c72c9b8973a0eb8acce115dad20ce206619e643d7d4aace6042c921bc8dff25f',
+    receipt='e3bf740042ac8a493d2ab1da654e3f180abd252a8d18981aa0aa2b468590d042',
+    error='Current-context original does not match actual mounted input: REFERENCE_LED_DESIGN.md')
+
+
+def inspect_material_failure(config,binding):
+    """Account only the reviewed pre-model snapshot failure; never replay it."""
+    spec=binding['material_failure_predecessor']
+    prior_raw=checked_file(spec['receipt']).read_bytes();prior=json.loads(prior_raw);old=prior['binding']
+    if (digest(prior_raw)!=MATERIAL_FAILURE_PROFILE['receipt'] or old['source_hash']!=MATERIAL_FAILURE_PROFILE['source']
+            or old['owner']!=binding['owner'] or old['home']!=config['home']
+            or old['predecessor_receipt']!=binding['predecessor_receipt']
+            or old.get('owner_fence')!=binding.get('owner_fence')):
+        raise Rejected('Unreviewed pre-model material failure lineage')
+    cfg=json.loads(checked_file(spec['config']).read_text());controller=Path(old['controller'])
+    if (identity(cfg)!=old['config_hash'] or cfg['controller']!=str(controller)
+            or identity(tree(controller))!=old['controller_hash']
+            or identity(tree(controller.parent))!=old['source_hash']):
+        raise Rejected('Preserved material-failure source/config changed')
+    if ({k:v for k,v in cfg['settings'].items() if k!='state_dir'}!=
+            {k:v for k,v in config['settings'].items() if k!='state_dir'}
+            or cfg['workflow']!=config['workflow'] or cfg['roles']!=config['roles']):
+        raise Rejected('Material recovery cannot change model/settings/workflow/roles')
+    with ReadOnlyState(config['home']) as view:
+        rows=StartupJournal(view,old['operation'],old).records()
+        if [r['milestone'] for r in rows]!=['PREFLIGHT_VALIDATED','SCOPE_CAPTURED','LAUNCH_INTENT','FAILED_OR_UNCERTAIN']:
+            raise Rejected('Material failure advanced beyond the accounted snapshot boundary')
+        scope,launch,failed=rows[1:]
+        if (scope['seq']!=prior['scope_event'] or scope['details'].get('origin')!='FOREGROUND_CONTROLLING_TTY'
+                or scope['details'].get('text')!=prior['scope_text']
+                or launch['seq']!=spec['launch_event'] or failed['seq']!=spec['failure_event']
+                or failed['details']!=dict(last_proved='LAUNCH_INTENT',error=MATERIAL_FAILURE_PROFILE['error'],
+                    classification='STARTUP_REQUIRES_EFFECT_AUDIT',task=None)):
+            raise Rejected('Material failure event/scope identity changed')
+        if view.db.execute("SELECT seq FROM events WHERE seq>? AND kind IN ('NATIVE_OWNER_DISPATCH','THINKER_TURN','NATIVE_STARTUP_PROBE_DISPATCH_INTENT')",(launch['seq'],)).fetchone():
+            raise Rejected('A later native turn prevents pre-model material recovery')
+        view.require_current(binding['owner'])
+        if (view.questions(binding['owner'],blocking=True)
+                or view.db.execute('SELECT id FROM tasks WHERE owner=?',(binding['owner'],)).fetchone()
+                or view.db.execute('SELECT token_hash FROM capabilities WHERE owner=? AND enabled=1',(binding['owner'],)).fetchone()):
+            raise Rejected('Material recovery is held by a question/task/capability')
+    original=json.loads(checked_file(old['predecessor_receipt']).read_text())['prepared']['repo']
+    from .settings import policy_path
+    expected={'REFERENCE_LED_DESIGN.md':dict(sha256=digest(policy_path(cfg['workflow']).read_bytes()),mode=0o600)}
+    if tree(old['workspace'])!=tree(original) or tree(old['inputs'])!=expected:
+        raise Rejected('Unknown writes in the prior material snapshot')
+    if os.path.lexists(cfg['settings']['state_dir']) or os.path.lexists(Path(config['home'])/'state/intake.sock'):
+        raise Rejected('Prior material failure has runtime or intake effects')
+    return cfg,controller
+
+
+def packet_preflight(config,binding,scope,*,receipt=None,receipt_path=None,receipt_sha256=None):
+    """Use the unchanged validator, then measure ALL Engine-added frozen fields."""
+    from .engine import Engine
+    from .contract import validate
+    from .native_lineage import compact_native_request
+    from .native_packet import load, feasibility, read_guide
+    index=load(checked_file(binding['context_packet']).parent)
+    path=receipt_path or Path(config['home'])/'inputs/native-maintenance'/binding['operation']/'prepared.json'
+    # Preparation reserves a conservative event-number width. Actual admission
+    # repeats this with the committed projection before recording launch intent.
+    projected=receipt or dict(scope_text=scope,scope_event=9999999999999999)
+    startup_materials(config,binding,projected,path,receipt_sha256 or '0'*64)
+    request=restored_request(binding,projected,path,receipt_sha256 or '0'*64)
+    with ReadOnlyState(config['home']) as view:
+        answers=request['lineage'].get('human_answers',[])+view.human_answers(binding['owner'])
+    if answers:request['human_answers']=answers  # Same final augmentation as Engine.submit.
+    if index['answers_hash']!=identity(answers):
+        raise Rejected('Current-context bound answers are stale')
+    proposal=json.loads(checked_file(binding['planned_proposal']).read_text())
+    if proposal['requirements']!=json.loads(checked_file(binding['exact_requirements']).read_text()):
+        raise Rejected('Planned proposal changed exact N01-N08 values')
+    import copy
+    proposal=copy.deepcopy(proposal)
+    proposal['steps'][0]['goal']+='x'*800  # Maximum allowed sourced-research addition.
+    old=json.loads(checked_file(binding['predecessor_receipt']).read_text())
+    repo=old['prepared']['repo']
+    engine=Engine.__new__(Engine);engine.config=config['workflow']
+    frozen=validate(proposal,repo,compact_native_request(request),engine.instructions(repo))
+    frozen.update(lineage=request['lineage'],task_revision=request['lineage']['revision'])
+    payload=[dict(type='text',text=read_guide(index),text_elements=[])]
+    if len(json.dumps(payload).encode())>60000:
+        raise Rejected('Complete native current-context read payload exceeds byte budget')
+    return feasibility(index,frozen)
+
+
+def preflight(config, binding, controller, *, receipt=None, receipt_path=None, receipt_sha256=None):
     """Pure shared check before input, intent, snapshots, capabilities or slots."""
     if binding.get('schema_version') != 1 or binding.get('route') != 'NATIVE_MAINTENANCE_RECOVERY':
         raise Rejected('Exact native maintenance binding required')
@@ -99,6 +226,21 @@ def preflight(config, binding, controller):
         raise Rejected('New controller identity changed')
     if identity(tree(controller.parent)) != binding['source_hash']:
         raise Rejected('New maintenance source changed')
+    accounted_owner_fence = False
+    if binding.get('owner_fence'):
+        # A fence is never an admission. Recheck its exact stopped effects here
+        # before asking for a distinct new source/scope, and again before intent.
+        from .native_owner_fence import inspect as inspect_fence, recorded as recorded_fence
+        fence_binding=json.loads(checked_file(binding['owner_fence']).read_text())
+        if binding.get('generation_registry')!=fence_binding['registry'] or binding['owner']!=fence_binding['owner']:
+            raise Rejected('New role generation lineage differs from the fenced registry')
+        with ReadOnlyState(config['home']) as view:
+            fenced=recorded_fence(view,fence_binding)
+            if not fenced:raise Rejected('Reviewed owner intake must be fenced before new admission')
+            fence_config,fence_controller=(inspect_material_failure(config,binding)
+                if binding.get('material_failure_predecessor') else (config,controller))
+            inspect_fence(fence_config,fence_binding,fence_controller,view=view,revalidate=True)
+        accounted_owner_fence=True
     from .settings import Settings
     settings = Settings(**config['settings'])
     if max(len(os.fsencode(Path(settings.state_dir)/name)) for name in ('thinker.sock','operator.sock','ui.sock'))>=108:
@@ -142,6 +284,15 @@ def preflight(config, binding, controller):
     scope = scope_path.read_text().rstrip('\r\n')
     if not scope or '\n' in scope:
         raise Rejected('Exactly one bound maintenance scope line required')
+    if binding.get('context_packet'):
+        from .native_packet import load
+        index=load(checked_file(binding['context_packet']).parent)
+        if (index['binding'].get('owner')!=owner or index['binding'].get('scope_hash')!=digest(scope.encode())
+                or index['binding'].get('controller_source_hash')!=binding['source_hash']):
+            raise Rejected('Prepared current-context scope/source differs')
+        fit=packet_preflight(config,binding,scope,receipt=receipt,receipt_path=receipt_path,receipt_sha256=receipt_sha256)
+    else:
+        fit=None
     home = Path(config['home']).resolve()
     with ReadOnlyState(home) as store:
         store.require_current(owner)
@@ -163,7 +314,7 @@ def preflight(config, binding, controller):
             raise Rejected('Old capability remains enabled')
         for row in store.db.execute("SELECT kind,data FROM events WHERE seq>?", (binding['claim_seq'],)):
             data = json.loads(row['data'])
-            if data.get('owner') == owner and row['kind'] in ('NATIVE_OWNER_DISPATCH','THINKER_TURN','NATIVE_STARTUP_PROBE_DISPATCH_INTENT'):
+            if data.get('owner') == owner and row['kind'] in ('NATIVE_OWNER_DISPATCH','THINKER_TURN','NATIVE_STARTUP_PROBE_DISPATCH_INTENT') and not accounted_owner_fence:
                 raise Rejected('Dispatched or uncertain owner turn requires effect reconciliation')
         other = store.db.execute("SELECT id FROM tasks WHERE state NOT IN ('SUPERSEDED','ACCEPTED','REJECTED','CANCELED')").fetchone()
         if other:
@@ -180,8 +331,8 @@ def preflight(config, binding, controller):
                   controller_hash=binding['controller_hash'], predecessor_receipt_sha256=binding['predecessor_receipt']['sha256'],
                   consumed_claim_seq=binding['claim_seq'], registry_sha256=binding['registry']['sha256'],
                   original_repo=old['prepared']['repo'], core_lineage_hash=identity(old['prepared']['lineage']), old_owner_ledger=old_owner,
-                  scope=scope, classification='ACCOUNTED_BEFORE_FIRST_PROBE; NEW_SCOPE_REQUIRED',
-                  model_dispatch='NOT_STARTED', legacy_service='NOT_STARTED')
+                  scope=scope, classification=('FENCED_REVIEWED_OWNER_ABORT; NEW_SCOPE_REQUIRED' if accounted_owner_fence else 'ACCOUNTED_BEFORE_FIRST_PROBE; NEW_SCOPE_REQUIRED'),
+                  model_dispatch='NOT_STARTED', legacy_service='NOT_STARTED',packet_feasibility=fit)
     return result
 
 
@@ -272,7 +423,7 @@ def inspect_prepared(config, receipt_path, expected_hash, controller):
         if any(r['milestone']=='LAUNCH_INTENT' for r in rows):
             return receipt, dict(status='HELD_RECONCILIATION_REQUIRED',last_proved=rows[-1]['milestone'],
                 operation=binding['operation'],model_dispatch='NOT_RETRIED')
-    plan=preflight(config,binding,controller)
+    plan=preflight(config,binding,controller,receipt=receipt,receipt_path=receipt_path,receipt_sha256=expected_hash)
     return receipt,plan
 
 
@@ -284,10 +435,9 @@ def run_recovery(config,args,controller):
     import time
     from .engine import Engine,COMMON
     from .native import NativeAdapter,NativeIntake,NativeTerminals,capture_complete
-    from .settings import Settings,policy_path
+    from .settings import Settings
     from .service import capability
     from .cli import PROPOSAL_GUIDE
-    from .native_lineage import PROJECTED_KEYS
     receipt,plan=inspect_prepared(config,args.prepared,args.prepared_sha256,controller)
     if plan.get('status')=='HELD_RECONCILIATION_REQUIRED' or args.check:
         print(json.dumps(dict(status=plan.get('status','NATIVE_MAINTENANCE_LAUNCH_CHECKED'),plan=plan,model_dispatch='NOT_STARTED')),flush=True)
@@ -300,31 +450,19 @@ def run_recovery(config,args,controller):
             receipt,plan=inspect_prepared(config,args.prepared,args.prepared_sha256,controller)
             if plan.get('status')=='HELD_RECONCILIATION_REQUIRED':
                 raise Rejected('Derived launch intent already consumed')
+            material,request=startup_materials(config,binding,receipt,args.prepared,args.prepared_sha256)
             journal.append('LAUNCH_INTENT',dict(old_core_claim='PRESERVED_CONSUMED',source=binding['source_hash']))
             repo=Path(plan['original_repo']);workspace=Path(binding['workspace']);inputs=Path(binding['inputs'])
             import shutil
             shutil.copytree(repo,workspace,ignore=shutil.ignore_patterns('.git','__pycache__'))
             if tree(workspace)!=tree(repo):raise Rejected('Native snapshot source drift')
             inputs.mkdir(parents=True)
-            atomic(inputs/'REFERENCE_LED_DESIGN.md',policy_path(config['workflow']).read_bytes(),exclusive=True)
-            old=json.loads(checked_file(binding['predecessor_receipt']).read_text())
-            lineage={key:old['prepared']['lineage'][key] for key in PROJECTED_KEYS}
-            lineage['full_core_lineage']=dict(path=binding['predecessor_receipt']['path'],sha256=binding['predecessor_receipt']['sha256'],origin='ACTUAL_COMMITTED_CORE_FOREGROUND_RECONTRACT')
-            request=dict(text=receipt['scope_text'],origin='FOREGROUND_NATIVE_MAINTENANCE_SCOPE',lineage=lineage,
-                         corrections=[dict(text=receipt['scope_text'],origin='FOREGROUND_CONTROLLING_TTY',event=receipt['scope_event'])],
-                         native_maintenance=dict(receipt=str(Path(args.prepared).resolve()),sha256=args.prepared_sha256,scope_event=receipt['scope_event'],scope=receipt['scope_text']))
-            material=dict(**{'full-prepared.json':checked_file(binding['predecessor_receipt']).read_bytes(),
-                'maintenance-prepared.json':Path(args.prepared).read_bytes(),
-                'original-request.json':json.dumps(old['prepared']['lineage']['preserved_request']).encode(),
-                'preserved-requirements.json':json.dumps(old['prepared']['lineage']['preserved_requirements']).encode(),
-                'successor-request.json':json.dumps(request).encode()})
-            for item in binding['materials']:material['authority/'+item['name']]=checked_file(item).read_bytes()
             for name,data in material.items():atomic(safe_path(inputs,name),data,exclusive=True)
             settings=Settings(**config['settings']);engine=Engine(store,config['workflow'],defer_review=True)
             adapter=NativeAdapter(engine,settings,evidence_check=capture_complete);engine.adapter=adapter;engine.native_materials=material
             intake=NativeIntake(store.home,config['workflow']);intake.start()
             token=adapter.create_held_capability(binding['owner'],dict(repo=str(repo),request=request,key=binding['owner']+':native-revision'))
-            rows=json.loads(checked_file(binding['registry']).read_text())
+            rows=json.loads(checked_file(binding.get('generation_registry',binding['registry'])).read_text())
             for role in ('thinker','doer','reviewer'):
                 spec=config['roles'][role]
                 adapter.slots.start_role(role,workspace if role=='thinker' else spec['workspace'],inputs if role=='thinker' else spec['inputs'],controller,
@@ -347,9 +485,21 @@ def run_recovery(config,args,controller):
             journal.append('CLIENTS_ATTACHED')
             journal.append('PROBE_DISPATCH_INTENT',dict(thread=adapter.slots.backends['thinker'].thread))
             adapter.thinker_probe();journal.append('PROBE_COMPLETED')
+            if binding.get('context_packet'):
+                adapter.qualify_owner_packet()
+                journal.append('CURRENT_CONTEXT_DELIVERY_VALIDATED',dict(
+                    integrity='EXACT_CURRENT_SECTIONS',exposure='PUBLIC_TURN_OUTPUTS_CHECKED',
+                    behavior='UNVERIFIED_UNTIL_TASK_AND_CHECKS'))
             adapter.release_thinker_tools();journal.append('SCOPE_RELEASED')
             journal.append('WORK_DISPATCH_INTENT',dict(thread=adapter.slots.backends['thinker'].thread))
-            adapter.thinker_turn(COMMON+PROPOSAL_GUIDE+'\nRead the exact maintenance scope, complete preserved requirements and authority materials. Perform restricted hosted research and original-page inspection. Submit one coherent task preserving the exact original eight requirements and full core lineage. Current scoped instruction:\n'+receipt['scope_text'])
+            reading=('The complete current instruction/requirement/answer sections were just delivered and checked. '
+                'Use that stable index; retrieve historical originals only for a specific missing fact. '
+                'Do not repeat discovery or identical reads without naming an invalidation/missing section. '
+                if binding.get('context_packet') else 'Read the exact maintenance scope, complete preserved requirements and authority materials. ')
+            if binding.get('context_packet'):
+                from .native_packet import load,work_guide
+                reading+=work_guide(load(checked_file(binding['context_packet']).parent))
+            adapter.thinker_turn(COMMON+PROPOSAL_GUIDE+'\n'+reading+'Perform restricted hosted research and original-page inspection. Submit one coherent task preserving the exact original eight requirements and full core lineage. Current scoped instruction:\n'+receipt['scope_text'])
             tasks=store.db.execute('SELECT id FROM tasks WHERE owner=?',(binding['owner'],)).fetchall()
             if len(tasks)!=1:raise Rejected('Exactly one native maintenance submission required')
             task_id=tasks[0]['id'];journal.append('TASK_SUBMITTED',dict(task=task_id,thread=adapter.slots.backends['thinker'].thread))
@@ -368,6 +518,11 @@ def run_recovery(config,args,controller):
                 if operator.stop_requested:break
                 if any((b.error or b.proc.poll() is not None) and role not in operator.uncertain_roles for role,b in adapter.slots.backends.items()):raise Rejected('Native backend stopped; checked recovery required')
     except BaseException as ex:
+        from .native_owner_outcomes import OwnerHold
+        if isinstance(ex,OwnerHold):
+            journal.append('OWNER_HELD',ex.result)
+            print(json.dumps(ex.result),flush=True)
+            return
         prior=journal.records();last=prior[-1]['milestone'] if prior else 'NONE'
         dispatched=any(r['milestone'] in ('PROBE_DISPATCH_INTENT','WORK_DISPATCH_INTENT') for r in prior)
         journal.append('FAILED_OR_UNCERTAIN',dict(last_proved=last,error=str(ex),classification='EXECUTION_REQUIRES_RECONCILIATION' if dispatched else 'STARTUP_REQUIRES_EFFECT_AUDIT',task=task_id))

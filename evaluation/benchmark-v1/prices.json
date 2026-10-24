@@ -1,0 +1,17 @@
+{
+  "profile": "gpt-6.1-sol-standard-api-equivalent-2026-10-23",
+  "model": "gpt-6.1-sol",
+  "service_tier": "standard",
+  "currency": "USD",
+  "per_tokens": 1000000,
+  "uncached_input": 2.0,
+  "cached_input": 0.1,
+  "cache_write_30m": 2.5,
+  "cache_write_12h": 5.0,
+  "output": 10.0,
+  "long_context_threshold": 272000,
+  "long_input_multiplier": 2.0,
+  "long_output_multiplier": 1.5,
+  "sources": ["https://developers.openai.com/api/docs/models/gpt-6.1-sol", "https://developers.openai.com/api/docs/pricing"],
+  "actual_chatgpt_billing": "UNKNOWN; this profile does not estimate subscription credits or invoices"
+}

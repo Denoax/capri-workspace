@@ -1,5 +1,20 @@
 # Current status
 
+Runtime update, 23 October 2026. **Experimental source; workflow remains BLOCKED on the preserved local installation.** Main includes the V3 offline recovery proposal: immutable stopped-state inspection, typed fence/preparation support and bounded compaction timings. Repository integration does not execute a fence, accept a candidate or start a native model.
+
+- Imported complete private source identity: `81727ebd101986ee0731cc5df804c741b3b068f87e1bcf016d9c11432b4634c8`; controller identity: `125bb121c5a0ec49900c1033d37b587ab5689c08b5d920981c30a45cfaa4f177`. This curated repository also contains presentation and measurement files; its whole-tree identity differs from that private source. Runtime controller bytes are preserved.
+- V3 evidence records 343 host and 343 unchanged isolated-collector tests, zero skips. The updated CI independently runs both suites and 12 benchmark-analyzer tests on host and collector. Check [Actions](https://github.com/Denoax/capri/actions) for the exact commit outcome; a workflow is not a result.
+- The last native attempt completed research, one task submission, Doer read-only ACK and same-thread writing, then sealed source9b026e1d. Compaction started but lacked item completion/terminal before its deadline. The old generation45 binding and actual46 lineage remain preserved.
+- Actual reconciliation/preparation and native launch integration remain pending. V3 has no launcher for the newly prepared condition. The formal fresh Reviewer and same-Thinker report remain unused.
+- All eight v4 comparison rows are unrun. Original/v2/v3/v4 denominators remain separate. Neither 343 tests nor 12 analyzer tests measure model quality, savings or exact active occupancy.
+- [Alpha readiness](ALPHA_READINESS.md) and [benchmark protocol](BENCHMARK_PROTOCOL.md) define the next work. The new three-arm pilot schedule is planning data, not a frozen or admitted native experiment.
+- Approved presentation assets are preserved. Later presentation/testing branches are not implicitly merged by this runtime update. Code licensing and character-art redistribution rights remain unresolved.
+
+<details>
+<summary>Historical presentation cutoff and asset-validation record</summary>
+
+# Current status
+
 Correction V3, 23 October 2026. **Private CAPRI repository**, with the character-led presentation integrated into `main` on stabilization commit `f7e374cbe0644284d79846356015d0eabd38e67c`. [Denoax/capri](https://github.com/Denoax/capri) retains the original implementation repository identity and history. The detached public snapshot is retired; see the [consolidation record](CONSOLIDATION.md). Repository integration does not establish runtime qualification or clear public redistribution rights.
 
 - Runtime, tests, profiles, dependency locks, current architecture and evaluation docs are preserved from the selected current source. The original README is preserved as [IMPLEMENTATION_README.md](../IMPLEMENTATION_README.md).
@@ -12,3 +27,5 @@ Correction V3, 23 October 2026. **Private CAPRI repository**, with the character
 - No standalone character model or rig is shipped or claimed. Earlier V2 media and its cropped-head experiment are preserved privately; they are not the V3 visual foundation.
 - Responsive, keyboard and reduced-motion checks were performed on the local review preview. Static alternatives, editable SVGs and normal-speed review playback are supplied. Continuous perceptual playback and a hosted GitHub visual review remain unverified; frame checks cannot award visual approval.
 - Code licensing and character-art rights remain separate and unresolved for public distribution. [Asset record](ASSETS.md) · [Consolidation map](CONSOLIDATION.md).
+
+</details>

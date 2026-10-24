@@ -1,79 +1,370 @@
 {
-  "private_source_identity": "968d4787df0812bb41e02dd10cc58c97f637aae7c1c2b8c97cde93e76644d142",
-  "controller_hash": "9d260c8397add013de0d265fb61db5799b6aeb2597b37d87b994bf92ba56b16b",
-  "preserved_development_parent": "6a6c3ee4caea0225952d0f3066c94849b36a6f67",
-  "selected_source_files": {
-    "controller/export_setup_session.py": "f96bc28bae792a45505faec0668f99a3604901170dce3a696c27bab819758808",
-    "controller/bridge.py": "8a70e06cff25d3d3b5bcf01a1b4e1aa4bc1a22f40256ee1de6da3ea9167c3e03",
-    "controller/loopctl.py": "32b7577b1a7d0602b47789560ecd47e7bbb33b733a8f696bb9b05394c28cf263",
-    "controller/native_loopctl.py": "048a83818471e8ee005ea00ac3e6d60b90f2b2322dded6848eb6cb4461a77e72",
-    "controller/policies/reference-led-design.md": "7eeb396969a0107edd443ef0fd8f8f96384204d5ac5d37db4a0f77b66657508e",
-    "controller/loop/collector.py": "24b394e27fcf54d3bdeae36e9c7973fb9f77f7459aaedea4a45679286f011d42",
-    "controller/loop/native_continuation.py": "38bfa4eb327a00dec3f751d26d0e701352cd25881b1c63e0439138fb9a83cf8c",
-    "controller/loop/__init__.py": "9b2fe12f2e95bf8dfee326d095b326ae0ee3905a137aeca957c685548612c877",
-    "controller/loop/settings.py": "e6c186a175b671673bcd29f550532fbb8f260e28e147f03b988a76948831866c",
-    "controller/loop/native_resume.py": "e8a5f66b12d7b32c73629091674130280d606ece681971966ff9119764c72d50",
-    "controller/loop/native_status.py": "6c122e9579e212c94c3da5881afff45000035c46ca47533e75ed96b5224f3687",
-    "controller/loop/store.py": "cbb28bc8a6427c4bb9152cf4b2fac1915d51505453cbffd51f2aebc6ff105e1b",
-    "controller/loop/event_stream.py": "7ce2253e3a536e0cfcd8af796b570eeb1e05355f83101dc1e8a3c4d45ecad8a3",
-    "controller/loop/contract.py": "b792d0c5e75d1d73e10baf061db0fd209f74d482c99c18f37bdb21cdf052c2bf",
-    "controller/loop/service.py": "4202a0ca09d70c263a7464b0c8e099b4c190919b482e77c890c67e0ad4ae20b9",
-    "controller/loop/native_operator.py": "3cb9359b28088c4b52f15fa05461d315cfdcd655e558e1bd72d57a66b9896eb6",
-    "controller/loop/confinement.py": "b21a25af3b7d762060034bb5414e47a4f9502377443b1a8c66b9ea904315e832",
-    "controller/loop/engine.py": "dfebcea62ab614f038747f19746f6c495196a60de6f27de308254e20078472ff",
-    "controller/loop/native_completion.py": "bff2f1e43dcd6cb01791ac3594f6a3a4423701d939aae8da684d59cc243d596b",
-    "controller/loop/cli.py": "ed4846ac9f0f0616cbf222895e42150dfd93cb7b5a7b022238aca874009e9d23",
-    "controller/loop/notes.py": "c15e1c31e9700a325cba9d5b92451cbe43ac9b766a01261ec3fef1f4167ef987",
-    "controller/loop/util.py": "0c20f2c63859398b241de7beaa1283903dfd91e526ce8a3a523536926ada5d07",
-    "controller/loop/native_lineage.py": "e56c2df4932d90eb044e8664c770981427e372bd0dc8f64040cfdba7fdc16247",
-    "controller/loop/native_startup.py": "0d666233b8ea8cbecfaae9864b28ba47d33fbe4b686973fd94870c9110d03f0e",
-    "controller/loop/native.py": "ccbd2afa9d80e752401b1dd2485e3866dd469739d1e7c05afb5c0744765647e9",
-    "controller/loop/native_protocol.py": "54ee317f5be8b8f671739be9a978f120fe55b58b0845585a40befbb9ce88eb83",
-    "controller/loop/adapter.py": "42690e9f3ee7705dea53f58c81d84b6766fb57767fb86510a5ce1dee9d5afca1",
-    "controller/loop/context.py": "3fb03ffa21af0d9f845eb7290a4e750995a7774b280f5892588b511aa32f80c4",
-    "controller/tests/test_collector_regression.py": "2d08d27e674fb314470e2c7fda6ee413913b17a7f78c182e86245b72cdaff783",
-    "controller/tests/test_native.py": "d8e360d1792bafea4f63448640633b5408f4b881172b0ae6932fe95bc14ac91d",
-    "controller/tests/test_event_lifecycle.py": "aa2e6355d6f12bd55d0e9d99bb9a1b4b6f2942459645020b255c708fe00a0be2",
-    "controller/tests/test_context.py": "585eafae1780cd4fb1e2259d41116667c1fe5ee0e9e190f05ee207c7d82e1635",
-    "controller/tests/test_reliability.py": "36cf132e98b79dcf75eb8f8dda8526d045908fa74d3e358aa6e2f5c4f7aa964f",
-    "controller/tests/test_native_continuation.py": "b1ba493b0e92e99e5356722afa3886021cfbe2e58a0687502c0eea857b8765d4",
-    "controller/tests/test_native_policy.py": "120f5884bba9f1fbcd2065f9f86c1a4b53de9111ce78c248b962c824df06c241",
-    "controller/tests/test_native_idle_usage.py": "b6f513848a45ef177716ff473961f214724738ede8466a79aeb97852f8637e0d",
-    "controller/tests/test_native_resume.py": "010164b34612bc2582ffb2e332d868fbf35900873e249800d6a8fb327ba3ccd4",
-    "controller/tests/test_native_completion.py": "04bd4224b08cf9d9e8e8dc0781bab19a72f1a7e23341051692dcf18560743c87",
-    "controller/tests/test_native_maintenance.py": "c27b8f4a6a3c8318c37c3de4adbf489fb66490fda9e3979d9899823af64fbbaa",
-    "controller/tests/test_native_startup.py": "8c0f85f9f7438ef600f6e4323765a2c099e05ad5ab9e4d871efef359c901dc4a",
-    "controller/tests/test_portability.py": "0bef8d0d5f4d53fc80c668feb3ccc54b9dc219011d9cb0a39e4614999f266f1c",
-    "controller/tests/test_controller.py": "0ee270bbd7abdaf580bd893a1fcccaaecfefaaefec3a26ca7e9f864813a52bd4",
-    "controller/tests/test_native_lineage.py": "b5ef7db1a562b83850f1733dc07d16e1223217f40203671d567aa61daf50c6f4",
-    "controller/tests/test_q4_recovery.py": "109cad9be20f5249974952ffedf47b93b05daa8f8a39fa2285011092c9749426",
-    "controller/tests/test_terminal.py": "5b04aa636171a2ef0cbf6f127a9a20d911945333a995b1d6742401b3423ff78f",
-    "controller/tests/test_native_operator.py": "75fdd6080a0f77f36958e40fe5b7eea5b5530c421e2180177a4f8b46263a5538",
-    ".github/workflows/tests.yml": "0884608e5c4cd1a58e6491e0b90bd6cdc089e6848e725f92f9398617d7501756",
-    "examples/config.json": "075bdb2a0b3df505393ad784b0f7b2dfab03e567eb4acf0108b55d9fd7768353",
-    "tools/collector_diagnostics.py": "cfbc88c06fe0b5519770e35182ea8760114e8c4d3e95c7243bfb0aa0fc452e45",
-    "README.md": "4949b467c24d2530832627b4398641706124b349691e492e9860895c427dd881",
-    "ARCHITECTURE.md": "0baf74b030f66260de7479cabd7c5268cef1a13b5162b0dac8bad155970b5658",
-    "EVALUATION.md": "dc881aef0f901314539f6ac9fe078d8664f91d23612d0d20b54b896317096cac",
-    "CONTRIBUTING.md": "c2c7b1953fdb5e092ceeaff4424667bc98c297e8af549312494b49343e137d57",
-    "SECURITY.md": "7c99ae1962d50271e8fb0a2a98a8b5073f84cf51f81a09338cd5f913d807f346",
-    "ROADMAP.md": "f139c8bfd5ec201b222c8017366e964b54066558934529cc4bd152d975be7b3a",
-    "PROVENANCE.md": "bbd5d252d8af7559ee246639fda59446801dc4ad28b1b6d20552368d3263131d",
-    "CLIENT_SUPPORT.md": "9ad80496d20a8d8486ad67371987dba268cd43d39bc0db08e63b5cee9bc654c8",
-    "ENVIRONMENT.md": "6906125dfca2ac25ac8bfb2a5950aade404be124f283725738ce8f36074b0b18",
-    "NATIVE_PROFILE.md": "f74dbb28eba477feeaa2d133112576de549830f1e8695572c3b0dd0aaa2ffb6c",
-    "pyproject.toml": "c252867f1d95cef6d2517d105918ba119fa70c6892fcb9346a1f554e4d1b8f73",
-    "requirements.txt": "395a0cbc832e51c019afbfdd5a797220af835591acac81147268f424927b7720",
-    "requirements.lock": "aabab65ea4585cc91d49ecb2543dda57abb1e8294b7a71b876bc9c96faaaf3f5",
-    ".gitignore": "c2bf081e81b25f700d1a7729622e972adc299590bf186c26bb559252ac6fa694"
-  },
-  "code_tests_docs_byte_exact": true,
-  "offline_checks": {
-    "host": 287,
-    "isolated_collector": 287,
+  "private_source_identity": "81727ebd101986ee0731cc5df804c741b3b068f87e1bcf016d9c11432b4634c8",
+  "controller_hash": "125bb121c5a0ec49900c1033d37b587ab5689c08b5d920981c30a45cfaa4f177",
+  "previous_main": "beac62ac9223a01ae90c9e8380bb7805d9c97a94",
+  "development_parent": "fa0de19f1d83e9e5ddc891935bc25eab4d372ae0",
+  "runtime_source": "V3 controller bytes preserved; repository also includes presentation/measurement files",
+  "archived_offline_checks": {
+    "host": 343,
+    "isolated_collector": 343,
     "skips": 0
   },
-  "live_qualification": "PENDING",
-  "formal_review": "NOT_STARTED",
-  "excluded": "Private config/runtime lock, instruction packs, raw archives, notes, auth/session/state/databases, private fork history"
+  "current_commit_ci": "See commit-bound Actions results; not inferred from this metadata",
+  "native_qualification": "BLOCKED; no native launch integration for prepared V3 condition",
+  "benchmark": "NO_NATIVE_COMPARISON_RESULTS",
+  "selected_update_files": {
+    "ARCHITECTURE.md": {
+      "sha256": "0baf74b030f66260de7479cabd7c5268cef1a13b5162b0dac8bad155970b5658",
+      "bytes": 3120
+    },
+    "ENVIRONMENT.md": {
+      "sha256": "cefddb58fa0132151909e0e4f25b2e7d861d824ffdc31ac1ca0cca5c9507c300",
+      "bytes": 4480
+    },
+    "EVALUATION.md": {
+      "sha256": "dc881aef0f901314539f6ac9fe078d8664f91d23612d0d20b54b896317096cac",
+      "bytes": 5834
+    },
+    "README.md": {
+      "sha256": "736666ac0fcf2a9a2017b98127a1d10cfd872c3a07e3139a501166dfa228d07f",
+      "bytes": 6592
+    },
+    "NATIVE_INTAKE.md": {
+      "sha256": "7e8a9f0785d238978f66831f163ed67ff2576f86e0a73f684327afcf1da7a05c",
+      "bytes": 4983
+    },
+    "ROADMAP.md": {
+      "sha256": "f139c8bfd5ec201b222c8017366e964b54066558934529cc4bd152d975be7b3a",
+      "bytes": 1694
+    },
+    "CONTRIBUTING.md": {
+      "sha256": "c2c7b1953fdb5e092ceeaff4424667bc98c297e8af549312494b49343e137d57",
+      "bytes": 1010
+    },
+    "requirements.txt": {
+      "sha256": "395a0cbc832e51c019afbfdd5a797220af835591acac81147268f424927b7720",
+      "bytes": 17
+    },
+    "IMPLEMENTATION_README.md": {
+      "sha256": "bcb23150823a76e40b3aa9a2fa0bd02bc2568b7d81752dab8f3c4b817fa885a9",
+      "bytes": 12972
+    },
+    "CLIENT_SUPPORT.md": {
+      "sha256": "9ad80496d20a8d8486ad67371987dba268cd43d39bc0db08e63b5cee9bc654c8",
+      "bytes": 1632
+    },
+    "requirements.lock": {
+      "sha256": "aabab65ea4585cc91d49ecb2543dda57abb1e8294b7a71b876bc9c96faaaf3f5",
+      "bytes": 296
+    },
+    "pyproject.toml": {
+      "sha256": "c252867f1d95cef6d2517d105918ba119fa70c6892fcb9346a1f554e4d1b8f73",
+      "bytes": 402
+    },
+    "SECURITY.md": {
+      "sha256": "7c99ae1962d50271e8fb0a2a98a8b5073f84cf51f81a09338cd5f913d807f346",
+      "bytes": 1292
+    },
+    "PROVENANCE.md": {
+      "sha256": "bbd5d252d8af7559ee246639fda59446801dc4ad28b1b6d20552368d3263131d",
+      "bytes": 3018
+    },
+    "NATIVE_PROFILE.md": {
+      "sha256": "f74dbb28eba477feeaa2d133112576de549830f1e8695572c3b0dd0aaa2ffb6c",
+      "bytes": 1640
+    },
+    "docs/BENCHMARK_PROTOCOL.md": {
+      "sha256": "924b5091d50409ee42018b3266bb92eaadf3d0a09d3c577737560b8171970c66",
+      "bytes": 7998
+    },
+    "docs/README_STATIC.md": {
+      "sha256": "94573bdac63104f9ae2be774ec00255419879055051d0c1ccd53f14c7e010993",
+      "bytes": 6712
+    },
+    "docs/ALPHA_READINESS.md": {
+      "sha256": "9f196316f889f2a6d7b7f34c868c0da953257410680cc80000885cc14fe37f17",
+      "bytes": 2744
+    },
+    "docs/STATUS.md": {
+      "sha256": "dc48b946e01941a6f66d31e0a656159f316f885835e2488c5470e855f68b67f6",
+      "bytes": 5061
+    },
+    "tests/test_benchmark_report.py": {
+      "sha256": "a9ffed7157eaa00b6400c8011ceadf40e4511ed4985f303c5221a8abecde5a2d",
+      "bytes": 4486
+    },
+    "controller/bridge.py": {
+      "sha256": "8a70e06cff25d3d3b5bcf01a1b4e1aa4bc1a22f40256ee1de6da3ea9167c3e03",
+      "bytes": 3304
+    },
+    "controller/export_setup_session.py": {
+      "sha256": "f96bc28bae792a45505faec0668f99a3604901170dce3a696c27bab819758808",
+      "bytes": 3484
+    },
+    "controller/loopctl.py": {
+      "sha256": "32b7577b1a7d0602b47789560ecd47e7bbb33b733a8f696bb9b05394c28cf263",
+      "bytes": 306
+    },
+    "controller/native_loopctl.py": {
+      "sha256": "d1b6173b884aa013eb678bed2adc0bfcdc84e22a25efac1e3db5d188907546f9",
+      "bytes": 11591
+    },
+    "examples/config.json": {
+      "sha256": "075bdb2a0b3df505393ad784b0f7b2dfab03e567eb4acf0108b55d9fd7768353",
+      "bytes": 1177
+    },
+    "tools/benchmark_report.py": {
+      "sha256": "4d928a2ff528522c18a87226dfbb92e9350f7cde966fb22185fe2cd87d3b648e",
+      "bytes": 8291
+    },
+    "tools/collector_diagnostics.py": {
+      "sha256": "470e93c18a251f59f12312efaa0a04f165ea9305979950ea82e2745eb6d1b6dd",
+      "bytes": 5165
+    },
+    "tools/ci_bwrap_profile.py": {
+      "sha256": "fc260e00685c5fa00ff0cb39f16c1db3c0a865b7ed1f9cd10a6b42a99f6fb571",
+      "bytes": 4788
+    },
+    "tools/run_offline_collector.py": {
+      "sha256": "fa841f4c989c9813f6d525d310f1260a65897d97d88006a25dc46f75955d373a",
+      "bytes": 1512
+    },
+    "evaluation/benchmark-v1/prices.json": {
+      "sha256": "1dac7769658565bf36b7be7c186045f92cc19b0d410e1cd316fbfb56ea81b43f",
+      "bytes": 617
+    },
+    "evaluation/benchmark-v1/schedule.json": {
+      "sha256": "becb1a59083808911405a0e697b7f5c322fb4073b7a2f1f1fcd952b5fa74beb8",
+      "bytes": 9656
+    },
+    "controller/loop/native_lineage.py": {
+      "sha256": "e56c2df4932d90eb044e8664c770981427e372bd0dc8f64040cfdba7fdc16247",
+      "bytes": 2616
+    },
+    "controller/loop/native_receipts.py": {
+      "sha256": "78476facde1dbee74ebe640e2bc49ff9d9c67ff2a6e876fc591c271ffdfa5473",
+      "bytes": 5842
+    },
+    "controller/loop/native_compaction_timing.py": {
+      "sha256": "fe381a329c9f1d340738b5b70cd7e889231ed90f3e0c39b4145296607e25a6f4",
+      "bytes": 2103
+    },
+    "controller/loop/__init__.py": {
+      "sha256": "9b2fe12f2e95bf8dfee326d095b326ae0ee3905a137aeca957c685548612c877",
+      "bytes": 74
+    },
+    "controller/loop/native_stopped.py": {
+      "sha256": "053bd81d3170ca3f130ba53670acbc2987abc819b651e0902388b1f675070d4a",
+      "bytes": 23976
+    },
+    "controller/loop/adapter.py": {
+      "sha256": "42690e9f3ee7705dea53f58c81d84b6766fb57767fb86510a5ce1dee9d5afca1",
+      "bytes": 11036
+    },
+    "controller/loop/collector.py": {
+      "sha256": "24b394e27fcf54d3bdeae36e9c7973fb9f77f7459aaedea4a45679286f011d42",
+      "bytes": 8056
+    },
+    "controller/loop/native.py": {
+      "sha256": "e99e326c1d39bcf7a2284762b699ca1a510819d42ec3fd807b30b48384e04d1d",
+      "bytes": 125068
+    },
+    "controller/loop/native_continuation.py": {
+      "sha256": "38bfa4eb327a00dec3f751d26d0e701352cd25881b1c63e0439138fb9a83cf8c",
+      "bytes": 19302
+    },
+    "controller/loop/notes.py": {
+      "sha256": "c15e1c31e9700a325cba9d5b92451cbe43ac9b766a01261ec3fef1f4167ef987",
+      "bytes": 5170
+    },
+    "controller/loop/util.py": {
+      "sha256": "0c20f2c63859398b241de7beaa1283903dfd91e526ce8a3a523536926ada5d07",
+      "bytes": 3529
+    },
+    "controller/loop/native_status.py": {
+      "sha256": "6c122e9579e212c94c3da5881afff45000035c46ca47533e75ed96b5224f3687",
+      "bytes": 2877
+    },
+    "controller/loop/native_startup.py": {
+      "sha256": "99ddb977993f2202aba841ef61b6331269a0c4a6217aabe7db93af9fe21e7c8c",
+      "bytes": 35648
+    },
+    "controller/loop/native_resume.py": {
+      "sha256": "e8a5f66b12d7b32c73629091674130280d606ece681971966ff9119764c72d50",
+      "bytes": 10188
+    },
+    "controller/loop/native_completion.py": {
+      "sha256": "bff2f1e43dcd6cb01791ac3594f6a3a4423701d939aae8da684d59cc243d596b",
+      "bytes": 4325
+    },
+    "controller/loop/context.py": {
+      "sha256": "3fb03ffa21af0d9f845eb7290a4e750995a7774b280f5892588b511aa32f80c4",
+      "bytes": 21517
+    },
+    "controller/loop/cli.py": {
+      "sha256": "ed4846ac9f0f0616cbf222895e42150dfd93cb7b5a7b022238aca874009e9d23",
+      "bytes": 36609
+    },
+    "controller/loop/service.py": {
+      "sha256": "4202a0ca09d70c263a7464b0c8e099b4c190919b482e77c890c67e0ad4ae20b9",
+      "bytes": 7221
+    },
+    "controller/loop/native_owner_outcomes.py": {
+      "sha256": "5fea9cfe5cabb536b574726631ccec9cbf16c9aa126c12a99caf872a890f62cf",
+      "bytes": 1827
+    },
+    "controller/loop/native_operator.py": {
+      "sha256": "95a3014e73663c0c67215c7a24e88bd12b17ddc04b1a1f29603263657905d3ea",
+      "bytes": 15755
+    },
+    "controller/loop/engine.py": {
+      "sha256": "dfebcea62ab614f038747f19746f6c495196a60de6f27de308254e20078472ff",
+      "bytes": 24910
+    },
+    "controller/loop/native_owner_fence.py": {
+      "sha256": "7e3f901c811b4f77fb7341d6f1389193ee4736f58135e1ed3c5f66e3b99c1499",
+      "bytes": 12611
+    },
+    "controller/loop/native_packet.py": {
+      "sha256": "07410dde7cce60e11cfec25e51d44f73e0fc3952cb0972a127f116de65aac2be",
+      "bytes": 15441
+    },
+    "controller/loop/event_stream.py": {
+      "sha256": "7ce2253e3a536e0cfcd8af796b570eeb1e05355f83101dc1e8a3c4d45ecad8a3",
+      "bytes": 5142
+    },
+    "controller/loop/confinement.py": {
+      "sha256": "b21a25af3b7d762060034bb5414e47a4f9502377443b1a8c66b9ea904315e832",
+      "bytes": 3437
+    },
+    "controller/loop/settings.py": {
+      "sha256": "e6c186a175b671673bcd29f550532fbb8f260e28e147f03b988a76948831866c",
+      "bytes": 4217
+    },
+    "controller/loop/contract.py": {
+      "sha256": "b792d0c5e75d1d73e10baf061db0fd209f74d482c99c18f37bdb21cdf052c2bf",
+      "bytes": 5280
+    },
+    "controller/loop/native_protocol.py": {
+      "sha256": "54ee317f5be8b8f671739be9a978f120fe55b58b0845585a40befbb9ce88eb83",
+      "bytes": 6806
+    },
+    "controller/loop/store.py": {
+      "sha256": "cbb28bc8a6427c4bb9152cf4b2fac1915d51505453cbffd51f2aebc6ff105e1b",
+      "bytes": 19892
+    },
+    "controller/policies/reference-led-design.md": {
+      "sha256": "7eeb396969a0107edd443ef0fd8f8f96384204d5ac5d37db4a0f77b66657508e",
+      "bytes": 1859
+    },
+    "controller/tests/test_native_idle_usage.py": {
+      "sha256": "8a17a298ab39ee7e720ab38926f2e0523a022c3b087fb6ac6f451cf6f5d91859",
+      "bytes": 5042
+    },
+    "controller/tests/test_native_policy.py": {
+      "sha256": "120f5884bba9f1fbcd2065f9f86c1a4b53de9111ce78c248b962c824df06c241",
+      "bytes": 2963
+    },
+    "controller/tests/test_context.py": {
+      "sha256": "585eafae1780cd4fb1e2259d41116667c1fe5ee0e9e190f05ee207c7d82e1635",
+      "bytes": 34686
+    },
+    "controller/tests/test_native_operator.py": {
+      "sha256": "332763717808d18ea2517c2bc6fa027c56546515586cc6b2b118ba5866b1444c",
+      "bytes": 12005
+    },
+    "controller/tests/test_native_startup.py": {
+      "sha256": "dcb630d64211188c7a833f5112766387c25021b03e5cb40f2ce7119f606f650a",
+      "bytes": 23697
+    },
+    "controller/tests/test_native_stopped.py": {
+      "sha256": "748c3bbdd3bbf9a7d8d72af5cff9bdd3b4a3ddade7a8fa5073fe0aef6196147c",
+      "bytes": 17166
+    },
+    "controller/tests/test_controller.py": {
+      "sha256": "0ee270bbd7abdaf580bd893a1fcccaaecfefaaefec3a26ca7e9f864813a52bd4",
+      "bytes": 25844
+    },
+    "controller/tests/test_native_compaction_timing.py": {
+      "sha256": "46c632f7816b26cf2fbfa276b4f87a5a20c7a82ce70b733d38b4b5bfb797c1d5",
+      "bytes": 3444
+    },
+    "controller/tests/test_native.py": {
+      "sha256": "d8e360d1792bafea4f63448640633b5408f4b881172b0ae6932fe95bc14ac91d",
+      "bytes": 13052
+    },
+    "controller/tests/test_native_completion.py": {
+      "sha256": "04bd4224b08cf9d9e8e8dc0781bab19a72f1a7e23341051692dcf18560743c87",
+      "bytes": 9471
+    },
+    "controller/tests/test_native_owner_fence.py": {
+      "sha256": "45a34035197812e4f18dbfb5cb26b415ac09d4538feda885f8b73c8a844805a3",
+      "bytes": 9032
+    },
+    "controller/tests/test_native_resume.py": {
+      "sha256": "010164b34612bc2582ffb2e332d868fbf35900873e249800d6a8fb327ba3ccd4",
+      "bytes": 6408
+    },
+    "controller/tests/test_terminal.py": {
+      "sha256": "5b04aa636171a2ef0cbf6f127a9a20d911945333a995b1d6742401b3423ff78f",
+      "bytes": 6412
+    },
+    "controller/tests/test_event_lifecycle.py": {
+      "sha256": "aa2e6355d6f12bd55d0e9d99bb9a1b4b6f2942459645020b255c708fe00a0be2",
+      "bytes": 13514
+    },
+    "controller/tests/test_native_maintenance.py": {
+      "sha256": "c27b8f4a6a3c8318c37c3de4adbf489fb66490fda9e3979d9899823af64fbbaa",
+      "bytes": 6619
+    },
+    "controller/tests/test_portability.py": {
+      "sha256": "0bef8d0d5f4d53fc80c668feb3ccc54b9dc219011d9cb0a39e4614999f266f1c",
+      "bytes": 4642
+    },
+    "controller/tests/test_reliability.py": {
+      "sha256": "36cf132e98b79dcf75eb8f8dda8526d045908fa74d3e358aa6e2f5c4f7aa964f",
+      "bytes": 21491
+    },
+    "controller/tests/test_native_lineage.py": {
+      "sha256": "b5ef7db1a562b83850f1733dc07d16e1223217f40203671d567aa61daf50c6f4",
+      "bytes": 6406
+    },
+    "controller/tests/test_native_receipts.py": {
+      "sha256": "5b5cd6115aa00f9319281cf449021f28d19e322145d094be7d299c01361759ab",
+      "bytes": 6254
+    },
+    "controller/tests/test_ci_profile.py": {
+      "sha256": "17140d4873ffa9ef862b3dbebe9712b536a9159e3bd230637545fdff16389f7b",
+      "bytes": 1746
+    },
+    "controller/tests/test_q4_recovery.py": {
+      "sha256": "109cad9be20f5249974952ffedf47b93b05daa8f8a39fa2285011092c9749426",
+      "bytes": 27292
+    },
+    "controller/tests/test_collector_regression.py": {
+      "sha256": "2d08d27e674fb314470e2c7fda6ee413913b17a7f78c182e86245b72cdaff783",
+      "bytes": 3096
+    },
+    "controller/tests/test_native_packet.py": {
+      "sha256": "f02a4624d3307c6abb8b1e13c1690a0d38e2e8ea15a237162ec74eab30f7a7a1",
+      "bytes": 6661
+    },
+    "controller/tests/test_native_owner_outcomes.py": {
+      "sha256": "4d7390a88de276e9e834e5344c52e75b91815c3234bf898d72c5807b3e79032f",
+      "bytes": 4632
+    },
+    "controller/tests/test_native_continuation.py": {
+      "sha256": "b1ba493b0e92e99e5356722afa3886021cfbe2e58a0687502c0eea857b8765d4",
+      "bytes": 15242
+    },
+    "examples/ci/bwrap.apparmor": {
+      "sha256": "e59bc2e1e7fce148cdfd1566fe563efa54c736eec8776482eeeb0d9728b1e560",
+      "bytes": 775
+    },
+    ".github/workflows/tests.yml": {
+      "sha256": "7dc730a489c19bb46ceeb0b0d161bc242e2c010acc35f5d26c54facf6e349295",
+      "bytes": 2364
+    }
+  },
+  "excluded": "Runtime/state/auth/keys/capabilities, raw private instruction packs/review archives/notes/history"
 }

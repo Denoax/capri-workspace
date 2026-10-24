@@ -70,7 +70,8 @@ class NativeOperator:
         b=request['binding'];task=self.checked_task(b)
         if self.unresolved():raise Rejected('Unreconciled maintenance prevents formal review')
         ids={row['id'] for row in task['packet']['requirements']}
-        if ids!={'N01','N02','N03','N04','N05','N06','N07','N08'}:raise Rejected('Final review must target all eight workflow requirements')
+        required={'N01','N02','N03','N04','N05','N06','N07','N08'}
+        if not required<=ids or ids-required-{'SCOPE'}:raise Rejected('Final review must target all eight workflow requirements, with only optional SCOPE')
         material={}
         for item in b['evidence']:
             name=item['name'];safe_path('/review-material',name)
@@ -138,7 +139,7 @@ class NativeOperator:
         self.adapter.operation_deadline=time.monotonic()+240;self.adapter.operation_tools=0
         try:
             if backend.phase!='read':
-                backend.write_ready=False;self.adapter.slots.remount(role,backend.inputs,phase='read',fresh=False)
+                backend.write_ready=False;backend=self.adapter.slots.remount(role,backend.inputs,phase='read',fresh=False)
             checkpoint=Checkpoint(Path(reconciled['checkpoint']),self.engine.store.home) if reconciled else self.adapter.checkpoint(task['id'],role)
             state=self.adapter.prepare_context(task['id'],role)
             if action=='checkpoint-runtime':

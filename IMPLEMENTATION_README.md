@@ -1,3 +1,7 @@
+> Current implementation export: V3 offline recovery. The new stopped-state preparation route has no native launcher yet. Historical startup commands below do not authorize replay of a consumed or uncertain operation. See [alpha readiness](docs/ALPHA_READINESS.md) and [current status](docs/STATUS.md).
+
+Current experimental intake/recovery changes and qualification limits: [NATIVE_INTAKE.md](NATIVE_INTAKE.md).
+
 # Codex three-role workflow
 
 An experimental deterministic controller coordinates three native Codex terminal

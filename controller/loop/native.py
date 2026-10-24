@@ -23,7 +23,7 @@ from .confinement import argv, prepare_runtime
 from .native_protocol import Lifecycle, CompactionLifecycle, decode
 from .settings import ROLES
 from .context import configured_policy
-from .util import Rejected, atomic, digest, identity, tree, redact, now, write_json
+from .util import Rejected, NeedsInput, atomic, digest, identity, tree, redact, now, write_json
 
 
 @dataclass(frozen=True)
@@ -60,6 +60,8 @@ class Backend:
         self.turn_bytes = 0
         self.root = Path(settings.state_dir) / role / str(generation)
         self.root.mkdir(parents=True, mode=0o700, exist_ok=False)
+        from .native_receipts import ReceivedReceipts
+        self.received_receipts = ReceivedReceipts(self.root, role, generation)
         # Rollouts survive capture/generation changes; no seeding inference.
         self.runtime = Path(settings.state_dir) / role / 'runtime'
         mount_role = 'doer' if phase == 'write' else ('preflight' if role == 'doer' else role)
@@ -113,10 +115,14 @@ class Backend:
             rid = self.sequence
             future = self.pending[rid] = Future()
         try:
+            timing = getattr(self, 'compaction_timing', None) if method == 'thread/compact/start' else None
+            if timing:timing.mark('RPC_SEND_INTENT', rpc_id=rid)
             self._send({'id': rid, 'method': method, 'params': params})
+            if timing:timing.mark('RPC_SENT', rpc_id=rid)
             value = future.result(timeout=25)
             if 'error' in value:
                 raise Rejected('Backend RPC rejected: ' + str(value['error'].get('code')))
+            if timing:timing.mark('RPC_ACKNOWLEDGED', rpc_id=rid)
             return value['result']
         except BaseException:
             # A timed-out mutation may have happened; fail closed, never retry blindly.
@@ -128,11 +134,19 @@ class Backend:
                 self.pending.pop(rid, None)
 
     def _reader(self):
+        received = None
         try:
+            # Kept lazy for deterministic reader fixtures; production constructs
+            # this before starting the reader or backend process.
+            if not hasattr(self, 'received_receipts'):
+                from .native_receipts import ReceivedReceipts
+                self.received_receipts = ReceivedReceipts(self.root, self.role, self.generation)
             while True:
+                received = None
                 raw = self.proc.stdout.readline(1_000_001)
                 if not raw:
                     raise Rejected('Backend disconnected; not task completion')
+                received = self.received_receipts.received(raw, self.thread or self.prior)
                 if len(raw) > 1_000_000 or not raw.endswith(b'\n'):
                     raise Rejected('Oversized/incomplete native frame')
                 value = decode(raw)
@@ -141,11 +155,15 @@ class Backend:
                         future = self.pending.get(value['id'])
                         if future is None or future.done():
                             raise Rejected('Unknown/duplicate RPC response')
+                        self.received_receipts.result(received, 'VALIDATED')
+                        received = None
                         future.set_result(value)
                         continue
                     if 'id' in value:
                         # Backend approval requests never authorize permission expansion.
                         self._send({'id': value['id'], 'error': {'code': -32001, 'message': 'Approval unavailable'}})
+                        self.received_receipts.result(received, 'VALIDATED')
+                        received = None
                         continue
                     idle_usage = value.get('method') == 'thread/tokenUsage/updated' and not self.active
                     if idle_usage:
@@ -187,6 +205,8 @@ class Backend:
                             'path': str(self.root / 'idle-usage.jsonl'),
                             'provenance': 'IDLE_HISTORY_NOT_FRESH_USAGE'}} if idle_usage else value)
                         self.observer(self.role, self.generation, observed)
+                self.received_receipts.result(received, 'VALIDATED')
+                received = None
                 for peer in peers:
                     try:
                         peer.put_nowait(value)
@@ -198,8 +218,15 @@ class Backend:
                     with self.lock:
                         self.observed_terminal = value['params']['turn']['id']
         except BaseException as ex:
+            if received is not None:
+                try:
+                    self.received_receipts.result(received, 'REJECTED', str(ex))
+                except BaseException as receipt_error:
+                    # The original policy failure remains the first cause. A
+                    # receipt failure also holds the backend; never resume it.
+                    ex = Rejected(str(ex)+'; receipt result failed: '+str(receipt_error))
             with self.lock:
-                self.error = str(ex)
+                self.error = self.error or str(ex)
                 for future in self.pending.values():
                     if not future.done():
                         future.set_exception(Rejected(self.error))
@@ -269,17 +296,29 @@ class Backend:
             self.active, self.turn_bytes = lifecycle, 0
             self.observed_terminal = None
         try:
+            from .native_compaction_timing import CompactionTiming
+            self.compaction_timing = CompactionTiming(self.root, self.role, self.generation, self.thread, max_seconds)
             self.rpc('thread/compact/start', {'threadId': self.thread})
             while not lifecycle.terminal or getattr(self,'observed_terminal',None) != lifecycle.turn:
                 lifecycle.budget()
                 if self.error:
                     raise Rejected(self.error)
                 time.sleep(.02)
-            return lifecycle.finish_compaction()
-        except BaseException:
-            self.close()
+            result = lifecycle.finish_compaction()
+            self.compaction_timing.mark('LIFECYCLE_RETURNED')
+            return result
+        except BaseException as ex:
+            timing = getattr(self, 'compaction_timing', None)
+            try:
+                if timing:
+                    timing.mark('FAILED', error_class=type(ex).__name__)
+                    timing.mark('CLEANUP_BEGIN')
+            finally:
+                self.close()
+            if timing:timing.mark('CLEANUP_END')
             raise
         finally:
+            self.compaction_timing = None
             with self.lock:
                 self.active = None
 
@@ -679,6 +718,9 @@ class NativeAdapter:
 
     def owner_originals(self):
         b=self.slots.backends['thinker']
+        packet=self.owner_packet()
+        if packet:
+            return {'/inputs/current-context/'+s['name']:s['sha256'] for s in packet['sections']}
         names=['REFERENCE_LED_DESIGN.md','preserved-requirements.json','successor-request.json']+getattr(self,'owner_recovery_names',[])
         originals={}
         for name in names:
@@ -690,10 +732,47 @@ class NativeAdapter:
             raise Rejected('Owner recovery originals exceed bounded read packet; decompose scope')
         return originals
 
+    def owner_packet(self):
+        """Current sections replace repeated historical reads, never originals."""
+        from .native_packet import load
+        b=self.slots.backends['thinker'];folder=b.inputs/'current-context'
+        if not folder.exists():return None  # Historical non-packet contexts.
+        packet=load(folder)
+        cap=self.store.db.execute('SELECT scope FROM capabilities WHERE token_hash=?',
+            (self.thinker_capability_hash,)).fetchone()
+        if not cap:raise Rejected('Current-context capability binding absent')
+        scope=json.loads(cap['scope']);bound=packet['binding']
+        if (bound.get('owner')!=self.thinker_owner or
+                bound.get('repo_source_hash')!=identity(tree(scope['repo'])) or
+                bound.get('scope_hash')!=digest(scope['request']['text'].encode())):
+            raise Rejected('Current-context owner/source/scope differs')
+        for name,record in packet['originals'].items():
+            from .util import safe_path
+            if digest(safe_path(b.inputs,name).read_bytes())!=record['sha256']:
+                raise Rejected('Current-context authoritative original drift: '+name)
+        return packet
+
+    def owner_read_guide(self, originals):
+        packet=self.owner_packet()
+        if packet:
+            from .native_packet import read_guide
+            return read_guide(packet)
+        return 'Read the exact current originals with this read-only command: '+original_read_command(originals)
+
+    def qualify_owner_packet(self):
+        """Initial/recovery delivery share one read contract and stage counters."""
+        packet=self.owner_packet()
+        if not packet:raise Rejected('Prepared current-context packet required')
+        self.hold_thinker_tools()
+        expected='CONTEXT_READ:'+packet['binding_hash']
+        prompt=self.owner_read_guide(self.owner_originals())+'\nFinal exactly '+expected
+        return self.owner_dispatch([dict(type='text',text=prompt,text_elements=[])],
+            context_reads=True,validate=lambda text:text==expected)
+
     def owner_recovery_estimate(self):
         b=self.slots.backends['thinker'];originals=self.owner_originals()
         expected=dict(checkpoint='0'*64,originals=originals,owner=self.thinker_owner,authority_hash='0'*64)
-        payload=[dict(type='text',text='Read the exact current originals with this read-only command: '+original_read_command(originals)+'\nThen return exactly '+json.dumps(expected),text_elements=[])]
+        payload=[dict(type='text',text=self.owner_read_guide(originals)+'\nThen return exactly '+json.dumps(expected),text_elements=[])]
         return sum((b.inputs/name.removeprefix('/inputs/')).stat().st_size for name in originals)+len(json.dumps(payload).encode())
 
     def owner_soft_allows(self,decision):
@@ -717,6 +796,9 @@ class NativeAdapter:
                 checkpoint=self.owner_checkpoint();state.soft_checkpoint=dict(authority=key,order=state.order,path=str(checkpoint.path),sha256=digest(checkpoint.path.read_bytes()));state.persist()
             return decision
         if decision['action']!='COMPACT':raise Rejected('Owner context held: '+decision['reason']+'; explicit recovery required')
+        packet=self.owner_packet()
+        if packet and len(packet['sections'])+2>self.remaining_tools():
+            raise Rejected('Bounded current-context recovery lacks reads plus two contingency calls')
         was_enabled=self.store.db.execute('SELECT enabled FROM capabilities WHERE token_hash=?',(self.thinker_capability_hash,)).fetchone()['enabled']
         self.hold_thinker_tools();checkpoint=self.owner_checkpoint();authority=self.owner_authority()
         operation=identity(dict(authority=authority,order=state.order,epoch=state.identity.epoch))
@@ -734,7 +816,7 @@ class NativeAdapter:
         state.recovery_probe(checkpoint,self.owner_authority(),phase='read',payload_bytes=len(json.dumps(payload_probe).encode()),max_tools=0,max_seconds=30)
         self.owner_dispatch(payload_probe,probe=True,recovery=checkpoint,validate=lambda value:value=='READY')
         expected=dict(checkpoint=checkpoint.validate(self.owner_authority()),originals=originals,owner=self.thinker_owner,authority_hash=identity(self.owner_authority()))
-        reread=[dict(type='text',text='Read the exact current originals with this read-only command: '+original_read_command(originals)+'\nThen return exactly '+json.dumps(expected),text_elements=[])]
+        reread=[dict(type='text',text=self.owner_read_guide(originals)+'\nThen return exactly '+json.dumps(expected),text_elements=[])]
         self.owner_dispatch(reread,recovery=checkpoint,recovery_originals=originals,validate=lambda value:json.loads(value)==expected)
         state.rehydrate(checkpoint,self.owner_authority())
         decision=state.decision(pending=len(json.dumps(payload).encode()),checkpoint_payload=estimate)
@@ -987,10 +1069,10 @@ class NativeAdapter:
             state.startup_probe(phase='read',payload_bytes=len(json.dumps(payload).encode()),max_tools=0,max_seconds=30,explicit=True)
         return self.owner_dispatch(payload,probe=True,report_task=report_task,validate=lambda text:text=='READY')
 
-    def owner_dispatch(self,payload,*,probe=False,report_task=None,validate=None,schema=None,timeout=240,recovery=None,recovery_originals=None):
+    def owner_dispatch(self,payload,*,probe=False,report_task=None,validate=None,schema=None,timeout=240,recovery=None,recovery_originals=None,context_reads=False):
         b, owner = self.slots.backends['thinker'], self.thinker_owner
         state, frozen = self.prepare_owner_context()
-        if not probe and recovery is None:self.owner_idle_maintenance(payload)
+        if not probe and recovery is None and not context_reads:self.owner_idle_maintenance(payload)
         if recovery is not None:
             recovery.validate(self.owner_authority())
             if not state.rehydrating or state.compaction or (state.restart and not probe):raise Rejected('Owner recovery lifecycle not reconciled')
@@ -1011,7 +1093,7 @@ class NativeAdapter:
                 elif tasks and recovery is None:
                     raise Rejected('Owner already submitted a task; no successor/intake dispatch')
                 enabled = self.store.db.execute('SELECT enabled FROM capabilities WHERE token_hash=?',(self.thinker_capability_hash,)).fetchone()['enabled']
-                if (probe or report_task or recovery is not None) and enabled != 0 or not probe and not report_task and recovery is None and enabled != 1:
+                if (probe or report_task or recovery is not None or context_reads) and enabled != 0 or not probe and not report_task and recovery is None and not context_reads and enabled != 1:
                     raise Rejected('MCP hold/phase mismatch')
                 estimate=self.owner_recovery_estimate() if not probe else 0
                 decision=state.decision(pending=len(json.dumps(payload).encode()),checkpoint_payload=estimate)
@@ -1020,13 +1102,33 @@ class NativeAdapter:
                     raise Rejected('Owner context missing/stale/high pressure')
                 self.store.event(report_task,'NATIVE_OWNER_DISPATCH',dict(owner=owner,thread=b.thread,probe=probe,capture=str(capture)))
                 yield
-                self.store.require_current(owner)
                 self.prepare_owner_context()
+                try:
+                    self.store.require_current(owner)
+                except NeedsInput:
+                    # The backend has already validated a complete lifecycle.
+                    # A question created during it is a clean bound hold, not an
+                    # uncertain execution or permission to answer/retry it.
+                    from .native_owner_outcomes import completed_hold
+                    hold=completed_hold(self.store,owner,'')
+                    if hold and capture_complete('thinker',capture):
+                        write_json(capture/'hold.json',hold.result,exclusive=True)
+                        raise hold
+                    raise
         try:
             b.admission,b.output_schema,self.capture = admission,schema,capture
-            final = b.dispatch(binding,payload,max_tools=0 if probe or report_task else min(1,self.remaining_tools()) if recovery is not None else self.remaining_tools(),
+            packet=self.owner_packet() if context_reads or recovery_originals else None
+            read_count=len(packet['sections']) if packet else 1
+            if packet and read_count+2>self.remaining_tools():
+                raise Rejected('Current-context read plan exceeds remaining combined-stage budget')
+            def read_evidence():
+                if packet:
+                    from .native_packet import grade_reads
+                    return grade_reads(capture,b.inputs/'current-context',runtime=b.runtime,thread=b.thread,turn=b.active.turn)
+                return grade_original_reads(capture,recovery_originals)
+            final = b.dispatch(binding,payload,max_tools=0 if probe or report_task else min(read_count,self.remaining_tools()) if recovery is not None or context_reads else self.remaining_tools(),
                 max_seconds=self.remaining(30 if probe else min(timeout,240)),validate_output=validate or (lambda _:True),
-                independent_checks=lambda: grade_original_reads(capture,recovery_originals) if recovery_originals else probe or bool(self.evidence_check and self.evidence_check('thinker',capture)),permissions='recovery' if probe or recovery is not None else 'role')
+                independent_checks=lambda: read_evidence() if recovery_originals or context_reads else probe or bool(self.evidence_check and self.evidence_check('thinker',capture)),permissions='recovery' if probe or recovery is not None or context_reads else 'role')
             if probe and (not state.reading or state.reading['identity']['turn'] != state.identity.turn):
                 raise Rejected('Owner probe lacks current usage')
             atomic(capture/'final.json',redact(final),exclusive=True)
@@ -1070,6 +1172,10 @@ class NativeAdapter:
             self.engine.acknowledge_report(report_task,owner,answer,b.thread)
         else:
             tasks = self.store.db.execute('SELECT id FROM tasks WHERE owner=?',(owner,)).fetchall()
+            if not tasks:
+                from .native_owner_outcomes import completed_hold
+                hold=completed_hold(self.store,owner,result[0])
+                if hold:raise hold
             if len(tasks)!=1:
                 raise Rejected('Native Thinker must submit exactly one scoped task')
         return answer,result[1]
@@ -1801,7 +1907,8 @@ class NativeTerminals:
                     thread=row['thread'],generation=row['generation'])
                 self.persist()
 
-    def reconcile_stale_socket(self):
+    def inspect_stale_socket(self):
+        """Read-only ownership/liveness proof; a pathname alone is not a listener."""
         import errno
         root_stat=self.root.lstat();st=self.socket.lstat()
         if root_stat.st_uid!=os.getuid() or stat.S_IMODE(root_stat.st_mode)!=0o700 or not stat.S_ISSOCK(st.st_mode) or st.st_uid!=os.getuid():raise Rejected('Unqualified stale terminal socket ownership')
@@ -1816,9 +1923,13 @@ class NativeTerminals:
             connection.settimeout(1)
             if connection.connect_ex(str(self.socket))!=errno.ECONNREFUSED:raise Rejected('Terminal endpoint may be active; no takeover')
         if self.socket.lstat()!=st:raise Rejected('Terminal socket identity raced')
+        return dict(prior_record=str(records[0][0]),socket_identity=observed)
+
+    def reconcile_stale_socket(self):
+        proof=self.inspect_stale_socket()
         target=self.socket.with_name('ui.sock.stale-owned-'+str(__import__('uuid').uuid4()))
         self.socket.rename(target)
-        write_json(self.root/('terminal-reconciled-'+str(__import__('uuid').uuid4())+'.json'),dict(prior_record=str(records[0][0]),socket_identity=observed,preserved=str(target)),exclusive=True)
+        write_json(self.root/('terminal-reconciled-'+str(__import__('uuid').uuid4())+'.json'),dict(**proof,preserved=str(target)),exclusive=True)
 
     def owned_panes(self):
         # Callers verify the private server's creation identity first. An exited

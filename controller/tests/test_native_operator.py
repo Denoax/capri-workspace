@@ -13,9 +13,9 @@ from loop.native_startup import StartupJournal
 from loop.util import Rejected,identity,tree,digest
 
 
-def operator_fixture(self):
+def operator_fixture(self,requirement_ids=None):
     self.workspace=self.root/'candidate';self.workspace.mkdir();(self.workspace/'code.py').write_text('sealed')
-    packet=dict(requirements=[dict(id=f'N{i:02d}') for i in range(1,9)])
+    packet=dict(requirements=[dict(id=name) for name in (requirement_ids or [f'N{i:02d}' for i in range(1,9)])])
     task=self.store.create('task',packet,'owner');self.tid=task['id']
     self.store.transition(self.tid,'READY','DOER_RUNNING',candidate=str(self.workspace))
     self.store.transition(self.tid,'DOER_RUNNING','CANDIDATE_SEALED',seal=json.dumps(dict(source_hash=identity(tree(self.workspace)),files=tree(self.workspace))))
@@ -91,6 +91,31 @@ class OperatorTests(test_controller.IsolatedCase):
         with self.assertRaises(Rejected):self.operator.finish(dict(action='finish-review',binding=self.binding))
         self.assertEqual(self.calls,[])
 
+    def test_compaction_fence_binds_replacement_backend_after_readonly_remount(self):
+        original=SimpleNamespace(active=None,error=None,phase='write',thread='same',generation=45,
+            proc=SimpleNamespace(pid=900001),start_identity='old',workspace=self.workspace,inputs=self.workspace,write_ready=True)
+        replacement=SimpleNamespace(active=None,error=None,phase='read',thread='same',generation=46,
+            proc=SimpleNamespace(pid=900002),start_identity='replacement',workspace=self.workspace,inputs=self.workspace)
+        self.adapter.slots.backends={'doer':original}
+        def remount(*args,**kwargs):
+            self.adapter.slots.backends['doer']=replacement
+            return replacement
+        self.adapter.slots.remount=remount
+        checkpoint=self.root/'synthetic-checkpoint.json';checkpoint.write_text('{}')
+        self.adapter.checkpoint=lambda *args:SimpleNamespace(path=checkpoint)
+        self.adapter.prepare_context=lambda *args:SimpleNamespace(restart=False,rehydrating=False,decision=lambda:{'reason':'ALLOW'})
+        def compact(*args):
+            bound=next(r['details'] for r in self.journal.records() if r['milestone']=='MAINTENANCE_READ_ONLY_BOUND')
+            self.assertEqual((bound['generation'],bound['pid'],bound['process']),
+                             (replacement.generation,replacement.proc.pid,replacement.start_identity))
+            raise RuntimeError('controlled compaction timeout')
+        self.adapter.compact=compact
+        binding={**self.binding,'thread':'same','role_generation':45}
+        with self.assertRaisesRegex(RuntimeError,'controlled compaction timeout'):
+            self.operator.maintenance('compact-role',binding)
+        self.assertEqual(self.journal.records()[-1]['milestone'],'MAINTENANCE_UNCERTAIN')
+        self.assertEqual(self.calls,[])
+
     def test_fence_checks_dead_readonly_identity_and_exact_source(self):
         from unittest.mock import patch
         from loop.context import Checkpoint,SECTIONS
@@ -109,3 +134,27 @@ class OperatorTests(test_controller.IsolatedCase):
         # Fencing alone neither reuses a thread nor completes recovery/review.
         self.assertEqual(self.calls,[])
         with self.assertRaises(Rejected):self.operator.finish(dict(action='finish-review',binding=self.binding))
+
+
+class ScopedOperatorTests(test_controller.IsolatedCase):
+    def test_explicit_scope_keeps_all_eight_requirements_and_reaches_human_stop(self):
+        operator_fixture(self,[f'N{i:02d}' for i in range(1,9)]+['SCOPE'])
+        result=self.operator.finish(dict(action='finish-review',binding=self.binding))
+        self.assertEqual(result['status'],'AWAITING_HUMAN')
+        self.assertEqual(self.calls,[('review',self.tid),('same-thinker-report',self.tid)])
+
+    def test_scope_cannot_replace_a_missing_original_requirement(self):
+        operator_fixture(self,[f'N{i:02d}' for i in range(1,8)]+['SCOPE'])
+        with self.assertRaises(Rejected):self.operator.finish(dict(action='finish-review',binding=self.binding))
+        self.assertEqual(self.calls,[]);self.assertEqual(self.journal.records(),[])
+
+    def test_unknown_requirement_remains_rejected_before_review_intent(self):
+        operator_fixture(self,[f'N{i:02d}' for i in range(1,9)]+['SCOPE','EXTRA'])
+        with self.assertRaises(Rejected):self.operator.finish(dict(action='finish-review',binding=self.binding))
+        self.assertEqual(self.calls,[]);self.assertEqual(self.journal.records(),[])
+
+    def test_scope_does_not_bypass_uncertain_maintenance(self):
+        operator_fixture(self,[f'N{i:02d}' for i in range(1,9)]+['SCOPE'])
+        self.journal.append('MAINTENANCE_UNCERTAIN',dict(key='synthetic-timeout',role='doer'))
+        with self.assertRaises(Rejected):self.operator.finish(dict(action='finish-review',binding=self.binding))
+        self.assertEqual(self.calls,[])

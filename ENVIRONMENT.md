@@ -19,10 +19,9 @@ A passing probe alone does not certify the suite. Unsupported namespaces are a
 failed prerequisite; required tests must not be skipped or confinement weakened.
 
 CI requests explicit `ubuntu-24.04`, installs distro Python/venv/bubblewrap and
-uploads diagnostics even when the probe fails. The earlier run 39927083322 failed
-`RTM_NEWADDR` after installing bubblewrap; the full suite did not run. The cause
-was not established. New CI results belong in the parent source-bound receipt,
-not inferences about AppArmor from an error string.
+uploads diagnostics even when the probe fails. Earlier `RTM_NEWADDR` failures
+did not run the suite. Run 39973611264 subsequently captured exact AppArmor
+`unprivileged_userns` capability denials for `setpcap` and `net_admin`.
 
 A dedicated Linux VM/self-hosted runner is the fallback if the hosted image
 cannot satisfy isolation. Provision it without project credentials or model
@@ -37,3 +36,33 @@ Role mounts exclude those surfaces and raw backend endpoints. Trusted collector
 checks have no authentication or network. This boundary does not defend against
 an unrestricted host administrator. Terminal qualification does not establish
 VS Code sidebar or physical-device support.
+
+## Disposable CI prerequisites
+
+The workflow loads `examples/ci/bwrap.apparmor` only on this repository's
+ephemeral GitHub-hosted Ubuntu runner and removes it after the job. The two
+named profiles allow bwrap to construct its namespaces, then stack a capability
+denial onto executed children. No unconfined profile, sysctl change, disabled
+AppArmor service, setuid executable or collector-flag change is used. This is
+an environment prerequisite, not a runtime permission for roles or the desktop.
+
+The policy uses AppArmor 4.0 ABI and documented profile stacking, following
+[Canonical's purpose-built bwrap guidance](https://discourse.ubuntu.com/t/understanding-apparmor-user-namespace-restriction/58007)
+and the [AppArmor 4.0.1 example](https://gitlab.com/apparmor/apparmor/-/blob/v4.0.1/profiles/apparmor/profiles/extras/bwrap-userns-restrict).
+The probe checks namespace separation and the actual child's profile and
+zero effective capabilities before the required full suite. Failed policy
+installation, missing child policy, failed probe or skipped suite stays a
+failure with diagnostic artifacts. Do not install this policy on Mani's daily
+workstation or treat CI as native model qualification.
+
+The first policy-qualified run (39974469228) cleared the kernel denials but
+reached a second prerequisite: `execvp python3: No such file or directory`.
+The collector's existing `/lib64 -> usr/lib` mapping expects the ELF loader at
+`/usr/lib/ld-linux-x86-64.so.2`; Ubuntu keeps it in `x86_64-linux-gnu` instead.
+CI verifies Python's actual ELF interpreter and resolved loader, creates only
+that missing alias on the disposable runner, records it, and removes its own
+exact alias at cleanup. Conflicting paths reject. The collector and its
+mount/namespace arguments remain unchanged. Ubuntu support includes this
+declared prerequisite. Run 39974943718 verified the actual interpreter/alias,
+child policy, all310 tests and cleanup; exact source/commit receipts belong
+in the parent evidence record. No VM runner is provisioned by this guide.

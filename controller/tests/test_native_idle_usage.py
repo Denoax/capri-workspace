@@ -11,6 +11,7 @@ import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from loop.native import Backend, NativeAdapter
 from loop.native_protocol import Lifecycle
+from loop.native_receipts import ReceivedReceipts
 from loop.context import ContextState
 from test_context import binding, usage
 
@@ -28,6 +29,9 @@ class IdleUsageTests(unittest.TestCase):
     def read(self,events,generation=3,active=None,thread='thread',prior='thread',budget=0):
         b=Backend.__new__(Backend)
         b.root=self.root;b.thread=thread;b.prior=prior;b.role='doer';b.generation=generation
+        # Each synthetic backend has its own receive journal, as production
+        # generations do; these cases intentionally share the idle-history root.
+        b.received_receipts=ReceivedReceipts(Path(tempfile.mkdtemp(dir=self.root)),'doer',generation)
         b.lock=threading.RLock();b.active=active;b.turn_bytes=0;b.idle_usage_bytes=budget
         b.error=None;b.pending={};b.clients={queue.Queue()}
         b.proc=SimpleNamespace(stdout=BytesIO(b''.join((json.dumps(v)+'\n').encode() for v in events)))
