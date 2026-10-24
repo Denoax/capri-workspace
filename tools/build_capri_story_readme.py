@@ -3,22 +3,35 @@
 from pathlib import Path
 import json,re
 ROOT=Path(__file__).resolve().parents[1];STORY=ROOT/'showcase/capri/story'
-def picture(name,alt,width=1000,static=False):
-    threshold=1000 if name=='contexts' else 760
-    prefix='showcase/capri/story/exports/'+name;extension='png' if static else 'gif'
-    return f'''<picture>
-  <source media="(prefers-reduced-motion: reduce) and (max-width: {threshold}px)" srcset="{prefix}-portrait.png">
-  <source media="(prefers-reduced-motion: reduce)" srcset="{prefix}-wide.png">
-  <source media="(max-width: {threshold}px)" srcset="{prefix}-portrait.{extension}">
-  <img src="{prefix}-wide.{extension}" alt="{alt}" width="{width}">
-</picture>
-'''
+FORMATS=json.loads((STORY/'format.json').read_text())
+CONFIG=json.loads((STORY/'story.json').read_text())
+def image(name,alt,static=False):
+    lesson=CONFIG['lessons'][name];portrait=lesson['family']=='portrait';mobile=FORMATS['mobile_breakpoint_px']
+    prefix='showcase/capri/story/exports/'+name
+    layout='portrait' if portrait else 'landscape';size=FORMATS['families'][layout];p=FORMATS['families']['portrait']
+    extension='png' if static or lesson.get('static_only') else 'gif'
+    sources=[]
+    if not portrait:
+        sources += [f'<source media="(prefers-reduced-motion: reduce) and (max-width: {mobile}px)" srcset="{prefix}-portrait.png" width="{p["width"]}" height="{p["height"]}">',f'<source media="(max-width: {mobile}px)" srcset="{prefix}-portrait.{extension}" width="{p["width"]}" height="{p["height"]}">']
+    sources += [f'<source media="(prefers-reduced-motion: reduce)" srcset="{prefix}-{layout}.png" width="{size["width"]}" height="{size["height"]}">',f'<source srcset="{prefix}-{layout}.{extension}" width="{size["width"]}" height="{size["height"]}">']
+    return '<picture>'+''.join(sources)+f'<img src="{prefix}-{layout}.{extension}" alt="{alt}" width="100%" height="{size["height"]}"></picture>'
+def pair(left,right):
+    titles={'handoff':'Carry the correction','checking':'Check the candidate','requirements':'Retain requirements','coordination':'Count coordination input'}
+    alts={'handoff':'The original reaching hands carry blank to Untitled, with full-body Capri and the compatible label.py rules. Authored fixture, not a model result.','checking':'The actual cat takeover and eye-anchored beams accompany full-body Review Capri. Request, correction, patch and evidence; human decision.','requirements':'Original skull, sword and rain with full-body Capri and a stable retrievable working brief.','coordination':'Original dotted loop and wave with the stable60k+H input illustration; additional H30k yields90k, equal to curated.'}
+    return '<!-- portrait-pair:'+left+','+right+' -->\n<table><tr><th>'+titles[left]+'</th><th>'+titles[right]+'</th></tr><tr><td width="50%">'+image(left,alts[left])+'</td><td width="50%">'+image(right,alts[right])+'</td></tr><tr><td><a href="showcase/capri/story/exports/'+left+'-portrait.png">Full portrait</a></td><td><a href="showcase/capri/story/exports/'+right+'-portrait.png">Full portrait</a></td></tr></table>\n<!-- /portrait-pair -->\n'
+def picture(name,alt,static=False):
+    if name=='contexts':return image('quantitative','The real ray-traced horizon and full-body Capri share a labelled six-request input graph: growing180k, curated90k, scoped60k. Illustrative inputs, not a CAPRI benchmark.')+'\n'
+    if name=='retained':return pair('requirements','coordination')
+    if name=='handoff':return pair('handoff','checking')
+    if name=='checking':return ''
+    return image(name,alt,static)+'\n'
 def main():
     m=json.loads((STORY/'model-results.json').read_text());totals=m['total_assumed_input_tokens'];g=m['derivations']['growing'];c=m['derivations']['curated'];n=m['calls'];steps='+'.join(str(i) for i in range(n));k=lambda v:f'{v//1000}k'
     original=(ROOT/'showcase/capri/source-match/BASE_README.md').read_text();start=original.index('Start with offline inspection');quick=original[start:original.index('<a href="docs/AFTERIMAGE.md"><img',start)]
     root='''<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png">
-  <img src="showcase/capri/hero.gif" alt="CAPRI — green face, expressive eyes and jagged magenta silhouette; the approved original banner." width="1000">
+  <source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png" width="1000" height="343">
+  <source srcset="showcase/capri/hero.gif" width="1000" height="343">
+  <img src="showcase/capri/hero.gif" alt="CAPRI — green face, expressive eyes and jagged magenta silhouette; the approved original banner." width="100%" height="343">
 </picture>
 
 CAPRI gives planning, coding and review their own Codex sessions. Explicit handoffs carry current decisions, relevant files, scope and checks. One worker edits; a separate reviewer checks the candidate against the request and evidence. **You decide what ships.**
@@ -72,7 +85,7 @@ The {k(totals['growing'])} total spans six calls; it is not a simultaneously fil
 
 ## Keep the correction attached
 
-'''+picture('handoff','The original reaching hands and ASCII interruptions carry blank→Untitled near actual contact, with full-body Capri beneath. The complete authored packet includes label.py-only scope, outer trim, case/internal spaces and TypeError for non-strings, with expected examples. This is teaching artwork, not an observed model failure.',800)+'''
+'''+picture('handoff','The original reaching hands and ASCII interruptions carry blank→Untitled near actual contact, with full-body Capri beneath. The complete authored packet includes label.py-only scope, outer trim, case/internal spaces and TypeError for non-strings, with expected examples. This is teaching artwork, not an observed model failure.')+'''
 **Authored fixture A, not a recorded model result.** An incomplete brief such as “return Untitled for blanks” loses compatible rules. The complete packet carries the original request, latest correction, relevant source, file scope and expected checks:
 
 | Check | Expected result after the correction |
@@ -105,7 +118,7 @@ Prefix caching reuses matching computation. It does not delete instructions, cre
 
 ## Check the candidate against the request
 
-'''+picture('checking','The actual scanline cat changes from monochrome to Capri colors while full-body Review Capri arrives and beams follow source-frame eye anchors. This is an authored checking-stage illustration. A reviewer compares request, correction, patch and evidence; beams do not scan, secure or approve the repository.',640)+'''
+'''+picture('checking','The actual scanline cat changes from monochrome to Capri colors while full-body Review Capri arrives and beams follow source-frame eye anchors. This is an authored checking-stage illustration. A reviewer compares request, correction, patch and evidence; beams do not scan, secure or approve the repository.')+'''
 A fresh checking context compares the request and correction with the candidate and its evidence. Shared model blind spots remain possible. Findings and limits return to the human; the illustration is not a native controller recording or an approval.
 
 There is no completed native comparison proving CAPRI cheaper, faster or better at requirements retention. Offline CI, model outcomes, total cost and visual approval are separate evidence. [Current status](docs/STATUS.md) · [Evaluation](EVALUATION.md).
@@ -114,7 +127,7 @@ There is no completed native comparison proving CAPRI cheaper, faster or better 
 
 ## Start with offline checks
 
-'''+quick+picture('closing','A compact still from the supplied elastic stack keeps scope, current correction and evidence together beside full-body Capri. It closes the teaching story and leads to actual setup; the companion retains its forward/reverse source loop.',480,True)+'''
+'''+quick+picture('closing','A compact still from the supplied elastic stack keeps scope, current correction and evidence together beside full-body Capri. It closes the teaching story and leads to actual setup; the companion retains its forward/reverse source loop.',True)+'''
 ## Explore the working source
 
 [Interactive companion](docs/VISUAL_STORY.md#local-companion) · [Complete static edition](docs/README_STATIC.md) · [Detailed explanation](docs/CAPRI_EXPLAINS.md) · [Art studies](docs/AFTERIMAGE.md) · [Asset provenance and rights](docs/SOURCE_MATCH.md#sources-and-rights)
@@ -132,11 +145,22 @@ GitHub displays exported media, links and native disclosures. The local companio
 
 **Mani Marami Milani.** Unofficial Capri-inspired fan project; unaffiliated with CD PROJEKT RED, TRIGGER or Netflix. Original banner and all source credits remain preserved. Native sharks/horizon use actual source implementations; five other effect families are credited footage composites. Character acting is fan-art reconstruction, not an official rig or exact anime acting. Source reuse and underlying character rights remain as recorded; repository stays private.
 '''
+    brief=image('brief','The original articulated shark field frames a stable brief: request, latest correction, relevant source, allowed changes and checks; originals remain retrievable.')
+    root=root.replace('## Keep the correction attached', '## Keep the brief focused\n\n'+brief+'\n\nSelect what the next decision needs: request, latest correction, relevant source, allowed files and checks. Keep authoritative originals retrievable.\n\n## Keep the correction attached',1)
+    # Keep both checking explanations next to the paired correction/checking art.
+    start=root.index('## Check the candidate against the request')
+    end=root.index('<a id="quickstart">',start)
+    checking=root[start:end];root=root[:start]+root[end:]
+    root=root.replace('## Keep requirements; count coordination',checking+'## Keep requirements; count coordination',1)
+    root=root.replace('[Complete static edition](docs/README_STATIC.md)', '[Single-column static/mobile edition](docs/README_STATIC.md)')
+    root=root.replace('GitHub displays exported media, links and native disclosures.', 'GitHub displays exported media, links and native disclosures. Portrait tables retain two columns on narrow views; all essential rules and numbers are readable below, with full portraits and a single-column static edition.')
     (ROOT/'README.md').write_text(root)
-    static=root.replace('showcase/capri/hero.gif','showcase/capri/hero.png');static=re.sub(r'(story/exports/[^"\s]+)\.gif',r'\1.png',static)
+    # The complete static/mobile route deliberately uses one column for each portrait.
+    single=re.sub(r'<!-- portrait-pair:(\w+),(\w+) -->.*?<!-- /portrait-pair -->',lambda m:image(m[1],m[1].capitalize(),True)+'\n\n'+image(m[2],m[2].capitalize(),True),root,flags=re.S)
+    static=single.replace('showcase/capri/hero.gif','showcase/capri/hero.png');static=re.sub(r'(story/exports/[^"\s]+)\.gif',r'\1.png',static)
     static=re.sub(r'((?:src|srcset|href)="|\]\()((?!https?:|#)[^"\s)]+)',lambda x:x[1]+'../'+x[2],static)
-    (ROOT/'docs/README_STATIC.md').write_text('<!-- Generated from the same V3 canonical story. -->\n'+static)
+    (ROOT/'docs/README_STATIC.md').write_text('<!-- Generated from the same V4 canonical story. -->\n'+static)
     from build_capri_story_docs import main as build_docs
     build_docs(m)
-    print('V3 root, static README and native explanations rebuilt')
+    print('V4 root, static README and native explanations rebuilt')
 if __name__=='__main__':main()

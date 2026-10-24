@@ -6,21 +6,28 @@
   "sample_count": 215,
   "size": [
     600,
-    841
+    900
   ],
-  "bytes": 6031780,
-  "gif_sha256": "7530de9f295bfcee00614cbbf1125a2987e876b9cba02b936fb4e88d4e875a92",
-  "poster_sha256": "6359bad66e4bc33f6560bc24bb531df593b89d09505da94b297a7c4462add9a1",
+  "bytes": 5077373,
+  "gif_sha256": "61dba5ead58a8c66cb4a81ac86eb489d4710738b0e412af25fa51e9d26dc7f2b",
+  "poster_sha256": "77515666a6cd5fe5b6250d18ab8d5318213ef0737631e2d55634f06f8e4ad98b",
   "palette_colors": 128,
   "frames": [
     {
       "time_ms": 0.0,
-      "sha256": "4c3fc9a16585aa30cddbfcdaaea585013391de2766ccdf3f099e64a9c491dd4c",
+      "sha256": "84ba8790a15b82f2a7a143654050a1be6fe5853d17832040542c5316506f7a77",
       "state": {
         "lesson": "checking",
         "time": 0,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 0,
@@ -38,12 +45,19 @@
     },
     {
       "time_ms": 40.0,
-      "sha256": "3067565ebaf04364a031a199f26eab69f7cbd7a515f732963ac67ce58b2c1a28",
+      "sha256": "ba6e82f94b68f27e83d2b5305de1bffeefa6e58da7166b19a03dc117c5f4bed2",
       "state": {
         "lesson": "checking",
         "time": 40,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 40,
@@ -61,12 +75,19 @@
     },
     {
       "time_ms": 80.0,
-      "sha256": "e1145349f0ece44513e52368fc50ae3347e986dc8a0c9827e21675dabf81b294",
+      "sha256": "61fbf904109b34173d4dc8dfcdae7454a45636dda93edaabd5a0960c30b30ead",
       "state": {
         "lesson": "checking",
         "time": 80,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 80,
@@ -84,12 +105,19 @@
     },
     {
       "time_ms": 120.0,
-      "sha256": "60a2c63b385b2c27603e5d48bfbf1f49844a1a32d918c80a05eb7b8eb854e4b4",
+      "sha256": "ad5662b3bd4171c3ddae035247ff87c2df0485f28cce7bd90407400f684cd6d9",
       "state": {
         "lesson": "checking",
         "time": 120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 120,
@@ -107,12 +135,19 @@
     },
     {
       "time_ms": 160.0,
-      "sha256": "e43eb799d6659882623be2b335d6736db1693479d8e1b13900cd2a9029e1a765",
+      "sha256": "36e17c12c3d8c691599427e0666bf96d9d557d548fa6336c592efdfd49311e9d",
       "state": {
         "lesson": "checking",
         "time": 160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 160,
@@ -130,12 +165,19 @@
     },
     {
       "time_ms": 200.0,
-      "sha256": "34dbab1136dfc8d0fb87fd8904c4c3b2c193949eef7c7fa41e3ac4ae506d70da",
+      "sha256": "713712365827d817f61015bac20328b0d3fe361799e07d274e709934f1edba25",
       "state": {
         "lesson": "checking",
         "time": 200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 200,
@@ -153,12 +195,19 @@
     },
     {
       "time_ms": 240.0,
-      "sha256": "3dcf1324411a9b3ccff8cc829f73864f1360e5986c5413f603df9ff29bfbaa86",
+      "sha256": "aab0c50c68f65d73e40b1838bae8a194525cdd16f5349a63a98ec36b11b485a2",
       "state": {
         "lesson": "checking",
         "time": 240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 240,
@@ -176,12 +225,19 @@
     },
     {
       "time_ms": 280.0,
-      "sha256": "a6b2f38bbeaf6918289222c5ea8e9330a51a8026fc7c0885139d52b76be0478d",
+      "sha256": "de5949cbdceb745eb6338d72ac81ef3160af9068de91c2cd355873b0821db1f9",
       "state": {
         "lesson": "checking",
         "time": 280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 280,
@@ -199,12 +255,19 @@
     },
     {
       "time_ms": 320.0,
-      "sha256": "f46eee220bd106c6eadcf7b607dedb406f4ca922f4301f7de8dd2a3398c31c33",
+      "sha256": "1aaecdf1b274f3e7c90d62593bc41f0b75e530176558d8e4f593fcbb67d04c77",
       "state": {
         "lesson": "checking",
         "time": 320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 320,
@@ -222,12 +285,19 @@
     },
     {
       "time_ms": 360.0,
-      "sha256": "3328e84d255f8d18b9d6a6dc38380da6dadd2bda9262d9e5ec6ffb71a09620f0",
+      "sha256": "bb35e20f96b18c8ba321133caae8cf2963afa16cd8a5227ffc400bc4857a662f",
       "state": {
         "lesson": "checking",
         "time": 360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 360,
@@ -245,12 +315,19 @@
     },
     {
       "time_ms": 400.0,
-      "sha256": "afce932639d84a66f8d340f5ba1ba95d2fbac76121260c6fd151fcf77da97ca1",
+      "sha256": "c6eda064024d011cfbf399c48eb36028b9e9be8ca8b0ad611e6366f35ab8dfc3",
       "state": {
         "lesson": "checking",
         "time": 400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 400,
@@ -268,12 +345,19 @@
     },
     {
       "time_ms": 440.0,
-      "sha256": "c282f00f848ba78b869632f2e0e28558f36e7b84256dec21bf570d86de7cdcfd",
+      "sha256": "7713524664d9797ab2fbbbb05d378ded06365fe8ecccb966941690e1b12089a5",
       "state": {
         "lesson": "checking",
         "time": 440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 440,
@@ -291,12 +375,19 @@
     },
     {
       "time_ms": 480.0,
-      "sha256": "346a4bf1b56b8c1a598b309c5b44f234e58b4c8a8e8a41a3a2bdfd2c90d2300b",
+      "sha256": "2b3125832d23e3837e570ea5902d7ead18286f85055a1643bfaa4d6d267f1741",
       "state": {
         "lesson": "checking",
         "time": 480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 480,
@@ -314,12 +405,19 @@
     },
     {
       "time_ms": 520.0,
-      "sha256": "3f1219dfaef68d9e051efeb1bae1f7714481a7df88f7a0d357ecf6d98f91ee03",
+      "sha256": "fa7d7f921d694c7f92253e2780d94305f9bc77752a60938fcc87b66835859f8b",
       "state": {
         "lesson": "checking",
         "time": 520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 520,
@@ -337,12 +435,19 @@
     },
     {
       "time_ms": 560.0,
-      "sha256": "9cb71578f4428f996af5d6f87b5ae3a6145ed95d6e63237e7a372bdd0d174746",
+      "sha256": "33e39f83b5398f58cb063c6858875c00de9a42d223867ed3991193527f9a3a30",
       "state": {
         "lesson": "checking",
         "time": 560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 560,
@@ -360,12 +465,19 @@
     },
     {
       "time_ms": 600.0,
-      "sha256": "19d71493ff7ddd080c5446391da401d3ba3e7472573f72c27d43b1532dd739dc",
+      "sha256": "52c99d3c0a62c4962184b8ff04843313ee4b8943866be1d9af664cdc2b137171",
       "state": {
         "lesson": "checking",
         "time": 600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 600,
@@ -383,12 +495,19 @@
     },
     {
       "time_ms": 640.0,
-      "sha256": "e9db5a25a05df1356be77764583d771199a89964108346657217a6001767e9a5",
+      "sha256": "48b477d900f33c77bdbdaf966efa453edfa0d2cd56bcc511234e5f9d8add921f",
       "state": {
         "lesson": "checking",
         "time": 640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 640,
@@ -406,12 +525,19 @@
     },
     {
       "time_ms": 680.0,
-      "sha256": "b541706bfbc6e4f938c789e153879967e794bdfdb99f29e0406eb807d6f6d6e5",
+      "sha256": "11159007aecf8f40dbf68e576f7dfdd7d3c4fba79878eefded14e8b0e5140e14",
       "state": {
         "lesson": "checking",
         "time": 680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 680,
@@ -429,12 +555,19 @@
     },
     {
       "time_ms": 720.0,
-      "sha256": "5815a4a8b758d0495eeac811de02a9c39f7d56bd863d94ef03c5d898e0cac9ac",
+      "sha256": "3fcc14a9ff01fbe9b37c56f6b92002c7a48153f2f764518098b155de0f21d28c",
       "state": {
         "lesson": "checking",
         "time": 720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 720,
@@ -452,12 +585,19 @@
     },
     {
       "time_ms": 760.0,
-      "sha256": "96ce718b5ba720401e21d3ca0cf592a4a440f4ef491137b13b30a6483ee693b5",
+      "sha256": "d1d8368a357d2ca536537a9897ae4e07a32436ff1768a01cc13dea599bcddb69",
       "state": {
         "lesson": "checking",
         "time": 760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 760,
@@ -475,12 +615,19 @@
     },
     {
       "time_ms": 800.0,
-      "sha256": "c4019cf3c9cb02071f25edbbd9c068379f13888cbae46a6d2d8b0a1384ee8f5c",
+      "sha256": "8e61ed9c5ecd505731294f2206756fc56e72de47346295e292c94a7438a0df32",
       "state": {
         "lesson": "checking",
         "time": 800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 800,
@@ -498,12 +645,19 @@
     },
     {
       "time_ms": 840.0,
-      "sha256": "a9b93472c6b1a6c458933e63470e6f93559004de7a40f004fce2b874b3fd2d38",
+      "sha256": "ded3613bcca329b20d3cac43e0af46ad0cbf2544f1ce9abbc8602cb8641b0bd7",
       "state": {
         "lesson": "checking",
         "time": 840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 840,
@@ -521,12 +675,19 @@
     },
     {
       "time_ms": 880.0,
-      "sha256": "071e12752da1fb058c9da705cc2755ba3b08f9fcf6fab1edd048c78c666a19ff",
+      "sha256": "baf824da01e36b14f0c7c9f703d41cb60ffb13536d87eb5bb680efecfe85374a",
       "state": {
         "lesson": "checking",
         "time": 880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 880,
@@ -544,12 +705,19 @@
     },
     {
       "time_ms": 920.0,
-      "sha256": "72faca35d4cbf1e17a926d16fea84268617e33e2ce2a1737e196ecef2883c825",
+      "sha256": "b6255a01e989108249bb6636ec5e4cbd1f2c40ba40d9e038d237239ecbc9e58e",
       "state": {
         "lesson": "checking",
         "time": 920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 920,
@@ -567,12 +735,19 @@
     },
     {
       "time_ms": 960.0,
-      "sha256": "68a3e43ca9448d4d4a73f030069fa0ce34d12235571e3ba9fb9565ed5d106a46",
+      "sha256": "67a378211d3862b7ddba0b877eecb10d301fb81984708bf07dd9e2fda9414874",
       "state": {
         "lesson": "checking",
         "time": 960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 960,
@@ -590,12 +765,19 @@
     },
     {
       "time_ms": 1000.0,
-      "sha256": "682c425908fcce77d7770feab1ed98aa7337a3d38bf19ccc1ed1d684b1800aa1",
+      "sha256": "0365499e827d22558fd46d553a764bee3c970ab79b702e660d920d98c4b60e53",
       "state": {
         "lesson": "checking",
         "time": 1000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1000,
@@ -613,12 +795,19 @@
     },
     {
       "time_ms": 1040.0,
-      "sha256": "47eb63d7fdbdd6d7b094fe60daabb8077529dff8052a510e1edb0df8c978ad38",
+      "sha256": "f8350bfa30b05b22d0e6c803b3adec4b2caf1dcfd69bc22871f8bf805139f160",
       "state": {
         "lesson": "checking",
         "time": 1040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1040,
@@ -636,12 +825,19 @@
     },
     {
       "time_ms": 1080.0,
-      "sha256": "8e193a67a8a1db722ac0582a1a50bec989860810fcee8bc076706e11f69f8e4a",
+      "sha256": "8b23a6c475fe22ac2c72e05179f59c2a38a7511d069f54a0387144871ab83493",
       "state": {
         "lesson": "checking",
         "time": 1080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1080,
@@ -659,12 +855,19 @@
     },
     {
       "time_ms": 1120.0,
-      "sha256": "c2365aa47b776540e699e817ab948065a81b86f418b317f39b3dc9d49548df73",
+      "sha256": "95e981a4917d4dc0e6f24b6c5b12f58b45474a3de5fda893f9c1da67825a7cdc",
       "state": {
         "lesson": "checking",
         "time": 1120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1120,
@@ -682,12 +885,19 @@
     },
     {
       "time_ms": 1160.0,
-      "sha256": "0da211e02683f3d474802a990d4265a6db57fab0ee4d260e17fea9d78597aa76",
+      "sha256": "3beb9c3877d1861583c2aa1e3dab21eca9e4f1e292c418051a4fb70de830a70c",
       "state": {
         "lesson": "checking",
         "time": 1160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1160,
@@ -705,12 +915,19 @@
     },
     {
       "time_ms": 1200.0,
-      "sha256": "3f7be316f97cbbcbc97d7007c6ad55a5a56b8e533441cf902fa576202d40fbab",
+      "sha256": "d4113ec337958341a2c0dfc661cafda23916525669ce1e85e015c3506cfcfada",
       "state": {
         "lesson": "checking",
         "time": 1200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1200,
@@ -728,12 +945,19 @@
     },
     {
       "time_ms": 1240.0,
-      "sha256": "3cee1e960e62021f11b3f31f65ac8eac2b18838c1a0c570574dabb8929d8ad29",
+      "sha256": "f15e8361aec2b14a7397632ca211e6b74bd8f37c26a9e0e64fef1a7e71a79a05",
       "state": {
         "lesson": "checking",
         "time": 1240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1240,
@@ -751,12 +975,19 @@
     },
     {
       "time_ms": 1280.0,
-      "sha256": "6b940687b7009f38ae9235a75429ebed0b520bd034dfd68a3bca8ac369b421b1",
+      "sha256": "695dd888e78849360f2d3bea8ce9860a131615e59e9c2d03b080d91771a399a4",
       "state": {
         "lesson": "checking",
         "time": 1280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1280,
@@ -774,12 +1005,19 @@
     },
     {
       "time_ms": 1320.0,
-      "sha256": "35ad2d5eeb35dde0a920601addffde415a710b3f95c7c7c4e2bcf85ae02da1b6",
+      "sha256": "08e963b2b19a8e05640e4a3b4f0b700c898c894f77b26aae56194fe2c63d770d",
       "state": {
         "lesson": "checking",
         "time": 1320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1320,
@@ -797,12 +1035,19 @@
     },
     {
       "time_ms": 1360.0,
-      "sha256": "f2a59a80be403db2bcd9b4ef093f4aa39ee764cc23c330cfec3f476b1ebfaa7d",
+      "sha256": "2d37683e7564a2224ebec262ac1cd6dab3176da6ff5971d574845511d165e29c",
       "state": {
         "lesson": "checking",
         "time": 1360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1360,
@@ -820,12 +1065,19 @@
     },
     {
       "time_ms": 1400.0,
-      "sha256": "6b297173f2d7aec0e71fe56d13f7a266121597db84cad0a7a3f8e5076c3288ee",
+      "sha256": "d79906c8ba43ec211df8f5defd7d9de8bba9681b730728b3dac986f020591d44",
       "state": {
         "lesson": "checking",
         "time": 1400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1400,
@@ -843,12 +1095,19 @@
     },
     {
       "time_ms": 1440.0,
-      "sha256": "f086d151c8c3e9341889a836af541a59ac912ea2258fd37bd1c35f3be6dba199",
+      "sha256": "12d7007d92c7c3606b1a49b5c593a3cc0233670b7a00aa13ba5faf4f088ee604",
       "state": {
         "lesson": "checking",
         "time": 1440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1440,
@@ -866,12 +1125,19 @@
     },
     {
       "time_ms": 1480.0,
-      "sha256": "3a4b6b0116772349d314d5b379fdac8240440faa05667f4e4242be52962777b9",
+      "sha256": "34c6de33735a52e9e093991581b9046fe9d18d953544985cc05a181a25af9955",
       "state": {
         "lesson": "checking",
         "time": 1480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1480,
@@ -889,12 +1155,19 @@
     },
     {
       "time_ms": 1520.0,
-      "sha256": "57476d8ed332c0a3a15861df2c9eab1d3aa4b4ed00a270f2e2bef632819e1d39",
+      "sha256": "e40249322f87649d56ace44d9a0afe31c42e6a6a531e88be4c0aab63655ddd0d",
       "state": {
         "lesson": "checking",
         "time": 1520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1520,
@@ -912,12 +1185,19 @@
     },
     {
       "time_ms": 1560.0,
-      "sha256": "d347ccd72cddd9c8546c15cb79bfb746bdb67cf4d78d3141a89fe6deaa297733",
+      "sha256": "dc2c854b4f0fd33f5eb4369e14f8991d02c0af14200d103c135fba5f95fba2db",
       "state": {
         "lesson": "checking",
         "time": 1560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1560,
@@ -935,12 +1215,19 @@
     },
     {
       "time_ms": 1600.0,
-      "sha256": "f1169ec2e6c5d469b9fa33ced12394813d3b97361d7d8d392eaaeed5fd85f7e7",
+      "sha256": "a90203842b87e049747af7d3f4dbe603eb3948ba993d757c0d689857beca400d",
       "state": {
         "lesson": "checking",
         "time": 1600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1600,
@@ -958,12 +1245,19 @@
     },
     {
       "time_ms": 1640.0,
-      "sha256": "c8d2cf516120bf5ade7333814906d9316dfc5bb2f9824149263af01d4ec0b270",
+      "sha256": "7273505b38d8b2bc40300fd1073ce503bbeccd3bacbe02d29e7e32755419e367",
       "state": {
         "lesson": "checking",
         "time": 1640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1640,
@@ -981,12 +1275,19 @@
     },
     {
       "time_ms": 1680.0,
-      "sha256": "a73cb56ae08812f6aa27ec0c7fcbcf0dd261dcf34524dc5b439dca2ab801f6ce",
+      "sha256": "45eb66736c794161684335c826604e91255bf0e7e60403308b93c8f95c3adf07",
       "state": {
         "lesson": "checking",
         "time": 1680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1680,
@@ -1004,12 +1305,19 @@
     },
     {
       "time_ms": 1720.0,
-      "sha256": "52914d6372aaec3d58343d02df86d169a91b543a4dc78802097c58858288e927",
+      "sha256": "dbb286b300e362a2d24104df262ebdf7b4bbc6eb067d2af87f1ee254c054659e",
       "state": {
         "lesson": "checking",
         "time": 1720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1720,
@@ -1027,12 +1335,19 @@
     },
     {
       "time_ms": 1760.0,
-      "sha256": "88425e4ef25643fbcfeab28fb57d108c6d3fd9a3957497cb96c7dfcbb45b7499",
+      "sha256": "ee229bcbdefd413828b216130596463595d45824fa2ce211c14f0929e051105e",
       "state": {
         "lesson": "checking",
         "time": 1760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1760,
@@ -1050,12 +1365,19 @@
     },
     {
       "time_ms": 1800.0,
-      "sha256": "c96b19dc8e1f967b3085808eeed2a31a133bb8d1f5f1c7f47a9a844c3dadbbee",
+      "sha256": "c5f7a8529f43ad3d0ccb943416f141aea4ff3d2e56f9ec7db8b012dda06dfbd9",
       "state": {
         "lesson": "checking",
         "time": 1800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1800,
@@ -1073,12 +1395,19 @@
     },
     {
       "time_ms": 1840.0,
-      "sha256": "f4e7281e85d205df678c471654dd2c3a545092482de1f9a00fbb89419750cd57",
+      "sha256": "1c889e9df8fc3796793a6d410a155de6c0fdfb07c616b043960827330cb36717",
       "state": {
         "lesson": "checking",
         "time": 1840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1840,
@@ -1096,12 +1425,19 @@
     },
     {
       "time_ms": 1880.0,
-      "sha256": "51163c8853449447db156122c0ff282b2028f51d5dbdb264c3455ad9d8f559e8",
+      "sha256": "8e85f454036bafffc85fd43446b8535ad59ab282fed8743b2b082cc58639ad2b",
       "state": {
         "lesson": "checking",
         "time": 1880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1880,
@@ -1119,12 +1455,19 @@
     },
     {
       "time_ms": 1920.0,
-      "sha256": "e5b415609197c8ec20f572501057b0edcd9b3376664914aeb2dfbd900d4c3da5",
+      "sha256": "55e2ec3c38a0d6fd563223f2b5bb42fed806694d27ed59df50030685d6bd8064",
       "state": {
         "lesson": "checking",
         "time": 1920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1920,
@@ -1142,12 +1485,19 @@
     },
     {
       "time_ms": 1960.0,
-      "sha256": "1fca45a944e27465126cd0b91269f3e133e963cb84fa3a423da25bf0b49dbf34",
+      "sha256": "875201ec8cbc29c9da2f92f77710310f202df9222a250533ef89bd10d99e01cb",
       "state": {
         "lesson": "checking",
         "time": 1960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 1960,
@@ -1165,12 +1515,19 @@
     },
     {
       "time_ms": 2000.0,
-      "sha256": "496471c42be32508bca657d76f1118de44fd6ac3759eee066d8d069060715044",
+      "sha256": "86e046402466054689e6ce6470a057c14495ebd58546fdce32ebf209fbb94d60",
       "state": {
         "lesson": "checking",
         "time": 2000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2000,
@@ -1188,12 +1545,19 @@
     },
     {
       "time_ms": 2040.0,
-      "sha256": "c80a1a6f5ca63f9801f82a00ebdfe053a25ec29b9502e599009ea54e06afd7fe",
+      "sha256": "e9f7d2b0cc4096bb765152fcd7b933c1d90bfa678f75915a8f60b0a3d07e7261",
       "state": {
         "lesson": "checking",
         "time": 2040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2040,
@@ -1211,12 +1575,19 @@
     },
     {
       "time_ms": 2080.0,
-      "sha256": "4d1560c19b1a8a8c778e6e7ceef310368a3606600954ffb09a3c2c118be32eb8",
+      "sha256": "2db6c2095470f0cca3ea5739a84bc8a2a1cd25ef299564d6f60afec78c87b5b4",
       "state": {
         "lesson": "checking",
         "time": 2080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2080,
@@ -1234,12 +1605,19 @@
     },
     {
       "time_ms": 2120.0,
-      "sha256": "ec7d8ceb56eaecf118ae808fa0bcff0e7b7ffe974c5053469e77a13cfec5746b",
+      "sha256": "cf797943db7a8542efc36da663f1fdc8a804575d10a7c6a60756802c0abea4d8",
       "state": {
         "lesson": "checking",
         "time": 2120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2120,
@@ -1257,12 +1635,19 @@
     },
     {
       "time_ms": 2160.0,
-      "sha256": "dea1d5fa0e2d6aa000409f4b29e908105ec276c1ad8ba891b372b10bcde0c3ef",
+      "sha256": "dc257526171686dfc7924a058975901d6d58d866ccc758c6c72ac636932ec93d",
       "state": {
         "lesson": "checking",
         "time": 2160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2160,
@@ -1280,12 +1665,19 @@
     },
     {
       "time_ms": 2200.0,
-      "sha256": "40c732f426e67fcf065a89fcb33932e3c33f4d30c3ad84618908493c075fae9d",
+      "sha256": "a6b11665666306ff79b4e21212a46e098a090a09d74656c9aa0f7c370a914cdc",
       "state": {
         "lesson": "checking",
         "time": 2200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2200,
@@ -1303,12 +1695,19 @@
     },
     {
       "time_ms": 2240.0,
-      "sha256": "1231465ed5b17ff5157eba4bf94724a2bc22cdd39c9c935abbe476454a8d945f",
+      "sha256": "91f292205b888a224e8a369c0424c4aaae9662cbe802a116d03960809e206ff4",
       "state": {
         "lesson": "checking",
         "time": 2240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2240,
@@ -1326,12 +1725,19 @@
     },
     {
       "time_ms": 2280.0,
-      "sha256": "59547f5f865fa99ecc4cf4c3603d2b23ad554e770a6a54f43ff39a7fce490673",
+      "sha256": "89b1e952c0a973bfdf558a9b5f9b00d73951eb89f85043dc41a3fa00f5c7beab",
       "state": {
         "lesson": "checking",
         "time": 2280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2280,
@@ -1349,12 +1755,19 @@
     },
     {
       "time_ms": 2320.0,
-      "sha256": "6999b13025c1ee35e7ee115080a43aa7d582c79f5165e111397d925dbbc7e8bf",
+      "sha256": "1c50ef9b77bc1e2cb1d11e172e533e0b548bd6dbd305098fbce1c80b2d2d8a8b",
       "state": {
         "lesson": "checking",
         "time": 2320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2320,
@@ -1372,12 +1785,19 @@
     },
     {
       "time_ms": 2360.0,
-      "sha256": "10ecadf16770b625ae1345b0a1a44ded0f8e46273154cf791ee9745034501a19",
+      "sha256": "f8a230d1fa9e9135a8ec43da7c1219bea0901027baa4477f3b2e167250a4769f",
       "state": {
         "lesson": "checking",
         "time": 2360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2360,
@@ -1395,12 +1815,19 @@
     },
     {
       "time_ms": 2400.0,
-      "sha256": "4536be57fbd38d62f687cd3d71c04ecdb19581778fb5d97cda3b8a4ba0cd5427",
+      "sha256": "aa5f1e6f006deaed86bcfec5317c81b7bd660dbdd58f4719a9d9cee73934e294",
       "state": {
         "lesson": "checking",
         "time": 2400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2400,
@@ -1418,12 +1845,19 @@
     },
     {
       "time_ms": 2440.0,
-      "sha256": "c21fc80ea9f2eb953b88cdbd385d4952fa7aad2cb8256315c567b7d5bec8f775",
+      "sha256": "7d7c0f00d2295f91a1727b16b97068b896c43a232cdc900a4012cea5ea5ff177",
       "state": {
         "lesson": "checking",
         "time": 2440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2440,
@@ -1441,12 +1875,19 @@
     },
     {
       "time_ms": 2480.0,
-      "sha256": "14c1935ed33d8dd529347297b740de5809d7611298f459b700504ab22c3cdeef",
+      "sha256": "0c5b99432c5cc8fc8fac4db933df0f07e1aec4a1d002ceb4fd77b40895c84029",
       "state": {
         "lesson": "checking",
         "time": 2480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2480,
@@ -1464,12 +1905,19 @@
     },
     {
       "time_ms": 2520.0,
-      "sha256": "abc7e57b5f120390572a40ae5feab9d1c7fd5f4a52ae1fa227bc21c8bc3ee1ce",
+      "sha256": "e07c7b596cdf3a7d43d3f3757778696b3a7010ce27edbaeb732e80acf8789bcd",
       "state": {
         "lesson": "checking",
         "time": 2520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2520,
@@ -1487,12 +1935,19 @@
     },
     {
       "time_ms": 2560.0,
-      "sha256": "4a9bbd97e140f8935f133c82c6dbcd84e7b6d916f5d0dbe5626ef866e9e2d1ef",
+      "sha256": "4a73f1039295edf42c439462227a1def41cfec1869faee242d4e0d46d49f4426",
       "state": {
         "lesson": "checking",
         "time": 2560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2560,
@@ -1510,12 +1965,19 @@
     },
     {
       "time_ms": 2600.0,
-      "sha256": "b0c5a4993f0129973a9f67a636bca673210295e3b5fc4c7e6079dbe3a4567e7f",
+      "sha256": "f66ad0e6f78d581ece819d6998b3ba46ca3aa3b8add774061b2668de3a2b63ff",
       "state": {
         "lesson": "checking",
         "time": 2600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2600,
@@ -1533,12 +1995,19 @@
     },
     {
       "time_ms": 2640.0,
-      "sha256": "115d2102482540f4334867aadccd4960183b96f351c774c3efb695c536262660",
+      "sha256": "8ae41f2dc3a5133e4ec1d4b04bc6f5c21f047790200736e2e252e519ef5ab298",
       "state": {
         "lesson": "checking",
         "time": 2640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2640,
@@ -1556,12 +2025,19 @@
     },
     {
       "time_ms": 2680.0,
-      "sha256": "748ddfaaf177274f4327bc4d0cbcfa89e892a05107936c878e2be55607bffbf1",
+      "sha256": "7382c00381b56ca683aadefccd89ae5f51835e7b147edf30193f32d6e2735f27",
       "state": {
         "lesson": "checking",
         "time": 2680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2680,
@@ -1579,12 +2055,19 @@
     },
     {
       "time_ms": 2720.0,
-      "sha256": "e04b34ff3df12d200bda69102175e11ef7159e3c61901d433356aa581ffdd415",
+      "sha256": "ed49d7d39618dbcc2f1e45658ddac5467ee75a37e7f33504b4417a6ed95f0fb8",
       "state": {
         "lesson": "checking",
         "time": 2720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2720,
@@ -1602,12 +2085,19 @@
     },
     {
       "time_ms": 2760.0,
-      "sha256": "cd084ecc4f7bb8c98d289d51176c1258aa3d4e025d1fcdc4b4cd8d174191385d",
+      "sha256": "b36eada213839abcce52c97d1d304ccf16cb3aba0ea06872326a06ac81e66c86",
       "state": {
         "lesson": "checking",
         "time": 2760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2760,
@@ -1625,12 +2115,19 @@
     },
     {
       "time_ms": 2800.0,
-      "sha256": "4f7e44ecc2cd5ae5a7b5ce9d7f81eda85cd2bcfc86db534682fecc90b9a04136",
+      "sha256": "3d483e62570884f2086030ba9cef12b623d82400bc6ed0f694b17c39c0e9575d",
       "state": {
         "lesson": "checking",
         "time": 2800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2800,
@@ -1648,12 +2145,19 @@
     },
     {
       "time_ms": 2840.0,
-      "sha256": "153bc71761ac68cbd676e86d1ecbce2dc76dbc4ed3b22e2e490fe284e59380ce",
+      "sha256": "5a13860ee3447054f692764d7d34f7ede70588ac34d3b563e127668c447a12b2",
       "state": {
         "lesson": "checking",
         "time": 2840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2840,
@@ -1671,12 +2175,19 @@
     },
     {
       "time_ms": 2880.0,
-      "sha256": "e16c1ee1712075b634fd1b978bbbbf1384373fbf769d96ba3caab67b3c6e1ceb",
+      "sha256": "d23548154ef996f8280353ea62407621636138dbe62c162c6be97412b68f6079",
       "state": {
         "lesson": "checking",
         "time": 2880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2880,
@@ -1694,12 +2205,19 @@
     },
     {
       "time_ms": 2920.0,
-      "sha256": "305b59413815d174707b88d3e4097dae90b662c0cbc855e3e3b9dfbf82eaaf71",
+      "sha256": "cb032d66cbe05880f3e2790cc80974b4532d5181a1b5d5e14d362dd55e3b0cf4",
       "state": {
         "lesson": "checking",
         "time": 2920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2920,
@@ -1717,12 +2235,19 @@
     },
     {
       "time_ms": 2960.0,
-      "sha256": "c998d7797512a00cbb40747f8b07a3f0c1c9bd6bd17468a27fc40101a22e259f",
+      "sha256": "8973648fe474e28058b9d6ce9b765c7a37188206eb43afc4045eff678c1190fd",
       "state": {
         "lesson": "checking",
         "time": 2960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 2960,
@@ -1740,12 +2265,19 @@
     },
     {
       "time_ms": 3000.0,
-      "sha256": "95e33bb0a5952ba51ddb0d1e531413762222fbc7568b2cd565c5440632d4f895",
+      "sha256": "6d05e307d1dac131565703404975c67868ddd81f355f213b005cc212297177ac",
       "state": {
         "lesson": "checking",
         "time": 3000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3000,
@@ -1763,12 +2295,19 @@
     },
     {
       "time_ms": 3040.0,
-      "sha256": "872647eccf4f7b84e4e5c0c9f9ec44cbbe6bef71009b0f8fcbe46bfb53e261b0",
+      "sha256": "b30e611b45a9f9fd3b18ff93e553834b276101d29824d1487c1b675a884d6be4",
       "state": {
         "lesson": "checking",
         "time": 3040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3040,
@@ -1786,12 +2325,19 @@
     },
     {
       "time_ms": 3080.0,
-      "sha256": "952317b17e532f1171420f3e46fdbde1b342ff81af66ec2a47e55f14d5c986d8",
+      "sha256": "5cc672a4d3930d33e50562f4beca3caa36d7a03e957ff4e42631aef23ca55871",
       "state": {
         "lesson": "checking",
         "time": 3080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3080,
@@ -1809,12 +2355,19 @@
     },
     {
       "time_ms": 3120.0,
-      "sha256": "d7592037e73b06271e263bea4f2bc16d983b1b62b63efc44168f776be16fb772",
+      "sha256": "f3e480f4f057c15feb9af16583dfb242a6848f090bd535cf48f57d29d2720409",
       "state": {
         "lesson": "checking",
         "time": 3120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3120,
@@ -1832,12 +2385,19 @@
     },
     {
       "time_ms": 3160.0,
-      "sha256": "ee32a8330c28b9c446e032f36b7f0ac628ed1dddfe35b6a50f6fa8df2d78aeed",
+      "sha256": "603c8da5fb8b59c00d71c5ccca845ea09de77b8f240cf10543391e1a53b40899",
       "state": {
         "lesson": "checking",
         "time": 3160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3160,
@@ -1855,12 +2415,19 @@
     },
     {
       "time_ms": 3200.0,
-      "sha256": "53c0b303b3e73f88c8f793a005e49b7d9a3a166ca36ef306ae7f3184dbabb638",
+      "sha256": "f27ddeab8e93a57728618a40446f096d23e9e29b7af445921c43f924571bb999",
       "state": {
         "lesson": "checking",
         "time": 3200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3200,
@@ -1878,12 +2445,19 @@
     },
     {
       "time_ms": 3240.0,
-      "sha256": "3a7d7833ad4da4704ed09d8bc7e49dd1d2bedb821386ea05048644e2a46917f0",
+      "sha256": "3c395198c98c12562565d4be7c24b5fc30eb72c31470d183c8ca2ee964291081",
       "state": {
         "lesson": "checking",
         "time": 3240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3240,
@@ -1901,12 +2475,19 @@
     },
     {
       "time_ms": 3280.0,
-      "sha256": "6644a41c15c6329717ea27051ff72ae2e57001d52352a84ab3e7d02a86ce543d",
+      "sha256": "bb534219ddb1c9694b2954ea4312fc4b935b30874291b31f8485b51312cafe40",
       "state": {
         "lesson": "checking",
         "time": 3280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3280,
@@ -1924,12 +2505,19 @@
     },
     {
       "time_ms": 3320.0,
-      "sha256": "e776222198d50d08c393d99f27e1bc04af31160ba1df4723431b209ec7e2c490",
+      "sha256": "cb353513049d1b8bdc655bbaed5476add32847264c0c5bd91538370d8b8c28d2",
       "state": {
         "lesson": "checking",
         "time": 3320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3320,
@@ -1947,12 +2535,19 @@
     },
     {
       "time_ms": 3360.0,
-      "sha256": "12f8c6af9e0503b47867c48b7c9b44efb92ec3c295ea49e768304b0a595dc4f0",
+      "sha256": "00ebfc6d10b7567442939ed4f9b019049d855677e815d96a564728a1a25decf0",
       "state": {
         "lesson": "checking",
         "time": 3360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3360,
@@ -1970,12 +2565,19 @@
     },
     {
       "time_ms": 3400.0,
-      "sha256": "44f53a68c8cd80f12937ed8f8aef3e2e4e2de93268d6758affdff39c813759b3",
+      "sha256": "28e32252de7abacc1a31592eaa38c76c5c7de60bb6557af043270f0e1f8eb3cf",
       "state": {
         "lesson": "checking",
         "time": 3400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3400,
@@ -1993,12 +2595,19 @@
     },
     {
       "time_ms": 3440.0,
-      "sha256": "9bc9fcf29b40c242959b6bb519ceb4ab8e374cd318d7c3f1f488564ed726f2bd",
+      "sha256": "2c4c3e9b4c076a5b5dd96e6859239d45a092c6355ae75b8a6d294fcb2f69f29e",
       "state": {
         "lesson": "checking",
         "time": 3440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3440,
@@ -2016,12 +2625,19 @@
     },
     {
       "time_ms": 3480.0,
-      "sha256": "f7811717b07a100be0c0bc1d0b37287427abac785ef46ed8b70c4b3f4c5ba4ce",
+      "sha256": "75d20132545906ecad9560a274ad744491dd605fe5df4d8fcfbfd47dde296e99",
       "state": {
         "lesson": "checking",
         "time": 3480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3480,
@@ -2039,12 +2655,19 @@
     },
     {
       "time_ms": 3520.0,
-      "sha256": "c6c07e161010b154e923704ff829191aa9265a29c0291c3f7df49907fab1314d",
+      "sha256": "524d6228e58e7d42c3512b08eaa0ea0a17557db1054490035bf65f7d5fee2581",
       "state": {
         "lesson": "checking",
         "time": 3520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3520,
@@ -2062,12 +2685,19 @@
     },
     {
       "time_ms": 3560.0,
-      "sha256": "6959d0598dc8752a55f6ac54162d435df4715c73f543d7b5c271e892d012e3db",
+      "sha256": "0f4fb11f694377b7150b9e5bba54dc4cf37b7e380aba84e73a966e84c51f0a79",
       "state": {
         "lesson": "checking",
         "time": 3560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3560,
@@ -2085,12 +2715,19 @@
     },
     {
       "time_ms": 3600.0,
-      "sha256": "c18dcf116e4e199136b7d0e7b625113839a2c18ce817c0c9c6b9ae5b8a1419e7",
+      "sha256": "869cdfca7f6035445f5fd6f1f56bd5afebd61a1b4512e48f33a773f3e0134e30",
       "state": {
         "lesson": "checking",
         "time": 3600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3600,
@@ -2108,12 +2745,19 @@
     },
     {
       "time_ms": 3640.0,
-      "sha256": "ea3cfb32544ea36b8c209278767958827c13925e4d53077d064d8dcfbf98be49",
+      "sha256": "7950f82a911a20a2d040f0abe966a365f7d72006b2f99bfc351bf0b61cd66a2a",
       "state": {
         "lesson": "checking",
         "time": 3640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3640,
@@ -2131,12 +2775,19 @@
     },
     {
       "time_ms": 3680.0,
-      "sha256": "bc8298bbbe455685fec613ac878c5bfde16e345c6b4f23906d536aba13db318d",
+      "sha256": "de81a3fbfeb0ac8fcbf84e3eb353d46e03872a9af0194f55cb3bd0beeaef44aa",
       "state": {
         "lesson": "checking",
         "time": 3680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3680,
@@ -2154,12 +2805,19 @@
     },
     {
       "time_ms": 3720.0,
-      "sha256": "bbbe4c9f51e2a763a7039f05657c1777b1ad145810089b13a21e44185de75ab0",
+      "sha256": "129e7ac7a5c7e707be1d3e66c232dd1f30f9d912245e45efa00280ea3134a458",
       "state": {
         "lesson": "checking",
         "time": 3720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3720,
@@ -2177,12 +2835,19 @@
     },
     {
       "time_ms": 3760.0,
-      "sha256": "c3a57ea3ca8cf12fa4d87a5ae4c6545edf83e3312f7c462643054d0b22bbd71b",
+      "sha256": "16885ca73f08972b779a784b543ee5dc4b9ebfe3d0ea2f7d73d3c33c63b62c55",
       "state": {
         "lesson": "checking",
         "time": 3760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3760,
@@ -2200,12 +2865,19 @@
     },
     {
       "time_ms": 3800.0,
-      "sha256": "6359bad66e4bc33f6560bc24bb531df593b89d09505da94b297a7c4462add9a1",
+      "sha256": "77515666a6cd5fe5b6250d18ab8d5318213ef0737631e2d55634f06f8e4ad98b",
       "state": {
         "lesson": "checking",
         "time": 3800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3800,
@@ -2223,12 +2895,19 @@
     },
     {
       "time_ms": 3840.0,
-      "sha256": "d42e8b416019d0ba7d642941f5b19d0af3e6337452cf3c7d13f30d1baf67a2fd",
+      "sha256": "403ee1fa883ece4653917a0919f17e33553aeb611b0d3601c5995fb95ba3075d",
       "state": {
         "lesson": "checking",
         "time": 3840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3840,
@@ -2246,12 +2925,19 @@
     },
     {
       "time_ms": 3880.0,
-      "sha256": "af95e47aaf4d663f0fd377f4daf013b464f4cf5229c578e6a0ae5b9d60bd48a8",
+      "sha256": "bcac174a51d5cfc561e00f3e884a35d21872c6827b760b58300a7182cda6e8f8",
       "state": {
         "lesson": "checking",
         "time": 3880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3880,
@@ -2269,12 +2955,19 @@
     },
     {
       "time_ms": 3920.0,
-      "sha256": "b0ba00ea32486909111c062134a6924c9b376305e2c29ce1c7af11fa93959d63",
+      "sha256": "e91fe83cba855ee96b130e17c06f2c50590a1eb56f7799a1efd0132de9127f20",
       "state": {
         "lesson": "checking",
         "time": 3920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3920,
@@ -2292,12 +2985,19 @@
     },
     {
       "time_ms": 3960.0,
-      "sha256": "85262f5b5b4034a06449fef93f93ba92b314e69c244c088d818778a499224156",
+      "sha256": "06c838229b992e2dd1e5aec6c5cffc22a73c1038d82318b81a5cd7eb9d4ba651",
       "state": {
         "lesson": "checking",
         "time": 3960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 3960,
@@ -2315,12 +3015,19 @@
     },
     {
       "time_ms": 4000.0,
-      "sha256": "d9fdf3e56f3c79dec86c55dffa61e7972f41320d775fcdb90bcbb2de01e4e6e6",
+      "sha256": "03b89583da16d6e1ff9c7000281744992c83a311fd558f6199872c7260dc05df",
       "state": {
         "lesson": "checking",
         "time": 4000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4000,
@@ -2338,12 +3045,19 @@
     },
     {
       "time_ms": 4040.0,
-      "sha256": "720e3fa1f913d648a68d0938eb105a880530823ff2f8749b9948428d02866e57",
+      "sha256": "21e497d10d3061dc5731f5452cd620288d753b5c39534437dae485709d2c04fc",
       "state": {
         "lesson": "checking",
         "time": 4040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4040,
@@ -2361,12 +3075,19 @@
     },
     {
       "time_ms": 4080.0,
-      "sha256": "ec90006082fdc9214d994c6b5954824d625e1c4b7ea4752cf60c91e0e636ba2b",
+      "sha256": "e402bbd6577a532a9b98c30e867ffa71fa7480f9dd9137eac7b68ed138027a45",
       "state": {
         "lesson": "checking",
         "time": 4080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4080,
@@ -2384,12 +3105,19 @@
     },
     {
       "time_ms": 4120.0,
-      "sha256": "381ea7bdee7b867863e31270334521f70be7570e9f0c2eb3141a859f14f97b35",
+      "sha256": "a4f4e18837e2b2e744ddc1f5400279386f373923db83da632bdfe11f324b717d",
       "state": {
         "lesson": "checking",
         "time": 4120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4120,
@@ -2407,12 +3135,19 @@
     },
     {
       "time_ms": 4160.0,
-      "sha256": "219744354f4b21859ecc2945ccd3c8b97377c2ab3aac2b438e79b0227b61146c",
+      "sha256": "d58de5545ec01183c74afb4cbff15c6059df7aec6c3d8c06e0e1394c69476dc5",
       "state": {
         "lesson": "checking",
         "time": 4160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4160,
@@ -2430,12 +3165,19 @@
     },
     {
       "time_ms": 4200.0,
-      "sha256": "09a086d43cd928dce1c727f1dc43eb49130b96b332d29660eaf15ed66342186e",
+      "sha256": "cdbcbea39ea8fdeb96160b4a013b6125f59ef17174cbf0ef37cc934e03e18a15",
       "state": {
         "lesson": "checking",
         "time": 4200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4200,
@@ -2453,12 +3195,19 @@
     },
     {
       "time_ms": 4240.0,
-      "sha256": "6539a2afa6fed59746bffb112c0394e1a9c15aa9daafc2518741ad556127972e",
+      "sha256": "f7236afba3a1643c5cbdd2ed6d5396432e3bbdf68833a97858bff2a0af637986",
       "state": {
         "lesson": "checking",
         "time": 4240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4240,
@@ -2476,12 +3225,19 @@
     },
     {
       "time_ms": 4280.0,
-      "sha256": "a8e9a1b6537bed871fad43db704a30fc3cbc3c5f1d23c77de14ef68e3f92cb62",
+      "sha256": "acd2f199e2499c0ad4fff8898f4467af89692d1e243dcb2c5ea30319555df74e",
       "state": {
         "lesson": "checking",
         "time": 4280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4280,
@@ -2499,12 +3255,19 @@
     },
     {
       "time_ms": 4320.0,
-      "sha256": "48c7772ccf30550767c91a7127d5ec3ef8e8f4f037aabfed8ed8ca309ca40808",
+      "sha256": "c3a36e670d895a8c8e4ef5a0f08bece03797290a2c838128aed274b4219203bb",
       "state": {
         "lesson": "checking",
         "time": 4320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4320,
@@ -2522,12 +3285,19 @@
     },
     {
       "time_ms": 4360.0,
-      "sha256": "0c790372db5a2d57478bfc346286cc927b441884a36a57fc1318b58c7ee413a0",
+      "sha256": "f00b89621abd58ba6ded9eec684b4dcafd6e5f729486cc596d2c721504ba1cfd",
       "state": {
         "lesson": "checking",
         "time": 4360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4360,
@@ -2545,12 +3315,19 @@
     },
     {
       "time_ms": 4400.0,
-      "sha256": "1522248efa5f2b6f8901c56162198a81cdeee3ce6014b0d097eee70459aee41f",
+      "sha256": "714e985e597603820ee9f3a2e322fb5f57443e9a1f95bb37cac299ed7790391b",
       "state": {
         "lesson": "checking",
         "time": 4400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4400,
@@ -2568,12 +3345,19 @@
     },
     {
       "time_ms": 4440.0,
-      "sha256": "752d49a9177bf1c78c4d4745a4b85ca709b810042b30f3172132b32788b9c267",
+      "sha256": "06e9473f9cca2b21af6e2cf2bd99c9bda9173d564ad4bc29150254eacd9e6c5c",
       "state": {
         "lesson": "checking",
         "time": 4440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4440,
@@ -2591,12 +3375,19 @@
     },
     {
       "time_ms": 4480.0,
-      "sha256": "1b5b0fd947dbd70727b682ba22cadfd263996cbcd6ff98ef5c8336b8a4bfe4f0",
+      "sha256": "e52550c3fd7fbcf39255a17b860e12e698b9a5d69979f7f4518ea92452b07c8a",
       "state": {
         "lesson": "checking",
         "time": 4480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4480,
@@ -2614,12 +3405,19 @@
     },
     {
       "time_ms": 4520.0,
-      "sha256": "a6144bf48d1c06a61460a009fc8885906f5c12c9bb16813a07e54309997fe4ee",
+      "sha256": "23b916c99a2dedb98df18781360b17f378c2cdda06a6c4f3ca79375768a4e206",
       "state": {
         "lesson": "checking",
         "time": 4520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4520,
@@ -2637,12 +3435,19 @@
     },
     {
       "time_ms": 4560.0,
-      "sha256": "0f512bdc8d981c538fc49430f1fe91095b347aead17e84cd3d9f5444dcd4d4f8",
+      "sha256": "0433dec1526740e9991a1737edcd36340190902e0defe2a1b94239902a47efab",
       "state": {
         "lesson": "checking",
         "time": 4560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4560,
@@ -2660,12 +3465,19 @@
     },
     {
       "time_ms": 4600.0,
-      "sha256": "a11e8e06e0cdc82248de858654bbf323bf51a875444f8604d546b0f335402fba",
+      "sha256": "306ff18715a786c2ec31f807d1a0ca21b209f1ec15322b3ea8ee4d40a1d0eb72",
       "state": {
         "lesson": "checking",
         "time": 4600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4600,
@@ -2683,12 +3495,19 @@
     },
     {
       "time_ms": 4640.0,
-      "sha256": "0a1b11ae1dff736522a827a3a464b26f92158b9912caf1f1c35b1fa2849a84f4",
+      "sha256": "2a6561de6fa897b9f01870ca22d9535c5bb02532865c79a4324761c27d6a3007",
       "state": {
         "lesson": "checking",
         "time": 4640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4640,
@@ -2706,12 +3525,19 @@
     },
     {
       "time_ms": 4680.0,
-      "sha256": "25e15a4081eb146a1deacdf0e37ac93b3d29bf8487640a06ea9a2a2991c49687",
+      "sha256": "a48eecd2257dcc8e99da0e88381b634f5c40e69bef0ee51724bb4955b115d3df",
       "state": {
         "lesson": "checking",
         "time": 4680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4680,
@@ -2729,12 +3555,19 @@
     },
     {
       "time_ms": 4720.0,
-      "sha256": "c854136462e6e58e89b7580caf83190969f4a83a3bbc968ea8fd6bafd123ab31",
+      "sha256": "eea0e4a098fa5667544638a837b7f6b354c38578c0b412a542f4a5ef2e7a2b83",
       "state": {
         "lesson": "checking",
         "time": 4720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4720,
@@ -2752,12 +3585,19 @@
     },
     {
       "time_ms": 4760.0,
-      "sha256": "b3034d17a79155a5e2df67a74e0f3b72e3514aa9541fc037ee0720eb878dea69",
+      "sha256": "75b02484d1cf89384d282c05853d60423a45973fe046086546403cef9d0eb1b1",
       "state": {
         "lesson": "checking",
         "time": 4760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4760,
@@ -2775,12 +3615,19 @@
     },
     {
       "time_ms": 4800.0,
-      "sha256": "9702bcdc2e1ba7e79c8aea394a257b898f6edcdbd936ea8bb5bd0d14ac67838d",
+      "sha256": "025b38e5dbe17cc852eb5995e6ea4af04c3ed82f44b4fabb4d1daf7845834b5f",
       "state": {
         "lesson": "checking",
         "time": 4800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4800,
@@ -2798,12 +3645,19 @@
     },
     {
       "time_ms": 4840.0,
-      "sha256": "c45c041e78436c33c4e49975b9d1b0108af2d5823993d47ab149779aa1249dcd",
+      "sha256": "10cd5b7aa366d93e407cb45d8f610ac8e649c2ca586b6daf13c70ad805bea9f1",
       "state": {
         "lesson": "checking",
         "time": 4840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4840,
@@ -2821,12 +3675,19 @@
     },
     {
       "time_ms": 4880.0,
-      "sha256": "13799b04ccbffe827080ecbed6d1669137318be785ed89b5854be3b650164fe0",
+      "sha256": "1c76923a1bda61eab81922608f410950c8832491c7e1b9cc5063270f7d83812d",
       "state": {
         "lesson": "checking",
         "time": 4880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4880,
@@ -2844,12 +3705,19 @@
     },
     {
       "time_ms": 4920.0,
-      "sha256": "d4390db1545398156c0bfe536a39df2572acb5d312825ba87d8aafe759d6113a",
+      "sha256": "232a6527ef229a9060e6d24ebf837478ee7f9b20cb1f426c6bec1581f4ae1bf4",
       "state": {
         "lesson": "checking",
         "time": 4920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4920,
@@ -2867,12 +3735,19 @@
     },
     {
       "time_ms": 4960.0,
-      "sha256": "8758d707a4db8077edac5940277d9cb770a98201e3edc150bd74c22e0be58102",
+      "sha256": "a1296a68c55b8e8cfdef5fc10df4854380390cae6d947840eefb953b643143e1",
       "state": {
         "lesson": "checking",
         "time": 4960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 4960,
@@ -2890,12 +3765,19 @@
     },
     {
       "time_ms": 5000.0,
-      "sha256": "f47f52d39e4bbfa84952cbd6892ff8e6a672ac0addd39943174219941baab941",
+      "sha256": "5a4589f17444f2d32cd5b289f5fc8f819ddd926ad8bb901d421214ea7b14e0bc",
       "state": {
         "lesson": "checking",
         "time": 5000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5000,
@@ -2913,12 +3795,19 @@
     },
     {
       "time_ms": 5040.0,
-      "sha256": "d29809e60b3ae31eff9aaabe3f711c5d25efd0bd274ea042dff27221053e11c9",
+      "sha256": "1958d321f0c115730ca7936beade9608eea436270a6870d3f00e9c2070014e2a",
       "state": {
         "lesson": "checking",
         "time": 5040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5040,
@@ -2936,12 +3825,19 @@
     },
     {
       "time_ms": 5080.0,
-      "sha256": "bf58bd200f3545ab8fa8574b43e2c3de73b2b4cc98079ed5851bed6f72008626",
+      "sha256": "3bc21db7bdd670174429c0a322a11090f3f6f683acbfc06ea94eb5c04dea5de8",
       "state": {
         "lesson": "checking",
         "time": 5080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5080,
@@ -2959,12 +3855,19 @@
     },
     {
       "time_ms": 5120.0,
-      "sha256": "33eae495370b96222f99ae9b4b60ada786d425106a4b9f840f9956b442261f96",
+      "sha256": "902d9fda5a394278ad1dd1062673af0cf888c1a21f8bd58f9bebc51c525fc091",
       "state": {
         "lesson": "checking",
         "time": 5120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5120,
@@ -2982,12 +3885,19 @@
     },
     {
       "time_ms": 5160.0,
-      "sha256": "dad612835623cff7125f433372b119fa1182ab8baf89db037b5bb992cd503022",
+      "sha256": "6f81df6bc8b020099ee9e25a9429ad2c0f9199bfbd6eb878bb216617d4a41057",
       "state": {
         "lesson": "checking",
         "time": 5160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5160,
@@ -3005,12 +3915,19 @@
     },
     {
       "time_ms": 5200.0,
-      "sha256": "b14cc6df9890d770b0934fd9c694cb26931c413bbb99f4f21161ee9c22ccd99d",
+      "sha256": "87acd30f4d7428f2a3b775b99f41567c86d19572e57749140fdcab58b250b3dd",
       "state": {
         "lesson": "checking",
         "time": 5200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5200,
@@ -3028,12 +3945,19 @@
     },
     {
       "time_ms": 5240.0,
-      "sha256": "9649717e58f1aac6447ebb5f9842057a2a458f958fc39ccd2da7c74d897e3be2",
+      "sha256": "70386bac7a2f65d27738ac336f5b7afdda89edc93004b84b6af37d084ef94e94",
       "state": {
         "lesson": "checking",
         "time": 5240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5240,
@@ -3051,12 +3975,19 @@
     },
     {
       "time_ms": 5280.0,
-      "sha256": "68ed13ac52ad2ffef108c576f2c5bde24d47bb90c64e389a31ec5dd8d6919220",
+      "sha256": "db3f5a151248aa91505f048ab4e96924b51e0d2d7f8094bce15c4410c388b1fc",
       "state": {
         "lesson": "checking",
         "time": 5280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5280,
@@ -3074,12 +4005,19 @@
     },
     {
       "time_ms": 5320.0,
-      "sha256": "0cf25d6d644441a126a95f721ad76840b08c985df0059bb2dcccd61d58fff001",
+      "sha256": "b3588a55af1b48075b8b234bd3d8180cf89938f1daf56a0366598f086ffd997a",
       "state": {
         "lesson": "checking",
         "time": 5320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5320,
@@ -3097,12 +4035,19 @@
     },
     {
       "time_ms": 5360.0,
-      "sha256": "0bbddee6e4c22a4f1d6bf561a4c024264dcaa1003a59e86b6f9827adebdffdb0",
+      "sha256": "ac80cf8a3004409697dd70febf2e4487be1843ab2fd38c42cc0c39d859ce8744",
       "state": {
         "lesson": "checking",
         "time": 5360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5360,
@@ -3120,12 +4065,19 @@
     },
     {
       "time_ms": 5400.0,
-      "sha256": "b66686bc0b20ce26802bfa55c3f0442ded540968a872a9bd7572222c7b54fc34",
+      "sha256": "21f7f22a138bc6fef7fcd668c2067b35e82344d15e2243896469d3fe891b5d56",
       "state": {
         "lesson": "checking",
         "time": 5400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5400,
@@ -3143,12 +4095,19 @@
     },
     {
       "time_ms": 5440.0,
-      "sha256": "e5f968fbb96f66dfe3dfa731a6e0aa4bc3cd175f4719891a02fb9df860dbcb82",
+      "sha256": "93e6e3707b8af923d04cd45a9371b89e410c412c8e8d98028a4f7aa7aff35466",
       "state": {
         "lesson": "checking",
         "time": 5440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5440,
@@ -3166,12 +4125,19 @@
     },
     {
       "time_ms": 5480.0,
-      "sha256": "1d4d6212279f744de411f2c48ad73b43dd8feb268fe175ceb828196669312377",
+      "sha256": "9f33ff2d88a734af593ba71484490365639d7c6eb5cd039f84e12ba5cf1c3db4",
       "state": {
         "lesson": "checking",
         "time": 5480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5480,
@@ -3189,12 +4155,19 @@
     },
     {
       "time_ms": 5520.0,
-      "sha256": "cf3099c137bd288d53062d0e375ed89e60e48aab83384027a7e4f21d1b83e90a",
+      "sha256": "fbc62115b35cca500b881842304380993a7b03e7de26e227f8de33c3d0e94cec",
       "state": {
         "lesson": "checking",
         "time": 5520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5520,
@@ -3212,12 +4185,19 @@
     },
     {
       "time_ms": 5560.0,
-      "sha256": "1fe15cde2ab7c156a4ddfd157ee857e454b7314045c46eda964979f95e531052",
+      "sha256": "75d25133feb9f7fa490d7e905b7113002940f8bb0b927ff13cdb7cd2c08594b1",
       "state": {
         "lesson": "checking",
         "time": 5560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5560,
@@ -3235,12 +4215,19 @@
     },
     {
       "time_ms": 5600.0,
-      "sha256": "5d133ae39b1a79cf285a4ac62a91e654aebd413117a2ee9bf17b968abc90cfeb",
+      "sha256": "430b81640a183b7d43b50a729c9fc31855b34cefc3db78e7b2e73482500c2a2e",
       "state": {
         "lesson": "checking",
         "time": 5600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5600,
@@ -3258,12 +4245,19 @@
     },
     {
       "time_ms": 5640.0,
-      "sha256": "4ca20390ac578ce38a8e81941742da5032042bf9e0c37f3f13194a205547f8eb",
+      "sha256": "128d1818987b18994f92145e04e5d6cba18b9a25d7578410e16733d0a7333ebe",
       "state": {
         "lesson": "checking",
         "time": 5640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5640,
@@ -3281,12 +4275,19 @@
     },
     {
       "time_ms": 5680.0,
-      "sha256": "fb2d01ca41a4f2d6a3c185e4fb31d8d119a5e01ff9adc9495490865edb7f4dfc",
+      "sha256": "469e1527507f5f3767dfa1309634cfa5429ce4522373770b8b7dcdc65dfd892a",
       "state": {
         "lesson": "checking",
         "time": 5680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5680,
@@ -3304,12 +4305,19 @@
     },
     {
       "time_ms": 5720.0,
-      "sha256": "1f60ecb9a55db4cb8249a9d33f7776c53b7d1c3cc5e2c687aad18e17b366929e",
+      "sha256": "f3d95da4b195a17b14c3a7624a8709b5daa284f9c8581868e22e72860b7f889b",
       "state": {
         "lesson": "checking",
         "time": 5720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5720,
@@ -3327,12 +4335,19 @@
     },
     {
       "time_ms": 5760.0,
-      "sha256": "5ec9f768e6958d56583af2e1a4fa45d4e4f411b3ed703acec50e2b682398bfaf",
+      "sha256": "c333654150bfe76984733d0e451ed82d75e38144fc10d910ac5e4a08d98f1528",
       "state": {
         "lesson": "checking",
         "time": 5760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5760,
@@ -3350,12 +4365,19 @@
     },
     {
       "time_ms": 5800.0,
-      "sha256": "4326dfbbab126634a814fe1fc7d5da68e15918c020434efe35c7624fa685880f",
+      "sha256": "23d0826065729b7568492542388dc89145c83023c5882698a68b39b8e32dcf07",
       "state": {
         "lesson": "checking",
         "time": 5800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5800,
@@ -3373,12 +4395,19 @@
     },
     {
       "time_ms": 5840.0,
-      "sha256": "9c8cdd573fe84499fb7d487de7c5ecff6cbc5e906e4f64b2f0b04ea8abfa2192",
+      "sha256": "327b0cdfac4c658cc27d138ad4da4d4c84b2ec82d0235c2bc5b5b05dd4a84740",
       "state": {
         "lesson": "checking",
         "time": 5840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5840,
@@ -3396,12 +4425,19 @@
     },
     {
       "time_ms": 5880.0,
-      "sha256": "051bbfa33868b0ff6e9457571ab15153112743eeed262749bcb54547645852c5",
+      "sha256": "316875a939f7e1cb70c43f86817ef46012c334c8c4553f14fbd92001ee8239c0",
       "state": {
         "lesson": "checking",
         "time": 5880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5880,
@@ -3419,12 +4455,19 @@
     },
     {
       "time_ms": 5920.0,
-      "sha256": "c2bd6889368769600f58dba85d2b50e24f68feee7b8200920f94cdecdc70d92b",
+      "sha256": "6e3936a76245e43e1e8301945f4897f49f49eb9a6ad64fa44d4541c99b5a6404",
       "state": {
         "lesson": "checking",
         "time": 5920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5920,
@@ -3442,12 +4485,19 @@
     },
     {
       "time_ms": 5960.0,
-      "sha256": "0180dcf0948e1210eb75de503fe94b6e084c753babbd16a87e2cbb3ca73c9658",
+      "sha256": "e22a5286987ef9a1b2b71365b4fa1c7f5f9dbcfa13ab6e017f6f6850c26e986b",
       "state": {
         "lesson": "checking",
         "time": 5960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 5960,
@@ -3465,12 +4515,19 @@
     },
     {
       "time_ms": 6000.0,
-      "sha256": "c6acea4b055e4d1a3e2beace2fe5ffed7501425f76dd523b94898ed7c216c0a7",
+      "sha256": "563fc595d1ce57b388cd4f9ef97df9ab666ef109d07783ec76000fb2993dba22",
       "state": {
         "lesson": "checking",
         "time": 6000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6000,
@@ -3488,12 +4545,19 @@
     },
     {
       "time_ms": 6040.0,
-      "sha256": "1cf57bc464e8c864adbcf0004314713724b8801a2a7caa3f09ce1afabc9796c4",
+      "sha256": "558b56e0d68ffd3bd19bb6bbec448f47c53fa490a2b065807e9138ff342762e7",
       "state": {
         "lesson": "checking",
         "time": 6040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6040,
@@ -3511,12 +4575,19 @@
     },
     {
       "time_ms": 6080.0,
-      "sha256": "02bfc0f5447acb5a24cb581e49898c88556cb48f2da72c6a66ae32d9f732c696",
+      "sha256": "6fb76d8d0f4d75181125703dea9cbcee6f3378c60051fc70a3ac8bd3cb3c0a9d",
       "state": {
         "lesson": "checking",
         "time": 6080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6080,
@@ -3534,12 +4605,19 @@
     },
     {
       "time_ms": 6120.0,
-      "sha256": "431a7e0a18f6e38ca463c276f1302892119e641b0bac184150b784e7d4f9760a",
+      "sha256": "9f5675735345c310f485080c9cc1ca644c501713d2501baa87eb9f3978e5e656",
       "state": {
         "lesson": "checking",
         "time": 6120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6120,
@@ -3557,12 +4635,19 @@
     },
     {
       "time_ms": 6160.0,
-      "sha256": "302d604798e08fa9d24aaa0cdf41e74c338a378d056ffcbe50707601f8916101",
+      "sha256": "ec5858515cc721e43bb41721453fb0c1315d6c6ab12a7777fc25c13436255f73",
       "state": {
         "lesson": "checking",
         "time": 6160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6160,
@@ -3580,12 +4665,19 @@
     },
     {
       "time_ms": 6200.0,
-      "sha256": "1e1cf2902feda14010534779279b16030338ca21a3d891b384c356b29ae9835f",
+      "sha256": "c56ea025a6518af43cc301a794497e728053006d3ba92216c0d4cd2095ce4838",
       "state": {
         "lesson": "checking",
         "time": 6200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6200,
@@ -3603,12 +4695,19 @@
     },
     {
       "time_ms": 6240.0,
-      "sha256": "25e28d71f16a67228922b2feffe588e0696e4b15cc32368052396fc1b1b81f1d",
+      "sha256": "7db897718f788c23a9b4772034493dd3c478cdb642af6fed26fb8f970e3ebddc",
       "state": {
         "lesson": "checking",
         "time": 6240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6240,
@@ -3626,12 +4725,19 @@
     },
     {
       "time_ms": 6280.0,
-      "sha256": "6b4e14cd074a8bbdcd4ec0b95ff0514bb8080bd5248d7a249ddedb21a553b1e9",
+      "sha256": "5745aa9aefcc00d8f90a75a625c6f1cc98e6a19cedb5cba0a4b6367b5b9b228b",
       "state": {
         "lesson": "checking",
         "time": 6280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6280,
@@ -3649,12 +4755,19 @@
     },
     {
       "time_ms": 6320.0,
-      "sha256": "b4daf5b3f6b8af632de593f2726a7601bc6e65f5b52f16d02124e3680f405eef",
+      "sha256": "d792be68460fadf44f65fb3dc58b7df76142d1768dafb6218ce7d3c2d3075361",
       "state": {
         "lesson": "checking",
         "time": 6320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6320,
@@ -3672,12 +4785,19 @@
     },
     {
       "time_ms": 6360.0,
-      "sha256": "fa3dbd14eb04325a79019938fc13e2d892b0665fdb46541df325e57424830df4",
+      "sha256": "bed8b63dea19d0845b87c283fffbef8bed633ee7afdf4d96766c126b8a95b4e7",
       "state": {
         "lesson": "checking",
         "time": 6360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6360,
@@ -3695,12 +4815,19 @@
     },
     {
       "time_ms": 6400.0,
-      "sha256": "7bb37f9c1c1d3f8792fe1f892505a8df0b64850880448367edab9312a335b744",
+      "sha256": "6cac09fd73c7339f223f9de02cf46f0b91b736baabbab100bee4354f6290ebab",
       "state": {
         "lesson": "checking",
         "time": 6400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6400,
@@ -3718,12 +4845,19 @@
     },
     {
       "time_ms": 6440.0,
-      "sha256": "c1366df537a1eb48fc3001880669f13816aeb55cd9777001d8fbb66df5737ade",
+      "sha256": "f90a6d46c804dcbfe422d21cd201928593626f5461ea1d7ebd8baf385136f9a1",
       "state": {
         "lesson": "checking",
         "time": 6440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6440,
@@ -3741,12 +4875,19 @@
     },
     {
       "time_ms": 6480.0,
-      "sha256": "ff3ace8ca1cdb27abee498431f7de16bdf96c43acee4dd8a73c536153e6ae265",
+      "sha256": "8035feaa97d0af6c081e9742b415b0ca05370597652afb064c313b8a4eacbf88",
       "state": {
         "lesson": "checking",
         "time": 6480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6480,
@@ -3764,12 +4905,19 @@
     },
     {
       "time_ms": 6520.0,
-      "sha256": "3ff1bac407f51716a3d7392bc82999a40f07d3aa323c3051510f9889ea303a2c",
+      "sha256": "d2ee21d82ef84d4d67e711c776dd1df324e6be41b9c346e04c7ac8ebc9b9c02e",
       "state": {
         "lesson": "checking",
         "time": 6520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6520,
@@ -3787,12 +4935,19 @@
     },
     {
       "time_ms": 6560.0,
-      "sha256": "b5aa7cdcb5c5ea434128b1202b1dc58dffb59eb9db1ce83c6b7493fcdcf2da25",
+      "sha256": "156b9b6a1a9f40aeb49b689ffa34836cc2f8910f439d9e71e813181e81118027",
       "state": {
         "lesson": "checking",
         "time": 6560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6560,
@@ -3810,12 +4965,19 @@
     },
     {
       "time_ms": 6600.0,
-      "sha256": "feb7445ac9c47bfe62e7892fbf3a1aff92473268019ddd754c08c3d7dc3c9a0e",
+      "sha256": "79fbf8aa8f9ac59a10c40ca2365a8e7ae3557c973c08dc5ec0a652f371182e1b",
       "state": {
         "lesson": "checking",
         "time": 6600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6600,
@@ -3833,12 +4995,19 @@
     },
     {
       "time_ms": 6640.0,
-      "sha256": "b273b1fe24f1d7bb6146b0bc4f3b4c5b773cdfc2448a243f3c3b567d3c87680d",
+      "sha256": "714be64094a20b7724922a93ad66f856b19e3806dcd66934fa431bbbaa007b17",
       "state": {
         "lesson": "checking",
         "time": 6640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6640,
@@ -3856,12 +5025,19 @@
     },
     {
       "time_ms": 6680.0,
-      "sha256": "d0d77e3bf34930866cd636f252d56b45e796181e46f3d77894d34de504e71e59",
+      "sha256": "1d08ff360aa46728af61040aaec1c0abe3e8ef9f9bd1315a3cbe8243f67e0b8a",
       "state": {
         "lesson": "checking",
         "time": 6680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6680,
@@ -3879,12 +5055,19 @@
     },
     {
       "time_ms": 6720.0,
-      "sha256": "9d8d4c08b0b00fcf331c4ecea3648fce636bb660efb438f20ee42f4edc47e25d",
+      "sha256": "0f12ec02296449262cf51be59544e8a4fd9efbbc24290c004d8328f394a6a2b4",
       "state": {
         "lesson": "checking",
         "time": 6720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6720,
@@ -3902,12 +5085,19 @@
     },
     {
       "time_ms": 6760.0,
-      "sha256": "25c8d90e87af9c3a1e5dcc38efdc0b2e36fe210bd599cebdd6811ba2e076761a",
+      "sha256": "42a0edf9c3fedf952417fcde047d54a60c8c16045e63c39afb88fb2307aa193a",
       "state": {
         "lesson": "checking",
         "time": 6760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6760,
@@ -3925,12 +5115,19 @@
     },
     {
       "time_ms": 6800.0,
-      "sha256": "ffbe48d117f6cb11a7d4b532037105183aeb9f8a15df9cd9a1eae518b2ea6ad7",
+      "sha256": "2fda69d4aa48dc43fad3a37077798f79db7ce36b44e974d2a6b6bd923c4b5688",
       "state": {
         "lesson": "checking",
         "time": 6800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6800,
@@ -3948,12 +5145,19 @@
     },
     {
       "time_ms": 6840.0,
-      "sha256": "f9ddd470d9f09c4ecd95d42e80fda63b3a1334b3d6778478554f7d997055664a",
+      "sha256": "586adfe1d52b2bad11875457a7ffdcd84589c5df9123a8d5d5075e4c43700227",
       "state": {
         "lesson": "checking",
         "time": 6840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6840,
@@ -3971,12 +5175,19 @@
     },
     {
       "time_ms": 6880.0,
-      "sha256": "65189d1ebac83dabfdc392431cf6057a06c65ab6ec0e5fb5e14b595d639734bd",
+      "sha256": "ef9867f8354b90a7e02d010d06256589e2bc0755dffb13e10357f549bdf04fb2",
       "state": {
         "lesson": "checking",
         "time": 6880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6880,
@@ -3994,12 +5205,19 @@
     },
     {
       "time_ms": 6920.0,
-      "sha256": "de981c5bd4ac5b6cf3fe5a4850de45d15450062da8e490fe1c8f27a661108395",
+      "sha256": "447247b607b8791e8bd8f8aa98c20c5dfcf38d90c1cd1b978ad4588e71fa13cd",
       "state": {
         "lesson": "checking",
         "time": 6920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6920,
@@ -4017,12 +5235,19 @@
     },
     {
       "time_ms": 6960.0,
-      "sha256": "ac3d08e18ae5df2e28859d9ca5ee6e16a2b85501eef792932d54714d48147731",
+      "sha256": "e16a314857600c09818f3e98e8d2ba137e241b04df3ca1e9353ed7b01d5a92a6",
       "state": {
         "lesson": "checking",
         "time": 6960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 6960,
@@ -4040,12 +5265,19 @@
     },
     {
       "time_ms": 7000.0,
-      "sha256": "227f8cf7addf7ae6f43458ae04bb94e7bdcde19021ad83d6dae966dfd907120e",
+      "sha256": "196286ab339f0d1157f3b350abd4ffb6ccd57c22a1b8cf80133a8e16feaeca45",
       "state": {
         "lesson": "checking",
         "time": 7000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7000,
@@ -4063,12 +5295,19 @@
     },
     {
       "time_ms": 7040.0,
-      "sha256": "ff675d06314b45a23823706385adaed3360b62c0b775f35615aa01c801e78f26",
+      "sha256": "8dc6f76d94c6ffdca9e5126f07a5af8a9dc46c250acdedc2c8755f535c25a930",
       "state": {
         "lesson": "checking",
         "time": 7040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7040,
@@ -4086,12 +5325,19 @@
     },
     {
       "time_ms": 7080.0,
-      "sha256": "ebd334e8d104518a2a761c91b276542a270c9cf24d5f494d59b4da4fc4553e5f",
+      "sha256": "32baa8c3b69cf79852f21774c07d550ad1ffe3f763afcc2cc2cbbc47c64e67a6",
       "state": {
         "lesson": "checking",
         "time": 7080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7080,
@@ -4109,12 +5355,19 @@
     },
     {
       "time_ms": 7120.0,
-      "sha256": "af30011539e84fd1b981fd69dede47754762302e0054590926bd37e77f4efe92",
+      "sha256": "7cecb8f4eb2b3c358f2e1351903ab494e8075bcd1f59d76e8de2f6d463da73f4",
       "state": {
         "lesson": "checking",
         "time": 7120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7120,
@@ -4132,12 +5385,19 @@
     },
     {
       "time_ms": 7160.0,
-      "sha256": "2f50e4b812e7881828795f4c546e499059ba5354a198ccebb3e9a877db9b4829",
+      "sha256": "9288fd2de3d62d4fe46b29fd13325e7d2bd66a95864e8949d9d2ae3c0b2d1e81",
       "state": {
         "lesson": "checking",
         "time": 7160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7160,
@@ -4155,12 +5415,19 @@
     },
     {
       "time_ms": 7200.0,
-      "sha256": "2cacc53160f4f19aac0e9c481e0b035998f1709ec3d58431aee5c8e1bf71d439",
+      "sha256": "a2de87aa03c9d28dd51af617751ed9dfd0dce73cfe62deef1ea6d9ec1fa3dda3",
       "state": {
         "lesson": "checking",
         "time": 7200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7200,
@@ -4178,12 +5445,19 @@
     },
     {
       "time_ms": 7240.0,
-      "sha256": "4b8aa6bc3c2ad31e87b7eebfdada8bed05b6a461e83ae9fc6d06399f4f420e8b",
+      "sha256": "1072b47fa42a6828181156927ec1214db051a9a98f0389fea95b6537e6425be9",
       "state": {
         "lesson": "checking",
         "time": 7240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7240,
@@ -4201,12 +5475,19 @@
     },
     {
       "time_ms": 7280.0,
-      "sha256": "ced493c91aebf1968488b1d56c7e40514eda8abf4c62692667e065c372bde0a5",
+      "sha256": "0901113e93cbe52d999271cb15b251ddde6904b6293aa028cd2f1912bba39052",
       "state": {
         "lesson": "checking",
         "time": 7280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7280,
@@ -4224,12 +5505,19 @@
     },
     {
       "time_ms": 7320.0,
-      "sha256": "a47242ff6778a51f06a7e40d23827c3f17dabacec43d2044cca109b97d59e128",
+      "sha256": "2d79e15eaea18256e8c2db336f7d2956b87d72db8fe84e452eff899552d73269",
       "state": {
         "lesson": "checking",
         "time": 7320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7320,
@@ -4247,12 +5535,19 @@
     },
     {
       "time_ms": 7360.0,
-      "sha256": "e726d3d569cfe8953f61c5270f088ebd3f8f197b084809f1aba91fb9c6348d6e",
+      "sha256": "e101b77400a15f7a0e739185615bb63d56804282d99054e13b226289bf5b5460",
       "state": {
         "lesson": "checking",
         "time": 7360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7360,
@@ -4270,12 +5565,19 @@
     },
     {
       "time_ms": 7400.0,
-      "sha256": "fd5c5632717406ac735ffa4b332c698d8dffe7c9d2fc31d2724245f5c099322c",
+      "sha256": "736a1d2cabd5249734de8efc38ebe57e758cb7b2907f4da6bb6b18ade2b52fd6",
       "state": {
         "lesson": "checking",
         "time": 7400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7400,
@@ -4293,12 +5595,19 @@
     },
     {
       "time_ms": 7440.0,
-      "sha256": "20712b8046f65fe5ab2255f298eaba4760f7a8b5073c6ba579370710ada23fe3",
+      "sha256": "0e1d92bc33c9d35bb07149c2516fbb65a1c570b9d8c381bd68701f6a6e0aa2a0",
       "state": {
         "lesson": "checking",
         "time": 7440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7440,
@@ -4316,12 +5625,19 @@
     },
     {
       "time_ms": 7480.0,
-      "sha256": "7bac3cd2278c7c78dbef068a15ddbc63b7c0d3bb1f29d3bdf672c7c72d6c7d84",
+      "sha256": "5d72528e3dd9394a9e89ba6a4c66e693a573af6c9b20c1398f79be8e78ae50e5",
       "state": {
         "lesson": "checking",
         "time": 7480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7480,
@@ -4339,12 +5655,19 @@
     },
     {
       "time_ms": 7520.0,
-      "sha256": "e29e10d8e5f3ec3bee22cebef4e004dbe69e618a199dedae5b6437177acefdec",
+      "sha256": "abcf576365c41b2d86a2e5baa4d991c95dbfe980a1a7ddd371df20398a807158",
       "state": {
         "lesson": "checking",
         "time": 7520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7520,
@@ -4362,12 +5685,19 @@
     },
     {
       "time_ms": 7560.0,
-      "sha256": "edf41de18b16977ebabfce0d139c79bc17e01609161d42e0873d29a66300e3c6",
+      "sha256": "4da064af5f5caaf7c65421673713c18d2523cec38d1f9f8802a182e47fda7247",
       "state": {
         "lesson": "checking",
         "time": 7560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7560,
@@ -4385,12 +5715,19 @@
     },
     {
       "time_ms": 7600.0,
-      "sha256": "8e15c5986906fd428e0247e415334d35615bc9c582e90704154cb738ac8b07ee",
+      "sha256": "4b09e1a9dc6ab25b958dbb2dfc3d5ba50700d9234ffb867876d854a1bc46d043",
       "state": {
         "lesson": "checking",
         "time": 7600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7600,
@@ -4408,12 +5745,19 @@
     },
     {
       "time_ms": 7640.0,
-      "sha256": "af1e0bfc6e9a35044d3417793a05dc9e0e5028477cee3f9527651c2516b36417",
+      "sha256": "8b0362a37f414819c3c21260a3c50aae655bceb74237a290c0484bd5843b9e76",
       "state": {
         "lesson": "checking",
         "time": 7640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7640,
@@ -4431,12 +5775,19 @@
     },
     {
       "time_ms": 7680.0,
-      "sha256": "12a7c291f0c9d58a91683703602c15472eb6076938bfc12283da56b1e310661a",
+      "sha256": "f647e77d4818a087ecb5944d10246af3a6c26549d0cbc4bfbe5e9f2ba566fbb9",
       "state": {
         "lesson": "checking",
         "time": 7680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7680,
@@ -4454,12 +5805,19 @@
     },
     {
       "time_ms": 7720.0,
-      "sha256": "8082538906c6bfe4e98cd6fa2050a2442906403b8b56120946903d10907ddb71",
+      "sha256": "928b3a19fe7ea768d704f6a6ca4a813356f0436722cc5e7561e448fcee995ca0",
       "state": {
         "lesson": "checking",
         "time": 7720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7720,
@@ -4477,12 +5835,19 @@
     },
     {
       "time_ms": 7760.0,
-      "sha256": "afb719e81d24d6c2402af5fad823e028f73a62a6d59368857f29876b7fdb6a8d",
+      "sha256": "41fbdd62745da7f2f731a079006d56c90a3b6c1d8bcbfac93733e021ea133b8d",
       "state": {
         "lesson": "checking",
         "time": 7760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7760,
@@ -4500,12 +5865,19 @@
     },
     {
       "time_ms": 7800.0,
-      "sha256": "033e10a63e81adb4d748e28ac25efd349734cc25b14e5d298529357f56a80327",
+      "sha256": "be34ba834302073a5ce2bf838501b39bd829c7be120c48880ba8f96682ef4363",
       "state": {
         "lesson": "checking",
         "time": 7800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7800,
@@ -4523,12 +5895,19 @@
     },
     {
       "time_ms": 7840.0,
-      "sha256": "444697e2f8a54f119880c83f12b600ecbcf8aa145b177ba8c09afac3dcccd0da",
+      "sha256": "63f0ca7e0626c2fca98e9874d9d525d4028deaf4adb54d7853d5d08217b23e18",
       "state": {
         "lesson": "checking",
         "time": 7840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7840,
@@ -4546,12 +5925,19 @@
     },
     {
       "time_ms": 7880.0,
-      "sha256": "08a4f8c13ac2ff6ca070a9c6f78a9a6a34f67f182e29a0eafcd1ad404244f3ac",
+      "sha256": "51e5baa0bbeadad79af6d8b07015e2cfa97be4cbd2830ae6b30089c484e96bab",
       "state": {
         "lesson": "checking",
         "time": 7880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7880,
@@ -4569,12 +5955,19 @@
     },
     {
       "time_ms": 7920.0,
-      "sha256": "695d4172654164329fff345dc4637c6dcace143ecf718a9c587e1b893086ea6e",
+      "sha256": "41836880bcb679ef85b35ac2a1f2626701a21def9defa51c3824d2ee741786f5",
       "state": {
         "lesson": "checking",
         "time": 7920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7920,
@@ -4592,12 +5985,19 @@
     },
     {
       "time_ms": 7960.0,
-      "sha256": "7bd80cfe37a311c5a2cefa6f6fcf6f6d6d1bd32f54dd83af140631d725ce95d6",
+      "sha256": "ab488a39341714998dfb6e9e11feac6a08e9e64b80128ba815c0352cd85fadeb",
       "state": {
         "lesson": "checking",
         "time": 7960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 7960,
@@ -4615,12 +6015,19 @@
     },
     {
       "time_ms": 8000.0,
-      "sha256": "026fcc2d0caa7d9400a831342db95c0555923e837fb687df4ce490d078434bff",
+      "sha256": "60a6741ccd3a05b136567a0f66ccd2eb427649fb2c4526f628b54579851afa7a",
       "state": {
         "lesson": "checking",
         "time": 8000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8000,
@@ -4638,12 +6045,19 @@
     },
     {
       "time_ms": 8040.0,
-      "sha256": "9d4eee96738a921a5a0425a9dce335186f51180aea16d28b236f0e08836f33fe",
+      "sha256": "01263f96b8f007d15e642069e2f38ba1d6a1212ff55d8701f59285eafc6fa345",
       "state": {
         "lesson": "checking",
         "time": 8040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8040,
@@ -4661,12 +6075,19 @@
     },
     {
       "time_ms": 8080.0,
-      "sha256": "2f75f0b5b2d73de2a1f53155b94d2ac85b66e91a0a057848ecf545f8887633cd",
+      "sha256": "4e5fe43fc92950719088ba92e166354aedb1c5dcb30e6fae0e3bee33965745da",
       "state": {
         "lesson": "checking",
         "time": 8080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8080,
@@ -4684,12 +6105,19 @@
     },
     {
       "time_ms": 8120.0,
-      "sha256": "66b797d6ec181bac00289e821e4388aec56c17317fb6c6860d22a784db1ea46e",
+      "sha256": "f4683d965fbdaae8305201a1dd9f7b3409d530b718d1d14db125e0488edd2c0f",
       "state": {
         "lesson": "checking",
         "time": 8120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8120,
@@ -4707,12 +6135,19 @@
     },
     {
       "time_ms": 8160.0,
-      "sha256": "c715a2d62a41cb1e63833b969ede31fd4205657b4605449b1d038cee533a6bf2",
+      "sha256": "3700fcfdacf61596a0254534aee382f895a1a4146f105fa5218ed724e103d8b3",
       "state": {
         "lesson": "checking",
         "time": 8160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8160,
@@ -4730,12 +6165,19 @@
     },
     {
       "time_ms": 8200.0,
-      "sha256": "669d4099aedcbf4cca1615d4690e64cacb1b11af6604ead3302e37cde90cbde6",
+      "sha256": "32d7000e1efd05cc2e9cd450b1f00cbefc9fca00485f641b41823b4f3eb319e1",
       "state": {
         "lesson": "checking",
         "time": 8200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8200,
@@ -4753,12 +6195,19 @@
     },
     {
       "time_ms": 8240.0,
-      "sha256": "10ae2249f79ef3e8086d99767c77e5338e40d86245bfa875e40e328e4ab651fc",
+      "sha256": "321ef5de6b8bc9e8f8795d7099c2c22a960ef17b2b523dace2c2096ce2c7ed72",
       "state": {
         "lesson": "checking",
         "time": 8240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8240,
@@ -4776,12 +6225,19 @@
     },
     {
       "time_ms": 8280.0,
-      "sha256": "de297597bdbda17fae802ce02678fa9d2d4663d4b42d8383efefc4f8100de967",
+      "sha256": "438dcf4ad8859d7a9f364c18080e69a03587fcae2fd4d1bf16e90ad3815f4fd4",
       "state": {
         "lesson": "checking",
         "time": 8280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8280,
@@ -4799,12 +6255,19 @@
     },
     {
       "time_ms": 8320.0,
-      "sha256": "4eaff44527062ed0ad4dfd1e7ff52644bb5db410588125d5aeaac71b609ce8f0",
+      "sha256": "8a40dc3d52df130012b242090261003f8bc3f97de1ec3f0585c14c244e670f23",
       "state": {
         "lesson": "checking",
         "time": 8320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8320,
@@ -4822,12 +6285,19 @@
     },
     {
       "time_ms": 8360.0,
-      "sha256": "057c6b3608c6b71378b7163dbdce75b23e31a85e742b8b3d6f562b5900f23e00",
+      "sha256": "49a269c23e6a621b35569ceab7b1996a5b8ac5daf4a5f4b12796ee7972ca824e",
       "state": {
         "lesson": "checking",
         "time": 8360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8360,
@@ -4845,12 +6315,19 @@
     },
     {
       "time_ms": 8400.0,
-      "sha256": "9e6f3ea109659c6f207486243c1087417f781979b993b7660fcfb89fe67d1e93",
+      "sha256": "71b8c7e1ca7b3d333353528111929ecf2b93bf090c7609fc4d95ad292521d2af",
       "state": {
         "lesson": "checking",
         "time": 8400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8400,
@@ -4868,12 +6345,19 @@
     },
     {
       "time_ms": 8440.0,
-      "sha256": "c2c70687a5f3254b439e60fe1dd2917d63c6ee9c68289a7cd7d99c0794617556",
+      "sha256": "fd14dba7069187b9ac672658f339e5de2065630e2110b5e2a7f7c8c531c8338f",
       "state": {
         "lesson": "checking",
         "time": 8440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8440,
@@ -4891,12 +6375,19 @@
     },
     {
       "time_ms": 8480.0,
-      "sha256": "ff5fe81367bec77a282fad4bf597fbcf2c51e5fea0a08f80ecd27e7aab3ffe5e",
+      "sha256": "5db235dbcee8a9429f4ed2f6094779d972bd6463231efa4510f8d78ee623394d",
       "state": {
         "lesson": "checking",
         "time": 8480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8480,
@@ -4914,12 +6405,19 @@
     },
     {
       "time_ms": 8520.0,
-      "sha256": "96f6d488d95880d24fbf69a0160377afa0b0b958c2ff6ef6dc1d56f4b21b08ff",
+      "sha256": "1e9f23c210d9eae68b5a96546991e551364d35679af0b2d75aa6c3de53d507af",
       "state": {
         "lesson": "checking",
         "time": 8520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8520,
@@ -4937,12 +6435,19 @@
     },
     {
       "time_ms": 8560.0,
-      "sha256": "a9091ded5f6c39b29f7cd494339dbb77c19af206ee9ff8d930bb93a537f3d4c7",
+      "sha256": "793c615e3cca3ee0c8b2dd5c4ef14b1af16ab073c670157bec15ac3b43e8782e",
       "state": {
         "lesson": "checking",
         "time": 8560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "cat": {
             "time": 8560,

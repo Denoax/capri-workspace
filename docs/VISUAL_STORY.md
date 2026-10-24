@@ -1,28 +1,34 @@
-# CAPRI visual story V3
+# CAPRI visual story
 
-The current root presentation keeps the approved banner, three full-body poses and all seven source-reference families. A literal product definition leads into the workflow, then the six-call graph sits inside the real horizon lesson beside a stable shark-framed brief. The reaching hands carry fixture A; skull/sword/rain and the dotted loop join retained requirements to coordination input; the cat accompanies checking. A compact elastic-stack still closes toward actual setup. This replaces the rejected V2 direction; no V2 layout/chart implementation is used.
+The V4 presentation refines V3's geometry and request inspection. The product definition, approved hero, three full-body poses, all seven source-reference families and canonical input illustration remain. The horizon graph and shark brief now have independent landscape frames. Reaching hands/checking and retained requirements/coordination are matched portraits. The original compact elastic stack closes toward offline setup.
 
 ## Local companion
 
-Open [the existing companion](../showcase/capri/source-match/companion/index.html) locally. Select requests1–6 inside the horizon lesson or vary additional input H in the dotted-loop lesson. These controls select the same calculated data used in the Markdown and artwork. They pause/seek or update real scene state. Play/pause, replay, backward seeking, native pointer/keyboard equivalents and offscreen/hidden-document pausing remain available. The [complete static README](README_STATIC.md) tells the story without JavaScript or motion.
+Open [the companion](../showcase/capri/source-match/companion/index.html) locally, keeping adjacent `actor-data.js`. Fonts and source footage are embedded. A modern browser needs no account, server or original machine path. GitHub displays media and links rather than executing this player. The [single-column static/mobile edition](README_STATIC.md) carries the complete meaning without JavaScript or motion. [Preserved historical source player](../showcase/capri/source-match/companion/source-match.html).
 
-The companion folder is local and self-contained: fonts and footage are embedded; adjacent `actor-data.js` holds the embedded cutout layers. Keep them together. GitHub’s file page displays source rather than running the player. No account, server, public deployment or old machine path is required for local playback. [Preserved original player](../showcase/capri/source-match/companion/source-match.html).
+Request selection changes mathematical inspection state and exact integer readouts. It never resets, seeks or replays the native horizon engine, or changes its play/pause state. A short guide transition emphasizes the selected existing row; intermediate marker positions are not measured requests. Reduced motion switches immediately. Native scene play/pause, replay and time seeking still own art time. Deterministic exports explicitly sample their scene clocks and graph emphasis together. This separation preserves reproducible capture without making ordinary selection replay hundreds of native renders.
 
-## Canonical data and scene ownership
+The additional-input control selects precomputed rows. Keyboard/touch controls, native disclosures, source-error/static fallback, WebGL fallback and hidden/offscreen pause remain. Live paints skip graph DOM mutations; graph nodes and geometry are cached, and only the visible chart changes when mathematical state changes.
 
-[story.json](../showcase/capri/story/story.json) refers to the unchanged [six-call input data](../showcase/capri/source-match/source/assets/data/context-budget.json). `tools/capri_context_budget.py` derives totals, percentages, append-model explanations and additional-input sensitivity. The generated [model projection](../showcase/capri/story/model-results.json) feeds Markdown, authored SVG graph geometry and local controls; the browser selects precomputed numeric rows. It does not invent a second cost model.
+## One frame contract
 
-The existing scene owns its clock, source video/native simulation, actor pose and packet. Request selection seeks that clock. Group exports explicitly sample their member scenes from one lesson timeline. The two-second retained-requirements excerpt keeps four original rain cycles and source-paced dot motion. A120ms dark bridge hides the dotted excerpt boundary; its numeric card and all labels stay still. The full source loop remains playable in the companion. Original footage cadence, export sampling and perceived smoothness remain separate. No native run or measured model result is depicted.
+[format.json](../showcase/capri/story/format.json) is the geometry authority. It defines 1200×675 landscape and 600×900 portrait families, insets, gutters, type hierarchy, source proportions, placements, portrait pairs and the single 768px mobile breakpoint. The existing 1000×343 hero is the byte-preserved header exception. The builder, CSS compiler, live scaling, exporter, Markdown builder and validator consume that contract.
 
-## Source continuity
+Fixed artboards are recomposed, then uniformly scaled into a reserved frame. Canvas/source proportions are preserved. Native controls and longer explanations remain outside the artwork. The companion truly stacks portrait pairs at the breakpoint. GitHub's native tables retain two columns; readable Markdown carries every essential rule/number, with full portraits and the separate single-column static route. Viewport media queries do not measure GitHub's content-column width.
 
-The original banner, thirty cutout layers, masks, pose keys, full RGBA/RGB/alpha masters, original source-match exports and complete input storage remain recoverable. The original renderer/source player stays separate from the V3 composition adapter. V3 keeps native shark and horizon factories, original video plates and actual cat-eye anchors. Review Capri replaces the cat’s Build pose using the existing calibrated rig; no new character generation or mesh warp is used.
+[Konata's pinned README](https://github.com/Denoax/konata-hyprland-dotfiles/blob/a9f433ad9cf5b870ee18ceed72d7200f402008e8/README.md) supplies the formatting reference: full-column images, equal paired frames and native captions. Its four inspected screenshots are 1600×900. CAPRI's 600×900 portrait family is an authored adaptation, not Konata's screenshot geometry. CAPRI keeps its own palette, fonts, source art and explanation.
 
-[Original source/rights record](SOURCE_MATCH.md#sources-and-rights) · [V3 source identity](../showcase/capri/story/SOURCE_RECORD.json) · [Original creator catalog](../showcase/capri/source-match/source/SOURCE_CATALOG.json). Horizon’s MIT and all OFL notices remain intact. Shark licensing, footage redistribution and underlying character rights remain unresolved as recorded; keep private. Design approval is not a creator licence.
+## Canonical inputs and source continuity
 
-## Rebuild
+[story.json](../showcase/capri/story/story.json) refers to the unchanged [six-call assumptions](../showcase/capri/source-match/source/assets/data/context-budget.json). `tools/capri_context_budget.py` supplies Markdown, SVG geometry and controls through the [model projection](../showcase/capri/story/model-results.json). The 180k/90k/60k totals, curated alternative, 60k+H sensitivity and 30k additional-input break-even remain illustrative inputs, not measured savings, active occupancy or equal-quality evidence. Fixture A retains the authoritative correction and compatible rules.
 
-Use Python with the recorded media environment (Pillow, NumPy, websockets), FFmpeg and Chromium. Set `CAPRI_CHROMIUM` if its location differs. No runtime dependency lock, controller or CI-policy change is required.
+The hero, thirty cutout layers, masks, pose keys, RGBA/RGB/alpha masters, original factories, source footage and provenance remain retrievable. Original V3 output is recoverable at commit `6a5d0b3746c49cd5da058b3d458497e267edc449`; unused historical variants are identified separately in the build manifest. Active filenames state their actual orientation.
+
+[Source/rights record](SOURCE_MATCH.md#sources-and-rights) · [Current composition identity](../showcase/capri/story/SOURCE_RECORD.json) · [Creator catalog](../showcase/capri/source-match/source/SOURCE_CATALOG.json). MIT/OFL notices and unresolved shark/footage/character rights remain unchanged; keep private. No new generated art or product telemetry is used.
+
+## Rebuild and verification
+
+Use the recorded media environment (Python, Pillow, NumPy, websockets), FFmpeg and Chromium. Set `CAPRI_CHROMIUM` if needed. No runtime dependency, lock, controller or CI policy change is required.
 
 ```sh
 python3 tools/build_capri_story.py
@@ -30,10 +36,9 @@ python3 tools/export_capri_story.py --evidence /your/task-private/media-evidence
 python3 tools/build_capri_story_readme.py
 python3 tools/build_capri_source_match_manifest.py
 python3 tools/check_capri_presentation.py
+python3 tools/check_capri_graph_browser.py --evidence /your/task-private/graph-check
 ```
 
-The builder reuses the original source-match assembler, saves its preserved player, then composes V3. `build_capri_source_match_readme.py` is the historical edition’s builder; the current root uses `build_capri_story_readme.py`. All files must stay below the unchanged8MB source-snapshot bound. The original large references retain verified lossless chunk storage and materialize outside the runtime checkout.
+All files remain below the unchanged 8MB checkout snapshot bound. Original large references use verified lossless chunks and materialize outside the runtime checkout. Native-horizon frames can vary bytewise between clean renders; source/data/geometry, semantic checks and exact exported identities are reported separately.
 
-## Verification boundary
-
-The review records actual selected media bytes, canonical arithmetic, decoded GIF cadence, source time/asset hashes, protected-runtime identities and responsive/interruption checks. Technical export checks and selected images do not prove uninterrupted perceived motion, human visual approval or native qualification. A local sanitized preview is separate from authenticated hosted GitHub rendering. Current [status](STATUS.md) and [benchmark protocol](BENCHMARK_PROTOCOL.md) remain authoritative; model comparisons stay unrun.
+Performance evidence distinguishes graph-only JavaScript work, selection-to-two-rAF presentation proxies, running-effect frame intervals and actual encoded playback. RAF intervals are not GPU timings. Software Chromium is not physical GPU/device qualification. Build checks and screenshots do not establish uninterrupted perceived smoothness or human visual approval. Current [native status](STATUS.md) and [benchmark protocol](BENCHMARK_PROTOCOL.md) remain authoritative; model comparisons stay unrun.

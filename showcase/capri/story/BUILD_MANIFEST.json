@@ -3,23 +3,53 @@
   "files": [
     {
       "path": "SOURCE_RECORD.json",
-      "bytes": 2283,
-      "sha256": "d73ffe26704079997318c9ab2320bfaf28ad607a7982e27bac1f7724244a3868"
+      "bytes": 3666,
+      "sha256": "e2063f0369b1e9bb7958ea5d4279f07d5f7cfd2bedd8048d3c21a127689aa7cc"
+    },
+    {
+      "path": "exports/brief-landscape-timeline.json",
+      "bytes": 93604,
+      "sha256": "530106e261f45a8ff848bff0a7c6691c64b70ca140876d8abb66f96f1980efd4"
+    },
+    {
+      "path": "exports/brief-landscape.gif",
+      "bytes": 1312747,
+      "sha256": "01d1a49ed76b3457c540c34ed34a7003bf7789f4c88146a78735585fc2745364"
+    },
+    {
+      "path": "exports/brief-landscape.png",
+      "bytes": 92898,
+      "sha256": "a4109c33400390faee4f3dc93f7a3a8ff5c3d8052d2fd21a17cf69e5cbebefdc"
+    },
+    {
+      "path": "exports/brief-portrait-timeline.json",
+      "bytes": 93601,
+      "sha256": "4639279ea0000047ebaecab84b165e98a92c37870f3cce285aee879e10abbfac"
+    },
+    {
+      "path": "exports/brief-portrait.gif",
+      "bytes": 880463,
+      "sha256": "cea3a35224f05a1a42f7b1152dceba19824d95327d5da129328158796f9fe3d9"
+    },
+    {
+      "path": "exports/brief-portrait.png",
+      "bytes": 72170,
+      "sha256": "c4b39e0c6fe52f81d410a82784b2d1f02e207fdf17321bc6b3731b74bf85ec3e"
     },
     {
       "path": "exports/checking-portrait-timeline.json",
-      "bytes": 125335,
-      "sha256": "e1fa1156b46b5266533a0e62df166636f838ddfd8e64b709bd5e957d623df4cd"
+      "bytes": 167260,
+      "sha256": "16615118fd84d1cb35e4e8ac202d5442245b7b0bac0c7622140966c9bc33101a"
     },
     {
       "path": "exports/checking-portrait.gif",
-      "bytes": 6031780,
-      "sha256": "7530de9f295bfcee00614cbbf1125a2987e876b9cba02b936fb4e88d4e875a92"
+      "bytes": 5077373,
+      "sha256": "61dba5ead58a8c66cb4a81ac86eb489d4710738b0e412af25fa51e9d26dc7f2b"
     },
     {
       "path": "exports/checking-portrait.png",
-      "bytes": 164262,
-      "sha256": "6359bad66e4bc33f6560bc24bb531df593b89d09505da94b297a7c4462add9a1"
+      "bytes": 141561,
+      "sha256": "77515666a6cd5fe5b6250d18ab8d5318213ef0737631e2d55634f06f8e4ad98b"
     },
     {
       "path": "exports/checking-wide-timeline.json",
@@ -37,9 +67,14 @@
       "sha256": "7e9448b51916844ee79fb22840793702a26dfea4b8f542cd94d630b23d80ba51"
     },
     {
+      "path": "exports/closing-landscape.png",
+      "bytes": 45788,
+      "sha256": "f258aed25aae23407f727fb9c6cb277832003b0811a7bf644b07eebf0bb45fa4"
+    },
+    {
       "path": "exports/closing-portrait.png",
-      "bytes": 41854,
-      "sha256": "ca3b642e1a0c98bd1216e1e2538c2aece45a74a7797b1ca116b093f33ea9bb61"
+      "bytes": 40985,
+      "sha256": "49a8c8aa3e6effda2d0214fba0cf30928207ecb2f77b03fdbdfdfb9e8f7e4c93"
     },
     {
       "path": "exports/closing-wide.png",
@@ -77,19 +112,34 @@
       "sha256": "931bf9535378238fc773d1091bd223156f09c670a338252bc3f4a1955c56177f"
     },
     {
+      "path": "exports/coordination-portrait-timeline.json",
+      "bytes": 39678,
+      "sha256": "d32e87587845fe6f4e8a63eb90ce5ee1c42b3899d9a10c1cba85bc6029256b10"
+    },
+    {
+      "path": "exports/coordination-portrait.gif",
+      "bytes": 1059284,
+      "sha256": "8f7a4fc074f8bd7f428d75bb4a1877b494b685a54bd971d67abcb9bd5bd2055d"
+    },
+    {
+      "path": "exports/coordination-portrait.png",
+      "bytes": 169725,
+      "sha256": "6dd2f1a3f67d8e4622834b71cdf2423ebe269556bc6277e22820a67b9ccab910"
+    },
+    {
       "path": "exports/handoff-portrait-timeline.json",
-      "bytes": 148298,
-      "sha256": "9bbe5d5df41590d821f527ba29afbaebb07aceb70179dc4d70de4b29b221744f"
+      "bytes": 197437,
+      "sha256": "0277c9c719bb4eb234e4cdf05f6b49f8782a6dbdfd93727c645fef4e89e706d7"
     },
     {
       "path": "exports/handoff-portrait.gif",
-      "bytes": 3727376,
-      "sha256": "4ea1cb0379ad97ad20123bb59f612afee0d48515b2c077d753517179129df64d"
+      "bytes": 3196953,
+      "sha256": "34e7731d4b1a891f633332d7b554c671f805c04fb74465d5027085e8bbea9e41"
     },
     {
       "path": "exports/handoff-portrait.png",
-      "bytes": 171198,
-      "sha256": "d9aae55e3ef611ee89fd84397c7f38e24f72c7cdabc9774dccae064bb6a16e56"
+      "bytes": 124727,
+      "sha256": "d47f92d02e32031c97e992a3a7970ef7bab67a5553a96cd0476b8fa876b10b5d"
     },
     {
       "path": "exports/handoff-wide-timeline.json",
@@ -105,6 +155,51 @@
       "path": "exports/handoff-wide.png",
       "bytes": 224632,
       "sha256": "d43748038fd9bcfae2220a99f16d1f23ad4ea0f3111da750cd0f14629a878951"
+    },
+    {
+      "path": "exports/quantitative-landscape-timeline.json",
+      "bytes": 126341,
+      "sha256": "91c650e8f4a14a1d736a31c63edf5403988d6cfc79c7bba875d5f3c8f052b0e3"
+    },
+    {
+      "path": "exports/quantitative-landscape.gif",
+      "bytes": 1576677,
+      "sha256": "2454fc4c0482294cc66d0d3d7f8ed859f304a43cf96451220129dd7572d99d86"
+    },
+    {
+      "path": "exports/quantitative-landscape.png",
+      "bytes": 252308,
+      "sha256": "ee6a1aa4e2306b344515199a272834bb838ddd5e837242fd90b47baf3ecf4ade"
+    },
+    {
+      "path": "exports/quantitative-portrait-timeline.json",
+      "bytes": 126339,
+      "sha256": "80793cb2c488dadc9791b5a9e0aa6b865fb46af48a7df82bff0a972e2e18375d"
+    },
+    {
+      "path": "exports/quantitative-portrait.gif",
+      "bytes": 1202918,
+      "sha256": "8c8a2c51dfd93c5751d849cc7eef2399b6e2e99af79442feb7b276d568d26f2a"
+    },
+    {
+      "path": "exports/quantitative-portrait.png",
+      "bytes": 202704,
+      "sha256": "fd5917fa0ffe44322dcd93543d3c28374f23a260a58e02530ce9172e7c00c630"
+    },
+    {
+      "path": "exports/requirements-portrait-timeline.json",
+      "bytes": 39345,
+      "sha256": "ef21bef5f35102e6aaada4728a3bb06dbe9aaa11ef81a930f660422f458fae41"
+    },
+    {
+      "path": "exports/requirements-portrait.gif",
+      "bytes": 4310483,
+      "sha256": "caaf4a3258d60f721d13ed0dd6741d53efb39d75d5793dea70cc979cef19d7e2"
+    },
+    {
+      "path": "exports/requirements-portrait.png",
+      "bytes": 241014,
+      "sha256": "7ca37beacfa33e61563e959f12b293737d5b79d231604f141cc213dd8b2c83e3"
     },
     {
       "path": "exports/retained-portrait-timeline.json",
@@ -137,19 +232,34 @@
       "sha256": "16480b1a2978313be7882aa50fb297f7713a76612a6ce4f11ee1075ec5bf2f59"
     },
     {
+      "path": "exports/workflow-landscape-timeline.json",
+      "bytes": 187447,
+      "sha256": "481f3184999a5b2bcc6d449d3442fcb7401c714bcda4e67d22534e89d56f7293"
+    },
+    {
+      "path": "exports/workflow-landscape.gif",
+      "bytes": 1053985,
+      "sha256": "4568a5fdd78bdf23ee097859a8652811a59bf09a5d979112c708bd9a0bff20ac"
+    },
+    {
+      "path": "exports/workflow-landscape.png",
+      "bytes": 138362,
+      "sha256": "0fcc58ce1026d44cfa978a57f5b76b04c960d74bde4d643d1aa1dc15a6cc3dca"
+    },
+    {
       "path": "exports/workflow-portrait-timeline.json",
-      "bytes": 140646,
-      "sha256": "50349d8c50e537f6afbd9e84450b2d76d97eb5db928421de63c263a626e4b760"
+      "bytes": 187444,
+      "sha256": "607e2aa3a691dbb00e32f0f451a9790420c2bc0f64aa3f2cf75aed38e06d04e1"
     },
     {
       "path": "exports/workflow-portrait.gif",
-      "bytes": 1855091,
-      "sha256": "be6f36abbfe179ddcf1825513ba2c147ce1838a73c4d3e93759f3dbddb594a4f"
+      "bytes": 540739,
+      "sha256": "026970ada491d8270cc9269e4dfe0bb3ed58750bacd7150394b04458f7cedd96"
     },
     {
       "path": "exports/workflow-portrait.png",
-      "bytes": 231160,
-      "sha256": "64c87644eff694c66c167e7c17b34076511859d65f5dde8028dbfe14f9257cf8"
+      "bytes": 111570,
+      "sha256": "cbf76d9a46f7cbcb0572c521cff767d27c2ac275b0d02821074b3714a2d17df9"
     },
     {
       "path": "exports/workflow-wide-timeline.json",
@@ -167,9 +277,14 @@
       "sha256": "aa00d64085957ef4eeb230bdb847f4d310164eb6b0b9053444b56f4c73797c19"
     },
     {
+      "path": "format.json",
+      "bytes": 4008,
+      "sha256": "b770140f15149521ef3be3aed57ad3fa93fb17606542c6e3e09b28081ee3ab59"
+    },
+    {
       "path": "input-portrait.svg",
       "bytes": 4186,
-      "sha256": "c7330b7e1b09511d15d49c773f7062d751142f20545a85344a93bae630c2367f"
+      "sha256": "83f3f5b43914c795d4a26e64cb33c1ba616cbd4ae2c527325f6053c0dad82ce7"
     },
     {
       "path": "input-wide.svg",
@@ -183,24 +298,82 @@
     },
     {
       "path": "scenes.js",
-      "bytes": 24099,
-      "sha256": "196b328a84f2ed7036edc2456a1adefda7ba8192877e5b1fc6f96f3d9150971a"
+      "bytes": 24418,
+      "sha256": "f4ee43fe5d6b512a5b44500ef49bb0f3f34e9e56bb37fc4321dd2829e3f98560"
     },
     {
       "path": "story-ui.js",
-      "bytes": 5743,
-      "sha256": "d3cbaf02073dab4e1b410df8be99269b109a54d38336f9e1c19476602398eef8"
+      "bytes": 8260,
+      "sha256": "6dc56ebe8d1c78d60010e7c9654826ed37d5b2251a108b860d7cde4a4ea8f283"
     },
     {
       "path": "story.css",
-      "bytes": 6559,
-      "sha256": "2faa92c8735648974bf60f47dfb6ef263d34366e960c7de9ff96fcf3024da7f4"
+      "bytes": 6313,
+      "sha256": "30ca0658fd689fc055c6334eba136f3d69edf6fb81f4d152bafb3358380cf7b0"
     },
     {
       "path": "story.json",
-      "bytes": 2278,
-      "sha256": "ae3d63bdc5795c15025315d6268f378f0d5b0606a0f02c7545814f1f8ecb8078"
+      "bytes": 3116,
+      "sha256": "f43938e24f53a9931b6377c67a71c1fff4d3cf7416407492d23accd02d1cdfe3"
     }
   ],
-  "scope": "File identities; export provenance/timing are in each timeline. No perceptual acceptance."
+  "scope": "File identities; export provenance/timing are in each timeline. No perceptual acceptance.",
+  "active_exports": [
+    "exports/workflow-landscape.png",
+    "exports/workflow-landscape.gif",
+    "exports/workflow-landscape-timeline.json",
+    "exports/workflow-portrait.png",
+    "exports/workflow-portrait.gif",
+    "exports/workflow-portrait-timeline.json",
+    "exports/quantitative-landscape.png",
+    "exports/quantitative-landscape.gif",
+    "exports/quantitative-landscape-timeline.json",
+    "exports/quantitative-portrait.png",
+    "exports/quantitative-portrait.gif",
+    "exports/quantitative-portrait-timeline.json",
+    "exports/brief-landscape.png",
+    "exports/brief-landscape.gif",
+    "exports/brief-landscape-timeline.json",
+    "exports/brief-portrait.png",
+    "exports/brief-portrait.gif",
+    "exports/brief-portrait-timeline.json",
+    "exports/handoff-portrait.png",
+    "exports/handoff-portrait.gif",
+    "exports/handoff-portrait-timeline.json",
+    "exports/checking-portrait.png",
+    "exports/checking-portrait.gif",
+    "exports/checking-portrait-timeline.json",
+    "exports/requirements-portrait.png",
+    "exports/requirements-portrait.gif",
+    "exports/requirements-portrait-timeline.json",
+    "exports/coordination-portrait.png",
+    "exports/coordination-portrait.gif",
+    "exports/coordination-portrait-timeline.json",
+    "exports/closing-landscape.png",
+    "exports/closing-portrait.png"
+  ],
+  "historical_exports": [
+    "exports/checking-wide-timeline.json",
+    "exports/checking-wide.gif",
+    "exports/checking-wide.png",
+    "exports/closing-wide.png",
+    "exports/contexts-portrait-timeline.json",
+    "exports/contexts-portrait.gif",
+    "exports/contexts-portrait.png",
+    "exports/contexts-wide-timeline.json",
+    "exports/contexts-wide.gif",
+    "exports/contexts-wide.png",
+    "exports/handoff-wide-timeline.json",
+    "exports/handoff-wide.gif",
+    "exports/handoff-wide.png",
+    "exports/retained-portrait-timeline.json",
+    "exports/retained-portrait.gif",
+    "exports/retained-portrait.png",
+    "exports/retained-wide-timeline.json",
+    "exports/retained-wide.gif",
+    "exports/retained-wide.png",
+    "exports/workflow-wide-timeline.json",
+    "exports/workflow-wide.gif",
+    "exports/workflow-wide.png"
+  ]
 }

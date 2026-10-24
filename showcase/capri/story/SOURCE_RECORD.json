@@ -1,7 +1,7 @@
 {
-  "base": "f502e6448223812edcceedaa48ee9d89e7127343",
-  "handoff_sha256": "74b7cafdc862e3316bda5549003416333d48005c28c85ac8889acf8e72c0190a",
-  "method": "V3 authored composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
+  "base": "6a5d0b3746c49cd5da058b3d458497e267edc449",
+  "handoff_sha256": "94988a5dc3f043d6edfe49bfa3858599e914cc6343c740620c34b388cc4b65d4",
+  "method": "V4 canonical frames and isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
   "lessons": {
     "workflow": {
       "members": [
@@ -9,25 +9,48 @@
       ],
       "duration_ms": 9600,
       "fps": 25,
-      "wide": 1000,
       "export_scene": "comic",
       "still_ms": 800,
-      "families": []
+      "families": [],
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "family": "landscape"
     },
-    "contexts": {
+    "quantitative": {
       "members": [
-        "horizon",
-        "sharks"
+        "horizon"
       ],
       "duration_ms": 6400,
       "fps": 25,
-      "wide": 1000,
       "export_scene": "horizon",
       "still_ms": 2600,
       "families": [
-        "horizon",
+        "horizon"
+      ],
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "family": "landscape"
+    },
+    "brief": {
+      "members": [
         "sharks"
-      ]
+      ],
+      "duration_ms": 4800,
+      "fps": 25,
+      "export_scene": "sharks",
+      "still_ms": 1200,
+      "families": [
+        "sharks"
+      ],
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "family": "landscape"
     },
     "handoff": {
       "members": [
@@ -35,28 +58,15 @@
       ],
       "duration_ms": 5040,
       "fps": 50,
-      "wide": 800,
       "export_scene": "hands",
       "still_ms": 2620,
       "families": [
         "hands"
-      ]
-    },
-    "retained": {
-      "members": [
-        "rain",
-        "dots"
       ],
-      "duration_ms": 2000,
-      "fps": 25,
-      "wide": 1000,
-      "export_scene": "dots",
-      "still_ms": 1000,
-      "families": [
-        "rain",
-        "dots"
+      "layouts": [
+        "portrait"
       ],
-      "loop_bridge": "120ms dark bridge on dotted-source canvas only; original rain pace retained with four source cycles."
+      "family": "portrait"
     },
     "checking": {
       "members": [
@@ -64,12 +74,47 @@
       ],
       "duration_ms": 8600,
       "fps": 25,
-      "wide": 640,
       "export_scene": "cat",
       "still_ms": 3800,
       "families": [
         "cat"
-      ]
+      ],
+      "layouts": [
+        "portrait"
+      ],
+      "family": "portrait"
+    },
+    "requirements": {
+      "members": [
+        "rain"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "export_scene": "rain",
+      "still_ms": 1000,
+      "families": [
+        "rain"
+      ],
+      "layouts": [
+        "portrait"
+      ],
+      "family": "portrait"
+    },
+    "coordination": {
+      "members": [
+        "dots"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "export_scene": "dots",
+      "still_ms": 1000,
+      "families": [
+        "dots"
+      ],
+      "layouts": [
+        "portrait"
+      ],
+      "family": "portrait"
     },
     "closing": {
       "members": [
@@ -77,14 +122,26 @@
       ],
       "duration_ms": 10800,
       "fps": 25,
-      "wide": 640,
       "export_scene": "stack",
       "still_ms": 2200,
       "families": [
         "stack"
       ],
-      "static_only": true
+      "static_only": true,
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "family": "landscape"
     }
+  },
+  "format_file": "format.json",
+  "format_sha256": "b770140f15149521ef3be3aed57ad3fa93fb17606542c6e3e09b28081ee3ab59",
+  "format_reference": {
+    "url": "https://github.com/Denoax/konata-hyprland-dotfiles/tree/a9f433ad9cf5b870ee18ceed72d7200f402008e8",
+    "readme_blob": "ea674c406f946b0929b225265d0bbe5b568d893a",
+    "observed": "Width100% images and paired native tables; four actual1600x900 screenshot frames.",
+    "adaptation": "600x900 portrait is authored CAPRI geometry, not the Konata screenshot ratio."
   },
   "canonical_input": "showcase/capri/source-match/source/assets/data/context-budget.json",
   "canonical_sha256": "2fb6b1e2cd3a0221a08e16948759d94ceff8e2568bf4fd8a1bd57d1e52e76784",

@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "mobile_breakpoint_px": 768,
+  "hero": {
+    "width": 1000,
+    "height": 343,
+    "preserve_bytes": true
+  },
+  "families": {
+    "landscape": {
+      "width": 1200,
+      "height": 675,
+      "inset": 36,
+      "gutter": 24,
+      "heading": 38,
+      "body": 24
+    },
+    "portrait": {
+      "width": 600,
+      "height": 900,
+      "inset": 30,
+      "gutter": 20,
+      "heading": 34,
+      "body": 27
+    }
+  },
+  "pairs": [
+    [
+      "handoff",
+      "checking"
+    ],
+    [
+      "requirements",
+      "coordination"
+    ]
+  ],
+  "source_aspects": {
+    "horizon": [
+      960,
+      600
+    ],
+    "sharks": [
+      900,
+      620
+    ],
+    "hands": [
+      320,
+      320
+    ],
+    "cat": [
+      320,
+      316
+    ],
+    "rain": [
+      320,
+      320
+    ],
+    "dots": [
+      320,
+      294
+    ],
+    "stack": [
+      640,
+      360
+    ]
+  },
+  "positions": {
+    "quantitative": {
+      "landscape": {
+        ".cs-stage": [
+          36,
+          190,
+          480,
+          300
+        ],
+        ".cs-caption h3": [
+          36,
+          36,
+          480,
+          105
+        ],
+        ".cs-caption p": [
+          36,
+          525,
+          480,
+          110
+        ],
+        ".story-chart": [
+          552,
+          30,
+          612,
+          476
+        ],
+        ".story-derivation": [
+          552,
+          535,
+          612,
+          80
+        ],
+        ".story-assumption": [
+          552,
+          618,
+          612,
+          42
+        ]
+      },
+      "portrait": {
+        ".cs-stage": [
+          100,
+          20,
+          400,
+          250
+        ],
+        ".story-chart": [
+          20,
+          290,
+          560,
+          541.333
+        ],
+        ".story-derivation": [
+          30,
+          804,
+          540,
+          70
+        ]
+      }
+    },
+    "brief": {
+      "landscape": {
+        ".cs-stage": [
+          504,
+          110,
+          660,
+          454.667
+        ],
+        ".cs-caption h3": [
+          36,
+          100,
+          420,
+          145
+        ],
+        ".cs-caption p": [
+          36,
+          300,
+          420,
+          220
+        ]
+      },
+      "portrait": {
+        ".cs-stage": [
+          30,
+          200,
+          540,
+          372
+        ],
+        ".cs-caption h3": [
+          30,
+          30,
+          540,
+          130
+        ],
+        ".cs-caption p": [
+          30,
+          640,
+          540,
+          200
+        ]
+      }
+    },
+    "closing": {
+      "landscape": {
+        ".cp-scene": [
+          564,
+          160,
+          600,
+          337.5
+        ],
+        ".cp-copy h3": [
+          36,
+          110,
+          480,
+          160
+        ],
+        ".cp-copy p": [
+          36,
+          330,
+          480,
+          220
+        ]
+      },
+      "portrait": {
+        ".cp-scene": [
+          30,
+          250,
+          540,
+          303.75
+        ],
+        ".cp-copy h3": [
+          30,
+          40,
+          540,
+          170
+        ],
+        ".cp-copy p": [
+          30,
+          630,
+          540,
+          210
+        ]
+      }
+    }
+  },
+  "portrait_plate": {
+    "stage_x": 30,
+    "stage_y": 145,
+    "stage_width": 540,
+    "heading_y": 30,
+    "copy_y": 720
+  },
+  "workflow": {
+    "landscape": {
+      "intro_y": 30,
+      "row_y": 170,
+      "row_height": 410,
+      "end_y": 615,
+      "model_height": 255
+    },
+    "portrait": {
+      "intro_y": 28,
+      "row_y": 205,
+      "row_height": 600,
+      "end_y": 826,
+      "model_width": 190,
+      "model_height": 195
+    }
+  },
+  "reference": {
+    "url": "https://github.com/Denoax/konata-hyprland-dotfiles/tree/a9f433ad9cf5b870ee18ceed72d7200f402008e8",
+    "readme_blob": "ea674c406f946b0929b225265d0bbe5b568d893a",
+    "observed": "Width100% images and paired native tables; four actual1600x900 screenshot frames.",
+    "adaptation": "600x900 portrait is authored CAPRI geometry, not the Konata screenshot ratio."
+  }
+}

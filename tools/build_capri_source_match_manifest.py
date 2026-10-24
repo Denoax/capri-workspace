@@ -7,7 +7,16 @@ def register(media):
     files=[]
     for path in sorted(media.rglob('*')):
         if path.is_file() and path.name!='BUILD_MANIFEST.json':files.append({'path':path.relative_to(media).as_posix(),'bytes':path.stat().st_size,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
-    (media/'BUILD_MANIFEST.json').write_text(json.dumps({'schema_version':1,'files':files,'scope':'File identities; export provenance/timing are in each timeline. No perceptual acceptance.'},indent=2)+'\n')
+    record={'schema_version':1,'files':files,'scope':'File identities; export provenance/timing are in each timeline. No perceptual acceptance.'}
+    if (media/'story.json').exists():
+        configuration=json.loads((media/'story.json').read_text());active=[]
+        for name,lesson in configuration['lessons'].items():
+            for layout in lesson['layouts']:
+                active.append(f'exports/{name}-{layout}.png')
+                if not lesson.get('static_only'):active.extend([f'exports/{name}-{layout}.gif',f'exports/{name}-{layout}-timeline.json'])
+        record['active_exports']=active
+        record['historical_exports']=[item['path'] for item in files if item['path'].startswith('exports/') and item['path'] not in active]
+    (media/'BUILD_MANIFEST.json').write_text(json.dumps(record,indent=2)+'\n')
     print('Registered',len(files),str(media.relative_to(ROOT))+' files')
 def main():
     register(MEDIA)

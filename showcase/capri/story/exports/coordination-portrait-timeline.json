@@ -1,0 +1,1518 @@
+{
+  "lesson": "coordination",
+  "layout": "portrait",
+  "duration_ms": 2000,
+  "sample_fps": 25,
+  "sample_count": 50,
+  "size": [
+    600,
+    900
+  ],
+  "bytes": 1059284,
+  "gif_sha256": "8f7a4fc074f8bd7f428d75bb4a1877b494b685a54bd971d67abcb9bd5bd2055d",
+  "poster_sha256": "6dd2f1a3f67d8e4622834b71cdf2423ebe269556bc6277e22820a67b9ccab910",
+  "palette_colors": 256,
+  "frames": [
+    {
+      "time_ms": 0.0,
+      "sha256": "eb7a95a18fc55ab0372ce1702efb3950560c437018b87330a1e5f50d8e50c4d8",
+      "state": {
+        "lesson": "coordination",
+        "time": 0,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 0,
+            "running": false,
+            "visible": true,
+            "frames": 3,
+            "native": null,
+            "sourceTime": 0,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 3
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 40.0,
+      "sha256": "a185f3ef32cf4d8a9ab7eeb56bb965df815143bc02d2e8c8357aa02dcadef366",
+      "state": {
+        "lesson": "coordination",
+        "time": 40,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 40,
+            "running": false,
+            "visible": true,
+            "frames": 4,
+            "native": null,
+            "sourceTime": 0.04,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 4
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 80.0,
+      "sha256": "67ad63df94dd76c16832511023db7085fd791f955de0eea6081472a3e88acfd5",
+      "state": {
+        "lesson": "coordination",
+        "time": 80,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 80,
+            "running": false,
+            "visible": true,
+            "frames": 5,
+            "native": null,
+            "sourceTime": 0.08,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 5
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 120.0,
+      "sha256": "cbddf27960a68e1139f913cdba61df315302d94aae821b6c1fee9053253dfbf3",
+      "state": {
+        "lesson": "coordination",
+        "time": 120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 120,
+            "running": false,
+            "visible": true,
+            "frames": 6,
+            "native": null,
+            "sourceTime": 0.12,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 6
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 160.0,
+      "sha256": "de7612e9171d101d57d68429263fabee0b247e17ed5858283c9e5658a2e6f80c",
+      "state": {
+        "lesson": "coordination",
+        "time": 160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 160,
+            "running": false,
+            "visible": true,
+            "frames": 7,
+            "native": null,
+            "sourceTime": 0.16,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 7
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 200.0,
+      "sha256": "00133b2a28253bf2f01828949e60779ee9002a8e247bc44c2becc37b66581a83",
+      "state": {
+        "lesson": "coordination",
+        "time": 200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 200,
+            "running": false,
+            "visible": true,
+            "frames": 8,
+            "native": null,
+            "sourceTime": 0.2,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 8
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 240.0,
+      "sha256": "aa692c889e81c1cb27a34af609273c0464709b55debca803ac2e6e9c06a81729",
+      "state": {
+        "lesson": "coordination",
+        "time": 240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 240,
+            "running": false,
+            "visible": true,
+            "frames": 9,
+            "native": null,
+            "sourceTime": 0.24,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 9
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 280.0,
+      "sha256": "a66c4be67c292311cde34d0f49ed1f8e372203b09b9b2ba7654d00d1152f6d5d",
+      "state": {
+        "lesson": "coordination",
+        "time": 280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 280,
+            "running": false,
+            "visible": true,
+            "frames": 10,
+            "native": null,
+            "sourceTime": 0.28,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 10
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 320.0,
+      "sha256": "6908c8f5ff1ead1de1d9beb0e4359d54a241bffd7af101685188e2d611a15dc1",
+      "state": {
+        "lesson": "coordination",
+        "time": 320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 320,
+            "running": false,
+            "visible": true,
+            "frames": 11,
+            "native": null,
+            "sourceTime": 0.32,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 11
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 360.0,
+      "sha256": "4e03443cc4156a8e15ba9512665355865570b040a42073301f890b002502b94c",
+      "state": {
+        "lesson": "coordination",
+        "time": 360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 360,
+            "running": false,
+            "visible": true,
+            "frames": 12,
+            "native": null,
+            "sourceTime": 0.36,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 12
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 400.0,
+      "sha256": "61010cc140a5f9181ae6a61b23fd480206b4da2d8b1c425dfe845c205523fd1c",
+      "state": {
+        "lesson": "coordination",
+        "time": 400,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 400,
+            "running": false,
+            "visible": true,
+            "frames": 13,
+            "native": null,
+            "sourceTime": 0.4,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 13
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 440.0,
+      "sha256": "735e19a55513590bf97da8cb4de077ad5da61956f0def8d9b5febeee9281fd2a",
+      "state": {
+        "lesson": "coordination",
+        "time": 440,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 440,
+            "running": false,
+            "visible": true,
+            "frames": 14,
+            "native": null,
+            "sourceTime": 0.44,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 14
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 480.0,
+      "sha256": "951a710016981a2f00109cd489be3d26ad068b1f7ef378eab8e0fa991e1ff662",
+      "state": {
+        "lesson": "coordination",
+        "time": 480,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 480,
+            "running": false,
+            "visible": true,
+            "frames": 15,
+            "native": null,
+            "sourceTime": 0.48,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 15
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 520.0,
+      "sha256": "48225ab948607a269ccdaad8c7378db6042b421851d7de212460ce2aa3e0342f",
+      "state": {
+        "lesson": "coordination",
+        "time": 520,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 520,
+            "running": false,
+            "visible": true,
+            "frames": 16,
+            "native": null,
+            "sourceTime": 0.52,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 16
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 560.0,
+      "sha256": "fab9ae639d1ff275ce4b174d042c09f3ff02a6a805f739ead7367f99f1d66145",
+      "state": {
+        "lesson": "coordination",
+        "time": 560,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 560,
+            "running": false,
+            "visible": true,
+            "frames": 17,
+            "native": null,
+            "sourceTime": 0.56,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 17
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 600.0,
+      "sha256": "9657c3b08addcd37dcbbd4e953aa495ce590b31aa18117176c22aa688e6fc475",
+      "state": {
+        "lesson": "coordination",
+        "time": 600,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 600,
+            "running": false,
+            "visible": true,
+            "frames": 18,
+            "native": null,
+            "sourceTime": 0.6,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 18
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 640.0,
+      "sha256": "a0e2724f39d90a8fd4e561710ee4fe78bd22e54a9770175f3e6d57873a937b93",
+      "state": {
+        "lesson": "coordination",
+        "time": 640,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 640,
+            "running": false,
+            "visible": true,
+            "frames": 19,
+            "native": null,
+            "sourceTime": 0.64,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 19
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 680.0,
+      "sha256": "d3cf90aa0627dab422178e9d4c17140c75413645b4f873f02536613d1d7176df",
+      "state": {
+        "lesson": "coordination",
+        "time": 680,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 680,
+            "running": false,
+            "visible": true,
+            "frames": 20,
+            "native": null,
+            "sourceTime": 0.68,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 20
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 720.0,
+      "sha256": "a7cbb7c65ef1f565cb9856cbdef4e67dea523565d119cf2c5b59df33e0d6731b",
+      "state": {
+        "lesson": "coordination",
+        "time": 720,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 720,
+            "running": false,
+            "visible": true,
+            "frames": 21,
+            "native": null,
+            "sourceTime": 0.72,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 21
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 760.0,
+      "sha256": "a9daa99d3cc013331d4b5224461dac67e195b3d7134624686b53aa27bccd058d",
+      "state": {
+        "lesson": "coordination",
+        "time": 760,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 760,
+            "running": false,
+            "visible": true,
+            "frames": 22,
+            "native": null,
+            "sourceTime": 0.76,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 22
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 800.0,
+      "sha256": "be61b3ae1cb058828019016a6f9ef71ee85c9326fa51da1cc17880a961e6c0a9",
+      "state": {
+        "lesson": "coordination",
+        "time": 800,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 800,
+            "running": false,
+            "visible": true,
+            "frames": 23,
+            "native": null,
+            "sourceTime": 0.8,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 23
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 840.0,
+      "sha256": "38f5f2b59bf154784421584543c9fd30304b955e1a73fcca0bfbd59f49be7433",
+      "state": {
+        "lesson": "coordination",
+        "time": 840,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 840,
+            "running": false,
+            "visible": true,
+            "frames": 24,
+            "native": null,
+            "sourceTime": 0.84,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 24
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 880.0,
+      "sha256": "9ae93308c140a6522162e3cda9ffdbe7113b3355e78cb42d415516bad1f8f3e3",
+      "state": {
+        "lesson": "coordination",
+        "time": 880,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 880,
+            "running": false,
+            "visible": true,
+            "frames": 25,
+            "native": null,
+            "sourceTime": 0.88,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 25
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 920.0,
+      "sha256": "18f53c11d0897118809a3d31acb269388e552f10a869ac1d2d102060e5c7315c",
+      "state": {
+        "lesson": "coordination",
+        "time": 920,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 920,
+            "running": false,
+            "visible": true,
+            "frames": 26,
+            "native": null,
+            "sourceTime": 0.92,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 26
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 960.0,
+      "sha256": "fd56e2aeccc2192eeb005ea73bcf45eaa0c3b3eb2f0607d322af743553110819",
+      "state": {
+        "lesson": "coordination",
+        "time": 960,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 960,
+            "running": false,
+            "visible": true,
+            "frames": 27,
+            "native": null,
+            "sourceTime": 0.96,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 27
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1000.0,
+      "sha256": "6dd2f1a3f67d8e4622834b71cdf2423ebe269556bc6277e22820a67b9ccab910",
+      "state": {
+        "lesson": "coordination",
+        "time": 1000,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1000,
+            "running": false,
+            "visible": true,
+            "frames": 28,
+            "native": null,
+            "sourceTime": 1,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 28
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1040.0,
+      "sha256": "e5415706140557115238ab6ded9e2b15e7db5afa5e3aa42cd0d7e32653283196",
+      "state": {
+        "lesson": "coordination",
+        "time": 1040,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1040,
+            "running": false,
+            "visible": true,
+            "frames": 29,
+            "native": null,
+            "sourceTime": 1.04,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 29
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1080.0,
+      "sha256": "86dea9ffc3a736b08218894835e85b27add5c137ea354b365f4620a839b6bacf",
+      "state": {
+        "lesson": "coordination",
+        "time": 1080,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1080,
+            "running": false,
+            "visible": true,
+            "frames": 30,
+            "native": null,
+            "sourceTime": 1.08,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 30
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1120.0,
+      "sha256": "ba1a5e22a05ba6b6596367f7a4052f6d41c2f8b16cd05586e12f4f72c42ea35b",
+      "state": {
+        "lesson": "coordination",
+        "time": 1120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1120,
+            "running": false,
+            "visible": true,
+            "frames": 31,
+            "native": null,
+            "sourceTime": 1.12,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 31
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1160.0,
+      "sha256": "d8ede026d32605a9ee124fa915ca48af378c00a1514681929ceff5b6ae532e13",
+      "state": {
+        "lesson": "coordination",
+        "time": 1160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1160,
+            "running": false,
+            "visible": true,
+            "frames": 32,
+            "native": null,
+            "sourceTime": 1.16,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 32
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1200.0,
+      "sha256": "586a9bd259a8d7e3344b4ea6b16296eb845016df208092117a5282c5a1a2a6f0",
+      "state": {
+        "lesson": "coordination",
+        "time": 1200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1200,
+            "running": false,
+            "visible": true,
+            "frames": 33,
+            "native": null,
+            "sourceTime": 1.2,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 33
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1240.0,
+      "sha256": "f61eb2fe9aead5429cf6997b144c8b350340a6068ec9fa968c0fb03162104471",
+      "state": {
+        "lesson": "coordination",
+        "time": 1240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1240,
+            "running": false,
+            "visible": true,
+            "frames": 34,
+            "native": null,
+            "sourceTime": 1.24,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 34
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1280.0,
+      "sha256": "80432eac40327d710f45868d944eb0673ec942fd01973c5c91a33b4d31523d32",
+      "state": {
+        "lesson": "coordination",
+        "time": 1280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1280,
+            "running": false,
+            "visible": true,
+            "frames": 35,
+            "native": null,
+            "sourceTime": 1.28,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 35
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1320.0,
+      "sha256": "f2fde5cdb55c41f7a1f7dde67cb3306f8da4010650f8c0d69f1cc40caea66f69",
+      "state": {
+        "lesson": "coordination",
+        "time": 1320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1320,
+            "running": false,
+            "visible": true,
+            "frames": 36,
+            "native": null,
+            "sourceTime": 1.32,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 36
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1360.0,
+      "sha256": "5063b7821b83a6f243b11c8736626e5b712f26cac8ad27b46c3358c2ca444353",
+      "state": {
+        "lesson": "coordination",
+        "time": 1360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1360,
+            "running": false,
+            "visible": true,
+            "frames": 37,
+            "native": null,
+            "sourceTime": 1.36,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 37
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1400.0,
+      "sha256": "d3975cafddfc97bb828a6f3a5dc4f437f97f71a2f9b588a837680725a5e6981e",
+      "state": {
+        "lesson": "coordination",
+        "time": 1400,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1400,
+            "running": false,
+            "visible": true,
+            "frames": 38,
+            "native": null,
+            "sourceTime": 1.4,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 38
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1440.0,
+      "sha256": "ebb81e90416fd7f57e29322b1e405e073d17aa68795cafc386b5661974ccd68e",
+      "state": {
+        "lesson": "coordination",
+        "time": 1440,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1440,
+            "running": false,
+            "visible": true,
+            "frames": 39,
+            "native": null,
+            "sourceTime": 1.44,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 39
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1480.0,
+      "sha256": "9307e97b5f9acd83277ddfab605c3031c05bee38bcc1e419ee3baa1e5ab1b2cd",
+      "state": {
+        "lesson": "coordination",
+        "time": 1480,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1480,
+            "running": false,
+            "visible": true,
+            "frames": 40,
+            "native": null,
+            "sourceTime": 1.48,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 40
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1520.0,
+      "sha256": "4e4d8a9a85dc4cb35ff51b5dedd6aa4b0e7f7db5a1b1f090641a97bb88d9d1eb",
+      "state": {
+        "lesson": "coordination",
+        "time": 1520,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1520,
+            "running": false,
+            "visible": true,
+            "frames": 41,
+            "native": null,
+            "sourceTime": 1.52,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 41
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1560.0,
+      "sha256": "e8e8b84cf420ef92a1eb160826ee922a1c30431e96e9ff2d0fddf3cbe94e56e0",
+      "state": {
+        "lesson": "coordination",
+        "time": 1560,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1560,
+            "running": false,
+            "visible": true,
+            "frames": 42,
+            "native": null,
+            "sourceTime": 1.56,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 42
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1600.0,
+      "sha256": "411f857f5bae9348a526d1ac8dee7c4005a761be335aac9902ccd2ca81c69f60",
+      "state": {
+        "lesson": "coordination",
+        "time": 1600,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1600,
+            "running": false,
+            "visible": true,
+            "frames": 43,
+            "native": null,
+            "sourceTime": 1.6,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 43
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1640.0,
+      "sha256": "cb976525bbf4dba5adcc6d02588f0bb62af9bd9837123b1f8c4a5a6a021c64ff",
+      "state": {
+        "lesson": "coordination",
+        "time": 1640,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1640,
+            "running": false,
+            "visible": true,
+            "frames": 44,
+            "native": null,
+            "sourceTime": 1.64,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 44
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1680.0,
+      "sha256": "29978777d47e7db333673235267f3d084c5ea0391b861d2838e99a830a40178a",
+      "state": {
+        "lesson": "coordination",
+        "time": 1680,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1680,
+            "running": false,
+            "visible": true,
+            "frames": 45,
+            "native": null,
+            "sourceTime": 1.68,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 45
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1720.0,
+      "sha256": "7f3539198ed37934241ccd39b7e89b11f9ea31631c76dfa7e76099e607bf8e8a",
+      "state": {
+        "lesson": "coordination",
+        "time": 1720,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1720,
+            "running": false,
+            "visible": true,
+            "frames": 46,
+            "native": null,
+            "sourceTime": 1.72,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 46
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1760.0,
+      "sha256": "dbd5e2b48c72de7cb20a21f3ee12709a842cd00f669c2dcf722dde94a5a65084",
+      "state": {
+        "lesson": "coordination",
+        "time": 1760,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1760,
+            "running": false,
+            "visible": true,
+            "frames": 47,
+            "native": null,
+            "sourceTime": 1.76,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 47
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1800.0,
+      "sha256": "568399c84c5250c146b732acd3b742fec33acaab933cd18c0a8118b958bc4551",
+      "state": {
+        "lesson": "coordination",
+        "time": 1800,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1800,
+            "running": false,
+            "visible": true,
+            "frames": 48,
+            "native": null,
+            "sourceTime": 1.8,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 48
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1840.0,
+      "sha256": "9474b721f212636d93c380ae6ef8b0d62621d860a5dbfce85a66864299932f05",
+      "state": {
+        "lesson": "coordination",
+        "time": 1840,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1840,
+            "running": false,
+            "visible": true,
+            "frames": 49,
+            "native": null,
+            "sourceTime": 1.84,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 49
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1880.0,
+      "sha256": "64a11d5ae350c078c5bbc185c7f95ada0ce48d1f722ff0ce3ab5c9b705e876c4",
+      "state": {
+        "lesson": "coordination",
+        "time": 1880,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1880,
+            "running": false,
+            "visible": true,
+            "frames": 50,
+            "native": null,
+            "sourceTime": 1.88,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 50
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1920.0,
+      "sha256": "bb2b991f204e5fabeadae8b4d7fc2fff9a53c3601905d6533f92611bc78925c7",
+      "state": {
+        "lesson": "coordination",
+        "time": 1920,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1920,
+            "running": false,
+            "visible": true,
+            "frames": 51,
+            "native": null,
+            "sourceTime": 1.92,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 51
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1960.0,
+      "sha256": "eb7a95a18fc55ab0372ce1702efb3950560c437018b87330a1e5f50d8e50c4d8",
+      "state": {
+        "lesson": "coordination",
+        "time": 1960,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "dots": {
+            "time": 1960,
+            "running": false,
+            "visible": true,
+            "frames": 52,
+            "native": null,
+            "sourceTime": 1.96,
+            "sourceDuration": 4.666667,
+            "sceneDuration": 4680,
+            "seekVersion": 52
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Shared companion scene clocks; native sources and recorded footage remain distinct. Sample FPS is not source acting or perceived smoothness."
+}

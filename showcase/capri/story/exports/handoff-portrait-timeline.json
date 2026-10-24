@@ -6,21 +6,28 @@
   "sample_count": 252,
   "size": [
     600,
-    1257
+    900
   ],
-  "bytes": 3727376,
-  "gif_sha256": "4ea1cb0379ad97ad20123bb59f612afee0d48515b2c077d753517179129df64d",
-  "poster_sha256": "d9aae55e3ef611ee89fd84397c7f38e24f72c7cdabc9774dccae064bb6a16e56",
+  "bytes": 3196953,
+  "gif_sha256": "34e7731d4b1a891f633332d7b554c671f805c04fb74465d5027085e8bbea9e41",
+  "poster_sha256": "d47f92d02e32031c97e992a3a7970ef7bab67a5553a96cd0476b8fa876b10b5d",
   "palette_colors": 256,
   "frames": [
     {
       "time_ms": 0.0,
-      "sha256": "299074ac28d087c121c1ffb4d820cce98caf994806e6e6b1333c77f0e1fa89ea",
+      "sha256": "8417c350aa3c35adb0fc517c98e1ee7b3415c8f737678499fcb8df62ef72bda9",
       "state": {
         "lesson": "handoff",
         "time": 0,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 0,
@@ -38,12 +45,19 @@
     },
     {
       "time_ms": 20.0,
-      "sha256": "76aa969b08e5cfe1a5dfc97c6597e1e7f78a0b237ad521035b6fb8d16342019b",
+      "sha256": "8dfc11e54335f1266ba0aa2f52ca573e7a64dac298418baa4534b8aabae09a3d",
       "state": {
         "lesson": "handoff",
         "time": 20,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 20,
@@ -61,12 +75,19 @@
     },
     {
       "time_ms": 40.0,
-      "sha256": "156c70435ee32ba328f6c281bdd15ee029439b28f0ad6417e7e2c2fa81b48cc4",
+      "sha256": "88f2ce9f616829699ee768ce60f1bd51df6294416f2c747ef6cc66065caccc31",
       "state": {
         "lesson": "handoff",
         "time": 40,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 40,
@@ -84,12 +105,19 @@
     },
     {
       "time_ms": 60.0,
-      "sha256": "0cfd2535625fff21626312445aec42a17f40f46b2e4dd7586aa6fee42e4575ce",
+      "sha256": "93e18cbbc8ae2448bdfbfe144d949911a0b071f4aa91b6f8ce4345c647c9ae66",
       "state": {
         "lesson": "handoff",
         "time": 60,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 60,
@@ -107,12 +135,19 @@
     },
     {
       "time_ms": 80.0,
-      "sha256": "a33c72cb7719b9f7e44d3a942ce7e2553c33458e8b41adfa3433619c5aba86b4",
+      "sha256": "fb09dd7ba89a22c9cf488330728a28707a074fce212d9f83282f248f9843b0dc",
       "state": {
         "lesson": "handoff",
         "time": 80,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 80,
@@ -130,12 +165,19 @@
     },
     {
       "time_ms": 100.0,
-      "sha256": "6076d177e164c4b7e28dacb7c8c85e72d149b6227c11c46d9f13a3d120202146",
+      "sha256": "0bd6d2d96b592b28d4815d3d0edcca4bac77955ee82e7f752294ec9fd8359c13",
       "state": {
         "lesson": "handoff",
         "time": 100,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 100,
@@ -153,12 +195,19 @@
     },
     {
       "time_ms": 120.0,
-      "sha256": "48d11543164a9ea9c4f9e7644728bb695f7620776baaba99a2ee0fc169f25ea9",
+      "sha256": "9f8166be6e60e3adff79e770f992ca7ac686b11955e518fb5a506001c43b4acc",
       "state": {
         "lesson": "handoff",
         "time": 120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 120,
@@ -176,12 +225,19 @@
     },
     {
       "time_ms": 140.0,
-      "sha256": "e77f6cc15fdb32e5a60a97deafae42ea07695b8066fca4085fbe171dd496f9d8",
+      "sha256": "393b3dbc15e85db3c7c43d6cb823449b7ecd48c94134368ed20329881bed10e1",
       "state": {
         "lesson": "handoff",
         "time": 140,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 140,
@@ -199,12 +255,19 @@
     },
     {
       "time_ms": 160.0,
-      "sha256": "e430e79927f542d7f8b48c5969d5bd0a06baf606d293720a3a82e6fd9d2db2ed",
+      "sha256": "6e6a53759efb8e9a4b0690cc9cf86047ba083aa40778e692eb489d3ba9889157",
       "state": {
         "lesson": "handoff",
         "time": 160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 160,
@@ -222,12 +285,19 @@
     },
     {
       "time_ms": 180.0,
-      "sha256": "4439ca967b04cfdebc96d76dbde84366bc43e8c16470f9d0f69bd4e5ab4d45e6",
+      "sha256": "70a33faa9438d708fe27217fd94c9634f3e2e43a9e4b640397e94b88161d5030",
       "state": {
         "lesson": "handoff",
         "time": 180,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 180,
@@ -245,12 +315,19 @@
     },
     {
       "time_ms": 200.0,
-      "sha256": "bd998c002acc949f81a304f0bfba9503f63e7cf2393da853b44e1a44a1c72516",
+      "sha256": "07774f89bed0754bdc47aecafdde27fcb336de68ad925045561eccdb5e284d1a",
       "state": {
         "lesson": "handoff",
         "time": 200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 200,
@@ -268,12 +345,19 @@
     },
     {
       "time_ms": 220.0,
-      "sha256": "b72d30c39500fce1c5a1d2582a946f31c2c4627a042360296c6ba0847bd2aba2",
+      "sha256": "da4720311195735c59823eaf12bde4231a0722fe97c2579d344d4f20673e3859",
       "state": {
         "lesson": "handoff",
         "time": 220,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 220,
@@ -291,12 +375,19 @@
     },
     {
       "time_ms": 240.0,
-      "sha256": "7b879fffc905549e50f8940610ecd2303aa045bf4e5d3e0b991178e802e815d0",
+      "sha256": "7ba7b43afcccda4ad892ee1ec0cc0c03c501ab0f407502e9785d7cd3247a5112",
       "state": {
         "lesson": "handoff",
         "time": 240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 240,
@@ -314,12 +405,19 @@
     },
     {
       "time_ms": 260.0,
-      "sha256": "5f971fabd42c7436b8f9f8a575787e27ef1570d310a17fdecafa286050eea757",
+      "sha256": "14b7c6586a7718e2b8c4f4248618c9a576941c581c8a979f294a054ff169629c",
       "state": {
         "lesson": "handoff",
         "time": 260,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 260,
@@ -337,12 +435,19 @@
     },
     {
       "time_ms": 280.0,
-      "sha256": "2259525b86296f3e8d40912266c9ee027b2bee5435031b48de9323fd22a6f470",
+      "sha256": "e850c609ea86e70deeaaf11deffe911b1e64ec97e629818e2c12f9e73267f0e1",
       "state": {
         "lesson": "handoff",
         "time": 280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 280,
@@ -360,12 +465,19 @@
     },
     {
       "time_ms": 300.0,
-      "sha256": "1ebbaca2c72b90ffb1769cf6371c9f7029097132a254aad342ad060cefb93b38",
+      "sha256": "ca2c721281319a94651d2534ad1d53bd34b52d138a572651c5a84f192d89a102",
       "state": {
         "lesson": "handoff",
         "time": 300,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 300,
@@ -383,12 +495,19 @@
     },
     {
       "time_ms": 320.0,
-      "sha256": "433eed8c5ee5b84bce8b6e1d4c80fbd6efc4f2c3465714949f8faf32e69a4596",
+      "sha256": "03f906e5c68a07a9909196cbdaea23602fcdb00e51cddcb564057e25d3baccde",
       "state": {
         "lesson": "handoff",
         "time": 320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 320,
@@ -406,12 +525,19 @@
     },
     {
       "time_ms": 340.0,
-      "sha256": "fe9cdc48e056b226287acf3b0fb76e0ca610e89864eebcadec70e67afd39e674",
+      "sha256": "31920d4e65f968a9ab549c5d4d3b08cf432f0f1627e3344642bd9a5d223c69d5",
       "state": {
         "lesson": "handoff",
         "time": 340,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 340,
@@ -429,12 +555,19 @@
     },
     {
       "time_ms": 360.0,
-      "sha256": "2de12054567f34b7613851cd61a780cd4aed97c94b6edd67fec2880b8cdf2edc",
+      "sha256": "39004b580f849e82acfdfcc164a66049c860b1af868b37b96dc14289b1ca7f5f",
       "state": {
         "lesson": "handoff",
         "time": 360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 360,
@@ -452,12 +585,19 @@
     },
     {
       "time_ms": 380.0,
-      "sha256": "055d75153a1aa6296bd241eb3f2a9df50c8c75e7cab13722f15eaa68bd7bf174",
+      "sha256": "2e16b0447633545ee15eac56a2d6a836203810cd389c03d47532c11e1e7baef3",
       "state": {
         "lesson": "handoff",
         "time": 380,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 380,
@@ -475,12 +615,19 @@
     },
     {
       "time_ms": 400.0,
-      "sha256": "5fca8b71ddf41d4f78ceb9d49b23aaf28102858ad3eccd3556e0364699f8a179",
+      "sha256": "0243b35e327b1286b3bcb70a9564d6e6717a9ca148732bc4b239a46ac83e7ae1",
       "state": {
         "lesson": "handoff",
         "time": 400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 400,
@@ -498,12 +645,19 @@
     },
     {
       "time_ms": 420.0,
-      "sha256": "b5fe7459bed1610a109ef4c3c6c54b8d9edb9d4ac23088166e59bb4bb1dbe709",
+      "sha256": "217d491e8780ae080e6cdccf1c66aa356c75245070c2e70154af3301892954f7",
       "state": {
         "lesson": "handoff",
         "time": 420,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 420,
@@ -521,12 +675,19 @@
     },
     {
       "time_ms": 440.0,
-      "sha256": "51d0598cfc18d7bf7c6e49c91629c4aebdb2a1cb83c8aa1cc456c12fc95c5eaf",
+      "sha256": "fbc9f9b9f398359472664ff5ad325f64b1481946f7354bf6b6ee516d527950ee",
       "state": {
         "lesson": "handoff",
         "time": 440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 440,
@@ -544,12 +705,19 @@
     },
     {
       "time_ms": 460.0,
-      "sha256": "75a2e74d50512e212c89afabc7a928fdff83ffa426dba6ece37f57bd905bd090",
+      "sha256": "d5fc28638c0055c4cb27991cb6eb3cac08cdb9a5895471cb32191ee954d79361",
       "state": {
         "lesson": "handoff",
         "time": 460,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 460,
@@ -567,12 +735,19 @@
     },
     {
       "time_ms": 480.0,
-      "sha256": "5ace392982755cce33a496225f8c31c5cbdeb47de32501f1dcb7bec68f51de0b",
+      "sha256": "16336ffa008c0479e67a4b55bd983d24989163032c8c487957ab9d080beda1b5",
       "state": {
         "lesson": "handoff",
         "time": 480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 480,
@@ -590,12 +765,19 @@
     },
     {
       "time_ms": 500.0,
-      "sha256": "17985362cca2f5146c47bf012bb66b49e8e0fb9ad3035b9c4eede32100d872aa",
+      "sha256": "065de9f3aba77de9e1655480a9cff59e2245cb72677cb99c3faad407ab321cd4",
       "state": {
         "lesson": "handoff",
         "time": 500,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 500,
@@ -613,12 +795,19 @@
     },
     {
       "time_ms": 520.0,
-      "sha256": "1fd84facb86d85662ada62a9c7cc8627620eb45bc5b4ea6e1f2f6245d459087f",
+      "sha256": "7208da79d2e42357acf25deff0c716875ff663f819783f8f5164400b2e0ff483",
       "state": {
         "lesson": "handoff",
         "time": 520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 520,
@@ -636,12 +825,19 @@
     },
     {
       "time_ms": 540.0,
-      "sha256": "2f6a14d224152bfdde5a96c12d0a7456cb1044b57fe2026677ef78d095f3034e",
+      "sha256": "9992105d1e2ed0a5cdfb3bda14108fc1ddf1dc7e1a818d86cb1d353bbc5de951",
       "state": {
         "lesson": "handoff",
         "time": 540,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 540,
@@ -659,12 +855,19 @@
     },
     {
       "time_ms": 560.0,
-      "sha256": "8678b1cbfe10e16e1d4b124beb72879d6009af16961f19cdd9040d81fce9f1e3",
+      "sha256": "996c8a149e15feede9b901f3e2437b72e4b2aa26a1d17d9f224b452a4e88a5c1",
       "state": {
         "lesson": "handoff",
         "time": 560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 560,
@@ -682,12 +885,19 @@
     },
     {
       "time_ms": 580.0,
-      "sha256": "61066f3307193d623228899da5e12ea0081ad0453e1205cc6399b93a4b4f8270",
+      "sha256": "6bd5edc45eb3663295f0dfa39ecc25ea748e0ba1a563b71247460228b8e2f51d",
       "state": {
         "lesson": "handoff",
         "time": 580,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 580,
@@ -705,12 +915,19 @@
     },
     {
       "time_ms": 600.0,
-      "sha256": "3bcd420f7323ac8700a45e27c5bd92dd06532f6f4cfc532413da2fc10dff4500",
+      "sha256": "c6876996e9788e2040a42b3100124d3c385c448ce0340d0963067860ee032519",
       "state": {
         "lesson": "handoff",
         "time": 600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 600,
@@ -728,12 +945,19 @@
     },
     {
       "time_ms": 620.0,
-      "sha256": "3bcd420f7323ac8700a45e27c5bd92dd06532f6f4cfc532413da2fc10dff4500",
+      "sha256": "c6876996e9788e2040a42b3100124d3c385c448ce0340d0963067860ee032519",
       "state": {
         "lesson": "handoff",
         "time": 620,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 620,
@@ -751,12 +975,19 @@
     },
     {
       "time_ms": 640.0,
-      "sha256": "b8d34bfc59b8a38d6618233271751342ecc5291041ef1788df415a932e924cd2",
+      "sha256": "854b9cd83d30a461e5b1bea75a5d70f502a0f5da17fcf8b428915e2efa6d5bcd",
       "state": {
         "lesson": "handoff",
         "time": 640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 640,
@@ -774,12 +1005,19 @@
     },
     {
       "time_ms": 660.0,
-      "sha256": "b8d34bfc59b8a38d6618233271751342ecc5291041ef1788df415a932e924cd2",
+      "sha256": "854b9cd83d30a461e5b1bea75a5d70f502a0f5da17fcf8b428915e2efa6d5bcd",
       "state": {
         "lesson": "handoff",
         "time": 660,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 660,
@@ -797,12 +1035,19 @@
     },
     {
       "time_ms": 680.0,
-      "sha256": "b6d19943ebf6bbc6a4fd367cf6f04ba7db413138d4ec4863aa1e76378d1068a3",
+      "sha256": "7f9985b269b3ebd3528afcc01ac0b7c4f2a1d6245c53f02ea8057a3d0249d09a",
       "state": {
         "lesson": "handoff",
         "time": 680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 680,
@@ -820,12 +1065,19 @@
     },
     {
       "time_ms": 700.0,
-      "sha256": "ba5a1ba01e0306b47b17697eb18819bfc7d756a9bb518dbf30c424417ccd5098",
+      "sha256": "d3bf56a6a1f2f5fa2dcf7c349fb3a4ff2d5cf93ea489f066d1a3934f30345c7d",
       "state": {
         "lesson": "handoff",
         "time": 700,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 700,
@@ -843,12 +1095,19 @@
     },
     {
       "time_ms": 720.0,
-      "sha256": "ba5a1ba01e0306b47b17697eb18819bfc7d756a9bb518dbf30c424417ccd5098",
+      "sha256": "d3bf56a6a1f2f5fa2dcf7c349fb3a4ff2d5cf93ea489f066d1a3934f30345c7d",
       "state": {
         "lesson": "handoff",
         "time": 720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 720,
@@ -866,12 +1125,19 @@
     },
     {
       "time_ms": 740.0,
-      "sha256": "84fc6b1ce5d8049ce879562e5ec7f8f34c5af9d6773cab8a56c53a302249fffe",
+      "sha256": "d3725cb06c60c245b86c78d4fdf584923479536d949c3fb87abf065952d9b9eb",
       "state": {
         "lesson": "handoff",
         "time": 740,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 740,
@@ -889,12 +1155,19 @@
     },
     {
       "time_ms": 760.0,
-      "sha256": "84fc6b1ce5d8049ce879562e5ec7f8f34c5af9d6773cab8a56c53a302249fffe",
+      "sha256": "d3725cb06c60c245b86c78d4fdf584923479536d949c3fb87abf065952d9b9eb",
       "state": {
         "lesson": "handoff",
         "time": 760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 760,
@@ -912,12 +1185,19 @@
     },
     {
       "time_ms": 780.0,
-      "sha256": "f681bc4aa3b45e41bd22368af24124b30674a4f774ab639154ced885b3173e08",
+      "sha256": "f703e3811ee936e637f1031c7b0daf45e0e921161ccb48921989aeacf9337f62",
       "state": {
         "lesson": "handoff",
         "time": 780,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 780,
@@ -935,12 +1215,19 @@
     },
     {
       "time_ms": 800.0,
-      "sha256": "c1a59db6e60ced5ef33c89db6943278fbb2a81744e6449b45c0ec888e231574e",
+      "sha256": "02f4120ebeb44d79ab9976e659cef0905d1a7ef10243f7d8f746654589170bce",
       "state": {
         "lesson": "handoff",
         "time": 800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 800,
@@ -958,12 +1245,19 @@
     },
     {
       "time_ms": 820.0,
-      "sha256": "c1a59db6e60ced5ef33c89db6943278fbb2a81744e6449b45c0ec888e231574e",
+      "sha256": "02f4120ebeb44d79ab9976e659cef0905d1a7ef10243f7d8f746654589170bce",
       "state": {
         "lesson": "handoff",
         "time": 820,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 820,
@@ -981,12 +1275,19 @@
     },
     {
       "time_ms": 840.0,
-      "sha256": "9cbadb824580851824bd563691c8f194591943fe7e7321d3dd0c00753c3d3fad",
+      "sha256": "a81dae019361b9cd97e41617b3e8de48beec452e11d363be82b4f4a06e66f14b",
       "state": {
         "lesson": "handoff",
         "time": 840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 840,
@@ -1004,12 +1305,19 @@
     },
     {
       "time_ms": 860.0,
-      "sha256": "9cbadb824580851824bd563691c8f194591943fe7e7321d3dd0c00753c3d3fad",
+      "sha256": "a81dae019361b9cd97e41617b3e8de48beec452e11d363be82b4f4a06e66f14b",
       "state": {
         "lesson": "handoff",
         "time": 860,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 860,
@@ -1027,12 +1335,19 @@
     },
     {
       "time_ms": 880.0,
-      "sha256": "8f3544babbbe9d818915b4403c0dfff0f7ebaea634bf637d0fa6d316d32fc9b3",
+      "sha256": "cb2d30354c7255eab908821525a46e0924edd92c9a7e64036d1ffcbd00b4ab49",
       "state": {
         "lesson": "handoff",
         "time": 880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 880,
@@ -1050,12 +1365,19 @@
     },
     {
       "time_ms": 900.0,
-      "sha256": "4d23721fe3e97dbee8119d4e5412baa903abaef6e391075f9f3d039620992104",
+      "sha256": "1698fa15669f2edae004b86a58aeffad5f5738ee79c31dfff51ee6d52522d2af",
       "state": {
         "lesson": "handoff",
         "time": 900,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 900,
@@ -1073,12 +1395,19 @@
     },
     {
       "time_ms": 920.0,
-      "sha256": "4d23721fe3e97dbee8119d4e5412baa903abaef6e391075f9f3d039620992104",
+      "sha256": "1698fa15669f2edae004b86a58aeffad5f5738ee79c31dfff51ee6d52522d2af",
       "state": {
         "lesson": "handoff",
         "time": 920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 920,
@@ -1096,12 +1425,19 @@
     },
     {
       "time_ms": 940.0,
-      "sha256": "f60a258698be88649894c818d1addaece9d4b9c73717f6208fef61176905b89e",
+      "sha256": "8070e6f9d1473afbb8c5cd45ab26980bdc294e6cc0c22e86c3f955ebd51abbd1",
       "state": {
         "lesson": "handoff",
         "time": 940,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 940,
@@ -1119,12 +1455,19 @@
     },
     {
       "time_ms": 960.0,
-      "sha256": "f60a258698be88649894c818d1addaece9d4b9c73717f6208fef61176905b89e",
+      "sha256": "8070e6f9d1473afbb8c5cd45ab26980bdc294e6cc0c22e86c3f955ebd51abbd1",
       "state": {
         "lesson": "handoff",
         "time": 960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 960,
@@ -1142,12 +1485,19 @@
     },
     {
       "time_ms": 980.0,
-      "sha256": "c33f4c7ab5c894752d36893b6bc11901b7c8cac398a7f9a7a5f912c94b7ef45c",
+      "sha256": "5360e4b92339d76e3507cfdfb1ed47858008d3e3c2cac250e4a58e936ebc6377",
       "state": {
         "lesson": "handoff",
         "time": 980,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 980,
@@ -1165,12 +1515,19 @@
     },
     {
       "time_ms": 1000.0,
-      "sha256": "8365b1a5516983d6e51b641f3be4106af2235b58e68064ce091bc755a3945cb2",
+      "sha256": "c39328f4d9ddd4ef996df57998cf0fce458cea4a4387ccb63a78d304408b8fb3",
       "state": {
         "lesson": "handoff",
         "time": 1000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1000,
@@ -1188,12 +1545,19 @@
     },
     {
       "time_ms": 1020.0,
-      "sha256": "54ff1157c243b0d547b6ce0a9a44a9ae340e1777a11d5711898893a286c32702",
+      "sha256": "a4bd9150991c56f17b0be50d655392921cdca3812d0d375deb1668e048cb2021",
       "state": {
         "lesson": "handoff",
         "time": 1020,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1020,
@@ -1211,12 +1575,19 @@
     },
     {
       "time_ms": 1040.0,
-      "sha256": "6abee9751f2e73688bca5785184db30b9acc064f725a1b4d8acbf5d60393e5ac",
+      "sha256": "9af2e1ca1f31982d61e9a62b53953d9e6c3549b1e2faed3cab0e7ec98467e4e6",
       "state": {
         "lesson": "handoff",
         "time": 1040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1040,
@@ -1234,12 +1605,19 @@
     },
     {
       "time_ms": 1060.0,
-      "sha256": "ebd3000e78919a05cf3aedfc5162f15758b3f9c1dbd10349eca988e970890411",
+      "sha256": "ab0d00a6601a1105139159eac0474e921388caa3840c4f1a4dc3ba3971508649",
       "state": {
         "lesson": "handoff",
         "time": 1060,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1060,
@@ -1257,12 +1635,19 @@
     },
     {
       "time_ms": 1080.0,
-      "sha256": "f58a1e90e7fad294f7dfe75a73d3823f7855557960022004c3e5a4cdc60d18c7",
+      "sha256": "5f764f651a3f86ea540627470d5b0e2755eb84a945c4a9c56dc3157e7a4a4e70",
       "state": {
         "lesson": "handoff",
         "time": 1080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1080,
@@ -1280,12 +1665,19 @@
     },
     {
       "time_ms": 1100.0,
-      "sha256": "79874b24a4f14b5be74f7b70f44657cb27450ff14a36fcd66121683ce075d8b0",
+      "sha256": "f4d82dc40be19222c1ba047edbcdc2b970849d321ab06b8756077981fc715920",
       "state": {
         "lesson": "handoff",
         "time": 1100,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1100,
@@ -1303,12 +1695,19 @@
     },
     {
       "time_ms": 1120.0,
-      "sha256": "1167b4b7ccd5753309f925cae12733fbca85bfbd794d9b9a31348c5bd21795e0",
+      "sha256": "4681104546dad974fcab25647e8db3e0e63947f6a10e3b14901c117331fecc41",
       "state": {
         "lesson": "handoff",
         "time": 1120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1120,
@@ -1326,12 +1725,19 @@
     },
     {
       "time_ms": 1140.0,
-      "sha256": "d305d809893256015fab0c5ed870fa7056ffb56e629893edd831263c69ecd660",
+      "sha256": "56db91632c37717b1cf33f03508a05def03391368c3e616ab57329b48167519a",
       "state": {
         "lesson": "handoff",
         "time": 1140,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1140,
@@ -1349,12 +1755,19 @@
     },
     {
       "time_ms": 1160.0,
-      "sha256": "e050cb33e21382bd7971f888a4171fdacd64b37dc363024ce884dc5a5bb1e281",
+      "sha256": "efad58c44808bd8a57236a2f0276701734ed3ffe83a88e7d2a17f4b6379571d9",
       "state": {
         "lesson": "handoff",
         "time": 1160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1160,
@@ -1372,12 +1785,19 @@
     },
     {
       "time_ms": 1180.0,
-      "sha256": "87201c7c78f9adf00f62460521443bfcde26dd7e4e8557c19bc828d7a27d3b89",
+      "sha256": "0d8d0028e5f7d87f715d66dd629fc5e9d3396cbbcb35105a81e0edee777824d8",
       "state": {
         "lesson": "handoff",
         "time": 1180,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1180,
@@ -1395,12 +1815,19 @@
     },
     {
       "time_ms": 1200.0,
-      "sha256": "a87f93b8ba8344c3d27e20c6f575c9186f62182fdfcdb4dc094e0ff0bf9a951b",
+      "sha256": "074f6a0ea2043324d84baa6c844b06e02bcf8e033fa07923505b7c1b0fbcdb76",
       "state": {
         "lesson": "handoff",
         "time": 1200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1200,
@@ -1418,12 +1845,19 @@
     },
     {
       "time_ms": 1220.0,
-      "sha256": "93f61bd3b1660be74bc34410f4dd69d568d79825fd2cbd780b5568ca0f3b3515",
+      "sha256": "21d9e20cfc45fd4ada22d95beb097c83d78fcf28a70eb0a59ada61527bec157e",
       "state": {
         "lesson": "handoff",
         "time": 1220,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1220,
@@ -1441,12 +1875,19 @@
     },
     {
       "time_ms": 1240.0,
-      "sha256": "d6de84820209394415829ad530f9d23055247e3403dbb47d5ed9ad5261ac5972",
+      "sha256": "db81b031418e46cb4f0f67517b997347fa2d714587efeda1543e07c731a9c0a4",
       "state": {
         "lesson": "handoff",
         "time": 1240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1240,
@@ -1464,12 +1905,19 @@
     },
     {
       "time_ms": 1260.0,
-      "sha256": "6eaaacfd188bc1f751d5839846df007a5820e24895d7b40afcea1ca782bc1980",
+      "sha256": "17e45b70949c225f1434431d0480f8a634b5ec9d16955ce32d8bb3173af5d175",
       "state": {
         "lesson": "handoff",
         "time": 1260,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1260,
@@ -1487,12 +1935,19 @@
     },
     {
       "time_ms": 1280.0,
-      "sha256": "aec62cafeecc29ab882495cc2316bd96f1a0a49180827d2824114ae1f163fea2",
+      "sha256": "2efd714b3fcde0ece004b5285a9b7e5bb68f3aa16c658817e78f46f392450762",
       "state": {
         "lesson": "handoff",
         "time": 1280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1280,
@@ -1510,12 +1965,19 @@
     },
     {
       "time_ms": 1300.0,
-      "sha256": "d2cad578ff1d57faf693ec4fb592c3f63bcdde44ce6e25217f60f9c4e4bd01f2",
+      "sha256": "b47853aa4a324c5596f898561fbb45f0cc6346cd976707ad551aeb7178ffaf20",
       "state": {
         "lesson": "handoff",
         "time": 1300,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1300,
@@ -1533,12 +1995,19 @@
     },
     {
       "time_ms": 1320.0,
-      "sha256": "d204ede4e646e07eb40c4dcdc44751488b9284615ff8212c8bbc3cc65396af35",
+      "sha256": "393db4a85a9fff4ffae9e6ef7f1a658b3e4c786202781c16da9794566e4b8b55",
       "state": {
         "lesson": "handoff",
         "time": 1320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1320,
@@ -1556,12 +2025,19 @@
     },
     {
       "time_ms": 1340.0,
-      "sha256": "f693f7ec29a9677d5bff59fb287a3ebca471bc04ee04b2db09a0d517ecee95b0",
+      "sha256": "4009890961c5613c05bd2d42b6e3a18929a1bb4e0b4164e179e098f439a1086b",
       "state": {
         "lesson": "handoff",
         "time": 1340,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1340,
@@ -1579,12 +2055,19 @@
     },
     {
       "time_ms": 1360.0,
-      "sha256": "4b713341fd9dbf4fc7a416c77a1429bb42e8967259b8c3807a6696a378a97492",
+      "sha256": "01c012bdb560754fe4d124e264a85686a69c259b335929ea7fe9f716e92759c9",
       "state": {
         "lesson": "handoff",
         "time": 1360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1360,
@@ -1602,12 +2085,19 @@
     },
     {
       "time_ms": 1380.0,
-      "sha256": "b52f807970bc68b322e2f3a3757760b6505cfca10219bcdf60790bc356a3790c",
+      "sha256": "2e1a2979e1fe13ac1ad670d9168748bc23d77ce62aaf39ac34fd7fd31e8ed096",
       "state": {
         "lesson": "handoff",
         "time": 1380,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1380,
@@ -1625,12 +2115,19 @@
     },
     {
       "time_ms": 1400.0,
-      "sha256": "588c6fbb68fe6d5562fa82fd88168c65f2c01537fa027ad692e24ce00679fb00",
+      "sha256": "438418f6b7a4bb8904b5cc325edd745121a7a6eb4091732b84fb29103113b1ef",
       "state": {
         "lesson": "handoff",
         "time": 1400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1400,
@@ -1648,12 +2145,19 @@
     },
     {
       "time_ms": 1420.0,
-      "sha256": "a3289bda0e9f29493092f5d5550ef3a55d21f05e2d6bf9172f2afb8295e36550",
+      "sha256": "d987eb9b1d548a8ba1f6e6ef1e216c9ab06521c455b8148eafe0bbc006581084",
       "state": {
         "lesson": "handoff",
         "time": 1420,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1420,
@@ -1671,12 +2175,19 @@
     },
     {
       "time_ms": 1440.0,
-      "sha256": "56b58e3ac85af937e999ba5d479418962859f83c4af319cfcce2b709960a10d2",
+      "sha256": "65a173c51ed87abaf9c8ee4f832b6752d5070306f85c152b06a3d64773d9b869",
       "state": {
         "lesson": "handoff",
         "time": 1440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1440,
@@ -1694,12 +2205,19 @@
     },
     {
       "time_ms": 1460.0,
-      "sha256": "37440190571ffe42333574451d21b6461475424f6cd26cc9f317ed761b58f6ce",
+      "sha256": "de5de1ca0a835bfb758b7184436d95a857cf97d419af732d52fb41c61e67bdf3",
       "state": {
         "lesson": "handoff",
         "time": 1460,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1460,
@@ -1717,12 +2235,19 @@
     },
     {
       "time_ms": 1480.0,
-      "sha256": "3ad9c04cdabc5fe706220b401bc21f11489453a82ec6fdf365e969fbeb748afa",
+      "sha256": "fe789df3779dfd7e5426ca8388386489894466de8f6b0c3e21adf0ace136ce61",
       "state": {
         "lesson": "handoff",
         "time": 1480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1480,
@@ -1740,12 +2265,19 @@
     },
     {
       "time_ms": 1500.0,
-      "sha256": "fb63276950004b510eaa7977bc6e8a3f0c6f607e3602d940263828f1b831655e",
+      "sha256": "b4cb79068d1e642cf096d8191e52bb0de1b3ed9dd555bb15c5fab17792a3fde6",
       "state": {
         "lesson": "handoff",
         "time": 1500,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1500,
@@ -1763,12 +2295,19 @@
     },
     {
       "time_ms": 1520.0,
-      "sha256": "f5bc5d4debf9e6573412937494658ab84d31a80f4ec1fc512a485e80dfce823b",
+      "sha256": "5b74887364f5606ba8081fc783e8f048a0dfea6efd2667f24df6985f7a64bca1",
       "state": {
         "lesson": "handoff",
         "time": 1520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1520,
@@ -1786,12 +2325,19 @@
     },
     {
       "time_ms": 1540.0,
-      "sha256": "5476fe4a1f2cfdcecaa26fcf2eb9b390cb86ecaa0f13e84b9fd01d276ea89a36",
+      "sha256": "81c3be776e24d00d85e60d50bece4846babb24210c9ddbbf8abc4a2252bf39e3",
       "state": {
         "lesson": "handoff",
         "time": 1540,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1540,
@@ -1809,12 +2355,19 @@
     },
     {
       "time_ms": 1560.0,
-      "sha256": "732f7763a7ba5834f4187044c409c6b8e901bbc59314e8390988a738907d3020",
+      "sha256": "3285ecec9fa26c84098d0908b183788450520697f5c85805ec98db1548765a53",
       "state": {
         "lesson": "handoff",
         "time": 1560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1560,
@@ -1832,12 +2385,19 @@
     },
     {
       "time_ms": 1580.0,
-      "sha256": "6d3c273f2192e421bca479c7fbc8cc3d5c850c5a442fa907c7210f0482a72a36",
+      "sha256": "d3ff1922cb67f663985762d44d8e9a65194ba76ce49b5120489d901650db5e63",
       "state": {
         "lesson": "handoff",
         "time": 1580,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1580,
@@ -1855,12 +2415,19 @@
     },
     {
       "time_ms": 1600.0,
-      "sha256": "a6d2029ffe16347b2ca28f08fdfd724a22e522d7f95b4324cf1b7e692c8243bc",
+      "sha256": "0071441a953db8188a25d26c601e41948b5e0b751aed11c73e7996ca8429948b",
       "state": {
         "lesson": "handoff",
         "time": 1600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1600,
@@ -1878,12 +2445,19 @@
     },
     {
       "time_ms": 1620.0,
-      "sha256": "a6d2029ffe16347b2ca28f08fdfd724a22e522d7f95b4324cf1b7e692c8243bc",
+      "sha256": "0071441a953db8188a25d26c601e41948b5e0b751aed11c73e7996ca8429948b",
       "state": {
         "lesson": "handoff",
         "time": 1620,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1620,
@@ -1901,12 +2475,19 @@
     },
     {
       "time_ms": 1640.0,
-      "sha256": "6d731998f028da96158d7398196f64c8f6b7656f4df8bd4c3d236ebad45eb48f",
+      "sha256": "40e4037df1fec67d1456ac0c7bf4c78800c60ee80dc81b8fbf0ea35a060acfe7",
       "state": {
         "lesson": "handoff",
         "time": 1640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1640,
@@ -1924,12 +2505,19 @@
     },
     {
       "time_ms": 1660.0,
-      "sha256": "4d6915727aadbb4ed04c9c79cf173d55268babd97fa60e9353244126295417ac",
+      "sha256": "62816ee1a762217a042f20cd196b639472c179101763f88cf5c621055ce85af6",
       "state": {
         "lesson": "handoff",
         "time": 1660,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1660,
@@ -1947,12 +2535,19 @@
     },
     {
       "time_ms": 1680.0,
-      "sha256": "e67165dd06192bc546f42e66c0d5fe15af3a0183ebf544c695359b57fbeac374",
+      "sha256": "aea4a6b7ea76885bf05fb73e6b181f97eeaf0990578a9f6fda68b19f697f8dff",
       "state": {
         "lesson": "handoff",
         "time": 1680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1680,
@@ -1970,12 +2565,19 @@
     },
     {
       "time_ms": 1700.0,
-      "sha256": "01eedd13037f01548be17ecc571c4452dd48347aceba13a631fddd8c258fd378",
+      "sha256": "6cafde62c689793d755aae464ae9d6906fb6ff28034c75a5d9810b0a0b4ce7d3",
       "state": {
         "lesson": "handoff",
         "time": 1700,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1700,
@@ -1993,12 +2595,19 @@
     },
     {
       "time_ms": 1720.0,
-      "sha256": "2cc9e73935f300b09b89abe8e10d0990204e3af0db1fcf62ded183796f344ca7",
+      "sha256": "997889df0c8d5aee155da5418185a8c25b8de757a886af5c94f7a755946911db",
       "state": {
         "lesson": "handoff",
         "time": 1720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1720,
@@ -2016,12 +2625,19 @@
     },
     {
       "time_ms": 1740.0,
-      "sha256": "16523048f6070541e44853f3a9246765b3912505541d17f9106cf3c8b762579a",
+      "sha256": "0b1eb753a929c1b9c68e3f87b1c8966e2beaf7e0e5b2fc66a7f000b06677aec2",
       "state": {
         "lesson": "handoff",
         "time": 1740,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1740,
@@ -2039,12 +2655,19 @@
     },
     {
       "time_ms": 1760.0,
-      "sha256": "d16633544c8bd5d2723d237f9e26334b58e7f778514b491a0bde1ef5f1eb93a6",
+      "sha256": "00ed1fa6401b0478043a4d6b0d7d85eb503d16e2cb2281e3b80e3e6c28ab9f62",
       "state": {
         "lesson": "handoff",
         "time": 1760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1760,
@@ -2062,12 +2685,19 @@
     },
     {
       "time_ms": 1780.0,
-      "sha256": "6c0be7a7f2fe639a9ea087c2158eac6fe7377e01ee6cf959c07df85df652cbc9",
+      "sha256": "6d99b986c255ac56b7cda0370c360293b7efd59c66de7946a3a1fe70f47085e1",
       "state": {
         "lesson": "handoff",
         "time": 1780,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1780,
@@ -2085,12 +2715,19 @@
     },
     {
       "time_ms": 1800.0,
-      "sha256": "cab61bd36786b1bcb1fb594ab40a088eb14cf74f65e28d8e1372914b14bb68de",
+      "sha256": "aaffcc3d108d0f5ae644748b4f07f881b31891c3bbb2c116ec9bcacd156fba6a",
       "state": {
         "lesson": "handoff",
         "time": 1800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1800,
@@ -2108,12 +2745,19 @@
     },
     {
       "time_ms": 1820.0,
-      "sha256": "6d2376e49204b749039a04f3cb82e4bc443d8e3a8d0994f413630658152f272e",
+      "sha256": "3428c2c53159bd01c5c3e73e413943a04d2aab1aeea393fd80ac508eac22ca16",
       "state": {
         "lesson": "handoff",
         "time": 1820,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1820,
@@ -2131,12 +2775,19 @@
     },
     {
       "time_ms": 1840.0,
-      "sha256": "2dcb42b3a983b4c559c61efd2fc5332e9eab76748951fc6e45c1494c0f709710",
+      "sha256": "0327bd0ed67314edad0829946bc8f34132b3249aa58166e32579400d530d25ce",
       "state": {
         "lesson": "handoff",
         "time": 1840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1840,
@@ -2154,12 +2805,19 @@
     },
     {
       "time_ms": 1860.0,
-      "sha256": "81d6ff16baa228acf9bf3e8d3bad5f6a71c2a1233cae6e28e7fb7dac12246f2e",
+      "sha256": "3a8f8244c972f030b536c15a16670436984feb8e9e2fc8b7589b567bd1a606f8",
       "state": {
         "lesson": "handoff",
         "time": 1860,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1860,
@@ -2177,12 +2835,19 @@
     },
     {
       "time_ms": 1880.0,
-      "sha256": "91260611e67a0f0d8a9f5ea9a4629ffe0c84d197757c77441169dab2ab29b267",
+      "sha256": "6b0fb1b6cb67fe4d5569b60f1a09717d778f977236bf8d03a5bdb90556a87d19",
       "state": {
         "lesson": "handoff",
         "time": 1880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1880,
@@ -2200,12 +2865,19 @@
     },
     {
       "time_ms": 1900.0,
-      "sha256": "3ed7ea0c99a230a5c2d6ab27457cf89c86d389aebba87ea25966dfa4a718c64a",
+      "sha256": "1a399f2d32a0204cb3d06442636d9ab4e4d6b324572cd9ddcff45389272b8dd2",
       "state": {
         "lesson": "handoff",
         "time": 1900,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1900,
@@ -2223,12 +2895,19 @@
     },
     {
       "time_ms": 1920.0,
-      "sha256": "4fb59dfb116499c08e6c07724428a08a0b6fc1c303a645cd2c8fd84abef862da",
+      "sha256": "2a9b2e122b4a066839726a9af24ce3a3854fea20dd001471af5fee08d94380aa",
       "state": {
         "lesson": "handoff",
         "time": 1920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1920,
@@ -2246,12 +2925,19 @@
     },
     {
       "time_ms": 1940.0,
-      "sha256": "55e881a64b64a41c4d17e693b37d3600990417582690f9e8c27e3c08c290bae4",
+      "sha256": "dc12d18af84d147f78f0ff129e361c6a3daf0982c7b8ebb1d6ac2b7646bbf945",
       "state": {
         "lesson": "handoff",
         "time": 1940,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1940,
@@ -2269,12 +2955,19 @@
     },
     {
       "time_ms": 1960.0,
-      "sha256": "5d788e0baba08c2ce0feffdfbdf8c2b53109ad4cc3e5996e9d9729c8c4afccec",
+      "sha256": "4e5b08f33d0a6ce874b73747808e461e3967f896040bfd405f4661f374e4ae24",
       "state": {
         "lesson": "handoff",
         "time": 1960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1960,
@@ -2292,12 +2985,19 @@
     },
     {
       "time_ms": 1980.0,
-      "sha256": "2feffa98e085f1630757dbafb040971f0ecac2661d80392f2fb01ac4ef7ecf67",
+      "sha256": "ddc2aeed1ccd7cace41ced6b03b04bb0339ef7d175059b13ceac37ac73827e2d",
       "state": {
         "lesson": "handoff",
         "time": 1980,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 1980,
@@ -2315,12 +3015,19 @@
     },
     {
       "time_ms": 2000.0,
-      "sha256": "53aa87b8f952f32bb783b24ead957b6d9c5283b31a00616c2afb019d99db9f1d",
+      "sha256": "decdf2743c863ab87103018723eab880e65c9c55864bf58d81518569583d71a7",
       "state": {
         "lesson": "handoff",
         "time": 2000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2000,
@@ -2338,12 +3045,19 @@
     },
     {
       "time_ms": 2020.0,
-      "sha256": "a59580c43d77529a31e3e9abddbde1161bc672371b9d09be7586d3914df03d91",
+      "sha256": "ecc7f4e9c74086f7c2107f79b82d983a32e14c214c5a836d6f049837aafe8a3f",
       "state": {
         "lesson": "handoff",
         "time": 2020,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2020,
@@ -2361,12 +3075,19 @@
     },
     {
       "time_ms": 2040.0,
-      "sha256": "ce1cb282ffc449ea7ec18b6b452c74ec80cd8172c4d3c44fb20b034c7d4b23fe",
+      "sha256": "0e8d37cbbcfeff13fba734eb764259e26452e39f02fb3e98c8af9b7f778a302c",
       "state": {
         "lesson": "handoff",
         "time": 2040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2040,
@@ -2384,12 +3105,19 @@
     },
     {
       "time_ms": 2060.0,
-      "sha256": "c963b033a88d4270ff13cdafaec680098e70abe672843d479ea2c7fae857133b",
+      "sha256": "2f88cf2dc21158ceb0069de134cfd7edb7617637e5db443903a391e43c95d9a1",
       "state": {
         "lesson": "handoff",
         "time": 2060,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2060,
@@ -2407,12 +3135,19 @@
     },
     {
       "time_ms": 2080.0,
-      "sha256": "80a5578458bb125666dc407608bca9a67ab04af6932010c6b8fd53fa8e1e8033",
+      "sha256": "8a9237813e25fc93215bd75c158719d5c533d8c873e44fc407c1944def014057",
       "state": {
         "lesson": "handoff",
         "time": 2080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2080,
@@ -2430,12 +3165,19 @@
     },
     {
       "time_ms": 2100.0,
-      "sha256": "bb8d34017215ff92e3baffba0c11468e19b40137ff5519a4ca363127f0c42ed4",
+      "sha256": "0cb593c60302fcd4ad9387f9c0a606da647eb5cabc13081458ac27483913e747",
       "state": {
         "lesson": "handoff",
         "time": 2100,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2100,
@@ -2453,12 +3195,19 @@
     },
     {
       "time_ms": 2120.0,
-      "sha256": "bb8d34017215ff92e3baffba0c11468e19b40137ff5519a4ca363127f0c42ed4",
+      "sha256": "0cb593c60302fcd4ad9387f9c0a606da647eb5cabc13081458ac27483913e747",
       "state": {
         "lesson": "handoff",
         "time": 2120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2120,
@@ -2476,12 +3225,19 @@
     },
     {
       "time_ms": 2140.0,
-      "sha256": "1c5b87e5da42d477561a0512949c923c31a671efcc8691ddcf64a8cfc77c1384",
+      "sha256": "388ae638259f04d39eb2ca5d23ac13662666a91b08b163c1d88a4f327831eb91",
       "state": {
         "lesson": "handoff",
         "time": 2140,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2140,
@@ -2499,12 +3255,19 @@
     },
     {
       "time_ms": 2160.0,
-      "sha256": "1c5b87e5da42d477561a0512949c923c31a671efcc8691ddcf64a8cfc77c1384",
+      "sha256": "388ae638259f04d39eb2ca5d23ac13662666a91b08b163c1d88a4f327831eb91",
       "state": {
         "lesson": "handoff",
         "time": 2160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2160,
@@ -2522,12 +3285,19 @@
     },
     {
       "time_ms": 2180.0,
-      "sha256": "ad8ed127a098948598cf31bd584ab93ec35e45613cd653455811faaf183595a7",
+      "sha256": "b43fca1c9c667f043c5859a11d85a0ccfae32af77247eb168fc29078d7908dba",
       "state": {
         "lesson": "handoff",
         "time": 2180,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2180,
@@ -2545,12 +3315,19 @@
     },
     {
       "time_ms": 2200.0,
-      "sha256": "b442220c0516815575342ef5248282b675c335ad1fa42217bcefed2554b9f2c1",
+      "sha256": "49d3b001496fa724b9c942848aebcd1c3dfda23382ab7459fdfa6c1f2ea38e76",
       "state": {
         "lesson": "handoff",
         "time": 2200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2200,
@@ -2568,12 +3345,19 @@
     },
     {
       "time_ms": 2220.0,
-      "sha256": "b442220c0516815575342ef5248282b675c335ad1fa42217bcefed2554b9f2c1",
+      "sha256": "49d3b001496fa724b9c942848aebcd1c3dfda23382ab7459fdfa6c1f2ea38e76",
       "state": {
         "lesson": "handoff",
         "time": 2220,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2220,
@@ -2591,12 +3375,19 @@
     },
     {
       "time_ms": 2240.0,
-      "sha256": "1bea1416f40184f073ee311c26ac612a3375c36cfd9c3781fc27c58fc47ce48a",
+      "sha256": "d351f1c0aaecd623fbcb49444c9811cd1e991af9f2ce22d2cff6a07e61456c76",
       "state": {
         "lesson": "handoff",
         "time": 2240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2240,
@@ -2614,12 +3405,19 @@
     },
     {
       "time_ms": 2260.0,
-      "sha256": "1bea1416f40184f073ee311c26ac612a3375c36cfd9c3781fc27c58fc47ce48a",
+      "sha256": "d351f1c0aaecd623fbcb49444c9811cd1e991af9f2ce22d2cff6a07e61456c76",
       "state": {
         "lesson": "handoff",
         "time": 2260,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2260,
@@ -2637,12 +3435,19 @@
     },
     {
       "time_ms": 2280.0,
-      "sha256": "6ba6331364b7f78e4130b98a7afa102d3bdd448582134d36343e048ec04ca7b7",
+      "sha256": "3adbba3622a1fda3627cbeddd30d2447a73053e174d3cee7a3e41859daa8132b",
       "state": {
         "lesson": "handoff",
         "time": 2280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2280,
@@ -2660,12 +3465,19 @@
     },
     {
       "time_ms": 2300.0,
-      "sha256": "868caf8b21b728f9caecf574d78c69708742eed23340d8909f7bebe630be0ccf",
+      "sha256": "294e6c22c1e5374c9a0e48dd7f0231e21ae6c737290017878e9c1ade33702d82",
       "state": {
         "lesson": "handoff",
         "time": 2300,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2300,
@@ -2683,12 +3495,19 @@
     },
     {
       "time_ms": 2320.0,
-      "sha256": "868caf8b21b728f9caecf574d78c69708742eed23340d8909f7bebe630be0ccf",
+      "sha256": "294e6c22c1e5374c9a0e48dd7f0231e21ae6c737290017878e9c1ade33702d82",
       "state": {
         "lesson": "handoff",
         "time": 2320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2320,
@@ -2706,12 +3525,19 @@
     },
     {
       "time_ms": 2340.0,
-      "sha256": "bb7005dde3f4e99f717eb8ee10a01f3cea7938d2a331732ceb2c1c4cb408f374",
+      "sha256": "ad5010d71cc29a9405042d83f8de6096d74735de1bc171246740d8ec0149a3f1",
       "state": {
         "lesson": "handoff",
         "time": 2340,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2340,
@@ -2729,12 +3555,19 @@
     },
     {
       "time_ms": 2360.0,
-      "sha256": "bb7005dde3f4e99f717eb8ee10a01f3cea7938d2a331732ceb2c1c4cb408f374",
+      "sha256": "ad5010d71cc29a9405042d83f8de6096d74735de1bc171246740d8ec0149a3f1",
       "state": {
         "lesson": "handoff",
         "time": 2360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2360,
@@ -2752,12 +3585,19 @@
     },
     {
       "time_ms": 2380.0,
-      "sha256": "f3665d7d144947d5fad372f16b269ea4f7d3fd2b4981c0a756f0ad912a5ff3ae",
+      "sha256": "248360b040d946a826aef70fc7a66082009d9a8c5ee1bc9345673d7dd796ffed",
       "state": {
         "lesson": "handoff",
         "time": 2380,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2380,
@@ -2775,12 +3615,19 @@
     },
     {
       "time_ms": 2400.0,
-      "sha256": "e22a98912bd8d795ca787b5606ad494038bee3cafbe5c1b9c868a19dbf5d761f",
+      "sha256": "054ad19f6883ecdf9cb6887546fd915965209742742c950ceb0c0ec03f73a9de",
       "state": {
         "lesson": "handoff",
         "time": 2400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2400,
@@ -2798,12 +3645,19 @@
     },
     {
       "time_ms": 2420.0,
-      "sha256": "e22a98912bd8d795ca787b5606ad494038bee3cafbe5c1b9c868a19dbf5d761f",
+      "sha256": "054ad19f6883ecdf9cb6887546fd915965209742742c950ceb0c0ec03f73a9de",
       "state": {
         "lesson": "handoff",
         "time": 2420,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2420,
@@ -2821,12 +3675,19 @@
     },
     {
       "time_ms": 2440.0,
-      "sha256": "9bea7c3102dcf2f7e80a987d9e1d8844e60160422fe01dd364ab839b6e4dc8e4",
+      "sha256": "3aa4cbe57d574f63720311a7809133447721f99416bc79e34056c52a1d235795",
       "state": {
         "lesson": "handoff",
         "time": 2440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2440,
@@ -2844,12 +3705,19 @@
     },
     {
       "time_ms": 2460.0,
-      "sha256": "9bea7c3102dcf2f7e80a987d9e1d8844e60160422fe01dd364ab839b6e4dc8e4",
+      "sha256": "3aa4cbe57d574f63720311a7809133447721f99416bc79e34056c52a1d235795",
       "state": {
         "lesson": "handoff",
         "time": 2460,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2460,
@@ -2867,12 +3735,19 @@
     },
     {
       "time_ms": 2480.0,
-      "sha256": "043e86fb03cb5530cfd8435b3b1ef004ee28ed286718de20cd837fff2d5b25f3",
+      "sha256": "0ed853bdb5ed09e30e27d368f75e54a7e9f7638c87da2be29c1add1c88356863",
       "state": {
         "lesson": "handoff",
         "time": 2480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2480,
@@ -2890,12 +3765,19 @@
     },
     {
       "time_ms": 2500.0,
-      "sha256": "63e35ea2d96fd10c635ce4cc61e8fb33e2b28bfa31d85798d37fbc050b54191d",
+      "sha256": "0e5782ac3f0799a2148a5d704bff768e78d3b643b44658c5f3bf83bc16e74484",
       "state": {
         "lesson": "handoff",
         "time": 2500,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2500,
@@ -2913,12 +3795,19 @@
     },
     {
       "time_ms": 2520.0,
-      "sha256": "63e35ea2d96fd10c635ce4cc61e8fb33e2b28bfa31d85798d37fbc050b54191d",
+      "sha256": "0e5782ac3f0799a2148a5d704bff768e78d3b643b44658c5f3bf83bc16e74484",
       "state": {
         "lesson": "handoff",
         "time": 2520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2520,
@@ -2936,12 +3825,19 @@
     },
     {
       "time_ms": 2540.0,
-      "sha256": "d726f807057cdca85abf4719fd348aae3b8b848fc6cd28c391bd1dc1cb9e7552",
+      "sha256": "49c4f9da652d4f0eab7f360e3d133cab96d31b9c0a74777a7600a03906d7ae50",
       "state": {
         "lesson": "handoff",
         "time": 2540,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2540,
@@ -2959,12 +3855,19 @@
     },
     {
       "time_ms": 2560.0,
-      "sha256": "5bf59009150aedb2ca241e41ff3c99c3a752ef044b3310e505e2ccea8c4e12e3",
+      "sha256": "ec5f926e86924cad35a5b34a60dfe52b9c98c9d70ac5ba7cfd8c359f66d20d84",
       "state": {
         "lesson": "handoff",
         "time": 2560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2560,
@@ -2982,12 +3885,19 @@
     },
     {
       "time_ms": 2580.0,
-      "sha256": "65fd460c63dbc23e035c09aa23ced32b8190ee9859169abef410653f58814cca",
+      "sha256": "a625e9bbb464ca51a14a022bc6c2c29c81a326bb29519b385fa12678b0f1942f",
       "state": {
         "lesson": "handoff",
         "time": 2580,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2580,
@@ -3005,12 +3915,19 @@
     },
     {
       "time_ms": 2600.0,
-      "sha256": "7d16dd17bcff5899892a8b3c4b2a1dc50dd25da5e288dc17dc4927d325f57876",
+      "sha256": "d9a0fcc06ea72ff9f130f56fd1d23cc0d1cab45ad30eec0461022d0c3a578e07",
       "state": {
         "lesson": "handoff",
         "time": 2600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2600,
@@ -3028,12 +3945,19 @@
     },
     {
       "time_ms": 2620.0,
-      "sha256": "d9aae55e3ef611ee89fd84397c7f38e24f72c7cdabc9774dccae064bb6a16e56",
+      "sha256": "6baf0a54c8db2dd6b2e9e863fec335fe60a337b51a1a11ec6d4c7074bc354856",
       "state": {
         "lesson": "handoff",
         "time": 2620,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2620,
@@ -3051,12 +3975,19 @@
     },
     {
       "time_ms": 2640.0,
-      "sha256": "758a1789431b9282b4b773746d56ef9dec86667f5c5d3d04df9f987174cc481c",
+      "sha256": "7242ecfdcd2b36a4b2b1226957a8b16825c993c6fec6cf0a753580e7437c6e09",
       "state": {
         "lesson": "handoff",
         "time": 2640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2640,
@@ -3074,12 +4005,19 @@
     },
     {
       "time_ms": 2660.0,
-      "sha256": "2a948869132127790163a5ee64c3ec5f449cb2cc7c918525ad7257268d16209d",
+      "sha256": "54ef0f0feecfb5982b141a6c356ac9b9cdb12e1121dcacd7a76d3d3a62513c14",
       "state": {
         "lesson": "handoff",
         "time": 2660,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2660,
@@ -3097,12 +4035,19 @@
     },
     {
       "time_ms": 2680.0,
-      "sha256": "dd987c3150f5db2c968690c6344743ad008a23580c0d8642a8e03390e6b6a4f6",
+      "sha256": "df135e792c867a2518dfe7be1d9666e357e3e8a4f3b8447bf6d3dfa0949874e0",
       "state": {
         "lesson": "handoff",
         "time": 2680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2680,
@@ -3120,12 +4065,19 @@
     },
     {
       "time_ms": 2700.0,
-      "sha256": "8e1a5ed704333f84664e1bf8224c84cffe2582073e71e4a9878b1a27e0c32464",
+      "sha256": "05114d10c9b2abb92d45d4d662e50061f8a0d49846be62cd3b2d98573abeaffa",
       "state": {
         "lesson": "handoff",
         "time": 2700,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2700,
@@ -3143,12 +4095,19 @@
     },
     {
       "time_ms": 2720.0,
-      "sha256": "8788dc6fd04582f537e0ea0d5b60b7f63f9289c85e0e9b41443529ce7098c894",
+      "sha256": "f9163f0ca8637c94d24449f4baeadc8a93db110e0db888250a8c639dd15fc826",
       "state": {
         "lesson": "handoff",
         "time": 2720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2720,
@@ -3166,12 +4125,19 @@
     },
     {
       "time_ms": 2740.0,
-      "sha256": "f108c139f6adb7f35c65480e9b248425d1ca0bcad2de3ba05a69491a7ee414d2",
+      "sha256": "6638c3067a26464f3751bdd66008b77bd7ce5756b8a1de849943b32b40ec85c1",
       "state": {
         "lesson": "handoff",
         "time": 2740,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2740,
@@ -3189,12 +4155,19 @@
     },
     {
       "time_ms": 2760.0,
-      "sha256": "ee72bb4cd071bd353ed60837deb2f6442913b3e4aa5961e44c410ccf284a5cc3",
+      "sha256": "3ed7444741c1fbbd125ec35bf37f5adb0d0ffe9a9bc4c7ec1bfd692f3c431bcf",
       "state": {
         "lesson": "handoff",
         "time": 2760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2760,
@@ -3212,12 +4185,19 @@
     },
     {
       "time_ms": 2780.0,
-      "sha256": "df41b1a7731f452d74e1d6e3b4e345b34ffcd72cac3376159232810a0f031a76",
+      "sha256": "c2517a5b552865aaabd53ad13a279c2d14979c40365c9bf31b50c98eb92ca3d8",
       "state": {
         "lesson": "handoff",
         "time": 2780,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2780,
@@ -3235,12 +4215,19 @@
     },
     {
       "time_ms": 2800.0,
-      "sha256": "7dab279f5820981b1101ee89e3640f3d96cccc3759da20e0b53c50c21384b09a",
+      "sha256": "0943bf4e69c534c5e2fa694e8f45724e91c6c08a8797138f6ad4e3b2a39f4350",
       "state": {
         "lesson": "handoff",
         "time": 2800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2800,
@@ -3258,12 +4245,19 @@
     },
     {
       "time_ms": 2820.0,
-      "sha256": "d980f847ecc017c475d03d7019e90cddd7a53b95cf1e4d2037b58e1f305c0956",
+      "sha256": "d463020fb6e494b9cf41e8c31ff68c53104b14ed9c688e2900a3a8b4893fa2e8",
       "state": {
         "lesson": "handoff",
         "time": 2820,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2820,
@@ -3281,12 +4275,19 @@
     },
     {
       "time_ms": 2840.0,
-      "sha256": "281589502de92e9f2bf96e2de3b46f48c5319c069b38b4ebb48232bd20f4c6d0",
+      "sha256": "d90f53dcc5d2db3ccf761c7a41a92a00546a576625315481062336a6ffe04c65",
       "state": {
         "lesson": "handoff",
         "time": 2840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2840,
@@ -3304,12 +4305,19 @@
     },
     {
       "time_ms": 2860.0,
-      "sha256": "f6ec5d2b444712c1499c8dd346ec4cc80345578334b0acadb74595c91537abab",
+      "sha256": "7cd7a9e4e33d24281d93aeeda83e581e575f9b1e390503e9bb1eaccf3408849e",
       "state": {
         "lesson": "handoff",
         "time": 2860,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2860,
@@ -3327,12 +4335,19 @@
     },
     {
       "time_ms": 2880.0,
-      "sha256": "2cf958403242d56ba85baa7175776db38a3dbd975e106427d6dbfc8fe415eb32",
+      "sha256": "478921c68590674a2ad37a0d6c808f4881a79c4f9a46cdcf82de9637a8acca38",
       "state": {
         "lesson": "handoff",
         "time": 2880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2880,
@@ -3350,12 +4365,19 @@
     },
     {
       "time_ms": 2900.0,
-      "sha256": "0599cec4fdd8b387171821b179d96d6025cec2e546c6ade26dc3a87c69076438",
+      "sha256": "199cb0a51120197110b277e1ce00085915be3e65bdf621812ff7f283f22f8b91",
       "state": {
         "lesson": "handoff",
         "time": 2900,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2900,
@@ -3373,12 +4395,19 @@
     },
     {
       "time_ms": 2920.0,
-      "sha256": "0e5d1fa054e12af4567769f21fbe467d2c65389b9b52c4bb961cf0c9d62626e6",
+      "sha256": "3316f0c122c88763fea02f87811643325be812fa4b3143ee1704b139d0f3573f",
       "state": {
         "lesson": "handoff",
         "time": 2920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2920,
@@ -3396,12 +4425,19 @@
     },
     {
       "time_ms": 2940.0,
-      "sha256": "e1f7193555f42c5ee8798da0e335ea07e75f03371771eb467121fc49bf02969e",
+      "sha256": "ee0704b4553a5eb35fbc4f84d660a0b93e6ddaa0d813356db1c7a9a8509fbbf0",
       "state": {
         "lesson": "handoff",
         "time": 2940,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2940,
@@ -3419,12 +4455,19 @@
     },
     {
       "time_ms": 2960.0,
-      "sha256": "82dfa988a591e31c3ed7f55d1c81732b511d61dd3627d98a063902931aee66ea",
+      "sha256": "ad4fa00459e9a5b9a69db5763da7c4ec068a2627e34c459d5996bc4944dddaf5",
       "state": {
         "lesson": "handoff",
         "time": 2960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2960,
@@ -3442,12 +4485,19 @@
     },
     {
       "time_ms": 2980.0,
-      "sha256": "180b4a81bbb363be9142bd3eaef83b691ee494e21651e14ac620b858610663b4",
+      "sha256": "6308f5a5c39878d996bbf5deb1c10aaa4cb72de42b4441390602aa22b047da41",
       "state": {
         "lesson": "handoff",
         "time": 2980,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 2980,
@@ -3465,12 +4515,19 @@
     },
     {
       "time_ms": 3000.0,
-      "sha256": "1886cd5d962e6c25fd6c03ee4584b65ed77e3298fc5e51ec8466a8eb850766d9",
+      "sha256": "7e030f65d691325780fc53070fd9cb3bd79f3d17072e3bbcc9f846a3672810dc",
       "state": {
         "lesson": "handoff",
         "time": 3000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3000,
@@ -3488,12 +4545,19 @@
     },
     {
       "time_ms": 3020.0,
-      "sha256": "72282635dd20713899b7d7b2cb633db9d06a42c53b06921410fc3c6bd1753559",
+      "sha256": "b7df72a98a0355936bfc69a284db286afa31193a305ba03e0d96ec40454a02e2",
       "state": {
         "lesson": "handoff",
         "time": 3020,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3020,
@@ -3511,12 +4575,19 @@
     },
     {
       "time_ms": 3040.0,
-      "sha256": "c8dadb82a80d28328a53fa991fa52b4d0df9f1dad0000a0a5920e928c4dfed70",
+      "sha256": "93a97713767a42cc71e5d6148754902861cc6ce2f81e3792a1fb2f388c854746",
       "state": {
         "lesson": "handoff",
         "time": 3040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3040,
@@ -3534,12 +4605,19 @@
     },
     {
       "time_ms": 3060.0,
-      "sha256": "8a5b8716215204c66c33f1fe3f3223b1dd94327cf244cca175ec6ffef5ff7378",
+      "sha256": "94a2339e9b9be96d2f635d9cbb3b31d54b5c8f77c78cf43ac77d148fb3f2950a",
       "state": {
         "lesson": "handoff",
         "time": 3060,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3060,
@@ -3557,12 +4635,19 @@
     },
     {
       "time_ms": 3080.0,
-      "sha256": "5264a9176c0c0cdd526a84b2ec3404efee4a65c33c13f7805ee7b8d22aa27e15",
+      "sha256": "584a36e4de9d50ef7be7d3496fc2a198a9e73d09bc33a77ebb3710a232febcdd",
       "state": {
         "lesson": "handoff",
         "time": 3080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3080,
@@ -3580,12 +4665,19 @@
     },
     {
       "time_ms": 3100.0,
-      "sha256": "63414d83dfbb2679f0f2284baf3e3870dd65b298142d66bea236eaa241c09505",
+      "sha256": "e3b1aff17ea672cb6c736a47b4f52836dd63f4cbc2fa7d6f5dc1112f4400cf3f",
       "state": {
         "lesson": "handoff",
         "time": 3100,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3100,
@@ -3603,12 +4695,19 @@
     },
     {
       "time_ms": 3120.0,
-      "sha256": "76ec2a15e7720c507f438f0612ec0775de4abd26c0b90c383f8e15132f2416c0",
+      "sha256": "818cfceff3aaad7ac180d8fc47f67bc048880d521ff353ed4dcc9d8674996e77",
       "state": {
         "lesson": "handoff",
         "time": 3120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3120,
@@ -3626,12 +4725,19 @@
     },
     {
       "time_ms": 3140.0,
-      "sha256": "476dccbb89fbc11a66a901b3565c8ca8dcc497966e46309abab77d015f50df44",
+      "sha256": "b578d4a67859ac8f032ef9a4827fb8f0fe9cb4d90a8d9d3341b2acb8b3decb33",
       "state": {
         "lesson": "handoff",
         "time": 3140,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3140,
@@ -3649,12 +4755,19 @@
     },
     {
       "time_ms": 3160.0,
-      "sha256": "476dccbb89fbc11a66a901b3565c8ca8dcc497966e46309abab77d015f50df44",
+      "sha256": "b578d4a67859ac8f032ef9a4827fb8f0fe9cb4d90a8d9d3341b2acb8b3decb33",
       "state": {
         "lesson": "handoff",
         "time": 3160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3160,
@@ -3672,12 +4785,19 @@
     },
     {
       "time_ms": 3180.0,
-      "sha256": "55edb9563eceaaa698e0257153a1515f2b781c622e93ffd9965e634eb0d0e782",
+      "sha256": "8642f829adc5ae948cb6a3192b9c4bf2160d5b328451fce048e2591f1111f45b",
       "state": {
         "lesson": "handoff",
         "time": 3180,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3180,
@@ -3695,12 +4815,19 @@
     },
     {
       "time_ms": 3200.0,
-      "sha256": "f20f1a4ee9d8628b6dacd1217de390158e6781b4b9df902488779b0423d511fd",
+      "sha256": "70d643cd272dc2bbe1b3c2d90ca2ca0ae547378bbe7fa5098909f3101827f448",
       "state": {
         "lesson": "handoff",
         "time": 3200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3200,
@@ -3718,12 +4845,19 @@
     },
     {
       "time_ms": 3220.0,
-      "sha256": "f20f1a4ee9d8628b6dacd1217de390158e6781b4b9df902488779b0423d511fd",
+      "sha256": "70d643cd272dc2bbe1b3c2d90ca2ca0ae547378bbe7fa5098909f3101827f448",
       "state": {
         "lesson": "handoff",
         "time": 3220,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3220,
@@ -3741,12 +4875,19 @@
     },
     {
       "time_ms": 3240.0,
-      "sha256": "98e241b249a68ae48f7cf58fb4f2f5da5906be67fe4bd42d5c90ec1e8a9c5c97",
+      "sha256": "b52352cf3862b9d9390ca0d95c123633471b06d79362e2919c4d12dd3ea896c4",
       "state": {
         "lesson": "handoff",
         "time": 3240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3240,
@@ -3764,12 +4905,19 @@
     },
     {
       "time_ms": 3260.0,
-      "sha256": "98e241b249a68ae48f7cf58fb4f2f5da5906be67fe4bd42d5c90ec1e8a9c5c97",
+      "sha256": "b52352cf3862b9d9390ca0d95c123633471b06d79362e2919c4d12dd3ea896c4",
       "state": {
         "lesson": "handoff",
         "time": 3260,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3260,
@@ -3787,12 +4935,19 @@
     },
     {
       "time_ms": 3280.0,
-      "sha256": "fc2786c08c314d8447f61bf912462a148aceaf19dc32d7cb91b94e45ad94303b",
+      "sha256": "ce4577915d457aa868e948873fd028f2f5fb397a8332eb3aff1c4c0f70d40fb7",
       "state": {
         "lesson": "handoff",
         "time": 3280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3280,
@@ -3810,12 +4965,19 @@
     },
     {
       "time_ms": 3300.0,
-      "sha256": "468b123f42260692d6d6ce3f258bbba6ab5ed22dbe80a3246062fd24a6c4b7d0",
+      "sha256": "fee6a5475caa723b90b5be4571a42a3d559f6cd02d970cd01fc7bec14fba7825",
       "state": {
         "lesson": "handoff",
         "time": 3300,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3300,
@@ -3833,12 +4995,19 @@
     },
     {
       "time_ms": 3320.0,
-      "sha256": "468b123f42260692d6d6ce3f258bbba6ab5ed22dbe80a3246062fd24a6c4b7d0",
+      "sha256": "fee6a5475caa723b90b5be4571a42a3d559f6cd02d970cd01fc7bec14fba7825",
       "state": {
         "lesson": "handoff",
         "time": 3320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3320,
@@ -3856,12 +5025,19 @@
     },
     {
       "time_ms": 3340.0,
-      "sha256": "fec54baea4cb4c3542ce003362891563bac2c7380867940c6081e93d11c16e8c",
+      "sha256": "d20633c550677597475c2b9d94ec81538056337e6958471009ebc1a4c3216f37",
       "state": {
         "lesson": "handoff",
         "time": 3340,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3340,
@@ -3879,12 +5055,19 @@
     },
     {
       "time_ms": 3360.0,
-      "sha256": "fec54baea4cb4c3542ce003362891563bac2c7380867940c6081e93d11c16e8c",
+      "sha256": "d20633c550677597475c2b9d94ec81538056337e6958471009ebc1a4c3216f37",
       "state": {
         "lesson": "handoff",
         "time": 3360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3360,
@@ -3902,12 +5085,19 @@
     },
     {
       "time_ms": 3380.0,
-      "sha256": "649602347c259ab78027fac2a86e2c2c19c1e7731331f9e9768098f1ce111665",
+      "sha256": "1ebdce19bc81fb7067a63d59986b97c98592911542f83b89ee23b6ff5d42de66",
       "state": {
         "lesson": "handoff",
         "time": 3380,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3380,
@@ -3925,12 +5115,19 @@
     },
     {
       "time_ms": 3400.0,
-      "sha256": "a89bf910468e88579097abc1c1a7b7ce71712293faf48a85bc82065ef5e8773f",
+      "sha256": "4343c4b78746a13ffbebe96e4cb9a828a4768b371a8d8d5d1aca9feaa617c5fc",
       "state": {
         "lesson": "handoff",
         "time": 3400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3400,
@@ -3948,12 +5145,19 @@
     },
     {
       "time_ms": 3420.0,
-      "sha256": "a89bf910468e88579097abc1c1a7b7ce71712293faf48a85bc82065ef5e8773f",
+      "sha256": "4343c4b78746a13ffbebe96e4cb9a828a4768b371a8d8d5d1aca9feaa617c5fc",
       "state": {
         "lesson": "handoff",
         "time": 3420,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3420,
@@ -3971,12 +5175,19 @@
     },
     {
       "time_ms": 3440.0,
-      "sha256": "1948baa591d6d41251c73c8d2049d316cf7fda611e85f73d90a7fdd85942e360",
+      "sha256": "6005da45a91b98b53e6da505f14f1decf99a12bba3f61b6d9e96369a9ddce762",
       "state": {
         "lesson": "handoff",
         "time": 3440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3440,
@@ -3994,12 +5205,19 @@
     },
     {
       "time_ms": 3460.0,
-      "sha256": "1948baa591d6d41251c73c8d2049d316cf7fda611e85f73d90a7fdd85942e360",
+      "sha256": "6005da45a91b98b53e6da505f14f1decf99a12bba3f61b6d9e96369a9ddce762",
       "state": {
         "lesson": "handoff",
         "time": 3460,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3460,
@@ -4017,12 +5235,19 @@
     },
     {
       "time_ms": 3480.0,
-      "sha256": "1948baa591d6d41251c73c8d2049d316cf7fda611e85f73d90a7fdd85942e360",
+      "sha256": "6005da45a91b98b53e6da505f14f1decf99a12bba3f61b6d9e96369a9ddce762",
       "state": {
         "lesson": "handoff",
         "time": 3480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3480,
@@ -4040,12 +5265,19 @@
     },
     {
       "time_ms": 3500.0,
-      "sha256": "df539be83d04a487b6aa4ee2fa97f5f08f178e06b751a77487c6c215e876e781",
+      "sha256": "2b8ab4bbed1eb923ea8cffcb8d27d35a394e2984f47239559770b829838689c7",
       "state": {
         "lesson": "handoff",
         "time": 3500,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3500,
@@ -4063,12 +5295,19 @@
     },
     {
       "time_ms": 3520.0,
-      "sha256": "df539be83d04a487b6aa4ee2fa97f5f08f178e06b751a77487c6c215e876e781",
+      "sha256": "2b8ab4bbed1eb923ea8cffcb8d27d35a394e2984f47239559770b829838689c7",
       "state": {
         "lesson": "handoff",
         "time": 3520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3520,
@@ -4086,12 +5325,19 @@
     },
     {
       "time_ms": 3540.0,
-      "sha256": "3320acac9f1091e42d68a77fff9b0d50587561b4a045087520a969ff8de79fbd",
+      "sha256": "e84cd97f9e53fa916ee68265a6268256bbe9b24acedad0ccc4b86a297fe1d9a3",
       "state": {
         "lesson": "handoff",
         "time": 3540,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3540,
@@ -4109,12 +5355,19 @@
     },
     {
       "time_ms": 3560.0,
-      "sha256": "7a1a798fbe8746793d72f1569d766dde79000e5954a3eb8d193d7aa1c018e5b3",
+      "sha256": "c2253d52f2bc442947ae946bab1ad4ec6adb1e042fa25fe00ce2af131f6ec48d",
       "state": {
         "lesson": "handoff",
         "time": 3560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3560,
@@ -4132,12 +5385,19 @@
     },
     {
       "time_ms": 3580.0,
-      "sha256": "365186f26d1e0af9379ff0d64f0f701a861c2e93f19441b70ff2f6e213e611d5",
+      "sha256": "65f33cd5abd51584682f931f2d3317b745568aa7d7f84fae10317eb5415459e0",
       "state": {
         "lesson": "handoff",
         "time": 3580,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3580,
@@ -4155,12 +5415,19 @@
     },
     {
       "time_ms": 3600.0,
-      "sha256": "f7e7aad85bd49de92e2ec9fc55954ff50b99ce695b82d0e1886c71db1d6392a0",
+      "sha256": "051fbd4ab1bdc07e75a85c54874775781661bb184cc704cbcaec931ce9bb319c",
       "state": {
         "lesson": "handoff",
         "time": 3600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3600,
@@ -4178,12 +5445,19 @@
     },
     {
       "time_ms": 3620.0,
-      "sha256": "590d011971a9e0d7e2578f8b98be7007b9e15975cf4236fef66fe9be1f07f3b7",
+      "sha256": "05b151187e89876579d087b38df1a862ff4d7de04f8127d04595b50145d722b1",
       "state": {
         "lesson": "handoff",
         "time": 3620,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3620,
@@ -4201,12 +5475,19 @@
     },
     {
       "time_ms": 3640.0,
-      "sha256": "06fffa3c3e32bb318d005355552dde4303174097f5e1dca0e4a2319b6b9697d9",
+      "sha256": "ed40b33b2bf78fb2d01e5a99d6436cc0acf73f09d9c4f101fc92844739e4391b",
       "state": {
         "lesson": "handoff",
         "time": 3640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3640,
@@ -4224,12 +5505,19 @@
     },
     {
       "time_ms": 3660.0,
-      "sha256": "1f052d384ec8a1051b4b58826b3e681a907d80cd0aac4b88f5486dd33122cb7a",
+      "sha256": "e9ca3631755d60217b8485eb962597fad4a0e14534d3e8bac64ccd388e491ce9",
       "state": {
         "lesson": "handoff",
         "time": 3660,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3660,
@@ -4247,12 +5535,19 @@
     },
     {
       "time_ms": 3680.0,
-      "sha256": "2cca288837638078f377478d286bbdb96edea26a089a611680f45b23ce90f38a",
+      "sha256": "f130460f569f12873c26080d5c45836da2926bc3136f6dc2da4a83ba9a66746b",
       "state": {
         "lesson": "handoff",
         "time": 3680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3680,
@@ -4270,12 +5565,19 @@
     },
     {
       "time_ms": 3700.0,
-      "sha256": "847c3326b85085aa2eaca5fda807ba663d8dadad570f0580bfab2a5ad9ad0fa6",
+      "sha256": "bc09aca49db76a1692dbebdb11894a2af07e622c286ba39af4a0beaa55912d89",
       "state": {
         "lesson": "handoff",
         "time": 3700,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3700,
@@ -4293,12 +5595,19 @@
     },
     {
       "time_ms": 3720.0,
-      "sha256": "37756125bfe27260dab090675bb37ab8359f5cf9b454e9ebb0e26a3211c4fd5e",
+      "sha256": "95b45876180ad224d3406f7293cbd900b529f957daef396b17b682075cde7338",
       "state": {
         "lesson": "handoff",
         "time": 3720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3720,
@@ -4316,12 +5625,19 @@
     },
     {
       "time_ms": 3740.0,
-      "sha256": "6c6dd42f7c6c2941d4c9b261862d2c18b91d8eaa4b42d85d6ea98d32e4fd87e1",
+      "sha256": "d1f2ef309f8cff724a3a27ad59a091bc616315842ddbd5893f5346e5e92d81d7",
       "state": {
         "lesson": "handoff",
         "time": 3740,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3740,
@@ -4339,12 +5655,19 @@
     },
     {
       "time_ms": 3760.0,
-      "sha256": "a1308aec025e5440d569829674c48e941fec5862f23f74bde9893ab645043690",
+      "sha256": "21bbcd6ece11105937cb62fade1cf7ea007cbc5ba4afcf595b516eb0420042e1",
       "state": {
         "lesson": "handoff",
         "time": 3760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3760,
@@ -4362,12 +5685,19 @@
     },
     {
       "time_ms": 3780.0,
-      "sha256": "554ea6bd231e0339095c17ad1c04431cb50086f9766e7174336b2044eac7005b",
+      "sha256": "dd8f55db94b5622b7f39b802bbb6f5fd5ef6fdb9549e067e964910640dbcb8e8",
       "state": {
         "lesson": "handoff",
         "time": 3780,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3780,
@@ -4385,12 +5715,19 @@
     },
     {
       "time_ms": 3800.0,
-      "sha256": "eb33bf085abf28271d59bbb8d96524ea170e318f74e2ffb643820e4eb5a5b2d2",
+      "sha256": "bea3c56481bd8e34a216780e2db07487e513dd5a846b51d90e493488ce5fc2cb",
       "state": {
         "lesson": "handoff",
         "time": 3800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3800,
@@ -4408,12 +5745,19 @@
     },
     {
       "time_ms": 3820.0,
-      "sha256": "7526b18cd56692ccffbda390435bd37c96b83cf5c0580a754650ca7a4b1bee79",
+      "sha256": "158e10587a18f48a4476db009080bdd6c0fce7d5f75cf3ffb4e0158c2b753670",
       "state": {
         "lesson": "handoff",
         "time": 3820,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3820,
@@ -4431,12 +5775,19 @@
     },
     {
       "time_ms": 3840.0,
-      "sha256": "a701fa42470cb66b078f4a83abb4cee440b2a99ac2e80513515e15b1fc86ad63",
+      "sha256": "3ca8ad1513a9664502a37c9560b93fb52c12d9d94438cf56b784497efe37a124",
       "state": {
         "lesson": "handoff",
         "time": 3840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3840,
@@ -4454,12 +5805,19 @@
     },
     {
       "time_ms": 3860.0,
-      "sha256": "bf006040706482829392fbf752639d2ab1c74247ee1cd4730cc6601f2af3374d",
+      "sha256": "f78de4b46bdabd8bbad223b94f2bfd2c6277f99ff620dfc5c58b43a8c6564809",
       "state": {
         "lesson": "handoff",
         "time": 3860,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3860,
@@ -4477,12 +5835,19 @@
     },
     {
       "time_ms": 3880.0,
-      "sha256": "3035c9d17457ed28307c6d2bf2c11898ff259cd93082cda4a4ccf12dc92f16a7",
+      "sha256": "561b85006c00ea62ec3d0b9ee556ed40649b61c41699ebaa1e05faefbc7842d9",
       "state": {
         "lesson": "handoff",
         "time": 3880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3880,
@@ -4500,12 +5865,19 @@
     },
     {
       "time_ms": 3900.0,
-      "sha256": "6c97d1de231ce0c31528373ae468b646b7bcc2c594f8cba961faed2fe30f4b0f",
+      "sha256": "30fef7de7df04fca44875eddd9102d2754e58146dcb6d5ec01945bb508ab3462",
       "state": {
         "lesson": "handoff",
         "time": 3900,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3900,
@@ -4523,12 +5895,19 @@
     },
     {
       "time_ms": 3920.0,
-      "sha256": "a4c96b7965120cdd0516e0008e436a7be1c830df89482cc1dcd067215719dbeb",
+      "sha256": "b67cca0162e9a5d6812047f28eb56737678865fed0fd7ac63ef27a4c88a74e2a",
       "state": {
         "lesson": "handoff",
         "time": 3920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3920,
@@ -4546,12 +5925,19 @@
     },
     {
       "time_ms": 3940.0,
-      "sha256": "64cd3e0999a85cbba13f4eb3fc4ce8fb3fbd64e7c624dc1ddd09b0a17316df97",
+      "sha256": "c43e6769e5f7092b9b29fc38034bbb1a7aea3928e2fb9b8bd92a1f289f1b05ad",
       "state": {
         "lesson": "handoff",
         "time": 3940,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3940,
@@ -4569,12 +5955,19 @@
     },
     {
       "time_ms": 3960.0,
-      "sha256": "81bbbb317ba85494c1ceee94877f830198089d1739339c64e2513d2781f2ed0b",
+      "sha256": "bb10eb010e4ae9a9b8cf64023df004bd6d3e4bf4fd5b0ab753918b2413cc467c",
       "state": {
         "lesson": "handoff",
         "time": 3960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3960,
@@ -4592,12 +5985,19 @@
     },
     {
       "time_ms": 3980.0,
-      "sha256": "97dae8c0d6cdba2f7c9d110d7dfb46d07a681eaab787e324eacc3850ac206fc9",
+      "sha256": "1b33a5bfdf9f98c33b1c7e94f26f31b0a882a9046fdf0a4621b8c09f4af9089e",
       "state": {
         "lesson": "handoff",
         "time": 3980,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 3980,
@@ -4615,12 +6015,19 @@
     },
     {
       "time_ms": 4000.0,
-      "sha256": "c9deb498aaf6d3dd2a18f760b1b0f98155ab41b587d225f03b2d35ebd3fdbd4c",
+      "sha256": "4da735cb981ef0ad45be539381b66bc20a2fd893ad65bab079cd6b05a3fc971c",
       "state": {
         "lesson": "handoff",
         "time": 4000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4000,
@@ -4638,12 +6045,19 @@
     },
     {
       "time_ms": 4020.0,
-      "sha256": "2ba9e90a15c8d67aa59511d2f9bcee10a6b0c23d87be848abfb833b32494ba73",
+      "sha256": "a4fbd57656a2b36ee3272ff7f1664fc99f7917c377840b66eee6241aa2d3e690",
       "state": {
         "lesson": "handoff",
         "time": 4020,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4020,
@@ -4661,12 +6075,19 @@
     },
     {
       "time_ms": 4040.0,
-      "sha256": "4049e69682904c2c5cb45fc88d02d61684f6e9f57e2385957ef5be0f84f8c7d4",
+      "sha256": "f4a514c5c61de073b5d846dd81d00f2519a55b9d9f838372d918f04c1a6b4633",
       "state": {
         "lesson": "handoff",
         "time": 4040,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4040,
@@ -4684,12 +6105,19 @@
     },
     {
       "time_ms": 4060.0,
-      "sha256": "bf79b149ac49fce27953921885e370b63d240522323d2c1512708ffd114f7010",
+      "sha256": "1df51966c3f36316b85ba117b601f1477709cb8e6bdd2a24649499603dced95e",
       "state": {
         "lesson": "handoff",
         "time": 4060,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4060,
@@ -4707,12 +6135,19 @@
     },
     {
       "time_ms": 4080.0,
-      "sha256": "2b9329081dd44402c9341c794930b017adac82f01630d802a6ca0da5a8fdf8e2",
+      "sha256": "1ed7df963f3dadff8c3db815ac90815dc2b41667c597c5ec38586f5b3e1f2d8f",
       "state": {
         "lesson": "handoff",
         "time": 4080,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4080,
@@ -4730,12 +6165,19 @@
     },
     {
       "time_ms": 4100.0,
-      "sha256": "2b9329081dd44402c9341c794930b017adac82f01630d802a6ca0da5a8fdf8e2",
+      "sha256": "1ed7df963f3dadff8c3db815ac90815dc2b41667c597c5ec38586f5b3e1f2d8f",
       "state": {
         "lesson": "handoff",
         "time": 4100,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4100,
@@ -4753,12 +6195,19 @@
     },
     {
       "time_ms": 4120.0,
-      "sha256": "f1580a62dd13a1f638aac42346dbf67e5de0824c33c80c9fc2c14729faf51f87",
+      "sha256": "86a36337b0fd2117f160b40c6f3aefb13207983a915321b08abe82f09b7efe05",
       "state": {
         "lesson": "handoff",
         "time": 4120,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4120,
@@ -4776,12 +6225,19 @@
     },
     {
       "time_ms": 4140.0,
-      "sha256": "14a0a5b6891e7b529e01d2f1bd8e976e47d2d6dbe28901090d651a198a531fa1",
+      "sha256": "b7f1e8b7024115e45fb1da24df13517e281094b9cbf6acf88bc292d3e811237f",
       "state": {
         "lesson": "handoff",
         "time": 4140,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4140,
@@ -4799,12 +6255,19 @@
     },
     {
       "time_ms": 4160.0,
-      "sha256": "14a0a5b6891e7b529e01d2f1bd8e976e47d2d6dbe28901090d651a198a531fa1",
+      "sha256": "b7f1e8b7024115e45fb1da24df13517e281094b9cbf6acf88bc292d3e811237f",
       "state": {
         "lesson": "handoff",
         "time": 4160,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4160,
@@ -4822,12 +6285,19 @@
     },
     {
       "time_ms": 4180.0,
-      "sha256": "988adad2969014f75c901492ad786162da68053e34924b65ee11494c9925abcb",
+      "sha256": "6fc9f3674d68f0a8bafcc62476509f63192cb1c4ee7cebb5f0f15c928f472d3a",
       "state": {
         "lesson": "handoff",
         "time": 4180,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4180,
@@ -4845,12 +6315,19 @@
     },
     {
       "time_ms": 4200.0,
-      "sha256": "eba80cb445d072dbcf4c419fff36fedced5da28d1eee37dab23a9b2ac3d01bbc",
+      "sha256": "c882d964a31173d06656ffa11d0d5e827e99c4fb2ef66b8404d6dcafd6cb7357",
       "state": {
         "lesson": "handoff",
         "time": 4200,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4200,
@@ -4868,12 +6345,19 @@
     },
     {
       "time_ms": 4220.0,
-      "sha256": "eba80cb445d072dbcf4c419fff36fedced5da28d1eee37dab23a9b2ac3d01bbc",
+      "sha256": "c882d964a31173d06656ffa11d0d5e827e99c4fb2ef66b8404d6dcafd6cb7357",
       "state": {
         "lesson": "handoff",
         "time": 4220,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4220,
@@ -4891,12 +6375,19 @@
     },
     {
       "time_ms": 4240.0,
-      "sha256": "28df9ae4f50e14b1fb5009e7add858c5fce852409be8ac82d119b62fff0a9f6c",
+      "sha256": "6b23b5fe028caad946fe91567e2b740ef4edd5bd39e126aecfc10fb205209847",
       "state": {
         "lesson": "handoff",
         "time": 4240,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4240,
@@ -4914,12 +6405,19 @@
     },
     {
       "time_ms": 4260.0,
-      "sha256": "28df9ae4f50e14b1fb5009e7add858c5fce852409be8ac82d119b62fff0a9f6c",
+      "sha256": "6b23b5fe028caad946fe91567e2b740ef4edd5bd39e126aecfc10fb205209847",
       "state": {
         "lesson": "handoff",
         "time": 4260,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4260,
@@ -4937,12 +6435,19 @@
     },
     {
       "time_ms": 4280.0,
-      "sha256": "72fd3fcfeba4087492fd82ae7b569e4acab89469dcddc4e33f63137dc53baab1",
+      "sha256": "ad8a974397f8300fcfc0b57a61805deb9f4851fea1264c73dfa0c8d8e4734e5f",
       "state": {
         "lesson": "handoff",
         "time": 4280,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4280,
@@ -4960,12 +6465,19 @@
     },
     {
       "time_ms": 4300.0,
-      "sha256": "bad28c8e1e5804fac78c829b1c75bfc3d01a3dea56a8ce8c040b466f1c9156a3",
+      "sha256": "5432d9ffb9f27507cbbf63060ead2ab6138a30fc50912808a3785b76bb5cb0c2",
       "state": {
         "lesson": "handoff",
         "time": 4300,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4300,
@@ -4983,12 +6495,19 @@
     },
     {
       "time_ms": 4320.0,
-      "sha256": "bad28c8e1e5804fac78c829b1c75bfc3d01a3dea56a8ce8c040b466f1c9156a3",
+      "sha256": "5432d9ffb9f27507cbbf63060ead2ab6138a30fc50912808a3785b76bb5cb0c2",
       "state": {
         "lesson": "handoff",
         "time": 4320,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4320,
@@ -5006,12 +6525,19 @@
     },
     {
       "time_ms": 4340.0,
-      "sha256": "0678e485fd455b39c8f2a835c0740024199f143cbaca98c5fb4e765398f5106c",
+      "sha256": "640ae4558f09d0d6a33b6ebe714ebde5c19dd1f36766082fc048d774c0469e30",
       "state": {
         "lesson": "handoff",
         "time": 4340,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4340,
@@ -5029,12 +6555,19 @@
     },
     {
       "time_ms": 4360.0,
-      "sha256": "0678e485fd455b39c8f2a835c0740024199f143cbaca98c5fb4e765398f5106c",
+      "sha256": "640ae4558f09d0d6a33b6ebe714ebde5c19dd1f36766082fc048d774c0469e30",
       "state": {
         "lesson": "handoff",
         "time": 4360,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4360,
@@ -5052,12 +6585,19 @@
     },
     {
       "time_ms": 4380.0,
-      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "sha256": "04c9efba07e7e7b3f54d34bc090679d971f4fbd5852840fea81df565d571d22e",
       "state": {
         "lesson": "handoff",
         "time": 4380,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4380,
@@ -5075,12 +6615,19 @@
     },
     {
       "time_ms": 4400.0,
-      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "sha256": "04c9efba07e7e7b3f54d34bc090679d971f4fbd5852840fea81df565d571d22e",
       "state": {
         "lesson": "handoff",
         "time": 4400,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4400,
@@ -5098,12 +6645,19 @@
     },
     {
       "time_ms": 4420.0,
-      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "sha256": "04c9efba07e7e7b3f54d34bc090679d971f4fbd5852840fea81df565d571d22e",
       "state": {
         "lesson": "handoff",
         "time": 4420,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4420,
@@ -5121,12 +6675,19 @@
     },
     {
       "time_ms": 4440.0,
-      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "sha256": "04c9efba07e7e7b3f54d34bc090679d971f4fbd5852840fea81df565d571d22e",
       "state": {
         "lesson": "handoff",
         "time": 4440,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4440,
@@ -5144,12 +6705,19 @@
     },
     {
       "time_ms": 4460.0,
-      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "sha256": "04c9efba07e7e7b3f54d34bc090679d971f4fbd5852840fea81df565d571d22e",
       "state": {
         "lesson": "handoff",
         "time": 4460,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4460,
@@ -5167,12 +6735,19 @@
     },
     {
       "time_ms": 4480.0,
-      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "sha256": "04c9efba07e7e7b3f54d34bc090679d971f4fbd5852840fea81df565d571d22e",
       "state": {
         "lesson": "handoff",
         "time": 4480,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4480,
@@ -5190,12 +6765,19 @@
     },
     {
       "time_ms": 4500.0,
-      "sha256": "e78203142af2856b87c953b9aa23bf5f0f6870e1b10f3b7ab5343c590c6e4343",
+      "sha256": "2a3b219bbeb23cfd1ef46d90a077237b85410f62b20501219df497fc556f2d26",
       "state": {
         "lesson": "handoff",
         "time": 4500,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4500,
@@ -5213,12 +6795,19 @@
     },
     {
       "time_ms": 4520.0,
-      "sha256": "e78203142af2856b87c953b9aa23bf5f0f6870e1b10f3b7ab5343c590c6e4343",
+      "sha256": "2a3b219bbeb23cfd1ef46d90a077237b85410f62b20501219df497fc556f2d26",
       "state": {
         "lesson": "handoff",
         "time": 4520,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4520,
@@ -5236,12 +6825,19 @@
     },
     {
       "time_ms": 4540.0,
-      "sha256": "f960d260b1d35093be6c4a2e9c68c38bdc1914d58827182d8372610a894ba5fc",
+      "sha256": "7868a87289c14bf0a229aba58e29adffe508baa7d769702cde9616cf6bf5e458",
       "state": {
         "lesson": "handoff",
         "time": 4540,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4540,
@@ -5259,12 +6855,19 @@
     },
     {
       "time_ms": 4560.0,
-      "sha256": "f960d260b1d35093be6c4a2e9c68c38bdc1914d58827182d8372610a894ba5fc",
+      "sha256": "7868a87289c14bf0a229aba58e29adffe508baa7d769702cde9616cf6bf5e458",
       "state": {
         "lesson": "handoff",
         "time": 4560,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4560,
@@ -5282,12 +6885,19 @@
     },
     {
       "time_ms": 4580.0,
-      "sha256": "cd556a1ef62476e5a530304164f7094899ff7ec48e3617c270e465e3ced073f1",
+      "sha256": "f78e2ceb5257c38f08481eb0e08c6a1117f0f315e48ea963a0c0ac4fea02d92e",
       "state": {
         "lesson": "handoff",
         "time": 4580,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4580,
@@ -5305,12 +6915,19 @@
     },
     {
       "time_ms": 4600.0,
-      "sha256": "e43518d4d273ba2f537eb579fbb9ff9085e915a588ba8da061c90416aa8b54fb",
+      "sha256": "054cb44e5173fc858cc40b75deb5434d2ff57a09bd747251f4723ebe0d2297ee",
       "state": {
         "lesson": "handoff",
         "time": 4600,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4600,
@@ -5328,12 +6945,19 @@
     },
     {
       "time_ms": 4620.0,
-      "sha256": "e43518d4d273ba2f537eb579fbb9ff9085e915a588ba8da061c90416aa8b54fb",
+      "sha256": "054cb44e5173fc858cc40b75deb5434d2ff57a09bd747251f4723ebe0d2297ee",
       "state": {
         "lesson": "handoff",
         "time": 4620,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4620,
@@ -5351,12 +6975,19 @@
     },
     {
       "time_ms": 4640.0,
-      "sha256": "58f99aabbdfe1d1136b0b2cd195de60c0228492b0153919ee9b9ab89d59daa2d",
+      "sha256": "4e050dcaf9e36c283a4a835dece4060ca45105a6e1b5fde77b578be3b130af15",
       "state": {
         "lesson": "handoff",
         "time": 4640,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4640,
@@ -5374,12 +7005,19 @@
     },
     {
       "time_ms": 4660.0,
-      "sha256": "1cdb11979be52d76d0fd0d6d7e252600511bfe9d69d683225ef31b83ea858907",
+      "sha256": "3b77643750ece978cabd2309073b6939a19243bdb7502e0a63299dbf688d8ba5",
       "state": {
         "lesson": "handoff",
         "time": 4660,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4660,
@@ -5397,12 +7035,19 @@
     },
     {
       "time_ms": 4680.0,
-      "sha256": "dd6af818f4221a6efe0bc78c4f5c7a26a1533f4920cf1c62e888aa3923fac4cd",
+      "sha256": "3c5c7eb073bbd8bb99b4acadb63594c3ac82f2e0c1bf9486d517470ca60573e3",
       "state": {
         "lesson": "handoff",
         "time": 4680,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4680,
@@ -5420,12 +7065,19 @@
     },
     {
       "time_ms": 4700.0,
-      "sha256": "72b2be448c50a73325d654eb35ef60df7348b784cf502f22cbf9807eb30af9b5",
+      "sha256": "944874083268c2eebe9f12375019a4e9819268d2bbd03297b9e7547dcbb3fa3a",
       "state": {
         "lesson": "handoff",
         "time": 4700,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4700,
@@ -5443,12 +7095,19 @@
     },
     {
       "time_ms": 4720.0,
-      "sha256": "b241ea01386d242524abf0e50c0b07ebf98ccb5b01b58063070b3eac7b3a8c95",
+      "sha256": "9d19807bec151c77121f71203f9c738ba5ee3be4d42e876b8086e9d1cf300c04",
       "state": {
         "lesson": "handoff",
         "time": 4720,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4720,
@@ -5466,12 +7125,19 @@
     },
     {
       "time_ms": 4740.0,
-      "sha256": "49ac3aa0a6034c474613ef394579ba1fccbe10dddfc76f8e565ab1afb275ab74",
+      "sha256": "20a5dd5b215c19efe96a9dd4f77e1bff6e3bb0a295e6498abe56bd89cf1ab34b",
       "state": {
         "lesson": "handoff",
         "time": 4740,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4740,
@@ -5489,12 +7155,19 @@
     },
     {
       "time_ms": 4760.0,
-      "sha256": "531d297965bd930e883ad7d764a711a12d6222ddf24e6d4a862b89269242ad8c",
+      "sha256": "bc3ef1d9f658099d3694c935fd07598de5befd3ec31c8952a3beec59ff80d0b3",
       "state": {
         "lesson": "handoff",
         "time": 4760,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4760,
@@ -5512,12 +7185,19 @@
     },
     {
       "time_ms": 4780.0,
-      "sha256": "53d74ebbcd7179ccaa905ec3cd9fa2c9879275466b3e58f85b53f4cd2c1f6851",
+      "sha256": "598d9d9aede1ea3de3685e4122a75e062b14a8f05f53cb76adb7d562dfeb1198",
       "state": {
         "lesson": "handoff",
         "time": 4780,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4780,
@@ -5535,12 +7215,19 @@
     },
     {
       "time_ms": 4800.0,
-      "sha256": "48d08be34e448158e3a63a5a4abfabf3529d00b1fe37a146d61ca7820505d832",
+      "sha256": "0970048f0481f164b4a93c7acaf114faf2dd0706913a059ddd9493d9ece5ff51",
       "state": {
         "lesson": "handoff",
         "time": 4800,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4800,
@@ -5558,12 +7245,19 @@
     },
     {
       "time_ms": 4820.0,
-      "sha256": "1b88e2018d4c471d8c2e1ffaa54cd26d194f73581a86913a76ce415a6f821bfc",
+      "sha256": "4392152059a54bb2c408c5b03d34f08e7ecd74f25a5be990ecdd0e9e9a93aae3",
       "state": {
         "lesson": "handoff",
         "time": 4820,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4820,
@@ -5581,12 +7275,19 @@
     },
     {
       "time_ms": 4840.0,
-      "sha256": "2a39a8512c40e48e120065f1b8ba63cd366b213d2f9ad47b1646ac444ae3dceb",
+      "sha256": "e58760cff625da1c9d593e43dfbda7a5bc77485e1f0c88c5b8c1f5d34ff524d8",
       "state": {
         "lesson": "handoff",
         "time": 4840,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4840,
@@ -5604,12 +7305,19 @@
     },
     {
       "time_ms": 4860.0,
-      "sha256": "69971a9858b9333acbb64fe9b2dc00175c769426331788a7b78ee097d14eb552",
+      "sha256": "ebe5c9e5faf8848572444c09635f0ffff3092cbb1921fcfd35d5c71d78c804c2",
       "state": {
         "lesson": "handoff",
         "time": 4860,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4860,
@@ -5627,12 +7335,19 @@
     },
     {
       "time_ms": 4880.0,
-      "sha256": "2d1bb973fd2a51f79922e148e265252f5ce08b670c9a8753f04770d7aa03e249",
+      "sha256": "ef1d132cd618e1b6698d2d529ec80fd057e66df58f78f9be66d7851182cadaf8",
       "state": {
         "lesson": "handoff",
         "time": 4880,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4880,
@@ -5650,12 +7365,19 @@
     },
     {
       "time_ms": 4900.0,
-      "sha256": "2ea3b1b4c3dc367347552603281e966b519ccbf97981165b2ce0434af311c8ee",
+      "sha256": "2af18e7868351481bd09fbce2dea20494f9c921c0900945952274ac91b3fc77a",
       "state": {
         "lesson": "handoff",
         "time": 4900,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4900,
@@ -5673,12 +7395,19 @@
     },
     {
       "time_ms": 4920.0,
-      "sha256": "2ea3b1b4c3dc367347552603281e966b519ccbf97981165b2ce0434af311c8ee",
+      "sha256": "2af18e7868351481bd09fbce2dea20494f9c921c0900945952274ac91b3fc77a",
       "state": {
         "lesson": "handoff",
         "time": 4920,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4920,
@@ -5696,12 +7425,19 @@
     },
     {
       "time_ms": 4940.0,
-      "sha256": "3c3e4f904247dc177d8d8418bc6a2d899c336c2c2a409efff80fb1425555fe22",
+      "sha256": "a48e3d20fad4cec4d7a6e772c2687716cf7969a380880ca068882f96303461b3",
       "state": {
         "lesson": "handoff",
         "time": 4940,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4940,
@@ -5719,12 +7455,19 @@
     },
     {
       "time_ms": 4960.0,
-      "sha256": "3c3e4f904247dc177d8d8418bc6a2d899c336c2c2a409efff80fb1425555fe22",
+      "sha256": "a48e3d20fad4cec4d7a6e772c2687716cf7969a380880ca068882f96303461b3",
       "state": {
         "lesson": "handoff",
         "time": 4960,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4960,
@@ -5742,12 +7485,19 @@
     },
     {
       "time_ms": 4980.0,
-      "sha256": "3e75f37447d85da3471116ed33e5a37e5425727265aeab72d88614156489358c",
+      "sha256": "54d02722f834b9cd7f7730115c02b3f611a0dffb4689f9366fab5af76411f489",
       "state": {
         "lesson": "handoff",
         "time": 4980,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 4980,
@@ -5765,12 +7515,19 @@
     },
     {
       "time_ms": 5000.0,
-      "sha256": "acffd83858cdfae744e299f3fbdebf35d127c8ad8de4edc0bdbcb060e6b01973",
+      "sha256": "4bde4d146b363738c3e0227209c4ebad80cf34206f3aecb31af327850e611c01",
       "state": {
         "lesson": "handoff",
         "time": 5000,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 5000,
@@ -5788,12 +7545,19 @@
     },
     {
       "time_ms": 5020.0,
-      "sha256": "acffd83858cdfae744e299f3fbdebf35d127c8ad8de4edc0bdbcb060e6b01973",
+      "sha256": "4bde4d146b363738c3e0227209c4ebad80cf34206f3aecb31af327850e611c01",
       "state": {
         "lesson": "handoff",
         "time": 5020,
-        "request": null,
-        "budget": null,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
         "scenes": {
           "hands": {
             "time": 5020,

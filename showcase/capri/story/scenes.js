@@ -133,7 +133,7 @@
       this.controls.querySelector('input').oninput = event => this.renderAt(Number(event.target.value)).catch(reportError);
       if (name === 'comic') {
         this.cards = [...this.element.querySelectorAll('[data-card]')];
-        this.cards.forEach(card => { const button = card.querySelector('button'), details = card.querySelector('details'); button.onclick = () => { details.open = !details.open; }; details.addEventListener('toggle', () => button.setAttribute('aria-expanded', String(details.open))); });
+        this.cards.forEach(card => { const button = card.querySelector('button'), details = this.element.querySelector('#hcf-' + card.dataset.card + '-brief'); button.onclick = () => { details.open = !details.open; }; details.addEventListener('toggle', () => button.setAttribute('aria-expanded', String(details.open))); });
         const pass = document.createElement('button'); pass.type = 'button'; pass.textContent = 'Pass the brief'; pass.onclick = async () => { await this.renderAt(2200); if (!reduce.matches) this.play(); else this.status.textContent = 'Plan → Build → Review. The human decides.'; }; this.controls.appendChild(pass);
       }
       if (name === 'sharks' || name === 'horizon') this.wireNativeInteraction();
@@ -231,7 +231,7 @@
         const x = portrait ? a[0] + 20 * q : a[0] * (1 - q) + b[0] * q;
         const y = portrait ? a[1] - 12 * q : a[1] * (1 - q) + b[1] * q - 12 * Math.sin(Math.PI * q);
         packet.style.visibility = 'visible'; packet.style.opacity = String(smooth(u * 8) * (1 - smooth((u - .85) / .15)));
-        packet.style.transform = `translate(${x - packet.offsetWidth / 2}px,${y - packet.offsetHeight / 2}px)`;
+        packet.style.transform = `translate(${x / (this.element.querySelector('.story-artboard').getBoundingClientRect().width / this.element.querySelector('.story-artboard').offsetWidth) - packet.offsetWidth / 2}px,${y / (this.element.querySelector('.story-artboard').getBoundingClientRect().height / this.element.querySelector('.story-artboard').offsetHeight) - packet.offsetHeight / 2}px)`;
       }
     }
     paintNative(time) {

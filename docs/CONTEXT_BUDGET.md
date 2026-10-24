@@ -1,6 +1,6 @@
 # Context inputs, coordination and evidence
 
-**Illustrative inputs — not a CAPRI benchmark.** The [canonical six-call assumptions](../showcase/capri/source-match/source/assets/data/context-budget.json) remain unchanged. The [V3 story configuration](../showcase/capri/story/story.json) refers to them; the [generated model](../showcase/capri/story/model-results.json) feeds Markdown, graph geometry and local controls through `tools/capri_context_budget.py`.
+**Illustrative inputs — not a CAPRI benchmark.** The [canonical six-call assumptions](../showcase/capri/source-match/source/assets/data/context-budget.json) remain unchanged. The [story configuration](../showcase/capri/story/story.json) refers to them; the [generated model](../showcase/capri/story/model-results.json) feeds Markdown, graph geometry and local controls through `tools/capri_context_budget.py`.
 
 ## Inputs per request
 

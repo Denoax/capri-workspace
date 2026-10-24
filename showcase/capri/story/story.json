@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "canonical_inputs": "../source-match/source/assets/data/context-budget.json",
   "evidence_class": "ILLUSTRATIVE_INPUTS_NOT_A_CAPRI_BENCHMARK",
   "overhead": {
@@ -34,25 +34,48 @@
       ],
       "duration_ms": 9600,
       "fps": 25,
-      "wide": 1000,
       "export_scene": "comic",
       "still_ms": 800,
-      "families": []
+      "families": [],
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "family": "landscape"
     },
-    "contexts": {
+    "quantitative": {
       "members": [
-        "horizon",
-        "sharks"
+        "horizon"
       ],
       "duration_ms": 6400,
       "fps": 25,
-      "wide": 1000,
       "export_scene": "horizon",
       "still_ms": 2600,
       "families": [
-        "horizon",
+        "horizon"
+      ],
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "family": "landscape"
+    },
+    "brief": {
+      "members": [
         "sharks"
-      ]
+      ],
+      "duration_ms": 4800,
+      "fps": 25,
+      "export_scene": "sharks",
+      "still_ms": 1200,
+      "families": [
+        "sharks"
+      ],
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "family": "landscape"
     },
     "handoff": {
       "members": [
@@ -60,28 +83,15 @@
       ],
       "duration_ms": 5040,
       "fps": 50,
-      "wide": 800,
       "export_scene": "hands",
       "still_ms": 2620,
       "families": [
         "hands"
-      ]
-    },
-    "retained": {
-      "members": [
-        "rain",
-        "dots"
       ],
-      "duration_ms": 2000,
-      "fps": 25,
-      "wide": 1000,
-      "export_scene": "dots",
-      "still_ms": 1000,
-      "families": [
-        "rain",
-        "dots"
+      "layouts": [
+        "portrait"
       ],
-      "loop_bridge": "120ms dark bridge on dotted-source canvas only; original rain pace retained with four source cycles."
+      "family": "portrait"
     },
     "checking": {
       "members": [
@@ -89,12 +99,47 @@
       ],
       "duration_ms": 8600,
       "fps": 25,
-      "wide": 640,
       "export_scene": "cat",
       "still_ms": 3800,
       "families": [
         "cat"
-      ]
+      ],
+      "layouts": [
+        "portrait"
+      ],
+      "family": "portrait"
+    },
+    "requirements": {
+      "members": [
+        "rain"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "export_scene": "rain",
+      "still_ms": 1000,
+      "families": [
+        "rain"
+      ],
+      "layouts": [
+        "portrait"
+      ],
+      "family": "portrait"
+    },
+    "coordination": {
+      "members": [
+        "dots"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "export_scene": "dots",
+      "still_ms": 1000,
+      "families": [
+        "dots"
+      ],
+      "layouts": [
+        "portrait"
+      ],
+      "family": "portrait"
     },
     "closing": {
       "members": [
@@ -102,13 +147,18 @@
       ],
       "duration_ms": 10800,
       "fps": 25,
-      "wide": 640,
       "export_scene": "stack",
       "still_ms": 2200,
       "families": [
         "stack"
       ],
-      "static_only": true
+      "static_only": true,
+      "layouts": [
+        "landscape",
+        "portrait"
+      ],
+      "family": "landscape"
     }
-  }
+  },
+  "format": "format.json"
 }
