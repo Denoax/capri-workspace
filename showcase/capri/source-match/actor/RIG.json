@@ -1,0 +1,1038 @@
+{
+  "schema_version": 1,
+  "duration_ms": 3200,
+  "camera": [
+    -160,
+    -160,
+    1856,
+    1440
+  ],
+  "poses": {
+    "plan": {
+      "eye": [
+        752,
+        283
+      ],
+      "eyes": [
+        [
+          727,
+          262
+        ],
+        [
+          785,
+          298
+        ]
+      ],
+      "mouth": [
+        745,
+        325
+      ],
+      "neck": [
+        737,
+        357
+      ],
+      "hip": [
+        803,
+        600
+      ],
+      "rs": [
+        817,
+        408
+      ],
+      "re": [
+        943,
+        481
+      ],
+      "rw": [
+        1155,
+        387
+      ],
+      "ls": [
+        652,
+        380
+      ],
+      "le": [
+        575,
+        470
+      ],
+      "lw": [
+        541,
+        338
+      ],
+      "gh": [
+        836,
+        554
+      ],
+      "gk": [
+        1050,
+        493
+      ],
+      "ph": [
+        806,
+        621
+      ],
+      "pk": [
+        1006,
+        637
+      ],
+      "tip": [
+        1295,
+        404
+      ],
+      "joint_colors": {
+        "neck": "#0d001f",
+        "rs": "#040009",
+        "re": "#fe004c",
+        "ls": "#00fb64",
+        "le": "#04000b",
+        "gh": "#03000c",
+        "gk": "#04000b",
+        "ph": "#fb014c",
+        "pk": "#790032"
+      },
+      "keys": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          240,
+          -2,
+          4,
+          3,
+          -4,
+          -3,
+          3,
+          3,
+          -4,
+          -2,
+          3,
+          -3,
+          2
+        ],
+        [
+          560,
+          5,
+          -8,
+          -13,
+          -10,
+          -6,
+          8,
+          -15,
+          19,
+          -8,
+          13,
+          6,
+          -3
+        ],
+        [
+          820,
+          6,
+          -7,
+          -15,
+          -12,
+          -7,
+          9,
+          -18,
+          22,
+          -9,
+          14,
+          8,
+          -4
+        ],
+        [
+          1220,
+          6,
+          -7,
+          -15,
+          -12,
+          -7,
+          9,
+          -18,
+          22,
+          -9,
+          14,
+          8,
+          -4
+        ],
+        [
+          1500,
+          -3,
+          5,
+          6,
+          9,
+          4,
+          -6,
+          9,
+          -12,
+          6,
+          -8,
+          -3,
+          2
+        ],
+        [
+          1880,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3200,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "duration_ms": 3200,
+      "parts": [
+        {
+          "tag": 1,
+          "origin": [
+            160,
+            7
+          ],
+          "size": [
+            982,
+            564
+          ],
+          "src": "../actor/plan-part-1.png",
+          "sha256": "e038905b59bf76166ba5d3e29c4c7d406e4d6045067df1a4a9a031986ab99e82"
+        },
+        {
+          "tag": 2,
+          "origin": [
+            607,
+            343
+          ],
+          "size": [
+            275,
+            324
+          ],
+          "src": "../actor/plan-part-2.png",
+          "sha256": "799cabed9f39c68fc2a773adf6ecbcdc8fc0d4b777934de25ca1f98be6a862e0"
+        },
+        {
+          "tag": 3,
+          "origin": [
+            786,
+            358
+          ],
+          "size": [
+            160,
+            136
+          ],
+          "src": "../actor/plan-part-3.png",
+          "sha256": "b583b8923114efcf94f5517be9d882d0ad701e850970dd047dc0f426f905e8aa"
+        },
+        {
+          "tag": 4,
+          "origin": [
+            908,
+            342
+          ],
+          "size": [
+            410,
+            152
+          ],
+          "src": "../actor/plan-part-4.png",
+          "sha256": "5b22bbe2af0de7d3d21016c7c2d925d563e5c23945e369c19c2a53e54e4e52ed"
+        },
+        {
+          "tag": 5,
+          "origin": [
+            552,
+            351
+          ],
+          "size": [
+            126,
+            210
+          ],
+          "src": "../actor/plan-part-5.png",
+          "sha256": "f4275adea0cb34942fdc34124a97c75ef3d4c3a2a20d5eee219aa0865e177805"
+        },
+        {
+          "tag": 6,
+          "origin": [
+            483,
+            266
+          ],
+          "size": [
+            155,
+            220
+          ],
+          "src": "../actor/plan-part-6.png",
+          "sha256": "cdd4617fcd53ca8eaf6a42cfa27dff987ea3a9a2a614dc307d34cb33f740989f"
+        },
+        {
+          "tag": 7,
+          "origin": [
+            758,
+            464
+          ],
+          "size": [
+            320,
+            202
+          ],
+          "src": "../actor/plan-part-7.png",
+          "sha256": "85f6733df3e9d90e6398041dcd961c598829cb31c0a2963fd5684dfb19e536c1"
+        },
+        {
+          "tag": 8,
+          "origin": [
+            1016,
+            468
+          ],
+          "size": [
+            338,
+            384
+          ],
+          "src": "../actor/plan-part-8.png",
+          "sha256": "887b03952eba21eda8e15f525ab9f10eb317d3f490f4417a904c7ac2590b941c"
+        },
+        {
+          "tag": 9,
+          "origin": [
+            750,
+            530
+          ],
+          "size": [
+            305,
+            129
+          ],
+          "src": "../actor/plan-part-9.png",
+          "sha256": "ebeb515a6b1235539e4af8ae3ffeca1ef5f6129e619a1ffadb72e44c89982a75"
+        },
+        {
+          "tag": 10,
+          "origin": [
+            962,
+            608
+          ],
+          "size": [
+            259,
+            405
+          ],
+          "src": "../actor/plan-part-10.png",
+          "sha256": "37227981f8c0895e028408b8eb481c7b4558e7065bd6e916507137a7e9981681"
+        }
+      ],
+      "source_sha256": "217f2dd946639a92e3f03b3c6a4c47948ecdb30016b7914c8b60f3e6bfb38334",
+      "rgba_sha256": "4bbd26464e8980b15ecc41ac575abc10c71cc928e772fd611949f3f5f357f0c9",
+      "eye_span": 68.26419266350405
+    },
+    "build": {
+      "eye": [
+        740,
+        288
+      ],
+      "eyes": [
+        [
+          712,
+          270
+        ],
+        [
+          768,
+          306
+        ]
+      ],
+      "mouth": [
+        748,
+        340
+      ],
+      "neck": [
+        745,
+        365
+      ],
+      "hip": [
+        795,
+        615
+      ],
+      "rs": [
+        802,
+        392
+      ],
+      "re": [
+        950,
+        410
+      ],
+      "rw": [
+        1230,
+        335
+      ],
+      "ls": [
+        642,
+        385
+      ],
+      "le": [
+        500,
+        494
+      ],
+      "lw": [
+        622,
+        459
+      ],
+      "gh": [
+        830,
+        566
+      ],
+      "gk": [
+        998,
+        505
+      ],
+      "ph": [
+        784,
+        647
+      ],
+      "pk": [
+        960,
+        688
+      ],
+      "tip": [
+        1409,
+        289
+      ],
+      "joint_colors": {
+        "neck": "#7d0d9d",
+        "rs": "#04010a",
+        "re": "#fe0155",
+        "ls": "#02fa68",
+        "le": "#030108",
+        "gh": "#000903",
+        "gk": "#020108",
+        "ph": "#fd0153",
+        "pk": "#fc0152"
+      },
+      "keys": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          220,
+          -2,
+          3,
+          3,
+          3,
+          -3,
+          4,
+          4,
+          -4,
+          -4,
+          3,
+          -3,
+          2
+        ],
+        [
+          540,
+          3,
+          -5,
+          -5,
+          -8,
+          5,
+          -6,
+          -10,
+          14,
+          8,
+          -12,
+          7,
+          -2
+        ],
+        [
+          760,
+          4,
+          -6,
+          -7,
+          -9,
+          5,
+          -7,
+          -13,
+          16,
+          10,
+          -14,
+          9,
+          -3
+        ],
+        [
+          1280,
+          4,
+          -6,
+          -7,
+          -9,
+          5,
+          -7,
+          -13,
+          16,
+          10,
+          -14,
+          9,
+          -3
+        ],
+        [
+          1570,
+          -2,
+          4,
+          3,
+          5,
+          -3,
+          4,
+          5,
+          -7,
+          -4,
+          7,
+          -3,
+          1
+        ],
+        [
+          1960,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3200,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "duration_ms": 3200,
+      "parts": [
+        {
+          "tag": 1,
+          "origin": [
+            118,
+            4
+          ],
+          "size": [
+            1005,
+            632
+          ],
+          "src": "../actor/build-part-1.png",
+          "sha256": "a7fe7a4d1b05e9ea00942afde77018bd7a5417de9e8961277b97ec37cc10789a"
+        },
+        {
+          "tag": 2,
+          "origin": [
+            612,
+            343
+          ],
+          "size": [
+            264,
+            341
+          ],
+          "src": "../actor/build-part-2.png",
+          "sha256": "dc08bd5f099430ecde2bb1f45796410e24df48ecaf078d615c8497d1f461e2f9"
+        },
+        {
+          "tag": 3,
+          "origin": [
+            772,
+            357
+          ],
+          "size": [
+            170,
+            77
+          ],
+          "src": "../actor/build-part-3.png",
+          "sha256": "c88573505acbe3946bdeb267d692a55b09f9f84e9866b1bf7dcb888c96499307"
+        },
+        {
+          "tag": 4,
+          "origin": [
+            908,
+            285
+          ],
+          "size": [
+            511,
+            141
+          ],
+          "src": "../actor/build-part-4.png",
+          "sha256": "d9e52d689e0b0971b2ffe76ece2b89122e6637fa09401b0bf667d3cde33e78b5"
+        },
+        {
+          "tag": 5,
+          "origin": [
+            424,
+            352
+          ],
+          "size": [
+            251,
+            170
+          ],
+          "src": "../actor/build-part-5.png",
+          "sha256": "785d9ac0e6a4efa808b0b0d298899c5db10cc4bee1a7681c9d270412ad78ebab"
+        },
+        {
+          "tag": 6,
+          "origin": [
+            496,
+            412
+          ],
+          "size": [
+            241,
+            173
+          ],
+          "src": "../actor/build-part-6.png",
+          "sha256": "cedc5afe2320f69b0ed4d13ed2bbaa4fbcded545baaefba73939bfd24bb47dbc"
+        },
+        {
+          "tag": 7,
+          "origin": [
+            770,
+            467
+          ],
+          "size": [
+            265,
+            148
+          ],
+          "src": "../actor/build-part-7.png",
+          "sha256": "3917167f25089277b4754a1e6e0e2ed587060f8ee7bf2cbf60cc8f73515cf953"
+        },
+        {
+          "tag": 8,
+          "origin": [
+            974,
+            467
+          ],
+          "size": [
+            489,
+            388
+          ],
+          "src": "../actor/build-part-8.png",
+          "sha256": "e0df045974b1a82353f4532a062a9a190a97edcf730b48d626b96a6360414beb"
+        },
+        {
+          "tag": 9,
+          "origin": [
+            762,
+            580
+          ],
+          "size": [
+            251,
+            104
+          ],
+          "src": "../actor/build-part-9.png",
+          "sha256": "3fa1c779121f0c330e41d16b5353c79bacf1aba7ca895326e650e178b4b18f00"
+        },
+        {
+          "tag": 10,
+          "origin": [
+            741,
+            650
+          ],
+          "size": [
+            282,
+            369
+          ],
+          "src": "../actor/build-part-10.png",
+          "sha256": "edaa075e509ecb0b25151b607e770f69d7ece93703ce052ce2e8ed7b7a338ae7"
+        }
+      ],
+      "source_sha256": "829262ba0d5812447e2dced89d6a70c40ba08b149013ff221d1f255a8289d0d0",
+      "rgba_sha256": "fd0d17b45ba9e73971741f599938e47f2e6cb0318a2822aa19d556a51deeb175",
+      "eye_span": 66.57326790837296
+    },
+    "review": {
+      "eye": [
+        816,
+        254
+      ],
+      "eyes": [
+        [
+          789,
+          232
+        ],
+        [
+          843,
+          269
+        ]
+      ],
+      "mouth": [
+        807,
+        300
+      ],
+      "neck": [
+        805,
+        319
+      ],
+      "hip": [
+        785,
+        584
+      ],
+      "rs": [
+        862,
+        365
+      ],
+      "re": [
+        994,
+        501
+      ],
+      "rw": [
+        1160,
+        598
+      ],
+      "ls": [
+        748,
+        355
+      ],
+      "le": [
+        687,
+        471
+      ],
+      "lw": [
+        710,
+        348
+      ],
+      "gh": [
+        817,
+        584
+      ],
+      "gk": [
+        846,
+        681
+      ],
+      "ph": [
+        742,
+        585
+      ],
+      "pk": [
+        594,
+        621
+      ],
+      "tip": [
+        719,
+        328
+      ],
+      "joint_colors": {
+        "neck": "#060001",
+        "rs": "#03020e",
+        "re": "#c30f9d",
+        "ls": "#010012",
+        "le": "#2b0053",
+        "gh": "#010009",
+        "gk": "#010007",
+        "ph": "#01f267",
+        "pk": "#00f566"
+      },
+      "keys": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          300,
+          1,
+          -3,
+          2,
+          3,
+          -2,
+          2,
+          3,
+          -4,
+          -3,
+          4,
+          -2,
+          1
+        ],
+        [
+          620,
+          -3,
+          6,
+          -4,
+          -5,
+          3,
+          -3,
+          -6,
+          8,
+          5,
+          -7,
+          -4,
+          -2
+        ],
+        [
+          900,
+          -3,
+          6,
+          -4,
+          -5,
+          3,
+          -3,
+          -7,
+          9,
+          6,
+          -8,
+          -4,
+          -2
+        ],
+        [
+          1420,
+          -3,
+          6,
+          -4,
+          -5,
+          3,
+          -3,
+          -7,
+          9,
+          6,
+          -8,
+          -4,
+          -2
+        ],
+        [
+          1700,
+          2,
+          -4,
+          2,
+          3,
+          -2,
+          2,
+          3,
+          -4,
+          -3,
+          4,
+          2,
+          1
+        ],
+        [
+          2160,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3200,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "duration_ms": 3200,
+      "parts": [
+        {
+          "tag": 1,
+          "origin": [
+            354,
+            8
+          ],
+          "size": [
+            879,
+            561
+          ],
+          "src": "../actor/review-part-1.png",
+          "sha256": "dddd1341f937a6cbc7ae4fd203c5e2f5111d290d44f0f9f3da32fa42e312015d"
+        },
+        {
+          "tag": 2,
+          "origin": [
+            688,
+            316
+          ],
+          "size": [
+            252,
+            367
+          ],
+          "src": "../actor/review-part-2.png",
+          "sha256": "ef7d03911a8f9169954ea0ec2840e2325e8f8e8580045666a6c5d21852994ea0"
+        },
+        {
+          "tag": 3,
+          "origin": [
+            825,
+            325
+          ],
+          "size": [
+            193,
+            217
+          ],
+          "src": "../actor/review-part-3.png",
+          "sha256": "4fd256d2530772c7e4f6a49811cf3d60a259572f0b610bac9abe5a62a9c2007d"
+        },
+        {
+          "tag": 4,
+          "origin": [
+            920,
+            463
+          ],
+          "size": [
+            381,
+            226
+          ],
+          "src": "../actor/review-part-4.png",
+          "sha256": "a40c09ce9876c0c7e68b9805d750af1fe3905388418dbdb0a7f047194dec8e21"
+        },
+        {
+          "tag": 5,
+          "origin": [
+            626,
+            340
+          ],
+          "size": [
+            153,
+            153
+          ],
+          "src": "../actor/review-part-5.png",
+          "sha256": "e61b338f35704222c6d5f7c16f814c30e2c7dfcb2c2f8a5c55f477b55d6f554d"
+        },
+        {
+          "tag": 6,
+          "origin": [
+            659,
+            302
+          ],
+          "size": [
+            120,
+            176
+          ],
+          "src": "../actor/review-part-6.png",
+          "sha256": "350292710382cd9468f0cd2942dd1e29fada8e3c75636ef862a539666f3e137c"
+        },
+        {
+          "tag": 7,
+          "origin": [
+            763,
+            540
+          ],
+          "size": [
+            174,
+            139
+          ],
+          "src": "../actor/review-part-7.png",
+          "sha256": "0776a46b8272ccfaba923995ae12d0fdac6db3e1baa4439622d3481ba65d7ddb"
+        },
+        {
+          "tag": 8,
+          "origin": [
+            629,
+            642
+          ],
+          "size": [
+            269,
+            300
+          ],
+          "src": "../actor/review-part-8.png",
+          "sha256": "2b0a63af88bb6bf72fddd657242afe5e1ed25f0fb711eed55436057a267f5803"
+        },
+        {
+          "tag": 9,
+          "origin": [
+            540,
+            526
+          ],
+          "size": [
+            250,
+            170
+          ],
+          "src": "../actor/review-part-9.png",
+          "sha256": "3b91939fdcb0df35907673a203aa6d0a721d5b5f0fd34ea639b09ecd2e260472"
+        },
+        {
+          "tag": 10,
+          "origin": [
+            451,
+            565
+          ],
+          "size": [
+            255,
+            450
+          ],
+          "src": "../actor/review-part-10.png",
+          "sha256": "9e4afc348b773eff2e70fa350956f4b8db8f1bf673b541dfc20445ab5ed3b26e"
+        }
+      ],
+      "source_sha256": "83e71444459fc8c1e8ff729ec7bb25ca333a76fff538c2e99c65314366a3a5db",
+      "rgba_sha256": "d4e70213ff5a36ae2465828aa88473587fe6749f5191b4a01b6a1c7d37218583",
+      "eye_span": 65.45991139621256
+    }
+  },
+  "method": "Three distinct supplied full-body masters; pose-specific label masks, 8-pixel original-pixel overlaps and nearest-envelope completion of unassigned visible source pixels, rigid bone rotations, independent head/torso/arms/legs and pose-specific blinks. No new generation or mesh warp.",
+  "alpha": "Below 8 removed as faint source fringe; >=249 normalized opaque. Black anatomy retained. Full RGBA and separate alpha masters remain.",
+  "source_fidelity": "Fan-art reconstruction compared with supplied source20/source19 frames; not exact extracted anime acting or official anatomy."
+}

@@ -1,0 +1,142 @@
+{
+  "scene": "rain",
+  "layout": "portrait",
+  "planned_duration_ms": 500,
+  "fps": 50,
+  "sample_count": 25,
+  "size": [
+    600,
+    770
+  ],
+  "gif_bytes": 1834696,
+  "gif_sha256": "399ea64a42b988debe110ec062584371c06152b94e15891415845d33b8f6ca73",
+  "poster_sha256": "56d37ef08f28d270f02f15e83ac363819b4691061e5d5f406dc5408db6c2d88b",
+  "source": "reference-footage composite",
+  "timeline": [
+    {
+      "time_ms": 0.0,
+      "sha256": "d91cbb366429a8ea6e8cdd081ac0afe434b2527d24e9df52956618f76a264dbd",
+      "source_time_seconds": 0
+    },
+    {
+      "time_ms": 20.0,
+      "sha256": "d91cbb366429a8ea6e8cdd081ac0afe434b2527d24e9df52956618f76a264dbd",
+      "source_time_seconds": 0.02
+    },
+    {
+      "time_ms": 40.0,
+      "sha256": "4b116fe2720a865fdf78b0c440ccf3e267632f9e276c7d29f255017ef57ecec2",
+      "source_time_seconds": 0.04
+    },
+    {
+      "time_ms": 60.0,
+      "sha256": "4b116fe2720a865fdf78b0c440ccf3e267632f9e276c7d29f255017ef57ecec2",
+      "source_time_seconds": 0.06
+    },
+    {
+      "time_ms": 80.0,
+      "sha256": "692449ff68ace7bacd4bafcff69442090b6adb5b1fc42ccd1a12dcf42546deec",
+      "source_time_seconds": 0.08
+    },
+    {
+      "time_ms": 100.0,
+      "sha256": "377cc946df06c17d90efda8d8d5a1c0afb833a7de1c7a19a53511543e0d3a169",
+      "source_time_seconds": 0.1
+    },
+    {
+      "time_ms": 120.0,
+      "sha256": "377cc946df06c17d90efda8d8d5a1c0afb833a7de1c7a19a53511543e0d3a169",
+      "source_time_seconds": 0.12
+    },
+    {
+      "time_ms": 140.0,
+      "sha256": "54046076ae62bd8f9aed89ef889bdea347dff16356cd88cdbd55fe63040f49ff",
+      "source_time_seconds": 0.14
+    },
+    {
+      "time_ms": 160.0,
+      "sha256": "54046076ae62bd8f9aed89ef889bdea347dff16356cd88cdbd55fe63040f49ff",
+      "source_time_seconds": 0.16
+    },
+    {
+      "time_ms": 180.0,
+      "sha256": "946a7676171b55e8660efda349e8eaf954ac2292349dc1433ec0ab8b9d5bab90",
+      "source_time_seconds": 0.18
+    },
+    {
+      "time_ms": 200.0,
+      "sha256": "3ddf71d73fcd3e2126b065e8721b7b44769def4b803c3dd4bab4f3af245624a0",
+      "source_time_seconds": 0.2
+    },
+    {
+      "time_ms": 220.0,
+      "sha256": "3ddf71d73fcd3e2126b065e8721b7b44769def4b803c3dd4bab4f3af245624a0",
+      "source_time_seconds": 0.22
+    },
+    {
+      "time_ms": 240.0,
+      "sha256": "56d37ef08f28d270f02f15e83ac363819b4691061e5d5f406dc5408db6c2d88b",
+      "source_time_seconds": 0.24
+    },
+    {
+      "time_ms": 260.0,
+      "sha256": "56d37ef08f28d270f02f15e83ac363819b4691061e5d5f406dc5408db6c2d88b",
+      "source_time_seconds": 0.26
+    },
+    {
+      "time_ms": 280.0,
+      "sha256": "2764078beb0bdbc38aac890f3173f2bc232186072288438398572f8cbc3034e9",
+      "source_time_seconds": 0.28
+    },
+    {
+      "time_ms": 300.0,
+      "sha256": "32fbe78aa49e213828346b26e6e4b7151a644f77eab8a95687c94f2e087a30b3",
+      "source_time_seconds": 0.3
+    },
+    {
+      "time_ms": 320.0,
+      "sha256": "32fbe78aa49e213828346b26e6e4b7151a644f77eab8a95687c94f2e087a30b3",
+      "source_time_seconds": 0.32
+    },
+    {
+      "time_ms": 340.0,
+      "sha256": "1ec5b7fb685e77c4c1f05158020d82fad1f9384f000fc1473e1ec3f47228a2a9",
+      "source_time_seconds": 0.34
+    },
+    {
+      "time_ms": 360.0,
+      "sha256": "1ec5b7fb685e77c4c1f05158020d82fad1f9384f000fc1473e1ec3f47228a2a9",
+      "source_time_seconds": 0.36
+    },
+    {
+      "time_ms": 380.0,
+      "sha256": "9509767876f530dd3a78122bc04a43b8f637f833f0e891d28dae6a9ef1fa4ee1",
+      "source_time_seconds": 0.38
+    },
+    {
+      "time_ms": 400.0,
+      "sha256": "808664230518562095a98b085685acb0e15ba5c6be714ccb43b8dad6b3daedb8",
+      "source_time_seconds": 0.4
+    },
+    {
+      "time_ms": 420.0,
+      "sha256": "808664230518562095a98b085685acb0e15ba5c6be714ccb43b8dad6b3daedb8",
+      "source_time_seconds": 0.42
+    },
+    {
+      "time_ms": 440.0,
+      "sha256": "55d853339bd6face3de0d21bc232ce1d6137b19345b5b485f1d9dce18792c688",
+      "source_time_seconds": 0.44
+    },
+    {
+      "time_ms": 460.0,
+      "sha256": "55d853339bd6face3de0d21bc232ce1d6137b19345b5b485f1d9dce18792c688",
+      "source_time_seconds": 0.46
+    },
+    {
+      "time_ms": 480.0,
+      "sha256": "dab88a9c0f6874a23ce0df25afdb5fce84acb188d19de932864a5d21bf377195",
+      "source_time_seconds": 0.48
+    }
+  ]
+}

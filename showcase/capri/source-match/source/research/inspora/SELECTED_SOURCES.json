@@ -1,0 +1,100 @@
+[
+  {
+    "slug": "1-23",
+    "title": "We're making Grok Bot more widely available.",
+    "description": "We're making Grok Bot more widely available.",
+    "media": "https://media.inspora.design/posts/81f3ac19-4de0-4c31-a13e-99b4f3bd8621.mp4",
+    "author": "@Grok Bot",
+    "creator_links": [
+      "https://x.com/bot/status/2090852881373311369"
+    ],
+    "source_page": "https://www.inspora.design/posts/1-23",
+    "bundled_file": "research/inspora/original-media/1-23.mp4",
+    "sha256": "9c3c63d23c65b047b4598b3a1ff54a81e13fb06d888456c641abea22e9821010",
+    "usage": "Reference composite/private review; no inferred redistribution licence."
+  },
+  {
+    "slug": "1-40",
+    "title": "A bento card",
+    "description": "A bento card",
+    "media": "https://media.inspora.design/posts/01e7faa5-af8f-4455-93b5-b92191bc8a9d.mp4",
+    "author": "Maxim Kuznetsov",
+    "creator_links": [
+      "https://x.com/disarto_max/status/1979225796515410373"
+    ],
+    "source_page": "https://www.inspora.design/posts/1-40",
+    "bundled_file": "research/inspora/original-media/1-40.mp4",
+    "sha256": "7491ccdcebc099001b7c76620dd1834175cc15d00dacfe2571210ff782448c66",
+    "usage": "Reference composite/private review; no inferred redistribution licence."
+  },
+  {
+    "slug": "2-8",
+    "title": "AI Motion",
+    "description": "Blending classical visual reference with glitchy AI-inference aesthetics.",
+    "media": "https://media.inspora.design/posts/a37fad59-6ca6-4d93-b9e7-05531a5fa198.mp4",
+    "author": "@__causasui",
+    "creator_links": [
+      "https://x.com/__causasui/status/2042632462548050088"
+    ],
+    "source_page": "https://www.inspora.design/posts/2-8",
+    "bundled_file": "research/inspora/original-media/2-8.mp4",
+    "sha256": "0f962abdf3d691095f705351003a448f5a7b07160fa2d6e21b6b5acbeaf69906",
+    "usage": "Reference composite/private review; no inferred redistribution licence."
+  },
+  {
+    "slug": "black-hole-mp4",
+    "title": "black hole.mp4",
+    "description": "An ASCII art animation of a black hole warping and swallowing a page of text called \u201cNotes on Light and Weight",
+    "media": "https://media.inspora.design/posts/8e62ed16-4ba7-48a6-af35-db4bf22da956.mp4",
+    "author": "siddharth",
+    "creator_links": [
+      "https://x.com/buildwithsid/status/2112492064336388249"
+    ],
+    "source_page": "https://www.inspora.design/posts/black-hole-mp4",
+    "bundled_file": "research/inspora/original-media/black-hole-mp4.mp4",
+    "sha256": "ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674",
+    "usage": "Reference composite/private review; no inferred redistribution licence."
+  },
+  {
+    "slug": "hero-section",
+    "title": "Hero section",
+    "description": "A clean, minimal hero section for \u201cMEOW AI AGENT\u201d",
+    "media": "https://media.inspora.design/posts/92ef3502-5f81-417c-adc8-fb86fb9d3f73.mp4",
+    "author": "@loseva_pro",
+    "creator_links": [
+      "https://x.com/loseva_pro/status/2023416480759705888"
+    ],
+    "source_page": "https://www.inspora.design/posts/hero-section",
+    "bundled_file": "research/inspora/original-media/hero-section.mp4",
+    "sha256": "44dee1554062b45797e002e38694de51008430c361498c0f349a4a4666bcef99",
+    "usage": "Reference composite/private review; no inferred redistribution licence."
+  },
+  {
+    "slug": "i-will-survive",
+    "title": "I will survive",
+    "description": "A looping red pixel-art GIF of a sword rising from a skull in heavy diagonal rain, captioned in gothic type \u201cI will survive.\u201d",
+    "media": "https://media.inspora.design/posts/e291f670-ecae-4e0e-85f6-74c0fcfd9ed3.mp4",
+    "author": "YUDHO",
+    "creator_links": [
+      "https://x.com/YUDHO_XYZ/status/2105926694607704136"
+    ],
+    "source_page": "https://www.inspora.design/posts/i-will-survive",
+    "bundled_file": "research/inspora/original-media/i-will-survive.mp4",
+    "sha256": "678827556fd9efc985ffadfd3dac3c3e0b7cb9615c8c5487776229c4e8fdb4fa",
+    "usage": "Reference composite/private review; no inferred redistribution licence."
+  },
+  {
+    "slug": "shark-ascii-animation",
+    "title": "shark ascii animation",
+    "description": "Animated ASCII sharks swim around a clean chat UI for the \u201chaj\u201d app that asks \u201cwhat\u2019s on your mind?\u201d",
+    "media": "https://media.inspora.design/posts/e94af9b5-7301-4ab3-95f1-7068d60eed96.mp4",
+    "author": "stacked",
+    "creator_links": [
+      "https://x.com/stackedlol/status/2112257760628986188"
+    ],
+    "source_page": "https://www.inspora.design/posts/shark-ascii-animation",
+    "bundled_file": "research/inspora/original-media/shark-ascii-animation.mp4",
+    "sha256": "382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181",
+    "usage": "Reference composite/private review; no inferred redistribution licence."
+  }
+]

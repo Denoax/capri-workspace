@@ -1,0 +1,50 @@
+[
+  {
+    "family": "Inter",
+    "file": "assets/fonts/Inter/OFL.md",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+    "git_blob_sha": "21f6aff961064c2e429f570995e446bcdd555422",
+    "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+    "bytes": 4377
+  },
+  {
+    "family": "Manrope",
+    "file": "assets/fonts/Manrope/Manrope-Variable.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope%5Bwght%5D.ttf",
+    "git_blob_sha": "75274da58537d6123b14f2cd0c355ad4681fc2b3",
+    "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "bytes": 164700
+  },
+  {
+    "family": "Manrope",
+    "file": "assets/fonts/Manrope/OFL.md",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt",
+    "git_blob_sha": "e271172a9ed0cddc895aabb6509f1c7d880b492d",
+    "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+    "bytes": 4387
+  },
+  {
+    "family": "Inter",
+    "file": "assets/fonts/Inter/Inter-Variable.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf",
+    "git_blob_sha": "047c92f6e2212473dc436020afed689527076d44",
+    "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+    "bytes": 876576
+  },
+  {
+    "family": "MartianMono",
+    "file": "assets/fonts/MartianMono/OFL.md",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/martianmono/OFL.txt",
+    "git_blob_sha": "3d86611f3660e09781ef246830e82374cbd7dfab",
+    "sha256": "ddafd2c3f37ef1d83ef284ca63e159befd3820850c5e9eded14ca52eee92c256",
+    "bytes": 4390
+  },
+  {
+    "family": "MartianMono",
+    "file": "assets/fonts/MartianMono/MartianMono-Variable.ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/martianmono/MartianMono%5Bwdth%2Cwght%5D.ttf",
+    "git_blob_sha": "1dbec63b6d3a76f0eb2d63f3a6f921efbe66769c",
+    "sha256": "c3467843ec1c2574b05fbcfd7147c7bfbcf63ddca8fc2bcb9d117f1bfb1b22e7",
+    "bytes": 148460
+  }
+]

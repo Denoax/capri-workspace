@@ -1,0 +1,7 @@
+{
+  "input_zip_sha256": "5ff7e36ffbcc899fb3ae4402e43c5456e5da03154675e824da23e4ce9b126586",
+  "input_root": "source/",
+  "input_manifest": "source/MANIFEST.json",
+  "basis": "Current main 521598688be57fdc56a26ff15a4b4eddb65d6433; approved first comic and seven source treatments; no runtime import from V8",
+  "status": "Private review; unresolved source/character rights retained; source footage is not executable implementation"
+}

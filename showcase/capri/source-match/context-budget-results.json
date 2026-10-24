@@ -1,0 +1,20 @@
+{
+  "evidence_class": "ILLUSTRATIVE_ASSUMPTIONS_NOT_MODEL_RUN",
+  "calls": 6,
+  "total_assumed_input_tokens": {
+    "growing": 180000,
+    "curated": 90000,
+    "scoped": 60000
+  },
+  "scoped_vs_growing_percent_lower": "66.7",
+  "scoped_vs_curated_percent_lower": "33.3",
+  "cache_counterexample": {
+    "relative_cached_rate": "0.05",
+    "growing_weighted_units": "56500.00",
+    "scoped_weighted_units": "60000",
+    "prices_or_usage": false
+  },
+  "quality_equivalence": "untested",
+  "cost_savings": null,
+  "measured_capri_savings": null
+}

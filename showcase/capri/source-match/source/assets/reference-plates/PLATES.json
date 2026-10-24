@@ -1,0 +1,58 @@
+[
+  {
+    "name": "rain",
+    "source_slug": "i-will-survive",
+    "crop": null,
+    "duration": 0.5,
+    "width": 320,
+    "file": "rain.mp4",
+    "bytes": 62167,
+    "sha256": "0644a1cc48715babb1f436201c06edd6814ba9c043ea7ecdd470dfb085acf6b0",
+    "authority": "decoded from approved composite fragment"
+  },
+  {
+    "name": "hands",
+    "source_slug": "2-8",
+    "crop": null,
+    "duration": 5.041667,
+    "width": 320,
+    "file": "hands.mp4",
+    "bytes": 87414,
+    "sha256": "d3d8527e1bab12e361dcd7bbd3cfae6744cd1b5a15332e6047be71a202becb2e",
+    "authority": "decoded from approved composite fragment"
+  },
+  {
+    "name": "cat",
+    "source_slug": "hero-section",
+    "crop": "crop=768:760:460:90",
+    "duration": 8.6,
+    "width": 320,
+    "file": "cat.mp4",
+    "bytes": 173734,
+    "sha256": "c0bf4d5f8615fde0ed39dab0842dfc7c1df69a4ef8729453e7771966ce05b681",
+    "authority": "decoded from approved composite fragment"
+  },
+  {
+    "name": "dots",
+    "source_slug": "1-40",
+    "crop": null,
+    "duration": 4.67,
+    "width": 320,
+    "file": "dots.mp4",
+    "bytes": 152080,
+    "sha256": "ee003622f126ed4d3194db9591fb19d84596529ed6c50560cb06aee68e26372a",
+    "authority": "decoded from approved composite fragment"
+  },
+  {
+    "name": "stack",
+    "source_slug": "1-23",
+    "crop": null,
+    "duration": 10.8,
+    "width": 384,
+    "file": "stack.mp4",
+    "bytes": 72506,
+    "loop_closure": "source forward then reverse",
+    "sha256": "f91a141750c95b44cbc0128f0200317dca98ebcdc31996ebd78b25fa4d5fcd32",
+    "authority": "decoded from approved composite fragment"
+  }
+]

@@ -34,3 +34,8 @@ The finished composition uses image-link navigation, dark/light chapter images, 
 - Existing source 12 is used directly for the expression loop. No new character source, generated art, fabricated anatomy or complete standalone model is introduced.
 
 The identity builder reads only already-selected character footage and the bundled OFL font. It writes only the identity graphics. The original V3 builder remains separate and the approved hero is not rebuilt by this change. Source image rights and the private visibility boundary remain documented in [ASSETS.md](ASSETS.md).
+
+
+## Source-match presentation candidate
+
+The approved first three-panel comic, Manrope/Inter typography and seven source treatments are implemented separately from the preserved banner and runtime. [Source-to-implementation, notices, acting and rebuild record](SOURCE_MATCH.md). New reference sources are registered separately; the original hero/source selection remains unchanged. Five panels are footage composites; sharks and horizon use actual supplied native source. Unresolved rights remain recorded and the repository stays private.

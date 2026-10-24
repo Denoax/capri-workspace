@@ -1,0 +1,12 @@
+{
+  "scope": "Presentation/media tooling only; no runtime lock changes",
+  "client_date": "2026-10-24",
+  "python": "Python 3.14.8",
+  "ffmpeg": "ffmpeg version n9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+  "chromium": "Google Chrome for Testing 153.0.8010.12",
+  "libraries": {
+    "Pillow": "12.3.0",
+    "NumPy": "2.5.4",
+    "websockets": "17.1"
+  }
+}

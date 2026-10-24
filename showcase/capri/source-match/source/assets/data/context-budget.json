@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "kind": "illustrative_assumptions",
+  "unit": "input_tokens",
+  "calls": 6,
+  "series": [
+    {
+      "id": "growing",
+      "label": "Growing history",
+      "values": [
+        10000,
+        18000,
+        26000,
+        34000,
+        42000,
+        50000
+      ]
+    },
+    {
+      "id": "curated",
+      "label": "Curated session",
+      "values": [
+        10000,
+        12000,
+        14000,
+        16000,
+        18000,
+        20000
+      ]
+    },
+    {
+      "id": "scoped",
+      "label": "Scoped roles",
+      "values": [
+        10000,
+        8000,
+        10000,
+        12000,
+        8000,
+        12000
+      ]
+    }
+  ],
+  "comparison": "scoped versus growing",
+  "quality_equivalence": "untested",
+  "cost_savings": null,
+  "measured_capri_savings": null,
+  "scoped_inputs": "assumed instructions, relevant source and handoffs included",
+  "limits": [
+    "Assumed inputs; not a native benchmark",
+    "Outputs, actual coordination, failed work and cache reuse change total cost",
+    "A curated single session also reduces repeated input",
+    "No deterministic claim that a long prompt drops instructions"
+  ]
+}

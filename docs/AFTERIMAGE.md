@@ -33,3 +33,12 @@ Working presentation colors, not official production specifications. Barlow Cond
 </details>
 
 [Editable SVGs](../showcase/capri/identity) · [Rebuild script](../tools/build_capri_identity.py) · [Art provenance and reuse status](ASSETS.md)
+
+
+## Source-match acting and elastic study
+
+[Three full-body poses, editable rigs and source provenance](SOURCE_MATCH.md). The source-matched comic and six primary treatments appear in the actual root README; the optional elastic context assembly stays in the local companion.
+
+<img src="../showcase/capri/source-match/exports/stack-wide.gif" width="768" alt="The supplied elastic stack retains its overshoot, spacing and timing in Capri colors, with the branded ending excluded and a disclosed forward/reverse source loop. Full-body Capri guides the cluster. Reference-footage composite, not controller execution.">
+
+[Still stack study](../showcase/capri/source-match/exports/stack-wide.png) · [Local companion](../showcase/capri/source-match/companion/index.html).

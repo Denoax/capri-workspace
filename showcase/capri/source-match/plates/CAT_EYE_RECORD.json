@@ -1,0 +1,7 @@
+{
+  "source_sha256": "ed9a665118d4742a052ed0dca33c6fab1b98ec04c2725f3cea4355c6719f4e28",
+  "samples": 258,
+  "fps": 30,
+  "method": "Actual per-frame eye centroids: median3, luma<=75, vertical9x3 opening, paired dark regions. Runtime bounded local refinement; original129priors preserved in source/.",
+  "limitations": "Source-image anchor extraction, not proof of continuous perceived alignment. Full-size samples and turn inspected separately."
+}

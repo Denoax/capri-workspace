@@ -1,0 +1,74 @@
+{
+  "method": "AI-assisted full-body fan-art studies from the supplied full-body/face references; original coded whole-sprite floating/leaning animation. Not official sheets or extracted anime motion. No independent limb rig or interpolated acting frames are claimed.",
+  "sample_hz": 25,
+  "shared_pixel_scale": 0.135,
+  "logical_canvas": [
+    240,
+    220
+  ],
+  "same_eye_anchor": [
+    120,
+    78
+  ],
+  "source_records": [
+    {
+      "role": "plan",
+      "master": "/workspace/scratch/890dde3a7972/v9-drafts/fullbody-comic/plan-master.png",
+      "master_sha256": "217f2dd946639a92e3f03b3c6a4c47948ecdb30016b7914c8b60f3e6bfb38334",
+      "alpha_over_128_bbox": [
+        161,
+        8,
+        1353,
+        1012
+      ],
+      "gif": "/workspace/scratch/890dde3a7972/v9-drafts/fullbody-comic/capri-plan.gif",
+      "bytes": 747145,
+      "gif_sha256": "6fd39290b7aee5e7cdc2e85028c15c9e0a9ac58ec29e6b418cc42825b2ddcac6",
+      "frames": 100,
+      "duration_ms": 4000,
+      "encoded_delays": {
+        "40": 100
+      }
+    },
+    {
+      "role": "build",
+      "master": "/workspace/scratch/890dde3a7972/v9-drafts/fullbody-comic/build-master.png",
+      "master_sha256": "829262ba0d5812447e2dced89d6a70c40ba08b149013ff221d1f255a8289d0d0",
+      "alpha_over_128_bbox": [
+        119,
+        5,
+        1461,
+        1018
+      ],
+      "gif": "/workspace/scratch/890dde3a7972/v9-drafts/fullbody-comic/capri-build.gif",
+      "bytes": 750558,
+      "gif_sha256": "159c5bb134c6ac37d5242fa539ad226166ee963b9da08dde79848fb02947a154",
+      "frames": 100,
+      "duration_ms": 4000,
+      "encoded_delays": {
+        "40": 100
+      }
+    },
+    {
+      "role": "review",
+      "master": "/workspace/scratch/890dde3a7972/v9-drafts/fullbody-comic/review-master.png",
+      "master_sha256": "83e71444459fc8c1e8ff729ec7bb25ca333a76fff538c2e99c65314366a3a5db",
+      "alpha_over_128_bbox": [
+        356,
+        10,
+        1299,
+        1013
+      ],
+      "gif": "/workspace/scratch/890dde3a7972/v9-drafts/fullbody-comic/capri-review.gif",
+      "bytes": 670588,
+      "gif_sha256": "1a511dd2bb43818080ec89a7f924f8113778b8b1387cfbacba161a20e02de331",
+      "frames": 100,
+      "duration_ms": 4000,
+      "encoded_delays": {
+        "40": 100
+      }
+    }
+  ],
+  "review": "Full silhouette/alpha and encoded timing checked. Continuous perceptual motion and final hosted presentation remain unverified.",
+  "scope": "Conversation draft only; no repository writes or ZIP."
+}

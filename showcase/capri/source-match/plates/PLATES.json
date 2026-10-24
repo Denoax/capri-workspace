@@ -1,0 +1,92 @@
+[
+  {
+    "name": "hands",
+    "source_slug": "2-8",
+    "source_sha256": "0f962abdf3d691095f705351003a448f5a7b07160fa2d6e21b6b5acbeaf69906",
+    "crop": null,
+    "duration": 5.041667,
+    "file": "hands.mp4",
+    "sha256": "740668cd2638e745af89bd147e450f3ec0732f613c43a9434da4c9fe2cbcdc03",
+    "bytes": 695810,
+    "decoded_stream": {
+      "width": 640,
+      "height": 640,
+      "avg_frame_rate": "30/1",
+      "duration": "5.033333",
+      "nb_frames": "151"
+    },
+    "method": "Source footage composite; original pace retained, no source-acting interpolation. Forward/reverse branded-ending removal for stack only."
+  },
+  {
+    "name": "cat",
+    "source_slug": "hero-section",
+    "source_sha256": "44dee1554062b45797e002e38694de51008430c361498c0f349a4a4666bcef99",
+    "crop": "crop=768:760:460:90",
+    "duration": 8.6,
+    "file": "cat.mp4",
+    "sha256": "ed9a665118d4742a052ed0dca33c6fab1b98ec04c2725f3cea4355c6719f4e28",
+    "bytes": 839066,
+    "decoded_stream": {
+      "width": 640,
+      "height": 634,
+      "avg_frame_rate": "30/1",
+      "duration": "8.600000",
+      "nb_frames": "258"
+    },
+    "method": "Source footage composite; original pace retained, no source-acting interpolation. Forward/reverse branded-ending removal for stack only."
+  },
+  {
+    "name": "rain",
+    "source_slug": "i-will-survive",
+    "source_sha256": "678827556fd9efc985ffadfd3dac3c3e0b7cb9615c8c5487776229c4e8fdb4fa",
+    "crop": null,
+    "duration": 0.5,
+    "file": "rain.mp4",
+    "sha256": "33b4544f89413fa714c259e7954b7a8250c23731aa7cf899d1099523e6543e74",
+    "bytes": 689303,
+    "decoded_stream": {
+      "width": 640,
+      "height": 640,
+      "avg_frame_rate": "30/1",
+      "duration": "0.500000",
+      "nb_frames": "15"
+    },
+    "method": "Source footage composite; original pace retained, no source-acting interpolation. Forward/reverse branded-ending removal for stack only."
+  },
+  {
+    "name": "dots",
+    "source_slug": "1-40",
+    "source_sha256": "7491ccdcebc099001b7c76620dd1834175cc15d00dacfe2571210ff782448c66",
+    "crop": null,
+    "duration": 4.67,
+    "file": "dots.mp4",
+    "sha256": "8f68cdb0ba1601fdeca17e8bfee4fe867d390d7f57b0f8b099f9c6bc324d068a",
+    "bytes": 673345,
+    "decoded_stream": {
+      "width": 640,
+      "height": 590,
+      "avg_frame_rate": "30/1",
+      "duration": "4.666667",
+      "nb_frames": "140"
+    },
+    "method": "Source footage composite; original pace retained, no source-acting interpolation. Forward/reverse branded-ending removal for stack only."
+  },
+  {
+    "name": "stack",
+    "source_slug": "1-23",
+    "source_sha256": "9c3c63d23c65b047b4598b3a1ff54a81e13fb06d888456c641abea22e9821010",
+    "crop": null,
+    "duration": 10.8,
+    "file": "stack.mp4",
+    "sha256": "1d5c624c8d6a299a916ae7ad9a968f00b7c11be3cfa1361452da0b8a677032ff",
+    "bytes": 315800,
+    "decoded_stream": {
+      "width": 768,
+      "height": 432,
+      "avg_frame_rate": "30/1",
+      "duration": "10.800000",
+      "nb_frames": "324"
+    },
+    "method": "Source footage composite; original pace retained, no source-acting interpolation. Forward/reverse branded-ending removal for stack only."
+  }
+]

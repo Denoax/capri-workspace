@@ -41,7 +41,11 @@ def main():
     for name in ['hero.svg','hero-overlay.svg','workflow.svg','social.svg']:
         if '<text' in (MEDIA/name).read_text():errors.append('Unoutlined display text: '+name)
     if not (MEDIA/'fonts/OFL.txt').is_file():errors.append('Missing font notice')
-    result={'status':'FAIL' if errors else 'PASS','local_links':links,'assets':assets,'errors':errors,'scope':'Documentation targets and delivery formats/timing; not runtime qualification or visual acceptance'}
+    from check_capri_source_match import check
+    try:source_match=check()
+    except Exception as error:
+        source_match={'status':'FAIL','error':str(error)};errors.append('Source match: '+str(error))
+    result={'source_match':source_match,'status':'FAIL' if errors else 'PASS','local_links':links,'assets':assets,'errors':errors,'scope':'Documentation targets and delivery formats/timing; not runtime qualification or visual acceptance'}
     print(json.dumps(result,indent=2));return bool(errors)
 
 

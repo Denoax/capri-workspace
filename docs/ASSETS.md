@@ -42,3 +42,8 @@ python tools/check_capri_presentation.py
 ```
 
 The identity builder requires Pillow and fontTools in a media-only environment. It does not alter controller dependency files, start models or replace the V3 hero builder. See [presentation references](DESIGN_REFERENCES.md) for the inspected design sources and [identity BUILD.json](../showcase/capri/identity/BUILD.json) for export details.
+
+
+## Source-match presentation candidate
+
+The approved first three-panel comic, Manrope/Inter typography and seven source treatments are implemented separately from the preserved banner and runtime. [Source-to-implementation, notices, acting and rebuild record](SOURCE_MATCH.md). New reference sources are registered separately; the original hero/source selection remains unchanged. Five panels are footage composites; sharks and horizon use actual supplied native source. Unresolved rights remain recorded and the repository stays private.
