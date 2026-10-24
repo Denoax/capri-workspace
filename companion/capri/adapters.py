@@ -157,7 +157,10 @@ class Adapters:
         if kind == "desktop.focus":
             if not any(r["address"] == args["address"] for r in await self.clients()):
                 raise Denied("Target window no longer exists")
-            await self.command(["/usr/bin/hyprctl", "dispatch", "focuswindow", "address:" + args["address"]])
+            # Hyprland 0.56's Lua config requires a typed dispatcher object.
+            # The address has already passed the exact hexadecimal schema.
+            expression = 'hl.dsp.focus({window = "address:' + args["address"] + '"})'
+            await self.command(["/usr/bin/hyprctl", "dispatch", expression])
             row = json.loads(await self.command(["/usr/bin/hyprctl", "-j", "activewindow"]))
             if row.get("address") != args["address"]:
                 raise Denied("Focus verification failed")
@@ -192,9 +195,13 @@ class Adapters:
         if kind == "work.run":
             import secrets
             unit = "capri-job-" + secrets.token_hex(8)
+            owner_start = Path("/proc/self/stat").read_text().rsplit(") ", 1)[1].split()[19]
+            supervised = ["/usr/bin/python3", str(Path(__file__).with_name("job_supervisor.py")),
+                          "--owner-pid", str(os.getpid()), "--owner-start", owner_start,
+                          "--", *self.sandbox_argv(args["root"], args["argv"])]
             command = ["/usr/bin/systemd-run", "--user", "--quiet", "--wait", "--pipe", "--collect",
                        "--unit=" + unit, "-p", "MemoryMax=512M", "-p", "TasksMax=32",
-                       "-p", "CPUQuota=100%", "-p", "RuntimeMaxSec=30s", *self.sandbox_argv(args["root"], args["argv"])]
+                       "-p", "CPUQuota=100%", "-p", "RuntimeMaxSec=30s", *supervised]
             finished = False
             try:
                 text = await self.command(command, timeout=35)

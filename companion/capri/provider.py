@@ -169,11 +169,16 @@ class PlanProvider:
             # Browser URL is carried over stdin/D-Bus, never argv, transcript or logs.
             proc = await asyncio.create_subprocess_exec("/usr/bin/python3", str(Path(__file__).with_name("portal_open.py")),
                          stdin=asyncio.subprocess.PIPE, stdout=asyncio.subprocess.DEVNULL, stderr=asyncio.subprocess.DEVNULL)
-            await proc.communicate(url.encode())
+            try:
+                await asyncio.wait_for(proc.communicate(url.encode()), 45)
+            finally:
+                if proc.returncode is None:
+                    proc.terminate()
+                    await proc.wait()
             if proc.returncode:
-                raise Denied("System-browser portal unavailable")
-            await notify("Continue with ChatGPT in the system browser; no account is connected yet.")
-            client_id, code = await asyncio.wait_for(future, 180)
+                raise Denied(f"System-browser portal did not open the sign-in (response {proc.returncode})")
+            await notify("Browser accepted the sign-in request. Complete Continue with ChatGPT; no account is connected yet.")
+            client_id, code = await asyncio.wait_for(future, 600)
             async with self.lock:
                 token = await self.request("POST", AUTH + "/api/accounts/oauth/token", data={"grant_type": "authorization_code", "client_id": client_id,
                       "code": code, "code_verifier": verifier, "redirect_uri": redirect, "resource": API})
@@ -221,8 +226,10 @@ class PlanProvider:
         self.catalog = [{"id": row["slug"], "name": row["display_name"]} for row in data.get("models", []) if row.get("visibility") == "list"]
         if not self.catalog:
             raise Denied("No account models were returned")
-        if not any(row["id"] == self.model for row in self.catalog):
-            self.model = self.catalog[0]["id"]
+        if self.model is not None and not any(row["id"] == self.model for row in self.catalog):
+            raise Denied("Selected model is no longer available; choose from the refreshed account catalog")
+        if self.model is None:
+            await self.choose_model(self.catalog[0]["id"])
         return self.catalog
 
     async def choose_model(self, model):
@@ -237,6 +244,8 @@ class PlanProvider:
         token = await self.access_token()
         if not self.catalog:
             await self.models()
+        if not any(row["id"] == self.model for row in self.catalog):
+            raise Denied("Select an available account model before inference")
         completed = False
         result = ""
         self.calls += 1

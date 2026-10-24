@@ -8,7 +8,7 @@ This table describes the direct local testing candidate. It is not human accepta
 | Local articulated presence | Three approved drawings, ten transformed layers, authored head/arm gestures and blink; no model calls for idle |
 | Chat/Commands authority | Actual native command-shaped Chat input leaves OS volume unchanged; only explicit Commands mode can grant actions |
 | Persistent brain/corrections | Private SQLite transcript named Capri; account partitions, explicit memory edits/export/reset; restart checks required in host review |
-| ChatGPT plan | Official sign-in/inference/model discovery implemented; first actual browser attempt timed out without a validated account; cloud inference BLOCKED |
+| ChatGPT plan | Real official sign-in succeeded after portal-response handling was corrected; eight models discovered; public and owner-approved persona requests completed through the production adapter. Native UI streaming is qualified separately in host evidence |
 | Provider fixtures | OIDC signature/issuer/audience/nonce/expiry, refresh serialization, strict terminal streaming and redirect denial tested |
 | Application open/focus | Reviewed installed IDs; actual pavucontrol window observed. Missing Firefox/Thunar/Calculator stay unavailable; focus qualification is per host evidence |
 | Media/audio | Actual Spotify pause/play and bounded PipeWire volume change verified, original states restored; skip/previous not separately qualified |

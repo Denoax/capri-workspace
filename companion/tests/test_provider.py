@@ -105,3 +105,24 @@ class StreamTests(unittest.IsolatedAsyncioTestCase):
     async def test_unrequested_tool_call_has_no_execution_path(self):
         await self.serve([{'type':'response.function_call_arguments.done','arguments':'{"approved":true}'}])
         with self.assertRaises(Denied):await self.provider.respond('persona',[],self.delta)
+
+class ModelCatalogTests(unittest.IsolatedAsyncioTestCase):
+    async def asyncSetUp(self):
+        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
+        self.provider=PlanProvider(Path(self.tmp.name)/'accounts')
+        await self.provider.save({'subject':'catalog-fixture','client_id':'oaiapp_fixture','access_token':'fixture-only','refresh_token':'fixture-only','scopes':['chatgpt.tokens.use.direct'],'expires_at':time.time()+3600})
+        self.available=[{'slug':'fixture-a','display_name':'Fixture A','visibility':'list'},{'slug':'hidden-fixture','display_name':'Hidden','visibility':'hide'}]
+        async def request(method,url,**kwargs):return {'models':self.available}
+        self.provider.request=request
+    async def test_discovered_default_model_is_saved_for_restart(self):
+        catalog=await self.provider.models()
+        self.assertEqual(catalog,[{'id':'fixture-a','name':'Fixture A'}])
+        restored=PlanProvider(self.provider.directory)
+        self.assertEqual(restored.model,'fixture-a')
+    async def test_missing_preferred_model_does_not_silently_switch(self):
+        await self.provider.models()
+        self.available=[{'slug':'fixture-b','display_name':'Fixture B','visibility':'list'}]
+        with self.assertRaises(Denied):await self.provider.models()
+        self.assertEqual(self.provider.model,'fixture-a')
+        await self.provider.choose_model('fixture-b')
+        self.assertEqual(PlanProvider(self.provider.directory).model,'fixture-b')

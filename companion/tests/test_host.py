@@ -87,7 +87,11 @@ class HostWatcherLifecycleTests(unittest.TestCase):
             deadline=time.monotonic()+2
             while time.monotonic()<deadline:
                 path=Path(f'/proc/{child}/stat')
-                if not path.exists() or path.read_text().rsplit(') ',1)[1].split()[0]=='Z':break
+                try:
+                    state=path.read_text().rsplit(') ',1)[1].split()[0]
+                except (FileNotFoundError,ProcessLookupError):
+                    break
+                if state=='Z':break
                 time.sleep(.02)
             else:self.fail('Native session watcher survived the death of its exact parent')
         finally:
@@ -98,3 +102,43 @@ class HostWatcherLifecycleTests(unittest.TestCase):
                 if str(watcher).encode() in command and str(parent.pid).encode() in command:
                     try:os.kill(child,signal.SIGTERM)
                     except ProcessLookupError:pass
+
+class FocusBoundaryTests(unittest.IsolatedAsyncioTestCase):
+    async def test_lua_expression_cannot_enter_window_address(self):
+        with self.assertRaises(Denied):
+            await Adapters().run('desktop.focus',{'address':'0x1"}); os.execute("touch /tmp/must-not-execute") --'})
+
+@unittest.skipUnless(os.environ.get('CAPRI_HOST_INTEGRATION')=='1','Real user-service crash check requires explicit host run')
+class HostJobLifetimeTests(unittest.IsolatedAsyncioTestCase):
+    async def test_confined_job_stops_when_its_owner_process_dies(self):
+        import sys
+        import time
+        tmp=tempfile.TemporaryDirectory(prefix='capri-job-lifetime-');self.addCleanup(tmp.cleanup)
+        root=Path(tmp.name)/'project';root.mkdir()
+        code="import asyncio; from capri.adapters import Adapters\nasync def main():\n a=Adapters(); assert await a.qualify_sandbox()=='isolation-denials-pass'; print('OWNER_READY',flush=True); await a.run('work.run',{'root':"+repr(str(root))+",'argv':['/usr/bin/python3','-c','import time; time.sleep(20)']})\nasyncio.run(main())"
+        owner=await asyncio.create_subprocess_exec(sys.executable,'-B','-c',code,stdout=asyncio.subprocess.PIPE,stderr=asyncio.subprocess.DEVNULL)
+        unit=None
+        async def command(*args):
+            p=await asyncio.create_subprocess_exec(*args,stdout=asyncio.subprocess.PIPE,stderr=asyncio.subprocess.DEVNULL)
+            out,_=await p.communicate();return out.decode().strip()
+        try:
+            self.assertEqual((await asyncio.wait_for(owner.stdout.readline(),5)).strip(),b'OWNER_READY')
+            for _ in range(60):
+                names=await command('systemctl','--user','list-units','capri-job-*','--no-legend','--plain')
+                for line in names.splitlines():
+                    candidate=line.split()[0]
+                    details=await command('systemctl','--user','show',candidate,'-p','ExecStart','--value')
+                    if str(root) in details:unit=candidate;break
+                if unit:break
+                await asyncio.sleep(.05)
+            self.assertIsNotNone(unit,'Real test job did not start')
+            owner.kill();await owner.wait()
+            deadline=time.monotonic()+2
+            while time.monotonic()<deadline:
+                state=await command('systemctl','--user','show',unit,'-p','ActiveState','--value')
+                if state not in ('active','activating'):break
+                await asyncio.sleep(.05)
+            else:self.fail('Confined work service survived loss of its exact owner process')
+        finally:
+            if owner.returncode is None:owner.kill();await owner.wait()
+            if unit:await command('systemctl','--user','stop',unit)

@@ -220,6 +220,16 @@ class Service:
             self.state = "listening"
             await self.reply("Offline test provider — no model is connected. Your local Capri history is saved. Use Continue with ChatGPT for real conversation, or /help for deterministic native commands.")
 
+    async def refresh_catalog(self):
+        if not self.provider.record:
+            return
+        try:
+            await self.provider.models()
+        except Exception as error:
+            detail = str(error) if isinstance(error, Denied) else type(error).__name__
+            self.last_error = "Saved account model discovery unavailable: " + detail
+        await self.publish()
+
     async def session_loop(self):
         self.watcher = await asyncio.create_subprocess_exec("/usr/bin/python3", str(Path(__file__).with_name("session_watch.py")), str(os.getpid()),
                              stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.DEVNULL)
@@ -344,6 +354,7 @@ class Service:
         print(json.dumps({"event": "ready", "sandbox": sandbox}), flush=True)
         watch = asyncio.create_task(self.session_loop())
         heartbeat = asyncio.create_task(self.heartbeat_loop())
+        catalog = asyncio.create_task(self.refresh_catalog())
         loop = asyncio.get_running_loop()
         for sig in (signal.SIGINT, signal.SIGTERM):
             loop.add_signal_handler(sig, self.shutdown.set)
@@ -352,11 +363,12 @@ class Service:
             await self.stop()
             watch.cancel()
             heartbeat.cancel()
+            catalog.cancel()
             # Python 3.14 Server.wait_closed waits for active client transports.
             # Close owned connections before leaving the server context.
             for writer in tuple(self.connections):
                 writer.close()
-        await asyncio.gather(watch, heartbeat, return_exceptions=True)
+        await asyncio.gather(watch, heartbeat, catalog, return_exceptions=True)
         if self.watcher and self.watcher.returncode is None:
             self.watcher.terminate()
             await self.watcher.wait()
