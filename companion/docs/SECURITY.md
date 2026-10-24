@@ -1,0 +1,19 @@
+# Authority boundary
+
+Trust the uncompromised owner session, kernel/compositor, installed app binaries, this coordinator/broker and the selected provider's authenticated transport. Same-UID/root compromise and physical use of an unlocked session are outside this boundary. UID, executable checks and a Unix socket do not cryptographically authenticate a human.
+
+A current trusted native shell submits an explicit Chat/Commands mode and monotonically sequenced request over a 0600 Unix socket in a 0700 runtime directory. The coordinator checks SO_PEERCRED, per-launch token, protocol/schema, shell executable and exact config path. Observer connections cannot submit work. Unknown roles, methods, extra fields and sequence replays are rejected. The launch token never enters model context or transcripts.
+
+Only Commands mode can mint a broker grant. A grant binds the exact operation/arguments, task, policy version, current epoch and 60-second deadline. Model prose/JSON, retrieved memory, clipboard data, audio, animation and observations cannot create a grant. Each action is consumed and journaled before its adapter runs. Duplicates, stale epochs and scope changes cannot dispatch another side effect.
+
+Stop, lock, sleep, UI disconnect, heartbeat loss and account/model changes revoke grants. Lock state is applied before awaiting asynchronous cleanup. Missing/ambiguous login1 session state fails closed. Host-spawned services select only a unique active local graphical session of the same UID. Unlock/restart never replays old permission. Interrupted effects are `EFFECT_UNKNOWN`; inspect/reconcile them instead of automatically retrying. App-opening acknowledgement is followed by observed exact window identity; media acknowledgement is followed by bounded observed playback state.
+
+The trusted adapters are fixed gio/Hyprland/MPRIS/PipeWire operations, handle-relative flat file moves, and a separate systemd/bubblewrap runner. No universal host shell, root input daemon, remote listener, webview execution, microphone, clipboard watcher or downloaded hook loader exists. Displayed assistant text is plain text. Known app entries are installed trusted software, not arbitrary desktop Exec strings supplied by the model.
+
+Folder handles reject traversal, symlink components, hardlinked/nonregular sources, broad home ancestors, reserved system trees and changed source identity. `renameat2(RENAME_NOREPLACE)` prevents overwrite. An owner-private manifest is written before mutation; recovery observes source/destination identities rather than replaying. Filesystem effects remain within the held directory. Same-UID concurrent interference is a residual trust limit; this is not a claim of immunity to an adversary controlling the owner's session.
+
+Work jobs mount the explicit project read-only and omit host home, runtime sockets and network. Systemd supplies memory/task/CPU/runtime limits; subprocess descriptors are closed and output is bounded. A project may contain secrets within its own selected root: choosing the root does not magically sanitize its contents. The default cannot grant network or writable project mounts. Sandbox unavailability disables that capability.
+
+Credentials are separate protected app files, not QML, prompts, command arguments or review artifacts. OAuth uses Authlib OIDC signature/issuer/audience/expiry/nonce validation, single-use state-bound callbacks and serialized refresh. HTTP redirects are rejected and provider endpoints restricted. The authorization URL is carried to the system browser through stdin and D-Bus, not argv/logs. No existing Codex token store or cookie database is read.
+
+ScreenCast presence does not qualify RemoteDesktop input. The current GUI/screen/voice capabilities remain disabled. Temporary input fixtures used for native acceptance are development evidence, are not shipped/installed with the product, and do not establish security qualification for arbitrary desktop control.

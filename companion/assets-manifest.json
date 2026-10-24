@@ -1,0 +1,246 @@
+{
+  "provenance": "User-supplied CAPRI_DESKTOP_COMPANION_V1; existing authorized fan-art reconstructions, not official models. Media not redistributed in Git.",
+  "source_commit": "f502e6448223812edcceedaa48ee9d89e7127343",
+  "files": [
+    {
+      "path": "assets/actor/MASKS.json",
+      "bytes": 17710,
+      "sha256": "70aa76e2d6232d86058903e910d8e1cec95d9e0b378bb6aa0cb42128c8268732"
+    },
+    {
+      "path": "assets/actor/RIG.json",
+      "bytes": 18957,
+      "sha256": "c6b21b6be2498ff0c8fbf6cae077093f2c1e262c0170619b7cc1c817889578dd"
+    },
+    {
+      "path": "assets/actor/build-alpha.png",
+      "bytes": 69008,
+      "sha256": "f0a474277c56f70d7f2b44f55d997177d2d1a6ebb2a763f168ae4c1526ed4675"
+    },
+    {
+      "path": "assets/actor/build-labels.png",
+      "bytes": 15908,
+      "sha256": "c7c58a2a9af385e8f8e135b40818a329e2e61be40f5955292d2c5c60ee5d65ee"
+    },
+    {
+      "path": "assets/actor/build-part-1.png",
+      "bytes": 814494,
+      "sha256": "a7fe7a4d1b05e9ea00942afde77018bd7a5417de9e8961277b97ec37cc10789a"
+    },
+    {
+      "path": "assets/actor/build-part-10.png",
+      "bytes": 106495,
+      "sha256": "edaa075e509ecb0b25151b607e770f69d7ece93703ce052ce2e8ed7b7a338ae7"
+    },
+    {
+      "path": "assets/actor/build-part-2.png",
+      "bytes": 120167,
+      "sha256": "dc08bd5f099430ecde2bb1f45796410e24df48ecaf078d615c8497d1f461e2f9"
+    },
+    {
+      "path": "assets/actor/build-part-3.png",
+      "bytes": 17842,
+      "sha256": "c88573505acbe3946bdeb267d692a55b09f9f84e9866b1bf7dcb888c96499307"
+    },
+    {
+      "path": "assets/actor/build-part-4.png",
+      "bytes": 80090,
+      "sha256": "d9e52d689e0b0971b2ffe76ece2b89122e6637fa09401b0bf667d3cde33e78b5"
+    },
+    {
+      "path": "assets/actor/build-part-5.png",
+      "bytes": 59417,
+      "sha256": "785d9ac0e6a4efa808b0b0d298899c5db10cc4bee1a7681c9d270412ad78ebab"
+    },
+    {
+      "path": "assets/actor/build-part-6.png",
+      "bytes": 56337,
+      "sha256": "cedc5afe2320f69b0ed4d13ed2bbaa4fbcded545baaefba73939bfd24bb47dbc"
+    },
+    {
+      "path": "assets/actor/build-part-7.png",
+      "bytes": 44708,
+      "sha256": "3917167f25089277b4754a1e6e0e2ed587060f8ee7bf2cbf60cc8f73515cf953"
+    },
+    {
+      "path": "assets/actor/build-part-8.png",
+      "bytes": 169998,
+      "sha256": "e0df045974b1a82353f4532a062a9a190a97edcf730b48d626b96a6360414beb"
+    },
+    {
+      "path": "assets/actor/build-part-9.png",
+      "bytes": 30262,
+      "sha256": "3fa1c779121f0c330e41d16b5353c79bacf1aba7ca895326e650e178b4b18f00"
+    },
+    {
+      "path": "assets/actor/build-rgba.png",
+      "bytes": 1505826,
+      "sha256": "fd0d17b45ba9e73971741f599938e47f2e6cb0318a2822aa19d556a51deeb175"
+    },
+    {
+      "path": "assets/actor/plan-alpha.png",
+      "bytes": 77618,
+      "sha256": "fccc4a2d5dd08a9d5f52d8b7e083b53c1085ad2cc8e1f70b2324408d31fa703e"
+    },
+    {
+      "path": "assets/actor/plan-labels.png",
+      "bytes": 14494,
+      "sha256": "21be4e4d0ffecdf7e14119495dd55f6b43c4922772a5bf0fb2abf1efec637bcd"
+    },
+    {
+      "path": "assets/actor/plan-part-1.png",
+      "bytes": 762365,
+      "sha256": "e038905b59bf76166ba5d3e29c4c7d406e4d6045067df1a4a9a031986ab99e82"
+    },
+    {
+      "path": "assets/actor/plan-part-10.png",
+      "bytes": 112714,
+      "sha256": "37227981f8c0895e028408b8eb481c7b4558e7065bd6e916507137a7e9981681"
+    },
+    {
+      "path": "assets/actor/plan-part-2.png",
+      "bytes": 113692,
+      "sha256": "799cabed9f39c68fc2a773adf6ecbcdc8fc0d4b777934de25ca1f98be6a862e0"
+    },
+    {
+      "path": "assets/actor/plan-part-3.png",
+      "bytes": 28597,
+      "sha256": "b583b8923114efcf94f5517be9d882d0ad701e850970dd047dc0f426f905e8aa"
+    },
+    {
+      "path": "assets/actor/plan-part-4.png",
+      "bytes": 75418,
+      "sha256": "5b22bbe2af0de7d3d21016c7c2d925d563e5c23945e369c19c2a53e54e4e52ed"
+    },
+    {
+      "path": "assets/actor/plan-part-5.png",
+      "bytes": 33004,
+      "sha256": "f4275adea0cb34942fdc34124a97c75ef3d4c3a2a20d5eee219aa0865e177805"
+    },
+    {
+      "path": "assets/actor/plan-part-6.png",
+      "bytes": 53581,
+      "sha256": "cdd4617fcd53ca8eaf6a42cfa27dff987ea3a9a2a614dc307d34cb33f740989f"
+    },
+    {
+      "path": "assets/actor/plan-part-7.png",
+      "bytes": 77463,
+      "sha256": "85f6733df3e9d90e6398041dcd961c598829cb31c0a2963fd5684dfb19e536c1"
+    },
+    {
+      "path": "assets/actor/plan-part-8.png",
+      "bytes": 137775,
+      "sha256": "887b03952eba21eda8e15f525ab9f10eb317d3f490f4417a904c7ac2590b941c"
+    },
+    {
+      "path": "assets/actor/plan-part-9.png",
+      "bytes": 48337,
+      "sha256": "ebeb515a6b1235539e4af8ae3ffeca1ef5f6129e619a1ffadb72e44c89982a75"
+    },
+    {
+      "path": "assets/actor/plan-rgba.png",
+      "bytes": 1509558,
+      "sha256": "4bbd26464e8980b15ecc41ac575abc10c71cc928e772fd611949f3f5f357f0c9"
+    },
+    {
+      "path": "assets/actor/review-alpha.png",
+      "bytes": 60691,
+      "sha256": "72cb73fe1dcb6eda1aa1ad0a678450e01afde3116fdc82fa0bd3581ce51a2359"
+    },
+    {
+      "path": "assets/actor/review-labels.png",
+      "bytes": 14909,
+      "sha256": "910964070c7dcd358e5bce82b78e7c42a0888171307a8d6dbb465f10e20e6383"
+    },
+    {
+      "path": "assets/actor/review-part-1.png",
+      "bytes": 675580,
+      "sha256": "dddd1341f937a6cbc7ae4fd203c5e2f5111d290d44f0f9f3da32fa42e312015d"
+    },
+    {
+      "path": "assets/actor/review-part-10.png",
+      "bytes": 120923,
+      "sha256": "9e4afc348b773eff2e70fa350956f4b8db8f1bf673b541dfc20445ab5ed3b26e"
+    },
+    {
+      "path": "assets/actor/review-part-2.png",
+      "bytes": 126176,
+      "sha256": "ef7d03911a8f9169954ea0ec2840e2325e8f8e8580045666a6c5d21852994ea0"
+    },
+    {
+      "path": "assets/actor/review-part-3.png",
+      "bytes": 58996,
+      "sha256": "4fd256d2530772c7e4f6a49811cf3d60a259572f0b610bac9abe5a62a9c2007d"
+    },
+    {
+      "path": "assets/actor/review-part-4.png",
+      "bytes": 97039,
+      "sha256": "a40c09ce9876c0c7e68b9805d750af1fe3905388418dbdb0a7f047194dec8e21"
+    },
+    {
+      "path": "assets/actor/review-part-5.png",
+      "bytes": 32034,
+      "sha256": "e61b338f35704222c6d5f7c16f814c30e2c7dfcb2c2f8a5c55f477b55d6f554d"
+    },
+    {
+      "path": "assets/actor/review-part-6.png",
+      "bytes": 30171,
+      "sha256": "350292710382cd9468f0cd2942dd1e29fada8e3c75636ef862a539666f3e137c"
+    },
+    {
+      "path": "assets/actor/review-part-7.png",
+      "bytes": 32581,
+      "sha256": "0776a46b8272ccfaba923995ae12d0fdac6db3e1baa4439622d3481ba65d7ddb"
+    },
+    {
+      "path": "assets/actor/review-part-8.png",
+      "bytes": 86179,
+      "sha256": "2b0a63af88bb6bf72fddd657242afe5e1ed25f0fb711eed55436057a267f5803"
+    },
+    {
+      "path": "assets/actor/review-part-9.png",
+      "bytes": 51661,
+      "sha256": "3b91939fdcb0df35907673a203aa6d0a721d5b5f0fd34ea639b09ecd2e260472"
+    },
+    {
+      "path": "assets/actor/review-rgba.png",
+      "bytes": 1387706,
+      "sha256": "d4e70213ff5a36ae2465828aa88473587fe6749f5191b4a01b6a1c7d37218583"
+    },
+    {
+      "path": "assets/fonts/Inter/Inter-Variable.ttf",
+      "bytes": 876576,
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031"
+    },
+    {
+      "path": "assets/fonts/Inter/OFL.md",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "path": "assets/fonts/Manrope/Manrope-Variable.ttf",
+      "bytes": 164700,
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+    },
+    {
+      "path": "assets/fonts/Manrope/OFL.md",
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "path": "assets/fonts/MartianMono/MartianMono-Variable.ttf",
+      "bytes": 148460,
+      "sha256": "c3467843ec1c2574b05fbcfd7147c7bfbcf63ddca8fc2bcb9d117f1bfb1b22e7"
+    },
+    {
+      "path": "assets/fonts/MartianMono/OFL.md",
+      "bytes": 4390,
+      "sha256": "ddafd2c3f37ef1d83ef284ca63e159befd3820850c5e9eded14ca52eee92c256"
+    },
+    {
+      "path": "assets/fonts/SOURCES.json",
+      "bytes": 2084,
+      "sha256": "95fc97f77fdd7df10f86c831b26d4c48ad5025c8a8f49fcf371813ec78e12dff"
+    }
+  ]
+}
