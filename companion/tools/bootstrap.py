@@ -30,6 +30,9 @@ def main():
     failures=0
     runtime=Path(os.environ.get('XDG_RUNTIME_DIR',str(Path.home()/'.cache')))/os.environ.get('CAPRI_RUNTIME_NAME','capri')
     while not stopping:
+        if (ROOT/'bootstrap/session-hook.json').exists():
+            from session_start import ready
+            if not ready():return
         state=manager.state();digest=state['current'];current=manager.verify(digest)
         # Metadata is authoritative; recover a crash between durable metadata and its symlink projection.
         if not (ROOT/'current').is_symlink() or (ROOT/'current').resolve()!=current:manager.switch(digest)
@@ -57,6 +60,9 @@ def main():
             return
         if child.returncode==0 and json.loads((current/'version-record.json').read_text()).get('provenance',{}).get('legacy'):
             return
+        if (ROOT/'bootstrap/session-hook.json').exists():
+            from session_start import ready
+            if not ready():return
         failures=failures+1 if time.monotonic()-started<120 else 1
         if failures>=3:
             try:

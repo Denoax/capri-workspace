@@ -50,6 +50,15 @@ class VersionTests(unittest.TestCase):
         self.assertEqual(result.returncode,0,result.stderr.decode())
         self.assertIn(b'PUBLIC-BASELINE',result.stdout);self.assertEqual(self.manager.state()['current'],self.baseline)
         self.assertTrue(self.manager.state()['rollback_used']);self.assertTrue((self.manager.root/'last-rollback.json').exists())
+    def test_ended_wayland_session_exits_without_launching_or_disabling_the_candidate(self):
+        bootstrap=self.manager.root/'bootstrap';bootstrap.mkdir()
+        for name,source in [('bootstrap.py',BASE/'tools/bootstrap.py'),('versions.py',BASE/'capri/versions.py'),('parent_exec.py',BASE/'capri/parent_exec.py'),('session_start.py',BASE/'tools/session_start.py')]:shutil.copyfile(source,bootstrap/name)
+        (bootstrap/'session-hook.json').write_text('{}')
+        candidate=self.candidate();self.manager.activate(candidate,origin='owner-ui');before=self.manager.state()
+        env={**os.environ,'CAPRI_RUNTIME_NAME':'capri-test-ended','XDG_RUNTIME_DIR':str(self.base),'WAYLAND_DISPLAY':'wayland-missing'}
+        result=subprocess.run([sys.executable,'-B',str(bootstrap/'bootstrap.py'),'run'],env=env,capture_output=True,timeout=5)
+        self.assertEqual(result.returncode,0,result.stderr.decode());self.assertEqual(self.manager.state(),before)
+        self.assertFalse((self.manager.root/'last-rollback.json').exists())
     def test_disposable_installer_restores_exact_owned_v1_files_and_keeps_private_data(self):
         prefix=self.base/'home';data=prefix/'.local/share/capri';data.mkdir(parents=True)
         files={prefix/'.local/bin/capri':'#!/bin/sh\n# public old launcher\n',prefix/'.local/share/applications/capri.desktop':'# public old desktop\n',prefix/'.config/systemd/user/capri-companion.service':'# public old unit\n'}

@@ -34,7 +34,7 @@ capri quit
 capri versions
 ```
 
-`--autostart` enables the user graphical-session unit after host qualification. It does not prove reboot or suspend behavior. The protected supervisor selects immutable source versions, retains a last-known-good version and performs one bounded crash rollback. A changed installation file is preserved rather than overwritten by uninstall.
+`--autostart` enables the user graphical-session unit after host qualification. On plain Hyprland 0.56 Lua sessions without an active graphical-session target, it appends a registered Capri startup/shutdown fragment to `~/.config/hypr/hyprland.lua`. Uninstall removes only the exact fragment and preserves later owner edits; a changed fragment is retained for review. The startup helper checks the current Wayland socket and imports only graphical-session variables. Logout cannot classify an ended session as a failed application version. Reboot and suspend behavior still need physical qualification. The protected supervisor selects immutable source versions, retains a last-known-good version and performs one bounded crash rollback. A changed installation file is preserved rather than overwritten by uninstall.
 
 ## Conversation and tasks
 
