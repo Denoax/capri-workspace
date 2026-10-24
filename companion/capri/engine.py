@@ -21,6 +21,7 @@ class WorkEngine:
         self.valid=valid;self.dispatch=dispatch;self.event=event;self.tools=tools
         self.runner=TaskSandbox(self.directory/'control');self.proc=None;self.relay=None
         self.reader=None;self.stderr_reader=None;self.pending={};self.next_id=0;self.turn_done=None
+        self.turn_request_id=None;self.turn_buffer=[];self.turn_buffer_bytes=0
         self.thread_id=None;self.turn_id=None;self.text='';self.messages={};self.usage=None;self.calls=set();self.handles=[];self.held_handles=held_handles
         self.pin=json.loads((Path(__file__).parent.parent/'engine-pin.json').read_text())
 
@@ -38,6 +39,8 @@ class WorkEngine:
     async def request(self,method,params,timeout=30):
         self.next_id+=1;id=self.next_id
         future=asyncio.get_running_loop().create_future();self.pending[id]=future
+        if method=='turn/start':
+            self.turn_request_id=id;self.turn_id=None;self.turn_buffer=[];self.turn_buffer_bytes=0
         try:
             await self.write({'id':id,'method':method,'params':params})
             return await asyncio.wait_for(future,timeout)
@@ -101,8 +104,7 @@ class WorkEngine:
     async def run(self,objective):
         if not self.valid():raise Denied('Work lease revoked')
         self.turn_done=asyncio.get_running_loop().create_future();self.text='';self.messages={}
-        result=await self.request('turn/start',{'threadId':self.thread_id,'input':[{'type':'text','text':objective}]})
-        self.turn_id=result.get('turn',{}).get('id')
+        await self.request('turn/start',{'threadId':self.thread_id,'input':[{'type':'text','text':objective}]})
         terminal=await asyncio.wait_for(self.turn_done,1800)
         if terminal!='completed':raise Denied('Work turn '+terminal+'; inspect the journal before resuming')
         return {'text':self.text,'thread':self.thread_id,'status':terminal,'usage':self.usage,'model_requests':self.relay.requests}
@@ -124,30 +126,21 @@ class WorkEngine:
                     future=self.pending.get(message.get('id'))
                     if future and not future.done():
                         if 'error' in message:future.set_exception(Denied('Work protocol request failed: '+str(message['error'].get('code'))))
-                        else:future.set_result(message.get('result',{}))
+                        else:
+                            if message.get('id')==self.turn_request_id:
+                                turn=message.get('result',{}).get('turn',{}).get('id')
+                                if not isinstance(turn,str) or not turn:raise Denied('Work start omitted confirmed turn identity')
+                                # Bind in the serialized reader before any tool callback can run.
+                                self.turn_id=turn;self.turn_request_id=None
+                                buffered=self.turn_buffer;self.turn_buffer=[];self.turn_buffer_bytes=0
+                                for value in buffered:await self.notification(value)
+                            future.set_result(message.get('result',{}))
                     continue
-                method=message['method'];params=message.get('params',{})
-                if 'id' in message:
-                    if method=='item/tool/call' and params.get('namespace')=='capri' and params.get('threadId')==self.thread_id:
-                        task=asyncio.create_task(self.tool_call(message));self.calls.add(task);task.add_done_callback(self.calls.discard)
-                    else:
-                        await self.write({'id':message['id'],'error':{'code':-32601,'message':'Unqualified native request denied'}})
-                        await self.event('denied',{'method':method})
-                    continue
-                if params.get('threadId') not in (None,self.thread_id):continue
-                if method=='item/agentMessage/delta':
-                    self.update_message(params['itemId'],params.get('delta',''),append=True)
-                    await self.event('delta',{'text':self.text})
-                elif method=='thread/tokenUsage/updated':
-                    self.usage=params.get('tokenUsage');await self.event('usage',{'usage':self.usage})
-                elif method=='turn/completed':
-                    if self.turn_done and not self.turn_done.done():self.turn_done.set_result(params['turn']['status'])
-                elif method in ('item/started','item/completed'):
-                    item=params.get('item',{})
-                    if item.get('type')=='agentMessage' and method=='item/completed':
-                        self.update_message(item['id'],item.get('text',''),append=False)
-                        await self.event('delta',{'text':self.text})
-                    await self.event('item',{'type':item.get('type'),'status':item.get('status')})
+                if self.turn_request_id is not None:
+                    self.turn_buffer_bytes+=len(line)
+                    if len(self.turn_buffer)>=128 or self.turn_buffer_bytes>1024*1024:raise Denied('Unconfirmed turn event budget exceeded')
+                    self.turn_buffer.append(message)
+                else:await self.notification(message)
         except asyncio.CancelledError:raise
         except Exception as e:error=e
         finally:
@@ -155,6 +148,36 @@ class WorkEngine:
             for future in self.pending.values():
                 if not future.done():future.set_exception(error)
             if self.turn_done and not self.turn_done.done():self.turn_done.set_exception(error)
+
+    async def notification(self,message):
+        method=message['method'];params=message.get('params',{})
+        same_thread=params.get('threadId')==self.thread_id
+        turn=params.get('turnId') or (params.get('turn',{}).get('id') if method=='turn/completed' else None)
+        current=bool(same_thread and self.turn_id and turn==self.turn_id)
+        if 'id' in message:
+            if method=='item/tool/call' and params.get('namespace')=='capri' and current:
+                task=asyncio.create_task(self.tool_call(message));self.calls.add(task);task.add_done_callback(self.calls.discard)
+            else:
+                await self.write({'id':message['id'],'error':{'code':-32601,'message':'Unqualified or stale native request denied'}})
+                await self.event('denied',{'method':method})
+            return
+        if not same_thread:return
+        if method=='thread/tokenUsage/updated':
+            if turn is None or current:
+                self.usage=params.get('tokenUsage');await self.event('usage',{'usage':self.usage})
+            return
+        if not current:return
+        if method=='item/agentMessage/delta':
+            self.update_message(params['itemId'],params.get('delta',''),append=True)
+            await self.event('delta',{'text':self.text})
+        elif method=='turn/completed':
+            if self.turn_done and not self.turn_done.done():self.turn_done.set_result(params['turn']['status'])
+        elif method in ('item/started','item/completed'):
+            item=params.get('item',{})
+            if item.get('type')=='agentMessage' and method=='item/completed':
+                self.update_message(item['id'],item.get('text',''),append=False)
+                await self.event('delta',{'text':self.text})
+            await self.event('item',{'type':item.get('type'),'status':item.get('status')})
 
     async def drain_stderr(self):
         # Drain bounded diagnostics without exporting private prompts or credentials.
@@ -171,7 +194,8 @@ class WorkEngine:
     async def tool_call(self,message):
         params=message['params']
         try:
-            if not self.valid():raise Denied('Task authority revoked before dispatch')
+            if not self.valid() or params.get('threadId')!=self.thread_id or params.get('turnId')!=self.turn_id:
+                raise Denied('Task authority or confirmed work turn changed before dispatch')
             result=await self.dispatch(params['callId'],params['tool'],params['arguments'])
             response={'success':True,'contentItems':[{'type':'inputText','text':json.dumps(result)}]}
         except asyncio.CancelledError:raise

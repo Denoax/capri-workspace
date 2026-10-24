@@ -148,7 +148,8 @@ class TaskCoordinator:
             if not self.valid():raise Denied('Expired or revoked task')
             if not isinstance(call_id,str) or not 1<=len(call_id)<=256:raise Denied('Invalid action identity')
             lease=self.lease
-            action_id=hashlib.sha256((lease.task+':'+call_id).encode()).hexdigest()
+            thread=getattr(self.engine,'thread_id',None) or lease.task
+            action_id=hashlib.sha256(json.dumps([lease.partition,thread,call_id]).encode()).hexdigest()
             if self.store.action(action_id):raise Denied('Action already journaled; reconcile its actual effect')
             if lease.actions>=64:raise Denied('Task action budget exhausted; checkpoint and request a new task')
             lease.actions+=1

@@ -88,9 +88,31 @@ class WorkMessageTests(unittest.IsolatedAsyncioTestCase):
             async def event(*args):pass
             async def dispatch(*args):raise AssertionError('No tools expected')
             engine=WorkEngine(None,folder,'fixture-model',[],lambda:True,dispatch,event,[])
-            engine.thread_id='thread-fixture';engine.turn_done=asyncio.get_running_loop().create_future()
+            engine.thread_id='thread-fixture';engine.turn_id='turn-fixture';engine.turn_done=asyncio.get_running_loop().create_future()
             reader=asyncio.StreamReader();engine.proc=SimpleNamespace(stdout=reader)
             notifications=[('item/agentMessage/delta',{'itemId':'first','delta':'Inspecting '}),('item/agentMessage/delta',{'itemId':'first','delta':'public files.'}),('item/completed',{'item':{'type':'agentMessage','id':'first','text':'Inspecting public files.'}}),('item/completed',{'item':{'type':'agentMessage','id':'final','text':'Both tests passed.'}}),('turn/completed',{'turn':{'status':'completed'}})]
-            for method,params in notifications:reader.feed_data((json.dumps({'method':method,'params':{'threadId':engine.thread_id,**params}})+'\n').encode())
+            for method,params in notifications:reader.feed_data((json.dumps({'method':method,'params':{'threadId':engine.thread_id,'turnId':engine.turn_id,**params}})+'\n').encode())
             reader.feed_eof();await engine.read_loop()
             self.assertEqual(engine.text,'Inspecting public files.\n\nBoth tests passed.');self.assertEqual(engine.turn_done.result(),'completed')
+
+    async def test_start_response_binds_early_events_and_rejects_prior_turn_effects(self):
+        from types import SimpleNamespace
+        with tempfile.TemporaryDirectory(prefix='capri-turn-') as folder:
+            effects=[];written=[]
+            async def event(*args):pass
+            async def dispatch(*args):effects.append(args);return {}
+            engine=WorkEngine(None,folder,'fixture-model',[],lambda:True,dispatch,event,[])
+            engine.thread_id='thread';engine.turn_request_id=7
+            engine.turn_done=asyncio.get_running_loop().create_future()
+            started=asyncio.get_running_loop().create_future();engine.pending[7]=started
+            async def write(value):written.append(value)
+            engine.write=write
+            reader=asyncio.StreamReader();engine.proc=SimpleNamespace(stdout=reader,returncode=None)
+            def tool(id,turn):return {'id':id,'method':'item/tool/call','params':{'threadId':'thread','turnId':turn,'namespace':'capri','callId':str(id),'tool':'exec','arguments':{}}}
+            values=[tool(1,'old'),{'method':'turn/completed','params':{'threadId':'thread','turn':{'id':'old','status':'completed'}}},tool(2,'new'),{'id':7,'result':{'turn':{'id':'new'}}},{'method':'turn/completed','params':{'threadId':'thread','turn':{'id':'new','status':'completed'}}}]
+            for value in values:reader.feed_data((json.dumps(value)+'\n').encode())
+            reader.feed_eof();await engine.read_loop();await asyncio.gather(*tuple(engine.calls))
+            self.assertEqual(engine.turn_id,'new');self.assertEqual(started.result()['turn']['id'],'new')
+            self.assertEqual(engine.turn_done.result(),'completed');self.assertEqual([x[0] for x in effects],['2'])
+            self.assertTrue(any(v.get('id')==1 and 'error' in v for v in written))
+            engine.turn_id='next';await engine.tool_call(tool(3,'new'));self.assertEqual(len(effects),1)

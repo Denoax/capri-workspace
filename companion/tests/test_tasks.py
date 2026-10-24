@@ -44,6 +44,16 @@ class TaskLeaseTests(unittest.IsolatedAsyncioTestCase):
         result=await asyncio.gather(self.tasks.dispatch('same-id','exec',args),self.tasks.dispatch('same-id','exec',args),return_exceptions=True)
         self.assertEqual(effects,['one']);self.assertEqual(sum(isinstance(v,Denied) for v in result),1)
         self.assertEqual(self.store.db.execute('SELECT status FROM actions').fetchall(),[('SUCCEEDED',)])
+    async def test_resumed_thread_does_not_replay_a_journaled_call_under_a_new_lease(self):
+        first=self.issue();self.tasks.engine=SimpleNamespace(thread_id='stable-thread')
+        effects=[]
+        async def run(*args,**kwargs):effects.append('one');return {'exit_code':0}
+        self.tasks.runner.run=run
+        args={'argv':['/usr/bin/true'],'cwd':str(self.project)}
+        await self.tasks.dispatch('same-call','exec',args)
+        self.tasks.revoke();second=self.issue();self.assertNotEqual(first.task,second.task)
+        with self.assertRaises(Denied):await self.tasks.dispatch('same-call','exec',args)
+        self.assertEqual(effects,['one']);self.tasks.engine=None
     async def test_native_expansion_is_concrete_task_local_and_requires_current_owner(self):
         lease=self.issue();extra=self.base/'extra';extra.mkdir()
         task=asyncio.create_task(self.tasks.request_scope({'roots':[str(extra)],'desktop':True,'reason':'Test the additional fixture'}))
