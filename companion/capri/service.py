@@ -137,7 +137,7 @@ class Service:
                 "player": self.adapters.player or "", "partition": self.provider.partition,
                 "draft": self.store.draft(self.provider.partition), "profile": self.profile,
                 "work_available": self.adapters.sandbox_ready and bool(self.provider.record), "input_idle": self.input_idle,
-                "notice": None if self.scheduler.blocked(self.attention()) else self.scheduler.current_notice(),
+                "notice": None if self.scheduler.blocked(self.attention(),require_idle=False) else self.scheduler.current_notice(),
                 "observation_sources": self.projects.active_sources(),"initiative_status": self.background_error,
                 "sources_text": '\n'.join(s['root']+' · local save events'+(' + selected metadata to model' if s['cloud'] else '') for s in self.projects.active_sources()) or 'No selected project observation.',
                 "activity": [{'kind':r[0],'detail':r[1]} for r in self.store.db.execute('SELECT e.kind,e.detail FROM task_events e JOIN tasks t ON e.task=t.id WHERE t.partition=? AND e.kind IN (?,?,?) ORDER BY e.id DESC LIMIT 12',(self.provider.partition,'verification','verified-terminal','native-scope-approved'))],

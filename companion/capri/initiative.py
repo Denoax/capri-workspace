@@ -53,10 +53,10 @@ class Scheduler:
             # Bound retained observations; no growing screen/mail transcript.
             self.store.db.execute('DELETE FROM observations WHERE id IN (SELECT id FROM observations ORDER BY created DESC LIMIT -1 OFFSET 500)')
         return identity
-    def blocked(self,attention):
+    def blocked(self,attention,*,require_idle=True):
         p=self.profile();now=self.now()
         return (p['quiet'] or p['paused'] or p['dnd'] or not p['initiative'] or self.quiet_hours() or
-                now<self.state['snooze'] or not attention.get('unlocked') or not attention.get('input_idle') or
+                now<self.state['snooze'] or not attention.get('unlocked') or (require_idle and not attention.get('input_idle')) or
                 attention.get('fullscreen') or attention.get('busy') or attention.get('hidden') or
                 attention.get('desktop_dnd') is not False)
     def current_notice(self):
