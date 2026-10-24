@@ -25,7 +25,7 @@ async def check(port):
               const counts={seek:0,reset:0,step:0},seek=h.renderAt.bind(h),reset=h.resetNative.bind(h),step=h.engine.step.bind(h.engine);
               h.renderAt=(...a)=>{counts.seek++;return seek(...a)};h.resetNative=(...a)=>{counts.reset++;return reset(...a)};h.engine.step=(...a)=>{counts.step++;return step(...a)};
               const select=n=>{const i=document.getElementById('story-request');i.value=n;i.dispatchEvent(new Event('change'))};
-              const hidden=document.querySelector('.portrait-chart'),observer=new MutationObserver(()=>{});observer.observe(hidden,{subtree:true,attributes:true,characterData:true,childList:true});
+              const hidden=[...document.querySelectorAll('.story-chart')].find(e=>getComputedStyle(e).display==='none'),observer=new MutationObserver(()=>{});if(hidden)observer.observe(hidden,{subtree:true,attributes:true,characterData:true,childList:true});
               for(const n of [1,6,1,6,2])select(n);
               const hiddenMutations=observer.takeRecords().length;observer.disconnect();
               const paused={request:storyApp.request,engine:h.engine===before.engine,time:h.time===before.time,nativeTime:h.nativeTime===before.nativeTime,running:h.running,...counts};

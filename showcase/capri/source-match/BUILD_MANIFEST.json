@@ -243,8 +243,8 @@
     },
     {
       "path": "companion/index.html",
-      "bytes": 6128783,
-      "sha256": "13cf29c1195db483a853576ec2e27cf2bf0d414358fcaeaaf2977fb125b72e28"
+      "bytes": 6116120,
+      "sha256": "be96c6e543f71e9f48d783edd1121ccb8494d02d54b14fc6164fccd92afedb92"
     },
     {
       "path": "companion/ocean-source.js",

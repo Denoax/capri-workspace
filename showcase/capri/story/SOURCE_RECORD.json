@@ -1,7 +1,7 @@
 {
-  "base": "6a5d0b3746c49cd5da058b3d458497e267edc449",
-  "handoff_sha256": "94988a5dc3f043d6edfe49bfa3858599e914cc6343c740620c34b388cc4b65d4",
-  "method": "V4 canonical frames and isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
+  "base": "18fecd7b51c8a2a6088a8a2ef2aa7cb4a0ba33ee",
+  "handoff_sha256": "fb7eda9ad071ec3df0136320cf01d09a7f02f12a59c0fc70641b2f1dc2a3490b",
+  "method": "V5 compact content roles and isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
   "lessons": {
     "workflow": {
       "members": [
@@ -13,27 +13,10 @@
       "still_ms": 800,
       "families": [],
       "layouts": [
-        "landscape",
         "portrait"
       ],
-      "family": "landscape"
-    },
-    "quantitative": {
-      "members": [
-        "horizon"
-      ],
-      "duration_ms": 6400,
-      "fps": 25,
-      "export_scene": "horizon",
-      "still_ms": 2600,
-      "families": [
-        "horizon"
-      ],
-      "layouts": [
-        "landscape",
-        "portrait"
-      ],
-      "family": "landscape"
+      "family": "illustration",
+      "root_layout": "portrait"
     },
     "brief": {
       "members": [
@@ -47,58 +30,41 @@
         "sharks"
       ],
       "layouts": [
-        "landscape",
         "portrait"
       ],
-      "family": "landscape"
+      "family": "illustration",
+      "root_layout": "portrait"
     },
-    "handoff": {
-      "members": [
-        "hands"
-      ],
-      "duration_ms": 5040,
-      "fps": 50,
-      "export_scene": "hands",
-      "still_ms": 2620,
-      "families": [
-        "hands"
-      ],
-      "layouts": [
-        "portrait"
-      ],
-      "family": "portrait"
-    },
-    "checking": {
-      "members": [
-        "cat"
-      ],
-      "duration_ms": 8600,
+    "graph": {
+      "members": [],
+      "duration_ms": 1000,
       "fps": 25,
-      "export_scene": "cat",
-      "still_ms": 3800,
-      "families": [
-        "cat"
-      ],
+      "export_scene": "comic",
+      "still_ms": 0,
+      "families": [],
+      "static_only": true,
+      "family": "graph",
       "layouts": [
-        "portrait"
+        "graph"
       ],
-      "family": "portrait"
+      "root_layout": "graph"
     },
-    "requirements": {
+    "horizon": {
       "members": [
-        "rain"
+        "horizon"
       ],
-      "duration_ms": 2000,
+      "duration_ms": 6400,
       "fps": 25,
-      "export_scene": "rain",
-      "still_ms": 1000,
+      "export_scene": "horizon",
+      "still_ms": 2600,
       "families": [
-        "rain"
+        "horizon"
       ],
       "layouts": [
         "portrait"
       ],
-      "family": "portrait"
+      "family": "illustration",
+      "root_layout": "portrait"
     },
     "coordination": {
       "members": [
@@ -114,7 +80,63 @@
       "layouts": [
         "portrait"
       ],
-      "family": "portrait"
+      "family": "illustration",
+      "root_layout": "portrait"
+    },
+    "handoff": {
+      "members": [
+        "hands"
+      ],
+      "duration_ms": 5040,
+      "fps": 50,
+      "export_scene": "hands",
+      "still_ms": 2620,
+      "families": [
+        "hands"
+      ],
+      "layouts": [
+        "portrait"
+      ],
+      "family": "illustration",
+      "root_layout": "portrait"
+    },
+    "checking": {
+      "members": [
+        "cat"
+      ],
+      "duration_ms": 8600,
+      "fps": 25,
+      "export_scene": "cat",
+      "still_ms": 3800,
+      "families": [
+        "cat"
+      ],
+      "layouts": [
+        "portrait"
+      ],
+      "family": "illustration",
+      "root_layout": "portrait"
+    },
+    "requirements": {
+      "members": [
+        "rain"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "export_scene": "rain",
+      "still_ms": 1000,
+      "families": [
+        "rain"
+      ],
+      "layouts": [
+        "portrait",
+        "support"
+      ],
+      "family": "illustration",
+      "root_layout": "support",
+      "static_layouts": [
+        "support"
+      ]
     },
     "closing": {
       "members": [
@@ -129,19 +151,81 @@
       ],
       "static_only": true,
       "layouts": [
-        "landscape",
-        "portrait"
+        "support"
       ],
-      "family": "landscape"
+      "family": "support",
+      "root_layout": "support"
     }
   },
+  "root_selection": {
+    "workflow": {
+      "layout": "portrait",
+      "role": "illustration",
+      "display_width": 280
+    },
+    "brief": {
+      "layout": "portrait",
+      "role": "illustration",
+      "display_width": 280
+    },
+    "graph": {
+      "layout": "graph",
+      "role": "graph",
+      "display_width": 320
+    },
+    "horizon": {
+      "layout": "portrait",
+      "role": "illustration",
+      "display_width": 280
+    },
+    "coordination": {
+      "layout": "portrait",
+      "role": "illustration",
+      "display_width": 280
+    },
+    "handoff": {
+      "layout": "portrait",
+      "role": "illustration",
+      "display_width": 280
+    },
+    "checking": {
+      "layout": "portrait",
+      "role": "illustration",
+      "display_width": 280
+    },
+    "requirements": {
+      "layout": "support",
+      "role": "support",
+      "display_width": 240
+    },
+    "closing": {
+      "layout": "support",
+      "role": "support",
+      "display_width": 240
+    }
+  },
+  "accent": {
+    "file": "accent.svg",
+    "method": "Independent geometric CAPRI rule/interruption; no third-party art copied."
+  },
   "format_file": "format.json",
-  "format_sha256": "b770140f15149521ef3be3aed57ad3fa93fb17606542c6e3e09b28081ee3ab59",
+  "format_sha256": "d1258a7691742646c2d43820ca0a7caaf695af94466c030b4b252b32e3691281",
   "format_reference": {
-    "url": "https://github.com/Denoax/konata-hyprland-dotfiles/tree/a9f433ad9cf5b870ee18ceed72d7200f402008e8",
-    "readme_blob": "ea674c406f946b0929b225265d0bbe5b568d893a",
-    "observed": "Width100% images and paired native tables; four actual1600x900 screenshot frames.",
-    "adaptation": "600x900 portrait is authored CAPRI geometry, not the Konata screenshot ratio."
+    "konata": {
+      "url": "https://github.com/Denoax/konata-hyprland-dotfiles/tree/a9f433ad9cf5b870ee18ceed72d7200f402008e8",
+      "readme_blob": "ea674c406f946b0929b225265d0bbe5b568d893a",
+      "observed": "Width100% images and paired native tables; four actual1600x900 screenshot frames.",
+      "adaptation": "600x900 portrait is authored CAPRI geometry, not the Konata screenshot ratio."
+    },
+    "catppuccin": {
+      "url": "https://github.com/catppuccin/catppuccin/blob/d09787dd98ca6fba08af5ef2ae94a7e09f17daca/assets/footers/gray0_ctp_on_line.svg",
+      "blob": "daf8384befb6b41427b46e8266fd718d4945ff93",
+      "observation": "Small identity silhouette meets a thin line; no third-party art imported."
+    },
+    "hyprland": {
+      "url": "https://github.com/hyprwm/Hyprland",
+      "observation": "Native thematic rules and headings separate chapters."
+    }
   },
   "canonical_input": "showcase/capri/source-match/source/assets/data/context-budget.json",
   "canonical_sha256": "2fb6b1e2cd3a0221a08e16948759d94ceff8e2568bf4fd8a1bd57d1e52e76784",

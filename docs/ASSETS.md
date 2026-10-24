@@ -49,3 +49,7 @@ The identity builder requires Pillow and fontTools in a media-only environment. 
 The approved first three-panel comic, Manrope/Inter typography and seven source treatments are implemented separately from the preserved banner and runtime. [Source-to-implementation, notices, acting and rebuild record](SOURCE_MATCH.md). New reference sources are registered separately; the original hero/source selection remains unchanged. Five panels are footage composites; sharks and horizon use actual supplied native source. Unresolved rights remain recorded and the repository stays private.
 
 The [V3 story record](VISUAL_STORY.md) connects the preserved assets to the current explanatory compositions; no new generated media is used.
+
+## Compact format V5
+
+The original hero/source records remain. Six480×640 portrait compositions reuse the three-pose rig, native sharks/horizon and credited hands/dots/cat footage. A separate480×540 deterministic graph retains the canonical inputs. Rain and stack use small480×320 root vignettes; their source lessons remain interactive. `showcase/capri/story/format.json` defines numeric display caps and fixed uniform placements, and `SOURCE_RECORD.json` maps root/companion roles. The thin `accent.svg` is independently authored CAPRI geometry informed by published separator roles; it contains no third-party art. Source masks, anatomy, originals and notices are unchanged; keep private.

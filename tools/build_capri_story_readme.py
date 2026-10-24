@@ -1,166 +1,130 @@
 #!/usr/bin/env python3
-"""Generate the V3 repository narrative and complete static edition from one model."""
+"""Generate compact V5 README/static routes from canonical data and display roles."""
 from pathlib import Path
-import json,re
+import html,json,re
 ROOT=Path(__file__).resolve().parents[1];STORY=ROOT/'showcase/capri/story'
-FORMATS=json.loads((STORY/'format.json').read_text())
-CONFIG=json.loads((STORY/'story.json').read_text())
-def image(name,alt,static=False):
-    lesson=CONFIG['lessons'][name];portrait=lesson['family']=='portrait';mobile=FORMATS['mobile_breakpoint_px']
-    prefix='showcase/capri/story/exports/'+name
-    layout='portrait' if portrait else 'landscape';size=FORMATS['families'][layout];p=FORMATS['families']['portrait']
-    extension='png' if static or lesson.get('static_only') else 'gif'
-    sources=[]
-    if not portrait:
-        sources += [f'<source media="(prefers-reduced-motion: reduce) and (max-width: {mobile}px)" srcset="{prefix}-portrait.png" width="{p["width"]}" height="{p["height"]}">',f'<source media="(max-width: {mobile}px)" srcset="{prefix}-portrait.{extension}" width="{p["width"]}" height="{p["height"]}">']
-    sources += [f'<source media="(prefers-reduced-motion: reduce)" srcset="{prefix}-{layout}.png" width="{size["width"]}" height="{size["height"]}">',f'<source srcset="{prefix}-{layout}.{extension}" width="{size["width"]}" height="{size["height"]}">']
-    return '<picture>'+''.join(sources)+f'<img src="{prefix}-{layout}.{extension}" alt="{alt}" width="100%" height="{size["height"]}"></picture>'
-def pair(left,right):
-    titles={'handoff':'Carry the correction','checking':'Check the candidate','requirements':'Retain requirements','coordination':'Count coordination input'}
-    alts={'handoff':'The original reaching hands carry blank to Untitled, with full-body Capri and the compatible label.py rules. Authored fixture, not a model result.','checking':'The actual cat takeover and eye-anchored beams accompany full-body Review Capri. Request, correction, patch and evidence; human decision.','requirements':'Original skull, sword and rain with full-body Capri and a stable retrievable working brief.','coordination':'Original dotted loop and wave with the stable60k+H input illustration; additional H30k yields90k, equal to curated.'}
-    return '<!-- portrait-pair:'+left+','+right+' -->\n<table><tr><th>'+titles[left]+'</th><th>'+titles[right]+'</th></tr><tr><td width="50%">'+image(left,alts[left])+'</td><td width="50%">'+image(right,alts[right])+'</td></tr><tr><td><a href="showcase/capri/story/exports/'+left+'-portrait.png">Full portrait</a></td><td><a href="showcase/capri/story/exports/'+right+'-portrait.png">Full portrait</a></td></tr></table>\n<!-- /portrait-pair -->\n'
-def picture(name,alt,static=False):
-    if name=='contexts':return image('quantitative','The real ray-traced horizon and full-body Capri share a labelled six-request input graph: growing180k, curated90k, scoped60k. Illustrative inputs, not a CAPRI benchmark.')+'\n'
-    if name=='retained':return pair('requirements','coordination')
-    if name=='handoff':return pair('handoff','checking')
-    if name=='checking':return ''
-    return image(name,alt,static)+'\n'
-def main():
-    m=json.loads((STORY/'model-results.json').read_text());totals=m['total_assumed_input_tokens'];g=m['derivations']['growing'];c=m['derivations']['curated'];n=m['calls'];steps='+'.join(str(i) for i in range(n));k=lambda v:f'{v//1000}k'
-    original=(ROOT/'showcase/capri/source-match/BASE_README.md').read_text();start=original.index('Start with offline inspection');quick=original[start:original.index('<a href="docs/AFTERIMAGE.md"><img',start)]
-    root='''<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png" width="1000" height="343">
-  <source srcset="showcase/capri/hero.gif" width="1000" height="343">
-  <img src="showcase/capri/hero.gif" alt="CAPRI — green face, expressive eyes and jagged magenta silhouette; the approved original banner." width="100%" height="343">
-</picture>
+FORMATS=json.loads((STORY/'format.json').read_text());CONFIG=json.loads((STORY/'story.json').read_text())
+ALTS={'workflow':'Three full-body poses: Plan returns scope/checks, Build returns a patch, Review returns findings. One writer; the human decides.','brief':'Actual native shark field, full-body Capri and a persistent brief: request/correction, relevant source, scope/checks and retrievable originals.','horizon':'The original native ray-traced ASCII horizon with full-body Capri; credited illustration of selective input, not a measured context window.','coordination':'The supplied dotted loop carries60k+H. Additional H30k yields90k, equal to the curated input assumption.','handoff':'Original reaching hands carry blank to Untitled beside full-body Capri. Authored fixture A, not an observed model failure.','checking':'The source cat takeover and eye-anchored beams accompany full-body Review Capri. This illustration does not approve or secure code.','graph':'Illustrative inputs, not a CAPRI benchmark: six assumed requests, thousand tokens per request. Growing history180k, curated 90k, scoped60k.','requirements':'Small source skull/sword/rain vignette: keep original rules, correction and checks retrievable.','closing':'Small source elastic-stack vignette with Capri: keep evidence together and continue to offline checks.'}
+def image(name,static=False):
+    lesson=CONFIG['lessons'][name];layout=lesson['root_layout'];family=FORMATS['families'][FORMATS['layouts'][layout]];prefix='showcase/capri/story/exports/'+name+'-'+layout
+    extension='png' if static or lesson.get('static_only') or layout in lesson.get('static_layouts',[]) else 'gif'
+    # Source dimension attributes can also force a CSS height in hosted wrappers.
+    # A numeric width cap plus the actual file's intrinsic ratio survives sanitizing.
+    return f'<picture><source media="(prefers-reduced-motion: reduce)" srcset="{prefix}.png"><img src="{prefix}.{extension}" alt="{html.escape(ALTS[name],quote=True)}" width="{family["display_width"]}"></picture>'
+def group(*names,static=False,single=False):
+    return '\n\n'.join('<p align="center">'+image(n,static)+'</p>' for n in names) if single else '<p align="center">'+'\n'.join(image(n,static) for n in names)+'</p>'
+def divider():
+    return '<p align="center"><img src="showcase/capri/story/accent.svg" alt="" width="'+str(FORMATS['families']['divider']['display_width'])+'"></p>'
+def build(static=False):
+    m=json.loads((STORY/'model-results.json').read_text());k=lambda v:f'{v//1000}k';t=m['total_assumed_input_tokens'];g=m['derivations']['growing'];c=m['derivations']['curated'];n=m['calls'];steps='+'.join(str(i) for i in range(n))
+    base=(ROOT/'showcase/capri/source-match/BASE_README.md').read_text();start=base.index('Start with offline inspection');quick=base[start:base.index('<a href="docs/AFTERIMAGE.md"><img',start)]
+    hero='png' if static else 'gif';opening=f'''<picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.{hero}" alt="CAPRI — the preserved original magenta and green banner." width="{FORMATS['hero']['display_width']}"></picture>
 
 CAPRI gives planning, coding and review their own Codex sessions. Explicit handoffs carry current decisions, relevant files, scope and checks. One worker edits; a separate reviewer checks the candidate against the request and evidence. **You decide what ships.**
 
-**Experimental.** Offline checks cover implementation contracts; native launch/recovery qualification remains pending. [Setup](#quickstart) · [Architecture](ARCHITECTURE.md) · [Current status](docs/STATUS.md) · [Evaluation and evidence](EVALUATION.md).
+**Experimental.** Offline checks cover implementation contracts; native launch/recovery qualification remains pending. [Setup](#quickstart) · [Architecture](ARCHITECTURE.md) · [Current status](docs/STATUS.md) · [Evaluation](EVALUATION.md).
 
 <a id="the-loop"></a>
 
-## Plan, implement, review
+## How the loop works
 
-'''+picture('workflow','Three full-body Capri poses carry ordered stages. Thinker receives request, correction and source and returns scope/checks. Doer returns patch/results/limits. Reviewer returns findings; Thinker reports to the human. One write owner; no automatic approval.')+'''
-1. **Thinker / Plan:** request + latest correction + relevant source → brief, scope and acceptance checks.
-2. **Doer / Build:** brief + allowed files → patch, check results and known limits.
-3. **Reviewer / Review:** request + correction + candidate + evidence → findings and uncertainty.
-4. **Thinker report → you:** reconcile the evidence and return the decision. **One writer; ordered stages.** Authoritative originals stay retrievable; uncertain effects hold.
+'''+group('workflow','brief',static=static,single=static)+'''
+
+A scoped brief carries the request, latest correction, relevant source, allowed files and expected checks. Authoritative originals remain retrievable.
+
+1. **Thinker / Plan:** request + correction + source → scope and acceptance checks.
+2. **Doer / Build:** brief + allowed files → patch, check results and limits.
+3. **Reviewer / Review:** request + candidate + evidence → findings.
+4. **Thinker report → you:** reconcile findings and decide. **One writer; ordered stages.** Uncertain effects hold.
 
 <details>
-<summary>Inside the loop — models and ownership</summary>
+<summary>Models, ownership and frozen handoffs</summary>
 
-All three roles request `gpt-6.1-sol`. The selected profile uses medium Thinker/Doer effort and high Reviewer effort. Frozen contracts, checkpoints and source checks bind handoffs to their inputs. Formal outcomes stop at `AWAITING_HUMAN`; no successor starts automatically. Separate sessions can still share model blind spots.
+All three roles request `gpt-6.1-sol`. The selected profile uses medium Thinker/Doer effort and high Reviewer effort. Contracts, checkpoints and source checks bind handoffs to their inputs. Formal outcomes stop at `AWAITING_HUMAN`; no successor starts automatically. Separate contexts can share model blind spots.
 
-[Native profile](NATIVE_PROFILE.md) · [Architecture](ARCHITECTURE.md) · [Qualification status](docs/STATUS.md)
+[Native profile](NATIVE_PROFILE.md) · [Architecture](ARCHITECTURE.md) · [Qualification](docs/STATUS.md)
 
 </details>
+
+'''+divider()+'''
 
 <a id="context-and-evidence"></a>
 
-## What the next request needs
+## Why scope the input
 
-'''+picture('contexts','The real ray-traced ASCII black hole and full-body Capri share a lesson with a calm, labelled six-request graph and the original articulated shark field. Illustrative inputs—not a CAPRI benchmark: growing history180k, curated single session90k, scoped roles60k. The stable brief retains task, latest correction, relevant source, scope/checks and retrievable originals.')+f'''
-Focused contexts can avoid replaying discarded exploration. They still need enough information to do the work. The sharks frame the working brief; the black-hole lesson shows a **six-call input illustration**, not measured occupancy or a claim that caches swallow instructions.
+'''+group('graph',static=True)+f'''
 
-- Growing history: `{n} × {k(g['initial'])} + {k(g['increment'])} × ({steps}) = {k(totals['growing'])}`.
-- Curated single session: `{n} × {k(c['initial'])} + {k(c['increment'])} × {c['retained_steps']} = {k(totals['curated'])}`.
-- Scoped roles: the listed requests sum to **{k(totals['scoped'])}**, including assumed role instructions and handoff inputs.
+**Illustrative inputs — not a CAPRI benchmark.** Across six assumed requests: growing history **{k(t['growing'])}**, a curated single session **{k(t['curated'])}**, scoped roles **{k(t['scoped'])}** including already-budgeted instructions and handoffs.
 
-`(180−60)/180 = {m['scoped_vs_growing_percent_lower']}%` and `(90−60)/90 = {m['scoped_vs_curated_percent_lower']}%` are **lower assumed input**, not measured cost, speed, quality or retention gains. Equal work, sufficient information and equal quality remain untested. A carefully curated single session can match or beat scoped input; role count alone does not cause a saving.
+- Growing: `{n} × {k(g['initial'])} + {k(g['increment'])} × ({steps}) = {k(t['growing'])}`.
+- Curated: `{n} × {k(c['initial'])} + {k(c['increment'])} × {c['retained_steps']} = {k(t['curated'])}`.
+- `(180−60)/180 = {m['scoped_vs_growing_percent_lower']}%` and `(90−60)/90 = {m['scoped_vs_curated_percent_lower']}%` are **hypothetical lower input**, not demonstrated cost, speed, quality or retention gains.
+
+Equal work, sufficient information and equal quality remain untested. The 180k total spans calls; it is not one simultaneously occupied context window. Exact active occupancy remains **UNKNOWN**. A carefully curated single session can match or beat scoped input.
 
 <details>
-<summary>Read every assumed input — tokens per request</summary>
+<summary>Every assumed input — tokens per request</summary>
 
 | Request | Growing history | Curated single session | Scoped roles |
 | ---: | ---: | ---: | ---: |
-'''+''.join(f"| {row['request']} | {row['values']['growing']:,} | {row['values']['curated']:,} | {row['values']['scoped']:,} |\n" for row in m['requests'])+f'''| **Total** | **{totals['growing']:,}** | **{totals['curated']:,}** | **{totals['scoped']:,}** |
+'''+''.join(f"| {r['request']} | {r['values']['growing']:,} | {r['values']['curated']:,} | {r['values']['scoped']:,} |\n" for r in m['requests'])+'''| **Total** | **180,000** | **90,000** | **60,000** |
 
-The {k(totals['growing'])} total spans six calls; it is not a simultaneously filled context window. Peak request input is a footprint, not exact active occupancy. Exact occupancy stays **UNKNOWN** where the runtime cannot establish it.
-
-[Canonical assumptions](showcase/capri/source-match/source/assets/data/context-budget.json) · [Full arithmetic and accounting](docs/CONTEXT_BUDGET.md) · [Benchmark protocol and unrun comparisons](docs/BENCHMARK_PROTOCOL.md)
+[Canonical assumptions](showcase/capri/source-match/source/assets/data/context-budget.json) · [Full arithmetic and cache counterexample](docs/CONTEXT_BUDGET.md) · [Unrun comparisons](docs/BENCHMARK_PROTOCOL.md)
 
 </details>
 
-## Keep the correction attached
+'''+group('horizon','coordination',static=static,single=static)+'''
 
-'''+picture('handoff','The original reaching hands and ASCII interruptions carry blank→Untitled near actual contact, with full-body Capri beneath. The complete authored packet includes label.py-only scope, outer trim, case/internal spaces and TypeError for non-strings, with expected examples. This is teaching artwork, not an observed model failure.')+'''
-**Authored fixture A, not a recorded model result.** An incomplete brief such as “return Untitled for blanks” loses compatible rules. The complete packet carries the original request, latest correction, relevant source, file scope and expected checks:
-
-| Check | Expected result after the correction |
-| :--- | :--- |
-| `"   "` | `"Untitled"` |
-| `"  MiX  Case  "` | `"MiX  Case"` |
-| `None` | raises `TypeError` |
-| Changed files | only `label.py` |
-
-Trim **outer** whitespace; preserve case and internal spaces. The latest correction replaces `Anonymous` with `Untitled` for blanks. Review can reread the [original request](evaluation/fixtures/A/INITIAL.md) and [correction](evaluation/fixtures/A/CORRECTION.md). A summary can omit a needed requirement; that is not cache-driven instruction deletion.
-
-## Keep requirements; count coordination
-
-'''+picture('retained','The original skull, sword and diagonal rain retain the scope/current-rule/source/check brief beside Capri. The original rotating dotted loop and surrounding wave carry60k+H, with H30k yielding90k, equal to the curated example. H is additional input beyond already-budgeted handoffs; no price or quality break-even is claimed.')+f'''
-Shortening input is useful only if needed information remains available. Keep authoritative originals for implementation and review. Separate checking can challenge a candidate, but it also adds coordination, output and time.
-
-Let **H** be additional input beyond the scoped example's already-budgeted instructions and handoffs. Scoped input becomes **60k + H**; its input margin versus curated is **30k − H**. At **H = {k(m['break_even_additional_input'])}**, that raw-input advantage disappears. Do not count an included handoff twice.
+Focused input can avoid replaying discarded exploration; it still needs enough information. Extra coordination must earn its cost: **60k + H** adds input beyond the handoffs already counted. At **H = 30k**, scoped and curated input are equal; the margin is **30k − H**. Do not count a handoff twice.
 
 <details>
-<summary>Inspect additional-input sensitivity and cost limits</summary>
+<summary>Additional-input sensitivity and accounting limits</summary>
 
 | Additional H | Scoped input | Relation to curated 90k |
 | ---: | ---: | :--- |
-'''+''.join(f"| {k(row['additional_input'])} | {k(row['scoped_total'])} | "+('equal assumed input' if row['relation']=='equal' else f"{row['percent']}% {row['relation']} assumed input")+' |\n' for row in m['overhead_samples'])+'''
-A short, clear task often fits one ordinary session. Use explicit handoffs when a plan, scoped implementation and separate checking are useful; the coordination has to earn its cost.
-
-Prefix caching reuses matching computation. It does not delete instructions, create semantic memory or free context capacity. Fewer raw inputs do not determine the price order. Actual accounting needs disjoint ordinary-input, cached-read, cache-write and output buckets, applicable tiers, and every role/probe/retry/compaction/recovery attempt. [Detailed assumptions and simplified cache counterexample](docs/CONTEXT_BUDGET.md) · [Actual measurement protocol](docs/BENCHMARK_PROTOCOL.md).
+'''+''.join(f"| {k(r['additional_input'])} | {k(r['scoped_total'])} | "+('equal assumed input' if r['relation']=='equal' else f"{r['percent']}% {r['relation']} assumed input")+' |\n' for r in m['overhead_samples'])+'''
+A short, clear task often fits one ordinary session. Prefix caching reuses matching computation; it does not delete instructions or free context capacity. Fewer raw inputs do not establish price order. Actual accounting needs disjoint ordinary-input, cached-read, cache-write and output buckets, applicable tiers and every role/probe/retry/compaction/recovery attempt. [Accounting assumptions](docs/CONTEXT_BUDGET.md) · [Measurement protocol](docs/BENCHMARK_PROTOCOL.md).
 
 </details>
 
-## Check the candidate against the request
+## What a handoff must retain
 
-'''+picture('checking','The actual scanline cat changes from monochrome to Capri colors while full-body Review Capri arrives and beams follow source-frame eye anchors. This is an authored checking-stage illustration. A reviewer compares request, correction, patch and evidence; beams do not scan, secure or approve the repository.')+'''
-A fresh checking context compares the request and correction with the candidate and its evidence. Shared model blind spots remain possible. Findings and limits return to the human; the illustration is not a native controller recording or an approval.
+'''+group('handoff','checking',static=static,single=static)+'''
 
-There is no completed native comparison proving CAPRI cheaper, faster or better at requirements retention. Offline CI, model outcomes, total cost and visual approval are separate evidence. [Current status](docs/STATUS.md) · [Evaluation](EVALUATION.md).
+**Authored fixture A, not a recorded model result.** The latest correction changes blank input from `Anonymous` to `Untitled`. An incomplete summary can lose compatible rules; review rereads the [original request](evaluation/fixtures/A/INITIAL.md) and [correction](evaluation/fixtures/A/CORRECTION.md).
+
+| Rule or check | Required result |
+| :--- | :--- |
+| `"   "` | `"Untitled"` |
+| `"  MiX  Case  "` | `"MiX  Case"`: trim outer whitespace, preserve case/internal spaces |
+| `None` | raises `TypeError`: non-strings are rejected |
+| Allowed changes | only `label.py` |
+
+The checking context compares request, correction, patch and evidence. Findings and limits return to the human. Shared model blind spots remain; neither the illustration nor offline CI proves CAPRI cheaper, faster or better at retaining requirements.
+
+'''+divider()+'''
 
 <a id="quickstart"></a>
 
 ## Start with offline checks
 
-'''+quick+picture('closing','A compact still from the supplied elastic stack keeps scope, current correction and evidence together beside full-body Capri. It closes the teaching story and leads to actual setup; the companion retains its forward/reverse source loop.',True)+'''
+'''+group('requirements','closing',static=True,single=static)+'\n\nKeep original requirements and evidence accessible; full source interactions remain in the companion.\n\n'+quick+'''
 ## Explore the working source
 
-[Interactive companion](docs/VISUAL_STORY.md#local-companion) · [Complete static edition](docs/README_STATIC.md) · [Detailed explanation](docs/CAPRI_EXPLAINS.md) · [Art studies](docs/AFTERIMAGE.md) · [Asset provenance and rights](docs/SOURCE_MATCH.md#sources-and-rights)
+[Interactive companion](docs/VISUAL_STORY.md#local-companion) · [Single-column static edition](docs/README_STATIC.md) · [Detailed explanation](docs/CAPRI_EXPLAINS.md) · [Art studies](docs/AFTERIMAGE.md) · [Sources and rights](docs/SOURCE_MATCH.md#sources-and-rights)
 
-GitHub displays exported media, links and native disclosures. The local companion provides request selection, additional-input control, play/pause/replay/seek and source interactions. Its controls change real local scene state.
+GitHub displays media and native links/disclosures. The local companion supplies real request/H selection, play/pause/replay/seek and source interactions. The graph is a separate readable figure; source art remains animated.
 
-| Documentation | Purpose |
-| :--- | :--- |
-| [Architecture](ARCHITECTURE.md) | Ownership, handoffs, confinement and recovery |
-| [Implementation guide](IMPLEMENTATION_README.md) | Existing commands and native startup |
-| [Benchmark protocol](docs/BENCHMARK_PROTOCOL.md) | Quality, usage, cost and missing evidence |
-| [Current status](docs/STATUS.md) | Qualification and human review gates |
-| [Visual story build/source record](docs/VISUAL_STORY.md) | Canonical inputs, edited scenes, exports and verification |
-| [Contributing](CONTRIBUTING.md) | Project change discipline |
+[Architecture](ARCHITECTURE.md) · [Implementation guide](IMPLEMENTATION_README.md) · [Benchmark protocol](docs/BENCHMARK_PROTOCOL.md) · [Status](docs/STATUS.md) · [Presentation build](docs/VISUAL_STORY.md) · [Contributing](CONTRIBUTING.md)
 
-**Mani Marami Milani.** Unofficial Capri-inspired fan project; unaffiliated with CD PROJEKT RED, TRIGGER or Netflix. Original banner and all source credits remain preserved. Native sharks/horizon use actual source implementations; five other effect families are credited footage composites. Character acting is fan-art reconstruction, not an official rig or exact anime acting. Source reuse and underlying character rights remain as recorded; repository stays private.
+**Mani Marami Milani.** Unofficial Capri-inspired fan project; unaffiliated with CD PROJEKT RED, TRIGGER or Netflix. Original credits and MIT/OFL notices remain. Native sharks/horizon use supplied source implementations; the five other effects are credited footage composites. Character acting is a fan-art reconstruction. Underlying character/media rights remain as recorded; keep private.
 '''
-    brief=image('brief','The original articulated shark field frames a stable brief: request, latest correction, relevant source, allowed changes and checks; originals remain retrievable.')
-    root=root.replace('## Keep the correction attached', '## Keep the brief focused\n\n'+brief+'\n\nSelect what the next decision needs: request, latest correction, relevant source, allowed files and checks. Keep authoritative originals retrievable.\n\n## Keep the correction attached',1)
-    # Keep both checking explanations next to the paired correction/checking art.
-    start=root.index('## Check the candidate against the request')
-    end=root.index('<a id="quickstart">',start)
-    checking=root[start:end];root=root[:start]+root[end:]
-    root=root.replace('## Keep requirements; count coordination',checking+'## Keep requirements; count coordination',1)
-    root=root.replace('[Complete static edition](docs/README_STATIC.md)', '[Single-column static/mobile edition](docs/README_STATIC.md)')
-    root=root.replace('GitHub displays exported media, links and native disclosures.', 'GitHub displays exported media, links and native disclosures. Portrait tables retain two columns on narrow views; all essential rules and numbers are readable below, with full portraits and a single-column static edition.')
-    (ROOT/'README.md').write_text(root)
-    # The complete static/mobile route deliberately uses one column for each portrait.
-    single=re.sub(r'<!-- portrait-pair:(\w+),(\w+) -->.*?<!-- /portrait-pair -->',lambda m:image(m[1],m[1].capitalize(),True)+'\n\n'+image(m[2],m[2].capitalize(),True),root,flags=re.S)
-    static=single.replace('showcase/capri/hero.gif','showcase/capri/hero.png');static=re.sub(r'(story/exports/[^"\s]+)\.gif',r'\1.png',static)
-    static=re.sub(r'((?:src|srcset|href)="|\]\()((?!https?:|#)[^"\s)]+)',lambda x:x[1]+'../'+x[2],static)
-    (ROOT/'docs/README_STATIC.md').write_text('<!-- Generated from the same V4 canonical story. -->\n'+static)
-    from build_capri_story_docs import main as build_docs
-    build_docs(m)
-    print('V4 root, static README and native explanations rebuilt')
+    return opening
+
+def main():
+    root=build();(ROOT/'README.md').write_text(root)
+    static=build(static=True);static=re.sub(r'((?:src|srcset|href)="|\]\()((?!https?:|#)[^"\s)]+)',lambda m:m[1]+'../'+m[2],static);(ROOT/'docs/README_STATIC.md').write_text('<!-- Generated from the same compact V5 source/data. -->\n'+static)
+    from build_capri_story_docs import main as docs
+    docs(json.loads((STORY/'model-results.json').read_text()))
+    print('Compact root and single-column static edition rebuilt')
 if __name__=='__main__':main()

@@ -1,50 +1,52 @@
-<!-- Generated from the same V4 canonical story. -->
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/hero.png" width="1000" height="343">
-  <source srcset="../showcase/capri/hero.png" width="1000" height="343">
-  <img src="../showcase/capri/hero.png" alt="CAPRI — green face, expressive eyes and jagged magenta silhouette; the approved original banner." width="100%" height="343">
-</picture>
+<!-- Generated from the same compact V5 source/data. -->
+<picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/hero.png"><img src="../showcase/capri/hero.png" alt="CAPRI — the preserved original magenta and green banner." width="1000"></picture>
 
 CAPRI gives planning, coding and review their own Codex sessions. Explicit handoffs carry current decisions, relevant files, scope and checks. One worker edits; a separate reviewer checks the candidate against the request and evidence. **You decide what ships.**
 
-**Experimental.** Offline checks cover implementation contracts; native launch/recovery qualification remains pending. [Setup](#quickstart) · [Architecture](../ARCHITECTURE.md) · [Current status](../docs/STATUS.md) · [Evaluation and evidence](../EVALUATION.md).
+**Experimental.** Offline checks cover implementation contracts; native launch/recovery qualification remains pending. [Setup](#quickstart) · [Architecture](../ARCHITECTURE.md) · [Current status](../docs/STATUS.md) · [Evaluation](../EVALUATION.md).
 
 <a id="the-loop"></a>
 
-## Plan, implement, review
+## How the loop works
 
-<picture><source media="(prefers-reduced-motion: reduce) and (max-width: 768px)" srcset="../showcase/capri/story/exports/workflow-portrait.png" width="600" height="900"><source media="(max-width: 768px)" srcset="../showcase/capri/story/exports/workflow-portrait.png" width="600" height="900"><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/workflow-landscape.png" width="1200" height="675"><source srcset="../showcase/capri/story/exports/workflow-landscape.png" width="1200" height="675"><img src="../showcase/capri/story/exports/workflow-landscape.png" alt="Three full-body Capri poses carry ordered stages. Thinker receives request, correction and source and returns scope/checks. Doer returns patch/results/limits. Reviewer returns findings; Thinker reports to the human. One write owner; no automatic approval." width="100%" height="675"></picture>
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/workflow-portrait.png"><img src="../showcase/capri/story/exports/workflow-portrait.png" alt="Three full-body poses: Plan returns scope/checks, Build returns a patch, Review returns findings. One writer; the human decides." width="280"></picture></p>
 
-1. **Thinker / Plan:** request + latest correction + relevant source → brief, scope and acceptance checks.
-2. **Doer / Build:** brief + allowed files → patch, check results and known limits.
-3. **Reviewer / Review:** request + correction + candidate + evidence → findings and uncertainty.
-4. **Thinker report → you:** reconcile the evidence and return the decision. **One writer; ordered stages.** Authoritative originals stay retrievable; uncertain effects hold.
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/brief-portrait.png"><img src="../showcase/capri/story/exports/brief-portrait.png" alt="Actual native shark field, full-body Capri and a persistent brief: request/correction, relevant source, scope/checks and retrievable originals." width="280"></picture></p>
+
+A scoped brief carries the request, latest correction, relevant source, allowed files and expected checks. Authoritative originals remain retrievable.
+
+1. **Thinker / Plan:** request + correction + source → scope and acceptance checks.
+2. **Doer / Build:** brief + allowed files → patch, check results and limits.
+3. **Reviewer / Review:** request + candidate + evidence → findings.
+4. **Thinker report → you:** reconcile findings and decide. **One writer; ordered stages.** Uncertain effects hold.
 
 <details>
-<summary>Inside the loop — models and ownership</summary>
+<summary>Models, ownership and frozen handoffs</summary>
 
-All three roles request `gpt-6.1-sol`. The selected profile uses medium Thinker/Doer effort and high Reviewer effort. Frozen contracts, checkpoints and source checks bind handoffs to their inputs. Formal outcomes stop at `AWAITING_HUMAN`; no successor starts automatically. Separate sessions can still share model blind spots.
+All three roles request `gpt-6.1-sol`. The selected profile uses medium Thinker/Doer effort and high Reviewer effort. Contracts, checkpoints and source checks bind handoffs to their inputs. Formal outcomes stop at `AWAITING_HUMAN`; no successor starts automatically. Separate contexts can share model blind spots.
 
-[Native profile](../NATIVE_PROFILE.md) · [Architecture](../ARCHITECTURE.md) · [Qualification status](../docs/STATUS.md)
+[Native profile](../NATIVE_PROFILE.md) · [Architecture](../ARCHITECTURE.md) · [Qualification](../docs/STATUS.md)
 
 </details>
 
+<p align="center"><img src="../showcase/capri/story/accent.svg" alt="" width="900"></p>
+
 <a id="context-and-evidence"></a>
 
-## What the next request needs
+## Why scope the input
 
-<picture><source media="(prefers-reduced-motion: reduce) and (max-width: 768px)" srcset="../showcase/capri/story/exports/quantitative-portrait.png" width="600" height="900"><source media="(max-width: 768px)" srcset="../showcase/capri/story/exports/quantitative-portrait.png" width="600" height="900"><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/quantitative-landscape.png" width="1200" height="675"><source srcset="../showcase/capri/story/exports/quantitative-landscape.png" width="1200" height="675"><img src="../showcase/capri/story/exports/quantitative-landscape.png" alt="The real ray-traced horizon and full-body Capri share a labelled six-request input graph: growing180k, curated90k, scoped60k. Illustrative inputs, not a CAPRI benchmark." width="100%" height="675"></picture>
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/graph-graph.png"><img src="../showcase/capri/story/exports/graph-graph.png" alt="Illustrative inputs, not a CAPRI benchmark: six assumed requests, thousand tokens per request. Growing history180k, curated 90k, scoped60k." width="320"></picture></p>
 
-Focused contexts can avoid replaying discarded exploration. They still need enough information to do the work. The sharks frame the working brief; the black-hole lesson shows a **six-call input illustration**, not measured occupancy or a claim that caches swallow instructions.
+**Illustrative inputs — not a CAPRI benchmark.** Across six assumed requests: growing history **180k**, a curated single session **90k**, scoped roles **60k** including already-budgeted instructions and handoffs.
 
-- Growing history: `6 × 10k + 8k × (0+1+2+3+4+5) = 180k`.
-- Curated single session: `6 × 10k + 2k × 15 = 90k`.
-- Scoped roles: the listed requests sum to **60k**, including assumed role instructions and handoff inputs.
+- Growing: `6 × 10k + 8k × (0+1+2+3+4+5) = 180k`.
+- Curated: `6 × 10k + 2k × 15 = 90k`.
+- `(180−60)/180 = 66.7%` and `(90−60)/90 = 33.3%` are **hypothetical lower input**, not demonstrated cost, speed, quality or retention gains.
 
-`(180−60)/180 = 66.7%` and `(90−60)/90 = 33.3%` are **lower assumed input**, not measured cost, speed, quality or retention gains. Equal work, sufficient information and equal quality remain untested. A carefully curated single session can match or beat scoped input; role count alone does not cause a saving.
+Equal work, sufficient information and equal quality remain untested. The 180k total spans calls; it is not one simultaneously occupied context window. Exact active occupancy remains **UNKNOWN**. A carefully curated single session can match or beat scoped input.
 
 <details>
-<summary>Read every assumed input — tokens per request</summary>
+<summary>Every assumed input — tokens per request</summary>
 
 | Request | Growing history | Curated single session | Scoped roles |
 | ---: | ---: | ---: | ---: |
@@ -56,54 +58,18 @@ Focused contexts can avoid replaying discarded exploration. They still need enou
 | 6 | 50,000 | 20,000 | 12,000 |
 | **Total** | **180,000** | **90,000** | **60,000** |
 
-The 180k total spans six calls; it is not a simultaneously filled context window. Peak request input is a footprint, not exact active occupancy. Exact occupancy stays **UNKNOWN** where the runtime cannot establish it.
-
-[Canonical assumptions](../showcase/capri/source-match/source/assets/data/context-budget.json) · [Full arithmetic and accounting](../docs/CONTEXT_BUDGET.md) · [Benchmark protocol and unrun comparisons](../docs/BENCHMARK_PROTOCOL.md)
+[Canonical assumptions](../showcase/capri/source-match/source/assets/data/context-budget.json) · [Full arithmetic and cache counterexample](../docs/CONTEXT_BUDGET.md) · [Unrun comparisons](../docs/BENCHMARK_PROTOCOL.md)
 
 </details>
 
-## Keep the brief focused
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/horizon-portrait.png"><img src="../showcase/capri/story/exports/horizon-portrait.png" alt="The original native ray-traced ASCII horizon with full-body Capri; credited illustration of selective input, not a measured context window." width="280"></picture></p>
 
-<picture><source media="(prefers-reduced-motion: reduce) and (max-width: 768px)" srcset="../showcase/capri/story/exports/brief-portrait.png" width="600" height="900"><source media="(max-width: 768px)" srcset="../showcase/capri/story/exports/brief-portrait.png" width="600" height="900"><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/brief-landscape.png" width="1200" height="675"><source srcset="../showcase/capri/story/exports/brief-landscape.png" width="1200" height="675"><img src="../showcase/capri/story/exports/brief-landscape.png" alt="The original articulated shark field frames a stable brief: request, latest correction, relevant source, allowed changes and checks; originals remain retrievable." width="100%" height="675"></picture>
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/coordination-portrait.png"><img src="../showcase/capri/story/exports/coordination-portrait.png" alt="The supplied dotted loop carries60k+H. Additional H30k yields90k, equal to the curated input assumption." width="280"></picture></p>
 
-Select what the next decision needs: request, latest correction, relevant source, allowed files and checks. Keep authoritative originals retrievable.
-
-## Keep the correction attached
-
-<picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/handoff-portrait.png" width="600" height="900"><source srcset="../showcase/capri/story/exports/handoff-portrait.png" width="600" height="900"><img src="../showcase/capri/story/exports/handoff-portrait.png" alt="Handoff" width="100%" height="900"></picture>
-
-<picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/checking-portrait.png" width="600" height="900"><source srcset="../showcase/capri/story/exports/checking-portrait.png" width="600" height="900"><img src="../showcase/capri/story/exports/checking-portrait.png" alt="Checking" width="100%" height="900"></picture>
-
-**Authored fixture A, not a recorded model result.** An incomplete brief such as “return Untitled for blanks” loses compatible rules. The complete packet carries the original request, latest correction, relevant source, file scope and expected checks:
-
-| Check | Expected result after the correction |
-| :--- | :--- |
-| `"   "` | `"Untitled"` |
-| `"  MiX  Case  "` | `"MiX  Case"` |
-| `None` | raises `TypeError` |
-| Changed files | only `label.py` |
-
-Trim **outer** whitespace; preserve case and internal spaces. The latest correction replaces `Anonymous` with `Untitled` for blanks. Review can reread the [original request](../evaluation/fixtures/A/INITIAL.md) and [correction](../evaluation/fixtures/A/CORRECTION.md). A summary can omit a needed requirement; that is not cache-driven instruction deletion.
-
-## Check the candidate against the request
-
-
-A fresh checking context compares the request and correction with the candidate and its evidence. Shared model blind spots remain possible. Findings and limits return to the human; the illustration is not a native controller recording or an approval.
-
-There is no completed native comparison proving CAPRI cheaper, faster or better at requirements retention. Offline CI, model outcomes, total cost and visual approval are separate evidence. [Current status](../docs/STATUS.md) · [Evaluation](../EVALUATION.md).
-
-## Keep requirements; count coordination
-
-<picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/requirements-portrait.png" width="600" height="900"><source srcset="../showcase/capri/story/exports/requirements-portrait.png" width="600" height="900"><img src="../showcase/capri/story/exports/requirements-portrait.png" alt="Requirements" width="100%" height="900"></picture>
-
-<picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/coordination-portrait.png" width="600" height="900"><source srcset="../showcase/capri/story/exports/coordination-portrait.png" width="600" height="900"><img src="../showcase/capri/story/exports/coordination-portrait.png" alt="Coordination" width="100%" height="900"></picture>
-
-Shortening input is useful only if needed information remains available. Keep authoritative originals for implementation and review. Separate checking can challenge a candidate, but it also adds coordination, output and time.
-
-Let **H** be additional input beyond the scoped example's already-budgeted instructions and handoffs. Scoped input becomes **60k + H**; its input margin versus curated is **30k − H**. At **H = 30k**, that raw-input advantage disappears. Do not count an included handoff twice.
+Focused input can avoid replaying discarded exploration; it still needs enough information. Extra coordination must earn its cost: **60k + H** adds input beyond the handoffs already counted. At **H = 30k**, scoped and curated input are equal; the margin is **30k − H**. Do not count a handoff twice.
 
 <details>
-<summary>Inspect additional-input sensitivity and cost limits</summary>
+<summary>Additional-input sensitivity and accounting limits</summary>
 
 | Additional H | Scoped input | Relation to curated 90k |
 | ---: | ---: | :--- |
@@ -112,15 +78,38 @@ Let **H** be additional input beyond the scoped example's already-budgeted instr
 | 30k | 90k | equal assumed input |
 | 45k | 105k | 16.7% higher assumed input |
 
-A short, clear task often fits one ordinary session. Use explicit handoffs when a plan, scoped implementation and separate checking are useful; the coordination has to earn its cost.
-
-Prefix caching reuses matching computation. It does not delete instructions, create semantic memory or free context capacity. Fewer raw inputs do not determine the price order. Actual accounting needs disjoint ordinary-input, cached-read, cache-write and output buckets, applicable tiers, and every role/probe/retry/compaction/recovery attempt. [Detailed assumptions and simplified cache counterexample](../docs/CONTEXT_BUDGET.md) · [Actual measurement protocol](../docs/BENCHMARK_PROTOCOL.md).
+A short, clear task often fits one ordinary session. Prefix caching reuses matching computation; it does not delete instructions or free context capacity. Fewer raw inputs do not establish price order. Actual accounting needs disjoint ordinary-input, cached-read, cache-write and output buckets, applicable tiers and every role/probe/retry/compaction/recovery attempt. [Accounting assumptions](../docs/CONTEXT_BUDGET.md) · [Measurement protocol](../docs/BENCHMARK_PROTOCOL.md).
 
 </details>
+
+## What a handoff must retain
+
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/handoff-portrait.png"><img src="../showcase/capri/story/exports/handoff-portrait.png" alt="Original reaching hands carry blank to Untitled beside full-body Capri. Authored fixture A, not an observed model failure." width="280"></picture></p>
+
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/checking-portrait.png"><img src="../showcase/capri/story/exports/checking-portrait.png" alt="The source cat takeover and eye-anchored beams accompany full-body Review Capri. This illustration does not approve or secure code." width="280"></picture></p>
+
+**Authored fixture A, not a recorded model result.** The latest correction changes blank input from `Anonymous` to `Untitled`. An incomplete summary can lose compatible rules; review rereads the [original request](../evaluation/fixtures/A/INITIAL.md) and [correction](../evaluation/fixtures/A/CORRECTION.md).
+
+| Rule or check | Required result |
+| :--- | :--- |
+| `"   "` | `"Untitled"` |
+| `"  MiX  Case  "` | `"MiX  Case"`: trim outer whitespace, preserve case/internal spaces |
+| `None` | raises `TypeError`: non-strings are rejected |
+| Allowed changes | only `label.py` |
+
+The checking context compares request, correction, patch and evidence. Findings and limits return to the human. Shared model blind spots remain; neither the illustration nor offline CI proves CAPRI cheaper, faster or better at retaining requirements.
+
+<p align="center"><img src="../showcase/capri/story/accent.svg" alt="" width="900"></p>
 
 <a id="quickstart"></a>
 
 ## Start with offline checks
+
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/requirements-support.png"><img src="../showcase/capri/story/exports/requirements-support.png" alt="Small source skull/sword/rain vignette: keep original rules, correction and checks retrievable." width="240"></picture></p>
+
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/closing-support.png"><img src="../showcase/capri/story/exports/closing-support.png" alt="Small source elastic-stack vignette with Capri: keep evidence together and continue to offline checks." width="240"></picture></p>
+
+Keep original requirements and evidence accessible; full source interactions remain in the companion.
 
 Start with offline inspection from your checkout. Linux x86_64, Python 3.11+ with pip/venv, bubblewrap and working user, mount, PID and network namespaces are required.
 
@@ -144,21 +133,13 @@ Native use additionally requires the qualified Codex CLI 0.163.0/profile, existi
 
 </details>
 
-<picture><source media="(prefers-reduced-motion: reduce) and (max-width: 768px)" srcset="../showcase/capri/story/exports/closing-portrait.png" width="600" height="900"><source media="(max-width: 768px)" srcset="../showcase/capri/story/exports/closing-portrait.png" width="600" height="900"><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/story/exports/closing-landscape.png" width="1200" height="675"><source srcset="../showcase/capri/story/exports/closing-landscape.png" width="1200" height="675"><img src="../showcase/capri/story/exports/closing-landscape.png" alt="A compact still from the supplied elastic stack keeps scope, current correction and evidence together beside full-body Capri. It closes the teaching story and leads to actual setup; the companion retains its forward/reverse source loop." width="100%" height="675"></picture>
 
 ## Explore the working source
 
-[Interactive companion](../docs/VISUAL_STORY.md#local-companion) · [Single-column static/mobile edition](../docs/README_STATIC.md) · [Detailed explanation](../docs/CAPRI_EXPLAINS.md) · [Art studies](../docs/AFTERIMAGE.md) · [Asset provenance and rights](../docs/SOURCE_MATCH.md#sources-and-rights)
+[Interactive companion](../docs/VISUAL_STORY.md#local-companion) · [Single-column static edition](../docs/README_STATIC.md) · [Detailed explanation](../docs/CAPRI_EXPLAINS.md) · [Art studies](../docs/AFTERIMAGE.md) · [Sources and rights](../docs/SOURCE_MATCH.md#sources-and-rights)
 
-GitHub displays exported media, links and native disclosures. Portrait tables retain two columns on narrow views; all essential rules and numbers are readable below, with full portraits and a single-column static edition. The local companion provides request selection, additional-input control, play/pause/replay/seek and source interactions. Its controls change real local scene state.
+GitHub displays media and native links/disclosures. The local companion supplies real request/H selection, play/pause/replay/seek and source interactions. The graph is a separate readable figure; source art remains animated.
 
-| Documentation | Purpose |
-| :--- | :--- |
-| [Architecture](../ARCHITECTURE.md) | Ownership, handoffs, confinement and recovery |
-| [Implementation guide](../IMPLEMENTATION_README.md) | Existing commands and native startup |
-| [Benchmark protocol](../docs/BENCHMARK_PROTOCOL.md) | Quality, usage, cost and missing evidence |
-| [Current status](../docs/STATUS.md) | Qualification and human review gates |
-| [Visual story build/source record](../docs/VISUAL_STORY.md) | Canonical inputs, edited scenes, exports and verification |
-| [Contributing](../CONTRIBUTING.md) | Project change discipline |
+[Architecture](../ARCHITECTURE.md) · [Implementation guide](../IMPLEMENTATION_README.md) · [Benchmark protocol](../docs/BENCHMARK_PROTOCOL.md) · [Status](../docs/STATUS.md) · [Presentation build](../docs/VISUAL_STORY.md) · [Contributing](../CONTRIBUTING.md)
 
-**Mani Marami Milani.** Unofficial Capri-inspired fan project; unaffiliated with CD PROJEKT RED, TRIGGER or Netflix. Original banner and all source credits remain preserved. Native sharks/horizon use actual source implementations; five other effect families are credited footage composites. Character acting is fan-art reconstruction, not an official rig or exact anime acting. Source reuse and underlying character rights remain as recorded; repository stays private.
+**Mani Marami Milani.** Unofficial Capri-inspired fan project; unaffiliated with CD PROJEKT RED, TRIGGER or Netflix. Original credits and MIT/OFL notices remain. Native sharks/horizon use supplied source implementations; the five other effects are credited footage composites. Character acting is a fan-art reconstruction. Underlying character/media rights remain as recorded; keep private.

@@ -1,11 +1,11 @@
 /* Native scene clocks own art. Request inspection owns only mathematical state.
- * Export callers opt into deterministic shared-clock emphasis explicitly. */
+ * Graph exports stay still; mathematical rows never depend on art time. */
 (() => {
   'use strict';
   const data = JSON.parse(document.getElementById('story-data').textContent);
   const query = new URLSearchParams(location.search), exporting = query.has('export');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const narrow = matchMedia(`(max-width: ${data.formats.mobile_breakpoint_px}px)`);
+
   const requestInput = document.getElementById('story-request');
   const requestOutput = document.getElementById('story-values');
   const overheadInput = document.getElementById('story-overhead');
@@ -60,10 +60,11 @@
   }
   function sizeFrame(frame) {
     const name = frame.closest('[data-lesson]').dataset.lesson;
-    const family = data.config.lessons[name].family;
-    const layout = family === 'portrait' || (exporting ? query.get('layout') === 'portrait' : narrow.matches) ? 'portrait' : 'landscape';
+    const lesson = data.config.lessons[name];
+    const layout = exporting ? query.get('layout') : (lesson.family === 'graph' ? 'graph' : lesson.family === 'support' ? 'support' : 'portrait');
     frame.dataset.layout = layout;
-    const size = data.formats.families[layout];
+    const size = data.formats.families[data.formats.layouts[layout]];
+    frame.parentElement.style.width = size.width + 'px';
     frame.firstElementChild.style.transform = `scale(${frame.clientWidth / size.width})`;
   }
   const frames = [...document.querySelectorAll('.story-frame')];
@@ -73,25 +74,16 @@
     selectRequest(request, {animate: false});
   });
   frames.forEach(frame => resize.observe(frame));
-  narrow.addEventListener('change', () => { frames.forEach(sizeFrame); selectRequest(request, {animate: false}); });
   window.capriStory = {
     get request() { return request; }, selectRequest,
-    paint(scene, time) {
-      // Live paints do no graph DOM work. Export time is an explicit separate contract.
-      if (exporting && scene.name === 'horizon') {
-        const interval = data.config.lessons.quantitative.duration_ms / data.model.calls;
-        const index = Math.min(data.model.calls - 1, Math.floor(time / interval));
-        const progress = index ? index - 1 + smooth((time % interval) / 160) : (data.model.calls - 1) * (1 - smooth(time / 160));
-        selectRequest(index + 1, {progress, animate: false});
-      }
-    }
+    paint() { /* Mathematical inspection has no dependency on art time. */ }
   };
   async function boot() {
     try {
       const app = window.sceneApp;
       const groups = Object.fromEntries(Object.entries(data.config.lessons).map(([name, lesson]) => [name, lesson.members]));
       const durations = Object.fromEntries(Object.entries(data.config.lessons).map(([name, lesson]) => [name, lesson.duration_ms]));
-      app.scenes.horizon.duration = durations.quantitative;
+      app.scenes.horizon.duration = durations.horizon;
       requestInput.addEventListener('change', event => selectRequest(Number(event.target.value)));
       overheadInput.addEventListener('input', event => selectBudget(Number(event.target.value)));
       selectRequest(request, {animate: false}); selectBudget(extra);
@@ -116,8 +108,8 @@
       if (lesson) {
         if (!groups[lesson]) throw new Error('Unknown export lesson');
         for (const element of document.querySelectorAll('[data-lesson]')) element.hidden = element.dataset.lesson !== lesson;
-        document.getElementById('capri-source-scenes').hidden = !['quantitative', 'brief'].includes(lesson);
-        document.getElementById('capri-reference-composites').hidden = ['workflow', 'quantitative', 'brief'].includes(lesson);
+        document.getElementById('capri-source-scenes').hidden = false;
+        document.getElementById('capri-reference-composites').hidden = false;
         for (const [name, scene] of Object.entries(app.scenes)) scene.element.hidden = !groups[lesson].includes(name);
         document.body.dataset.lesson = lesson;
         frames.forEach(sizeFrame);

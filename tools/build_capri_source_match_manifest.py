@@ -13,8 +13,9 @@ def register(media):
         for name,lesson in configuration['lessons'].items():
             for layout in lesson['layouts']:
                 active.append(f'exports/{name}-{layout}.png')
-                if not lesson.get('static_only'):active.extend([f'exports/{name}-{layout}.gif',f'exports/{name}-{layout}-timeline.json'])
+                if not lesson.get('static_only') and layout not in lesson.get('static_layouts',[]):active.extend([f'exports/{name}-{layout}.gif',f'exports/{name}-{layout}-timeline.json'])
         record['active_exports']=active
+        record['root_exports']=[f"exports/{name}-{lesson['root_layout']}.{'png' if lesson.get('static_only') or lesson['root_layout'] in lesson.get('static_layouts',[]) else 'gif'}" for name,lesson in configuration['lessons'].items()]
         record['historical_exports']=[item['path'] for item in files if item['path'].startswith('exports/') and item['path'] not in active]
     (media/'BUILD_MANIFEST.json').write_text(json.dumps(record,indent=2)+'\n')
     print('Registered',len(files),str(media.relative_to(ROOT))+' files')

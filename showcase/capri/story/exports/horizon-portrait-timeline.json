@@ -1,0 +1,7378 @@
+{
+  "lesson": "horizon",
+  "layout": "portrait",
+  "duration_ms": 6400,
+  "sample_fps": 25,
+  "sample_count": 160,
+  "size": [
+    480,
+    640
+  ],
+  "bytes": 2780422,
+  "gif_sha256": "de0a0bff89935ff492368ab57ba61cf7e24fd88ccaa54f807bafa6e2d229b347",
+  "poster_sha256": "fa92c366a9c5e1f43b6ea2542e2f3b009b05e1d21a80697758ccadfaafd062de",
+  "palette_colors": 128,
+  "frames": [
+    {
+      "time_ms": 0.0,
+      "sha256": "2cb4fe9402706fd5f8289aef8396e9aceaacd099c02d6efb3d9a7d760f63cb98",
+      "state": {
+        "lesson": "horizon",
+        "time": 0,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 0,
+            "running": false,
+            "visible": true,
+            "frames": 3,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 3
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            175,
+            102,
+            52,
+            199
+          ],
+          "size": [
+            237,
+            163
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 40.0,
+      "sha256": "db45185b8ae73add1f36d42a301902c32e53630e1a22a750522ea6cc566e73d6",
+      "state": {
+        "lesson": "horizon",
+        "time": 40,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 40,
+            "running": false,
+            "visible": true,
+            "frames": 4,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 4
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            175,
+            101,
+            52,
+            199
+          ],
+          "size": [
+            237,
+            164
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 80.0,
+      "sha256": "b3436d92f0dbd71af85e6540c75893343600d0e743f2685ff82876cc8710314e",
+      "state": {
+        "lesson": "horizon",
+        "time": 80,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 80,
+            "running": false,
+            "visible": true,
+            "frames": 5,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 5
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            175,
+            101,
+            52,
+            199
+          ],
+          "size": [
+            237,
+            164
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 120.0,
+      "sha256": "6a809bebd3c7c41f5ae6297a62e2fa6ab80cd82ca1a2ee830e09e40f2bbc08aa",
+      "state": {
+        "lesson": "horizon",
+        "time": 120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 120,
+            "running": false,
+            "visible": true,
+            "frames": 6,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 6
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            101,
+            52,
+            200
+          ],
+          "size": [
+            238,
+            163
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 160.0,
+      "sha256": "769925ce5db51962699d19e0a87b38138ed5181baf39f61ffd24a7cd1c66e90c",
+      "state": {
+        "lesson": "horizon",
+        "time": 160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 160,
+            "running": false,
+            "visible": true,
+            "frames": 7,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 7
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            102,
+            51,
+            200
+          ],
+          "size": [
+            239,
+            162
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 200.0,
+      "sha256": "dd12dd3f511bb8afa674152f22cee1b2bc9fa577bf6ba337e11d1e1ee583e7e8",
+      "state": {
+        "lesson": "horizon",
+        "time": 200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 200,
+            "running": false,
+            "visible": true,
+            "frames": 8,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 8
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            102,
+            51,
+            200
+          ],
+          "size": [
+            239,
+            162
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 240.0,
+      "sha256": "467ce711409cb0a01baa005ad0eb1a099941e8491e7f17d0233c5ddba7c58376",
+      "state": {
+        "lesson": "horizon",
+        "time": 240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 240,
+            "running": false,
+            "visible": true,
+            "frames": 9,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 9
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            102,
+            51,
+            200
+          ],
+          "size": [
+            239,
+            162
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 280.0,
+      "sha256": "bbc9837c1d43e39e865d34b58561fb8977ae2679eb13f69350cfa9712b9c20f8",
+      "state": {
+        "lesson": "horizon",
+        "time": 280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 280,
+            "running": false,
+            "visible": true,
+            "frames": 10,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 10
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            102,
+            52,
+            199
+          ],
+          "size": [
+            238,
+            163
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 320.0,
+      "sha256": "2d6874c773026ad2bc867b4f513b4fec357b71c5d116cee1f7a8ab2703c536c2",
+      "state": {
+        "lesson": "horizon",
+        "time": 320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 320,
+            "running": false,
+            "visible": true,
+            "frames": 11,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 11
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            103,
+            54,
+            197
+          ],
+          "size": [
+            236,
+            164
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 360.0,
+      "sha256": "5b7123fdc64bd97a5729409c7bd1fe0ffba8f0bfebfa8759484ab76882ffb0a7",
+      "state": {
+        "lesson": "horizon",
+        "time": 360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 360,
+            "running": false,
+            "visible": true,
+            "frames": 12,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 12
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            104,
+            57,
+            195
+          ],
+          "size": [
+            233,
+            165
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 400.0,
+      "sha256": "b25db547b267451f8928979ff730ff731395e35f9bc52ed1e1bd10f1327274d3",
+      "state": {
+        "lesson": "horizon",
+        "time": 400,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 400,
+            "running": false,
+            "visible": true,
+            "frames": 13,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 13
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            105,
+            60,
+            193
+          ],
+          "size": [
+            230,
+            166
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 440.0,
+      "sha256": "1c3e7a7f082b0568e9ce4919820788bc7f3e23563c081fab3326f2f18c64e092",
+      "state": {
+        "lesson": "horizon",
+        "time": 440,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 440,
+            "running": false,
+            "visible": true,
+            "frames": 14,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 14
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            105,
+            62,
+            190
+          ],
+          "size": [
+            228,
+            169
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 480.0,
+      "sha256": "103f324837b5b34bac8688236fa1527bc1308bc8cd98456d0a84e3f8956900da",
+      "state": {
+        "lesson": "horizon",
+        "time": 480,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 480,
+            "running": false,
+            "visible": true,
+            "frames": 15,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 15
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            105,
+            63,
+            188
+          ],
+          "size": [
+            227,
+            171
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 520.0,
+      "sha256": "613111e9b8e064fe750f06d918c9a5c59f4f292e018e7cbb6e3358799aa75a65",
+      "state": {
+        "lesson": "horizon",
+        "time": 520,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 520,
+            "running": false,
+            "visible": true,
+            "frames": 16,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 16
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            106,
+            64,
+            186
+          ],
+          "size": [
+            226,
+            172
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 560.0,
+      "sha256": "737a4b3dc096ea38c228f6e8b6ba634f1a080c74f775720ffd5e22866110c16f",
+      "state": {
+        "lesson": "horizon",
+        "time": 560,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 560,
+            "running": false,
+            "visible": true,
+            "frames": 17,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 17
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            106,
+            65,
+            185
+          ],
+          "size": [
+            226,
+            173
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 600.0,
+      "sha256": "585e503527c2e56ce1a99d011f0b6149fc453fa8f9b1e931bc40fa8d8e3cef6b",
+      "state": {
+        "lesson": "horizon",
+        "time": 600,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 600,
+            "running": false,
+            "visible": true,
+            "frames": 18,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 18
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            108,
+            65,
+            183
+          ],
+          "size": [
+            226,
+            173
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 640.0,
+      "sha256": "5a09927da56cffc6ac17a7c2e5c78e5769afd3555e005f7484012c05dfba8983",
+      "state": {
+        "lesson": "horizon",
+        "time": 640,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 640,
+            "running": false,
+            "visible": true,
+            "frames": 19,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 19
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            109,
+            66,
+            182
+          ],
+          "size": [
+            225,
+            173
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 680.0,
+      "sha256": "8f0c7ec92f5667629ecbcedb542cc603fcb1b964b798b583758afb81bd9dd7e5",
+      "state": {
+        "lesson": "horizon",
+        "time": 680,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 680,
+            "running": false,
+            "visible": true,
+            "frames": 20,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 20
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            110,
+            67,
+            180
+          ],
+          "size": [
+            224,
+            174
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 720.0,
+      "sha256": "26c43abd7645d7f27afa68d33bc9e56f235b489d2eba96573f3e33aa33a84324",
+      "state": {
+        "lesson": "horizon",
+        "time": 720,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 720,
+            "running": false,
+            "visible": true,
+            "frames": 21,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 21
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            110,
+            68,
+            179
+          ],
+          "size": [
+            223,
+            175
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 760.0,
+      "sha256": "487933cf7e277cb5fb52101f1b1cc89840a46219c2ed00482c91e9afeb4e3044",
+      "state": {
+        "lesson": "horizon",
+        "time": 760,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 760,
+            "running": false,
+            "visible": true,
+            "frames": 22,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 22
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            111,
+            69,
+            177
+          ],
+          "size": [
+            222,
+            176
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 800.0,
+      "sha256": "d004472b40d6b925717ad6b3021d641c7232c24818ae44aa59a4415408445fcf",
+      "state": {
+        "lesson": "horizon",
+        "time": 800,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 800,
+            "running": false,
+            "visible": true,
+            "frames": 23,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 23
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            172,
+            111,
+            70,
+            176
+          ],
+          "size": [
+            222,
+            177
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 840.0,
+      "sha256": "5762906e4db2c30a2c375c2ced7a040845df93d7d7caa0d4ceb277451a8a68fc",
+      "state": {
+        "lesson": "horizon",
+        "time": 840,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 840,
+            "running": false,
+            "visible": true,
+            "frames": 24,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 24
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            172,
+            112,
+            71,
+            174
+          ],
+          "size": [
+            221,
+            178
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 880.0,
+      "sha256": "2705bdf285090fc679a095c08de7eb89bdc714010c0eb15a21ca4e17507fc796",
+      "state": {
+        "lesson": "horizon",
+        "time": 880,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 880,
+            "running": false,
+            "visible": true,
+            "frames": 25,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 25
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            171,
+            113,
+            72,
+            173
+          ],
+          "size": [
+            221,
+            178
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 920.0,
+      "sha256": "f2d308a4462d6d669ceb3b873b36d1225cca2080ac0d22e60e6a019bac1309e5",
+      "state": {
+        "lesson": "horizon",
+        "time": 920,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 920,
+            "running": false,
+            "visible": true,
+            "frames": 26,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 26
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            170,
+            114,
+            73,
+            171
+          ],
+          "size": [
+            221,
+            179
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 960.0,
+      "sha256": "624e6583f9e1115f22becd414073c087f67e697777f42ca92c5f9c031e9559ba",
+      "state": {
+        "lesson": "horizon",
+        "time": 960,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 960,
+            "running": false,
+            "visible": true,
+            "frames": 27,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 27
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            169,
+            115,
+            74,
+            170
+          ],
+          "size": [
+            221,
+            179
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1000.0,
+      "sha256": "436e56574bb893827e1babae12a1aa89ebceeb5c4a8adb2004676cffce3d42e5",
+      "state": {
+        "lesson": "horizon",
+        "time": 1000,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1000,
+            "running": false,
+            "visible": true,
+            "frames": 28,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 28
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            169,
+            116,
+            75,
+            169
+          ],
+          "size": [
+            220,
+            179
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1040.0,
+      "sha256": "54ceef7ea0126fb0a4780909d0bf89b7271978335a46f04634d75e693ec3c521",
+      "state": {
+        "lesson": "horizon",
+        "time": 1040,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1040,
+            "running": false,
+            "visible": true,
+            "frames": 29,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 29
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            168,
+            117,
+            76,
+            167
+          ],
+          "size": [
+            220,
+            180
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1080.0,
+      "sha256": "d0584dd8b3c8e86a721a7eec6ac43c4ca71b5e0ec8f2b465764c1ce3554c4705",
+      "state": {
+        "lesson": "horizon",
+        "time": 1080,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1080,
+            "running": false,
+            "visible": true,
+            "frames": 30,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 30
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            167,
+            118,
+            77,
+            166
+          ],
+          "size": [
+            220,
+            180
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1120.0,
+      "sha256": "fa201f729111858869f8d62ea6bdb4e280c481e835c0333278f1fd92ced3634a",
+      "state": {
+        "lesson": "horizon",
+        "time": 1120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1120,
+            "running": false,
+            "visible": true,
+            "frames": 31,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 31
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            166,
+            119,
+            78,
+            164
+          ],
+          "size": [
+            220,
+            181
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1160.0,
+      "sha256": "42abb67565ce48607435627d933dea69c550b631b6aff395d226d06745dc1e39",
+      "state": {
+        "lesson": "horizon",
+        "time": 1160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1160,
+            "running": false,
+            "visible": true,
+            "frames": 32,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 32
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            166,
+            119,
+            79,
+            163
+          ],
+          "size": [
+            219,
+            182
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1200.0,
+      "sha256": "3890e1e931152b257ace3634ecdde5c62083d1bea232d74a02122bdcc09e91c2",
+      "state": {
+        "lesson": "horizon",
+        "time": 1200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1200,
+            "running": false,
+            "visible": true,
+            "frames": 33,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 33
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            165,
+            120,
+            80,
+            162
+          ],
+          "size": [
+            219,
+            182
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1240.0,
+      "sha256": "0c7c44763a68b9babf8fca16d28fad059ce10830415937c4adac102b8efd86ba",
+      "state": {
+        "lesson": "horizon",
+        "time": 1240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1240,
+            "running": false,
+            "visible": true,
+            "frames": 34,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 34
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            164,
+            121,
+            81,
+            160
+          ],
+          "size": [
+            219,
+            183
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1280.0,
+      "sha256": "83c33212c61182e09c243885b640e773bb10172a9a0fadb399b0d0876b5a0d54",
+      "state": {
+        "lesson": "horizon",
+        "time": 1280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1280,
+            "running": false,
+            "visible": true,
+            "frames": 35,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 35
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            162,
+            121,
+            82,
+            160
+          ],
+          "size": [
+            220,
+            183
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1320.0,
+      "sha256": "88d58e4b166b65da922dc2d486de1ab3f0db3de1255f5639536d1f74b4ecc052",
+      "state": {
+        "lesson": "horizon",
+        "time": 1320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1320,
+            "running": false,
+            "visible": true,
+            "frames": 36,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 36
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            160,
+            122,
+            83,
+            159
+          ],
+          "size": [
+            221,
+            183
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1360.0,
+      "sha256": "1182c13954f0f0c9b7cddb7c0767e15daa1fb6f0b1f962d32d31f9e19e2f5d2e",
+      "state": {
+        "lesson": "horizon",
+        "time": 1360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1360,
+            "running": false,
+            "visible": true,
+            "frames": 37,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 37
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            158,
+            122,
+            84,
+            159
+          ],
+          "size": [
+            222,
+            183
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1400.0,
+      "sha256": "24cf7988f3ead789c3239bf5e096a8d062fb9ceea43648d6ee14f4303395804b",
+      "state": {
+        "lesson": "horizon",
+        "time": 1400,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1400,
+            "running": false,
+            "visible": true,
+            "frames": 38,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 38
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            156,
+            123,
+            85,
+            160
+          ],
+          "size": [
+            223,
+            181
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1440.0,
+      "sha256": "284857c8df7d27cd8268454fc9a06d81a6029fb6030e5f93ce325a118047f052",
+      "state": {
+        "lesson": "horizon",
+        "time": 1440,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1440,
+            "running": false,
+            "visible": true,
+            "frames": 39,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 39
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            154,
+            123,
+            83,
+            160
+          ],
+          "size": [
+            227,
+            181
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1480.0,
+      "sha256": "6dd98c51e7a244a32e38ba2ddb2d3f64ce31bb290ea3f0d86aba3ada1b3b7e98",
+      "state": {
+        "lesson": "horizon",
+        "time": 1480,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1480,
+            "running": false,
+            "visible": true,
+            "frames": 40,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 40
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            153,
+            123,
+            83,
+            160
+          ],
+          "size": [
+            228,
+            181
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1520.0,
+      "sha256": "1ba2b7069e41f04210c2b2e82a32befd90ea9acc94e08ca4fcf608815dfc3575",
+      "state": {
+        "lesson": "horizon",
+        "time": 1520,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1520,
+            "running": false,
+            "visible": true,
+            "frames": 41,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 41
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            152,
+            123,
+            85,
+            160
+          ],
+          "size": [
+            227,
+            181
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1560.0,
+      "sha256": "54df8480665a6e863310622d5abe0b9ef4683c0d8a268f360738bbd1d9c21a55",
+      "state": {
+        "lesson": "horizon",
+        "time": 1560,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1560,
+            "running": false,
+            "visible": true,
+            "frames": 42,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 42
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            151,
+            123,
+            87,
+            159
+          ],
+          "size": [
+            226,
+            182
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1600.0,
+      "sha256": "ca6e70cb0efb5f674b3b7f6e92f1d859e84d9b022de6773f824fd8fcdf4da233",
+      "state": {
+        "lesson": "horizon",
+        "time": 1600,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1600,
+            "running": false,
+            "visible": true,
+            "frames": 43,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 43
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            151,
+            123,
+            89,
+            158
+          ],
+          "size": [
+            224,
+            183
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1640.0,
+      "sha256": "1d71d47b5998d0fee9688ce83e8c1a1dd5eb4516f4bba5e08e13f5b7a3a9c6d5",
+      "state": {
+        "lesson": "horizon",
+        "time": 1640,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1640,
+            "running": false,
+            "visible": true,
+            "frames": 44,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 44
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            150,
+            123,
+            91,
+            157
+          ],
+          "size": [
+            223,
+            184
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1680.0,
+      "sha256": "337bd29a51b9bfbdd4847de7ea386f8afb5737b4ff7d979a5078c595b4046195",
+      "state": {
+        "lesson": "horizon",
+        "time": 1680,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1680,
+            "running": false,
+            "visible": true,
+            "frames": 45,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 45
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            149,
+            123,
+            94,
+            157
+          ],
+          "size": [
+            221,
+            184
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1720.0,
+      "sha256": "f69d550a44de0341e80eadd058938985b2e747ac97665e19468a6e08a473ddef",
+      "state": {
+        "lesson": "horizon",
+        "time": 1720,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1720,
+            "running": false,
+            "visible": true,
+            "frames": 46,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 46
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            148,
+            122,
+            95,
+            156
+          ],
+          "size": [
+            221,
+            186
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1760.0,
+      "sha256": "0be17bc27720761c3c91c19f5ecfec2c42b3f72587333da639c15390d75fcf67",
+      "state": {
+        "lesson": "horizon",
+        "time": 1760,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1760,
+            "running": false,
+            "visible": true,
+            "frames": 47,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 47
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            148,
+            122,
+            97,
+            156
+          ],
+          "size": [
+            219,
+            186
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1800.0,
+      "sha256": "4bf04c840bb4a2727280ed0236e11b4648b9c54264693a266d99e0918be6bc44",
+      "state": {
+        "lesson": "horizon",
+        "time": 1800,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1800,
+            "running": false,
+            "visible": true,
+            "frames": 48,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 48
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            147,
+            121,
+            98,
+            156
+          ],
+          "size": [
+            219,
+            187
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1840.0,
+      "sha256": "45c0d4e70ab8b70d34156f54ba24422e60488ded0a251690066f338cf3f04bba",
+      "state": {
+        "lesson": "horizon",
+        "time": 1840,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1840,
+            "running": false,
+            "visible": true,
+            "frames": 49,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 49
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            146,
+            120,
+            99,
+            156
+          ],
+          "size": [
+            219,
+            188
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1880.0,
+      "sha256": "1d0efb74ffcd6677ef760dc648a1c8e102edc7b937f00f3d80287723c39800b7",
+      "state": {
+        "lesson": "horizon",
+        "time": 1880,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1880,
+            "running": false,
+            "visible": true,
+            "frames": 50,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 50
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            145,
+            119,
+            100,
+            156
+          ],
+          "size": [
+            219,
+            189
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1920.0,
+      "sha256": "c5dd23ed4d4bf51cd94cbf8f231a440df265725ad7b8a4b8aabf47ef739b0a4e",
+      "state": {
+        "lesson": "horizon",
+        "time": 1920,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1920,
+            "running": false,
+            "visible": true,
+            "frames": 51,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 51
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            144,
+            119,
+            101,
+            157
+          ],
+          "size": [
+            219,
+            188
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 1960.0,
+      "sha256": "59dde41874a7aa6088087eb1c01b78c08b94b23d9d02d65d0671c1ac1d7b5642",
+      "state": {
+        "lesson": "horizon",
+        "time": 1960,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 1960,
+            "running": false,
+            "visible": true,
+            "frames": 52,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 52
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            144,
+            118,
+            103,
+            157
+          ],
+          "size": [
+            217,
+            189
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2000.0,
+      "sha256": "c02822f40ef2fd957ffd532089c2e73997154bb29ffe4f7d6e171847589d32a3",
+      "state": {
+        "lesson": "horizon",
+        "time": 2000,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2000,
+            "running": false,
+            "visible": true,
+            "frames": 53,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 53
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            143,
+            117,
+            104,
+            157
+          ],
+          "size": [
+            217,
+            190
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2040.0,
+      "sha256": "fc52efe22f47f269b349d5f17baf7037d574ca7fb8d1f5f9abee096f2e398539",
+      "state": {
+        "lesson": "horizon",
+        "time": 2040,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2040,
+            "running": false,
+            "visible": true,
+            "frames": 54,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 54
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            142,
+            115,
+            105,
+            158
+          ],
+          "size": [
+            217,
+            191
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2080.0,
+      "sha256": "c50669e1b6eb8281136fc31482ff6c42fdbc87717946223317747ccf73436d23",
+      "state": {
+        "lesson": "horizon",
+        "time": 2080,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2080,
+            "running": false,
+            "visible": true,
+            "frames": 55,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 55
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            141,
+            114,
+            106,
+            158
+          ],
+          "size": [
+            217,
+            192
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2120.0,
+      "sha256": "b063b38be673d2d9ccd193abaaaeb0eecd14993df74c8fa58be93572ae1ba25b",
+      "state": {
+        "lesson": "horizon",
+        "time": 2120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2120,
+            "running": false,
+            "visible": true,
+            "frames": 56,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 56
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            141,
+            112,
+            107,
+            159
+          ],
+          "size": [
+            216,
+            193
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2160.0,
+      "sha256": "ff9d5ac2fc56bd6f1c6184bf87762ce99454678cf196a3d72174c0ee3300fea8",
+      "state": {
+        "lesson": "horizon",
+        "time": 2160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2160,
+            "running": false,
+            "visible": true,
+            "frames": 57,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 57
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            140,
+            111,
+            109,
+            160
+          ],
+          "size": [
+            215,
+            193
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2200.0,
+      "sha256": "0ddf8c6a89a5c600c19c73bb87cbb42dfaebd52c6bd5dd124a178a72744c8133",
+      "state": {
+        "lesson": "horizon",
+        "time": 2200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2200,
+            "running": false,
+            "visible": true,
+            "frames": 58,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 58
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            139,
+            109,
+            110,
+            161
+          ],
+          "size": [
+            215,
+            194
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2240.0,
+      "sha256": "d07764de77d1679f9df4fa53fc30a4c6f1f4a68ce6f1c8292662e5fcbc05720a",
+      "state": {
+        "lesson": "horizon",
+        "time": 2240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2240,
+            "running": false,
+            "visible": true,
+            "frames": 59,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 59
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            138,
+            108,
+            111,
+            161
+          ],
+          "size": [
+            215,
+            195
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2280.0,
+      "sha256": "bbe6c4ce44114eb0f2f522078cc1bf8ddee02e2250501d570617edda118b6808",
+      "state": {
+        "lesson": "horizon",
+        "time": 2280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2280,
+            "running": false,
+            "visible": true,
+            "frames": 60,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 60
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            138,
+            106,
+            112,
+            162
+          ],
+          "size": [
+            214,
+            196
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2320.0,
+      "sha256": "cdfbe4b2f07affac86507ecdd63899038f7445c8c3221758b5d8d683d275549c",
+      "state": {
+        "lesson": "horizon",
+        "time": 2320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2320,
+            "running": false,
+            "visible": true,
+            "frames": 61,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 61
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            137,
+            105,
+            113,
+            163
+          ],
+          "size": [
+            214,
+            196
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2360.0,
+      "sha256": "85ea8197d1127c6ff508efc2e5031fdef92970f2b4b149d7cbf3d2590d378ad7",
+      "state": {
+        "lesson": "horizon",
+        "time": 2360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2360,
+            "running": false,
+            "visible": true,
+            "frames": 62,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 62
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            137,
+            103,
+            114,
+            164
+          ],
+          "size": [
+            213,
+            197
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2400.0,
+      "sha256": "b6bfdf71b6accb3d329a2a450cb37529081bdbd92f9fdf39d9d54c3ca95adc93",
+      "state": {
+        "lesson": "horizon",
+        "time": 2400,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2400,
+            "running": false,
+            "visible": true,
+            "frames": 63,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 63
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            136,
+            102,
+            115,
+            165
+          ],
+          "size": [
+            213,
+            197
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2440.0,
+      "sha256": "c0bd8f8cb32ebb6ec964451ad787a4a3d3f0a3793865a872dd636bce02f6c3b8",
+      "state": {
+        "lesson": "horizon",
+        "time": 2440,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2440,
+            "running": false,
+            "visible": true,
+            "frames": 64,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 64
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            135,
+            100,
+            116,
+            165
+          ],
+          "size": [
+            213,
+            199
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2480.0,
+      "sha256": "0c33ed63ce14aeb03defa080a38143e14a1b00398764c5829972d970959c6ff4",
+      "state": {
+        "lesson": "horizon",
+        "time": 2480,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2480,
+            "running": false,
+            "visible": true,
+            "frames": 65,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 65
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            134,
+            99,
+            117,
+            166
+          ],
+          "size": [
+            213,
+            199
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2520.0,
+      "sha256": "88d7c266ae06216d56b262eb975e6a35a75f22c7a21a16548579a937ce06281a",
+      "state": {
+        "lesson": "horizon",
+        "time": 2520,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2520,
+            "running": false,
+            "visible": true,
+            "frames": 66,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 66
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            134,
+            97,
+            118,
+            167
+          ],
+          "size": [
+            212,
+            200
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2560.0,
+      "sha256": "5278059c3c602138ecee9ffce16e67c1b0dec97cf697c24e1a0498c694070872",
+      "state": {
+        "lesson": "horizon",
+        "time": 2560,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2560,
+            "running": false,
+            "visible": true,
+            "frames": 67,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 67
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            133,
+            96,
+            119,
+            168
+          ],
+          "size": [
+            212,
+            200
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2600.0,
+      "sha256": "fa92c366a9c5e1f43b6ea2542e2f3b009b05e1d21a80697758ccadfaafd062de",
+      "state": {
+        "lesson": "horizon",
+        "time": 2600,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2600,
+            "running": false,
+            "visible": true,
+            "frames": 68,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 68
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            132,
+            94,
+            119,
+            169
+          ],
+          "size": [
+            213,
+            201
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2640.0,
+      "sha256": "637e375041a9c965cb0168ab8d90c1dc95563685c37b3f298eee73e611f16802",
+      "state": {
+        "lesson": "horizon",
+        "time": 2640,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2640,
+            "running": false,
+            "visible": true,
+            "frames": 69,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 69
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            132,
+            93,
+            120,
+            169
+          ],
+          "size": [
+            212,
+            202
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2680.0,
+      "sha256": "004ec754b8ea5d7150ddd7ac0ad91742ce296d97354286012d038c7b9dcf2050",
+      "state": {
+        "lesson": "horizon",
+        "time": 2680,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2680,
+            "running": false,
+            "visible": true,
+            "frames": 70,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 70
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            131,
+            92,
+            121,
+            170
+          ],
+          "size": [
+            212,
+            202
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2720.0,
+      "sha256": "f7394c9d31f30be5704e01cc2464db7440cbc3b209a0e6a97deb742bcc6e4bb3",
+      "state": {
+        "lesson": "horizon",
+        "time": 2720,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2720,
+            "running": false,
+            "visible": true,
+            "frames": 71,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 71
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            131,
+            91,
+            122,
+            171
+          ],
+          "size": [
+            211,
+            202
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2760.0,
+      "sha256": "9f5ee5de31b5f7c921835ccd67f93384681143aa6a437b65e58313e8e7324898",
+      "state": {
+        "lesson": "horizon",
+        "time": 2760,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2760,
+            "running": false,
+            "visible": true,
+            "frames": 72,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 72
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            130,
+            90,
+            122,
+            172
+          ],
+          "size": [
+            212,
+            202
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2800.0,
+      "sha256": "50936f19454b8485362fa2c8ca1a2b442735a300b88d97e581a0b9d60fc65057",
+      "state": {
+        "lesson": "horizon",
+        "time": 2800,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2800,
+            "running": false,
+            "visible": true,
+            "frames": 73,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 73
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            130,
+            89,
+            123,
+            172
+          ],
+          "size": [
+            211,
+            203
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2840.0,
+      "sha256": "f251b36eaf2c2ff39abce6a7f7b00e0f9a34ddb55d4746fd930137065499bd9d",
+      "state": {
+        "lesson": "horizon",
+        "time": 2840,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2840,
+            "running": false,
+            "visible": true,
+            "frames": 74,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 74
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            130,
+            88,
+            123,
+            173
+          ],
+          "size": [
+            211,
+            203
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2880.0,
+      "sha256": "6f9630b4dc95f6e1fd4502abcc12c2414ad43033835f9e40a3e33cbc805b8bc5",
+      "state": {
+        "lesson": "horizon",
+        "time": 2880,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2880,
+            "running": false,
+            "visible": true,
+            "frames": 75,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 75
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            129,
+            87,
+            124,
+            173
+          ],
+          "size": [
+            211,
+            204
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2920.0,
+      "sha256": "082935e29d1a2cb1213397d226068dc9d6275c1967979adb6686a3eca22a2fa0",
+      "state": {
+        "lesson": "horizon",
+        "time": 2920,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2920,
+            "running": false,
+            "visible": true,
+            "frames": 76,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 76
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            129,
+            86,
+            124,
+            174
+          ],
+          "size": [
+            211,
+            204
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 2960.0,
+      "sha256": "1874a39c8b18091af1cb92582773ef07c89793b471245bd94190c5db5cfb6b0f",
+      "state": {
+        "lesson": "horizon",
+        "time": 2960,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 2960,
+            "running": false,
+            "visible": true,
+            "frames": 77,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 77
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            85,
+            125,
+            174
+          ],
+          "size": [
+            211,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3000.0,
+      "sha256": "9d7cdac4d8304d9ec0619c8455ab4348990801b5d10a2a6a85111d24f2ded0fe",
+      "state": {
+        "lesson": "horizon",
+        "time": 3000,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3000,
+            "running": false,
+            "visible": true,
+            "frames": 78,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 78
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            85,
+            125,
+            174
+          ],
+          "size": [
+            211,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3040.0,
+      "sha256": "600db5435b83b8baadce4a897d9b6567f54e981c6a858f66780da3fa873b93be",
+      "state": {
+        "lesson": "horizon",
+        "time": 3040,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3040,
+            "running": false,
+            "visible": true,
+            "frames": 79,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 79
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            84,
+            125,
+            175
+          ],
+          "size": [
+            211,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3080.0,
+      "sha256": "e5d90220a6eaf3fb7c223f7fab158ee6f15d38022ba3a32e8383318f148d7acf",
+      "state": {
+        "lesson": "horizon",
+        "time": 3080,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3080,
+            "running": false,
+            "visible": true,
+            "frames": 80,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 80
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            84,
+            126,
+            175
+          ],
+          "size": [
+            210,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3120.0,
+      "sha256": "34eba3cc6acbda0a6de1b52dbbc19cba131e9cdda438cb129bca3f8a36b1898d",
+      "state": {
+        "lesson": "horizon",
+        "time": 3120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3120,
+            "running": false,
+            "visible": true,
+            "frames": 81,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 81
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            84,
+            126,
+            175
+          ],
+          "size": [
+            210,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3160.0,
+      "sha256": "8fcb875fe85c3f3b32209d8e59fc9d5bc95263e7206e068dae19a43b46c846d1",
+      "state": {
+        "lesson": "horizon",
+        "time": 3160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3160,
+            "running": false,
+            "visible": true,
+            "frames": 82,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 82
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            84,
+            126,
+            175
+          ],
+          "size": [
+            210,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3200.0,
+      "sha256": "4a52ec997a1821439253e4e06b5912a730731c27dbc9e72e05e4b8e9720d2ad5",
+      "state": {
+        "lesson": "horizon",
+        "time": 3200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3200,
+            "running": false,
+            "visible": true,
+            "frames": 83,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 83
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            84,
+            126,
+            175
+          ],
+          "size": [
+            210,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3240.0,
+      "sha256": "07b9d5b85aabf453623fdbc180be30140180f07fcf55b163346b16f49438f89c",
+      "state": {
+        "lesson": "horizon",
+        "time": 3240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3240,
+            "running": false,
+            "visible": true,
+            "frames": 84,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 84
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            83,
+            126,
+            175
+          ],
+          "size": [
+            210,
+            206
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3280.0,
+      "sha256": "36ad65b52a7c979d7441208099e6cbcc262a7507a14cb9bb58275498c479dd0b",
+      "state": {
+        "lesson": "horizon",
+        "time": 3280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3280,
+            "running": false,
+            "visible": true,
+            "frames": 85,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 85
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            127,
+            83,
+            126,
+            176
+          ],
+          "size": [
+            211,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3320.0,
+      "sha256": "0985ea4979b4dbb2cb65a7e18cc9fca6c3a0084bad929dd372b291c6510b738b",
+      "state": {
+        "lesson": "horizon",
+        "time": 3320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3320,
+            "running": false,
+            "visible": true,
+            "frames": 86,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 86
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            127,
+            83,
+            126,
+            176
+          ],
+          "size": [
+            211,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3360.0,
+      "sha256": "36b3ea9925573287aa51af4ce9960f872a898babe39f877fe369081849b42e77",
+      "state": {
+        "lesson": "horizon",
+        "time": 3360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3360,
+            "running": false,
+            "visible": true,
+            "frames": 87,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 87
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            127,
+            82,
+            126,
+            177
+          ],
+          "size": [
+            211,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3400.0,
+      "sha256": "6bba63b3f60e51e05809ac6f24fbb27c010e174907688de3eaeb84e9a3791a58",
+      "state": {
+        "lesson": "horizon",
+        "time": 3400,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3400,
+            "running": false,
+            "visible": true,
+            "frames": 88,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 88
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            127,
+            82,
+            126,
+            177
+          ],
+          "size": [
+            211,
+            205
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3440.0,
+      "sha256": "4ff456fd4df7fc7be0538eb06e5c32c036b8059faadf8bced6bee865ae5ceb7f",
+      "state": {
+        "lesson": "horizon",
+        "time": 3440,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3440,
+            "running": false,
+            "visible": true,
+            "frames": 89,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 89
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            83,
+            126,
+            177
+          ],
+          "size": [
+            210,
+            204
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3480.0,
+      "sha256": "e057aad74c493154db44623e3dfd3d3fe442a42f234c27b773e44138187f7f1e",
+      "state": {
+        "lesson": "horizon",
+        "time": 3480,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3480,
+            "running": false,
+            "visible": true,
+            "frames": 90,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 90
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            128,
+            84,
+            125,
+            176
+          ],
+          "size": [
+            211,
+            204
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3520.0,
+      "sha256": "47d60aae5a92084bfec4871512cdd4013c4d8e89fd43d9132591bd2901e2ddea",
+      "state": {
+        "lesson": "horizon",
+        "time": 3520,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3520,
+            "running": false,
+            "visible": true,
+            "frames": 91,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 91
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            129,
+            85,
+            124,
+            175
+          ],
+          "size": [
+            211,
+            204
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3560.0,
+      "sha256": "20e7463758ec7ef6e423d1563b28e0f520841730c8a255fc6ec932a34d16cec4",
+      "state": {
+        "lesson": "horizon",
+        "time": 3560,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3560,
+            "running": false,
+            "visible": true,
+            "frames": 92,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 92
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            130,
+            87,
+            124,
+            174
+          ],
+          "size": [
+            210,
+            203
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3600.0,
+      "sha256": "cdfcd9e2a864d7d455923f6f62e489822abf7dc02d93cd182152dd72035ab482",
+      "state": {
+        "lesson": "horizon",
+        "time": 3600,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3600,
+            "running": false,
+            "visible": true,
+            "frames": 93,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 93
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            131,
+            89,
+            123,
+            172
+          ],
+          "size": [
+            210,
+            203
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3640.0,
+      "sha256": "b894c8b75350e4040cd875751d075e561a3bb19378b1added43c087939885f79",
+      "state": {
+        "lesson": "horizon",
+        "time": 3640,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3640,
+            "running": false,
+            "visible": true,
+            "frames": 94,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 94
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            132,
+            92,
+            123,
+            171
+          ],
+          "size": [
+            209,
+            201
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3680.0,
+      "sha256": "bd1a630256f0d5b86fe6d533bbbb1e865a4a1748631e5bb971871730e9c23605",
+      "state": {
+        "lesson": "horizon",
+        "time": 3680,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3680,
+            "running": false,
+            "visible": true,
+            "frames": 95,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 95
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            133,
+            94,
+            123,
+            169
+          ],
+          "size": [
+            208,
+            201
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3720.0,
+      "sha256": "a87c43cb75c338d1380ab8b5f0eb6f1de8bbfdf545e910a15b6141b398745455",
+      "state": {
+        "lesson": "horizon",
+        "time": 3720,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3720,
+            "running": false,
+            "visible": true,
+            "frames": 96,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 96
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            134,
+            96,
+            122,
+            168
+          ],
+          "size": [
+            208,
+            200
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3760.0,
+      "sha256": "c0531ae51ade02ac3804ecd06a8da8f7211adeaafe4f387191b5b19df315368b",
+      "state": {
+        "lesson": "horizon",
+        "time": 3760,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3760,
+            "running": false,
+            "visible": true,
+            "frames": 97,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 97
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            134,
+            97,
+            121,
+            167
+          ],
+          "size": [
+            209,
+            200
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3800.0,
+      "sha256": "736c8c5f9b422df06b83c1d51429f8e76ea405aadcac1870e9248d3890d230ae",
+      "state": {
+        "lesson": "horizon",
+        "time": 3800,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3800,
+            "running": false,
+            "visible": true,
+            "frames": 98,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 98
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            135,
+            99,
+            120,
+            166
+          ],
+          "size": [
+            209,
+            199
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3840.0,
+      "sha256": "a73f512fcb1e9e355a57e659adaf3ef976ad2285b3e1f498994fcc158091b4db",
+      "state": {
+        "lesson": "horizon",
+        "time": 3840,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3840,
+            "running": false,
+            "visible": true,
+            "frames": 99,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 99
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            136,
+            99,
+            120,
+            166
+          ],
+          "size": [
+            208,
+            199
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3880.0,
+      "sha256": "5e1df6f1a07fa294134f80c098e55a9103202e62cffcf38adf0ff2e1a1aaecfe",
+      "state": {
+        "lesson": "horizon",
+        "time": 3880,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3880,
+            "running": false,
+            "visible": true,
+            "frames": 100,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 100
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            137,
+            100,
+            119,
+            165
+          ],
+          "size": [
+            208,
+            199
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3920.0,
+      "sha256": "f84f58c26730bc835a3c9f8c40911272334ff91b2fa0f223caa77c043d48437b",
+      "state": {
+        "lesson": "horizon",
+        "time": 3920,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3920,
+            "running": false,
+            "visible": true,
+            "frames": 101,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 101
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            139,
+            100,
+            118,
+            164
+          ],
+          "size": [
+            207,
+            200
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 3960.0,
+      "sha256": "246ae3e15a57cfd385d067ff697097fadf35086f8ceb7b7a5808ffa7e17099dd",
+      "state": {
+        "lesson": "horizon",
+        "time": 3960,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 3960,
+            "running": false,
+            "visible": true,
+            "frames": 102,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 102
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            140,
+            101,
+            117,
+            163
+          ],
+          "size": [
+            207,
+            200
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4000.0,
+      "sha256": "ddcd401d62a5437dff3ffef68482503b59e4ea05b04be900c7543a5133470b34",
+      "state": {
+        "lesson": "horizon",
+        "time": 4000,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4000,
+            "running": false,
+            "visible": true,
+            "frames": 103,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 103
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            141,
+            102,
+            116,
+            162
+          ],
+          "size": [
+            207,
+            200
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4040.0,
+      "sha256": "cb9645abf195ec6de2401a3d66a020a1f2e6376ae2dac802d2a009588a59e3a7",
+      "state": {
+        "lesson": "horizon",
+        "time": 4040,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4040,
+            "running": false,
+            "visible": true,
+            "frames": 104,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 104
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            142,
+            104,
+            115,
+            161
+          ],
+          "size": [
+            207,
+            199
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4080.0,
+      "sha256": "f740ca600ead4108797e5f76eb3ff30b770c455a343b4a5d68fe40baf6834870",
+      "state": {
+        "lesson": "horizon",
+        "time": 4080,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4080,
+            "running": false,
+            "visible": true,
+            "frames": 105,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 105
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            142,
+            105,
+            114,
+            160
+          ],
+          "size": [
+            208,
+            199
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4120.0,
+      "sha256": "929b8097fa1177d07f7193dfc062a1de46fba35763ac3f22d0532fd70caec28d",
+      "state": {
+        "lesson": "horizon",
+        "time": 4120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4120,
+            "running": false,
+            "visible": true,
+            "frames": 106,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 106
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            143,
+            107,
+            113,
+            159
+          ],
+          "size": [
+            208,
+            198
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4160.0,
+      "sha256": "4427b726d4636670ca143936b2a82b72cd25faeb12f1569e0c07a8b3a0f4f7d0",
+      "state": {
+        "lesson": "horizon",
+        "time": 4160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4160,
+            "running": false,
+            "visible": true,
+            "frames": 107,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 107
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            144,
+            108,
+            112,
+            158
+          ],
+          "size": [
+            208,
+            198
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4200.0,
+      "sha256": "27532a57a719fb5f24c180e951ea2ea28635bd02cbea42d50e41a5794c266db8",
+      "state": {
+        "lesson": "horizon",
+        "time": 4200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4200,
+            "running": false,
+            "visible": true,
+            "frames": 108,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 108
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            144,
+            110,
+            111,
+            158
+          ],
+          "size": [
+            209,
+            196
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4240.0,
+      "sha256": "a1ff0b35dc4b9e4f2ad59add0a88afc306cac7a87d27fb88bcc2fd3f83f01c06",
+      "state": {
+        "lesson": "horizon",
+        "time": 4240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4240,
+            "running": false,
+            "visible": true,
+            "frames": 109,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 109
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            145,
+            111,
+            110,
+            157
+          ],
+          "size": [
+            209,
+            196
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4280.0,
+      "sha256": "6d75c9cb1f594cc0f3cc4baf5581f513c62507fbb6e581890305f07cb86cbb83",
+      "state": {
+        "lesson": "horizon",
+        "time": 4280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4280,
+            "running": false,
+            "visible": true,
+            "frames": 110,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 110
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            146,
+            112,
+            109,
+            156
+          ],
+          "size": [
+            209,
+            196
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4320.0,
+      "sha256": "5b0439ec86da9af6757aeccd7129d9b71f7210b4e62292e1d7183f83f9c86788",
+      "state": {
+        "lesson": "horizon",
+        "time": 4320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4320,
+            "running": false,
+            "visible": true,
+            "frames": 111,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 111
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            146,
+            113,
+            108,
+            155
+          ],
+          "size": [
+            210,
+            196
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4360.0,
+      "sha256": "2b82eb419cb45bcb526be6d5ca16f5c5cf5552af2077c1f6bf92a2bcafd31c73",
+      "state": {
+        "lesson": "horizon",
+        "time": 4360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4360,
+            "running": false,
+            "visible": true,
+            "frames": 112,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 112
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            147,
+            115,
+            106,
+            155
+          ],
+          "size": [
+            211,
+            194
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4400.0,
+      "sha256": "a49a3f0d86c75ba0fd025e55092ba44bbecdb8a4b88b84ffcd90fb242c3f0137",
+      "state": {
+        "lesson": "horizon",
+        "time": 4400,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4400,
+            "running": false,
+            "visible": true,
+            "frames": 113,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 113
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            148,
+            116,
+            105,
+            154
+          ],
+          "size": [
+            211,
+            194
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4440.0,
+      "sha256": "31b847e0f7ce24afc83b7efb3e7b27e57957bf6738ced968d0b0f96554deddcc",
+      "state": {
+        "lesson": "horizon",
+        "time": 4440,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4440,
+            "running": false,
+            "visible": true,
+            "frames": 114,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 114
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            149,
+            117,
+            104,
+            154
+          ],
+          "size": [
+            211,
+            193
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4480.0,
+      "sha256": "7fe291b360c5938427300bb96da64d3f63c22d31d0b83562a695e9e37052598e",
+      "state": {
+        "lesson": "horizon",
+        "time": 4480,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4480,
+            "running": false,
+            "visible": true,
+            "frames": 115,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 115
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            149,
+            118,
+            102,
+            153
+          ],
+          "size": [
+            213,
+            193
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4520.0,
+      "sha256": "0a5efe877821718b385eb5f4d4d91d29afb38499e0dfabed3ed31e1743bc021d",
+      "state": {
+        "lesson": "horizon",
+        "time": 4520,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4520,
+            "running": false,
+            "visible": true,
+            "frames": 116,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 116
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            149,
+            119,
+            100,
+            154
+          ],
+          "size": [
+            215,
+            191
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4560.0,
+      "sha256": "c72a9f9cbd9544520635c01a6d7b1dfc9d3d59cd52eac8ff4865ea6f70161be2",
+      "state": {
+        "lesson": "horizon",
+        "time": 4560,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4560,
+            "running": false,
+            "visible": true,
+            "frames": 117,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 117
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            148,
+            119,
+            99,
+            154
+          ],
+          "size": [
+            217,
+            191
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4600.0,
+      "sha256": "356a70cbd35b08fb85b8cde1e8d602ee537c1fa3b98986576d2d3f3fa6a47bf7",
+      "state": {
+        "lesson": "horizon",
+        "time": 4600,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4600,
+            "running": false,
+            "visible": true,
+            "frames": 118,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 118
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            148,
+            120,
+            98,
+            155
+          ],
+          "size": [
+            218,
+            189
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4640.0,
+      "sha256": "b24f1a89f35d0e907f9bdefa2a51ee47b000f7fd8784a3014a512f4ef32cfa55",
+      "state": {
+        "lesson": "horizon",
+        "time": 4640,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4640,
+            "running": false,
+            "visible": true,
+            "frames": 119,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 119
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            148,
+            121,
+            96,
+            156
+          ],
+          "size": [
+            220,
+            187
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4680.0,
+      "sha256": "44d17ea048b4d6dea65807555677bfc5a7cb06ad2fa4acdaa8c35f49e735d44e",
+      "state": {
+        "lesson": "horizon",
+        "time": 4680,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4680,
+            "running": false,
+            "visible": true,
+            "frames": 120,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 120
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            148,
+            122,
+            93,
+            157
+          ],
+          "size": [
+            223,
+            185
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4720.0,
+      "sha256": "96eda48c7924e8b47b4f66605ff524c9365be56b7770e35456f75f9bee4072b9",
+      "state": {
+        "lesson": "horizon",
+        "time": 4720,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4720,
+            "running": false,
+            "visible": true,
+            "frames": 121,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 121
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            149,
+            122,
+            91,
+            158
+          ],
+          "size": [
+            224,
+            184
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4760.0,
+      "sha256": "bcec6637b60ce4b41928c1fdb5217e73ce2d0492d913687d83c94146177d24d7",
+      "state": {
+        "lesson": "horizon",
+        "time": 4760,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4760,
+            "running": false,
+            "visible": true,
+            "frames": 122,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 122
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            150,
+            123,
+            90,
+            158
+          ],
+          "size": [
+            224,
+            183
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4800.0,
+      "sha256": "ca6e70cb0efb5f674b3b7f6e92f1d859e84d9b022de6773f824fd8fcdf4da233",
+      "state": {
+        "lesson": "horizon",
+        "time": 4800,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4800,
+            "running": false,
+            "visible": true,
+            "frames": 123,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 123
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            151,
+            123,
+            89,
+            158
+          ],
+          "size": [
+            224,
+            183
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4840.0,
+      "sha256": "5be75a6c37defa76963abb12683f9ad35502d2d62208d10b875ea4bc63405f73",
+      "state": {
+        "lesson": "horizon",
+        "time": 4840,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4840,
+            "running": false,
+            "visible": true,
+            "frames": 124,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 124
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            151,
+            124,
+            88,
+            158
+          ],
+          "size": [
+            225,
+            182
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4880.0,
+      "sha256": "b0218aaab1d618eb955b08b58dca7b982194a9e32da9ad12cc16bd4dfd1a1a21",
+      "state": {
+        "lesson": "horizon",
+        "time": 4880,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4880,
+            "running": false,
+            "visible": true,
+            "frames": 125,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 125
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            152,
+            124,
+            87,
+            159
+          ],
+          "size": [
+            225,
+            181
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4920.0,
+      "sha256": "39fcec99162a73515d16ea131cedb2d96c9955c0fef6655e2df53f39fde485f0",
+      "state": {
+        "lesson": "horizon",
+        "time": 4920,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4920,
+            "running": false,
+            "visible": true,
+            "frames": 126,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 126
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            153,
+            124,
+            87,
+            159
+          ],
+          "size": [
+            224,
+            181
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 4960.0,
+      "sha256": "f93d4b2760075b86ae681d9e964876cf5747e8b8a79c3585c3d752b77107fbfe",
+      "state": {
+        "lesson": "horizon",
+        "time": 4960,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 4960,
+            "running": false,
+            "visible": true,
+            "frames": 127,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 127
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            154,
+            124,
+            86,
+            160
+          ],
+          "size": [
+            224,
+            180
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5000.0,
+      "sha256": "a9092145ecce4b24a5e697e48b880034cc9dda6f755e7f64cda434a5c25316c2",
+      "state": {
+        "lesson": "horizon",
+        "time": 5000,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5000,
+            "running": false,
+            "visible": true,
+            "frames": 128,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 128
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            155,
+            124,
+            85,
+            161
+          ],
+          "size": [
+            224,
+            179
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5040.0,
+      "sha256": "729169639625ff31000ac4cb50925d2fa13de41fee08331da4f8c3b71cb7f7a6",
+      "state": {
+        "lesson": "horizon",
+        "time": 5040,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5040,
+            "running": false,
+            "visible": true,
+            "frames": 129,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 129
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            156,
+            123,
+            84,
+            161
+          ],
+          "size": [
+            224,
+            180
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5080.0,
+      "sha256": "cce29ab15ec4b07c9d47cd932659db93caaf78e56ad40aeb6fa27c0554e0eaa8",
+      "state": {
+        "lesson": "horizon",
+        "time": 5080,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5080,
+            "running": false,
+            "visible": true,
+            "frames": 130,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 130
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            157,
+            123,
+            83,
+            162
+          ],
+          "size": [
+            224,
+            179
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5120.0,
+      "sha256": "0574693a8f88c2d85b29d7ff1cc1d860e7e09d75cdae849c1d7579287cedbc24",
+      "state": {
+        "lesson": "horizon",
+        "time": 5120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5120,
+            "running": false,
+            "visible": true,
+            "frames": 131,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 131
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            158,
+            122,
+            81,
+            164
+          ],
+          "size": [
+            225,
+            178
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5160.0,
+      "sha256": "ddc28624fe9836812f99e7285b032ac21f94bf9509bc87c002a0e71cfc336c9c",
+      "state": {
+        "lesson": "horizon",
+        "time": 5160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5160,
+            "running": false,
+            "visible": true,
+            "frames": 132,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 132
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            159,
+            122,
+            80,
+            165
+          ],
+          "size": [
+            225,
+            177
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5200.0,
+      "sha256": "1cfba0eb3d889955f9b3445e85e4f8d41f6badd19efdf497de54acece58c262a",
+      "state": {
+        "lesson": "horizon",
+        "time": 5200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5200,
+            "running": false,
+            "visible": true,
+            "frames": 133,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 133
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            160,
+            121,
+            79,
+            166
+          ],
+          "size": [
+            225,
+            177
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5240.0,
+      "sha256": "bc7caa86c21e96fb128e542566c70c6e83a304e2bee3a5f67217ad41032d24be",
+      "state": {
+        "lesson": "horizon",
+        "time": 5240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5240,
+            "running": false,
+            "visible": true,
+            "frames": 134,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 134
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            160,
+            121,
+            77,
+            167
+          ],
+          "size": [
+            227,
+            176
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5280.0,
+      "sha256": "0c0a61ac758eafe6735c132b9d034005ce87f73e6434950c46aba0a3f733d8f2",
+      "state": {
+        "lesson": "horizon",
+        "time": 5280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5280,
+            "running": false,
+            "visible": true,
+            "frames": 135,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 135
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            161,
+            120,
+            76,
+            169
+          ],
+          "size": [
+            227,
+            175
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5320.0,
+      "sha256": "fe2772416bfa48bc8853fd01feee83abbd271042245c14d46a0ad59dc31c7a5b",
+      "state": {
+        "lesson": "horizon",
+        "time": 5320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5320,
+            "running": false,
+            "visible": true,
+            "frames": 136,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 136
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            162,
+            119,
+            74,
+            170
+          ],
+          "size": [
+            228,
+            175
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5360.0,
+      "sha256": "40163f8f4758f9f4e5bf59601446f651f408c9bfb3833efee3b209dd6e66b291",
+      "state": {
+        "lesson": "horizon",
+        "time": 5360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5360,
+            "running": false,
+            "visible": true,
+            "frames": 137,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 137
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            163,
+            118,
+            73,
+            172
+          ],
+          "size": [
+            228,
+            174
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5400.0,
+      "sha256": "68da8d98c8fb8a2c5d0cfe9db1eae63c45039250c8576c162e808ff5b294d1e5",
+      "state": {
+        "lesson": "horizon",
+        "time": 5400,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5400,
+            "running": false,
+            "visible": true,
+            "frames": 138,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 138
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            164,
+            117,
+            72,
+            173
+          ],
+          "size": [
+            228,
+            174
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5440.0,
+      "sha256": "325ab66e3df1f8757db52d310e885cc23aa44857e0b20cd1553a321d77502ab4",
+      "state": {
+        "lesson": "horizon",
+        "time": 5440,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5440,
+            "running": false,
+            "visible": true,
+            "frames": 139,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 139
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            164,
+            117,
+            70,
+            175
+          ],
+          "size": [
+            230,
+            172
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5480.0,
+      "sha256": "7a2dcba99e09d5a0c7a587f2253e12eb2fac5ff4ded54c9a1f539ec382adeead",
+      "state": {
+        "lesson": "horizon",
+        "time": 5480,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5480,
+            "running": false,
+            "visible": true,
+            "frames": 140,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 140
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            165,
+            116,
+            69,
+            176
+          ],
+          "size": [
+            230,
+            172
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5520.0,
+      "sha256": "fcdc07ccb4f169ce319886f3484af25e97bb560fb31b6539722977f763cf2bc0",
+      "state": {
+        "lesson": "horizon",
+        "time": 5520,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5520,
+            "running": false,
+            "visible": true,
+            "frames": 141,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 141
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            166,
+            115,
+            68,
+            178
+          ],
+          "size": [
+            230,
+            171
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5560.0,
+      "sha256": "b56e0d14e944f8f07a147330fc840fc5787430a1690098afe43214b928b384b0",
+      "state": {
+        "lesson": "horizon",
+        "time": 5560,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5560,
+            "running": false,
+            "visible": true,
+            "frames": 142,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 142
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            167,
+            114,
+            66,
+            179
+          ],
+          "size": [
+            231,
+            171
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5600.0,
+      "sha256": "53a7c03b3554c5f98d066ab0ad46bd221954632e7dcc5e8e80fa3469a99aa47a",
+      "state": {
+        "lesson": "horizon",
+        "time": 5600,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5600,
+            "running": false,
+            "visible": true,
+            "frames": 143,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 143
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            167,
+            113,
+            65,
+            181
+          ],
+          "size": [
+            232,
+            170
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5640.0,
+      "sha256": "c27a0a1c67724eab5aa14c5a385291ffbdf5e55a4da8c77508314868898a750f",
+      "state": {
+        "lesson": "horizon",
+        "time": 5640,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5640,
+            "running": false,
+            "visible": true,
+            "frames": 144,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 144
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            168,
+            112,
+            64,
+            182
+          ],
+          "size": [
+            232,
+            170
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5680.0,
+      "sha256": "68109000645d43d0d97d906c2468bd7de702c86afb480410e47f831a2ced209f",
+      "state": {
+        "lesson": "horizon",
+        "time": 5680,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5680,
+            "running": false,
+            "visible": true,
+            "frames": 145,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 145
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            169,
+            111,
+            63,
+            184
+          ],
+          "size": [
+            232,
+            169
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5720.0,
+      "sha256": "935f030ee81553be61639c1bb986eceb9dc079a993a927342840472ff4a49abb",
+      "state": {
+        "lesson": "horizon",
+        "time": 5720,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5720,
+            "running": false,
+            "visible": true,
+            "frames": 146,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 146
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            169,
+            110,
+            62,
+            185
+          ],
+          "size": [
+            233,
+            169
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5760.0,
+      "sha256": "a316d620801a0d2968756d07654412d6317e9cb4ed2fe53034727c029cfa7b3c",
+      "state": {
+        "lesson": "horizon",
+        "time": 5760,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5760,
+            "running": false,
+            "visible": true,
+            "frames": 147,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 147
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            170,
+            109,
+            61,
+            187
+          ],
+          "size": [
+            233,
+            168
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5800.0,
+      "sha256": "0dbff301b0c39a85bff1c8f8178b1edda2e1a6420270d40c2a0fd8d0b04c31e5",
+      "state": {
+        "lesson": "horizon",
+        "time": 5800,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5800,
+            "running": false,
+            "visible": true,
+            "frames": 148,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 148
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            170,
+            108,
+            60,
+            188
+          ],
+          "size": [
+            234,
+            168
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5840.0,
+      "sha256": "152b57cf282524d1f0c82ba18c6ba4825080bc02f68b4319c65fbffcd437c468",
+      "state": {
+        "lesson": "horizon",
+        "time": 5840,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5840,
+            "running": false,
+            "visible": true,
+            "frames": 149,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 149
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            171,
+            108,
+            59,
+            189
+          ],
+          "size": [
+            234,
+            167
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5880.0,
+      "sha256": "a8081f8e261e9304cda1b6733ac81a738d658f641e24bc732ee299d1d5a4cd45",
+      "state": {
+        "lesson": "horizon",
+        "time": 5880,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5880,
+            "running": false,
+            "visible": true,
+            "frames": 150,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 150
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            171,
+            107,
+            58,
+            190
+          ],
+          "size": [
+            235,
+            167
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5920.0,
+      "sha256": "65d52e1aa1fac692796f7bd27fb594b8322cb2e70b1093d9d973c00482e9335e",
+      "state": {
+        "lesson": "horizon",
+        "time": 5920,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5920,
+            "running": false,
+            "visible": true,
+            "frames": 151,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 151
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            172,
+            106,
+            57,
+            192
+          ],
+          "size": [
+            235,
+            166
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 5960.0,
+      "sha256": "b9d5c92b47d8f0cc39f6e132b33a964af744bebf376ebb9d189f4b3b25127715",
+      "state": {
+        "lesson": "horizon",
+        "time": 5960,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 5960,
+            "running": false,
+            "visible": true,
+            "frames": 152,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 152
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            172,
+            105,
+            57,
+            193
+          ],
+          "size": [
+            235,
+            166
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6000.0,
+      "sha256": "690524002a850d4bc7ad8ca4415e5e6b853b061f7766fe10cdd9e8f0ae1fa9b2",
+      "state": {
+        "lesson": "horizon",
+        "time": 6000,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6000,
+            "running": false,
+            "visible": true,
+            "frames": 153,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 153
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            105,
+            56,
+            194
+          ],
+          "size": [
+            235,
+            165
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6040.0,
+      "sha256": "5e045e792212ffea3a86170261130a00848fef2b794785b4a6907ff5571bfbde",
+      "state": {
+        "lesson": "horizon",
+        "time": 6040,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6040,
+            "running": false,
+            "visible": true,
+            "frames": 154,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 154
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            104,
+            55,
+            194
+          ],
+          "size": [
+            236,
+            166
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6080.0,
+      "sha256": "5c52c9d2c8f78030a4f5d0c4daf386d62206d0d45feb945f8ccd31fff2e7e881",
+      "state": {
+        "lesson": "horizon",
+        "time": 6080,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6080,
+            "running": false,
+            "visible": true,
+            "frames": 155,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 155
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            173,
+            104,
+            55,
+            196
+          ],
+          "size": [
+            236,
+            164
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6120.0,
+      "sha256": "3894797ded6ee464b4d1585820fd8bcc280e8d7374ef42d58524d5cd3f8d1ef8",
+      "state": {
+        "lesson": "horizon",
+        "time": 6120,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6120,
+            "running": false,
+            "visible": true,
+            "frames": 156,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 156
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            103,
+            54,
+            196
+          ],
+          "size": [
+            236,
+            165
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6160.0,
+      "sha256": "e1076a1a1c66a272532084ad3ac12c1ffd848489b3c871e6bf25e17b50d641d2",
+      "state": {
+        "lesson": "horizon",
+        "time": 6160,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6160,
+            "running": false,
+            "visible": true,
+            "frames": 157,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 157
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            103,
+            54,
+            197
+          ],
+          "size": [
+            236,
+            164
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6200.0,
+      "sha256": "a14a2af007d7215e2d9f7f20d72fd199e0ef8371f09b565dde47e34126370c02",
+      "state": {
+        "lesson": "horizon",
+        "time": 6200,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6200,
+            "running": false,
+            "visible": true,
+            "frames": 158,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 158
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            174,
+            102,
+            53,
+            197
+          ],
+          "size": [
+            237,
+            165
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6240.0,
+      "sha256": "539b914d40c1aac2fd1382aed77d29d7138a3cb9f669523e9a1e45e27748ed91",
+      "state": {
+        "lesson": "horizon",
+        "time": 6240,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6240,
+            "running": false,
+            "visible": true,
+            "frames": 159,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 159
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            175,
+            102,
+            53,
+            198
+          ],
+          "size": [
+            236,
+            164
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6280.0,
+      "sha256": "850120b4143861d4b943fe08919d40c44a2560b73604b542d37638d8b6cc61b1",
+      "state": {
+        "lesson": "horizon",
+        "time": 6280,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6280,
+            "running": false,
+            "visible": true,
+            "frames": 160,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 160
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            175,
+            102,
+            53,
+            198
+          ],
+          "size": [
+            236,
+            164
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6320.0,
+      "sha256": "c0c26735f7a0db53eb4280411223529fcceb0e85f2f1c06ded7e40d1f53e404c",
+      "state": {
+        "lesson": "horizon",
+        "time": 6320,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6320,
+            "running": false,
+            "visible": true,
+            "frames": 161,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 161
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            175,
+            102,
+            53,
+            198
+          ],
+          "size": [
+            236,
+            164
+          ],
+          "uniform_surface": true
+        }
+      ]
+    },
+    {
+      "time_ms": 6360.0,
+      "sha256": "38ff8cf1a87143a8a25ff46256b73829ba3e64f96b83c88a5302aea623feab7b",
+      "state": {
+        "lesson": "horizon",
+        "time": 6360,
+        "request": 1,
+        "budget": {
+          "additional_input": 30000,
+          "scoped_total": 90000,
+          "margin_vs_curated": 0,
+          "relation": "equal",
+          "percent": "0.0"
+        },
+        "guide_progress": 0,
+        "scenes": {
+          "horizon": {
+            "time": 6360,
+            "running": false,
+            "visible": true,
+            "frames": 162,
+            "native": true,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 6400,
+            "seekVersion": 162
+          }
+        }
+      },
+      "actor_bounds": [
+        {
+          "pose": "plan",
+          "margins": [
+            175,
+            102,
+            53,
+            199
+          ],
+          "size": [
+            236,
+            163
+          ],
+          "uniform_surface": true
+        }
+      ]
+    }
+  ],
+  "scope": "Shared companion scene clocks; native sources and recorded footage remain distinct. Sample FPS is not source acting or perceived smoothness."
+}

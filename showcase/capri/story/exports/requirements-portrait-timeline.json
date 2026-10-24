@@ -5,17 +5,17 @@
   "sample_fps": 25,
   "sample_count": 50,
   "size": [
-    600,
-    900
+    480,
+    640
   ],
-  "bytes": 4310483,
-  "gif_sha256": "caaf4a3258d60f721d13ed0dd6741d53efb39d75d5793dea70cc979cef19d7e2",
-  "poster_sha256": "7ca37beacfa33e61563e959f12b293737d5b79d231604f141cc213dd8b2c83e3",
+  "bytes": 3210816,
+  "gif_sha256": "b62c78f6e758e7d4505e847c9867bcf3aeb41c996b7cec5cf98d0d6ebf9c85d7",
+  "poster_sha256": "07f6dec153c9e35a093e633c3ce1da887b238f76843e1259bad3e48fa413f75c",
   "palette_colors": 256,
   "frames": [
     {
       "time_ms": 0.0,
-      "sha256": "7ca37beacfa33e61563e959f12b293737d5b79d231604f141cc213dd8b2c83e3",
+      "sha256": "07f6dec153c9e35a093e633c3ce1da887b238f76843e1259bad3e48fa413f75c",
       "state": {
         "lesson": "requirements",
         "time": 0,
@@ -33,7 +33,7 @@
             "time": 0,
             "running": false,
             "visible": true,
-            "frames": 3,
+            "frames": 4,
             "native": null,
             "sourceTime": 0,
             "sourceDuration": 0.5,
@@ -41,11 +41,27 @@
             "seekVersion": 3
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            301,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            134,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 40.0,
-      "sha256": "0eef69f88ec85a11c554f3ffe0371405f3c6d61f72e54b2a6491364d7de442d1",
+      "sha256": "d60989860b3f16abedcad6fff958e9c5c8293f21c87c4cdb0128bd7b1ae0a76b",
       "state": {
         "lesson": "requirements",
         "time": 40,
@@ -63,7 +79,7 @@
             "time": 40,
             "running": false,
             "visible": true,
-            "frames": 4,
+            "frames": 5,
             "native": null,
             "sourceTime": 0.04,
             "sourceDuration": 0.5,
@@ -71,11 +87,27 @@
             "seekVersion": 4
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            301,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            134,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 80.0,
-      "sha256": "15c39373388074df5eff51c1a0de898eef8585e1a2f6bac61bdaf52e2e218cc4",
+      "sha256": "a1d3b5fba747ea1c097b1d7ecf7a0fac8e1ae5a20b1dab96d55b7ab2156dd089",
       "state": {
         "lesson": "requirements",
         "time": 80,
@@ -93,7 +125,7 @@
             "time": 80,
             "running": false,
             "visible": true,
-            "frames": 5,
+            "frames": 6,
             "native": null,
             "sourceTime": 0.08,
             "sourceDuration": 0.5,
@@ -101,11 +133,27 @@
             "seekVersion": 5
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 120.0,
-      "sha256": "367cf6391562dda190442f38f01686107edcd58c4cb137adf0be61e3e8207684",
+      "sha256": "66641bdc8af2e7f4a18a4a300dedb5434e5d631a087e4d75eb5472c15f3af347",
       "state": {
         "lesson": "requirements",
         "time": 120,
@@ -123,7 +171,7 @@
             "time": 120,
             "running": false,
             "visible": true,
-            "frames": 6,
+            "frames": 7,
             "native": null,
             "sourceTime": 0.12,
             "sourceDuration": 0.5,
@@ -131,11 +179,27 @@
             "seekVersion": 6
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 160.0,
-      "sha256": "21aa36fd33cfedff4e5e3b044f64ae353df708292e873e9e55831db34167b500",
+      "sha256": "c44f53b885e2f49585421561012a516114322c3d4518718b827ade796ced463a",
       "state": {
         "lesson": "requirements",
         "time": 160,
@@ -153,7 +217,7 @@
             "time": 160,
             "running": false,
             "visible": true,
-            "frames": 7,
+            "frames": 8,
             "native": null,
             "sourceTime": 0.16,
             "sourceDuration": 0.5,
@@ -161,11 +225,27 @@
             "seekVersion": 7
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 200.0,
-      "sha256": "7e2e88119b09cb4ac09ce54f6e70210155e2c9eb5732ba5ece33bc08e0176eb0",
+      "sha256": "283573d6609a282f6ea2b68d6bcd589766af8780fc1fef8993870db9611acc00",
       "state": {
         "lesson": "requirements",
         "time": 200,
@@ -183,7 +263,7 @@
             "time": 200,
             "running": false,
             "visible": true,
-            "frames": 8,
+            "frames": 9,
             "native": null,
             "sourceTime": 0.2,
             "sourceDuration": 0.5,
@@ -191,11 +271,27 @@
             "seekVersion": 8
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 240.0,
-      "sha256": "30aaf89433ee6187512be78d40866415a3454c41e811e92d01c5ea5e95e4c461",
+      "sha256": "8d803f36be404b79653188a11ec7dc9db9faf6422390944af6c6f37617f6f5e4",
       "state": {
         "lesson": "requirements",
         "time": 240,
@@ -213,7 +309,7 @@
             "time": 240,
             "running": false,
             "visible": true,
-            "frames": 9,
+            "frames": 10,
             "native": null,
             "sourceTime": 0.24,
             "sourceDuration": 0.5,
@@ -221,11 +317,27 @@
             "seekVersion": 9
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 280.0,
-      "sha256": "eb98bd4dffc51da03c65f2b1b709d35e4ed22c004f82c98c5db396ebb7b316b8",
+      "sha256": "5ff8a878d79fff0d173796641477f6b41f125b3de121ab60e07935669fae4658",
       "state": {
         "lesson": "requirements",
         "time": 280,
@@ -243,7 +355,7 @@
             "time": 280,
             "running": false,
             "visible": true,
-            "frames": 10,
+            "frames": 11,
             "native": null,
             "sourceTime": 0.28,
             "sourceDuration": 0.5,
@@ -251,11 +363,27 @@
             "seekVersion": 10
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 320.0,
-      "sha256": "9cd4fe6bfa2c49a6d47bebda66f566833b5c37dac7087e54ffd01cc231e2c950",
+      "sha256": "dfdb5cbeea1f4b8c219dadd6fcf953e21d1fa5a1977ba80b62ea4f72ff22f0aa",
       "state": {
         "lesson": "requirements",
         "time": 320,
@@ -273,7 +401,7 @@
             "time": 320,
             "running": false,
             "visible": true,
-            "frames": 11,
+            "frames": 12,
             "native": null,
             "sourceTime": 0.32,
             "sourceDuration": 0.5,
@@ -281,11 +409,27 @@
             "seekVersion": 11
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 360.0,
-      "sha256": "cd425e26770be4258e99d0d995ba0d4a6f198cc0faa850be84a65bf8ec462b69",
+      "sha256": "ae004414e1078e6658e9d887185d64e20b216c877a05e71ab70a464f43d26f77",
       "state": {
         "lesson": "requirements",
         "time": 360,
@@ -303,7 +447,7 @@
             "time": 360,
             "running": false,
             "visible": true,
-            "frames": 12,
+            "frames": 13,
             "native": null,
             "sourceTime": 0.36,
             "sourceDuration": 0.5,
@@ -311,11 +455,27 @@
             "seekVersion": 12
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 400.0,
-      "sha256": "364254d8ac56da88124b2ea7be93de2dc7e4444a3c4ad2b4130aea0efc5c9051",
+      "sha256": "71f0720884093af48e58260f6b86e2f8e5512502ef16b0d90386196df1636b51",
       "state": {
         "lesson": "requirements",
         "time": 400,
@@ -333,7 +493,7 @@
             "time": 400,
             "running": false,
             "visible": true,
-            "frames": 13,
+            "frames": 14,
             "native": null,
             "sourceTime": 0.4,
             "sourceDuration": 0.5,
@@ -341,11 +501,27 @@
             "seekVersion": 13
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 440.0,
-      "sha256": "3e3557874ec8cbafcc08085510e78d51da3d78d3e2d4857087910d38c12c7bf1",
+      "sha256": "a69eb5632767bea0b602f4d9cdd20f0ab60a2bd24b4e4aeffe7c6f32742797e1",
       "state": {
         "lesson": "requirements",
         "time": 440,
@@ -363,7 +539,7 @@
             "time": 440,
             "running": false,
             "visible": true,
-            "frames": 14,
+            "frames": 15,
             "native": null,
             "sourceTime": 0.44,
             "sourceDuration": 0.5,
@@ -371,11 +547,27 @@
             "seekVersion": 14
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 480.0,
-      "sha256": "3c115ed2fc9027b9c3ad3e42b3f705d4c71851c76ac893d1aba81d97709756e2",
+      "sha256": "080cca7d24819c956856c5e32361faeed242baaca1782b68eaa3229789faa1b3",
       "state": {
         "lesson": "requirements",
         "time": 480,
@@ -393,7 +585,7 @@
             "time": 480,
             "running": false,
             "visible": true,
-            "frames": 15,
+            "frames": 16,
             "native": null,
             "sourceTime": 0.48,
             "sourceDuration": 0.5,
@@ -401,11 +593,27 @@
             "seekVersion": 15
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 520.0,
-      "sha256": "7ca37beacfa33e61563e959f12b293737d5b79d231604f141cc213dd8b2c83e3",
+      "sha256": "07f6dec153c9e35a093e633c3ce1da887b238f76843e1259bad3e48fa413f75c",
       "state": {
         "lesson": "requirements",
         "time": 520,
@@ -423,7 +631,7 @@
             "time": 20,
             "running": false,
             "visible": true,
-            "frames": 16,
+            "frames": 17,
             "native": null,
             "sourceTime": 0.02,
             "sourceDuration": 0.5,
@@ -431,11 +639,27 @@
             "seekVersion": 16
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 560.0,
-      "sha256": "0eef69f88ec85a11c554f3ffe0371405f3c6d61f72e54b2a6491364d7de442d1",
+      "sha256": "d60989860b3f16abedcad6fff958e9c5c8293f21c87c4cdb0128bd7b1ae0a76b",
       "state": {
         "lesson": "requirements",
         "time": 560,
@@ -453,7 +677,7 @@
             "time": 60,
             "running": false,
             "visible": true,
-            "frames": 17,
+            "frames": 18,
             "native": null,
             "sourceTime": 0.06,
             "sourceDuration": 0.5,
@@ -461,11 +685,27 @@
             "seekVersion": 17
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 600.0,
-      "sha256": "367cf6391562dda190442f38f01686107edcd58c4cb137adf0be61e3e8207684",
+      "sha256": "66641bdc8af2e7f4a18a4a300dedb5434e5d631a087e4d75eb5472c15f3af347",
       "state": {
         "lesson": "requirements",
         "time": 600,
@@ -483,7 +723,7 @@
             "time": 100,
             "running": false,
             "visible": true,
-            "frames": 18,
+            "frames": 19,
             "native": null,
             "sourceTime": 0.1,
             "sourceDuration": 0.5,
@@ -491,11 +731,27 @@
             "seekVersion": 18
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 640.0,
-      "sha256": "21aa36fd33cfedff4e5e3b044f64ae353df708292e873e9e55831db34167b500",
+      "sha256": "c44f53b885e2f49585421561012a516114322c3d4518718b827ade796ced463a",
       "state": {
         "lesson": "requirements",
         "time": 640,
@@ -513,7 +769,7 @@
             "time": 140,
             "running": false,
             "visible": true,
-            "frames": 19,
+            "frames": 20,
             "native": null,
             "sourceTime": 0.14,
             "sourceDuration": 0.5,
@@ -521,11 +777,27 @@
             "seekVersion": 19
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 680.0,
-      "sha256": "d4cbcb1736874ba3e1057deb20f1aaf5b203fbb65501e72240cd80fd93f60a90",
+      "sha256": "a5daf3017460c88b8352a83f80924791d0eeb228009ae597064a947f5b6d3872",
       "state": {
         "lesson": "requirements",
         "time": 680,
@@ -543,7 +815,7 @@
             "time": 180,
             "running": false,
             "visible": true,
-            "frames": 20,
+            "frames": 21,
             "native": null,
             "sourceTime": 0.18,
             "sourceDuration": 0.5,
@@ -551,11 +823,27 @@
             "seekVersion": 20
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 720.0,
-      "sha256": "7e2e88119b09cb4ac09ce54f6e70210155e2c9eb5732ba5ece33bc08e0176eb0",
+      "sha256": "283573d6609a282f6ea2b68d6bcd589766af8780fc1fef8993870db9611acc00",
       "state": {
         "lesson": "requirements",
         "time": 720,
@@ -573,7 +861,7 @@
             "time": 220,
             "running": false,
             "visible": true,
-            "frames": 21,
+            "frames": 22,
             "native": null,
             "sourceTime": 0.22,
             "sourceDuration": 0.5,
@@ -581,11 +869,27 @@
             "seekVersion": 21
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 760.0,
-      "sha256": "30aaf89433ee6187512be78d40866415a3454c41e811e92d01c5ea5e95e4c461",
+      "sha256": "8d803f36be404b79653188a11ec7dc9db9faf6422390944af6c6f37617f6f5e4",
       "state": {
         "lesson": "requirements",
         "time": 760,
@@ -603,7 +907,7 @@
             "time": 260,
             "running": false,
             "visible": true,
-            "frames": 22,
+            "frames": 23,
             "native": null,
             "sourceTime": 0.26,
             "sourceDuration": 0.5,
@@ -611,11 +915,27 @@
             "seekVersion": 22
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 800.0,
-      "sha256": "9cd4fe6bfa2c49a6d47bebda66f566833b5c37dac7087e54ffd01cc231e2c950",
+      "sha256": "dfdb5cbeea1f4b8c219dadd6fcf953e21d1fa5a1977ba80b62ea4f72ff22f0aa",
       "state": {
         "lesson": "requirements",
         "time": 800,
@@ -633,7 +953,7 @@
             "time": 300,
             "running": false,
             "visible": true,
-            "frames": 23,
+            "frames": 24,
             "native": null,
             "sourceTime": 0.3,
             "sourceDuration": 0.5,
@@ -641,11 +961,27 @@
             "seekVersion": 23
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 840.0,
-      "sha256": "cd425e26770be4258e99d0d995ba0d4a6f198cc0faa850be84a65bf8ec462b69",
+      "sha256": "ae004414e1078e6658e9d887185d64e20b216c877a05e71ab70a464f43d26f77",
       "state": {
         "lesson": "requirements",
         "time": 840,
@@ -663,7 +999,7 @@
             "time": 340,
             "running": false,
             "visible": true,
-            "frames": 24,
+            "frames": 25,
             "native": null,
             "sourceTime": 0.34,
             "sourceDuration": 0.5,
@@ -671,11 +1007,27 @@
             "seekVersion": 24
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 880.0,
-      "sha256": "685735bb7accb55ed81d26e88d492e3172dc28480c84091caee9eece6796289c",
+      "sha256": "e25abe514f606cccf598f7ea554d7114d6b2549dbb02ebc65220d0dc65946244",
       "state": {
         "lesson": "requirements",
         "time": 880,
@@ -693,7 +1045,7 @@
             "time": 380,
             "running": false,
             "visible": true,
-            "frames": 25,
+            "frames": 26,
             "native": null,
             "sourceTime": 0.38,
             "sourceDuration": 0.5,
@@ -701,11 +1053,27 @@
             "seekVersion": 25
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 920.0,
-      "sha256": "364254d8ac56da88124b2ea7be93de2dc7e4444a3c4ad2b4130aea0efc5c9051",
+      "sha256": "71f0720884093af48e58260f6b86e2f8e5512502ef16b0d90386196df1636b51",
       "state": {
         "lesson": "requirements",
         "time": 920,
@@ -723,7 +1091,7 @@
             "time": 420,
             "running": false,
             "visible": true,
-            "frames": 26,
+            "frames": 27,
             "native": null,
             "sourceTime": 0.42,
             "sourceDuration": 0.5,
@@ -731,11 +1099,27 @@
             "seekVersion": 26
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 960.0,
-      "sha256": "3e3557874ec8cbafcc08085510e78d51da3d78d3e2d4857087910d38c12c7bf1",
+      "sha256": "a69eb5632767bea0b602f4d9cdd20f0ab60a2bd24b4e4aeffe7c6f32742797e1",
       "state": {
         "lesson": "requirements",
         "time": 960,
@@ -753,7 +1137,7 @@
             "time": 460,
             "running": false,
             "visible": true,
-            "frames": 27,
+            "frames": 28,
             "native": null,
             "sourceTime": 0.46,
             "sourceDuration": 0.5,
@@ -761,11 +1145,27 @@
             "seekVersion": 27
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1000.0,
-      "sha256": "7ca37beacfa33e61563e959f12b293737d5b79d231604f141cc213dd8b2c83e3",
+      "sha256": "07f6dec153c9e35a093e633c3ce1da887b238f76843e1259bad3e48fa413f75c",
       "state": {
         "lesson": "requirements",
         "time": 1000,
@@ -783,7 +1183,7 @@
             "time": 0,
             "running": false,
             "visible": true,
-            "frames": 28,
+            "frames": 29,
             "native": null,
             "sourceTime": 0,
             "sourceDuration": 0.5,
@@ -791,11 +1191,27 @@
             "seekVersion": 28
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1040.0,
-      "sha256": "0eef69f88ec85a11c554f3ffe0371405f3c6d61f72e54b2a6491364d7de442d1",
+      "sha256": "d60989860b3f16abedcad6fff958e9c5c8293f21c87c4cdb0128bd7b1ae0a76b",
       "state": {
         "lesson": "requirements",
         "time": 1040,
@@ -813,7 +1229,7 @@
             "time": 40,
             "running": false,
             "visible": true,
-            "frames": 29,
+            "frames": 30,
             "native": null,
             "sourceTime": 0.04,
             "sourceDuration": 0.5,
@@ -821,11 +1237,27 @@
             "seekVersion": 29
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1080.0,
-      "sha256": "15c39373388074df5eff51c1a0de898eef8585e1a2f6bac61bdaf52e2e218cc4",
+      "sha256": "a1d3b5fba747ea1c097b1d7ecf7a0fac8e1ae5a20b1dab96d55b7ab2156dd089",
       "state": {
         "lesson": "requirements",
         "time": 1080,
@@ -843,7 +1275,7 @@
             "time": 80,
             "running": false,
             "visible": true,
-            "frames": 30,
+            "frames": 31,
             "native": null,
             "sourceTime": 0.08,
             "sourceDuration": 0.5,
@@ -851,11 +1283,27 @@
             "seekVersion": 30
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1120.0,
-      "sha256": "367cf6391562dda190442f38f01686107edcd58c4cb137adf0be61e3e8207684",
+      "sha256": "66641bdc8af2e7f4a18a4a300dedb5434e5d631a087e4d75eb5472c15f3af347",
       "state": {
         "lesson": "requirements",
         "time": 1120,
@@ -873,7 +1321,7 @@
             "time": 120,
             "running": false,
             "visible": true,
-            "frames": 31,
+            "frames": 32,
             "native": null,
             "sourceTime": 0.12,
             "sourceDuration": 0.5,
@@ -881,11 +1329,27 @@
             "seekVersion": 31
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1160.0,
-      "sha256": "21aa36fd33cfedff4e5e3b044f64ae353df708292e873e9e55831db34167b500",
+      "sha256": "c44f53b885e2f49585421561012a516114322c3d4518718b827ade796ced463a",
       "state": {
         "lesson": "requirements",
         "time": 1160,
@@ -903,7 +1367,7 @@
             "time": 160,
             "running": false,
             "visible": true,
-            "frames": 32,
+            "frames": 33,
             "native": null,
             "sourceTime": 0.16,
             "sourceDuration": 0.5,
@@ -911,11 +1375,27 @@
             "seekVersion": 32
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1200.0,
-      "sha256": "7e2e88119b09cb4ac09ce54f6e70210155e2c9eb5732ba5ece33bc08e0176eb0",
+      "sha256": "283573d6609a282f6ea2b68d6bcd589766af8780fc1fef8993870db9611acc00",
       "state": {
         "lesson": "requirements",
         "time": 1200,
@@ -933,7 +1413,7 @@
             "time": 200,
             "running": false,
             "visible": true,
-            "frames": 33,
+            "frames": 34,
             "native": null,
             "sourceTime": 0.2,
             "sourceDuration": 0.5,
@@ -941,11 +1421,27 @@
             "seekVersion": 33
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1240.0,
-      "sha256": "30aaf89433ee6187512be78d40866415a3454c41e811e92d01c5ea5e95e4c461",
+      "sha256": "8d803f36be404b79653188a11ec7dc9db9faf6422390944af6c6f37617f6f5e4",
       "state": {
         "lesson": "requirements",
         "time": 1240,
@@ -963,7 +1459,7 @@
             "time": 240,
             "running": false,
             "visible": true,
-            "frames": 34,
+            "frames": 35,
             "native": null,
             "sourceTime": 0.24,
             "sourceDuration": 0.5,
@@ -971,11 +1467,27 @@
             "seekVersion": 34
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1280.0,
-      "sha256": "eb98bd4dffc51da03c65f2b1b709d35e4ed22c004f82c98c5db396ebb7b316b8",
+      "sha256": "5ff8a878d79fff0d173796641477f6b41f125b3de121ab60e07935669fae4658",
       "state": {
         "lesson": "requirements",
         "time": 1280,
@@ -993,7 +1505,7 @@
             "time": 280,
             "running": false,
             "visible": true,
-            "frames": 35,
+            "frames": 36,
             "native": null,
             "sourceTime": 0.28,
             "sourceDuration": 0.5,
@@ -1001,11 +1513,27 @@
             "seekVersion": 35
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1320.0,
-      "sha256": "9cd4fe6bfa2c49a6d47bebda66f566833b5c37dac7087e54ffd01cc231e2c950",
+      "sha256": "dfdb5cbeea1f4b8c219dadd6fcf953e21d1fa5a1977ba80b62ea4f72ff22f0aa",
       "state": {
         "lesson": "requirements",
         "time": 1320,
@@ -1023,7 +1551,7 @@
             "time": 320,
             "running": false,
             "visible": true,
-            "frames": 36,
+            "frames": 37,
             "native": null,
             "sourceTime": 0.32,
             "sourceDuration": 0.5,
@@ -1031,11 +1559,27 @@
             "seekVersion": 36
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1360.0,
-      "sha256": "cd425e26770be4258e99d0d995ba0d4a6f198cc0faa850be84a65bf8ec462b69",
+      "sha256": "ae004414e1078e6658e9d887185d64e20b216c877a05e71ab70a464f43d26f77",
       "state": {
         "lesson": "requirements",
         "time": 1360,
@@ -1053,7 +1597,7 @@
             "time": 360,
             "running": false,
             "visible": true,
-            "frames": 37,
+            "frames": 38,
             "native": null,
             "sourceTime": 0.36,
             "sourceDuration": 0.5,
@@ -1061,11 +1605,27 @@
             "seekVersion": 37
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1400.0,
-      "sha256": "364254d8ac56da88124b2ea7be93de2dc7e4444a3c4ad2b4130aea0efc5c9051",
+      "sha256": "71f0720884093af48e58260f6b86e2f8e5512502ef16b0d90386196df1636b51",
       "state": {
         "lesson": "requirements",
         "time": 1400,
@@ -1083,7 +1643,7 @@
             "time": 400,
             "running": false,
             "visible": true,
-            "frames": 38,
+            "frames": 39,
             "native": null,
             "sourceTime": 0.4,
             "sourceDuration": 0.5,
@@ -1091,11 +1651,27 @@
             "seekVersion": 38
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1440.0,
-      "sha256": "3e3557874ec8cbafcc08085510e78d51da3d78d3e2d4857087910d38c12c7bf1",
+      "sha256": "a69eb5632767bea0b602f4d9cdd20f0ab60a2bd24b4e4aeffe7c6f32742797e1",
       "state": {
         "lesson": "requirements",
         "time": 1440,
@@ -1113,7 +1689,7 @@
             "time": 440,
             "running": false,
             "visible": true,
-            "frames": 39,
+            "frames": 40,
             "native": null,
             "sourceTime": 0.44,
             "sourceDuration": 0.5,
@@ -1121,11 +1697,27 @@
             "seekVersion": 39
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1480.0,
-      "sha256": "3c115ed2fc9027b9c3ad3e42b3f705d4c71851c76ac893d1aba81d97709756e2",
+      "sha256": "080cca7d24819c956856c5e32361faeed242baaca1782b68eaa3229789faa1b3",
       "state": {
         "lesson": "requirements",
         "time": 1480,
@@ -1143,7 +1735,7 @@
             "time": 480,
             "running": false,
             "visible": true,
-            "frames": 40,
+            "frames": 41,
             "native": null,
             "sourceTime": 0.48,
             "sourceDuration": 0.5,
@@ -1151,11 +1743,27 @@
             "seekVersion": 40
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1520.0,
-      "sha256": "7ca37beacfa33e61563e959f12b293737d5b79d231604f141cc213dd8b2c83e3",
+      "sha256": "07f6dec153c9e35a093e633c3ce1da887b238f76843e1259bad3e48fa413f75c",
       "state": {
         "lesson": "requirements",
         "time": 1520,
@@ -1173,7 +1781,7 @@
             "time": 20,
             "running": false,
             "visible": true,
-            "frames": 41,
+            "frames": 42,
             "native": null,
             "sourceTime": 0.02,
             "sourceDuration": 0.5,
@@ -1181,11 +1789,27 @@
             "seekVersion": 41
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1560.0,
-      "sha256": "0eef69f88ec85a11c554f3ffe0371405f3c6d61f72e54b2a6491364d7de442d1",
+      "sha256": "d60989860b3f16abedcad6fff958e9c5c8293f21c87c4cdb0128bd7b1ae0a76b",
       "state": {
         "lesson": "requirements",
         "time": 1560,
@@ -1203,7 +1827,7 @@
             "time": 60,
             "running": false,
             "visible": true,
-            "frames": 42,
+            "frames": 43,
             "native": null,
             "sourceTime": 0.06,
             "sourceDuration": 0.5,
@@ -1211,11 +1835,27 @@
             "seekVersion": 42
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1600.0,
-      "sha256": "367cf6391562dda190442f38f01686107edcd58c4cb137adf0be61e3e8207684",
+      "sha256": "66641bdc8af2e7f4a18a4a300dedb5434e5d631a087e4d75eb5472c15f3af347",
       "state": {
         "lesson": "requirements",
         "time": 1600,
@@ -1233,7 +1873,7 @@
             "time": 100,
             "running": false,
             "visible": true,
-            "frames": 43,
+            "frames": 44,
             "native": null,
             "sourceTime": 0.1,
             "sourceDuration": 0.5,
@@ -1241,11 +1881,27 @@
             "seekVersion": 43
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1640.0,
-      "sha256": "21aa36fd33cfedff4e5e3b044f64ae353df708292e873e9e55831db34167b500",
+      "sha256": "c44f53b885e2f49585421561012a516114322c3d4518718b827ade796ced463a",
       "state": {
         "lesson": "requirements",
         "time": 1640,
@@ -1263,7 +1919,7 @@
             "time": 140,
             "running": false,
             "visible": true,
-            "frames": 44,
+            "frames": 45,
             "native": null,
             "sourceTime": 0.14,
             "sourceDuration": 0.5,
@@ -1271,11 +1927,27 @@
             "seekVersion": 44
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1680.0,
-      "sha256": "d4cbcb1736874ba3e1057deb20f1aaf5b203fbb65501e72240cd80fd93f60a90",
+      "sha256": "a5daf3017460c88b8352a83f80924791d0eeb228009ae597064a947f5b6d3872",
       "state": {
         "lesson": "requirements",
         "time": 1680,
@@ -1293,7 +1965,7 @@
             "time": 180,
             "running": false,
             "visible": true,
-            "frames": 45,
+            "frames": 46,
             "native": null,
             "sourceTime": 0.18,
             "sourceDuration": 0.5,
@@ -1301,11 +1973,27 @@
             "seekVersion": 45
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1720.0,
-      "sha256": "7e2e88119b09cb4ac09ce54f6e70210155e2c9eb5732ba5ece33bc08e0176eb0",
+      "sha256": "283573d6609a282f6ea2b68d6bcd589766af8780fc1fef8993870db9611acc00",
       "state": {
         "lesson": "requirements",
         "time": 1720,
@@ -1323,7 +2011,7 @@
             "time": 220,
             "running": false,
             "visible": true,
-            "frames": 46,
+            "frames": 47,
             "native": null,
             "sourceTime": 0.22,
             "sourceDuration": 0.5,
@@ -1331,11 +2019,27 @@
             "seekVersion": 46
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1760.0,
-      "sha256": "30aaf89433ee6187512be78d40866415a3454c41e811e92d01c5ea5e95e4c461",
+      "sha256": "8d803f36be404b79653188a11ec7dc9db9faf6422390944af6c6f37617f6f5e4",
       "state": {
         "lesson": "requirements",
         "time": 1760,
@@ -1353,7 +2057,7 @@
             "time": 260,
             "running": false,
             "visible": true,
-            "frames": 47,
+            "frames": 48,
             "native": null,
             "sourceTime": 0.26,
             "sourceDuration": 0.5,
@@ -1361,11 +2065,27 @@
             "seekVersion": 47
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1800.0,
-      "sha256": "9cd4fe6bfa2c49a6d47bebda66f566833b5c37dac7087e54ffd01cc231e2c950",
+      "sha256": "dfdb5cbeea1f4b8c219dadd6fcf953e21d1fa5a1977ba80b62ea4f72ff22f0aa",
       "state": {
         "lesson": "requirements",
         "time": 1800,
@@ -1383,7 +2103,7 @@
             "time": 300,
             "running": false,
             "visible": true,
-            "frames": 48,
+            "frames": 49,
             "native": null,
             "sourceTime": 0.3,
             "sourceDuration": 0.5,
@@ -1391,11 +2111,27 @@
             "seekVersion": 48
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1840.0,
-      "sha256": "cd425e26770be4258e99d0d995ba0d4a6f198cc0faa850be84a65bf8ec462b69",
+      "sha256": "ae004414e1078e6658e9d887185d64e20b216c877a05e71ab70a464f43d26f77",
       "state": {
         "lesson": "requirements",
         "time": 1840,
@@ -1413,7 +2149,7 @@
             "time": 340,
             "running": false,
             "visible": true,
-            "frames": 49,
+            "frames": 50,
             "native": null,
             "sourceTime": 0.34,
             "sourceDuration": 0.5,
@@ -1421,11 +2157,27 @@
             "seekVersion": 49
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1880.0,
-      "sha256": "685735bb7accb55ed81d26e88d492e3172dc28480c84091caee9eece6796289c",
+      "sha256": "e25abe514f606cccf598f7ea554d7114d6b2549dbb02ebc65220d0dc65946244",
       "state": {
         "lesson": "requirements",
         "time": 1880,
@@ -1443,7 +2195,7 @@
             "time": 380,
             "running": false,
             "visible": true,
-            "frames": 50,
+            "frames": 51,
             "native": null,
             "sourceTime": 0.38,
             "sourceDuration": 0.5,
@@ -1451,11 +2203,27 @@
             "seekVersion": 50
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1920.0,
-      "sha256": "364254d8ac56da88124b2ea7be93de2dc7e4444a3c4ad2b4130aea0efc5c9051",
+      "sha256": "71f0720884093af48e58260f6b86e2f8e5512502ef16b0d90386196df1636b51",
       "state": {
         "lesson": "requirements",
         "time": 1920,
@@ -1473,7 +2241,7 @@
             "time": 420,
             "running": false,
             "visible": true,
-            "frames": 51,
+            "frames": 52,
             "native": null,
             "sourceTime": 0.42,
             "sourceDuration": 0.5,
@@ -1481,11 +2249,27 @@
             "seekVersion": 51
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     },
     {
       "time_ms": 1960.0,
-      "sha256": "3e3557874ec8cbafcc08085510e78d51da3d78d3e2d4857087910d38c12c7bf1",
+      "sha256": "a69eb5632767bea0b602f4d9cdd20f0ab60a2bd24b4e4aeffe7c6f32742797e1",
       "state": {
         "lesson": "requirements",
         "time": 1960,
@@ -1503,7 +2287,7 @@
             "time": 460,
             "running": false,
             "visible": true,
-            "frames": 52,
+            "frames": 53,
             "native": null,
             "sourceTime": 0.46,
             "sourceDuration": 0.5,
@@ -1511,7 +2295,23 @@
             "seekVersion": 52
           }
         }
-      }
+      },
+      "actor_bounds": [
+        {
+          "pose": "review",
+          "margins": [
+            300,
+            98,
+            29,
+            228
+          ],
+          "size": [
+            135,
+            138
+          ],
+          "uniform_surface": true
+        }
+      ]
     }
   ],
   "scope": "Shared companion scene clocks; native sources and recorded footage remain distinct. Sample FPS is not source acting or perceived smoothness."

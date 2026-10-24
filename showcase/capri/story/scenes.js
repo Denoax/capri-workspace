@@ -5,7 +5,7 @@
 (async function () {
   'use strict';
   const data = JSON.parse(document.getElementById('scene-data').textContent);
-  data.rig = window.CAPRI_RIG;
+  data.rig = window.CAPRI_RIG; data.storyFormats = JSON.parse(document.getElementById('story-data').textContent).formats;
   const actor = new CapriActor(data.rig), reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const ink = '#100a19', pink = '#ff1265', green = '#28fb86';
   const clamp = value => Math.max(0, Math.min(1, value));
@@ -34,8 +34,8 @@
     if (query.get('layout') === 'portrait') document.documentElement.classList.add('portrait');
     for (const [name, def] of Object.entries(definitions)) if (name !== exportName) def.element.hidden = true;
     if (exportName !== 'comic') comicRoot.hidden = true;
-    if (!['sharks', 'horizon'].includes(exportName)) nativeRoot.hidden = true;
-    if (!definitions[exportName].plate) platesRoot.hidden = true;
+
+
   }
   // Browser-native shaping uses the locally bundled fonts for every output.
   await Promise.all([actor.ready, document.fonts.ready,
@@ -220,7 +220,7 @@
         const sample = i === phase ? local : 0;
         const css = canvas.getBoundingClientRect(), fit = Math.min(css.width / 240, css.height / 220), dpr = exportName ? 1 : Math.min(2, devicePixelRatio || 1);
         ctx.setTransform(dpr * fit, 0, 0, dpr * fit, dpr * (css.width - 240 * fit) / 2, dpr * (css.height - 220 * fit) / 2);
-        const a = actor.draw(ctx, pose, sample, 120, 64, .135);
+        const a = actor.draw(ctx, pose, sample, data.storyFormats.actor_placement.workflow.x, data.storyFormats.actor_placement.workflow.y, data.storyFormats.actor_placement.workflow.scale);
         const box = canvas.getBoundingClientRect(); const world = p => [box.left - rootBox.left + (box.width - 240 * fit) / 2 + p[0] * fit, box.top - rootBox.top + (box.height - 220 * fit) / 2 + p[1] * fit];
         anchors.push({hand: world(a.hand), receive: world(a.receive)});
       });
@@ -235,19 +235,19 @@
       }
     }
     paintNative(time) {
-      const canvas = this.element.querySelector('[data-actor]'), horizon = this.name === 'horizon', w = horizon ? 960 : 900, h = horizon ? 600 : 620, ctx = surface(canvas, w, h);
+      const canvas = this.element.querySelector('[data-actor]'), horizon = this.name === 'horizon', w = horizon ? data.storyFormats.native_world.horizon[0] : data.storyFormats.native_world.sharks[0], h = horizon ? data.storyFormats.native_world.horizon[1] : data.storyFormats.native_world.sharks[1], ctx = surface(canvas, w, h);
       if (!ctx) return;
-      const phase = time / this.duration, entry = smooth(phase / .12) * (1 - smooth((phase - .88) / .12));
-      ctx.save(); ctx.globalAlpha = exportName ? entry : 1;
+      const phase = time / this.duration;
+      ctx.save(); ctx.globalAlpha = 1;
       if (horizon) {
-        const q = smooth(phase < .5 ? phase * 2 : (1 - phase) * 2), x = 760 - 400 * q, y = 245 + 135 * Math.sin(Math.PI * q);
-        actor.draw(ctx, 'plan', time, x, y, .26, -.15 + .27 * q);
-      } else actor.draw(ctx, 'plan', time * 6400 / this.duration, 725, 390, .19);
+        const p = data.storyFormats.actor_placement.horizon, q = smooth(phase < .5 ? phase * 2 : (1 - phase) * 2), x = p.x - p.x_travel * q, y = p.y + p.y_travel * Math.sin(Math.PI * q);
+        actor.draw(ctx, 'plan', time, x, y, data.storyFormats.actor_placement.horizon.scale, -.15 + .27 * q);
+      } else actor.draw(ctx, 'plan', time * 6400 / this.duration, data.storyFormats.actor_placement.sharks.x, data.storyFormats.actor_placement.sharks.y, data.storyFormats.actor_placement.sharks.scale);
       ctx.restore();
       // Native simulations remain unbounded live. Only exported excerpts have a
       // short explicit dark bridge, covering an otherwise nonperiodic world seam.
       let bridge = this.element.querySelector('.export-bridge');
-      if (exportName && !bridge) { bridge = document.createElement('div'); bridge.className = 'export-bridge'; bridge.style.cssText = 'position:absolute;inset:0;background:#100a19;pointer-events:none;z-index:4'; this.element.querySelector('.cs-stage').appendChild(bridge); }
+      if (exportName && !bridge) { bridge = document.createElement('div'); bridge.className = 'export-bridge'; bridge.style.cssText = 'position:absolute;inset:0;background:#100a19;pointer-events:none;z-index:1'; this.element.querySelector('.cs-stage').appendChild(bridge); }
       if (bridge) bridge.style.opacity = String(1 - smooth(Math.min(time, this.duration - 40 - time) / 240));
     }
     paintPlate(time) {
@@ -256,14 +256,14 @@
       const ctx = surface(canvas, w, h); if (!ctx) return;
       const seconds = this.video.currentTime, plate = recolour(name, this.video, this.cache, seconds); ctx.drawImage(plate, 0, 0, w, h);
       if (name === 'hands') {
-        actor.draw(ctx, 'build', time * 6400 / this.duration, 145, 224, .077);
+        actor.draw(ctx, 'build', time * 6400 / this.duration, data.storyFormats.actor_placement.hands.x, data.storyFormats.actor_placement.hands.y, data.storyFormats.actor_placement.hands.scale);
         // Measured source contact sits near (0.52, 0.48); preserve the hands,
         // not an invented arrow. The packet appears only through the contact.
         const packet = this.element.querySelector('.cp-packet'), q = smooth((seconds - 1.6) / .5), x = .46 + .10 * q, y = .48;
         packet.style.left = (x * 100) + '%'; packet.style.top = (y * 100) + '%'; packet.style.opacity = String(smooth((seconds - 1.65) / .25) * (1 - smooth((seconds - 4.65) / .25)));
       } else if (name === 'cat') {
         const arrival = smooth((seconds - .9) / .5) * (1 - smooth((seconds - 7.4) / .7));
-        ctx.save(); ctx.globalAlpha = arrival; actor.draw(ctx, 'review', time, 70 - 75 * (1 - arrival), 222, .085, -.06); ctx.restore(); showBeams(ctx, seconds, w, h, this.cache.eyes);
+        ctx.save(); ctx.globalAlpha = arrival; actor.draw(ctx, 'review', time, data.storyFormats.actor_placement.cat.x - 25 * (1 - arrival), data.storyFormats.actor_placement.cat.y, data.storyFormats.actor_placement.cat.scale, -.06); ctx.restore(); showBeams(ctx, seconds, w, h, this.cache.eyes);
       } else if (name === 'rain') actor.draw(ctx, 'review', 900, 251, 91, .088, -.04);
       else if (name === 'stack') actor.draw(ctx, 'plan', time, 535, 205, .10);
     }
