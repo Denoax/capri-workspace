@@ -36,6 +36,7 @@ class NativeEngineTests(unittest.IsolatedAsyncioTestCase):
                 return httpx.Response(200,headers={'content-type':'text/event-stream'},content=''.join('data: '+json.dumps(v)+'\n\n' for v in values))
             client=httpx.AsyncClient(transport=httpx.MockTransport(provider_response))
             class Provider:
+                calls=0
                 async def access_token(self, min_validity=90):return 'fixture-token'
                 async def client(self):return client
             async def dispatch(call,tool,args):

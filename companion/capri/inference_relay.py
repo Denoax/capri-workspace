@@ -80,6 +80,8 @@ class InferenceRelay:
             body=self.prepare(json.loads(raw))
             token=await self.provider.access_token()
             if not self.valid():raise Denied('Task revoked before inference dispatch')
+            # The shared native counter includes work as well as direct conversation attempts.
+            if hasattr(self.provider,'calls'):self.provider.calls+=1
             async with (await self.provider.client()).stream('POST',API,headers={'Authorization':'Bearer '+token},json=body,timeout=120) as response:
                 if response.status_code!=200:
                     await self.reply(writer,response.status_code,'Plan inference failed; no fallback was attempted');return
