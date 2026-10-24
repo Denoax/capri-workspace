@@ -221,7 +221,7 @@ class Service:
             await self.reply("Offline test provider — no model is connected. Your local Capri history is saved. Use Continue with ChatGPT for real conversation, or /help for deterministic native commands.")
 
     async def session_loop(self):
-        self.watcher = await asyncio.create_subprocess_exec("/usr/bin/python3", str(Path(__file__).with_name("session_watch.py")),
+        self.watcher = await asyncio.create_subprocess_exec("/usr/bin/python3", str(Path(__file__).with_name("session_watch.py")), str(os.getpid()),
                              stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.DEVNULL)
         try:
             async for line in self.watcher.stdout:

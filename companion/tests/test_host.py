@@ -65,3 +65,36 @@ class MediaBoundaryTests(unittest.IsolatedAsyncioTestCase):
                 return self.playback
         result=await DeferredPlayer().run('media.control',{'command':'pause'})
         self.assertEqual(result['status'],'Paused')
+
+@unittest.skipUnless(os.environ.get('CAPRI_HOST_INTEGRATION')=='1','Explicit native host lifecycle run required')
+class HostWatcherLifecycleTests(unittest.TestCase):
+    def test_native_watcher_exits_when_its_parent_is_killed(self):
+        import select
+        import signal
+        import subprocess
+        import time
+        watcher=Path(os.environ.get('CAPRI_TEST_WATCHER',str(Path(__file__).parent.parent/'capri/session_watch.py')))
+        readfd,writefd=os.pipe()
+        parent_code="import os,subprocess,sys,time; p=subprocess.Popen(['/usr/bin/python3',sys.argv[1],str(os.getpid())],stdout=int(sys.argv[2]),stderr=subprocess.DEVNULL); print(p.pid,flush=True); time.sleep(30)"
+        parent=subprocess.Popen(['/usr/bin/python3','-u','-c',parent_code,str(watcher),str(writefd)],stdout=subprocess.PIPE,text=True,pass_fds=(writefd,))
+        child=None
+        try:
+            child=int(parent.stdout.readline().strip())
+            ready,_,_=select.select([readfd],[],[],5)
+            self.assertTrue(ready,'Native watcher did not initialize')
+            state=json.loads(os.read(readfd,1024));self.assertIn('locked',state)
+            parent.kill();parent.wait(timeout=3)
+            deadline=time.monotonic()+2
+            while time.monotonic()<deadline:
+                path=Path(f'/proc/{child}/stat')
+                if not path.exists() or path.read_text().rsplit(') ',1)[1].split()[0]=='Z':break
+                time.sleep(.02)
+            else:self.fail('Native session watcher survived the death of its exact parent')
+        finally:
+            if parent.poll() is None:parent.kill();parent.wait(timeout=3)
+            parent.stdout.close();os.close(readfd);os.close(writefd)
+            if child and Path(f'/proc/{child}/cmdline').exists():
+                command=Path(f'/proc/{child}/cmdline').read_bytes()
+                if str(watcher).encode() in command and str(parent.pid).encode() in command:
+                    try:os.kill(child,signal.SIGTERM)
+                    except ProcessLookupError:pass

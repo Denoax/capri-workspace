@@ -1,6 +1,22 @@
 """login1 lock/sleep watcher; reports only booleans on stdout."""
 import json
 import os
+import ctypes
+import signal
+import sys
+
+# A SIGKILL/crash of the core cannot run Python cleanup. Bind this read-only
+# watcher to its exact parent and close the fork/prctl race in both directions.
+capri_parent_pid = int(sys.argv[1])
+if os.getppid() != capri_parent_pid:
+    raise SystemExit("Companion parent no longer exists")
+PR_SET_PDEATHSIG = 1
+capri_libc = ctypes.CDLL(None, use_errno=True)
+capri_libc.prctl.argtypes = [ctypes.c_int, ctypes.c_ulong, ctypes.c_ulong, ctypes.c_ulong, ctypes.c_ulong]
+if capri_libc.prctl(PR_SET_PDEATHSIG, signal.SIGTERM, 0, 0, 0) != 0:
+    raise OSError(ctypes.get_errno(), "Cannot bind session watcher lifetime")
+if os.getppid() != capri_parent_pid:
+    raise SystemExit("Companion parent exited during watcher startup")
 import dbus
 from dbus.mainloop.glib import DBusGMainLoop
 from gi.repository import GLib
