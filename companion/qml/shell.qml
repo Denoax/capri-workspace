@@ -521,9 +521,12 @@ ShellRoot {
             onClicked: root.stop()
         }
     }
-    Conversation {
-        id: conversationWindow
-        owner: root
+    Loader {
+        id: conversationLoader
+        // Draft and transcript live in the root/core, so a closed window need not stay resident.
+        active: root.conversationOpen
+        onLoaded: Qt.callLater(() => root.focusConversation())
+        sourceComponent: Conversation { owner: root }
     }
     IpcHandler {
         target: "capri"
@@ -544,9 +547,9 @@ ShellRoot {
             root.send("quit", {});
         }
         function settings(): void { root.openConversation(); root.settingsOpen = true; }
-        function revealScope(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") conversationWindow.revealScope(); }
-        function revealScopeSave(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") conversationWindow.revealScopeSave(); }
-        function scopePoints(): string { return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" ? conversationWindow.scopePoints() : "{}"; }
+        function revealScope(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") if (conversationLoader.item) conversationLoader.item.revealScope(); }
+        function revealScopeSave(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") if (conversationLoader.item) conversationLoader.item.revealScopeSave(); }
+        function scopePoints(): string { return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" ? (conversationLoader.item ? conversationLoader.item.scopePoints() : "{}") : "{}"; }
         function presence(): void {
             root.replyOpen = false;
             root.bubbleOpen = false;
