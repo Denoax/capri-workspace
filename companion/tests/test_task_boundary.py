@@ -72,3 +72,26 @@ class HostTaskBoundaryTests(unittest.IsolatedAsyncioTestCase):
             sock.bind(str(self.root/'host-control.sock'))
             with self.assertRaises(Denied):await self.runner.run(['/usr/bin/true'],[str(self.root)],str(self.root))
         finally:sock.close()
+
+    async def test_real_network_namespace_blocks_a_live_host_listener_and_udp_exfiltration(self):
+        received=[]
+        async def accept(reader,writer):
+            received.append(await reader.read(1000));writer.close();await writer.wait_closed()
+        server=await asyncio.start_server(accept,'127.0.0.1',0)
+        port=server.sockets[0].getsockname()[1]
+        import socket
+        udp=socket.socket(socket.AF_INET,socket.SOCK_DGRAM);udp.bind(('127.0.0.1',0));udp.setblocking(False)
+        try:
+            # Positive control: this endpoint really is reachable from the owner namespace.
+            reader,writer=await asyncio.open_connection('127.0.0.1',port)
+            writer.write(b'PUBLIC-BASELINE');await writer.drain();writer.close();await writer.wait_closed()
+            async with asyncio.timeout(2):
+                while not received:await asyncio.sleep(0)
+            received.clear()
+            host_ns=os.readlink('/proc/self/ns/net')
+            code=f"import os,socket,urllib.request\nassert os.readlink('/proc/self/ns/net')!={host_ns!r}\nfor url in ['http://127.0.0.1:{port}/redirect?public_fixture=secret','http://localhost:{port}/collect?public_fixture=secret']:\n try:urllib.request.urlopen(url,timeout=.2)\n except OSError:pass\n else:raise AssertionError('host endpoint escaped')\ns=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)\ntry:s.sendto(b'PUBLIC-DNS-EXFIL-FIXTURE',('127.0.0.1',{udp.getsockname()[1]}))\nexcept OSError:pass\nprint('LIVE-HOST-NETWORK-DENIED')"
+            result=await self.runner.run(['/usr/bin/python3','-c',code],[str(self.root)],str(self.root))
+            self.assertEqual(result['exit_code'],0,result['output']);self.assertEqual(received,[])
+            with self.assertRaises(asyncio.TimeoutError):await asyncio.wait_for(asyncio.get_running_loop().sock_recvfrom(udp,1000),.05)
+        finally:
+            udp.close();server.close();await server.wait_closed()
