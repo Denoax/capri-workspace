@@ -102,7 +102,10 @@ def main():
             except (OSError,ValueError):time.sleep(0.1)
         else:raise SystemExit('Core readiness timed out')
         env['CAPRI_UI_TOKEN']=(RUNTIME/'ui.token').read_text()
-        shell=subprocess.Popen([*bound,'/usr/bin/quickshell','-p',str(BASE/'qml/shell.qml'),'--no-duplicate'],env=env,stdout=log,stderr=log)
+        # Return large freed decoder buffers instead of retaining adaptive arenas.
+        # These settings affect only this UI child, never image quality or global libc.
+        ui_env=dict(env,MALLOC_MMAP_THRESHOLD_='131072',MALLOC_TRIM_THRESHOLD_='131072',MALLOC_ARENA_MAX='2')
+        shell=subprocess.Popen([*bound,'/usr/bin/quickshell','-p',str(BASE/'qml/shell.qml'),'--no-duplicate'],env=ui_env,stdout=log,stderr=log)
         # Exit either side together; a disconnected invisible shell must not keep
         # ownership or strand a subsequent launch after core shutdown.
         while shell.poll() is None and core.poll() is None:
