@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Protected native supervisor: one version, one bounded crash rollback, no updater trust key."""
 import json
+import fcntl
+import re
 import os
 from pathlib import Path
 import signal
@@ -12,15 +14,32 @@ from versions import Versions,atomic
 ROOT=Path(__file__).resolve().parent.parent
 manager=Versions(ROOT)
 
+def claim_runtime():
+    name=os.environ.get('CAPRI_RUNTIME_NAME','capri')
+    if not re.fullmatch(r'capri(?:-test-[a-z0-9]{1,12})?',name):raise SystemExit('Invalid private runtime name')
+    runtime=Path(os.environ.get('XDG_RUNTIME_DIR',str(Path.home()/'.cache')))/name
+    runtime.mkdir(mode=0o700,parents=True,exist_ok=True)
+    if runtime.is_symlink() or runtime.stat().st_uid!=os.getuid():raise SystemExit('Runtime directory ownership mismatch')
+    fd=os.open(runtime/'bootstrap.lock',os.O_WRONLY|os.O_CREAT|os.O_NOFOLLOW,0o600)
+    try:fcntl.flock(fd,fcntl.LOCK_EX|fcntl.LOCK_NB)
+    except BlockingIOError:
+        os.close(fd);return runtime,None
+    return runtime,fd
+
 def main():
     args=sys.argv[1:] or ['run'];command=args[0]
     if command=='rollback':
+        _,ownership=claim_runtime()
+        if ownership is None:raise SystemExit('Stop the running Capri service before rollback')
         # Explicit local command; routine health crashes use the separate automatic path.
         result=manager.rollback();print(json.dumps(result));return
     if command=='versions':print(json.dumps(manager.state(),indent=2));return
     if command!='run':
         current=manager.verify(manager.state()['current'])
         raise SystemExit(subprocess.call([sys.executable,str(current/'launcher.py'),*args]))
+    runtime,ownership=claim_runtime()
+    if ownership is None:
+        print('Capri is already running; its version and task state were preserved.');return
     stopping=False;child=None
     def stop(*_):
         nonlocal stopping
@@ -28,7 +47,6 @@ def main():
         if child and child.poll() is None:child.terminate()
     signal.signal(signal.SIGTERM,stop);signal.signal(signal.SIGINT,stop)
     failures=0
-    runtime=Path(os.environ.get('XDG_RUNTIME_DIR',str(Path.home()/'.cache')))/os.environ.get('CAPRI_RUNTIME_NAME','capri')
     while not stopping:
         if (ROOT/'bootstrap/session-hook.json').exists():
             from session_start import ready

@@ -50,6 +50,23 @@ class VersionTests(unittest.TestCase):
         self.assertEqual(result.returncode,0,result.stderr.decode())
         self.assertIn(b'PUBLIC-BASELINE',result.stdout);self.assertEqual(self.manager.state()['current'],self.baseline)
         self.assertTrue(self.manager.state()['rollback_used']);self.assertTrue((self.manager.root/'last-rollback.json').exists())
+    def test_duplicate_supervisor_and_live_rollback_cannot_change_the_active_version(self):
+        bootstrap=self.manager.root/'bootstrap';bootstrap.mkdir()
+        for name,source in [('bootstrap.py',BASE/'tools/bootstrap.py'),('versions.py',BASE/'capri/versions.py'),('parent_exec.py',BASE/'capri/parent_exec.py')]:shutil.copyfile(source,bootstrap/name)
+        (self.source/'launcher.py').write_text("import time\nprint('OWNER-READY',flush=True)\ntime.sleep(60)\n")
+        candidate=self.manager.stage(self.source,{'kind':'public resident owner fixture'});self.manager.activate(candidate,origin='owner-ui');before=self.manager.state()
+        env={**os.environ,'CAPRI_RUNTIME_NAME':'capri-test-dupe','XDG_RUNTIME_DIR':str(self.base)}
+        argv=[sys.executable,'-B',str(bootstrap/'bootstrap.py')]
+        owner=subprocess.Popen([*argv,'run'],env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        try:
+            import select
+            self.assertTrue(select.select([owner.stdout],[],[],5)[0],'Fixture owner never became ready')
+            self.assertEqual(owner.stdout.readline().strip(),b'OWNER-READY')
+            duplicate=subprocess.run([*argv,'run'],env=env,capture_output=True,timeout=3)
+            self.assertEqual(duplicate.returncode,0,duplicate.stderr.decode());self.assertIn(b'already running',duplicate.stdout)
+            denied=subprocess.run([*argv,'rollback'],env=env,capture_output=True,timeout=3)
+            self.assertNotEqual(denied.returncode,0);self.assertEqual(self.manager.state(),before);self.assertIsNone(owner.poll())
+        finally:owner.terminate();owner.communicate(timeout=10)
     def test_ended_wayland_session_exits_without_launching_or_disabling_the_candidate(self):
         bootstrap=self.manager.root/'bootstrap';bootstrap.mkdir()
         for name,source in [('bootstrap.py',BASE/'tools/bootstrap.py'),('versions.py',BASE/'capri/versions.py'),('parent_exec.py',BASE/'capri/parent_exec.py'),('session_start.py',BASE/'tools/session_start.py')]:shutil.copyfile(source,bootstrap/name)
