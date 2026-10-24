@@ -27,7 +27,7 @@ CAPRI gives planning, coding and review their own Codex sessions. Explicit hando
 
 <a id="the-loop"></a>
 
-## From request to a reviewable candidate
+## Plan, implement, review
 
 '''+picture('workflow','Three full-body Capri poses carry ordered stages. Thinker receives request, correction and source and returns scope/checks. Doer returns patch/results/limits. Reviewer returns findings; Thinker reports to the human. One write owner; no automatic approval.')+'''
 1. **Thinker / Plan:** request + latest correction + relevant source → brief, scope and acceptance checks.

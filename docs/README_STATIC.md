@@ -10,7 +10,7 @@ CAPRI gives planning, coding and review their own Codex sessions. Explicit hando
 
 <a id="the-loop"></a>
 
-## From request to a reviewable candidate
+## Plan, implement, review
 
 <picture>
   <source media="(prefers-reduced-motion: reduce) and (max-width: 760px)" srcset="../showcase/capri/story/exports/workflow-portrait.png">
