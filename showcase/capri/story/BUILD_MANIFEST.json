@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "SOURCE_RECORD.json",
-      "bytes": 5857,
-      "sha256": "b2c77a78506123c81eeb95b0720524b28207d438f365cec0d7471670b159514a"
+      "bytes": 5921,
+      "sha256": "383b986523b0a628a5583001cff14987db46195c429bb6f93949412578685a14"
     },
     {
       "path": "accent.svg",
@@ -313,8 +313,8 @@
     },
     {
       "path": "format.json",
-      "bytes": 3295,
-      "sha256": "d1258a7691742646c2d43820ca0a7caaf695af94466c030b4b252b32e3691281"
+      "bytes": 3359,
+      "sha256": "4ce7a24f52f5562fa046b4c0703e4625232d332f8c19ee72a9451eb1eacf535a"
     },
     {
       "path": "input-portrait.svg",

@@ -209,13 +209,13 @@
     "method": "Independent geometric CAPRI rule/interruption; no third-party art copied."
   },
   "format_file": "format.json",
-  "format_sha256": "d1258a7691742646c2d43820ca0a7caaf695af94466c030b4b252b32e3691281",
+  "format_sha256": "4ce7a24f52f5562fa046b4c0703e4625232d332f8c19ee72a9451eb1eacf535a",
   "format_reference": {
     "konata": {
       "url": "https://github.com/Denoax/konata-hyprland-dotfiles/tree/a9f433ad9cf5b870ee18ceed72d7200f402008e8",
       "readme_blob": "ea674c406f946b0929b225265d0bbe5b568d893a",
       "observed": "Width100% images and paired native tables; four actual1600x900 screenshot frames.",
-      "adaptation": "600x900 portrait is authored CAPRI geometry, not the Konata screenshot ratio."
+      "adaptation": "Related media pairs and short native captions. V5 authored480x640 portraits at280px caps; source screenshots are not a geometry prescription."
     },
     "catppuccin": {
       "url": "https://github.com/catppuccin/catppuccin/blob/d09787dd98ca6fba08af5ef2ae94a7e09f17daca/assets/footers/gray0_ctp_on_line.svg",
