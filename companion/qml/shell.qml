@@ -549,6 +549,7 @@ ShellRoot {
         function settings(): void { root.openConversation(); root.settingsOpen = true; }
         function revealScope(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") if (conversationLoader.item) conversationLoader.item.revealScope(); }
         function revealScopeSave(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") if (conversationLoader.item) conversationLoader.item.revealScopeSave(); }
+        function transcriptMetrics(): string { return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" && conversationLoader.item ? conversationLoader.item.transcriptMetrics() : "{}"; }
         function scopePoints(): string { return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" ? (conversationLoader.item ? conversationLoader.item.scopePoints() : "{}") : "{}"; }
         function presence(): void {
             root.replyOpen = false;

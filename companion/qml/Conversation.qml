@@ -14,6 +14,7 @@ FloatingWindow {
     color: "#19191f"
     onVisibleChanged: if (!visible && owner.conversationOpen && !owner.snapshot.locked)
         Qt.callLater(() => { if (!window.visible) owner.conversationOpen = false; })
+    function transcriptMetrics() { return JSON.stringify({offset:transcript.contentY,height:transcript.height,contentHeight:transcript.contentHeight,followingLatest:transcript.followLatest}); }
     function scopePoints() { return settingsLoader.item ? settingsLoader.item.scopePoints() : "{}"; }
     function revealScopeSave() { if (settingsLoader.item) settingsLoader.item.revealScopeSave(); }
     function revealScope() { if (settingsLoader.item) settingsLoader.item.revealScope(); }
@@ -141,6 +142,8 @@ FloatingWindow {
                 contentHeight: history.height
                 property bool followLatest: true
                 onMovementEnded: followLatest = contentY + height >= contentHeight - 36
+                onHeightChanged: if (followLatest)
+                    Qt.callLater(() => contentY = Math.max(0,contentHeight-height))
                 onContentHeightChanged: if (followLatest)
                     Qt.callLater(() => contentY = Math.max(0, contentHeight - height))
                 ScrollBar.vertical: ScrollBar {
