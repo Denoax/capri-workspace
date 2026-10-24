@@ -50,3 +50,13 @@ class InitiativeTests(unittest.TestCase):
     def test_quiet_hours_use_explicit_civil_timezone_without_changing_budgets(self):
         self.profile.update(quiet_start='00:00',quiet_end='23:59',timezone='America/Edmonton')
         self.offer();self.advance(31);self.assertTrue(self.scheduler.quiet_hours());self.assertIsNone(self.scheduler.eligible(self.attention))
+
+    def test_observations_notices_and_recent_activity_cannot_cross_accounts(self):
+        account=['account-a'];self.scheduler=Scheduler(self.store,lambda:self.profile,lambda:self.wall,lambda:self.mono,partition=lambda:account[0])
+        self.offer();self.scheduler.activity('a-task','success');self.advance(31)
+        self.assertIsNotNone(self.scheduler.eligible(self.attention))
+        account[0]='account-b';self.assertIsNone(self.scheduler.eligible(self.attention))
+        account[0]='account-a';candidate=self.scheduler.eligible(self.attention);self.scheduler.present(candidate,'Account A private fixture','Account A source')
+        self.assertIsNotNone(self.scheduler.current_notice())
+        account[0]='account-b';self.assertIsNone(self.scheduler.current_notice())
+        self.assertIsNone(self.scheduler.eligible(self.attention));self.assertEqual(len(self.scheduler.state['bubbles']),1)

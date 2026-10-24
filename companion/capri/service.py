@@ -78,8 +78,8 @@ class Service:
         self.shutdown_task = None
         self.tasks = TaskCoordinator(self.store,self.provider,self.broker,self.adapters,
             xdg("XDG_STATE_HOME", ".local/state") / "capri/work",self.task_session,self.task_publish,data_adjust=self.adjust_presence)
-        self.scheduler=Scheduler(self.store,lambda:self.profile)
-        self.projects=Projects(self.store,self.scheduler.offer)
+        self.scheduler=Scheduler(self.store,lambda:self.profile,partition=lambda:self.provider.partition)
+        self.projects=Projects(self.store,self.scheduler.offer,partition=lambda:self.provider.partition)
         self.sound=Sound(self.adapters)
         self.input_idle=False;self.idle_watcher=None;self.idle_status='Input idle not qualified yet'
         self.desktop_dnd=None;self.attention_fullscreen=False;self.ui_hidden=False
@@ -137,9 +137,9 @@ class Service:
                 "player": self.adapters.player or "", "partition": self.provider.partition,
                 "draft": self.store.draft(self.provider.partition), "profile": self.profile,
                 "work_available": self.adapters.sandbox_ready and bool(self.provider.record), "input_idle": self.input_idle,
-                "notice": None if self.scheduler.blocked(self.attention()) else self.scheduler.notice,
-                "observation_sources": self.projects.sources,"initiative_status": self.background_error,
-                "sources_text": '\n'.join(s['root']+' · local save events'+(' + selected metadata to model' if s['cloud'] else '') for s in self.projects.sources) or 'No selected project observation.',
+                "notice": None if self.scheduler.blocked(self.attention()) else self.scheduler.current_notice(),
+                "observation_sources": self.projects.active_sources(),"initiative_status": self.background_error,
+                "sources_text": '\n'.join(s['root']+' · local save events'+(' + selected metadata to model' if s['cloud'] else '') for s in self.projects.active_sources()) or 'No selected project observation.',
                 "activity": [{'kind':r[0],'detail':r[1]} for r in self.store.db.execute('SELECT e.kind,e.detail FROM task_events e JOIN tasks t ON e.task=t.id WHERE t.partition=? AND e.kind IN (?,?,?) ORDER BY e.id DESC LIMIT 12',(self.provider.partition,'verification','verified-terminal','native-scope-approved'))],
                 "desktop_dnd": self.desktop_dnd, "idle_status":self.idle_status, "sound_status":self.sound.status,
                 "update_status":self.maintenance.status,"maintenance_review":self.maintenance_review,
@@ -180,7 +180,7 @@ class Service:
             try:
                 self.desktop_dnd=await desktop_dnd()
                 enabled=self.session_verified and not self.broker.locked and self.ui is not None and not self.profile['paused'] and not self.ui_hidden
-                if enabled and self.projects.fd is None:self.projects.start()
+                if enabled and (self.projects.fd is None or self.projects.watching_partition!=self.provider.partition):self.projects.start()
                 elif not enabled:self.projects.stop()
                 candidate=self.scheduler.eligible(self.attention())
                 if candidate:
@@ -234,7 +234,7 @@ class Service:
 
     async def open_mail(self):
         from urllib.parse import urlencode
-        notice=self.scheduler.notice
+        notice=self.scheduler.current_notice()
         if not notice or notice['source']!='selected-mail' or not self.mail.valid():raise Denied('No current mail notice for this account')
         messages=notice['payload'].get('messages',[])
         if not messages:raise Denied('No message to open')
