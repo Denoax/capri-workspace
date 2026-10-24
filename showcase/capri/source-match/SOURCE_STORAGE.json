@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "reason": "Preserve exact original payloads within unchanged8,000,000-byte runtime snapshot bound. Chunk size4,000,000. Original ZIP, prior commit and private backups remain intact.",
+  "chunked": {
+    "research/anime/originals/capri-1.gif": {
+      "bytes": 10397087,
+      "sha256": "4ec65b5deac9d3cdf2572d1e41db36124907f8b44f54be940e3a8ee2582c013d",
+      "parts": [
+        {
+          "path": "source-parts/4ec65b5deac9d3cdf2572d1e41db36124907f8b44f54be940e3a8ee2582c013d/000.bin",
+          "bytes": 4000000,
+          "sha256": "4bc383d55d1ba7b8742e1e4a7f3182a23e856381a3cc47c3d1b1e5beb7175161"
+        },
+        {
+          "path": "source-parts/4ec65b5deac9d3cdf2572d1e41db36124907f8b44f54be940e3a8ee2582c013d/001.bin",
+          "bytes": 4000000,
+          "sha256": "eb5d33f73127e721653aae13c30c76e6f59d707089ddd6f36699f2c929ff1c0f"
+        },
+        {
+          "path": "source-parts/4ec65b5deac9d3cdf2572d1e41db36124907f8b44f54be940e3a8ee2582c013d/002.bin",
+          "bytes": 2397087,
+          "sha256": "966e39079ccda8bb193aab14583405f9d0e5af0e20d942e75781a135079dc313"
+        }
+      ]
+    },
+    "research/inspora/original-media/black-hole-mp4.mp4": {
+      "bytes": 14518737,
+      "sha256": "ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674",
+      "parts": [
+        {
+          "path": "source-parts/ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674/000.bin",
+          "bytes": 4000000,
+          "sha256": "f6d19ec5d7c01e14df4e47219ff58acb90c481c0dd8f8be08bf1f990bb0f45ef"
+        },
+        {
+          "path": "source-parts/ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674/001.bin",
+          "bytes": 4000000,
+          "sha256": "ce2de8f9e46ccb388ca27b0ccdd6e974b81bf51e636c27ff51684cd0a953b8e2"
+        },
+        {
+          "path": "source-parts/ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674/002.bin",
+          "bytes": 4000000,
+          "sha256": "2495567d63bd6db93a266cc641920fc4b52bbaca9d11ffb79edb01dc8ea174ef"
+        },
+        {
+          "path": "source-parts/ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674/003.bin",
+          "bytes": 2518737,
+          "sha256": "613dcf0d4cff4c70751f8fdf9ed5759466539cfa1ffca8d780b7ffe86b4a5469"
+        }
+      ]
+    },
+    "research/inspora/original-media/shark-ascii-animation.mp4": {
+      "bytes": 13038631,
+      "sha256": "382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181",
+      "parts": [
+        {
+          "path": "source-parts/382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181/000.bin",
+          "bytes": 4000000,
+          "sha256": "1d1e9e8a0776a3ed251fba23542e9fc6dfde8da84b3e359f5f8ebce0d245cae3"
+        },
+        {
+          "path": "source-parts/382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181/001.bin",
+          "bytes": 4000000,
+          "sha256": "a9e972fce37b89f4463b13d4cb5bdaf25acc5a7c2e015fa109e24ef77247dcdc"
+        },
+        {
+          "path": "source-parts/382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181/002.bin",
+          "bytes": 4000000,
+          "sha256": "7e30a18292af9e79e4a2f91aa99ac78d3a890007bf39b472cecf78071190af9f"
+        },
+        {
+          "path": "source-parts/382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181/003.bin",
+          "bytes": 1038631,
+          "sha256": "8e97c5994cc1ee12a3799588c87c7ddf536558da86b8a25e1003920d9dc88b15"
+        }
+      ]
+    }
+  }
+}

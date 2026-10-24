@@ -13,8 +13,13 @@
     },
     {
       "path": "SOURCE_RECORD.json",
-      "bytes": 432,
-      "sha256": "d64ec466b935a385421220629bdccff938d9b800eef03fa6eaf9e6f9c7db72d1"
+      "bytes": 705,
+      "sha256": "2b98675798936ba4ecdf925633b62c9d68ca9525057c84a4a961f45ce9079bb1"
+    },
+    {
+      "path": "SOURCE_STORAGE.json",
+      "bytes": 3497,
+      "sha256": "0dfc68779823a9bdc0e3ba2a0e35f57fba180b35e477430690346d9b9480bf4e"
     },
     {
       "path": "actor/MASKS.json",
@@ -222,6 +227,11 @@
       "sha256": "d4e70213ff5a36ae2465828aa88473587fe6749f5191b4a01b6a1c7d37218583"
     },
     {
+      "path": "companion/actor-data.js",
+      "bytes": 5680279,
+      "sha256": "bc78c57fbc9ab224b09c4e68f85f6ff78bbf429e29142e3fd93d0629f896f10a"
+    },
+    {
       "path": "companion/actor.js",
       "bytes": 4465,
       "sha256": "cd6157175e7aa1d45066664c5185586250d546efbc52420dca300ed6d3aec923"
@@ -233,8 +243,8 @@
     },
     {
       "path": "companion/index.html",
-      "bytes": 11764123,
-      "sha256": "fc3e82a97052bd83dbee30b1c425231b93159022775ce4541047a2660a82212c"
+      "bytes": 6083924,
+      "sha256": "4e4d3eb211bd93399ccfc648b13df5e185b88b67a46e701250205559258d3daf"
     },
     {
       "path": "companion/ocean-source.js",
@@ -248,8 +258,8 @@
     },
     {
       "path": "companion/scenes.js",
-      "bytes": 23653,
-      "sha256": "9f934a9bd70d8f71ded5cf5e6a5b31737bd6d61c1c35c7506b074a8be9c0b90d"
+      "bytes": 23684,
+      "sha256": "a0ac2a8cb4c545385839441b6628af7727ab6c03c6c8219650ebacc2213f5207"
     },
     {
       "path": "context-budget-results.json",
@@ -319,7 +329,7 @@
     {
       "path": "exports/comic-portrait-timeline.json",
       "bytes": 37814,
-      "sha256": "8cee6af9a46a2e14ed9871ea6be7acd0a673d94643efded93fa22540af838512"
+      "sha256": "07884f8ad76e8d02e80390c1f4aca3517883e38f0c3e0726d6afac23cd4ee655"
     },
     {
       "path": "exports/comic-portrait.gif",
@@ -334,12 +344,12 @@
     {
       "path": "exports/comic-wide-timeline.json",
       "bytes": 37810,
-      "sha256": "67f87a2b9da79384460b1525dbf34535808b823a6044e2511d83a611c4a2daed"
+      "sha256": "db9babc96dc065c7c6c87238e5aae62ec1e6e96c5028d699f8cfa1933a23d77a"
     },
     {
       "path": "exports/comic-wide.gif",
-      "bytes": 1560977,
-      "sha256": "7a7a014bad3b435629ef09ddf67080d9223e5cfa08bbcbb79f9a684ba96a1aa3"
+      "bytes": 1552416,
+      "sha256": "6b79f90b040e5f34658b0158db9a8e7727ee33b9fe67e351f86117451413a6a8"
     },
     {
       "path": "exports/comic-wide.png",
@@ -379,32 +389,32 @@
     {
       "path": "exports/hands-portrait-timeline.json",
       "bytes": 39620,
-      "sha256": "9299125095d778016b775017144be058b19137531fd1f51c88ea2abf0d439e6d"
+      "sha256": "2363734e91a8d1205379e653e298cb0254040ba2f6d19ed9c227a67966dcf5ca"
     },
     {
       "path": "exports/hands-portrait.gif",
-      "bytes": 4305100,
-      "sha256": "ccadeb2cb10030468428cd1ac7a25c78e00a3f94e74683599be37e3120a1b7b5"
+      "bytes": 4312986,
+      "sha256": "98edf1e36f5479fc12c143d5fde14733a014a12544c8951fc9c10420edc206e0"
     },
     {
       "path": "exports/hands-portrait.png",
-      "bytes": 132556,
-      "sha256": "1a360efaa3e7f37cbd744d68e4fb7a9210f8ef775a8c2929841a0a44efc953fd"
+      "bytes": 133568,
+      "sha256": "2aee0e0131f2885a78df648d1a309d32eab0ba5bbb5d0aa130240d66701c6f74"
     },
     {
       "path": "exports/hands-wide-timeline.json",
       "bytes": 39616,
-      "sha256": "813784af7f14037f016cf582ae9963e18c8a236dd2fad4145a7c3cb0c7a5331f"
+      "sha256": "b877665999ff5e0e6d5665d0533f90ad74f719536e93b9e6512b791bb726436a"
     },
     {
       "path": "exports/hands-wide.gif",
-      "bytes": 5891938,
-      "sha256": "a87e40463712227637cc7fc4f713743436aa5e6ce3a9545f965fc2aff0e5529b"
+      "bytes": 5865001,
+      "sha256": "41ec1d69aa74f254aa2d631f2a1d3fa0d94142724f3207515a45d636f574dc7e"
     },
     {
       "path": "exports/hands-wide.png",
-      "bytes": 166187,
-      "sha256": "a99f8375bd87af577d0a8a91cbcbf4ff8dc9c75ae6aa00f219d7f3aa68aa6edf"
+      "bytes": 167386,
+      "sha256": "5622f6151b96be90cf9685158e21cfe00d07a4832048d7557d24503fd7149b15"
     },
     {
       "path": "exports/horizon-portrait-timeline.json",
@@ -967,11 +977,6 @@
       "sha256": "0f2c4ac928771f0623a3cdcbd2ca892fe3f4da4bf41c3ac00806b8d80d326dd7"
     },
     {
-      "path": "source/research/anime/originals/capri-1.gif",
-      "bytes": 10397087,
-      "sha256": "4ec65b5deac9d3cdf2572d1e41db36124907f8b44f54be940e3a8ee2582c013d"
-    },
-    {
       "path": "source/research/anime/originals/capri-12.gif",
       "bytes": 97863,
       "sha256": "05df112d650cfbfdd4a41916faa0b61fcae55d68c481711efbaf15d659abd5fc"
@@ -1047,11 +1052,6 @@
       "sha256": "0f962abdf3d691095f705351003a448f5a7b07160fa2d6e21b6b5acbeaf69906"
     },
     {
-      "path": "source/research/inspora/original-media/black-hole-mp4.mp4",
-      "bytes": 14518737,
-      "sha256": "ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674"
-    },
-    {
       "path": "source/research/inspora/original-media/hero-section.mp4",
       "bytes": 725201,
       "sha256": "44dee1554062b45797e002e38694de51008430c361498c0f349a4a4666bcef99"
@@ -1060,11 +1060,6 @@
       "path": "source/research/inspora/original-media/i-will-survive.mp4",
       "bytes": 705977,
       "sha256": "678827556fd9efc985ffadfd3dac3c3e0b7cb9615c8c5487776229c4e8fdb4fa"
-    },
-    {
-      "path": "source/research/inspora/original-media/shark-ascii-animation.mp4",
-      "bytes": 13038631,
-      "sha256": "382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181"
     },
     {
       "path": "source/specs/ACCEPTANCE_AND_RETURN.md",
@@ -1340,6 +1335,61 @@
       "path": "source/upstream/horizon/util.js",
       "bytes": 498,
       "sha256": "853fbb2d189b07932a2f9de2f8b90778a4cf07d2d21b63d1cc08f3485fa627aa"
+    },
+    {
+      "path": "source-parts/382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181/000.bin",
+      "bytes": 4000000,
+      "sha256": "1d1e9e8a0776a3ed251fba23542e9fc6dfde8da84b3e359f5f8ebce0d245cae3"
+    },
+    {
+      "path": "source-parts/382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181/001.bin",
+      "bytes": 4000000,
+      "sha256": "a9e972fce37b89f4463b13d4cb5bdaf25acc5a7c2e015fa109e24ef77247dcdc"
+    },
+    {
+      "path": "source-parts/382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181/002.bin",
+      "bytes": 4000000,
+      "sha256": "7e30a18292af9e79e4a2f91aa99ac78d3a890007bf39b472cecf78071190af9f"
+    },
+    {
+      "path": "source-parts/382faebbe554f2ebf7eb2c06b146fb264f5f0af9a0f83a900aaacf9e43bb1181/003.bin",
+      "bytes": 1038631,
+      "sha256": "8e97c5994cc1ee12a3799588c87c7ddf536558da86b8a25e1003920d9dc88b15"
+    },
+    {
+      "path": "source-parts/4ec65b5deac9d3cdf2572d1e41db36124907f8b44f54be940e3a8ee2582c013d/000.bin",
+      "bytes": 4000000,
+      "sha256": "4bc383d55d1ba7b8742e1e4a7f3182a23e856381a3cc47c3d1b1e5beb7175161"
+    },
+    {
+      "path": "source-parts/4ec65b5deac9d3cdf2572d1e41db36124907f8b44f54be940e3a8ee2582c013d/001.bin",
+      "bytes": 4000000,
+      "sha256": "eb5d33f73127e721653aae13c30c76e6f59d707089ddd6f36699f2c929ff1c0f"
+    },
+    {
+      "path": "source-parts/4ec65b5deac9d3cdf2572d1e41db36124907f8b44f54be940e3a8ee2582c013d/002.bin",
+      "bytes": 2397087,
+      "sha256": "966e39079ccda8bb193aab14583405f9d0e5af0e20d942e75781a135079dc313"
+    },
+    {
+      "path": "source-parts/ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674/000.bin",
+      "bytes": 4000000,
+      "sha256": "f6d19ec5d7c01e14df4e47219ff58acb90c481c0dd8f8be08bf1f990bb0f45ef"
+    },
+    {
+      "path": "source-parts/ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674/001.bin",
+      "bytes": 4000000,
+      "sha256": "ce2de8f9e46ccb388ca27b0ccdd6e974b81bf51e636c27ff51684cd0a953b8e2"
+    },
+    {
+      "path": "source-parts/ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674/002.bin",
+      "bytes": 4000000,
+      "sha256": "2495567d63bd6db93a266cc641920fc4b52bbaca9d11ffb79edb01dc8ea174ef"
+    },
+    {
+      "path": "source-parts/ff39a4c4e69cad7ba62a24a6942c6453575d822b2d7e9972e844cf2b025c8674/003.bin",
+      "bytes": 2518737,
+      "sha256": "613dcf0d4cff4c70751f8fdf9ed5759466539cfa1ffca8d780b7ffe86b4a5469"
     }
   ],
   "scope": "File identities; export provenance/timing are in each timeline. No perceptual acceptance."

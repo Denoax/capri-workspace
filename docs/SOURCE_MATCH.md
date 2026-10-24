@@ -4,7 +4,7 @@ This private testing candidate uses the approved first Handoff comic and seven s
 
 ## Local companion
 
-Open [the self-contained companion](../showcase/capri/source-match/companion/index.html) from a local checkout or the portable review ZIP. It embeds all required fonts, actor layers, scripts and reference plates; no account, original absolute path or server is needed for playback. GitHub's file page shows source, not a live website. The local review includes a separate direct playable link. No public deployment is authorized.
+Open [the self-contained companion](../showcase/capri/source-match/companion/index.html) from a local checkout or the portable review ZIP. This is a self-contained local folder: fonts and reference plates use embedded data, while the adjacent `actor-data.js` supplies the embedded character layers. Both files travel together; no account, original absolute path or server is needed for playback. Splitting data preserves the runtime checkout’s existing 8 MB per-file source-snapshot limit. GitHub's file page shows source, not a live website. The local review includes a separate direct playable link. No public deployment is authorized.
 
 Each scene has real Play/Pause, Replay and Time controls. Comic buttons open actual briefs and pass the correction. Sharks support pointer splashes and the keyboard-equivalent ripple button; horizon supports drag/tap and a keyboard tilt button. Offscreen scenes and hidden documents pause rendering/decoding. Reduced motion starts on complete still states; [the static README](README_STATIC.md) requires no motion or JavaScript.
 
@@ -36,10 +36,11 @@ Five panels are **reference-footage composites**, not claims of native source im
 
 ## Rebuild and verify
 
-The complete input kit remains immutable at [source/](../showcase/capri/source-match/source). Its read-only manifest verifier still applies. New derived files live beside it. Media tooling is separate from runtime requirements/locks: Python, Pillow, NumPy, websockets, Chromium and FFmpeg. The recorded media environment and export receipts identify actual versions; software rendering is not GPU performance qualification.
+The exact input payload is preserved under [source/](../showcase/capri/source-match/source) and [source-parts/](../showcase/capri/source-match/source-parts). Three original reference files exceed the unchanged runtime snapshot limit; their bytes are stored in 4 MB lossless chunks, with original hashes and piece hashes in [SOURCE_STORAGE.json](../showcase/capri/source-match/SOURCE_STORAGE.json). The original manifest and all other input files remain byte-identical. Materialize the complete original kit **outside the runtime checkout**, then run its unchanged read-only verifier. The supplied ZIP, previous commit and private originals remain preserved. New derived files live beside the input storage. Media tooling is separate from runtime requirements/locks: Python, Pillow, NumPy, websockets, Chromium and FFmpeg. The recorded media environment and export receipts identify actual versions; software rendering is not GPU performance qualification.
 
 ```sh
-python3 showcase/capri/source-match/source/tools/verify_bundle.py
+python3 tools/materialize_capri_source.py --output ../capri-original-input
+python3 ../capri-original-input/tools/verify_bundle.py
 python3 tools/build_capri_source_match_actor.py
 python3 tools/build_capri_source_match_plates.py
 python3 tools/build_capri_source_match.py

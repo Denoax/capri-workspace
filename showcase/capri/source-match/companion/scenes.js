@@ -5,6 +5,7 @@
 (async function () {
   'use strict';
   const data = JSON.parse(document.getElementById('scene-data').textContent);
+  data.rig = window.CAPRI_RIG;
   const actor = new CapriActor(data.rig), reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const ink = '#100a19', pink = '#ff1265', green = '#28fb86';
   const clamp = value => Math.max(0, Math.min(1, value));

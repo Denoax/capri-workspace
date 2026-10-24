@@ -5,8 +5,9 @@ These checks do not grade aesthetics, qualify the native runtime or claim a
 human watched continuous motion. Run through check_capri_presentation.py.
 """
 from pathlib import Path
-import hashlib,json,re,subprocess,sys
+import base64,hashlib,json,re,subprocess,sys
 from PIL import Image
+from capri_source_storage import read_source
 ROOT=Path(__file__).resolve().parents[1];MEDIA=ROOT/'showcase/capri/source-match'
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def require(ok,message):
@@ -23,7 +24,7 @@ def expanded(path,mode,delay=40):
 def check():
     source=MEDIA/'source';manifest=json.loads((source/'MANIFEST.json').read_text());total=0
     for item in manifest['files']:
-        path=source/item['path'];require(path.is_file() and path.stat().st_size==item['bytes'] and sha(path)==item['sha256'],'Immutable source changed: '+item['path']);total+=item['bytes']
+        data=read_source(item['path']);require(len(data)==item['bytes'] and hashlib.sha256(data).hexdigest()==item['sha256'],'Immutable source changed: '+item['path']);total+=item['bytes']
     rig=json.loads((MEDIA/'actor/RIG.json').read_text());require(set(rig['poses'])=={'plan','build','review'},'Three distinct masters required')
     for name,pose in rig['poses'].items():
         require(len(pose['parts'])==10 and len(pose['keys'])>=6,'Incomplete editable articulation: '+name)
@@ -67,8 +68,14 @@ def check():
     require(count==240,'Actor timeline incomplete')
     html=(MEDIA/'companion/index.html').read_text()
     require(len(re.findall('data:video/mp4;base64,',html))==5,'Required footage is not embedded')
-    require('data:font/ttf;base64,' in html and 'data:image/png;base64,' in html,'Required fonts/rig are not embedded')
-    require(not re.search(r'<script[^>]+src=|@import\s+url',html),'Companion requires external script/font')
+    require('data:font/ttf;base64,' in html and 'data:image/png;base64,' in (MEDIA/'companion/actor-data.js').read_text(),'Required fonts/rig are not embedded')
+    scripts=re.findall(r'<script[^>]+src="([^"]+)"',html);require(scripts==['actor-data.js'] and not re.search(r'@import\s+url',html),'Unexpected companion script/font dependency')
+    actor_data=(MEDIA/'companion/actor-data.js').read_text();require(actor_data.startswith('window.CAPRI_RIG='),'Missing local actor data')
+    embedded=json.loads(actor_data[len('window.CAPRI_RIG='):].strip().removesuffix(';'))
+    for name,pose in rig['poses'].items():
+        for original,part in zip(pose['parts'],embedded['poses'][name]['parts']):require(hashlib.sha256(base64.b64decode(part['src'].split(',',1)[1])).hexdigest()==original['sha256'],'Embedded actor part changed')
+    oversize=[str(p.relative_to(ROOT)) for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.relative_to(ROOT).parts and '__pycache__' not in p.relative_to(ROOT).parts and p.stat().st_size>8_000_000]
+    require(not oversize,'Runtime source snapshot limit exceeded: '+str(oversize))
     for font in ['Manrope','Inter','MartianMono']:require((source/f'assets/fonts/{font}/OFL.md').is_file(),'Missing font notice')
     root=(ROOT/'README.md').read_text();static=(ROOT/'docs/README_STATIC.md').read_text()
     require('python -m pip install --require-hashes -r requirements.lock' in root and 'unittest discover -s controller/tests -v' in root,'Quickstart missing')
