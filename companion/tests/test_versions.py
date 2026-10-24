@@ -41,6 +41,11 @@ class VersionTests(unittest.TestCase):
         self.assertEqual(result['current'],self.baseline);self.assertIn(candidate,self.manager.state()['failed']);self.assertEqual(private.read_bytes(),before)
         with self.assertRaises(VersionError):self.manager.rollback(automatic=True)
         with self.assertRaises(VersionError):self.manager.activate(candidate,origin='owner-ui')
+    def test_manual_rollback_cannot_select_a_version_disabled_by_crash_recovery(self):
+        candidate=self.candidate();self.manager.activate(candidate,origin='owner-ui');self.manager.rollback(automatic=True)
+        before=self.manager.state()
+        with self.assertRaises(VersionError):self.manager.rollback()
+        self.assertEqual(self.manager.state(),before)
     def test_real_supervisor_rolls_back_after_three_deliberate_process_crashes(self):
         bootstrap=self.manager.root/'bootstrap';bootstrap.mkdir()
         for name,source in [('bootstrap.py',BASE/'tools/bootstrap.py'),('versions.py',BASE/'capri/versions.py'),('parent_exec.py',BASE/'capri/parent_exec.py')]:shutil.copyfile(source,bootstrap/name)

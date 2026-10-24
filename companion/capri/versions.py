@@ -104,7 +104,7 @@ class Versions:
     def rollback(self,*,automatic=False):
         state=self.state();target=state['last_good']
         if target==state['current']:target=state['previous']
-        if not target or target==state['current'] or (automatic and state['rollback_used']):raise VersionError('No unused last-known-good rollback is available')
+        if not target or target==state['current'] or target in state['failed'] or (automatic and state['rollback_used']):raise VersionError('No unused last-known-good rollback is available')
         self.verify(target);failed=state['current']
         state['current']=target;state['previous']=failed;state['failed']=list(dict.fromkeys(state['failed']+[failed]));state['rollback_used']=True
         atomic(self.meta,state);self.switch(target);return {'current':target,'disabled':failed,'automatic':automatic}
