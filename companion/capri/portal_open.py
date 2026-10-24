@@ -1,14 +1,21 @@
 """Open only Capri's official auth URL and await the actual portal result."""
 import secrets
+import os
+import ctypes
+import signal
 import sys
 from urllib.parse import urlparse
 import dbus
 from dbus.mainloop.glib import DBusGMainLoop
 from gi.repository import GLib
 
+owner=os.getppid()
+if owner<=1 or ctypes.CDLL(None,use_errno=True).prctl(1,signal.SIGTERM,0,0,0)!=0 or os.getppid()!=owner:
+    raise SystemExit(125)
 url = sys.stdin.buffer.read(16000).decode()
 p = urlparse(url)
-if p.scheme != "https" or p.netloc != "auth.openai.com" or p.path != "/api/accounts/authorize":
+allowed=(p.netloc=='auth.openai.com' and p.path=='/api/accounts/authorize') or (p.netloc=='accounts.google.com' and p.path=='/o/oauth2/v2/auth') or (p.netloc=='mail.google.com' and p.path=='/mail/')
+if p.scheme != 'https' or not allowed or p.username or p.password:
     raise SystemExit(2)
 DBusGMainLoop(set_as_default=True)
 bus = dbus.SessionBus()

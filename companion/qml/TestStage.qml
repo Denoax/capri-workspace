@@ -6,6 +6,7 @@ import Quickshell.Wayland
 // Explicit verification-only backdrop. It never becomes a production surface.
 PanelWindow {
     id: stage
+    property bool lowered: false
     required property var output
     property bool fieldFocused: fixture.activeFocus
     property int fieldLength: fixture.text.length
@@ -19,10 +20,10 @@ PanelWindow {
     color: "#101115"
     exclusionMode: ExclusionMode.Ignore
     WlrLayershell.namespace: "capri-v2-verification-stage"
-    WlrLayershell.layer: WlrLayer.Top
-    WlrLayershell.keyboardFocus: WlrKeyboardFocus.OnDemand
+    WlrLayershell.layer: lowered ? WlrLayer.Bottom : WlrLayer.Top
+    WlrLayershell.keyboardFocus: lowered ? WlrKeyboardFocus.None : WlrKeyboardFocus.OnDemand
     mask: Region {
-        item: fixture
+        item: stage.lowered ? null : fixture
     }
     TextField {
         id: fixture

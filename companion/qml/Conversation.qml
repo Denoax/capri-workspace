@@ -12,8 +12,11 @@ FloatingWindow {
     minimumSize: Qt.size(420, 420)
     visible: owner.conversationOpen && !owner.snapshot.locked
     color: "#19191f"
-    onVisibleChanged: if (!visible)
-        owner.conversationOpen = false
+    onVisibleChanged: if (!visible && owner.conversationOpen && !owner.snapshot.locked)
+        Qt.callLater(() => { if (!window.visible) owner.conversationOpen = false; })
+    function scopePoints() { return settingsLoader.item ? settingsLoader.item.scopePoints() : "{}"; }
+    function revealScopeSave() { if (settingsLoader.item) settingsLoader.item.revealScopeSave(); }
+    function revealScope() { if (settingsLoader.item) settingsLoader.item.revealScope(); }
     Pane {
         anchors.fill: parent
         padding: 0
@@ -31,6 +34,27 @@ FloatingWindow {
         palette.dark: "#111219"
         background: Rectangle {
             color: "#19191f"
+        }
+        Dialog {
+            id: patchReview
+            visible: !!owner.snapshot.maintenance_review
+            title: "Review Capri proposal"
+            modal: true
+            closePolicy: Popup.NoAutoClose
+            x: 12; y: 12; width: parent.width-24; height: parent.height-24
+            ColumnLayout {
+                anchors.fill: parent
+                Text { text: "Self-authored proposal · " + (owner.snapshot.maintenance_review?.digest || ""); color: "#efedf2"; wrapMode: Text.WrapAnywhere; Layout.fillWidth: true }
+                Text { text: "Changed: " + (owner.snapshot.maintenance_review?.files || []).join(", ") + "\nTests: " + (owner.snapshot.maintenance_review?.verification ? "exit " + owner.snapshot.maintenance_review.verification.exit_code + "; host checks remain separate" : "not run"); color: "#d2cbd8"; wrapMode: Text.Wrap; Layout.fillWidth: true }
+                ScrollView {
+                    Layout.fillWidth: true; Layout.fillHeight: true
+                    TextArea { text: owner.snapshot.maintenance_review?.patch || "No source differences."; readOnly: true; textFormat: TextEdit.PlainText; wrapMode: TextEdit.Wrap; selectByMouse: true; color: "#efedf2"; font.family: "monospace"; font.pixelSize: 12 }
+                }
+                RowLayout {
+                    CapriButton { text: "Install exact reviewed version"; enabled: !!owner.snapshot.maintenance_review?.verification && owner.snapshot.maintenance_review.verification.exit_code === 0 && owner.snapshot.maintenance_review.verification.digest === owner.snapshot.maintenance_review.digest && !owner.snapshot.maintenance_review.patch_truncated && owner.snapshot.maintenance_review.files.length > 0; onClicked: owner.send("maintenance_install",{id:owner.snapshot.maintenance_review.id,digest:owner.snapshot.maintenance_review.digest}) }
+                    CapriButton { text: "Keep staged"; onClicked: owner.send("maintenance_close",{}) }
+                }
+            }
         }
         ColumnLayout {
             anchors.fill: parent
@@ -70,12 +94,34 @@ FloatingWindow {
                 Layout.fillWidth: true
             }
             Loader {
+                id: settingsLoader
                 active: owner.settingsOpen
                 visible: active
                 Layout.fillWidth: true
-                Layout.preferredHeight: active ? 370 : 0
+                Layout.preferredHeight: active ? Math.max(160,Math.min(370,window.height-300)) : 0
                 sourceComponent: SettingsView {
                     owner: window.owner
+                }
+            }
+            Rectangle {
+                visible: !!owner.snapshot.scope_request
+                Layout.fillWidth: true
+                implicitHeight: scopeColumn.implicitHeight + 20
+                color: "#27252e"; radius: 8; border.color: "#c2b365"
+                ColumnLayout {
+                    id: scopeColumn; anchors.fill: parent; anchors.margins: 10
+                    Text {
+                        text: "This task needs additional scope"
+                        color: "#efedf2"; font.pixelSize: 15
+                    }
+                    Text {
+                        text: (owner.snapshot.scope_request?.reason || "") + "\nFolders: " + (owner.snapshot.scope_request?.roots || []).join(", ") + "\nTyped desktop tools: " + (owner.snapshot.scope_request?.desktop ? "requested" : "no change") + "\nSelected contents may be sent to the current model. Applies only to this task."
+                        color: "#d2cbd8"; textFormat: Text.PlainText; wrapMode: Text.Wrap; Layout.fillWidth: true
+                    }
+                    RowLayout {
+                        CapriButton { text: "Allow this expansion"; onClicked: owner.send("scope_decision",{id:owner.snapshot.scope_request.id,approved:true}) }
+                        CapriButton { text: "Decline"; onClicked: owner.send("scope_decision",{id:owner.snapshot.scope_request.id,approved:false}) }
+                    }
                 }
             }
             TextField {

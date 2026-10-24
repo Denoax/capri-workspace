@@ -41,6 +41,7 @@ ShellRoot {
     property string draftPartition: ""
     property bool draftLoaded: false
     property int inputModeIndex: 0
+    property bool renderReported: false
     property int sequence: 0
     property int pendingSubmit: 0
     property string pendingText: ""
@@ -236,7 +237,7 @@ ShellRoot {
         connected: true
         onConnectionStateChanged: {
             if (connected) {
-                root.sequence = 0;
+                root.sequence = 0;root.renderReported = false;
                 write(JSON.stringify({
                     version: 1,
                     role: "shell",
@@ -256,6 +257,7 @@ ShellRoot {
                     const m = JSON.parse(data);
                     if (m.event === "snapshot") {
                         const old = root.lastReply;
+                        if (m.notice && m.notice.id !== root.snapshot.notice?.id) root.noticeText = "";
                         root.snapshot = m;
                         if (!root.draftLoaded || root.draftPartition !== m.partition) {
                             root.draftLocal = m.draft || "";
@@ -306,7 +308,13 @@ ShellRoot {
         interval: 1000
         repeat: true
         running: socket.connected
-        onTriggered: root.send("heartbeat", {})
+        onTriggered: {
+            root.send("heartbeat", {});
+            if (!root.renderReported && actor.ready && root.draftLoaded) {
+                root.send("render_ready",{ready:true,drafts:true});root.renderReported = true;
+            }
+            root.send("attention", {fullscreen: root.attentionFullscreen, hidden: root.hidden});
+        }
     }
     Timer {
         interval: 1000
@@ -359,7 +367,7 @@ ShellRoot {
         active: Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1"
         sourceComponent: TestStage {
             output: root.currentScreen
-            visible: !root.conversationOpen
+            lowered: root.conversationOpen
         }
     }
     PanelWindow {
@@ -514,6 +522,7 @@ ShellRoot {
         }
     }
     Conversation {
+        id: conversationWindow
         owner: root
     }
     IpcHandler {
@@ -534,6 +543,10 @@ ShellRoot {
             root.flushDraft();
             root.send("quit", {});
         }
+        function settings(): void { root.openConversation(); root.settingsOpen = true; }
+        function revealScope(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") conversationWindow.revealScope(); }
+        function revealScopeSave(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") conversationWindow.revealScopeSave(); }
+        function scopePoints(): string { return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" ? conversationWindow.scopePoints() : "{}"; }
         function presence(): void {
             root.replyOpen = false;
             root.bubbleOpen = false;

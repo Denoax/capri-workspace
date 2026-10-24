@@ -1,4 +1,4 @@
-"""login1 lock/sleep watcher; reports only booleans on stdout."""
+"""login1 lock/sleep watcher; reports lock state and session identity only."""
 import json
 import os
 import ctypes
@@ -49,7 +49,7 @@ active = False
 
 
 def emit():
-    print(json.dumps({"locked": locked or sleeping or not active}), flush=True)
+    print(json.dumps({"locked": locked or sleeping or not active,"session": path}), flush=True)
 
 
 def properties(interface, changed, invalidated):

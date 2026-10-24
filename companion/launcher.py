@@ -5,6 +5,7 @@ import fcntl
 import json
 import os
 import re
+import signal
 from pathlib import Path
 import subprocess
 import time
@@ -76,7 +77,7 @@ def main():
         raise SystemExit('Create the isolated Python environment first; see companion/README.md.')
     env=os.environ.copy()
     env.update(CAPRI_ASSETS=str(assets.resolve()),CAPRI_SOCKET=str(RUNTIME/'core.sock'),
-               CAPRI_SETTINGS=(config/'preferences.ini').as_uri(),CAPRI_SCREEN=args.screen,
+               CAPRI_SETTINGS=os.environ.get('CAPRI_SETTINGS',(config/'preferences.ini').as_uri()),CAPRI_SCREEN=args.screen,
                CAPRI_EVIDENCE_STAGE='1' if args.evidence_stage else '0')
     RUNTIME.mkdir(mode=0o700,parents=True,exist_ok=True)
     if RUNTIME.is_symlink() or RUNTIME.stat().st_uid!=os.getuid():
@@ -87,8 +88,11 @@ def main():
         env['QT_QUICK_BACKEND']='software'
     else:
         env.pop('QT_QUICK_BACKEND',None)
-    core=subprocess.Popen([str(python),'-B','-m','capri.service'],cwd=BASE,env=env,stdout=log,stderr=log,start_new_session=True)
+    bound=['/usr/bin/python3',str(BASE/'capri/parent_exec.py'),str(os.getpid()),'--']
+    core=subprocess.Popen([*bound,str(python),'-B','-m','capri.service'],cwd=BASE,env=env,stdout=log,stderr=log,start_new_session=True)
     shell=None
+    def terminate(*_):raise KeyboardInterrupt
+    signal.signal(signal.SIGTERM,terminate)
     try:
         for _ in range(100):
             if core.poll() is not None:
@@ -98,7 +102,7 @@ def main():
             except (OSError,ValueError):time.sleep(0.1)
         else:raise SystemExit('Core readiness timed out')
         env['CAPRI_UI_TOKEN']=(RUNTIME/'ui.token').read_text()
-        shell=subprocess.Popen(['/usr/bin/quickshell','-p',str(BASE/'qml/shell.qml'),'--no-duplicate'],env=env,stdout=log,stderr=log)
+        shell=subprocess.Popen([*bound,'/usr/bin/quickshell','-p',str(BASE/'qml/shell.qml'),'--no-duplicate'],env=env,stdout=log,stderr=log)
         # Exit either side together; a disconnected invisible shell must not keep
         # ownership or strand a subsequent launch after core shutdown.
         while shell.poll() is None and core.poll() is None:
@@ -106,11 +110,12 @@ def main():
     except KeyboardInterrupt:
         pass
     finally:
-        if shell and shell.poll() is None:shell.terminate();shell.wait(timeout=5)
+        # Let the core ask the still-running UI to flush its draft before exit.
         if core.poll() is None:
             core.terminate()
             try:core.wait(timeout=5)
             except subprocess.TimeoutExpired:core.kill();core.wait()
+        if shell and shell.poll() is None:shell.terminate();shell.wait(timeout=5)
         log.close()
         os.close(ownership_fd)
 

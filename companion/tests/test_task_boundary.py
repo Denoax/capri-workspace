@@ -60,3 +60,15 @@ class HostTaskBoundaryTests(unittest.IsolatedAsyncioTestCase):
         code="from pathlib import Path\nfor name in ['/not-granted','/usr/not-granted','/home/not-granted']:\n try:Path(name).write_text('denied')\n except OSError:pass\n else:raise AssertionError(name)\nprint('WRITE-DENIED')"
         result=await self.runner.run(['/usr/bin/python3','-c',code],[str(self.root)],str(self.root))
         self.assertEqual(result['exit_code'],0,result['output']);self.assertIn('WRITE-DENIED',result['output'])
+
+    async def test_existing_hardlink_and_host_socket_are_rejected_before_execution(self):
+        sentinel=self.base/'outside';sentinel.write_text('OUTSIDE-UNCHANGED')
+        os.link(sentinel,self.root/'hardlink')
+        with self.assertRaises(Denied):await self.runner.run(['/usr/bin/true'],[str(self.root)],str(self.root))
+        self.assertEqual(sentinel.read_text(),'OUTSIDE-UNCHANGED');(self.root/'hardlink').unlink()
+        import socket
+        sock=socket.socket(socket.AF_UNIX)
+        try:
+            sock.bind(str(self.root/'host-control.sock'))
+            with self.assertRaises(Denied):await self.runner.run(['/usr/bin/true'],[str(self.root)],str(self.root))
+        finally:sock.close()

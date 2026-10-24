@@ -1,24 +1,18 @@
-# Capability qualification
+# V2 capability qualification
 
-This table describes the direct local testing candidate. It is not human acceptance or an independent controller/verifier receipt. Exact machine evidence, commands, review checksum and testing SHA belong to the local source-bound review packet.
+Implemented behavior and host evidence are separate. Exact source, remote SHA, CI conclusions, recordings and case-by-case status belong to the local V2 review report. This is direct desktop work, not independent controller review or human acceptance.
 
-| Capability | Current qualification |
+| Surface | Evidence and current limits |
 | --- | --- |
-| Transparent native character/composer | Running on actual Hyprland/Quickshell; real background click-through and composer input exercised |
-| Local articulated presence | Three approved drawings, ten transformed layers, authored head/arm gestures and blink; no model calls for idle |
-| Chat/Commands authority | Actual native command-shaped Chat input leaves OS volume unchanged; only explicit Commands mode can grant actions |
-| Persistent brain/corrections | Private SQLite transcript named Capri; account partitions, explicit memory edits/export/reset; restart checks required in host review |
-| ChatGPT plan | Real official sign-in succeeded after portal-response handling was corrected; eight models discovered; public and owner-approved persona requests completed through the production adapter. Native UI streaming is qualified separately in host evidence |
-| Provider fixtures | OIDC signature/issuer/audience/nonce/expiry, refresh serialization, strict terminal streaming and redirect denial tested |
-| Application open/focus | Reviewed installed IDs; actual pavucontrol window observed. Missing Firefox/Thunar/Calculator stay unavailable; focus qualification is per host evidence |
-| Media/audio | Actual Spotify pause/play and bounded PipeWire volume change verified, original states restored; skip/previous not separately qualified |
-| Selected-folder organization | Actual stage/apply/undo retained disposable file hashes; flat names only, no recursive deletion; handle/precondition/overwrite defenses tested |
-| Work jobs | Actual read-only project job plus credential/network/FD/socket/write denials tested; systemd resource boundary required |
-| Stop/restart/lock | Broker revocation and cancellation tested; native physical lock/suspend cycle remains separate UNVERIFIED host evidence |
-| Screen and full desktop GUI | Disabled: ScreenCast is present, RemoteDesktop was absent in the inspected portal; no production input/capture adapter is qualified |
-| Voice and anime speech | Off; available clips are silent; exact speech and continuous source-motion fidelity remain provisional |
-| Fractional DPI, fullscreen, performance | Controls/guards implemented where stated; physical fractional-DPI and GPU/frame-time claims require dedicated host evidence |
-| Install/removal/autostart | Create-only launcher/unit installer and hash-bound uninstall; autostart off; no root/global configuration changes |
-| Independent review and integration | Human review pending. No main merge, deployment, publication or old-runtime restart |
-
-The default brain does not autonomously plan/execute arbitrary tools. Conversational model output has no route to the broker. Native authority is the explicit command grammar. Same-UID session compromise remains outside the security claim. Offline test responses never establish cloud functionality.
+| Native actor/bubble/conversation | Actual Hyprland captures inspected; transparent-region click-through, full long text and retained draft/restart exercised. Art and rig preserved. |
+| Native task scope | Actual native keyboard/pointer selected and saved an exact disposable root without actions or cloud calls. Scope-expansion logic is tested; full connected native task flow remains a separate host check. |
+| Pinned work engine | Real GPT-6.1-Sol arithmetic and disposable edit/test completed; unchanged baseline tests failed before and passed after. Protocol continuity/renewed token fixtures are separate evidence. |
+| Task OS boundary | Actual writable-root edit, credential/FD/network/write denial, held-directory replacement, cancellation and coordinator SIGKILL checks passed. General network/GUI/admin work unavailable. |
+| Initiative | Persistent budget/debounce/dedup/cooldown/snooze/clock fixtures passed. Actual Wayland input-idle helper and existing desktop DND status observed. Long proactive session qualification remains separate. |
+| Project awareness | Chosen top-level save-event subscriptions, explicit metadata sharing, actual scoped check-result evidence and source list implemented; no arbitrary focused-document reading. |
+| Gmail | Own Desktop app OAuth and read-only adapter implemented. Four fixture tests passed. Real registration/account consent unavailable, so no real mail read is claimed. |
+| Maintenance | Disposable owned-install restoration, unchanged-byte review gate, actual sandboxed proposal tests and real three-process-crash rollback passed. Native installed-version health/rollback remains a final host check. No automatic release trust channel configured. |
+| Legacy capabilities | Direct ChatGPT conversation, typed app/focus/media/audio, selected-folder stage/apply/undo and deterministic Commands retained; V1 evidence is preserved and V2 regression qualification is separate. |
+| Sound | Existing daemon has no sound capability; licensed PipeWire fallback with mute/DND/fullscreen guards implemented. Actual audible host verification remains separate. |
+| Physical/device/motion/performance | Physical lock/suspend, monitor unplug/fractional DPI, uninterrupted normal-speed playback and valid 30-minute/resource samples remain unverified until actual evidence. Frames and short interrupted samples cannot establish these. |
+| Delivery | V2 testing branch checkpoints pushed; final exact-head CI, installed command, rollback and review checksums belong to final report. Main/showcase/controller unchanged. |

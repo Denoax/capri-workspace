@@ -1,5 +1,7 @@
 """OS boundary for owner-selected read/write projects; no credential or desktop mounts."""
 import asyncio
+import json
+import sys
 import os
 from pathlib import Path
 import re
@@ -28,16 +30,35 @@ class RootHandle:
         if self.fd is not None:os.close(self.fd);self.fd=None
 
 
+def check_tree(handle):
+    # A writable bind alone cannot contain pre-existing hardlinks or host sockets.
+    count=0
+    for _,dirs,names,fd in os.fwalk('.',dir_fd=handle.fd,follow_symlinks=False):
+        for name in dirs+names:
+            info=os.stat(name,dir_fd=fd,follow_symlinks=False);count+=1
+            if count>100000:raise Denied('Project exceeds the bounded writable scan; choose a smaller exact directory')
+            if stat.S_ISREG(info.st_mode) and info.st_nlink!=1:raise Denied('Writable roots cannot contain hardlinked files; use an independent project copy')
+            if not (stat.S_ISREG(info.st_mode) or stat.S_ISDIR(info.st_mode) or stat.S_ISLNK(info.st_mode)):raise Denied('Work roots cannot expose host sockets, devices or pipes')
+
+
 def protected_paths():
     home=Path.home()
     config=Path(os.environ.get('XDG_CONFIG_HOME',str(home/'.config')))
     state=Path(os.environ.get('XDG_STATE_HOME',str(home/'.local/state')))
     data=Path(os.environ.get('XDG_DATA_HOME',str(home/'.local/share')))
-    return [home/x for x in ('.ssh','.gnupg','.aws','.codex','.agents','.pki','.mozilla','.local/share/keyrings')]+[
+    sources=[]
+    for manifest in (home/'.local/share/capri/install.json',data/'capri/install.json'):
+        try:
+            if not manifest.is_symlink() and manifest.stat().st_uid==os.getuid() and manifest.stat().st_size<64000:
+                source=json.loads(manifest.read_text()).get('source')
+                if isinstance(source,str) and Path(source).is_absolute():sources.append(Path(source))
+        except (OSError,ValueError):pass
+    return sources+[Path(sys.prefix)]+[home/x for x in ('.ssh','.gnupg','.aws','.codex','.agents','.pki','.mozilla','.local/share/keyrings')]+[
         home/'.config/capri',home/'.local/state/capri',home/'.local/share/capri/versions',home/'.local/share/capri/bootstrap',
         Path(os.environ.get('CODEX_HOME',str(home/'.codex'))),config/'capri',config/'BraveSoftware',config/'google-chrome',config/'chromium',
-        state/'capri',data/'capri/versions',data/'capri/bootstrap',data/'capri/trust',data/'capri/engines',data/'capri/assets',data/'capri/install.json',
-        home/'.config/systemd/user/capri-companion.service',
+        state/'capri',data/'capri/versions',data/'capri/bootstrap',data/'capri/trust',data/'capri/helpers',data/'capri/venv',data/'capri/versions-state.json',data/'capri/current',data/'capri/engines',data/'capri/assets',data/'capri/install.json',
+        home/'.config/systemd/user/capri-companion.service',home/'.local/bin/capri',home/'.local/share/applications/capri.desktop',
+        home/'.local/share/capri/venv',home/'.local/share/capri/engines',home/'.local/share/capri/helpers',home/'.local/share/capri/trust',home/'.local/share/capri/current',home/'.local/share/capri/versions-state.json',
         Path(__file__).resolve().parent.parent,
         Path(os.environ.get('XDG_RUNTIME_DIR','/run/user/'+str(os.getuid()))) ]
 
@@ -117,29 +138,35 @@ class TaskSandbox:
     async def stop(self):
         await asyncio.gather(*(self.release(p) for p,_,_ in tuple(self.children.values())))
 
-    async def run(self, argv,roots,cwd, *, read_only=False, held_handles=None):
+    async def run(self, argv,roots,cwd, *, read_only=False, held_handles=None, library=None, timeout=30):
         self.validate(argv,roots,cwd,held=held_handles is not None)
+        if not 1<=timeout<=30:raise Denied('Command deadline is outside the current task lease')
         handles=[];proc=None
         if held_handles is not None:
             if [h.path for h in held_handles]!=roots or any(h.fd is None or os.fstat(h.fd).st_ino!=h.identity.st_ino or os.fstat(h.fd).st_dev!=h.identity.st_dev for h in held_handles):
                 raise Denied('Task root handle identity changed')
         try:
             handles=list(held_handles) if held_handles is not None else [RootHandle(p) for p in roots]
+            for root in handles:await asyncio.to_thread(check_tree,root)
             command=['/usr/bin/bwrap','--unshare-all','--die-with-parent','--new-session','--clearenv',
                      '--setenv','PATH','/usr/bin','--setenv','LANG','C.UTF-8','--setenv','PYTHONDONTWRITEBYTECODE','1',
                      '--ro-bind','/usr','/usr','--symlink','usr/bin','/bin','--symlink','usr/lib','/lib','--symlink','usr/lib','/lib64',
                      '--proc','/proc','--dev','/dev','--tmpfs','/tmp']
-            for root in handles:command+=['--ro-bind-fd' if read_only else '--bind-fd',str(root.fd),root.path]
+            if library:
+                dependency=RootHandle(library);handles.append(dependency)
+                command+=['--ro-bind-fd',str(dependency.fd),'/opt/capri-deps','--setenv','PYTHONPATH','/opt/capri-deps']
+            for root in handles[:len(roots)]:command+=['--ro-bind-fd' if read_only else '--bind-fd',str(root.fd),root.path]
             command+=['--chdir',cwd,'--remount-ro','/','--',*argv]
-            proc=await self.spawn(command,pass_fds=[h.fd for h in handles])
+            proc=await self.spawn(command,pass_fds=[h.fd for h in handles],timeout=timeout)
             output=bytearray()
             async def read(stream):
                 while chunk:=await stream.read(8192):
                     output.extend(chunk)
                     if len(output)>1024*1024:raise Denied("Task output exceeded 1 MiB")
-            await asyncio.wait_for(asyncio.gather(read(proc.stdout),read(proc.stderr),proc.wait()),35)
+            await asyncio.wait_for(asyncio.gather(read(proc.stdout),read(proc.stderr),proc.wait()),timeout+5)
             return {'exit_code':proc.returncode,'output':output.decode(errors='replace'),'network':'denied','roots':roots,'access':'read-only' if read_only else 'read/write'}
         finally:
             if proc:await self.release(proc)
             if held_handles is None:
                 for handle in handles:handle.close()
+            elif library and len(handles)>len(roots):handles[-1].close()

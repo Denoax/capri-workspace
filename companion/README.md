@@ -1,98 +1,79 @@
-# Capri desktop companion
+# Capri desktop V2
 
-A native Quickshell/Qt Quick character and a separate Python coordinator for a local conversation named **Capri**. This is an additive testing candidate. It does not start the repository's three-role runtime or modify its controller, README, showcase or approved art.
+Native Quickshell/Qt Quick presence, speech bubbles and conversation, with a Python coordinator. V2 preserves the inherited character art and the direct ChatGPT conversation adapter. It never starts the separate three-role runtime or changes the root showcase.
 
-The companion has articulated local animation, a native composer, private SQLite history and editable memory, a deterministic authority broker, and typed native adapters. ChatGPT inference requires Capri's own successful official sign-in. **Offline test mode is not a connected model.**
+The interaction study is a reference, not the application. Offline responses and provider fixtures are labelled separately from real connected-model evidence.
 
-## Requirements and setup
+## Setup
 
-Target: Arch Linux / Hyprland, Quickshell 0.3.1 and Qt 6.12. The machine must provide Python 3.11+, python-dbus, python-gobject, python-pillow (asset geometry preparation), bubblewrap, systemd user services, gio, playerctl and wpctl. No root daemon, global model change or model download is required. The work runner fails closed without its isolation prerequisites.
+Target host: Arch/Hyprland, Quickshell 0.3.1, Qt 6.12, Python 3.11+, systemd user manager and bubblewrap. Native session/browser helpers need python-dbus/python-gobject. Input-idle needs ext-idle-notify v2, wayland-scanner, a C compiler and wayland-client. Existing gio, playerctl, wpctl and pw-play provide typed desktop actions and sound. No root daemon or global Codex changes are required.
 
-From this directory:
+Reuse the installed isolated Python environment and pinned assets. For a fresh setup:
 
 ```sh
 CAPRI_DATA_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/capri"
 python3 -m venv "$CAPRI_DATA_DIR/venv"
-"$CAPRI_DATA_DIR/venv/bin/python" -m pip install -r requirements.lock
+"$CAPRI_DATA_DIR/venv/bin/python" -m pip install --require-hashes -r requirements.lock
 python3 tools/import_assets.py /path/to/CAPRI_DESKTOP_COMPANION_V1 "$CAPRI_DATA_DIR/assets"
 python3 tools/build_input_regions.py "$CAPRI_DATA_DIR/assets"
 python3 launcher.py run --screen OUTPUT_NAME
 ```
 
-Keep the virtual environment and imported assets outside the Git source tree; the existing controller intentionally rejects symlink-bearing source trees. Run asset preparation with the system Python that provides Pillow. Import accepts only the existing data files pinned in `assets-manifest.json`; it never loads character hooks, scripts, QML or extensions. Character media are intentionally excluded from Git. See [provenance](docs/PROVENANCE.md).
+The work engine requires the exact Codex binary in [engine-pin.json](engine-pin.json). It checks SHA-256, uses a separate private profile and Capri's own account, and does not read another Codex auth store. An existing matching binary may be reused without its settings. Conversation remains available if work qualification is unavailable.
 
-For a user launcher and optional, initially disabled user unit:
+The V2 installer adopts only unchanged, manifest-registered V1 launch files. Preserve the running draft and verify the source before switching:
 
 ```sh
-python3 tools/install.py
+python3 tools/install_v2.py --baseline /verified/v1/companion --baseline-sha VERIFIED_V1_SHA --sha VERIFIED_V2_SHA
 capri run
+capri status
 capri summon
 capri stop
 capri hide
-capri status
 capri quit
+capri versions
 ```
 
-The launcher supervises both processes. Quit waits for the old service lock before returning. There is one core/socket owner; starting a duplicate fails. The graphical session must supply a current Wayland environment. Autostart is **off**. The generated `capri-companion.service` is optional; `--autostart` is a deliberate installer opt-in. Graphical-session restart/autostart is not qualified merely by generating a unit.
+`--autostart` enables the user graphical-session unit after host qualification. It does not prove reboot or suspend behavior. The protected supervisor selects immutable source versions, retains a last-known-good version and performs one bounded crash rollback. A changed installation file is preserved rather than overwritten by uninstall.
 
-## Using the companion
+## Conversation and tasks
 
-Click **Talk** or the actor to open the composer; drag the actor to place it. Right-click the actor or click **Stop** to revoke current authority. The size slider and **Quiet** control adjust local presentation. Hidden/locked actors stop their animation clock. A disconnected or unqualified session cannot execute commands. Local idle never requests a cloud turn.
+Click the actor or Reply for quick input. Open conversation retains full selectable output, search, history scrolling and drafts across collapse/restart. Settings contain account/model, cadence, quiet hours, DND, snooze, pin/roam, reduced motion, mute/volume, selected projects, mail and maintenance. Escape preserves the composer. Native Stop and `capri stop` revoke pending authority even when the conversation is closed.
 
-**Chat** treats input, including pasted command-shaped text, as conversation data. Select **Commands** deliberately for typed computer actions. Settings/help buttons invoke narrow trusted operations. A model reply never becomes a command or permission.
+- **Chat** uses the original direct conversation adapter. Pasted commands remain conversation data.
+- **Task** uses the pinned Codex stdio engine. Select exact project directories and optional typed desktop tools once in Settings. A native task grants up to 30 minutes, 64 actions and 24 inference requests. File contents and tool results inside that scope can reach the selected model. A project root is not automatically free of secrets.
+- **Commands** preserves the deterministic V1 grammar: `/help`, `/apps`, `/open`, `/windows`, `/focus`, `/players`, `/player`, `/media`, `/volume`, `/folder`, `/organize`, `/apply`, `/undo`, `/work`, memory/export/reset and account controls. Its legacy `/work` is read-only; Task mode supports scoped writes.
 
-Useful commands in Commands mode:
+Task commands receive selected read/write directory handles, isolated mount/PID/network namespaces, no credentials/desktop sockets or inherited secret FDs, a clean environment, resource limits and bounded output. Ordinary commands run for at most 30 seconds, within the task's remaining deadline. General network access, arbitrary GUI input, privilege escalation and live Capri/updater writes are unavailable. Extra exact directories or typed desktop tools pause for a concrete native decision. No repeated approval is needed for ordinary actions within the current task.
 
-```text
-/apps
-/open audio-settings
-/windows
-/focus 0xWINDOW_ADDRESS
-/players
-/player spotify
-/media-status
-/media pause
-/media play
-/volume 40
-/folder /absolute/selected/folder
-/organize
-/apply PLAN_ID
-/undo PLAN_ID
-/work /absolute/project -- /usr/bin/python3 -B -m unittest -v
-/remember Preferred project name is Silver
-/memories
-/forget MEMORY_ID
-/export
-/reset CONFIRM
-```
+Tasks have separate private journals/checkpoints. Duplicate IDs cannot repeat effects. Interruption records uncertain effects; resume requires native owner input and inspection, with no automatic mutation replay. Account/model/session changes and lock, Stop or UI loss revoke task leases. Model prose, files, mail and memories cannot create authority.
 
-Only reviewed desktop IDs can launch; `/apps` reports actual installation. Media controls require an explicitly selected current MPRIS player. Volume is an integer from 0 to 100. File organization stages flat `documents--` / `images--` name changes, requires explicit apply, never overwrites, and keeps a private undo manifest. It does not recursively reorganize or delete documents. Undo checks recorded identity and remains available after restart when the same folder is selected.
+## Initiative and selected sources
 
-Work jobs receive the selected project read-only at `/work`, isolated PID/network/mount namespaces, no home or desktop sockets, clean environment, a private `/tmp`, 512 MiB memory, 32 tasks, a CPU quota, 30-second runtime and 1 MiB output limit. A pidfd supervisor ends the job if its exact core dies, including a hard crash. Commands are exact argv, not shell interpolation. Builds that require project writes or network are unsupported in this version. Selecting a project makes its contents visible to its test code; do not select a root containing secrets that the job should not read.
+Local animation requires no model call. Read-only Wayland idle notifications wait for ten seconds without input; they do not capture keystrokes. The scheduler coalesces useful events, debounces for 30 seconds, persists hourly/daily budgets and three-hour topic cooldowns, and respects DND/fullscreen/quiet/snooze/pause. Missing idle or desktop DND signals suppress unsolicited delivery. A timer without useful context does nothing.
 
-## ChatGPT and privacy
+Selected project observation subscribes to top-level save events without reading filenames or contents. Chosen event metadata may be shared only when explicitly enabled. Actual recognized build/test tool results retain local evidence. Natural-pause check-ins require real prior task activity. Requested replies remain separate from unsolicited budgets. Clock jumps do not reset rolling limits. Quiet hours use an editable IANA timezone, initially America/Edmonton.
 
-Use **Settings → Continue with ChatGPT**. Capri uses its own dynamic registration, PKCE/state/nonce, validated ID token, protected account record, serialized refresh, account model discovery and the public streamed Responses API with `store:false`. The browser callback is temporary and bound only to `127.0.0.1`. Existing Codex credentials, browser cookies and private ChatGPT endpoints are never used. No paid fallback exists.
+## Gmail and maintenance
 
-ChatGPT account eligibility and completed inference must be verified separately. An identity callback, a model list and a completed turn are distinct outcomes. The native UI displays only discovered models. Saved account models are refreshed without blocking native startup, and an unavailable selected model requires an explicit new choice. The default brain is conversational; native task authority uses the explicit command grammar, not model planning or autonomous function execution.
+Gmail needs its own official **Desktop app** OAuth registration and interactive consent. The chat's connector supplies no token to this application. Metadata uses `gmail.metadata`; plain-text summaries use `gmail.readonly`. Both are restricted scopes. Labels filter app requests, not Google's account-wide permission. No send/modify scope is requested. See [Google scopes](https://developers.google.com/workspace/gmail/api/auth/scopes) and [desktop OAuth](https://developers.google.com/identity/protocols/oauth2/native-app).
 
-State is under the app's XDG config/state/runtime directories with owner-only permissions. Provider/account partitions do not automatically share history. Model selection is saved per account. Memory is preference data and cannot grant authority. Context is bounded by character counts; exact token occupancy and account pricing are not claimed. Exports are deliberate private files. Recognizable token/authorization URL shapes are redacted; redaction cannot identify every possible secret a user might type.
+Polling is account-bound, read-only, at most 20 messages per poll with a 15-minute interval, jitter, deduplication and backoff. HTML, remote images and attachments stay inert. Raw plain-text bodies live only in an expiring in-memory cache; selected cloud excerpts require explicit setup consent. Unavailable account setup does not block other features.
 
-## Removal and rollback
+Stage an improvement creates a source-only isolated candidate and selects it as the work scope. Give Task mode a specific improvement. Verify proposal runs bounded offline checks; Review shows the exact patch/digest and remaining host checks. Installing self-authored executable code requires native approval of the same tested bytes. Bounded appearance/cadence data reject code, paths, hooks and unknown properties. No owner-established automatic release trust channel is configured; CI green or a self-created key cannot supply that trust.
 
-Stop the running companion, then remove only unchanged installer-owned files:
+## Rollback, removal and evidence
 
 ```sh
 capri quit
-python3 tools/install.py --uninstall
+capri rollback
+capri run
+# Or remove V2 launch registration and restore the exact prior V1 registration:
+python3 tools/install_v2.py --uninstall
 ```
 
-Uninstall preserves conversation, credentials, exports, assets, source and unrelated files. Changed installation files are preserved for inspection. It does not delete personal data. To roll back, stop this candidate and keep using the original repository/runtime; `main` was not changed. No source checkout or user history needs resetting.
-
-## Checks and review limits
+Rollback/removal retain private accounts, history, drafts, assets and version/source history. Stop the active service before a manual rollback. Current qualification belongs to the source-bound local review report and [capability notes](docs/CAPABILITIES.md); a build or fixture is not human motion approval. Physical lock/suspend, fractional DPI, hotplug, uninterrupted playback and valid resource samples require their own evidence.
 
 ```sh
 CAPRI_HOST_INTEGRATION=1 "$CAPRI_DATA_DIR/venv/bin/python" -B -m unittest discover -s tests -v
 ```
-
-Host tests exercise actual isolation denials; provider fixtures remain distinct from account outcomes. See [security](docs/SECURITY.md) for boundaries and [capabilities](docs/CAPABILITIES.md) for qualified versus pending features. Real screen/GUI automation, voice, networked/writable jobs and autonomous model tool planning are disabled or unsupported. This candidate needs human artistic review and does not imply integration or release approval.

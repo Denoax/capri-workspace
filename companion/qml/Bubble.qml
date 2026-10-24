@@ -79,6 +79,11 @@ Rectangle {
                 onClicked: owner.openConversation()
             }
             CapriButton {
+                text: "Open message"
+                visible: owner.snapshot.notice?.source === "selected-mail"
+                onClicked: owner.send("mail_open",{})
+            }
+            CapriButton {
                 text: "Why this?"
                 visible: owner.noticeActive
                 onClicked: {

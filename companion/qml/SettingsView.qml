@@ -5,9 +5,25 @@ import QtQuick.Layouts
 ScrollView {
     id: settings
     required property var owner
+    function scopePoints() {
+        return JSON.stringify({root: rootInput.mapToGlobal(rootInput.width/2,rootInput.height/2), save: scopeSave.mapToGlobal(scopeSave.width/2,scopeSave.height/2), viewport: settings.mapToGlobal(0,0), viewportHeight:settings.height, contentY:contentItem.contentY, rootLength: rootInput.text.length, rootFocused:rootInput.activeFocus});
+    }
+    function revealScopeSave() { rootInput.focus=false; contentItem.cancelFlick(); contentItem.contentY = Math.max(0,scopeSave.mapToItem(settingsColumn,0,0).y - 90); }
+    function revealScope() { contentItem.contentY = Math.max(0,rootInput.y - 4); }
+    property bool scopeDirty: false
+    Connections {
+        target: owner
+        function onSnapshotChanged() {
+            if (!settings.scopeDirty) {
+                rootInput.text=(owner.snapshot.scope?.roots || []).join("\n");
+                desktopScope.checked=owner.snapshot.scope?.desktop || false;
+            }
+        }
+    }
     clip: true
     contentWidth: availableWidth
     ColumnLayout {
+        id: settingsColumn
         width: settings.availableWidth
         spacing: 10
         Text {
@@ -137,14 +153,14 @@ ScrollView {
             TextField {
                 id: quietStart
                 placeholderText: "HH:MM"
-                text: owner.profile.quiet_start || ""
+                Component.onCompleted: text = owner.profile.quiet_start || ""
                 maximumLength: 5
                 implicitWidth: 75
             }
             TextField {
                 id: quietEnd
                 placeholderText: "HH:MM"
-                text: owner.profile.quiet_end || ""
+                Component.onCompleted: text = owner.profile.quiet_end || ""
                 maximumLength: 5
                 implicitWidth: 75
             }
@@ -152,11 +168,19 @@ ScrollView {
                 text: "Save"
                 onClicked: owner.send("preferences", {
                     changes: {
+                        timezone: timezoneInput.text,
                         quiet_start: quietStart.text,
                         quiet_end: quietEnd.text
                     }
                 })
             }
+        }
+        TextField {
+            id: timezoneInput
+            placeholderText: "IANA timezone, e.g. America/Edmonton"
+            Component.onCompleted: text = owner.profile.timezone || "America/Edmonton"
+            Layout.fillWidth: true
+            Accessible.name: "Quiet hours timezone"
         }
         Text {
             text: "Account and model"
@@ -172,6 +196,7 @@ ScrollView {
                 model: owner.snapshot.models || []
                 textRole: "name"
                 valueRole: "id"
+                currentIndex: Math.max(0,(owner.snapshot.models || []).findIndex(m => m.id === owner.snapshot.model))
                 Layout.fillWidth: true
                 onActivated: owner.command("/model " + currentValue)
                 Accessible.name: "Discovered ChatGPT account model"
@@ -197,19 +222,39 @@ ScrollView {
             Layout.fillWidth: true
             font.pixelSize: 12
         }
-        TextField {
+        TextArea {
             id: rootInput
-            placeholderText: "/absolute/project (one path per line in the full scope dialog)"
+            placeholderText: "/absolute/project — one exact directory per line"
+            Component.onCompleted: text = (owner.snapshot.scope?.roots || []).join("\n")
+            onTextChanged: if (activeFocus) settings.scopeDirty = true
             Layout.fillWidth: true
-            Accessible.name: "Selected project root"
+            Layout.preferredHeight: 75
+            color: "#efedf2"
+            textFormat: TextEdit.PlainText
+            Accessible.name: "Selected project roots"
+            background: Rectangle { color: "#111219"; radius: 6 }
+        }
+        CheckBox {
+            id: desktopScope
+            text: "Allow typed application, window, media and volume actions for requested Tasks"
+            Component.onCompleted: checked = owner.snapshot.scope?.desktop || false
+            onToggled: settings.scopeDirty = true
+        }
+        Text {
+            text: "Sending a Task authorizes edits and tests within these folders for up to 30 minutes / 64 actions. Selected file contents and task results may be sent to your selected ChatGPT model. Network and general GUI input remain unavailable. Stop revokes the task."
+            color: "#a5a2af"; wrapMode: Text.Wrap; Layout.fillWidth: true; font.pixelSize: 12
         }
         RowLayout {
             CapriButton {
+                id: scopeSave
                 text: "Use for work"
-                onClicked: owner.send("set_scope", {
-                    roots: [rootInput.text],
-                    desktop: true
-                })
+                onClicked: {
+                    owner.send("set_scope", {
+                        roots: rootInput.text.split("\n").map(x => x.trim()).filter(x => x.length),
+                        desktop: desktopScope.checked
+                    });
+                    settings.scopeDirty = false;
+                }
             }
             CapriButton {
                 text: "Observe locally"
@@ -219,7 +264,7 @@ ScrollView {
                 })
             }
             CapriButton {
-                text: "Allow selected excerpts…"
+                text: "Allow event metadata to model"
                 onClicked: owner.send("observe_project", {
                     root: rootInput.text,
                     cloud: true
@@ -227,11 +272,33 @@ ScrollView {
             }
         }
         Text {
-            text: owner.snapshot.sources_text || "No project or inbox is being observed."
+            text: owner.snapshot.sources_text || "No selected project observation."
             color: "#a5a2af"
             wrapMode: Text.Wrap
             Layout.fillWidth: true
             font.pixelSize: 12
+        }
+        Repeater {
+            model: owner.snapshot.observation_sources || []
+            delegate: RowLayout {
+                required property var modelData
+                Text { text: modelData.root; color: "#c5bfcc"; textFormat: Text.PlainText; wrapMode: Text.Wrap; Layout.fillWidth: true }
+                CapriButton { text: "Stop observing"; onClicked: owner.send("unobserve_project",{root:modelData.root}) }
+            }
+        }
+        Text { text: "Recent tasks"; color: "#efedf2"; font.pixelSize: 17 }
+        Repeater {
+            model: owner.snapshot.tasks || []
+            delegate: RowLayout {
+                required property var modelData
+                Text { text: modelData.status + " · " + modelData.objective; textFormat: Text.PlainText; color: "#c5bfcc"; wrapMode: Text.Wrap; maximumLineCount: 2; elide: Text.ElideRight; Layout.fillWidth: true }
+                CapriButton { text: "Resume"; enabled: !owner.busy && modelData.status !== "running"; onClicked: owner.send("resume_task",{id:modelData.id}) }
+            }
+        }
+        Text { text: "Recent verified activity"; color: "#efedf2"; font.pixelSize: 17 }
+        Repeater {
+            model: owner.snapshot.activity || []
+            delegate: Text { required property var modelData; text: modelData.kind + " · " + modelData.detail; textFormat: Text.PlainText; color: "#a5a2af"; wrapMode: Text.Wrap; Layout.fillWidth: true; font.pixelSize: 12 }
         }
         Text {
             text: "Read-only inbox"
@@ -257,13 +324,20 @@ ScrollView {
             text: "INBOX"
             Layout.fillWidth: true
         }
+        Text {
+            text: "Google metadata access reads headers, not bodies. Plain-text summaries require gmail.readonly. These are restricted Google scopes; label filters apply in Capri and do not narrow Google's account-wide grant. No send/modify scope is requested."
+            color: "#a5a2af"; wrapMode: Text.Wrap; Layout.fillWidth: true; font.pixelSize: 12
+        }
+        CapriComboBox { id: mailSummary; model: ["Metadata only", "Plain-text summary"]; Accessible.name: "Mail summary scope" }
+        CheckBox { id: mailCloud; text: "Allow selected mail metadata/excerpts to the current ChatGPT model"; checked: false }
         RowLayout {
             CapriButton {
                 text: "Connect read-only…"
                 onClicked: owner.send("mail_connect", {
                     registration: mailRegistration.text,
                     labels: mailLabels.text.split(","),
-                    summary: "metadata"
+                    summary: mailSummary.currentIndex === 0 ? "metadata" : "body",
+                    cloud: mailCloud.checked
                 })
             }
             CapriButton {
@@ -292,6 +366,7 @@ ScrollView {
                 text: "Stage an improvement"
                 onClicked: owner.send("maintenance_stage", {})
             }
+            CapriButton { text: "Verify proposal"; onClicked: owner.send("maintenance_verify",{}) }
             CapriButton {
                 text: "Check releases"
                 onClicked: owner.send("update_check", {})
@@ -304,6 +379,11 @@ ScrollView {
                 text: "Rollback…"
                 onClicked: owner.send("rollback_request", {})
             }
+        }
+        RowLayout {
+            visible: !!owner.snapshot.rollback_target
+            Text { text: "Return to version " + (owner.snapshot.rollback_target || "").slice(0,12) + "? Draft and private account data stay retained."; color: "#d2cbd8"; wrapMode: Text.Wrap; Layout.fillWidth: true }
+            CapriButton { text: "Confirm rollback"; onClicked: owner.send("rollback_confirm",{digest:owner.snapshot.rollback_target}) }
         }
         Text {
             text: "Memory and local data"
