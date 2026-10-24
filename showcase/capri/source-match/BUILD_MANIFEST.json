@@ -344,12 +344,12 @@
     {
       "path": "exports/comic-wide-timeline.json",
       "bytes": 37810,
-      "sha256": "db9babc96dc065c7c6c87238e5aae62ec1e6e96c5028d699f8cfa1933a23d77a"
+      "sha256": "0e2258741a6c71db0af74bcab3bc4b9b7c348d9f347a201b9ce1297423331630"
     },
     {
       "path": "exports/comic-wide.gif",
-      "bytes": 1552416,
-      "sha256": "6b79f90b040e5f34658b0158db9a8e7727ee33b9fe67e351f86117451413a6a8"
+      "bytes": 1560696,
+      "sha256": "ec25ae8bb904b74b962573d4fcc0ebac8d622120edeea4932716cc5b3cca99b0"
     },
     {
       "path": "exports/comic-wide.png",
@@ -404,12 +404,12 @@
     {
       "path": "exports/hands-wide-timeline.json",
       "bytes": 39616,
-      "sha256": "b877665999ff5e0e6d5665d0533f90ad74f719536e93b9e6512b791bb726436a"
+      "sha256": "47cd96036392ea6c9b34d8bf58ee6dc7411791873a4ac1a5b2868a236f215db5"
     },
     {
       "path": "exports/hands-wide.gif",
-      "bytes": 5865001,
-      "sha256": "41ec1d69aa74f254aa2d631f2a1d3fa0d94142724f3207515a45d636f574dc7e"
+      "bytes": 5864294,
+      "sha256": "87ccd30ab9e0bce204f18ffa53f2170627747e8a26184aa49fb3a92a6b3cab8b"
     },
     {
       "path": "exports/hands-wide.png",

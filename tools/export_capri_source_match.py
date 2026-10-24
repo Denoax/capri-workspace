@@ -75,6 +75,10 @@ async def export(port,url,evidence,names,layouts,stills_only):
                         box=await c.evaluate(f"(()=>{{const b=document.querySelector('[data-panel=\"{name}\"]').getBoundingClientRect();return {{x:b.x,y:b.y,width:b.width,height:b.height}};}})()")
                     clip={**box,'scale':1};clip['height']=round(clip['height']);clip['width']=round(clip['width'])
                     async def capture(path):
+                        # Canvas work is synchronous, but DOM packet transforms commit
+                        # on the compositor. Settle two display frames while the scene
+                        # remains paused, so captures cannot use an earlier packet state.
+                        await c.evaluate('new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))')
                         if name=='actor':
                             encoded=await c.evaluate("actorCanvas.toDataURL('image/png').split(',')[1]");path.write_bytes(base64.b64decode(encoded));return
                         response=await c.call('Page.captureScreenshot',{'format':'png','clip':clip,'captureBeyondViewport':True});path.write_bytes(base64.b64decode(response['data']))
