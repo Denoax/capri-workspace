@@ -4,12 +4,16 @@ import argparse
 import fcntl
 import json
 import os
+import re
 from pathlib import Path
 import subprocess
 import time
 
 BASE=Path(__file__).resolve().parent
-RUNTIME=Path(os.environ.get('XDG_RUNTIME_DIR',str(Path.home()/'.cache')))/'capri'
+RUNTIME_NAME=os.environ.get('CAPRI_RUNTIME_NAME','capri')
+if not re.fullmatch(r'capri(?:-test-[a-z0-9]{1,12})?',RUNTIME_NAME):
+    raise SystemExit('Invalid private test runtime name')
+RUNTIME=Path(os.environ.get('XDG_RUNTIME_DIR',str(Path.home()/'.cache')))/RUNTIME_NAME
 
 
 def control(method):
@@ -33,22 +37,25 @@ def main():
     parser.add_argument('command',choices=['run','stop','quit','status','hide','summon'],nargs='?',default='run')
     parser.add_argument('--assets',type=Path)
     parser.add_argument('--screen',default='')
+    parser.add_argument('--render-backend',choices=('software','rhi'),default='software',help='Per-app Qt renderer; software avoids a persistent GPU context for the 2D actor')
     parser.add_argument('--evidence-stage',action='store_true',help='Neutral native recording stage; testing only')
     args=parser.parse_args()
     if args.command!='run':
         result=control(args.command)
         if args.command=='quit':
-            fd=os.open(RUNTIME/'service.lock',os.O_WRONLY|os.O_NOFOLLOW)
-            try:
-                for _ in range(100):
-                    try:
-                        fcntl.flock(fd,fcntl.LOCK_EX|fcntl.LOCK_NB)
-                        fcntl.flock(fd,fcntl.LOCK_UN)
-                        break
-                    except BlockingIOError:
-                        time.sleep(0.05)
-                else:raise SystemExit('Core shutdown timed out; do not start a duplicate.')
-            finally:os.close(fd)
+            for lockname in ('service.lock','launcher.lock'):
+                path=RUNTIME/lockname
+                if not path.exists():continue
+                fd=os.open(path,os.O_WRONLY|os.O_NOFOLLOW)
+                try:
+                    for _ in range(100):
+                        try:
+                            fcntl.flock(fd,fcntl.LOCK_EX|fcntl.LOCK_NB)
+                            fcntl.flock(fd,fcntl.LOCK_UN)
+                            break
+                        except BlockingIOError:time.sleep(0.05)
+                    else:raise SystemExit('Shutdown timed out; do not start a duplicate.')
+                finally:os.close(fd)
         print(json.dumps(result,indent=2));return
     if not os.environ.get('WAYLAND_DISPLAY'):
         raise SystemExit('A real Wayland session is required. No X11/browser fallback.')
@@ -71,6 +78,15 @@ def main():
     env.update(CAPRI_ASSETS=str(assets.resolve()),CAPRI_SOCKET=str(RUNTIME/'core.sock'),
                CAPRI_SETTINGS=(config/'preferences.ini').as_uri(),CAPRI_SCREEN=args.screen,
                CAPRI_EVIDENCE_STAGE='1' if args.evidence_stage else '0')
+    RUNTIME.mkdir(mode=0o700,parents=True,exist_ok=True)
+    if RUNTIME.is_symlink() or RUNTIME.stat().st_uid!=os.getuid():
+        raise SystemExit('Runtime directory ownership mismatch')
+    ownership_fd=os.open(RUNTIME/'launcher.lock',os.O_WRONLY|os.O_CREAT|os.O_NOFOLLOW,0o600)
+    fcntl.flock(ownership_fd,fcntl.LOCK_EX|fcntl.LOCK_NB)
+    if args.render_backend=='software':
+        env['QT_QUICK_BACKEND']='software'
+    else:
+        env.pop('QT_QUICK_BACKEND',None)
     core=subprocess.Popen([str(python),'-B','-m','capri.service'],cwd=BASE,env=env,stdout=log,stderr=log,start_new_session=True)
     shell=None
     try:
@@ -96,6 +112,7 @@ def main():
             try:core.wait(timeout=5)
             except subprocess.TimeoutExpired:core.kill();core.wait()
         log.close()
+        os.close(ownership_fd)
 
 
 if __name__=='__main__':main()

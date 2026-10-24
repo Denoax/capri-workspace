@@ -69,3 +69,64 @@ class Store:
     def export(self, partition):
         return json.dumps({"conversation": "Capri", "partition": partition,
                            "turns": self.history(partition, 10000), "memories": self.memories(partition)}, indent=2)
+
+    def migrate_v2(self):
+        """Additive schema: V1 transcript, credentials and correction rows stay intact."""
+        self.db.executescript("""
+          CREATE TABLE IF NOT EXISTS app_state(partition TEXT, key TEXT, value TEXT,
+             PRIMARY KEY(partition,key));
+          CREATE TABLE IF NOT EXISTS tasks(id TEXT PRIMARY KEY, partition TEXT, objective TEXT,
+             status TEXT, lease TEXT, thread TEXT, checkpoint TEXT, created REAL, updated REAL);
+          CREATE TABLE IF NOT EXISTS task_events(id INTEGER PRIMARY KEY, task TEXT,
+             kind TEXT, detail TEXT, created REAL);
+          CREATE TABLE IF NOT EXISTS observations(id TEXT PRIMARY KEY, source TEXT, topic TEXT,
+             kind TEXT, payload TEXT, created REAL, status TEXT);
+          CREATE TABLE IF NOT EXISTS directives(id TEXT PRIMARY KEY, partition TEXT,
+             revision INTEGER, value TEXT, enabled INTEGER);
+          CREATE TABLE IF NOT EXISTS notices(id TEXT PRIMARY KEY, topic TEXT, kind TEXT,
+             text TEXT, why TEXT, status TEXT, created REAL);
+          CREATE TABLE IF NOT EXISTS counters(bucket TEXT PRIMARY KEY, value INTEGER);
+        """)
+        self.db.execute("UPDATE tasks SET status='interrupted' WHERE status IN ('running','queued')")
+        self.db.execute("PRAGMA user_version=2")
+        self.db.commit()
+
+    def value(self, partition, key, default=None):
+        row = self.db.execute("SELECT value FROM app_state WHERE partition=? AND key=?", (partition,key)).fetchone()
+        return json.loads(row[0]) if row else default
+
+    def set_value(self, partition, key, value):
+        encoded = json.dumps(value, ensure_ascii=True)
+        if len(encoded) > 128000:
+            raise ValueError("App state value exceeds 128 KiB")
+        with self.db:
+            self.db.execute("INSERT INTO app_state VALUES(?,?,?) ON CONFLICT(partition,key) DO UPDATE SET value=excluded.value", (partition,key,encoded))
+
+    def draft(self, partition):
+        return self.value(partition, "draft", "")
+
+    def save_draft(self, partition, text):
+        if not isinstance(text,str) or len(text)>16000:
+            raise ValueError("Draft exceeds 16 KiB")
+        # A private draft is never an implicit model request or authority event.
+        self.set_value(partition,"draft",text)
+
+    def create_task(self, task, partition, objective, lease):
+        now=time.time()
+        with self.db:
+            self.db.execute("INSERT INTO tasks VALUES(?,?,?,?,?,?,?,?,?)", (task,partition,redact(objective),"queued",json.dumps(lease),"", "{}",now,now))
+
+    def task_event(self, task, kind, detail):
+        with self.db:
+            self.db.execute("INSERT INTO task_events VALUES(NULL,?,?,?,?)",(task,kind,redact(detail)[:16000],time.time()))
+
+    def update_task(self, task, **fields):
+        if not fields or not set(fields)<= {"status","thread","checkpoint"}:
+            raise ValueError("Unknown task state")
+        with self.db:
+            for key,value in fields.items():
+                self.db.execute("UPDATE tasks SET "+key+"=?,updated=? WHERE id=?",(value,time.time(),task))
+
+    def tasks(self, partition, limit=20):
+        rows=self.db.execute("SELECT id,objective,status,thread,checkpoint,updated FROM tasks WHERE partition=? ORDER BY created DESC LIMIT ?",(partition,limit)).fetchall()
+        return [dict(zip(("id","objective","status","thread","checkpoint","updated"),r)) for r in rows]

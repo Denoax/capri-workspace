@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import secrets
+import re
 import signal
 import socket
 import struct
@@ -17,6 +18,7 @@ from .intent import HELP, parse
 from .provider import PlanProvider
 from .redact import redact
 from .store import Store
+from . import profile
 
 
 def xdg(env, fallback):
@@ -28,7 +30,10 @@ def xdg(env, fallback):
 
 class Service:
     def __init__(self):
-        self.runtime = xdg("XDG_RUNTIME_DIR", ".cache") / "capri"
+        runtime_name=os.environ.get("CAPRI_RUNTIME_NAME","capri")
+        if not re.fullmatch(r"capri(?:-test-[a-z0-9]{1,12})?",runtime_name):
+            raise Denied("Invalid private test runtime name")
+        self.runtime = xdg("XDG_RUNTIME_DIR", ".cache") / runtime_name
         self.runtime.mkdir(mode=0o700, parents=True, exist_ok=True)
         if self.runtime.is_symlink() or self.runtime.stat().st_uid != os.getuid():
             raise Denied("Invalid runtime directory")
@@ -40,6 +45,8 @@ class Service:
         with os.fdopen(tokenfd, "w") as stream:
             stream.write(self.token)
         self.store = Store(xdg("XDG_STATE_HOME", ".local/state") / "capri")
+        self.store.migrate_v2()
+        self.profile = profile.load(self.store)
         self.adapters = Adapters()
         self.broker = Broker(self.store, self.adapters)
         self.provider = PlanProvider(xdg("XDG_CONFIG_HOME", ".config") / "capri/accounts")
@@ -56,6 +63,8 @@ class Service:
         self.shell = None
         self.watcher = None
         self.shutdown = asyncio.Event()
+        self.quit_ready = asyncio.Event()
+        self.shutdown_task = None
         self.persona = (Path(__file__).parent.parent / "runtime-persona/agent.md").read_text()
 
     async def send(self, writer, value):
@@ -73,7 +82,10 @@ class Service:
                 "memories": self.store.memories(self.provider.partition),
                 "sandbox": self.adapters.sandbox_ready, "calls": self.provider.calls,
                 "error": self.last_error, "folder": self.adapters.folder.root if self.adapters.folder else "",
-                "player": self.adapters.player or ""}
+                "player": self.adapters.player or "", "partition": self.provider.partition,
+                "draft": self.store.draft(self.provider.partition), "profile": self.profile,
+                "work_available": False, "input_idle": False,
+                "tasks": self.store.tasks(self.provider.partition)}
 
     async def publish(self):
         await self.send(self.ui, self.snapshot())
@@ -88,6 +100,25 @@ class Service:
             self.operation.cancel()
         self.state = "idle"
         await self.publish()
+
+    def begin_shutdown(self, force=False):
+        if not self.shutdown_task or self.shutdown_task.done():
+            self.shutdown_task=asyncio.create_task(self.prepare_shutdown(force))
+
+    async def prepare_shutdown(self, force=False):
+        await self.stop()
+        if self.ui:
+            self.quit_ready.clear()
+            await self.send(self.ui,{"event":"prepareQuit"})
+            try:
+                await asyncio.wait_for(self.quit_ready.wait(),1.5)
+            except asyncio.TimeoutError:
+                self.last_error="Native draft save was not acknowledged; quit again after reconnecting the UI."
+                await self.publish()
+                if not force:
+                    return
+            await self.send(self.ui,{"event":"quit"})
+        self.shutdown.set()
 
     async def settle(self, generation):
         await asyncio.sleep(2.5)
@@ -120,6 +151,8 @@ class Service:
                 result = await self.broker.execute(self.broker.proposal(grant))
                 self.state = "success"
                 await self.reply(json.dumps(result, ensure_ascii=False, indent=2))
+            elif mode == "work":
+                raise Denied("The work engine has not completed qualification yet; Chat remains available.")
             elif mode == "chat":
                 await self.chat()
             elif text in ("/help", "help"):
@@ -297,10 +330,11 @@ class Service:
                     elif method in ("stop", "hide", "summon", "quit"):
                         exact_keys(args, ())
                         await self.stop()
-                        await self.send(self.ui, {"event": method})
+                        if method != "quit":
+                            await self.send(self.ui, {"event": method})
                         await self.send(writer, {"event": "ack", "method": method})
                         if method == "quit":
-                            self.shutdown.set()
+                            self.begin_shutdown()
                     else:
                         raise Denied("Observer cannot submit owner tasks")
                     continue
@@ -312,7 +346,7 @@ class Service:
                     self.heartbeat = time.monotonic()
                 elif method == "submit":
                     exact_keys(args, ("text", "mode"))
-                    if args["mode"] not in ("chat", "command") or not isinstance(args["text"], str) or len(args["text"]) > 16000:
+                    if args["mode"] not in ("chat", "work", "command") or not isinstance(args["text"], str) or len(args["text"]) > 16000:
                         raise Denied("Invalid owner text")
                     if args["text"] == "/stop":
                         await self.stop()
@@ -321,7 +355,24 @@ class Service:
                     elif self.broker.locked or not self.session_verified:
                         raise Denied("Session is locked or unqualified")
                     else:
+                        await self.send(writer, {"event":"requestAccepted", "seq":message["seq"]})
                         self.operation = asyncio.create_task(self.turn(args["text"], args["mode"]))
+                elif method == "draft":
+                    exact_keys(args,("text",))
+                    self.store.save_draft(self.provider.partition,args["text"])
+                    await self.send(writer,{"event":"draftSaved","seq":message["seq"]})
+                elif method == "preferences":
+                    exact_keys(args,("changes",))
+                    self.profile=profile.update(self.store,args["changes"])
+                    if self.profile["paused"]:
+                        await self.stop()
+                    await self.publish()
+                elif method == "ui_quit_ready":
+                    exact_keys(args,())
+                    self.quit_ready.set()
+                elif method == "quit":
+                    exact_keys(args,())
+                    self.begin_shutdown()
                 elif method == "stop":
                     exact_keys(args, ())
                     await self.stop()
@@ -357,7 +408,7 @@ class Service:
         catalog = asyncio.create_task(self.refresh_catalog())
         loop = asyncio.get_running_loop()
         for sig in (signal.SIGINT, signal.SIGTERM):
-            loop.add_signal_handler(sig, self.shutdown.set)
+            loop.add_signal_handler(sig, lambda:self.begin_shutdown(force=True))
         async with server:
             await self.shutdown.wait()
             await self.stop()
