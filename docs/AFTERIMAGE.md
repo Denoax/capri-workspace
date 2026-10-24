@@ -42,3 +42,5 @@ Working presentation colors, not official production specifications. Barlow Cond
 <img src="../showcase/capri/source-match/exports/stack-wide.gif" width="768" alt="The supplied elastic stack retains its overshoot, spacing and timing in Capri colors, with the branded ending excluded and a disclosed forward/reverse source loop. Full-body Capri guides the cluster. Reference-footage composite, not controller execution.">
 
 [Still stack study](../showcase/capri/source-match/exports/stack-wide.png) · [Local companion](../showcase/capri/source-match/companion/index.html).
+
+The [V3 companion](../showcase/capri/source-match/companion/index.html) and [visual story](VISUAL_STORY.md) keep these source families in the main repository presentation with specific teaching roles. The [original source-match player](../showcase/capri/source-match/companion/source-match.html) remains preserved.

@@ -1,0 +1,5814 @@
+{
+  "lesson": "handoff",
+  "layout": "portrait",
+  "duration_ms": 5040,
+  "sample_fps": 50,
+  "sample_count": 252,
+  "size": [
+    600,
+    1257
+  ],
+  "bytes": 3727376,
+  "gif_sha256": "4ea1cb0379ad97ad20123bb59f612afee0d48515b2c077d753517179129df64d",
+  "poster_sha256": "d9aae55e3ef611ee89fd84397c7f38e24f72c7cdabc9774dccae064bb6a16e56",
+  "palette_colors": 256,
+  "frames": [
+    {
+      "time_ms": 0.0,
+      "sha256": "299074ac28d087c121c1ffb4d820cce98caf994806e6e6b1333c77f0e1fa89ea",
+      "state": {
+        "lesson": "handoff",
+        "time": 0,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 0,
+            "running": false,
+            "visible": true,
+            "frames": 3,
+            "native": null,
+            "sourceTime": 0,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 3
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 20.0,
+      "sha256": "76aa969b08e5cfe1a5dfc97c6597e1e7f78a0b237ad521035b6fb8d16342019b",
+      "state": {
+        "lesson": "handoff",
+        "time": 20,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 20,
+            "running": false,
+            "visible": true,
+            "frames": 4,
+            "native": null,
+            "sourceTime": 0.02,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 4
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 40.0,
+      "sha256": "156c70435ee32ba328f6c281bdd15ee029439b28f0ad6417e7e2c2fa81b48cc4",
+      "state": {
+        "lesson": "handoff",
+        "time": 40,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 40,
+            "running": false,
+            "visible": true,
+            "frames": 5,
+            "native": null,
+            "sourceTime": 0.04,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 5
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 60.0,
+      "sha256": "0cfd2535625fff21626312445aec42a17f40f46b2e4dd7586aa6fee42e4575ce",
+      "state": {
+        "lesson": "handoff",
+        "time": 60,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 60,
+            "running": false,
+            "visible": true,
+            "frames": 6,
+            "native": null,
+            "sourceTime": 0.06,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 6
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 80.0,
+      "sha256": "a33c72cb7719b9f7e44d3a942ce7e2553c33458e8b41adfa3433619c5aba86b4",
+      "state": {
+        "lesson": "handoff",
+        "time": 80,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 80,
+            "running": false,
+            "visible": true,
+            "frames": 7,
+            "native": null,
+            "sourceTime": 0.08,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 7
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 100.0,
+      "sha256": "6076d177e164c4b7e28dacb7c8c85e72d149b6227c11c46d9f13a3d120202146",
+      "state": {
+        "lesson": "handoff",
+        "time": 100,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 100,
+            "running": false,
+            "visible": true,
+            "frames": 8,
+            "native": null,
+            "sourceTime": 0.1,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 8
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 120.0,
+      "sha256": "48d11543164a9ea9c4f9e7644728bb695f7620776baaba99a2ee0fc169f25ea9",
+      "state": {
+        "lesson": "handoff",
+        "time": 120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 120,
+            "running": false,
+            "visible": true,
+            "frames": 9,
+            "native": null,
+            "sourceTime": 0.12,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 9
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 140.0,
+      "sha256": "e77f6cc15fdb32e5a60a97deafae42ea07695b8066fca4085fbe171dd496f9d8",
+      "state": {
+        "lesson": "handoff",
+        "time": 140,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 140,
+            "running": false,
+            "visible": true,
+            "frames": 10,
+            "native": null,
+            "sourceTime": 0.14,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 10
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 160.0,
+      "sha256": "e430e79927f542d7f8b48c5969d5bd0a06baf606d293720a3a82e6fd9d2db2ed",
+      "state": {
+        "lesson": "handoff",
+        "time": 160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 160,
+            "running": false,
+            "visible": true,
+            "frames": 11,
+            "native": null,
+            "sourceTime": 0.16,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 11
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 180.0,
+      "sha256": "4439ca967b04cfdebc96d76dbde84366bc43e8c16470f9d0f69bd4e5ab4d45e6",
+      "state": {
+        "lesson": "handoff",
+        "time": 180,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 180,
+            "running": false,
+            "visible": true,
+            "frames": 12,
+            "native": null,
+            "sourceTime": 0.18,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 12
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 200.0,
+      "sha256": "bd998c002acc949f81a304f0bfba9503f63e7cf2393da853b44e1a44a1c72516",
+      "state": {
+        "lesson": "handoff",
+        "time": 200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 200,
+            "running": false,
+            "visible": true,
+            "frames": 13,
+            "native": null,
+            "sourceTime": 0.2,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 13
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 220.0,
+      "sha256": "b72d30c39500fce1c5a1d2582a946f31c2c4627a042360296c6ba0847bd2aba2",
+      "state": {
+        "lesson": "handoff",
+        "time": 220,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 220,
+            "running": false,
+            "visible": true,
+            "frames": 14,
+            "native": null,
+            "sourceTime": 0.22,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 14
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 240.0,
+      "sha256": "7b879fffc905549e50f8940610ecd2303aa045bf4e5d3e0b991178e802e815d0",
+      "state": {
+        "lesson": "handoff",
+        "time": 240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 240,
+            "running": false,
+            "visible": true,
+            "frames": 15,
+            "native": null,
+            "sourceTime": 0.24,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 15
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 260.0,
+      "sha256": "5f971fabd42c7436b8f9f8a575787e27ef1570d310a17fdecafa286050eea757",
+      "state": {
+        "lesson": "handoff",
+        "time": 260,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 260,
+            "running": false,
+            "visible": true,
+            "frames": 16,
+            "native": null,
+            "sourceTime": 0.26,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 16
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 280.0,
+      "sha256": "2259525b86296f3e8d40912266c9ee027b2bee5435031b48de9323fd22a6f470",
+      "state": {
+        "lesson": "handoff",
+        "time": 280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 280,
+            "running": false,
+            "visible": true,
+            "frames": 17,
+            "native": null,
+            "sourceTime": 0.28,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 17
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 300.0,
+      "sha256": "1ebbaca2c72b90ffb1769cf6371c9f7029097132a254aad342ad060cefb93b38",
+      "state": {
+        "lesson": "handoff",
+        "time": 300,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 300,
+            "running": false,
+            "visible": true,
+            "frames": 18,
+            "native": null,
+            "sourceTime": 0.3,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 18
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 320.0,
+      "sha256": "433eed8c5ee5b84bce8b6e1d4c80fbd6efc4f2c3465714949f8faf32e69a4596",
+      "state": {
+        "lesson": "handoff",
+        "time": 320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 320,
+            "running": false,
+            "visible": true,
+            "frames": 19,
+            "native": null,
+            "sourceTime": 0.32,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 19
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 340.0,
+      "sha256": "fe9cdc48e056b226287acf3b0fb76e0ca610e89864eebcadec70e67afd39e674",
+      "state": {
+        "lesson": "handoff",
+        "time": 340,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 340,
+            "running": false,
+            "visible": true,
+            "frames": 20,
+            "native": null,
+            "sourceTime": 0.34,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 20
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 360.0,
+      "sha256": "2de12054567f34b7613851cd61a780cd4aed97c94b6edd67fec2880b8cdf2edc",
+      "state": {
+        "lesson": "handoff",
+        "time": 360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 360,
+            "running": false,
+            "visible": true,
+            "frames": 21,
+            "native": null,
+            "sourceTime": 0.36,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 21
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 380.0,
+      "sha256": "055d75153a1aa6296bd241eb3f2a9df50c8c75e7cab13722f15eaa68bd7bf174",
+      "state": {
+        "lesson": "handoff",
+        "time": 380,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 380,
+            "running": false,
+            "visible": true,
+            "frames": 22,
+            "native": null,
+            "sourceTime": 0.38,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 22
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 400.0,
+      "sha256": "5fca8b71ddf41d4f78ceb9d49b23aaf28102858ad3eccd3556e0364699f8a179",
+      "state": {
+        "lesson": "handoff",
+        "time": 400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 400,
+            "running": false,
+            "visible": true,
+            "frames": 23,
+            "native": null,
+            "sourceTime": 0.4,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 23
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 420.0,
+      "sha256": "b5fe7459bed1610a109ef4c3c6c54b8d9edb9d4ac23088166e59bb4bb1dbe709",
+      "state": {
+        "lesson": "handoff",
+        "time": 420,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 420,
+            "running": false,
+            "visible": true,
+            "frames": 24,
+            "native": null,
+            "sourceTime": 0.42,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 24
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 440.0,
+      "sha256": "51d0598cfc18d7bf7c6e49c91629c4aebdb2a1cb83c8aa1cc456c12fc95c5eaf",
+      "state": {
+        "lesson": "handoff",
+        "time": 440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 440,
+            "running": false,
+            "visible": true,
+            "frames": 25,
+            "native": null,
+            "sourceTime": 0.44,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 25
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 460.0,
+      "sha256": "75a2e74d50512e212c89afabc7a928fdff83ffa426dba6ece37f57bd905bd090",
+      "state": {
+        "lesson": "handoff",
+        "time": 460,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 460,
+            "running": false,
+            "visible": true,
+            "frames": 26,
+            "native": null,
+            "sourceTime": 0.46,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 26
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 480.0,
+      "sha256": "5ace392982755cce33a496225f8c31c5cbdeb47de32501f1dcb7bec68f51de0b",
+      "state": {
+        "lesson": "handoff",
+        "time": 480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 480,
+            "running": false,
+            "visible": true,
+            "frames": 27,
+            "native": null,
+            "sourceTime": 0.48,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 27
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 500.0,
+      "sha256": "17985362cca2f5146c47bf012bb66b49e8e0fb9ad3035b9c4eede32100d872aa",
+      "state": {
+        "lesson": "handoff",
+        "time": 500,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 500,
+            "running": false,
+            "visible": true,
+            "frames": 28,
+            "native": null,
+            "sourceTime": 0.5,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 28
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 520.0,
+      "sha256": "1fd84facb86d85662ada62a9c7cc8627620eb45bc5b4ea6e1f2f6245d459087f",
+      "state": {
+        "lesson": "handoff",
+        "time": 520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 520,
+            "running": false,
+            "visible": true,
+            "frames": 29,
+            "native": null,
+            "sourceTime": 0.52,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 29
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 540.0,
+      "sha256": "2f6a14d224152bfdde5a96c12d0a7456cb1044b57fe2026677ef78d095f3034e",
+      "state": {
+        "lesson": "handoff",
+        "time": 540,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 540,
+            "running": false,
+            "visible": true,
+            "frames": 30,
+            "native": null,
+            "sourceTime": 0.54,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 30
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 560.0,
+      "sha256": "8678b1cbfe10e16e1d4b124beb72879d6009af16961f19cdd9040d81fce9f1e3",
+      "state": {
+        "lesson": "handoff",
+        "time": 560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 560,
+            "running": false,
+            "visible": true,
+            "frames": 31,
+            "native": null,
+            "sourceTime": 0.56,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 31
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 580.0,
+      "sha256": "61066f3307193d623228899da5e12ea0081ad0453e1205cc6399b93a4b4f8270",
+      "state": {
+        "lesson": "handoff",
+        "time": 580,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 580,
+            "running": false,
+            "visible": true,
+            "frames": 32,
+            "native": null,
+            "sourceTime": 0.58,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 32
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 600.0,
+      "sha256": "3bcd420f7323ac8700a45e27c5bd92dd06532f6f4cfc532413da2fc10dff4500",
+      "state": {
+        "lesson": "handoff",
+        "time": 600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 600,
+            "running": false,
+            "visible": true,
+            "frames": 33,
+            "native": null,
+            "sourceTime": 0.6,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 33
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 620.0,
+      "sha256": "3bcd420f7323ac8700a45e27c5bd92dd06532f6f4cfc532413da2fc10dff4500",
+      "state": {
+        "lesson": "handoff",
+        "time": 620,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 620,
+            "running": false,
+            "visible": true,
+            "frames": 34,
+            "native": null,
+            "sourceTime": 0.62,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 34
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 640.0,
+      "sha256": "b8d34bfc59b8a38d6618233271751342ecc5291041ef1788df415a932e924cd2",
+      "state": {
+        "lesson": "handoff",
+        "time": 640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 640,
+            "running": false,
+            "visible": true,
+            "frames": 35,
+            "native": null,
+            "sourceTime": 0.64,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 35
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 660.0,
+      "sha256": "b8d34bfc59b8a38d6618233271751342ecc5291041ef1788df415a932e924cd2",
+      "state": {
+        "lesson": "handoff",
+        "time": 660,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 660,
+            "running": false,
+            "visible": true,
+            "frames": 36,
+            "native": null,
+            "sourceTime": 0.66,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 36
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 680.0,
+      "sha256": "b6d19943ebf6bbc6a4fd367cf6f04ba7db413138d4ec4863aa1e76378d1068a3",
+      "state": {
+        "lesson": "handoff",
+        "time": 680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 680,
+            "running": false,
+            "visible": true,
+            "frames": 37,
+            "native": null,
+            "sourceTime": 0.68,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 37
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 700.0,
+      "sha256": "ba5a1ba01e0306b47b17697eb18819bfc7d756a9bb518dbf30c424417ccd5098",
+      "state": {
+        "lesson": "handoff",
+        "time": 700,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 700,
+            "running": false,
+            "visible": true,
+            "frames": 38,
+            "native": null,
+            "sourceTime": 0.7,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 38
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 720.0,
+      "sha256": "ba5a1ba01e0306b47b17697eb18819bfc7d756a9bb518dbf30c424417ccd5098",
+      "state": {
+        "lesson": "handoff",
+        "time": 720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 720,
+            "running": false,
+            "visible": true,
+            "frames": 39,
+            "native": null,
+            "sourceTime": 0.72,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 39
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 740.0,
+      "sha256": "84fc6b1ce5d8049ce879562e5ec7f8f34c5af9d6773cab8a56c53a302249fffe",
+      "state": {
+        "lesson": "handoff",
+        "time": 740,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 740,
+            "running": false,
+            "visible": true,
+            "frames": 40,
+            "native": null,
+            "sourceTime": 0.74,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 40
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 760.0,
+      "sha256": "84fc6b1ce5d8049ce879562e5ec7f8f34c5af9d6773cab8a56c53a302249fffe",
+      "state": {
+        "lesson": "handoff",
+        "time": 760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 760,
+            "running": false,
+            "visible": true,
+            "frames": 41,
+            "native": null,
+            "sourceTime": 0.76,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 41
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 780.0,
+      "sha256": "f681bc4aa3b45e41bd22368af24124b30674a4f774ab639154ced885b3173e08",
+      "state": {
+        "lesson": "handoff",
+        "time": 780,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 780,
+            "running": false,
+            "visible": true,
+            "frames": 42,
+            "native": null,
+            "sourceTime": 0.78,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 42
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 800.0,
+      "sha256": "c1a59db6e60ced5ef33c89db6943278fbb2a81744e6449b45c0ec888e231574e",
+      "state": {
+        "lesson": "handoff",
+        "time": 800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 800,
+            "running": false,
+            "visible": true,
+            "frames": 43,
+            "native": null,
+            "sourceTime": 0.8,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 43
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 820.0,
+      "sha256": "c1a59db6e60ced5ef33c89db6943278fbb2a81744e6449b45c0ec888e231574e",
+      "state": {
+        "lesson": "handoff",
+        "time": 820,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 820,
+            "running": false,
+            "visible": true,
+            "frames": 44,
+            "native": null,
+            "sourceTime": 0.82,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 44
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 840.0,
+      "sha256": "9cbadb824580851824bd563691c8f194591943fe7e7321d3dd0c00753c3d3fad",
+      "state": {
+        "lesson": "handoff",
+        "time": 840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 840,
+            "running": false,
+            "visible": true,
+            "frames": 45,
+            "native": null,
+            "sourceTime": 0.84,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 45
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 860.0,
+      "sha256": "9cbadb824580851824bd563691c8f194591943fe7e7321d3dd0c00753c3d3fad",
+      "state": {
+        "lesson": "handoff",
+        "time": 860,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 860,
+            "running": false,
+            "visible": true,
+            "frames": 46,
+            "native": null,
+            "sourceTime": 0.86,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 46
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 880.0,
+      "sha256": "8f3544babbbe9d818915b4403c0dfff0f7ebaea634bf637d0fa6d316d32fc9b3",
+      "state": {
+        "lesson": "handoff",
+        "time": 880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 880,
+            "running": false,
+            "visible": true,
+            "frames": 47,
+            "native": null,
+            "sourceTime": 0.88,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 47
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 900.0,
+      "sha256": "4d23721fe3e97dbee8119d4e5412baa903abaef6e391075f9f3d039620992104",
+      "state": {
+        "lesson": "handoff",
+        "time": 900,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 900,
+            "running": false,
+            "visible": true,
+            "frames": 48,
+            "native": null,
+            "sourceTime": 0.9,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 48
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 920.0,
+      "sha256": "4d23721fe3e97dbee8119d4e5412baa903abaef6e391075f9f3d039620992104",
+      "state": {
+        "lesson": "handoff",
+        "time": 920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 920,
+            "running": false,
+            "visible": true,
+            "frames": 49,
+            "native": null,
+            "sourceTime": 0.92,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 49
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 940.0,
+      "sha256": "f60a258698be88649894c818d1addaece9d4b9c73717f6208fef61176905b89e",
+      "state": {
+        "lesson": "handoff",
+        "time": 940,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 940,
+            "running": false,
+            "visible": true,
+            "frames": 50,
+            "native": null,
+            "sourceTime": 0.94,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 50
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 960.0,
+      "sha256": "f60a258698be88649894c818d1addaece9d4b9c73717f6208fef61176905b89e",
+      "state": {
+        "lesson": "handoff",
+        "time": 960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 960,
+            "running": false,
+            "visible": true,
+            "frames": 51,
+            "native": null,
+            "sourceTime": 0.96,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 51
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 980.0,
+      "sha256": "c33f4c7ab5c894752d36893b6bc11901b7c8cac398a7f9a7a5f912c94b7ef45c",
+      "state": {
+        "lesson": "handoff",
+        "time": 980,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 980,
+            "running": false,
+            "visible": true,
+            "frames": 52,
+            "native": null,
+            "sourceTime": 0.98,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 52
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1000.0,
+      "sha256": "8365b1a5516983d6e51b641f3be4106af2235b58e68064ce091bc755a3945cb2",
+      "state": {
+        "lesson": "handoff",
+        "time": 1000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1000,
+            "running": false,
+            "visible": true,
+            "frames": 53,
+            "native": null,
+            "sourceTime": 1,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 53
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1020.0,
+      "sha256": "54ff1157c243b0d547b6ce0a9a44a9ae340e1777a11d5711898893a286c32702",
+      "state": {
+        "lesson": "handoff",
+        "time": 1020,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1020,
+            "running": false,
+            "visible": true,
+            "frames": 54,
+            "native": null,
+            "sourceTime": 1.02,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 54
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1040.0,
+      "sha256": "6abee9751f2e73688bca5785184db30b9acc064f725a1b4d8acbf5d60393e5ac",
+      "state": {
+        "lesson": "handoff",
+        "time": 1040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1040,
+            "running": false,
+            "visible": true,
+            "frames": 55,
+            "native": null,
+            "sourceTime": 1.04,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 55
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1060.0,
+      "sha256": "ebd3000e78919a05cf3aedfc5162f15758b3f9c1dbd10349eca988e970890411",
+      "state": {
+        "lesson": "handoff",
+        "time": 1060,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1060,
+            "running": false,
+            "visible": true,
+            "frames": 56,
+            "native": null,
+            "sourceTime": 1.06,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 56
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1080.0,
+      "sha256": "f58a1e90e7fad294f7dfe75a73d3823f7855557960022004c3e5a4cdc60d18c7",
+      "state": {
+        "lesson": "handoff",
+        "time": 1080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1080,
+            "running": false,
+            "visible": true,
+            "frames": 57,
+            "native": null,
+            "sourceTime": 1.08,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 57
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1100.0,
+      "sha256": "79874b24a4f14b5be74f7b70f44657cb27450ff14a36fcd66121683ce075d8b0",
+      "state": {
+        "lesson": "handoff",
+        "time": 1100,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1100,
+            "running": false,
+            "visible": true,
+            "frames": 58,
+            "native": null,
+            "sourceTime": 1.1,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 58
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1120.0,
+      "sha256": "1167b4b7ccd5753309f925cae12733fbca85bfbd794d9b9a31348c5bd21795e0",
+      "state": {
+        "lesson": "handoff",
+        "time": 1120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1120,
+            "running": false,
+            "visible": true,
+            "frames": 59,
+            "native": null,
+            "sourceTime": 1.12,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 59
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1140.0,
+      "sha256": "d305d809893256015fab0c5ed870fa7056ffb56e629893edd831263c69ecd660",
+      "state": {
+        "lesson": "handoff",
+        "time": 1140,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1140,
+            "running": false,
+            "visible": true,
+            "frames": 60,
+            "native": null,
+            "sourceTime": 1.14,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 60
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1160.0,
+      "sha256": "e050cb33e21382bd7971f888a4171fdacd64b37dc363024ce884dc5a5bb1e281",
+      "state": {
+        "lesson": "handoff",
+        "time": 1160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1160,
+            "running": false,
+            "visible": true,
+            "frames": 61,
+            "native": null,
+            "sourceTime": 1.16,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 61
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1180.0,
+      "sha256": "87201c7c78f9adf00f62460521443bfcde26dd7e4e8557c19bc828d7a27d3b89",
+      "state": {
+        "lesson": "handoff",
+        "time": 1180,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1180,
+            "running": false,
+            "visible": true,
+            "frames": 62,
+            "native": null,
+            "sourceTime": 1.18,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 62
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1200.0,
+      "sha256": "a87f93b8ba8344c3d27e20c6f575c9186f62182fdfcdb4dc094e0ff0bf9a951b",
+      "state": {
+        "lesson": "handoff",
+        "time": 1200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1200,
+            "running": false,
+            "visible": true,
+            "frames": 63,
+            "native": null,
+            "sourceTime": 1.2,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 63
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1220.0,
+      "sha256": "93f61bd3b1660be74bc34410f4dd69d568d79825fd2cbd780b5568ca0f3b3515",
+      "state": {
+        "lesson": "handoff",
+        "time": 1220,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1220,
+            "running": false,
+            "visible": true,
+            "frames": 64,
+            "native": null,
+            "sourceTime": 1.22,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 64
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1240.0,
+      "sha256": "d6de84820209394415829ad530f9d23055247e3403dbb47d5ed9ad5261ac5972",
+      "state": {
+        "lesson": "handoff",
+        "time": 1240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1240,
+            "running": false,
+            "visible": true,
+            "frames": 65,
+            "native": null,
+            "sourceTime": 1.24,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 65
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1260.0,
+      "sha256": "6eaaacfd188bc1f751d5839846df007a5820e24895d7b40afcea1ca782bc1980",
+      "state": {
+        "lesson": "handoff",
+        "time": 1260,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1260,
+            "running": false,
+            "visible": true,
+            "frames": 66,
+            "native": null,
+            "sourceTime": 1.26,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 66
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1280.0,
+      "sha256": "aec62cafeecc29ab882495cc2316bd96f1a0a49180827d2824114ae1f163fea2",
+      "state": {
+        "lesson": "handoff",
+        "time": 1280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1280,
+            "running": false,
+            "visible": true,
+            "frames": 67,
+            "native": null,
+            "sourceTime": 1.28,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 67
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1300.0,
+      "sha256": "d2cad578ff1d57faf693ec4fb592c3f63bcdde44ce6e25217f60f9c4e4bd01f2",
+      "state": {
+        "lesson": "handoff",
+        "time": 1300,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1300,
+            "running": false,
+            "visible": true,
+            "frames": 68,
+            "native": null,
+            "sourceTime": 1.3,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 68
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1320.0,
+      "sha256": "d204ede4e646e07eb40c4dcdc44751488b9284615ff8212c8bbc3cc65396af35",
+      "state": {
+        "lesson": "handoff",
+        "time": 1320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1320,
+            "running": false,
+            "visible": true,
+            "frames": 69,
+            "native": null,
+            "sourceTime": 1.32,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 69
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1340.0,
+      "sha256": "f693f7ec29a9677d5bff59fb287a3ebca471bc04ee04b2db09a0d517ecee95b0",
+      "state": {
+        "lesson": "handoff",
+        "time": 1340,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1340,
+            "running": false,
+            "visible": true,
+            "frames": 70,
+            "native": null,
+            "sourceTime": 1.34,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 70
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1360.0,
+      "sha256": "4b713341fd9dbf4fc7a416c77a1429bb42e8967259b8c3807a6696a378a97492",
+      "state": {
+        "lesson": "handoff",
+        "time": 1360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1360,
+            "running": false,
+            "visible": true,
+            "frames": 71,
+            "native": null,
+            "sourceTime": 1.36,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 71
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1380.0,
+      "sha256": "b52f807970bc68b322e2f3a3757760b6505cfca10219bcdf60790bc356a3790c",
+      "state": {
+        "lesson": "handoff",
+        "time": 1380,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1380,
+            "running": false,
+            "visible": true,
+            "frames": 72,
+            "native": null,
+            "sourceTime": 1.38,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 72
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1400.0,
+      "sha256": "588c6fbb68fe6d5562fa82fd88168c65f2c01537fa027ad692e24ce00679fb00",
+      "state": {
+        "lesson": "handoff",
+        "time": 1400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1400,
+            "running": false,
+            "visible": true,
+            "frames": 73,
+            "native": null,
+            "sourceTime": 1.4,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 73
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1420.0,
+      "sha256": "a3289bda0e9f29493092f5d5550ef3a55d21f05e2d6bf9172f2afb8295e36550",
+      "state": {
+        "lesson": "handoff",
+        "time": 1420,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1420,
+            "running": false,
+            "visible": true,
+            "frames": 74,
+            "native": null,
+            "sourceTime": 1.42,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 74
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1440.0,
+      "sha256": "56b58e3ac85af937e999ba5d479418962859f83c4af319cfcce2b709960a10d2",
+      "state": {
+        "lesson": "handoff",
+        "time": 1440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1440,
+            "running": false,
+            "visible": true,
+            "frames": 75,
+            "native": null,
+            "sourceTime": 1.44,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 75
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1460.0,
+      "sha256": "37440190571ffe42333574451d21b6461475424f6cd26cc9f317ed761b58f6ce",
+      "state": {
+        "lesson": "handoff",
+        "time": 1460,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1460,
+            "running": false,
+            "visible": true,
+            "frames": 76,
+            "native": null,
+            "sourceTime": 1.46,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 76
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1480.0,
+      "sha256": "3ad9c04cdabc5fe706220b401bc21f11489453a82ec6fdf365e969fbeb748afa",
+      "state": {
+        "lesson": "handoff",
+        "time": 1480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1480,
+            "running": false,
+            "visible": true,
+            "frames": 77,
+            "native": null,
+            "sourceTime": 1.48,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 77
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1500.0,
+      "sha256": "fb63276950004b510eaa7977bc6e8a3f0c6f607e3602d940263828f1b831655e",
+      "state": {
+        "lesson": "handoff",
+        "time": 1500,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1500,
+            "running": false,
+            "visible": true,
+            "frames": 78,
+            "native": null,
+            "sourceTime": 1.5,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 78
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1520.0,
+      "sha256": "f5bc5d4debf9e6573412937494658ab84d31a80f4ec1fc512a485e80dfce823b",
+      "state": {
+        "lesson": "handoff",
+        "time": 1520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1520,
+            "running": false,
+            "visible": true,
+            "frames": 79,
+            "native": null,
+            "sourceTime": 1.52,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 79
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1540.0,
+      "sha256": "5476fe4a1f2cfdcecaa26fcf2eb9b390cb86ecaa0f13e84b9fd01d276ea89a36",
+      "state": {
+        "lesson": "handoff",
+        "time": 1540,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1540,
+            "running": false,
+            "visible": true,
+            "frames": 80,
+            "native": null,
+            "sourceTime": 1.54,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 80
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1560.0,
+      "sha256": "732f7763a7ba5834f4187044c409c6b8e901bbc59314e8390988a738907d3020",
+      "state": {
+        "lesson": "handoff",
+        "time": 1560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1560,
+            "running": false,
+            "visible": true,
+            "frames": 81,
+            "native": null,
+            "sourceTime": 1.56,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 81
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1580.0,
+      "sha256": "6d3c273f2192e421bca479c7fbc8cc3d5c850c5a442fa907c7210f0482a72a36",
+      "state": {
+        "lesson": "handoff",
+        "time": 1580,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1580,
+            "running": false,
+            "visible": true,
+            "frames": 82,
+            "native": null,
+            "sourceTime": 1.58,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 82
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1600.0,
+      "sha256": "a6d2029ffe16347b2ca28f08fdfd724a22e522d7f95b4324cf1b7e692c8243bc",
+      "state": {
+        "lesson": "handoff",
+        "time": 1600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1600,
+            "running": false,
+            "visible": true,
+            "frames": 83,
+            "native": null,
+            "sourceTime": 1.6,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 83
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1620.0,
+      "sha256": "a6d2029ffe16347b2ca28f08fdfd724a22e522d7f95b4324cf1b7e692c8243bc",
+      "state": {
+        "lesson": "handoff",
+        "time": 1620,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1620,
+            "running": false,
+            "visible": true,
+            "frames": 84,
+            "native": null,
+            "sourceTime": 1.62,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 84
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1640.0,
+      "sha256": "6d731998f028da96158d7398196f64c8f6b7656f4df8bd4c3d236ebad45eb48f",
+      "state": {
+        "lesson": "handoff",
+        "time": 1640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1640,
+            "running": false,
+            "visible": true,
+            "frames": 85,
+            "native": null,
+            "sourceTime": 1.64,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 85
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1660.0,
+      "sha256": "4d6915727aadbb4ed04c9c79cf173d55268babd97fa60e9353244126295417ac",
+      "state": {
+        "lesson": "handoff",
+        "time": 1660,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1660,
+            "running": false,
+            "visible": true,
+            "frames": 86,
+            "native": null,
+            "sourceTime": 1.66,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 86
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1680.0,
+      "sha256": "e67165dd06192bc546f42e66c0d5fe15af3a0183ebf544c695359b57fbeac374",
+      "state": {
+        "lesson": "handoff",
+        "time": 1680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1680,
+            "running": false,
+            "visible": true,
+            "frames": 87,
+            "native": null,
+            "sourceTime": 1.68,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 87
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1700.0,
+      "sha256": "01eedd13037f01548be17ecc571c4452dd48347aceba13a631fddd8c258fd378",
+      "state": {
+        "lesson": "handoff",
+        "time": 1700,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1700,
+            "running": false,
+            "visible": true,
+            "frames": 88,
+            "native": null,
+            "sourceTime": 1.7,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 88
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1720.0,
+      "sha256": "2cc9e73935f300b09b89abe8e10d0990204e3af0db1fcf62ded183796f344ca7",
+      "state": {
+        "lesson": "handoff",
+        "time": 1720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1720,
+            "running": false,
+            "visible": true,
+            "frames": 89,
+            "native": null,
+            "sourceTime": 1.72,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 89
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1740.0,
+      "sha256": "16523048f6070541e44853f3a9246765b3912505541d17f9106cf3c8b762579a",
+      "state": {
+        "lesson": "handoff",
+        "time": 1740,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1740,
+            "running": false,
+            "visible": true,
+            "frames": 90,
+            "native": null,
+            "sourceTime": 1.74,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 90
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1760.0,
+      "sha256": "d16633544c8bd5d2723d237f9e26334b58e7f778514b491a0bde1ef5f1eb93a6",
+      "state": {
+        "lesson": "handoff",
+        "time": 1760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1760,
+            "running": false,
+            "visible": true,
+            "frames": 91,
+            "native": null,
+            "sourceTime": 1.76,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 91
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1780.0,
+      "sha256": "6c0be7a7f2fe639a9ea087c2158eac6fe7377e01ee6cf959c07df85df652cbc9",
+      "state": {
+        "lesson": "handoff",
+        "time": 1780,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1780,
+            "running": false,
+            "visible": true,
+            "frames": 92,
+            "native": null,
+            "sourceTime": 1.78,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 92
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1800.0,
+      "sha256": "cab61bd36786b1bcb1fb594ab40a088eb14cf74f65e28d8e1372914b14bb68de",
+      "state": {
+        "lesson": "handoff",
+        "time": 1800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1800,
+            "running": false,
+            "visible": true,
+            "frames": 93,
+            "native": null,
+            "sourceTime": 1.8,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 93
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1820.0,
+      "sha256": "6d2376e49204b749039a04f3cb82e4bc443d8e3a8d0994f413630658152f272e",
+      "state": {
+        "lesson": "handoff",
+        "time": 1820,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1820,
+            "running": false,
+            "visible": true,
+            "frames": 94,
+            "native": null,
+            "sourceTime": 1.82,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 94
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1840.0,
+      "sha256": "2dcb42b3a983b4c559c61efd2fc5332e9eab76748951fc6e45c1494c0f709710",
+      "state": {
+        "lesson": "handoff",
+        "time": 1840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1840,
+            "running": false,
+            "visible": true,
+            "frames": 95,
+            "native": null,
+            "sourceTime": 1.84,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 95
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1860.0,
+      "sha256": "81d6ff16baa228acf9bf3e8d3bad5f6a71c2a1233cae6e28e7fb7dac12246f2e",
+      "state": {
+        "lesson": "handoff",
+        "time": 1860,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1860,
+            "running": false,
+            "visible": true,
+            "frames": 96,
+            "native": null,
+            "sourceTime": 1.86,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 96
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1880.0,
+      "sha256": "91260611e67a0f0d8a9f5ea9a4629ffe0c84d197757c77441169dab2ab29b267",
+      "state": {
+        "lesson": "handoff",
+        "time": 1880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1880,
+            "running": false,
+            "visible": true,
+            "frames": 97,
+            "native": null,
+            "sourceTime": 1.88,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 97
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1900.0,
+      "sha256": "3ed7ea0c99a230a5c2d6ab27457cf89c86d389aebba87ea25966dfa4a718c64a",
+      "state": {
+        "lesson": "handoff",
+        "time": 1900,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1900,
+            "running": false,
+            "visible": true,
+            "frames": 98,
+            "native": null,
+            "sourceTime": 1.9,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 98
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1920.0,
+      "sha256": "4fb59dfb116499c08e6c07724428a08a0b6fc1c303a645cd2c8fd84abef862da",
+      "state": {
+        "lesson": "handoff",
+        "time": 1920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1920,
+            "running": false,
+            "visible": true,
+            "frames": 99,
+            "native": null,
+            "sourceTime": 1.92,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 99
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1940.0,
+      "sha256": "55e881a64b64a41c4d17e693b37d3600990417582690f9e8c27e3c08c290bae4",
+      "state": {
+        "lesson": "handoff",
+        "time": 1940,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1940,
+            "running": false,
+            "visible": true,
+            "frames": 100,
+            "native": null,
+            "sourceTime": 1.94,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 100
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1960.0,
+      "sha256": "5d788e0baba08c2ce0feffdfbdf8c2b53109ad4cc3e5996e9d9729c8c4afccec",
+      "state": {
+        "lesson": "handoff",
+        "time": 1960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1960,
+            "running": false,
+            "visible": true,
+            "frames": 101,
+            "native": null,
+            "sourceTime": 1.96,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 101
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1980.0,
+      "sha256": "2feffa98e085f1630757dbafb040971f0ecac2661d80392f2fb01ac4ef7ecf67",
+      "state": {
+        "lesson": "handoff",
+        "time": 1980,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 1980,
+            "running": false,
+            "visible": true,
+            "frames": 102,
+            "native": null,
+            "sourceTime": 1.98,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 102
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2000.0,
+      "sha256": "53aa87b8f952f32bb783b24ead957b6d9c5283b31a00616c2afb019d99db9f1d",
+      "state": {
+        "lesson": "handoff",
+        "time": 2000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2000,
+            "running": false,
+            "visible": true,
+            "frames": 103,
+            "native": null,
+            "sourceTime": 2,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 103
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2020.0,
+      "sha256": "a59580c43d77529a31e3e9abddbde1161bc672371b9d09be7586d3914df03d91",
+      "state": {
+        "lesson": "handoff",
+        "time": 2020,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2020,
+            "running": false,
+            "visible": true,
+            "frames": 104,
+            "native": null,
+            "sourceTime": 2.02,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 104
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2040.0,
+      "sha256": "ce1cb282ffc449ea7ec18b6b452c74ec80cd8172c4d3c44fb20b034c7d4b23fe",
+      "state": {
+        "lesson": "handoff",
+        "time": 2040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2040,
+            "running": false,
+            "visible": true,
+            "frames": 105,
+            "native": null,
+            "sourceTime": 2.04,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 105
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2060.0,
+      "sha256": "c963b033a88d4270ff13cdafaec680098e70abe672843d479ea2c7fae857133b",
+      "state": {
+        "lesson": "handoff",
+        "time": 2060,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2060,
+            "running": false,
+            "visible": true,
+            "frames": 106,
+            "native": null,
+            "sourceTime": 2.06,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 106
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2080.0,
+      "sha256": "80a5578458bb125666dc407608bca9a67ab04af6932010c6b8fd53fa8e1e8033",
+      "state": {
+        "lesson": "handoff",
+        "time": 2080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2080,
+            "running": false,
+            "visible": true,
+            "frames": 107,
+            "native": null,
+            "sourceTime": 2.08,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 107
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2100.0,
+      "sha256": "bb8d34017215ff92e3baffba0c11468e19b40137ff5519a4ca363127f0c42ed4",
+      "state": {
+        "lesson": "handoff",
+        "time": 2100,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2100,
+            "running": false,
+            "visible": true,
+            "frames": 108,
+            "native": null,
+            "sourceTime": 2.1,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 108
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2120.0,
+      "sha256": "bb8d34017215ff92e3baffba0c11468e19b40137ff5519a4ca363127f0c42ed4",
+      "state": {
+        "lesson": "handoff",
+        "time": 2120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2120,
+            "running": false,
+            "visible": true,
+            "frames": 109,
+            "native": null,
+            "sourceTime": 2.12,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 109
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2140.0,
+      "sha256": "1c5b87e5da42d477561a0512949c923c31a671efcc8691ddcf64a8cfc77c1384",
+      "state": {
+        "lesson": "handoff",
+        "time": 2140,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2140,
+            "running": false,
+            "visible": true,
+            "frames": 110,
+            "native": null,
+            "sourceTime": 2.14,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 110
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2160.0,
+      "sha256": "1c5b87e5da42d477561a0512949c923c31a671efcc8691ddcf64a8cfc77c1384",
+      "state": {
+        "lesson": "handoff",
+        "time": 2160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2160,
+            "running": false,
+            "visible": true,
+            "frames": 111,
+            "native": null,
+            "sourceTime": 2.16,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 111
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2180.0,
+      "sha256": "ad8ed127a098948598cf31bd584ab93ec35e45613cd653455811faaf183595a7",
+      "state": {
+        "lesson": "handoff",
+        "time": 2180,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2180,
+            "running": false,
+            "visible": true,
+            "frames": 112,
+            "native": null,
+            "sourceTime": 2.18,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 112
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2200.0,
+      "sha256": "b442220c0516815575342ef5248282b675c335ad1fa42217bcefed2554b9f2c1",
+      "state": {
+        "lesson": "handoff",
+        "time": 2200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2200,
+            "running": false,
+            "visible": true,
+            "frames": 113,
+            "native": null,
+            "sourceTime": 2.2,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 113
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2220.0,
+      "sha256": "b442220c0516815575342ef5248282b675c335ad1fa42217bcefed2554b9f2c1",
+      "state": {
+        "lesson": "handoff",
+        "time": 2220,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2220,
+            "running": false,
+            "visible": true,
+            "frames": 114,
+            "native": null,
+            "sourceTime": 2.22,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 114
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2240.0,
+      "sha256": "1bea1416f40184f073ee311c26ac612a3375c36cfd9c3781fc27c58fc47ce48a",
+      "state": {
+        "lesson": "handoff",
+        "time": 2240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2240,
+            "running": false,
+            "visible": true,
+            "frames": 115,
+            "native": null,
+            "sourceTime": 2.24,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 115
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2260.0,
+      "sha256": "1bea1416f40184f073ee311c26ac612a3375c36cfd9c3781fc27c58fc47ce48a",
+      "state": {
+        "lesson": "handoff",
+        "time": 2260,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2260,
+            "running": false,
+            "visible": true,
+            "frames": 116,
+            "native": null,
+            "sourceTime": 2.26,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 116
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2280.0,
+      "sha256": "6ba6331364b7f78e4130b98a7afa102d3bdd448582134d36343e048ec04ca7b7",
+      "state": {
+        "lesson": "handoff",
+        "time": 2280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2280,
+            "running": false,
+            "visible": true,
+            "frames": 117,
+            "native": null,
+            "sourceTime": 2.28,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 117
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2300.0,
+      "sha256": "868caf8b21b728f9caecf574d78c69708742eed23340d8909f7bebe630be0ccf",
+      "state": {
+        "lesson": "handoff",
+        "time": 2300,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2300,
+            "running": false,
+            "visible": true,
+            "frames": 118,
+            "native": null,
+            "sourceTime": 2.3,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 118
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2320.0,
+      "sha256": "868caf8b21b728f9caecf574d78c69708742eed23340d8909f7bebe630be0ccf",
+      "state": {
+        "lesson": "handoff",
+        "time": 2320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2320,
+            "running": false,
+            "visible": true,
+            "frames": 119,
+            "native": null,
+            "sourceTime": 2.32,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 119
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2340.0,
+      "sha256": "bb7005dde3f4e99f717eb8ee10a01f3cea7938d2a331732ceb2c1c4cb408f374",
+      "state": {
+        "lesson": "handoff",
+        "time": 2340,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2340,
+            "running": false,
+            "visible": true,
+            "frames": 120,
+            "native": null,
+            "sourceTime": 2.34,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 120
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2360.0,
+      "sha256": "bb7005dde3f4e99f717eb8ee10a01f3cea7938d2a331732ceb2c1c4cb408f374",
+      "state": {
+        "lesson": "handoff",
+        "time": 2360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2360,
+            "running": false,
+            "visible": true,
+            "frames": 121,
+            "native": null,
+            "sourceTime": 2.36,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 121
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2380.0,
+      "sha256": "f3665d7d144947d5fad372f16b269ea4f7d3fd2b4981c0a756f0ad912a5ff3ae",
+      "state": {
+        "lesson": "handoff",
+        "time": 2380,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2380,
+            "running": false,
+            "visible": true,
+            "frames": 122,
+            "native": null,
+            "sourceTime": 2.38,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 122
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2400.0,
+      "sha256": "e22a98912bd8d795ca787b5606ad494038bee3cafbe5c1b9c868a19dbf5d761f",
+      "state": {
+        "lesson": "handoff",
+        "time": 2400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2400,
+            "running": false,
+            "visible": true,
+            "frames": 123,
+            "native": null,
+            "sourceTime": 2.4,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 123
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2420.0,
+      "sha256": "e22a98912bd8d795ca787b5606ad494038bee3cafbe5c1b9c868a19dbf5d761f",
+      "state": {
+        "lesson": "handoff",
+        "time": 2420,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2420,
+            "running": false,
+            "visible": true,
+            "frames": 124,
+            "native": null,
+            "sourceTime": 2.42,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 124
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2440.0,
+      "sha256": "9bea7c3102dcf2f7e80a987d9e1d8844e60160422fe01dd364ab839b6e4dc8e4",
+      "state": {
+        "lesson": "handoff",
+        "time": 2440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2440,
+            "running": false,
+            "visible": true,
+            "frames": 125,
+            "native": null,
+            "sourceTime": 2.44,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 125
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2460.0,
+      "sha256": "9bea7c3102dcf2f7e80a987d9e1d8844e60160422fe01dd364ab839b6e4dc8e4",
+      "state": {
+        "lesson": "handoff",
+        "time": 2460,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2460,
+            "running": false,
+            "visible": true,
+            "frames": 126,
+            "native": null,
+            "sourceTime": 2.46,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 126
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2480.0,
+      "sha256": "043e86fb03cb5530cfd8435b3b1ef004ee28ed286718de20cd837fff2d5b25f3",
+      "state": {
+        "lesson": "handoff",
+        "time": 2480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2480,
+            "running": false,
+            "visible": true,
+            "frames": 127,
+            "native": null,
+            "sourceTime": 2.48,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 127
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2500.0,
+      "sha256": "63e35ea2d96fd10c635ce4cc61e8fb33e2b28bfa31d85798d37fbc050b54191d",
+      "state": {
+        "lesson": "handoff",
+        "time": 2500,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2500,
+            "running": false,
+            "visible": true,
+            "frames": 128,
+            "native": null,
+            "sourceTime": 2.5,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 128
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2520.0,
+      "sha256": "63e35ea2d96fd10c635ce4cc61e8fb33e2b28bfa31d85798d37fbc050b54191d",
+      "state": {
+        "lesson": "handoff",
+        "time": 2520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2520,
+            "running": false,
+            "visible": true,
+            "frames": 129,
+            "native": null,
+            "sourceTime": 2.52,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 129
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2540.0,
+      "sha256": "d726f807057cdca85abf4719fd348aae3b8b848fc6cd28c391bd1dc1cb9e7552",
+      "state": {
+        "lesson": "handoff",
+        "time": 2540,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2540,
+            "running": false,
+            "visible": true,
+            "frames": 130,
+            "native": null,
+            "sourceTime": 2.54,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 130
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2560.0,
+      "sha256": "5bf59009150aedb2ca241e41ff3c99c3a752ef044b3310e505e2ccea8c4e12e3",
+      "state": {
+        "lesson": "handoff",
+        "time": 2560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2560,
+            "running": false,
+            "visible": true,
+            "frames": 131,
+            "native": null,
+            "sourceTime": 2.56,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 131
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2580.0,
+      "sha256": "65fd460c63dbc23e035c09aa23ced32b8190ee9859169abef410653f58814cca",
+      "state": {
+        "lesson": "handoff",
+        "time": 2580,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2580,
+            "running": false,
+            "visible": true,
+            "frames": 132,
+            "native": null,
+            "sourceTime": 2.58,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 132
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2600.0,
+      "sha256": "7d16dd17bcff5899892a8b3c4b2a1dc50dd25da5e288dc17dc4927d325f57876",
+      "state": {
+        "lesson": "handoff",
+        "time": 2600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2600,
+            "running": false,
+            "visible": true,
+            "frames": 133,
+            "native": null,
+            "sourceTime": 2.6,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 133
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2620.0,
+      "sha256": "d9aae55e3ef611ee89fd84397c7f38e24f72c7cdabc9774dccae064bb6a16e56",
+      "state": {
+        "lesson": "handoff",
+        "time": 2620,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2620,
+            "running": false,
+            "visible": true,
+            "frames": 134,
+            "native": null,
+            "sourceTime": 2.62,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 134
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2640.0,
+      "sha256": "758a1789431b9282b4b773746d56ef9dec86667f5c5d3d04df9f987174cc481c",
+      "state": {
+        "lesson": "handoff",
+        "time": 2640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2640,
+            "running": false,
+            "visible": true,
+            "frames": 135,
+            "native": null,
+            "sourceTime": 2.64,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 135
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2660.0,
+      "sha256": "2a948869132127790163a5ee64c3ec5f449cb2cc7c918525ad7257268d16209d",
+      "state": {
+        "lesson": "handoff",
+        "time": 2660,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2660,
+            "running": false,
+            "visible": true,
+            "frames": 136,
+            "native": null,
+            "sourceTime": 2.66,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 136
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2680.0,
+      "sha256": "dd987c3150f5db2c968690c6344743ad008a23580c0d8642a8e03390e6b6a4f6",
+      "state": {
+        "lesson": "handoff",
+        "time": 2680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2680,
+            "running": false,
+            "visible": true,
+            "frames": 137,
+            "native": null,
+            "sourceTime": 2.68,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 137
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2700.0,
+      "sha256": "8e1a5ed704333f84664e1bf8224c84cffe2582073e71e4a9878b1a27e0c32464",
+      "state": {
+        "lesson": "handoff",
+        "time": 2700,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2700,
+            "running": false,
+            "visible": true,
+            "frames": 138,
+            "native": null,
+            "sourceTime": 2.7,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 138
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2720.0,
+      "sha256": "8788dc6fd04582f537e0ea0d5b60b7f63f9289c85e0e9b41443529ce7098c894",
+      "state": {
+        "lesson": "handoff",
+        "time": 2720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2720,
+            "running": false,
+            "visible": true,
+            "frames": 139,
+            "native": null,
+            "sourceTime": 2.72,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 139
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2740.0,
+      "sha256": "f108c139f6adb7f35c65480e9b248425d1ca0bcad2de3ba05a69491a7ee414d2",
+      "state": {
+        "lesson": "handoff",
+        "time": 2740,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2740,
+            "running": false,
+            "visible": true,
+            "frames": 140,
+            "native": null,
+            "sourceTime": 2.74,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 140
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2760.0,
+      "sha256": "ee72bb4cd071bd353ed60837deb2f6442913b3e4aa5961e44c410ccf284a5cc3",
+      "state": {
+        "lesson": "handoff",
+        "time": 2760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2760,
+            "running": false,
+            "visible": true,
+            "frames": 141,
+            "native": null,
+            "sourceTime": 2.76,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 141
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2780.0,
+      "sha256": "df41b1a7731f452d74e1d6e3b4e345b34ffcd72cac3376159232810a0f031a76",
+      "state": {
+        "lesson": "handoff",
+        "time": 2780,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2780,
+            "running": false,
+            "visible": true,
+            "frames": 142,
+            "native": null,
+            "sourceTime": 2.78,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 142
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2800.0,
+      "sha256": "7dab279f5820981b1101ee89e3640f3d96cccc3759da20e0b53c50c21384b09a",
+      "state": {
+        "lesson": "handoff",
+        "time": 2800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2800,
+            "running": false,
+            "visible": true,
+            "frames": 143,
+            "native": null,
+            "sourceTime": 2.8,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 143
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2820.0,
+      "sha256": "d980f847ecc017c475d03d7019e90cddd7a53b95cf1e4d2037b58e1f305c0956",
+      "state": {
+        "lesson": "handoff",
+        "time": 2820,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2820,
+            "running": false,
+            "visible": true,
+            "frames": 144,
+            "native": null,
+            "sourceTime": 2.82,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 144
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2840.0,
+      "sha256": "281589502de92e9f2bf96e2de3b46f48c5319c069b38b4ebb48232bd20f4c6d0",
+      "state": {
+        "lesson": "handoff",
+        "time": 2840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2840,
+            "running": false,
+            "visible": true,
+            "frames": 145,
+            "native": null,
+            "sourceTime": 2.84,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 145
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2860.0,
+      "sha256": "f6ec5d2b444712c1499c8dd346ec4cc80345578334b0acadb74595c91537abab",
+      "state": {
+        "lesson": "handoff",
+        "time": 2860,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2860,
+            "running": false,
+            "visible": true,
+            "frames": 146,
+            "native": null,
+            "sourceTime": 2.86,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 146
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2880.0,
+      "sha256": "2cf958403242d56ba85baa7175776db38a3dbd975e106427d6dbfc8fe415eb32",
+      "state": {
+        "lesson": "handoff",
+        "time": 2880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2880,
+            "running": false,
+            "visible": true,
+            "frames": 147,
+            "native": null,
+            "sourceTime": 2.88,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 147
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2900.0,
+      "sha256": "0599cec4fdd8b387171821b179d96d6025cec2e546c6ade26dc3a87c69076438",
+      "state": {
+        "lesson": "handoff",
+        "time": 2900,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2900,
+            "running": false,
+            "visible": true,
+            "frames": 148,
+            "native": null,
+            "sourceTime": 2.9,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 148
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2920.0,
+      "sha256": "0e5d1fa054e12af4567769f21fbe467d2c65389b9b52c4bb961cf0c9d62626e6",
+      "state": {
+        "lesson": "handoff",
+        "time": 2920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2920,
+            "running": false,
+            "visible": true,
+            "frames": 149,
+            "native": null,
+            "sourceTime": 2.92,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 149
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2940.0,
+      "sha256": "e1f7193555f42c5ee8798da0e335ea07e75f03371771eb467121fc49bf02969e",
+      "state": {
+        "lesson": "handoff",
+        "time": 2940,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2940,
+            "running": false,
+            "visible": true,
+            "frames": 150,
+            "native": null,
+            "sourceTime": 2.94,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 150
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2960.0,
+      "sha256": "82dfa988a591e31c3ed7f55d1c81732b511d61dd3627d98a063902931aee66ea",
+      "state": {
+        "lesson": "handoff",
+        "time": 2960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2960,
+            "running": false,
+            "visible": true,
+            "frames": 151,
+            "native": null,
+            "sourceTime": 2.96,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 151
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2980.0,
+      "sha256": "180b4a81bbb363be9142bd3eaef83b691ee494e21651e14ac620b858610663b4",
+      "state": {
+        "lesson": "handoff",
+        "time": 2980,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 2980,
+            "running": false,
+            "visible": true,
+            "frames": 152,
+            "native": null,
+            "sourceTime": 2.98,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 152
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3000.0,
+      "sha256": "1886cd5d962e6c25fd6c03ee4584b65ed77e3298fc5e51ec8466a8eb850766d9",
+      "state": {
+        "lesson": "handoff",
+        "time": 3000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3000,
+            "running": false,
+            "visible": true,
+            "frames": 153,
+            "native": null,
+            "sourceTime": 3,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 153
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3020.0,
+      "sha256": "72282635dd20713899b7d7b2cb633db9d06a42c53b06921410fc3c6bd1753559",
+      "state": {
+        "lesson": "handoff",
+        "time": 3020,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3020,
+            "running": false,
+            "visible": true,
+            "frames": 154,
+            "native": null,
+            "sourceTime": 3.02,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 154
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3040.0,
+      "sha256": "c8dadb82a80d28328a53fa991fa52b4d0df9f1dad0000a0a5920e928c4dfed70",
+      "state": {
+        "lesson": "handoff",
+        "time": 3040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3040,
+            "running": false,
+            "visible": true,
+            "frames": 155,
+            "native": null,
+            "sourceTime": 3.04,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 155
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3060.0,
+      "sha256": "8a5b8716215204c66c33f1fe3f3223b1dd94327cf244cca175ec6ffef5ff7378",
+      "state": {
+        "lesson": "handoff",
+        "time": 3060,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3060,
+            "running": false,
+            "visible": true,
+            "frames": 156,
+            "native": null,
+            "sourceTime": 3.06,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 156
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3080.0,
+      "sha256": "5264a9176c0c0cdd526a84b2ec3404efee4a65c33c13f7805ee7b8d22aa27e15",
+      "state": {
+        "lesson": "handoff",
+        "time": 3080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3080,
+            "running": false,
+            "visible": true,
+            "frames": 157,
+            "native": null,
+            "sourceTime": 3.08,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 157
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3100.0,
+      "sha256": "63414d83dfbb2679f0f2284baf3e3870dd65b298142d66bea236eaa241c09505",
+      "state": {
+        "lesson": "handoff",
+        "time": 3100,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3100,
+            "running": false,
+            "visible": true,
+            "frames": 158,
+            "native": null,
+            "sourceTime": 3.1,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 158
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3120.0,
+      "sha256": "76ec2a15e7720c507f438f0612ec0775de4abd26c0b90c383f8e15132f2416c0",
+      "state": {
+        "lesson": "handoff",
+        "time": 3120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3120,
+            "running": false,
+            "visible": true,
+            "frames": 159,
+            "native": null,
+            "sourceTime": 3.12,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 159
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3140.0,
+      "sha256": "476dccbb89fbc11a66a901b3565c8ca8dcc497966e46309abab77d015f50df44",
+      "state": {
+        "lesson": "handoff",
+        "time": 3140,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3140,
+            "running": false,
+            "visible": true,
+            "frames": 160,
+            "native": null,
+            "sourceTime": 3.14,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 160
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3160.0,
+      "sha256": "476dccbb89fbc11a66a901b3565c8ca8dcc497966e46309abab77d015f50df44",
+      "state": {
+        "lesson": "handoff",
+        "time": 3160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3160,
+            "running": false,
+            "visible": true,
+            "frames": 161,
+            "native": null,
+            "sourceTime": 3.16,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 161
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3180.0,
+      "sha256": "55edb9563eceaaa698e0257153a1515f2b781c622e93ffd9965e634eb0d0e782",
+      "state": {
+        "lesson": "handoff",
+        "time": 3180,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3180,
+            "running": false,
+            "visible": true,
+            "frames": 162,
+            "native": null,
+            "sourceTime": 3.18,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 162
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3200.0,
+      "sha256": "f20f1a4ee9d8628b6dacd1217de390158e6781b4b9df902488779b0423d511fd",
+      "state": {
+        "lesson": "handoff",
+        "time": 3200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3200,
+            "running": false,
+            "visible": true,
+            "frames": 163,
+            "native": null,
+            "sourceTime": 3.2,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 163
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3220.0,
+      "sha256": "f20f1a4ee9d8628b6dacd1217de390158e6781b4b9df902488779b0423d511fd",
+      "state": {
+        "lesson": "handoff",
+        "time": 3220,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3220,
+            "running": false,
+            "visible": true,
+            "frames": 164,
+            "native": null,
+            "sourceTime": 3.22,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 164
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3240.0,
+      "sha256": "98e241b249a68ae48f7cf58fb4f2f5da5906be67fe4bd42d5c90ec1e8a9c5c97",
+      "state": {
+        "lesson": "handoff",
+        "time": 3240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3240,
+            "running": false,
+            "visible": true,
+            "frames": 165,
+            "native": null,
+            "sourceTime": 3.24,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 165
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3260.0,
+      "sha256": "98e241b249a68ae48f7cf58fb4f2f5da5906be67fe4bd42d5c90ec1e8a9c5c97",
+      "state": {
+        "lesson": "handoff",
+        "time": 3260,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3260,
+            "running": false,
+            "visible": true,
+            "frames": 166,
+            "native": null,
+            "sourceTime": 3.26,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 166
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3280.0,
+      "sha256": "fc2786c08c314d8447f61bf912462a148aceaf19dc32d7cb91b94e45ad94303b",
+      "state": {
+        "lesson": "handoff",
+        "time": 3280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3280,
+            "running": false,
+            "visible": true,
+            "frames": 167,
+            "native": null,
+            "sourceTime": 3.28,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 167
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3300.0,
+      "sha256": "468b123f42260692d6d6ce3f258bbba6ab5ed22dbe80a3246062fd24a6c4b7d0",
+      "state": {
+        "lesson": "handoff",
+        "time": 3300,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3300,
+            "running": false,
+            "visible": true,
+            "frames": 168,
+            "native": null,
+            "sourceTime": 3.3,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 168
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3320.0,
+      "sha256": "468b123f42260692d6d6ce3f258bbba6ab5ed22dbe80a3246062fd24a6c4b7d0",
+      "state": {
+        "lesson": "handoff",
+        "time": 3320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3320,
+            "running": false,
+            "visible": true,
+            "frames": 169,
+            "native": null,
+            "sourceTime": 3.32,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 169
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3340.0,
+      "sha256": "fec54baea4cb4c3542ce003362891563bac2c7380867940c6081e93d11c16e8c",
+      "state": {
+        "lesson": "handoff",
+        "time": 3340,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3340,
+            "running": false,
+            "visible": true,
+            "frames": 170,
+            "native": null,
+            "sourceTime": 3.34,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 170
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3360.0,
+      "sha256": "fec54baea4cb4c3542ce003362891563bac2c7380867940c6081e93d11c16e8c",
+      "state": {
+        "lesson": "handoff",
+        "time": 3360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3360,
+            "running": false,
+            "visible": true,
+            "frames": 171,
+            "native": null,
+            "sourceTime": 3.36,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 171
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3380.0,
+      "sha256": "649602347c259ab78027fac2a86e2c2c19c1e7731331f9e9768098f1ce111665",
+      "state": {
+        "lesson": "handoff",
+        "time": 3380,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3380,
+            "running": false,
+            "visible": true,
+            "frames": 172,
+            "native": null,
+            "sourceTime": 3.38,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 172
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3400.0,
+      "sha256": "a89bf910468e88579097abc1c1a7b7ce71712293faf48a85bc82065ef5e8773f",
+      "state": {
+        "lesson": "handoff",
+        "time": 3400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3400,
+            "running": false,
+            "visible": true,
+            "frames": 173,
+            "native": null,
+            "sourceTime": 3.4,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 173
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3420.0,
+      "sha256": "a89bf910468e88579097abc1c1a7b7ce71712293faf48a85bc82065ef5e8773f",
+      "state": {
+        "lesson": "handoff",
+        "time": 3420,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3420,
+            "running": false,
+            "visible": true,
+            "frames": 174,
+            "native": null,
+            "sourceTime": 3.42,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 174
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3440.0,
+      "sha256": "1948baa591d6d41251c73c8d2049d316cf7fda611e85f73d90a7fdd85942e360",
+      "state": {
+        "lesson": "handoff",
+        "time": 3440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3440,
+            "running": false,
+            "visible": true,
+            "frames": 175,
+            "native": null,
+            "sourceTime": 3.44,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 175
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3460.0,
+      "sha256": "1948baa591d6d41251c73c8d2049d316cf7fda611e85f73d90a7fdd85942e360",
+      "state": {
+        "lesson": "handoff",
+        "time": 3460,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3460,
+            "running": false,
+            "visible": true,
+            "frames": 176,
+            "native": null,
+            "sourceTime": 3.46,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 176
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3480.0,
+      "sha256": "1948baa591d6d41251c73c8d2049d316cf7fda611e85f73d90a7fdd85942e360",
+      "state": {
+        "lesson": "handoff",
+        "time": 3480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3480,
+            "running": false,
+            "visible": true,
+            "frames": 177,
+            "native": null,
+            "sourceTime": 3.48,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 177
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3500.0,
+      "sha256": "df539be83d04a487b6aa4ee2fa97f5f08f178e06b751a77487c6c215e876e781",
+      "state": {
+        "lesson": "handoff",
+        "time": 3500,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3500,
+            "running": false,
+            "visible": true,
+            "frames": 178,
+            "native": null,
+            "sourceTime": 3.5,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 178
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3520.0,
+      "sha256": "df539be83d04a487b6aa4ee2fa97f5f08f178e06b751a77487c6c215e876e781",
+      "state": {
+        "lesson": "handoff",
+        "time": 3520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3520,
+            "running": false,
+            "visible": true,
+            "frames": 179,
+            "native": null,
+            "sourceTime": 3.52,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 179
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3540.0,
+      "sha256": "3320acac9f1091e42d68a77fff9b0d50587561b4a045087520a969ff8de79fbd",
+      "state": {
+        "lesson": "handoff",
+        "time": 3540,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3540,
+            "running": false,
+            "visible": true,
+            "frames": 180,
+            "native": null,
+            "sourceTime": 3.54,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 180
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3560.0,
+      "sha256": "7a1a798fbe8746793d72f1569d766dde79000e5954a3eb8d193d7aa1c018e5b3",
+      "state": {
+        "lesson": "handoff",
+        "time": 3560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3560,
+            "running": false,
+            "visible": true,
+            "frames": 181,
+            "native": null,
+            "sourceTime": 3.56,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 181
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3580.0,
+      "sha256": "365186f26d1e0af9379ff0d64f0f701a861c2e93f19441b70ff2f6e213e611d5",
+      "state": {
+        "lesson": "handoff",
+        "time": 3580,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3580,
+            "running": false,
+            "visible": true,
+            "frames": 182,
+            "native": null,
+            "sourceTime": 3.58,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 182
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3600.0,
+      "sha256": "f7e7aad85bd49de92e2ec9fc55954ff50b99ce695b82d0e1886c71db1d6392a0",
+      "state": {
+        "lesson": "handoff",
+        "time": 3600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3600,
+            "running": false,
+            "visible": true,
+            "frames": 183,
+            "native": null,
+            "sourceTime": 3.6,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 183
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3620.0,
+      "sha256": "590d011971a9e0d7e2578f8b98be7007b9e15975cf4236fef66fe9be1f07f3b7",
+      "state": {
+        "lesson": "handoff",
+        "time": 3620,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3620,
+            "running": false,
+            "visible": true,
+            "frames": 184,
+            "native": null,
+            "sourceTime": 3.62,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 184
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3640.0,
+      "sha256": "06fffa3c3e32bb318d005355552dde4303174097f5e1dca0e4a2319b6b9697d9",
+      "state": {
+        "lesson": "handoff",
+        "time": 3640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3640,
+            "running": false,
+            "visible": true,
+            "frames": 185,
+            "native": null,
+            "sourceTime": 3.64,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 185
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3660.0,
+      "sha256": "1f052d384ec8a1051b4b58826b3e681a907d80cd0aac4b88f5486dd33122cb7a",
+      "state": {
+        "lesson": "handoff",
+        "time": 3660,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3660,
+            "running": false,
+            "visible": true,
+            "frames": 186,
+            "native": null,
+            "sourceTime": 3.66,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 186
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3680.0,
+      "sha256": "2cca288837638078f377478d286bbdb96edea26a089a611680f45b23ce90f38a",
+      "state": {
+        "lesson": "handoff",
+        "time": 3680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3680,
+            "running": false,
+            "visible": true,
+            "frames": 187,
+            "native": null,
+            "sourceTime": 3.68,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 187
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3700.0,
+      "sha256": "847c3326b85085aa2eaca5fda807ba663d8dadad570f0580bfab2a5ad9ad0fa6",
+      "state": {
+        "lesson": "handoff",
+        "time": 3700,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3700,
+            "running": false,
+            "visible": true,
+            "frames": 188,
+            "native": null,
+            "sourceTime": 3.7,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 188
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3720.0,
+      "sha256": "37756125bfe27260dab090675bb37ab8359f5cf9b454e9ebb0e26a3211c4fd5e",
+      "state": {
+        "lesson": "handoff",
+        "time": 3720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3720,
+            "running": false,
+            "visible": true,
+            "frames": 189,
+            "native": null,
+            "sourceTime": 3.72,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 189
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3740.0,
+      "sha256": "6c6dd42f7c6c2941d4c9b261862d2c18b91d8eaa4b42d85d6ea98d32e4fd87e1",
+      "state": {
+        "lesson": "handoff",
+        "time": 3740,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3740,
+            "running": false,
+            "visible": true,
+            "frames": 190,
+            "native": null,
+            "sourceTime": 3.74,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 190
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3760.0,
+      "sha256": "a1308aec025e5440d569829674c48e941fec5862f23f74bde9893ab645043690",
+      "state": {
+        "lesson": "handoff",
+        "time": 3760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3760,
+            "running": false,
+            "visible": true,
+            "frames": 191,
+            "native": null,
+            "sourceTime": 3.76,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 191
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3780.0,
+      "sha256": "554ea6bd231e0339095c17ad1c04431cb50086f9766e7174336b2044eac7005b",
+      "state": {
+        "lesson": "handoff",
+        "time": 3780,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3780,
+            "running": false,
+            "visible": true,
+            "frames": 192,
+            "native": null,
+            "sourceTime": 3.78,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 192
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3800.0,
+      "sha256": "eb33bf085abf28271d59bbb8d96524ea170e318f74e2ffb643820e4eb5a5b2d2",
+      "state": {
+        "lesson": "handoff",
+        "time": 3800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3800,
+            "running": false,
+            "visible": true,
+            "frames": 193,
+            "native": null,
+            "sourceTime": 3.8,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 193
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3820.0,
+      "sha256": "7526b18cd56692ccffbda390435bd37c96b83cf5c0580a754650ca7a4b1bee79",
+      "state": {
+        "lesson": "handoff",
+        "time": 3820,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3820,
+            "running": false,
+            "visible": true,
+            "frames": 194,
+            "native": null,
+            "sourceTime": 3.82,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 194
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3840.0,
+      "sha256": "a701fa42470cb66b078f4a83abb4cee440b2a99ac2e80513515e15b1fc86ad63",
+      "state": {
+        "lesson": "handoff",
+        "time": 3840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3840,
+            "running": false,
+            "visible": true,
+            "frames": 195,
+            "native": null,
+            "sourceTime": 3.84,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 195
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3860.0,
+      "sha256": "bf006040706482829392fbf752639d2ab1c74247ee1cd4730cc6601f2af3374d",
+      "state": {
+        "lesson": "handoff",
+        "time": 3860,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3860,
+            "running": false,
+            "visible": true,
+            "frames": 196,
+            "native": null,
+            "sourceTime": 3.86,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 196
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3880.0,
+      "sha256": "3035c9d17457ed28307c6d2bf2c11898ff259cd93082cda4a4ccf12dc92f16a7",
+      "state": {
+        "lesson": "handoff",
+        "time": 3880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3880,
+            "running": false,
+            "visible": true,
+            "frames": 197,
+            "native": null,
+            "sourceTime": 3.88,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 197
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3900.0,
+      "sha256": "6c97d1de231ce0c31528373ae468b646b7bcc2c594f8cba961faed2fe30f4b0f",
+      "state": {
+        "lesson": "handoff",
+        "time": 3900,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3900,
+            "running": false,
+            "visible": true,
+            "frames": 198,
+            "native": null,
+            "sourceTime": 3.9,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 198
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3920.0,
+      "sha256": "a4c96b7965120cdd0516e0008e436a7be1c830df89482cc1dcd067215719dbeb",
+      "state": {
+        "lesson": "handoff",
+        "time": 3920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3920,
+            "running": false,
+            "visible": true,
+            "frames": 199,
+            "native": null,
+            "sourceTime": 3.92,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 199
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3940.0,
+      "sha256": "64cd3e0999a85cbba13f4eb3fc4ce8fb3fbd64e7c624dc1ddd09b0a17316df97",
+      "state": {
+        "lesson": "handoff",
+        "time": 3940,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3940,
+            "running": false,
+            "visible": true,
+            "frames": 200,
+            "native": null,
+            "sourceTime": 3.94,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 200
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3960.0,
+      "sha256": "81bbbb317ba85494c1ceee94877f830198089d1739339c64e2513d2781f2ed0b",
+      "state": {
+        "lesson": "handoff",
+        "time": 3960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3960,
+            "running": false,
+            "visible": true,
+            "frames": 201,
+            "native": null,
+            "sourceTime": 3.96,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 201
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3980.0,
+      "sha256": "97dae8c0d6cdba2f7c9d110d7dfb46d07a681eaab787e324eacc3850ac206fc9",
+      "state": {
+        "lesson": "handoff",
+        "time": 3980,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 3980,
+            "running": false,
+            "visible": true,
+            "frames": 202,
+            "native": null,
+            "sourceTime": 3.98,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 202
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4000.0,
+      "sha256": "c9deb498aaf6d3dd2a18f760b1b0f98155ab41b587d225f03b2d35ebd3fdbd4c",
+      "state": {
+        "lesson": "handoff",
+        "time": 4000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4000,
+            "running": false,
+            "visible": true,
+            "frames": 203,
+            "native": null,
+            "sourceTime": 4,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 203
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4020.0,
+      "sha256": "2ba9e90a15c8d67aa59511d2f9bcee10a6b0c23d87be848abfb833b32494ba73",
+      "state": {
+        "lesson": "handoff",
+        "time": 4020,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4020,
+            "running": false,
+            "visible": true,
+            "frames": 204,
+            "native": null,
+            "sourceTime": 4.019999,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 204
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4040.0,
+      "sha256": "4049e69682904c2c5cb45fc88d02d61684f6e9f57e2385957ef5be0f84f8c7d4",
+      "state": {
+        "lesson": "handoff",
+        "time": 4040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4040,
+            "running": false,
+            "visible": true,
+            "frames": 205,
+            "native": null,
+            "sourceTime": 4.04,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 205
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4060.0,
+      "sha256": "bf79b149ac49fce27953921885e370b63d240522323d2c1512708ffd114f7010",
+      "state": {
+        "lesson": "handoff",
+        "time": 4060,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4060,
+            "running": false,
+            "visible": true,
+            "frames": 206,
+            "native": null,
+            "sourceTime": 4.059999,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 206
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4080.0,
+      "sha256": "2b9329081dd44402c9341c794930b017adac82f01630d802a6ca0da5a8fdf8e2",
+      "state": {
+        "lesson": "handoff",
+        "time": 4080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4080,
+            "running": false,
+            "visible": true,
+            "frames": 207,
+            "native": null,
+            "sourceTime": 4.08,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 207
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4100.0,
+      "sha256": "2b9329081dd44402c9341c794930b017adac82f01630d802a6ca0da5a8fdf8e2",
+      "state": {
+        "lesson": "handoff",
+        "time": 4100,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4100,
+            "running": false,
+            "visible": true,
+            "frames": 208,
+            "native": null,
+            "sourceTime": 4.099999,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 208
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4120.0,
+      "sha256": "f1580a62dd13a1f638aac42346dbf67e5de0824c33c80c9fc2c14729faf51f87",
+      "state": {
+        "lesson": "handoff",
+        "time": 4120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4120,
+            "running": false,
+            "visible": true,
+            "frames": 209,
+            "native": null,
+            "sourceTime": 4.12,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 209
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4140.0,
+      "sha256": "14a0a5b6891e7b529e01d2f1bd8e976e47d2d6dbe28901090d651a198a531fa1",
+      "state": {
+        "lesson": "handoff",
+        "time": 4140,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4140,
+            "running": false,
+            "visible": true,
+            "frames": 210,
+            "native": null,
+            "sourceTime": 4.139999,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 210
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4160.0,
+      "sha256": "14a0a5b6891e7b529e01d2f1bd8e976e47d2d6dbe28901090d651a198a531fa1",
+      "state": {
+        "lesson": "handoff",
+        "time": 4160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4160,
+            "running": false,
+            "visible": true,
+            "frames": 211,
+            "native": null,
+            "sourceTime": 4.16,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 211
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4180.0,
+      "sha256": "988adad2969014f75c901492ad786162da68053e34924b65ee11494c9925abcb",
+      "state": {
+        "lesson": "handoff",
+        "time": 4180,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4180,
+            "running": false,
+            "visible": true,
+            "frames": 212,
+            "native": null,
+            "sourceTime": 4.179998,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 212
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4200.0,
+      "sha256": "eba80cb445d072dbcf4c419fff36fedced5da28d1eee37dab23a9b2ac3d01bbc",
+      "state": {
+        "lesson": "handoff",
+        "time": 4200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4200,
+            "running": false,
+            "visible": true,
+            "frames": 213,
+            "native": null,
+            "sourceTime": 4.2,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 213
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4220.0,
+      "sha256": "eba80cb445d072dbcf4c419fff36fedced5da28d1eee37dab23a9b2ac3d01bbc",
+      "state": {
+        "lesson": "handoff",
+        "time": 4220,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4220,
+            "running": false,
+            "visible": true,
+            "frames": 214,
+            "native": null,
+            "sourceTime": 4.22,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 214
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4240.0,
+      "sha256": "28df9ae4f50e14b1fb5009e7add858c5fce852409be8ac82d119b62fff0a9f6c",
+      "state": {
+        "lesson": "handoff",
+        "time": 4240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4240,
+            "running": false,
+            "visible": true,
+            "frames": 215,
+            "native": null,
+            "sourceTime": 4.24,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 215
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4260.0,
+      "sha256": "28df9ae4f50e14b1fb5009e7add858c5fce852409be8ac82d119b62fff0a9f6c",
+      "state": {
+        "lesson": "handoff",
+        "time": 4260,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4260,
+            "running": false,
+            "visible": true,
+            "frames": 216,
+            "native": null,
+            "sourceTime": 4.26,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 216
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4280.0,
+      "sha256": "72fd3fcfeba4087492fd82ae7b569e4acab89469dcddc4e33f63137dc53baab1",
+      "state": {
+        "lesson": "handoff",
+        "time": 4280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4280,
+            "running": false,
+            "visible": true,
+            "frames": 217,
+            "native": null,
+            "sourceTime": 4.28,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 217
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4300.0,
+      "sha256": "bad28c8e1e5804fac78c829b1c75bfc3d01a3dea56a8ce8c040b466f1c9156a3",
+      "state": {
+        "lesson": "handoff",
+        "time": 4300,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4300,
+            "running": false,
+            "visible": true,
+            "frames": 218,
+            "native": null,
+            "sourceTime": 4.3,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 218
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4320.0,
+      "sha256": "bad28c8e1e5804fac78c829b1c75bfc3d01a3dea56a8ce8c040b466f1c9156a3",
+      "state": {
+        "lesson": "handoff",
+        "time": 4320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4320,
+            "running": false,
+            "visible": true,
+            "frames": 219,
+            "native": null,
+            "sourceTime": 4.32,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 219
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4340.0,
+      "sha256": "0678e485fd455b39c8f2a835c0740024199f143cbaca98c5fb4e765398f5106c",
+      "state": {
+        "lesson": "handoff",
+        "time": 4340,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4340,
+            "running": false,
+            "visible": true,
+            "frames": 220,
+            "native": null,
+            "sourceTime": 4.34,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 220
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4360.0,
+      "sha256": "0678e485fd455b39c8f2a835c0740024199f143cbaca98c5fb4e765398f5106c",
+      "state": {
+        "lesson": "handoff",
+        "time": 4360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4360,
+            "running": false,
+            "visible": true,
+            "frames": 221,
+            "native": null,
+            "sourceTime": 4.36,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 221
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4380.0,
+      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "state": {
+        "lesson": "handoff",
+        "time": 4380,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4380,
+            "running": false,
+            "visible": true,
+            "frames": 222,
+            "native": null,
+            "sourceTime": 4.38,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 222
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4400.0,
+      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "state": {
+        "lesson": "handoff",
+        "time": 4400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4400,
+            "running": false,
+            "visible": true,
+            "frames": 223,
+            "native": null,
+            "sourceTime": 4.4,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 223
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4420.0,
+      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "state": {
+        "lesson": "handoff",
+        "time": 4420,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4420,
+            "running": false,
+            "visible": true,
+            "frames": 224,
+            "native": null,
+            "sourceTime": 4.42,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 224
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4440.0,
+      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "state": {
+        "lesson": "handoff",
+        "time": 4440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4440,
+            "running": false,
+            "visible": true,
+            "frames": 225,
+            "native": null,
+            "sourceTime": 4.44,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 225
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4460.0,
+      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "state": {
+        "lesson": "handoff",
+        "time": 4460,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4460,
+            "running": false,
+            "visible": true,
+            "frames": 226,
+            "native": null,
+            "sourceTime": 4.46,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 226
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4480.0,
+      "sha256": "28e8e4d8dc19c547eca0407facefaadaeb0f9a4ca11c77e73a6d2b8c4d892200",
+      "state": {
+        "lesson": "handoff",
+        "time": 4480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4480,
+            "running": false,
+            "visible": true,
+            "frames": 227,
+            "native": null,
+            "sourceTime": 4.48,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 227
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4500.0,
+      "sha256": "e78203142af2856b87c953b9aa23bf5f0f6870e1b10f3b7ab5343c590c6e4343",
+      "state": {
+        "lesson": "handoff",
+        "time": 4500,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4500,
+            "running": false,
+            "visible": true,
+            "frames": 228,
+            "native": null,
+            "sourceTime": 4.5,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 228
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4520.0,
+      "sha256": "e78203142af2856b87c953b9aa23bf5f0f6870e1b10f3b7ab5343c590c6e4343",
+      "state": {
+        "lesson": "handoff",
+        "time": 4520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4520,
+            "running": false,
+            "visible": true,
+            "frames": 229,
+            "native": null,
+            "sourceTime": 4.52,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 229
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4540.0,
+      "sha256": "f960d260b1d35093be6c4a2e9c68c38bdc1914d58827182d8372610a894ba5fc",
+      "state": {
+        "lesson": "handoff",
+        "time": 4540,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4540,
+            "running": false,
+            "visible": true,
+            "frames": 230,
+            "native": null,
+            "sourceTime": 4.54,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 230
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4560.0,
+      "sha256": "f960d260b1d35093be6c4a2e9c68c38bdc1914d58827182d8372610a894ba5fc",
+      "state": {
+        "lesson": "handoff",
+        "time": 4560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4560,
+            "running": false,
+            "visible": true,
+            "frames": 231,
+            "native": null,
+            "sourceTime": 4.56,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 231
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4580.0,
+      "sha256": "cd556a1ef62476e5a530304164f7094899ff7ec48e3617c270e465e3ced073f1",
+      "state": {
+        "lesson": "handoff",
+        "time": 4580,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4580,
+            "running": false,
+            "visible": true,
+            "frames": 232,
+            "native": null,
+            "sourceTime": 4.58,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 232
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4600.0,
+      "sha256": "e43518d4d273ba2f537eb579fbb9ff9085e915a588ba8da061c90416aa8b54fb",
+      "state": {
+        "lesson": "handoff",
+        "time": 4600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4600,
+            "running": false,
+            "visible": true,
+            "frames": 233,
+            "native": null,
+            "sourceTime": 4.6,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 233
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4620.0,
+      "sha256": "e43518d4d273ba2f537eb579fbb9ff9085e915a588ba8da061c90416aa8b54fb",
+      "state": {
+        "lesson": "handoff",
+        "time": 4620,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4620,
+            "running": false,
+            "visible": true,
+            "frames": 234,
+            "native": null,
+            "sourceTime": 4.62,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 234
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4640.0,
+      "sha256": "58f99aabbdfe1d1136b0b2cd195de60c0228492b0153919ee9b9ab89d59daa2d",
+      "state": {
+        "lesson": "handoff",
+        "time": 4640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4640,
+            "running": false,
+            "visible": true,
+            "frames": 235,
+            "native": null,
+            "sourceTime": 4.64,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 235
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4660.0,
+      "sha256": "1cdb11979be52d76d0fd0d6d7e252600511bfe9d69d683225ef31b83ea858907",
+      "state": {
+        "lesson": "handoff",
+        "time": 4660,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4660,
+            "running": false,
+            "visible": true,
+            "frames": 236,
+            "native": null,
+            "sourceTime": 4.66,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 236
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4680.0,
+      "sha256": "dd6af818f4221a6efe0bc78c4f5c7a26a1533f4920cf1c62e888aa3923fac4cd",
+      "state": {
+        "lesson": "handoff",
+        "time": 4680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4680,
+            "running": false,
+            "visible": true,
+            "frames": 237,
+            "native": null,
+            "sourceTime": 4.68,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 237
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4700.0,
+      "sha256": "72b2be448c50a73325d654eb35ef60df7348b784cf502f22cbf9807eb30af9b5",
+      "state": {
+        "lesson": "handoff",
+        "time": 4700,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4700,
+            "running": false,
+            "visible": true,
+            "frames": 238,
+            "native": null,
+            "sourceTime": 4.7,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 238
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4720.0,
+      "sha256": "b241ea01386d242524abf0e50c0b07ebf98ccb5b01b58063070b3eac7b3a8c95",
+      "state": {
+        "lesson": "handoff",
+        "time": 4720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4720,
+            "running": false,
+            "visible": true,
+            "frames": 239,
+            "native": null,
+            "sourceTime": 4.72,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 239
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4740.0,
+      "sha256": "49ac3aa0a6034c474613ef394579ba1fccbe10dddfc76f8e565ab1afb275ab74",
+      "state": {
+        "lesson": "handoff",
+        "time": 4740,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4740,
+            "running": false,
+            "visible": true,
+            "frames": 240,
+            "native": null,
+            "sourceTime": 4.74,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 240
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4760.0,
+      "sha256": "531d297965bd930e883ad7d764a711a12d6222ddf24e6d4a862b89269242ad8c",
+      "state": {
+        "lesson": "handoff",
+        "time": 4760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4760,
+            "running": false,
+            "visible": true,
+            "frames": 241,
+            "native": null,
+            "sourceTime": 4.76,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 241
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4780.0,
+      "sha256": "53d74ebbcd7179ccaa905ec3cd9fa2c9879275466b3e58f85b53f4cd2c1f6851",
+      "state": {
+        "lesson": "handoff",
+        "time": 4780,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4780,
+            "running": false,
+            "visible": true,
+            "frames": 242,
+            "native": null,
+            "sourceTime": 4.78,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 242
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4800.0,
+      "sha256": "48d08be34e448158e3a63a5a4abfabf3529d00b1fe37a146d61ca7820505d832",
+      "state": {
+        "lesson": "handoff",
+        "time": 4800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4800,
+            "running": false,
+            "visible": true,
+            "frames": 243,
+            "native": null,
+            "sourceTime": 4.8,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 243
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4820.0,
+      "sha256": "1b88e2018d4c471d8c2e1ffaa54cd26d194f73581a86913a76ce415a6f821bfc",
+      "state": {
+        "lesson": "handoff",
+        "time": 4820,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4820,
+            "running": false,
+            "visible": true,
+            "frames": 244,
+            "native": null,
+            "sourceTime": 4.82,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 244
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4840.0,
+      "sha256": "2a39a8512c40e48e120065f1b8ba63cd366b213d2f9ad47b1646ac444ae3dceb",
+      "state": {
+        "lesson": "handoff",
+        "time": 4840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4840,
+            "running": false,
+            "visible": true,
+            "frames": 245,
+            "native": null,
+            "sourceTime": 4.84,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 245
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4860.0,
+      "sha256": "69971a9858b9333acbb64fe9b2dc00175c769426331788a7b78ee097d14eb552",
+      "state": {
+        "lesson": "handoff",
+        "time": 4860,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4860,
+            "running": false,
+            "visible": true,
+            "frames": 246,
+            "native": null,
+            "sourceTime": 4.86,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 246
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4880.0,
+      "sha256": "2d1bb973fd2a51f79922e148e265252f5ce08b670c9a8753f04770d7aa03e249",
+      "state": {
+        "lesson": "handoff",
+        "time": 4880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4880,
+            "running": false,
+            "visible": true,
+            "frames": 247,
+            "native": null,
+            "sourceTime": 4.88,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 247
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4900.0,
+      "sha256": "2ea3b1b4c3dc367347552603281e966b519ccbf97981165b2ce0434af311c8ee",
+      "state": {
+        "lesson": "handoff",
+        "time": 4900,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4900,
+            "running": false,
+            "visible": true,
+            "frames": 248,
+            "native": null,
+            "sourceTime": 4.9,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 248
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4920.0,
+      "sha256": "2ea3b1b4c3dc367347552603281e966b519ccbf97981165b2ce0434af311c8ee",
+      "state": {
+        "lesson": "handoff",
+        "time": 4920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4920,
+            "running": false,
+            "visible": true,
+            "frames": 249,
+            "native": null,
+            "sourceTime": 4.92,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 249
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4940.0,
+      "sha256": "3c3e4f904247dc177d8d8418bc6a2d899c336c2c2a409efff80fb1425555fe22",
+      "state": {
+        "lesson": "handoff",
+        "time": 4940,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4940,
+            "running": false,
+            "visible": true,
+            "frames": 250,
+            "native": null,
+            "sourceTime": 4.94,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 250
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4960.0,
+      "sha256": "3c3e4f904247dc177d8d8418bc6a2d899c336c2c2a409efff80fb1425555fe22",
+      "state": {
+        "lesson": "handoff",
+        "time": 4960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4960,
+            "running": false,
+            "visible": true,
+            "frames": 251,
+            "native": null,
+            "sourceTime": 4.96,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 251
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4980.0,
+      "sha256": "3e75f37447d85da3471116ed33e5a37e5425727265aeab72d88614156489358c",
+      "state": {
+        "lesson": "handoff",
+        "time": 4980,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 4980,
+            "running": false,
+            "visible": true,
+            "frames": 252,
+            "native": null,
+            "sourceTime": 4.98,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 252
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5000.0,
+      "sha256": "acffd83858cdfae744e299f3fbdebf35d127c8ad8de4edc0bdbcb060e6b01973",
+      "state": {
+        "lesson": "handoff",
+        "time": 5000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 5000,
+            "running": false,
+            "visible": true,
+            "frames": 253,
+            "native": null,
+            "sourceTime": 5,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 253
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5020.0,
+      "sha256": "acffd83858cdfae744e299f3fbdebf35d127c8ad8de4edc0bdbcb060e6b01973",
+      "state": {
+        "lesson": "handoff",
+        "time": 5020,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "hands": {
+            "time": 5020,
+            "running": false,
+            "visible": true,
+            "frames": 254,
+            "native": null,
+            "sourceTime": 5.02,
+            "sourceDuration": 5.033333,
+            "sceneDuration": 5040,
+            "seekVersion": 254
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Shared companion scene clocks; native sources and recorded footage remain distinct. Sample FPS is not source acting or perceived smoothness."
+}

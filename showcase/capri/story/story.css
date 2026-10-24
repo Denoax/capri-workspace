@@ -1,0 +1,57 @@
+:root{--story-ink:#100a19;--story-paper:#f4f1ee;--story-muted:#c9c3d4;--story-line:#3d3448}
+main{max-width:1240px;padding:24px}.story-intro h1{font-size:36px}.story-intro p{max-width:78ch}
+#handoff-comic-full-sprites .hcf-intro h2{font-size:clamp(27px,3.4vw,38px);max-width:22ch}
+#handoff-comic-full-sprites .hcf-card{transform:none!important}
+#handoff-comic-full-sprites .hcf-model{transform:none!important;background:transparent!important;border-radius:0;border-bottom:1px solid var(--story-line)}
+#handoff-comic-full-sprites .hcf-card h3{font-size:23px}.hcf-copy{line-height:1.5!important}
+#capri-source-scenes .cs-grid.story-contexts{display:grid!important;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);align-items:start;gap:24px}
+#capri-source-scenes .cs-paper{font:400 19px/1.6 Inter,sans-serif;max-width:24ch}
+#capri-source-scenes .cs-brief{top:17%;left:9%;width:70%}.cs-brief h3{font-size:24px!important}
+.story-math{padding:0 24px 26px;background:var(--story-ink);color:var(--story-paper)}
+.story-chart{display:block;width:100%;height:auto;color:var(--story-paper);font-family:Inter,sans-serif;fill:currentColor}
+.story-chart .chart-title{font-family:Manrope,sans-serif;font-weight:500}.chart-muted{fill:var(--story-muted)}
+.chart-grid{stroke:var(--story-line);stroke-width:1}.chart-current{stroke:#f4f1ee;stroke-width:1;stroke-dasharray:4 6;opacity:.65}
+.portrait-chart{display:none}.story-derivation{font:400 20px/1.6 Inter,sans-serif;margin:18px 0 10px}.story-assumption{font-size:18px;margin:0;color:var(--story-muted)}
+.story-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:20px 24px;background:var(--story-paper);color:var(--story-ink)}
+.story-controls label{font-weight:500}.story-controls select,.story-controls input{font:inherit;min-height:44px;max-width:100%}.story-controls input{flex:1;min-width:120px}
+.story-controls output{flex-basis:100%;font-size:16px;min-height:48px;line-height:1.5}.story-controls select{padding:7px 12px}
+.story-packet{padding:0 24px 28px;background:var(--story-ink);color:var(--story-paper);font-size:19px;line-height:1.6}
+.story-packet code{white-space:normal;overflow-wrap:anywhere}.story-packet p:last-child{color:var(--story-muted);font-size:17px}
+.story-retained{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin:24px 0}
+#capri-reference-composites .cp-card-copy{font:400 18px/1.3 Inter,sans-serif!important}
+#capri-reference-composites .cp-brief{font:400 16px/1.5 Inter,sans-serif}
+[data-lesson="closing"]{max-width:680px;margin:24px auto}.scene-tools{padding-left:12px;padding-right:12px}.scene-tools button{min-height:44px}
+.export .story-intro,.export footer,.export .story-controls,.export .story-assumption+.story-controls{display:none!important}
+.export main{padding:0!important}.export .scene-tools,.export .scene-status{display:none!important}
+.export #capri-source-scenes .cs-grid.story-contexts{gap:16px!important;margin:0!important}
+.export .story-math{padding:0 18px 24px}.export .story-derivation{font-size:22px}.export .story-assumption{font-size:20px}
+.export #capri-source-scenes .cs-paper{font-size:20px}.export .cs-caption,.export .cp-copy{padding:22px!important}
+.export .cs-caption h3,.export .cp-copy h3{font-size:29px!important}.export .cs-caption p,.export .cp-copy p{font-size:21px!important}
+.export .story-retained{gap:16px;margin:0}.export [data-lesson="closing"]{max-width:none;margin:0}
+.export .story-packet{font-size:23px;padding:0 28px 24px}.export .story-packet p:last-child{font-size:20px}
+.export #capri-reference-composites .cp-card-copy{font-size:21px!important}.export #capri-reference-composites .cp-brief{font-size:20px;line-height:1.45}
+.export #capri-reference-composites .cp-brief summary{display:none}
+.export #handoff-comic-full-sprites .hcf-card h3{font-size:27px}.export #handoff-comic-full-sprites .hcf-end{font-size:20px}
+@media(max-width:900px){#capri-source-scenes .cs-grid.story-contexts,.story-retained{grid-template-columns:1fr!important}.story-intro h1{font-size:32px}}
+@media(max-width:650px){.wide-chart{display:none}.portrait-chart{display:block}.story-math{padding:0 14px 24px}.story-derivation{font-size:21px}.story-assumption{font-size:19px}.story-controls{padding:18px}.story-packet{padding:0 18px 24px;font-size:18px}}
+.export.portrait #capri-source-scenes .cs-grid.story-contexts,.export.portrait .story-retained{grid-template-columns:1fr!important;gap:18px!important}
+.export.portrait .story-derivation{font-size:27px}.export.portrait .story-assumption{font-size:25px}.export.portrait .story-math{padding:0 16px 28px}
+.export.portrait .cs-caption p,.export.portrait .cp-copy p{font-size:26px!important}.export.portrait .cs-caption h3,.export.portrait .cp-copy h3{font-size:34px!important}
+.export.portrait #capri-source-scenes .cs-paper{font-size:27px}.export.portrait #capri-source-scenes .cs-brief h3{font-size:34px!important}
+.export.portrait #capri-reference-composites .cp-card-copy{font-size:25px!important}.export.portrait #capri-reference-composites .cp-brief{font-size:26px}
+.export.portrait #handoff-comic-full-sprites .hcf-card h3{font-size:36px}.export.portrait .story-packet{font-size:28px}.export.portrait .story-packet p:last-child{font-size:24px}
+
+#handoff-comic-full-sprites .hcf-model::before{background:transparent!important;clip-path:none!important;transform:none!important}
+
+/* Each context lesson reserves separate visual, copy and math planes. */
+#capri-source-scenes .cs-grid.story-contexts{grid-template-columns:1fr!important}
+#capri-source-scenes [data-story-scene="horizon"]{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);grid-template-areas:"visual math" "caption math";align-content:start}
+[data-story-scene="horizon"] .cs-stage{grid-area:visual}[data-story-scene="horizon"] .cs-caption{grid-area:caption}[data-story-scene="horizon"] .story-math{grid-area:math}
+#capri-source-scenes [data-story-scene="sharks"]{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}
+#capri-source-scenes .cs-brief{width:62%}
+@media(max-width:900px){#capri-source-scenes [data-story-scene="horizon"],#capri-source-scenes [data-story-scene="sharks"]{display:block}}
+.export.portrait #capri-source-scenes [data-story-scene="horizon"],.export.portrait #capri-source-scenes [data-story-scene="sharks"]{display:block}
+
+.story-packet code{white-space:pre-wrap}
+#capri-reference-composites .cp-packet{font-size:20px!important;padding:6px 10px}
+.export.portrait #capri-reference-composites .cp-packet{font-size:26px!important}

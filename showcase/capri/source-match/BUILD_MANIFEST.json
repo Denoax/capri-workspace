@@ -243,8 +243,8 @@
     },
     {
       "path": "companion/index.html",
-      "bytes": 6083924,
-      "sha256": "4e4d3eb211bd93399ccfc648b13df5e185b88b67a46e701250205559258d3daf"
+      "bytes": 6115588,
+      "sha256": "ee7bfed0b8497d3d66ba5bef52ad4d007ddbc07c092aa586da9acf02d1e69936"
     },
     {
       "path": "companion/ocean-source.js",
@@ -260,6 +260,11 @@
       "path": "companion/scenes.js",
       "bytes": 23684,
       "sha256": "a0ac2a8cb4c545385839441b6628af7727ab6c03c6c8219650ebacc2213f5207"
+    },
+    {
+      "path": "companion/source-match.html",
+      "bytes": 6083924,
+      "sha256": "4e4d3eb211bd93399ccfc648b13df5e185b88b67a46e701250205559258d3daf"
     },
     {
       "path": "context-budget-results.json",

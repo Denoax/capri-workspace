@@ -80,7 +80,11 @@ def check():
     root=(ROOT/'README.md').read_text();static=(ROOT/'docs/README_STATIC.md').read_text()
     require('python -m pip install --require-hashes -r requirements.lock' in root and 'unittest discover -s controller/tests -v' in root,'Quickstart missing')
     require(not re.search(r'(?:src|srcset)="[^"]+\.gif',static),'Animated media in static edition')
-    require(all(f'/{name}-wide.gif' in root for name in ['comic','hands','sharks','rain','horizon','cat','dots']),'Missing root source scene')
+    if (ROOT/'showcase/capri/story/story.json').exists():
+        configuration=json.loads((ROOT/'showcase/capri/story/story.json').read_text())
+        require(all(f'/{name}-wide.' in root for name in configuration['lessons']),'Missing root V3 lesson')
+        require({family for lesson in configuration['lessons'].values() for family in lesson['families']}=={'sharks','horizon','hands','rain','dots','cat','stack'},'Missing root source family')
+    else:require(all(f'/{name}-wide.gif' in root for name in ['comic','hands','sharks','rain','horizon','cat','dots']),'Missing root source scene')
     require(sha(ROOT/'showcase/capri/hero.gif')=='e505d35ebb8eea5daa13fda24ed32db7a6a64aabda3e63835ee4cf8813f39517','Approved hero changed')
     build=json.loads((MEDIA/'BUILD_MANIFEST.json').read_text())
     for item in build['files']:require(sha(MEDIA/item['path'])==item['sha256'],'Build manifest mismatch: '+item['path'])

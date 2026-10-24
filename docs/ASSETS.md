@@ -47,3 +47,5 @@ The identity builder requires Pillow and fontTools in a media-only environment. 
 ## Source-match presentation candidate
 
 The approved first three-panel comic, Manrope/Inter typography and seven source treatments are implemented separately from the preserved banner and runtime. [Source-to-implementation, notices, acting and rebuild record](SOURCE_MATCH.md). New reference sources are registered separately; the original hero/source selection remains unchanged. Five panels are footage composites; sharks and horizon use actual supplied native source. Unresolved rights remain recorded and the repository stays private.
+
+The [V3 story record](VISUAL_STORY.md) connects the preserved assets to the current explanatory compositions; no new generated media is used.

@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "path": "SOURCE_RECORD.json",
+      "bytes": 2283,
+      "sha256": "d73ffe26704079997318c9ab2320bfaf28ad607a7982e27bac1f7724244a3868"
+    },
+    {
+      "path": "exports/checking-portrait-timeline.json",
+      "bytes": 125335,
+      "sha256": "e1fa1156b46b5266533a0e62df166636f838ddfd8e64b709bd5e957d623df4cd"
+    },
+    {
+      "path": "exports/checking-portrait.gif",
+      "bytes": 6031780,
+      "sha256": "7530de9f295bfcee00614cbbf1125a2987e876b9cba02b936fb4e88d4e875a92"
+    },
+    {
+      "path": "exports/checking-portrait.png",
+      "bytes": 164262,
+      "sha256": "6359bad66e4bc33f6560bc24bb531df593b89d09505da94b297a7c4462add9a1"
+    },
+    {
+      "path": "exports/checking-wide-timeline.json",
+      "bytes": 125331,
+      "sha256": "16d9fa511f80043a0a3cf4a0ba482aa7d21f4e9e99c5166b6d61949742446262"
+    },
+    {
+      "path": "exports/checking-wide.gif",
+      "bytes": 6556298,
+      "sha256": "1773c0153ba54a2995d02020cc3ebe1389136d16f8801b8c701246438986c8de"
+    },
+    {
+      "path": "exports/checking-wide.png",
+      "bytes": 168013,
+      "sha256": "7e9448b51916844ee79fb22840793702a26dfea4b8f542cd94d630b23d80ba51"
+    },
+    {
+      "path": "exports/closing-portrait.png",
+      "bytes": 41854,
+      "sha256": "ca3b642e1a0c98bd1216e1e2538c2aece45a74a7797b1ca116b093f33ea9bb61"
+    },
+    {
+      "path": "exports/closing-wide.png",
+      "bytes": 40458,
+      "sha256": "521804a6b3ec7e52b97d56a072897d6bb8d96b093a531f93f7e8a6aa2da5c842"
+    },
+    {
+      "path": "exports/contexts-portrait-timeline.json",
+      "bytes": 143045,
+      "sha256": "e39d5128695b1f73e7dfd380b69a019a894f2c7b85ccadf45598fb08c93aa086"
+    },
+    {
+      "path": "exports/contexts-portrait.gif",
+      "bytes": 4607694,
+      "sha256": "b3bd7b480dc4576f2a29ee8eb1f2fbee9b09ed82d67796d017403025cb2b78f1"
+    },
+    {
+      "path": "exports/contexts-portrait.png",
+      "bytes": 471957,
+      "sha256": "d7162f3be3dfcebf1d71bb5f9000d106c7c929a644123af1fb62b4b340b6686a"
+    },
+    {
+      "path": "exports/contexts-wide-timeline.json",
+      "bytes": 142881,
+      "sha256": "5902d7e0fec1734ab5eb3b59a6b72014f318b959fa9076efd49a635dd9fcab2b"
+    },
+    {
+      "path": "exports/contexts-wide.gif",
+      "bytes": 2742309,
+      "sha256": "a302d1225bbdb86a415377743c66c7b4c86b29e6391139f7b80a858d61fa0f7c"
+    },
+    {
+      "path": "exports/contexts-wide.png",
+      "bytes": 337054,
+      "sha256": "931bf9535378238fc773d1091bd223156f09c670a338252bc3f4a1955c56177f"
+    },
+    {
+      "path": "exports/handoff-portrait-timeline.json",
+      "bytes": 148298,
+      "sha256": "9bbe5d5df41590d821f527ba29afbaebb07aceb70179dc4d70de4b29b221744f"
+    },
+    {
+      "path": "exports/handoff-portrait.gif",
+      "bytes": 3727376,
+      "sha256": "4ea1cb0379ad97ad20123bb59f612afee0d48515b2c077d753517179129df64d"
+    },
+    {
+      "path": "exports/handoff-portrait.png",
+      "bytes": 171198,
+      "sha256": "d9aae55e3ef611ee89fd84397c7f38e24f72c7cdabc9774dccae064bb6a16e56"
+    },
+    {
+      "path": "exports/handoff-wide-timeline.json",
+      "bytes": 148294,
+      "sha256": "f2eb7a74d83dcd403d6ed4d96e60eb95ac1aa9b5cdaf4e43938b0db57f049479"
+    },
+    {
+      "path": "exports/handoff-wide.gif",
+      "bytes": 5969142,
+      "sha256": "c6e272be494210a49402856f7f677b6c28a54f4cb48640d159f1b89ef25340de"
+    },
+    {
+      "path": "exports/handoff-wide.png",
+      "bytes": 224632,
+      "sha256": "d43748038fd9bcfae2220a99f16d1f23ad4ea0f3111da750cd0f14629a878951"
+    },
+    {
+      "path": "exports/retained-portrait-timeline.json",
+      "bytes": 53234,
+      "sha256": "f1b26ade30be22b49330e03eb9d4da032bc9ed8aecf72eb68b5f00e7ad6c928d"
+    },
+    {
+      "path": "exports/retained-portrait.gif",
+      "bytes": 5854941,
+      "sha256": "4564b9917d043b67bdb05e6c7116345550492b92f10e90005fe9029880e7a481"
+    },
+    {
+      "path": "exports/retained-portrait.png",
+      "bytes": 495268,
+      "sha256": "e228abff891b3bb28ce9ef20026107857572d24ddc672cab06c76ae54cf3b543"
+    },
+    {
+      "path": "exports/retained-wide-timeline.json",
+      "bytes": 53230,
+      "sha256": "909dd3739cdcb87d3b5a9aa69311111559750f1e0a712c2f574edc07f6b97825"
+    },
+    {
+      "path": "exports/retained-wide.gif",
+      "bytes": 4252678,
+      "sha256": "15a16b7505f4276db5478fc0a48bfb71942cfddfe1fc5eeb76da85d677e61caa"
+    },
+    {
+      "path": "exports/retained-wide.png",
+      "bytes": 378128,
+      "sha256": "16480b1a2978313be7882aa50fb297f7713a76612a6ce4f11ee1075ec5bf2f59"
+    },
+    {
+      "path": "exports/workflow-portrait-timeline.json",
+      "bytes": 140646,
+      "sha256": "50349d8c50e537f6afbd9e84450b2d76d97eb5db928421de63c263a626e4b760"
+    },
+    {
+      "path": "exports/workflow-portrait.gif",
+      "bytes": 1855091,
+      "sha256": "be6f36abbfe179ddcf1825513ba2c147ce1838a73c4d3e93759f3dbddb594a4f"
+    },
+    {
+      "path": "exports/workflow-portrait.png",
+      "bytes": 231160,
+      "sha256": "64c87644eff694c66c167e7c17b34076511859d65f5dde8028dbfe14f9257cf8"
+    },
+    {
+      "path": "exports/workflow-wide-timeline.json",
+      "bytes": 140642,
+      "sha256": "56d747ad32f6f2082866185fa0b39b3539f5ab44ded39d2b10d8540d48ab9000"
+    },
+    {
+      "path": "exports/workflow-wide.gif",
+      "bytes": 1189078,
+      "sha256": "6d88ee27248132f4dc6e11f5168cddb0abecbf9e3df470726e4214b2c6c682e2"
+    },
+    {
+      "path": "exports/workflow-wide.png",
+      "bytes": 151887,
+      "sha256": "aa00d64085957ef4eeb230bdb847f4d310164eb6b0b9053444b56f4c73797c19"
+    },
+    {
+      "path": "input-portrait.svg",
+      "bytes": 4186,
+      "sha256": "c7330b7e1b09511d15d49c773f7062d751142f20545a85344a93bae630c2367f"
+    },
+    {
+      "path": "input-wide.svg",
+      "bytes": 4178,
+      "sha256": "51ddf0fc8e551fcf34d9bb84ada5cd8c1386fe6ed71a04df564578beb53809db"
+    },
+    {
+      "path": "model-results.json",
+      "bytes": 13008,
+      "sha256": "e021ba24fc13cb2ec359e4885e9f57ffa42bc4ee45bd6de70f518f84722fcced"
+    },
+    {
+      "path": "scenes.js",
+      "bytes": 24099,
+      "sha256": "196b328a84f2ed7036edc2456a1adefda7ba8192877e5b1fc6f96f3d9150971a"
+    },
+    {
+      "path": "story-ui.js",
+      "bytes": 5743,
+      "sha256": "d3cbaf02073dab4e1b410df8be99269b109a54d38336f9e1c19476602398eef8"
+    },
+    {
+      "path": "story.css",
+      "bytes": 6559,
+      "sha256": "2faa92c8735648974bf60f47dfb6ef263d34366e960c7de9ff96fcf3024da7f4"
+    },
+    {
+      "path": "story.json",
+      "bytes": 2278,
+      "sha256": "ae3d63bdc5795c15025315d6268f378f0d5b0606a0f02c7545814f1f8ecb8078"
+    }
+  ],
+  "scope": "File identities; export provenance/timing are in each timeline. No perceptual acceptance."
+}

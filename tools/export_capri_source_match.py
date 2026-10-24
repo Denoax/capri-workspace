@@ -114,7 +114,7 @@ def main():
                 if (profile/'DevToolsActivePort').exists():break
                 if process.poll() is not None:raise RuntimeError('Owned Chromium exited')
                 time.sleep(.1)
-            port=int((profile/'DevToolsActivePort').read_text().splitlines()[0]);url=f'http://127.0.0.1:{server.server_port}/showcase/capri/source-match/companion/index.html'
+            port=int((profile/'DevToolsActivePort').read_text().splitlines()[0]);url=f'http://127.0.0.1:{server.server_port}/showcase/capri/source-match/companion/source-match.html'
             records,browser=asyncio.run(export(port,url,args.evidence,args.scenes,args.layouts,args.stills_only))
             (args.evidence/'export-receipt.json').write_text(json.dumps({'status':'PASS','records':[{k:v for k,v in r.items() if k!='timeline'} for r in records],'browser':browser,'scope':'Deterministic companion-render captures; software WebGL where supported. Not physical GPU/perceptual or human approval.'},indent=2)+'\n')
         finally:

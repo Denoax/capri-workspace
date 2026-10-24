@@ -1,5 +1,7 @@
 # Source-matched CAPRI presentation
 
+The current V3 composition and rebuild entry point are documented in [Visual story](VISUAL_STORY.md). All source-match masters, original exports and the [preserved original player](../showcase/capri/source-match/companion/source-match.html) remain available. The older rebuild sequence below targets the historical edition.
+
 This private testing candidate uses the approved first Handoff comic and seven supplied source treatments. The original banner remains byte-identical. The comic keeps three staggered full-body scenes and upright **Manrope 500 / Inter 400–500** typography, with ordinary native links and explanations around the media. GitHub body typography remains GitHub's own.
 
 ## Local companion

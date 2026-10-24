@@ -1,0 +1,93 @@
+{
+  "base": "f502e6448223812edcceedaa48ee9d89e7127343",
+  "handoff_sha256": "74b7cafdc862e3316bda5549003416333d48005c28c85ac8889acf8e72c0190a",
+  "method": "V3 authored composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
+  "lessons": {
+    "workflow": {
+      "members": [
+        "comic"
+      ],
+      "duration_ms": 9600,
+      "fps": 25,
+      "wide": 1000,
+      "export_scene": "comic",
+      "still_ms": 800,
+      "families": []
+    },
+    "contexts": {
+      "members": [
+        "horizon",
+        "sharks"
+      ],
+      "duration_ms": 6400,
+      "fps": 25,
+      "wide": 1000,
+      "export_scene": "horizon",
+      "still_ms": 2600,
+      "families": [
+        "horizon",
+        "sharks"
+      ]
+    },
+    "handoff": {
+      "members": [
+        "hands"
+      ],
+      "duration_ms": 5040,
+      "fps": 50,
+      "wide": 800,
+      "export_scene": "hands",
+      "still_ms": 2620,
+      "families": [
+        "hands"
+      ]
+    },
+    "retained": {
+      "members": [
+        "rain",
+        "dots"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "wide": 1000,
+      "export_scene": "dots",
+      "still_ms": 1000,
+      "families": [
+        "rain",
+        "dots"
+      ],
+      "loop_bridge": "120ms dark bridge on dotted-source canvas only; original rain pace retained with four source cycles."
+    },
+    "checking": {
+      "members": [
+        "cat"
+      ],
+      "duration_ms": 8600,
+      "fps": 25,
+      "wide": 640,
+      "export_scene": "cat",
+      "still_ms": 3800,
+      "families": [
+        "cat"
+      ]
+    },
+    "closing": {
+      "members": [
+        "stack"
+      ],
+      "duration_ms": 10800,
+      "fps": 25,
+      "wide": 640,
+      "export_scene": "stack",
+      "still_ms": 2200,
+      "families": [
+        "stack"
+      ],
+      "static_only": true
+    }
+  },
+  "canonical_input": "showcase/capri/source-match/source/assets/data/context-budget.json",
+  "canonical_sha256": "2fb6b1e2cd3a0221a08e16948759d94ceff8e2568bf4fd8a1bd57d1e52e76784",
+  "legacy_companion": "../source-match/companion/source-match.html",
+  "rights": "Original notices, OFL/MIT and unresolved media/character/shark rights unchanged; private review only."
+}

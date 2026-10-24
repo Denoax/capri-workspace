@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "canonical_inputs": "../source-match/source/assets/data/context-budget.json",
+  "evidence_class": "ILLUSTRATIVE_INPUTS_NOT_A_CAPRI_BENCHMARK",
+  "overhead": {
+    "minimum": 0,
+    "maximum": 60000,
+    "step": 1000,
+    "samples": [
+      0,
+      15000,
+      30000,
+      45000
+    ],
+    "initial": 30000
+  },
+  "fixture": {
+    "scope": "label.py only",
+    "correction": "blank \u2192 Untitled",
+    "rules": [
+      "Trim outer whitespace",
+      "Preserve case and internal spaces",
+      "Non-strings raise TypeError"
+    ],
+    "authority": [
+      "evaluation/fixtures/A/INITIAL.md",
+      "evaluation/fixtures/A/CORRECTION.md"
+    ]
+  },
+  "lessons": {
+    "workflow": {
+      "members": [
+        "comic"
+      ],
+      "duration_ms": 9600,
+      "fps": 25,
+      "wide": 1000,
+      "export_scene": "comic",
+      "still_ms": 800,
+      "families": []
+    },
+    "contexts": {
+      "members": [
+        "horizon",
+        "sharks"
+      ],
+      "duration_ms": 6400,
+      "fps": 25,
+      "wide": 1000,
+      "export_scene": "horizon",
+      "still_ms": 2600,
+      "families": [
+        "horizon",
+        "sharks"
+      ]
+    },
+    "handoff": {
+      "members": [
+        "hands"
+      ],
+      "duration_ms": 5040,
+      "fps": 50,
+      "wide": 800,
+      "export_scene": "hands",
+      "still_ms": 2620,
+      "families": [
+        "hands"
+      ]
+    },
+    "retained": {
+      "members": [
+        "rain",
+        "dots"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "wide": 1000,
+      "export_scene": "dots",
+      "still_ms": 1000,
+      "families": [
+        "rain",
+        "dots"
+      ],
+      "loop_bridge": "120ms dark bridge on dotted-source canvas only; original rain pace retained with four source cycles."
+    },
+    "checking": {
+      "members": [
+        "cat"
+      ],
+      "duration_ms": 8600,
+      "fps": 25,
+      "wide": 640,
+      "export_scene": "cat",
+      "still_ms": 3800,
+      "families": [
+        "cat"
+      ]
+    },
+    "closing": {
+      "members": [
+        "stack"
+      ],
+      "duration_ms": 10800,
+      "fps": 25,
+      "wide": 640,
+      "export_scene": "stack",
+      "still_ms": 2200,
+      "families": [
+        "stack"
+      ],
+      "static_only": true
+    }
+  }
+}

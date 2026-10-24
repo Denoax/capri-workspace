@@ -1,0 +1,592 @@
+{
+  "evidence_class": "ILLUSTRATIVE_ASSUMPTIONS_NOT_MODEL_RUN",
+  "calls": 6,
+  "total_assumed_input_tokens": {
+    "growing": 180000,
+    "curated": 90000,
+    "scoped": 60000
+  },
+  "scoped_vs_growing_percent_lower": "66.7",
+  "scoped_vs_curated_percent_lower": "33.3",
+  "cache_counterexample": {
+    "relative_cached_rate": "0.05",
+    "growing_weighted_units": "56500.00",
+    "scoped_weighted_units": "60000",
+    "prices_or_usage": false
+  },
+  "quality_equivalence": "untested",
+  "cost_savings": null,
+  "measured_capri_savings": null,
+  "policies": [
+    {
+      "id": "growing",
+      "label": "Growing history",
+      "values": [
+        10000,
+        18000,
+        26000,
+        34000,
+        42000,
+        50000
+      ],
+      "total": 180000,
+      "peak_request": 50000
+    },
+    {
+      "id": "curated",
+      "label": "Curated single session",
+      "values": [
+        10000,
+        12000,
+        14000,
+        16000,
+        18000,
+        20000
+      ],
+      "total": 90000,
+      "peak_request": 20000
+    },
+    {
+      "id": "scoped",
+      "label": "Scoped roles",
+      "values": [
+        10000,
+        8000,
+        10000,
+        12000,
+        8000,
+        12000
+      ],
+      "total": 60000,
+      "peak_request": 12000
+    }
+  ],
+  "requests": [
+    {
+      "request": 1,
+      "values": {
+        "growing": 10000,
+        "curated": 10000,
+        "scoped": 10000
+      }
+    },
+    {
+      "request": 2,
+      "values": {
+        "growing": 18000,
+        "curated": 12000,
+        "scoped": 8000
+      }
+    },
+    {
+      "request": 3,
+      "values": {
+        "growing": 26000,
+        "curated": 14000,
+        "scoped": 10000
+      }
+    },
+    {
+      "request": 4,
+      "values": {
+        "growing": 34000,
+        "curated": 16000,
+        "scoped": 12000
+      }
+    },
+    {
+      "request": 5,
+      "values": {
+        "growing": 42000,
+        "curated": 18000,
+        "scoped": 8000
+      }
+    },
+    {
+      "request": 6,
+      "values": {
+        "growing": 50000,
+        "curated": 20000,
+        "scoped": 12000
+      }
+    }
+  ],
+  "derivations": {
+    "growing": {
+      "requests": 6,
+      "initial": 10000,
+      "increment": 8000,
+      "retained_steps": 15,
+      "total": 180000
+    },
+    "curated": {
+      "requests": 6,
+      "initial": 10000,
+      "increment": 2000,
+      "retained_steps": 15,
+      "total": 90000
+    }
+  },
+  "sensitivity": [
+    {
+      "additional_input": 0,
+      "scoped_total": 60000,
+      "margin_vs_curated": 30000,
+      "relation": "lower",
+      "percent": "33.3"
+    },
+    {
+      "additional_input": 1000,
+      "scoped_total": 61000,
+      "margin_vs_curated": 29000,
+      "relation": "lower",
+      "percent": "32.2"
+    },
+    {
+      "additional_input": 2000,
+      "scoped_total": 62000,
+      "margin_vs_curated": 28000,
+      "relation": "lower",
+      "percent": "31.1"
+    },
+    {
+      "additional_input": 3000,
+      "scoped_total": 63000,
+      "margin_vs_curated": 27000,
+      "relation": "lower",
+      "percent": "30.0"
+    },
+    {
+      "additional_input": 4000,
+      "scoped_total": 64000,
+      "margin_vs_curated": 26000,
+      "relation": "lower",
+      "percent": "28.9"
+    },
+    {
+      "additional_input": 5000,
+      "scoped_total": 65000,
+      "margin_vs_curated": 25000,
+      "relation": "lower",
+      "percent": "27.8"
+    },
+    {
+      "additional_input": 6000,
+      "scoped_total": 66000,
+      "margin_vs_curated": 24000,
+      "relation": "lower",
+      "percent": "26.7"
+    },
+    {
+      "additional_input": 7000,
+      "scoped_total": 67000,
+      "margin_vs_curated": 23000,
+      "relation": "lower",
+      "percent": "25.6"
+    },
+    {
+      "additional_input": 8000,
+      "scoped_total": 68000,
+      "margin_vs_curated": 22000,
+      "relation": "lower",
+      "percent": "24.4"
+    },
+    {
+      "additional_input": 9000,
+      "scoped_total": 69000,
+      "margin_vs_curated": 21000,
+      "relation": "lower",
+      "percent": "23.3"
+    },
+    {
+      "additional_input": 10000,
+      "scoped_total": 70000,
+      "margin_vs_curated": 20000,
+      "relation": "lower",
+      "percent": "22.2"
+    },
+    {
+      "additional_input": 11000,
+      "scoped_total": 71000,
+      "margin_vs_curated": 19000,
+      "relation": "lower",
+      "percent": "21.1"
+    },
+    {
+      "additional_input": 12000,
+      "scoped_total": 72000,
+      "margin_vs_curated": 18000,
+      "relation": "lower",
+      "percent": "20.0"
+    },
+    {
+      "additional_input": 13000,
+      "scoped_total": 73000,
+      "margin_vs_curated": 17000,
+      "relation": "lower",
+      "percent": "18.9"
+    },
+    {
+      "additional_input": 14000,
+      "scoped_total": 74000,
+      "margin_vs_curated": 16000,
+      "relation": "lower",
+      "percent": "17.8"
+    },
+    {
+      "additional_input": 15000,
+      "scoped_total": 75000,
+      "margin_vs_curated": 15000,
+      "relation": "lower",
+      "percent": "16.7"
+    },
+    {
+      "additional_input": 16000,
+      "scoped_total": 76000,
+      "margin_vs_curated": 14000,
+      "relation": "lower",
+      "percent": "15.6"
+    },
+    {
+      "additional_input": 17000,
+      "scoped_total": 77000,
+      "margin_vs_curated": 13000,
+      "relation": "lower",
+      "percent": "14.4"
+    },
+    {
+      "additional_input": 18000,
+      "scoped_total": 78000,
+      "margin_vs_curated": 12000,
+      "relation": "lower",
+      "percent": "13.3"
+    },
+    {
+      "additional_input": 19000,
+      "scoped_total": 79000,
+      "margin_vs_curated": 11000,
+      "relation": "lower",
+      "percent": "12.2"
+    },
+    {
+      "additional_input": 20000,
+      "scoped_total": 80000,
+      "margin_vs_curated": 10000,
+      "relation": "lower",
+      "percent": "11.1"
+    },
+    {
+      "additional_input": 21000,
+      "scoped_total": 81000,
+      "margin_vs_curated": 9000,
+      "relation": "lower",
+      "percent": "10.0"
+    },
+    {
+      "additional_input": 22000,
+      "scoped_total": 82000,
+      "margin_vs_curated": 8000,
+      "relation": "lower",
+      "percent": "8.9"
+    },
+    {
+      "additional_input": 23000,
+      "scoped_total": 83000,
+      "margin_vs_curated": 7000,
+      "relation": "lower",
+      "percent": "7.8"
+    },
+    {
+      "additional_input": 24000,
+      "scoped_total": 84000,
+      "margin_vs_curated": 6000,
+      "relation": "lower",
+      "percent": "6.7"
+    },
+    {
+      "additional_input": 25000,
+      "scoped_total": 85000,
+      "margin_vs_curated": 5000,
+      "relation": "lower",
+      "percent": "5.6"
+    },
+    {
+      "additional_input": 26000,
+      "scoped_total": 86000,
+      "margin_vs_curated": 4000,
+      "relation": "lower",
+      "percent": "4.4"
+    },
+    {
+      "additional_input": 27000,
+      "scoped_total": 87000,
+      "margin_vs_curated": 3000,
+      "relation": "lower",
+      "percent": "3.3"
+    },
+    {
+      "additional_input": 28000,
+      "scoped_total": 88000,
+      "margin_vs_curated": 2000,
+      "relation": "lower",
+      "percent": "2.2"
+    },
+    {
+      "additional_input": 29000,
+      "scoped_total": 89000,
+      "margin_vs_curated": 1000,
+      "relation": "lower",
+      "percent": "1.1"
+    },
+    {
+      "additional_input": 30000,
+      "scoped_total": 90000,
+      "margin_vs_curated": 0,
+      "relation": "equal",
+      "percent": "0.0"
+    },
+    {
+      "additional_input": 31000,
+      "scoped_total": 91000,
+      "margin_vs_curated": -1000,
+      "relation": "higher",
+      "percent": "1.1"
+    },
+    {
+      "additional_input": 32000,
+      "scoped_total": 92000,
+      "margin_vs_curated": -2000,
+      "relation": "higher",
+      "percent": "2.2"
+    },
+    {
+      "additional_input": 33000,
+      "scoped_total": 93000,
+      "margin_vs_curated": -3000,
+      "relation": "higher",
+      "percent": "3.3"
+    },
+    {
+      "additional_input": 34000,
+      "scoped_total": 94000,
+      "margin_vs_curated": -4000,
+      "relation": "higher",
+      "percent": "4.4"
+    },
+    {
+      "additional_input": 35000,
+      "scoped_total": 95000,
+      "margin_vs_curated": -5000,
+      "relation": "higher",
+      "percent": "5.6"
+    },
+    {
+      "additional_input": 36000,
+      "scoped_total": 96000,
+      "margin_vs_curated": -6000,
+      "relation": "higher",
+      "percent": "6.7"
+    },
+    {
+      "additional_input": 37000,
+      "scoped_total": 97000,
+      "margin_vs_curated": -7000,
+      "relation": "higher",
+      "percent": "7.8"
+    },
+    {
+      "additional_input": 38000,
+      "scoped_total": 98000,
+      "margin_vs_curated": -8000,
+      "relation": "higher",
+      "percent": "8.9"
+    },
+    {
+      "additional_input": 39000,
+      "scoped_total": 99000,
+      "margin_vs_curated": -9000,
+      "relation": "higher",
+      "percent": "10.0"
+    },
+    {
+      "additional_input": 40000,
+      "scoped_total": 100000,
+      "margin_vs_curated": -10000,
+      "relation": "higher",
+      "percent": "11.1"
+    },
+    {
+      "additional_input": 41000,
+      "scoped_total": 101000,
+      "margin_vs_curated": -11000,
+      "relation": "higher",
+      "percent": "12.2"
+    },
+    {
+      "additional_input": 42000,
+      "scoped_total": 102000,
+      "margin_vs_curated": -12000,
+      "relation": "higher",
+      "percent": "13.3"
+    },
+    {
+      "additional_input": 43000,
+      "scoped_total": 103000,
+      "margin_vs_curated": -13000,
+      "relation": "higher",
+      "percent": "14.4"
+    },
+    {
+      "additional_input": 44000,
+      "scoped_total": 104000,
+      "margin_vs_curated": -14000,
+      "relation": "higher",
+      "percent": "15.6"
+    },
+    {
+      "additional_input": 45000,
+      "scoped_total": 105000,
+      "margin_vs_curated": -15000,
+      "relation": "higher",
+      "percent": "16.7"
+    },
+    {
+      "additional_input": 46000,
+      "scoped_total": 106000,
+      "margin_vs_curated": -16000,
+      "relation": "higher",
+      "percent": "17.8"
+    },
+    {
+      "additional_input": 47000,
+      "scoped_total": 107000,
+      "margin_vs_curated": -17000,
+      "relation": "higher",
+      "percent": "18.9"
+    },
+    {
+      "additional_input": 48000,
+      "scoped_total": 108000,
+      "margin_vs_curated": -18000,
+      "relation": "higher",
+      "percent": "20.0"
+    },
+    {
+      "additional_input": 49000,
+      "scoped_total": 109000,
+      "margin_vs_curated": -19000,
+      "relation": "higher",
+      "percent": "21.1"
+    },
+    {
+      "additional_input": 50000,
+      "scoped_total": 110000,
+      "margin_vs_curated": -20000,
+      "relation": "higher",
+      "percent": "22.2"
+    },
+    {
+      "additional_input": 51000,
+      "scoped_total": 111000,
+      "margin_vs_curated": -21000,
+      "relation": "higher",
+      "percent": "23.3"
+    },
+    {
+      "additional_input": 52000,
+      "scoped_total": 112000,
+      "margin_vs_curated": -22000,
+      "relation": "higher",
+      "percent": "24.4"
+    },
+    {
+      "additional_input": 53000,
+      "scoped_total": 113000,
+      "margin_vs_curated": -23000,
+      "relation": "higher",
+      "percent": "25.6"
+    },
+    {
+      "additional_input": 54000,
+      "scoped_total": 114000,
+      "margin_vs_curated": -24000,
+      "relation": "higher",
+      "percent": "26.7"
+    },
+    {
+      "additional_input": 55000,
+      "scoped_total": 115000,
+      "margin_vs_curated": -25000,
+      "relation": "higher",
+      "percent": "27.8"
+    },
+    {
+      "additional_input": 56000,
+      "scoped_total": 116000,
+      "margin_vs_curated": -26000,
+      "relation": "higher",
+      "percent": "28.9"
+    },
+    {
+      "additional_input": 57000,
+      "scoped_total": 117000,
+      "margin_vs_curated": -27000,
+      "relation": "higher",
+      "percent": "30.0"
+    },
+    {
+      "additional_input": 58000,
+      "scoped_total": 118000,
+      "margin_vs_curated": -28000,
+      "relation": "higher",
+      "percent": "31.1"
+    },
+    {
+      "additional_input": 59000,
+      "scoped_total": 119000,
+      "margin_vs_curated": -29000,
+      "relation": "higher",
+      "percent": "32.2"
+    },
+    {
+      "additional_input": 60000,
+      "scoped_total": 120000,
+      "margin_vs_curated": -30000,
+      "relation": "higher",
+      "percent": "33.3"
+    }
+  ],
+  "break_even_additional_input": 30000,
+  "overhead_samples": [
+    {
+      "additional_input": 0,
+      "scoped_total": 60000,
+      "margin_vs_curated": 30000,
+      "relation": "lower",
+      "percent": "33.3"
+    },
+    {
+      "additional_input": 15000,
+      "scoped_total": 75000,
+      "margin_vs_curated": 15000,
+      "relation": "lower",
+      "percent": "16.7"
+    },
+    {
+      "additional_input": 30000,
+      "scoped_total": 90000,
+      "margin_vs_curated": 0,
+      "relation": "equal",
+      "percent": "0.0"
+    },
+    {
+      "additional_input": 45000,
+      "scoped_total": 105000,
+      "margin_vs_curated": -15000,
+      "relation": "higher",
+      "percent": "16.7"
+    }
+  ],
+  "exact_active_occupancy": "UNKNOWN",
+  "information_sufficiency": "untested"
+}

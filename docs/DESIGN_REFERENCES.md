@@ -39,3 +39,5 @@ The identity builder reads only already-selected character footage and the bundl
 ## Source-match presentation candidate
 
 The approved first three-panel comic, Manrope/Inter typography and seven source treatments are implemented separately from the preserved banner and runtime. [Source-to-implementation, notices, acting and rebuild record](SOURCE_MATCH.md). New reference sources are registered separately; the original hero/source selection remains unchanged. Five panels are footage composites; sharks and horizon use actual supplied native source. Unresolved rights remain recorded and the repository stays private.
+
+V3 uses the existing source-match references as lesson compositions, with literal project copy and deterministic assumed-input graphics. The rejected V2 stripped layout is excluded. [Story/source mapping](VISUAL_STORY.md).

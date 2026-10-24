@@ -1,10 +1,12 @@
-# Worked context budgets
+# Context inputs, coordination and evidence
 
-[Back to the explanation](../README.md#context-and-evidence) · [Current benchmark protocol](BENCHMARK_PROTOCOL.md)
+**Illustrative inputs — not a CAPRI benchmark.** The [canonical six-call assumptions](../showcase/capri/source-match/source/assets/data/context-budget.json) remain unchanged. The [V3 story configuration](../showcase/capri/story/story.json) refers to them; the [generated model](../showcase/capri/story/model-results.json) feeds Markdown, graph geometry and local controls through `tools/capri_context_budget.py`.
 
-**Illustrative assumptions, not a measured CAPRI run.** Six assumed input calls include the role instructions and handoff material budgeted for each policy. Equal calls do not establish equal work, information sufficiency, output or answer quality.
+## Inputs per request
 
-| Call | Growing history | Curated single session | Scoped roles |
+All amounts are assumed input tokens. Role instructions and handoff inputs are already budgeted in scoped calls. They have not been measured or validated as sufficient for equal-quality work.
+
+| Request | Growing history | Curated single session | Scoped roles |
 | ---: | ---: | ---: | ---: |
 | 1 | 10,000 | 10,000 | 10,000 |
 | 2 | 18,000 | 12,000 | 8,000 |
@@ -14,38 +16,31 @@
 | 6 | 50,000 | 20,000 | 12,000 |
 | **Total** | **180,000** | **90,000** | **60,000** |
 
-Scoped versus growing is `(180 − 60) / 180 = 66.7%` lower assumed input. Scoped versus curated is `(90 − 60) / 90 = 33.3%`. The curated single session is itself 50% below growing history. Agent count alone does not cause these differences; the example assumes useful material fits in the listed budgets. Quality equivalence is **untested**. This is neither a tokenizer measurement nor exact active-context occupancy.
+For this append illustration, `I = nB + g × n(n−1)/2`. With 6 calls, initial 10k and 8k retained per continuation, growing input is `6×10k + 8k×15 = 180k`. The curated example uses 2k retained per continuation: `6×10k + 2k×15 = 90k`. Scoped input is its listed sum, 60k. This is an explanation of these assumptions, not a rule that ordinary chats must grow this way.
 
-## Caching can reverse the cost order
+`(180−60)/180 = 66.7%` and `(90−60)/90 = 33.3%` mean **lower assumed input**. Curated prompting also improves the example. Equal calls do not establish equal work, sufficient information or equal quality. A well-managed single session may match or beat scoped input. More roles do not inherently save tokens.
 
-For deliberately hypothetical cached relative rate `r`, weighted input units are `uncached + r × cached`. Assume growing history has 50,000 uncached and 130,000 cached inputs, while all 60,000 scoped inputs miss cache.
+Cumulative input is a sum across requests, not a simultaneously filled context window. Listed peak request inputs are Growing history 50k, Curated single session 20k, Scoped roles 12k. Neither those footprints nor their sum establishes exact native active occupancy; it remains **UNKNOWN** where unestablished.
 
-| Hypothetical r | Growing weighted units | Scoped weighted units |
-| ---: | ---: | ---: |
-| 1.00 | 180,000 | 60,000 |
-| 0.10 | 63,000 | 60,000 |
-| 0.05 | 56,500 | 60,000 |
+## Additional coordination input
 
-At `0.05`, the longer cached input is cheaper in this normalized example. None of these coefficients is a provider price or observed cache hit rate. Outputs, real coordination, cache writes, retries, failed work, compaction, recovery, tools, time and human effort are excluded. Real cost/quality comparisons need the accounting in the [current protocol](BENCHMARK_PROTOCOL.md), including missing and unrun outcomes.
+Let H be input beyond the scoped scenario's already-included instructions and handoffs. Scoped input is `60k + H`; its margin versus curated is `30k − H`. Do not count an included handoff twice.
 
-## Three different mechanisms
+| Additional H | Scoped total | Relation to curated 90k |
+| ---: | ---: | :--- |
+| 0k | 60k | 33.3% lower assumed input |
+| 15k | 75k | 16.7% lower assumed input |
+| 30k | 90k | equal assumed input |
+| 45k | 105k | 16.7% higher assumed input |
 
-**Context selection** chooses what is supplied to the next request. **Lossy compaction** replaces details with a smaller representation and can omit needed information. **Prefix caching** reuses eligible repeated computation; it does not create semantic memory, remove cached input from logical context, free context capacity or deterministically delete instructions.
+The raw-input advantage disappears at H=30k. That is not a cost, latency or quality break-even. Additional calls also have output and time, and every extra role/probe/retry/compaction/recovery attempt belongs in evaluation.
 
-A scoped packet should retain the original request, latest corrections, relevant source, constraints and checks. Original sources remain retrievable. A short brief that omits a necessary rule is still wrong. A growing session with careful curation can be the right choice for a small clear task; coordination itself consumes work.
+## Caching and money
 
-The source distinguishes cumulative usage, request footprint and exact active occupancy. Exact occupancy stays **UNKNOWN** when it cannot be established. No new native run, benchmark, budget adjustment or recovery action is performed here. [Status](STATUS.md) · [Alpha readiness](ALPHA_READINESS.md).
+Prefix caching reuses matching computation; it does not delete instructions, create semantic memory or free logical context capacity. Context selection can avoid replaying irrelevant material; lossy summaries can omit useful requirements. Keep authoritative originals available for review. Do not infer that every long prompt automatically drops instructions or that a fresh session guarantees retention.
 
-## Reproduce the arithmetic
+The old toy example is `50k + 0.05×130k = 56.5k` normalized weighted units versus 60k assumed uncached scoped inputs. It deliberately excludes cache-write premiums, output and actual observations. The 0.05 coefficient is hypothetical, not a current complete provider price model. It only shows why fewer raw tokens do not determine price order.
 
-Canonical inputs: [context-budget.json](../showcase/capri/source-match/source/assets/data/context-budget.json). Calculator: [capri_context_budget.py](../tools/capri_context_budget.py). [Reproducible result](../showcase/capri/source-match/context-budget-results.json).
+Actual accounting needs disjoint ordinary-input, cached-read, cache-write and output buckets with applicable model/request tiers, across every attempt. Tools, infrastructure, latency and human work are separate dimensions. Use the preserved [benchmark protocol](BENCHMARK_PROTOCOL.md); comparison rows remain unrun and missing usage stays missing. No native/model/paid experiment is launched by this presentation.
 
-```sh
-python3 tools/capri_context_budget.py
-```
-
-The calculator uses exact decimal arithmetic and labels results as assumptions, with no measured-savings field. It does not read model sessions, pricing, credentials or usage telemetry.
-
-## Primary reading
-
-[Anthropic: effective context engineering](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents) and [its multi-agent research system](https://www.anthropic.com/research/multi-agent-research-system) discuss relevant design choices and coordination tradeoffs. They do not benchmark CAPRI; vendor percentages are not transferred to this illustration.
+[Visual story and controls](VISUAL_STORY.md) · [Fixture explanation](CAPRI_EXPLAINS.md) · [Current qualification](STATUS.md).
