@@ -45,7 +45,7 @@
     request = value;
     if (window.sceneApp) sceneApp.scenes.horizon.storyRequest = value;
     const layout = requestInput.closest('[data-lesson]').querySelector('.story-frame').dataset.layout;
-    for (const chart of charts) if (chart.layout === (layout === 'landscape' ? 'wide' : 'portrait')) drawGuide(chart, progress, animate);
+    for (const chart of charts) if (chart.layout === (layout === 'graph-wide' ? 'wide' : 'portrait')) drawGuide(chart, progress, animate);
   }
   function selectBudget(value) {
     const row = data.model.sensitivity.find(item => item.additional_input === value);
@@ -61,10 +61,10 @@
   function sizeFrame(frame) {
     const name = frame.closest('[data-lesson]').dataset.lesson;
     const lesson = data.config.lessons[name];
-    const layout = exporting ? query.get('layout') : (lesson.family === 'graph' ? 'graph' : lesson.family === 'support' ? 'support' : 'portrait');
+    const layout = exporting ? query.get('layout') : (lesson.mobile_layout && innerWidth <= data.formats.responsive.breakpoint_px ? lesson.mobile_layout : lesson.root_layout);
     frame.dataset.layout = layout;
     const size = data.formats.families[data.formats.layouts[layout]];
-    frame.parentElement.style.width = size.width + 'px';
+    frame.parentElement.style.width = exporting || !lesson.mobile_layout || layout === lesson.mobile_layout ? size.width + 'px' : (name === 'graph' ? '100%' : 'calc((100% - 8px) / 2)');
     frame.firstElementChild.style.transform = `scale(${frame.clientWidth / size.width})`;
   }
   const frames = [...document.querySelectorAll('.story-frame')];

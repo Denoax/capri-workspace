@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compose V5 compact roles around the existing source renderer; no new media sources."""
+"""Compose localized V6 panel variants around the existing source renderer; no new media sources."""
 from pathlib import Path
 import hashlib,html,json,re
 from capri_context_budget import story_model
@@ -37,6 +37,27 @@ def chart(model, portrait=True):
         pieces.append(f'<text x="24" y="{446+i*34}" font-size="26" fill="{colors[name]}">{html.escape(policy["label"])} · {policy["total"]//1000}k total</text>')
     pieces.append('</svg>');return ''.join(pieces),{'x':xs,'points':points,'top':top,'bottom':bottom}
 
+def chart_wide(model):
+    left,right,top,bottom=90,800,122,430
+    xs=[round(left+(right-left)*i/5,3) for i in range(6)]
+    ys=lambda v:round(bottom-(bottom-top)*v/55000,3)
+    pieces=['<svg class="story-chart wide-chart" data-layout="wide" viewBox="0 0 1200 540" fill="#f4f1ee" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrative inputs, not a CAPRI benchmark. Three assumed input policies across six requests, in thousand tokens." style="font-family:Inter,sans-serif">','<rect width="1200" height="540" fill="#100a19"/>','<text x="32" y="49" font-size="36" font-family="Manrope,sans-serif" font-weight="500">Illustrative inputs</text>','<text x="760" y="47" font-size="28">Not a CAPRI benchmark</text>','<text x="32" y="92" font-size="28" fill="#c9c3d4">Input / request · thousand tokens</text>']
+    for v in range(0,51,10):
+        y=ys(v*1000);pieces.extend([f'<path d="M{left},{y}H{right}" stroke="#3d3448"/>',f'<text x="{left-18}" y="{y+9}" text-anchor="end" font-size="28">{v}</text>'])
+    for i,x in enumerate(xs):pieces.append(f'<text x="{x}" y="473" text-anchor="middle" font-size="28">{i+1}</text>')
+    pieces+=['<text x="445" y="520" text-anchor="middle" font-size="28">Request number</text>',f'<path data-current-rule="" d="M{xs[0]},{top}V{bottom}" stroke="#f4f1ee" stroke-dasharray="4 6" opacity=".65"/>']
+    points={};colors={'growing':'#ff438a','curated':'#c9c3d4','scoped':'#3be598'}
+    for i,policy in enumerate(model['policies']):
+        name=policy['id'];points[name]=[[x,ys(v)] for x,v in zip(xs,policy['values'])];path='M'+'L'.join(f'{x},{y}' for x,y in points[name]);dash=' stroke-dasharray="9 7"' if name=='curated' else ''
+        pieces.append(f'<path d="{path}" fill="none" stroke="{colors[name]}" stroke-width="3"{dash}/>')
+        for x,y in points[name]:
+            if name=='scoped':pieces.append(f'<path d="M{x},{y-5}l5,5 -5,5 -5,-5Z" fill="{colors[name]}"/>')
+            elif name=='curated':pieces.append(f'<rect x="{x-5}" y="{y-5}" width="10" height="10" fill="{colors[name]}"/>')
+            else:pieces.append(f'<circle cx="{x}" cy="{y}" r="5" fill="{colors[name]}"/>')
+        pieces.append(f'<circle data-current-dot="{name}" cx="{points[name][0][0]}" cy="{points[name][0][1]}" r="8" fill="#100a19" stroke="{colors[name]}" stroke-width="3"/>')
+        pieces.append(f'<text x="850" y="{163+i*112}" font-size="28" fill="{colors[name]}">{html.escape(policy["label"])}</text><text x="850" y="{202+i*112}" font-size="28" fill="{colors[name]}">· {policy["total"]//1000}k total</text>')
+    pieces.append('</svg>');return ''.join(pieces),{'x':xs,'points':points,'top':top,'bottom':bottom}
+
 def replace_once(text, old, new):
     if text.count(old)!=1:raise ValueError('Unexpected source boundary: '+old[:80])
     return text.replace(old,new,1)
@@ -63,8 +84,8 @@ def main():
     sharks=sharks.replace('Relevant source. Current correction.<br><code>blank → Untitled</code>','<strong>Request + latest correction</strong><br>Relevant source<br>Allowed files + checks<br>Originals retrievable')
     sharks=sharks.replace('The task stays legible while everything around it moves.','Select what the next decision needs. Keep the request and compatible rules together.')
     horizon=native[1].replace('<section class="cs-panel"','<section data-story-scene="horizon" class="cs-panel"',1)
-    svg,points=chart(model);graphs={'portrait':points};(STORY/'input-portrait.svg').write_text(svg+'\n')
-    math='<section data-lesson="graph" data-family="graph" id="story-graph"><div class="story-frame"><div class="story-artboard"><div class="story-math">'+svg+'</div></div></div><div class="story-controls"><label for="story-request">Inspect request</label><select id="story-request">'+''.join(f'<option value="{i}">{i} of 6</option>' for i in range(1,model['calls']+1))+'</select><output id="story-values"></output></div></section>'
+    svg,points=chart(model);wide_svg,wide_points=chart_wide(model);graphs={'portrait':points,'wide':wide_points};(STORY/'input-portrait.svg').write_text(svg+'\n');(STORY/'input-panel.svg').write_text(wide_svg+'\n')
+    math='<section data-lesson="graph" data-family="graph" id="story-graph"><div class="story-frame"><div class="story-artboard"><div class="story-math">'+svg+wide_svg+'</div></div></div><div class="story-controls"><label for="story-request">Inspect request</label><select id="story-request">'+''.join(f'<option value="{i}">{i} of 6</option>' for i in range(1,model['calls']+1))+'</select><output id="story-values"></output></div></section>'
     panels={}
     for name in ['hands','rain','dots','cat','stack']:
         canvas_at=original.index('data-scene="'+name+'"');start=original.rfind('<section',0,canvas_at);panels[name]=section(original[start:],r'class="cp-panel[^\"]*"')
@@ -93,7 +114,7 @@ def main():
     dots=re.sub(r'<div class="cp-copy">.*?</div>','<div class="cp-copy"><h3>Count coordination.</h3><p>Additional input beyond the brief</p></div>',dots,flags=re.S)
     stack=panels['stack'].replace('Bring the brief together.','Keep the evidence.').replace('Scope, correction and evidence arrive as one handoff.','Continue with offline checks.')
     workflow='<div id="handoff-comic-full-sprites" data-lesson="workflow" data-family="illustration">'+frame(workflow,'workflow',formats,outer=False)+'</div>'
-    pairs='<div class="story-pair">'+workflow+frame(sharks,'brief',formats)+'</div>'+math+'<div class="story-pair">'+frame(horizon,'horizon',formats)+frame(dots,'coordination',formats)+'</div><div class="story-pair">'+frame(hands,'handoff',formats)+frame(cat,'checking',formats)+'</div><div class="story-pair story-support">'+frame(rain,'requirements',formats)+frame(stack,'closing',formats)+'</div>'
+    pairs='<div class="story-pair story-wide">'+workflow+frame(sharks,'brief',formats)+'</div>'+math+'<div class="story-pair story-wide">'+frame(horizon,'horizon',formats)+frame(dots,'coordination',formats)+'</div><div class="story-pair">'+frame(hands,'handoff',formats)+frame(cat,'checking',formats)+'</div><div class="story-pair story-support story-wide">'+frame(rain,'requirements',formats)+frame(stack,'closing',formats)+'</div>'
     lessons='<div id="capri-source-scenes"><div id="capri-reference-composites">'+pairs+'</div></div>'
     intro='<header class="story-intro native-text"><h1>CAPRI</h1><p>Planning, coding and review get their own Codex sessions. Explicit handoffs carry current decisions, relevant files, scope and checks. One worker edits; a separate reviewer checks the candidate; you decide what ships.</p><nav><a href="#handoff-comic-full-sprites">Workflow</a><a href="#scene-horizon">Inputs</a><a href="#scene-hands">Correction</a><a href="#scene-dots">Coordination</a><a href="#scene-cat">Checking</a><a href="../../../../docs/QUICKSTART.md">Setup</a></nav><p><a href="../../../../README.md">Repository README</a> · <a href="../../../../docs/README_STATIC.md">Complete static edition</a> · <a href="../../../../docs/VISUAL_STORY.md">Sources and build record</a></p></header>'
     body=intro+lessons+'<footer class="native-text"><p>Illustrative inputs and credited source-reference art; no model result is depicted. <a href="../../../../docs/STATUS.md">Native qualification remains pending.</a> <a href="source-match.html">Preserved source player</a></p></footer>'
@@ -119,12 +140,18 @@ def main():
     adapted=adapted.replace("actor.draw(ctx, 'review', time, 70 - 75 * (1 - arrival), 222, .085,", "actor.draw(ctx, 'review', time, data.storyFormats.actor_placement.cat.x - 25 * (1 - arrival), data.storyFormats.actor_placement.cat.y, data.storyFormats.actor_placement.cat.scale,")
     adapted=adapted.replace('z-index:4','z-index:1')
     adapted=adapted.replace("data.rig = window.CAPRI_RIG;", "data.rig = window.CAPRI_RIG; data.storyFormats = JSON.parse(document.getElementById('story-data').textContent).formats;")
+    helper="function storyVariant(scene, key, name = scene.name) { const f=data.storyFormats, layout=scene.element.querySelector('.story-frame')?.dataset.layout; return f.variants?.[layout]?.[key]?.[name] ?? f[key][name]; }\n"
+    adapted=adapted.replace('  class Scene {',helper+'  class Scene {')
+    for name in ['horizon','sharks','workflow']:
+        adapted=adapted.replace('data.storyFormats.actor_placement.'+name, "storyVariant(this, 'actor_placement', '"+name+"')")
+    for name in ['horizon','sharks']:
+        adapted=adapted.replace('data.storyFormats.native_world.'+name, "storyVariant(this, 'native_world', '"+name+"')")
     story_data={'model':model,'config':config,'graphs':graphs,'formats':formats}
     ui=(STORY/'story-ui.js').read_text();style='\n'.join(re.findall(r'<style>(.*?)</style>',original,re.S)[1:])+'\n'+(STORY/'story.css').read_text()+'\n'+format_css(formats);(STORY/'scenes.js').write_text('\n'.join(line.rstrip() for line in adapted.splitlines())+'\n')
     page=replace_once(page,'<script>'+old_js+'</script>','<script type="application/json" id="story-data">'+json.dumps(story_data,separators=(',',':'))+'</script><script>'+ui+'</script><script>'+adapted+'</script>')
     page=re.sub(r'<style>(.*?)</style>',lambda m:'<style>'+re.sub(r'\.export[^{}]*\{[^{}]*\}','',m[1])+'</style>',page,count=1,flags=re.S)
     page=page.replace('</style>','\n'+style+'</style>',1);page=page.replace('CAPRI · source-match companion','CAPRI · visual story')
     (COMP/'index.html').write_text('\n'.join(line.rstrip() for line in page.splitlines())+'\n')
-    (STORY/'SOURCE_RECORD.json').write_text(json.dumps({'base':'18fecd7b51c8a2a6088a8a2ef2aa7cb4a0ba33ee','handoff_sha256':'fb7eda9ad071ec3df0136320cf01d09a7f02f12a59c0fc70641b2f1dc2a3490b','method':'V5 compact content roles and isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.','lessons':config['lessons'],'root_selection':{name:{'layout':lesson['root_layout'],'role':formats['layouts'][lesson['root_layout']],'display_width':formats['families'][formats['layouts'][lesson['root_layout']]]['display_width']} for name,lesson in config['lessons'].items()},'accent':{'file':'accent.svg','method':'Independent geometric CAPRI rule/interruption; no third-party art copied.'},'format_file':'format.json','format_sha256':hashlib.sha256((STORY/'format.json').read_bytes()).hexdigest(),'format_reference':formats['references'],'canonical_input':str(source.relative_to(ROOT)),'canonical_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'legacy_companion':'../source-match/companion/source-match.html','rights':'Original notices, OFL/MIT and unresolved media/character/shark rights unchanged; private review only.'},indent=2)+'\n')
-    print('V5 story composed; original renderer and all source assets preserved')
+    (STORY/'SOURCE_RECORD.json').write_text(json.dumps({'base':'8caee8b71c9bffb67e475e6693bdcfccc0cd8bb9','handoff_sha256':'d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b','method':'V6 annotated wide variants for marked groups; V5 mobile/unmarked art preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.','lessons':config['lessons'],'root_selection':{name:{'layout':lesson['root_layout'],'role':formats['layouts'][lesson['root_layout']],'display_width':formats['families'][formats['layouts'][lesson['root_layout']]]['display_width'],'mobile_layout':lesson.get('mobile_layout')} for name,lesson in config['lessons'].items()},'accent':{'file':'accent.svg','method':'Independent geometric CAPRI rule/interruption; no third-party art copied.'},'format_file':'format.json','format_sha256':hashlib.sha256((STORY/'format.json').read_bytes()).hexdigest(),'annotation_source':formats['annotation_source'],'format_reference':formats['references'],'canonical_input':str(source.relative_to(ROOT)),'canonical_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'legacy_companion':'../source-match/companion/source-match.html','rights':'Original notices, OFL/MIT and unresolved media/character/shark rights unchanged; private review only.'},indent=2)+'\n')
+    print('V6 annotated variants composed; original renderer and all source assets preserved')
 if __name__=='__main__':main()

@@ -122,6 +122,7 @@
     }
     ctx.restore();
   }
+function storyVariant(scene, key, name = scene.name) { const f=data.storyFormats, layout=scene.element.querySelector('.story-frame')?.dataset.layout; return f.variants?.[layout]?.[key]?.[name] ?? f[key][name]; }
   class Scene {
     constructor(name, def) {
       Object.assign(this, def); this.name = name; this.time = def.still; this.running = false; this.visible = false; this.last = 0; this.frames = 0;
@@ -220,7 +221,7 @@
         const sample = i === phase ? local : 0;
         const css = canvas.getBoundingClientRect(), fit = Math.min(css.width / 240, css.height / 220), dpr = exportName ? 1 : Math.min(2, devicePixelRatio || 1);
         ctx.setTransform(dpr * fit, 0, 0, dpr * fit, dpr * (css.width - 240 * fit) / 2, dpr * (css.height - 220 * fit) / 2);
-        const a = actor.draw(ctx, pose, sample, data.storyFormats.actor_placement.workflow.x, data.storyFormats.actor_placement.workflow.y, data.storyFormats.actor_placement.workflow.scale);
+        const a = actor.draw(ctx, pose, sample, storyVariant(this, 'actor_placement', 'workflow').x, storyVariant(this, 'actor_placement', 'workflow').y, storyVariant(this, 'actor_placement', 'workflow').scale);
         const box = canvas.getBoundingClientRect(); const world = p => [box.left - rootBox.left + (box.width - 240 * fit) / 2 + p[0] * fit, box.top - rootBox.top + (box.height - 220 * fit) / 2 + p[1] * fit];
         anchors.push({hand: world(a.hand), receive: world(a.receive)});
       });
@@ -235,14 +236,14 @@
       }
     }
     paintNative(time) {
-      const canvas = this.element.querySelector('[data-actor]'), horizon = this.name === 'horizon', w = horizon ? data.storyFormats.native_world.horizon[0] : data.storyFormats.native_world.sharks[0], h = horizon ? data.storyFormats.native_world.horizon[1] : data.storyFormats.native_world.sharks[1], ctx = surface(canvas, w, h);
+      const canvas = this.element.querySelector('[data-actor]'), horizon = this.name === 'horizon', w = horizon ? storyVariant(this, 'native_world', 'horizon')[0] : storyVariant(this, 'native_world', 'sharks')[0], h = horizon ? storyVariant(this, 'native_world', 'horizon')[1] : storyVariant(this, 'native_world', 'sharks')[1], ctx = surface(canvas, w, h);
       if (!ctx) return;
       const phase = time / this.duration;
       ctx.save(); ctx.globalAlpha = 1;
       if (horizon) {
-        const p = data.storyFormats.actor_placement.horizon, q = smooth(phase < .5 ? phase * 2 : (1 - phase) * 2), x = p.x - p.x_travel * q, y = p.y + p.y_travel * Math.sin(Math.PI * q);
-        actor.draw(ctx, 'plan', time, x, y, data.storyFormats.actor_placement.horizon.scale, -.15 + .27 * q);
-      } else actor.draw(ctx, 'plan', time * 6400 / this.duration, data.storyFormats.actor_placement.sharks.x, data.storyFormats.actor_placement.sharks.y, data.storyFormats.actor_placement.sharks.scale);
+        const p = storyVariant(this, 'actor_placement', 'horizon'), q = smooth(phase < .5 ? phase * 2 : (1 - phase) * 2), x = p.x - p.x_travel * q, y = p.y + p.y_travel * Math.sin(Math.PI * q);
+        actor.draw(ctx, 'plan', time, x, y, storyVariant(this, 'actor_placement', 'horizon').scale, -.15 + .27 * q);
+      } else actor.draw(ctx, 'plan', time * 6400 / this.duration, storyVariant(this, 'actor_placement', 'sharks').x, storyVariant(this, 'actor_placement', 'sharks').y, storyVariant(this, 'actor_placement', 'sharks').scale);
       ctx.restore();
       // Native simulations remain unbounded live. Only exported excerpts have a
       // short explicit dark bridge, covering an otherwise nonperiodic world seam.

@@ -1,7 +1,7 @@
 {
-  "base": "18fecd7b51c8a2a6088a8a2ef2aa7cb4a0ba33ee",
-  "handoff_sha256": "fb7eda9ad071ec3df0136320cf01d09a7f02f12a59c0fc70641b2f1dc2a3490b",
-  "method": "V5 compact content roles and isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
+  "base": "8caee8b71c9bffb67e475e6693bdcfccc0cd8bb9",
+  "handoff_sha256": "d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b",
+  "method": "V6 annotated wide variants for marked groups; V5 mobile/unmarked art preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
   "lessons": {
     "workflow": {
       "members": [
@@ -13,10 +13,12 @@
       "still_ms": 800,
       "families": [],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "brief": {
       "members": [
@@ -30,10 +32,12 @@
         "sharks"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "graph": {
       "members": [],
@@ -45,9 +49,14 @@
       "static_only": true,
       "family": "graph",
       "layouts": [
-        "graph"
+        "graph",
+        "graph-wide"
       ],
-      "root_layout": "graph"
+      "root_layout": "graph-wide",
+      "mobile_layout": "graph",
+      "static_layouts": [
+        "graph-wide"
+      ]
     },
     "horizon": {
       "members": [
@@ -61,10 +70,12 @@
         "horizon"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "coordination": {
       "members": [
@@ -78,10 +89,12 @@
         "dots"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "handoff": {
       "members": [
@@ -130,13 +143,16 @@
       ],
       "layouts": [
         "portrait",
-        "support"
+        "support",
+        "support-wide"
       ],
       "family": "illustration",
-      "root_layout": "support",
+      "root_layout": "support-wide",
       "static_layouts": [
-        "support"
-      ]
+        "support",
+        "support-wide"
+      ],
+      "mobile_layout": "support"
     },
     "closing": {
       "members": [
@@ -151,57 +167,71 @@
       ],
       "static_only": true,
       "layouts": [
-        "support"
+        "support",
+        "support-wide"
       ],
       "family": "support",
-      "root_layout": "support"
+      "root_layout": "support-wide",
+      "mobile_layout": "support",
+      "static_layouts": [
+        "support-wide"
+      ]
     }
   },
   "root_selection": {
     "workflow": {
-      "layout": "portrait",
-      "role": "illustration",
-      "display_width": 280
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
     },
     "brief": {
-      "layout": "portrait",
-      "role": "illustration",
-      "display_width": 280
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
     },
     "graph": {
-      "layout": "graph",
-      "role": "graph",
-      "display_width": 320
+      "layout": "graph-wide",
+      "role": "graph-wide",
+      "display_width": "100%",
+      "mobile_layout": "graph"
     },
     "horizon": {
-      "layout": "portrait",
-      "role": "illustration",
-      "display_width": 280
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
     },
     "coordination": {
-      "layout": "portrait",
-      "role": "illustration",
-      "display_width": 280
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
     },
     "handoff": {
       "layout": "portrait",
       "role": "illustration",
-      "display_width": 280
+      "display_width": 280,
+      "mobile_layout": null
     },
     "checking": {
       "layout": "portrait",
       "role": "illustration",
-      "display_width": 280
+      "display_width": 280,
+      "mobile_layout": null
     },
     "requirements": {
-      "layout": "support",
-      "role": "support",
-      "display_width": 240
+      "layout": "support-wide",
+      "role": "support-wide",
+      "display_width": "49.5%",
+      "mobile_layout": "support"
     },
     "closing": {
-      "layout": "support",
-      "role": "support",
-      "display_width": 240
+      "layout": "support-wide",
+      "role": "support-wide",
+      "display_width": "49.5%",
+      "mobile_layout": "support"
     }
   },
   "accent": {
@@ -209,7 +239,52 @@
     "method": "Independent geometric CAPRI rule/interruption; no third-party art copied."
   },
   "format_file": "format.json",
-  "format_sha256": "4ce7a24f52f5562fa046b4c0703e4625232d332f8c19ee72a9451eb1eacf535a",
+  "format_sha256": "d7be98991bf3ecb6da8da548650ec351c0ed6fbd7ee19ed3affa57acf060600c",
+  "annotation_source": {
+    "packet_sha256": "d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b",
+    "authority": "Four original orange-marked screenshots; coordinates are cropped screenshot pixels, not CSS positions.",
+    "groups": [
+      [
+        "workflow",
+        "brief"
+      ],
+      [
+        "graph"
+      ],
+      [
+        "horizon",
+        "coordination"
+      ],
+      [
+        "requirements",
+        "closing"
+      ]
+    ],
+    "unmarked": [
+      "handoff",
+      "checking",
+      "hero",
+      "accent.svg"
+    ],
+    "screenshots": {
+      "annotations/image(20261024-144712).png": {
+        "bytes": 128210,
+        "sha256": "30f4e4cc16d53fdf771ff4ec8a3d92d3016b6853c9046f36c2083a1cae45704f"
+      },
+      "annotations/image(20261024-144733).png": {
+        "bytes": 65521,
+        "sha256": "485c17fadcff7907f8154f1732eceb334610e346514700f49949061b694ec95d"
+      },
+      "annotations/image(20261024-144758).png": {
+        "bytes": 240766,
+        "sha256": "b51edf916d13214f8ae7f8c2a1eae11902980e90197ce37b96e6068ee71015ee"
+      },
+      "annotations/image(20261024-144825).png": {
+        "bytes": 51930,
+        "sha256": "d93af0d1cb93283eb21db1ffe8c7467c39d7cf70ebfe66362c9cf1a42508d3d9"
+      }
+    }
+  },
   "format_reference": {
     "konata": {
       "url": "https://github.com/Denoax/konata-hyprland-dotfiles/tree/a9f433ad9cf5b870ee18ceed72d7200f402008e8",

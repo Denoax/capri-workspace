@@ -42,4 +42,7 @@ def format_css(f):
         lesson={'hands':'handoff','cat':'checking','rain':'requirements','dots':'coordination','stack':'closing'}.get(name)
         if lesson:css.append(f'[data-lesson="{lesson}"] .cp-scene{{aspect-ratio:{w}/{h}!important}}')
     for name,(w,h) in f['native_world'].items():css.append(f'[data-story-scene="{name}"] .cs-stage{{aspect-ratio:{w}/{h}!important}}')
+    for layout,variant in f.get('variants',{}).items():
+        for name,(w,h) in variant.get('native_world',{}).items():
+            css.append(f'[data-story-scene="{name}"] .story-frame[data-layout="{layout}"] .cs-stage{{aspect-ratio:{w}/{h}!important}}')
     return '\n'.join(css)

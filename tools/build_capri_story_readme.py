@@ -1,18 +1,24 @@
 #!/usr/bin/env python3
-"""Generate compact V5 README/static routes from canonical data and display roles."""
+"""Generate localized V6 README/static routes from canonical data and display roles."""
 from pathlib import Path
 import html,json,re
 ROOT=Path(__file__).resolve().parents[1];STORY=ROOT/'showcase/capri/story'
 FORMATS=json.loads((STORY/'format.json').read_text());CONFIG=json.loads((STORY/'story.json').read_text())
 ALTS={'workflow':'Three full-body poses: Plan returns scope/checks, Build returns a patch, Review returns findings. One writer; the human decides.','brief':'Actual native shark field, full-body Capri and a persistent brief: request/correction, relevant source, scope/checks and retrievable originals.','horizon':'The original native ray-traced ASCII horizon with full-body Capri; credited illustration of selective input, not a measured context window.','coordination':'The supplied dotted loop carries60k+H. Additional H30k yields90k, equal to the curated input assumption.','handoff':'Original reaching hands carry blank to Untitled beside full-body Capri. Authored fixture A, not an observed model failure.','checking':'The source cat takeover and eye-anchored beams accompany full-body Review Capri. This illustration does not approve or secure code.','graph':'Illustrative inputs, not a CAPRI benchmark: six assumed requests, thousand tokens per request. Growing history180k, curated 90k, scoped60k.','requirements':'Small source skull/sword/rain vignette: keep original rules, correction and checks retrievable.','closing':'Small source elastic-stack vignette with Capri: keep evidence together and continue to offline checks.'}
 def image(name,static=False):
-    lesson=CONFIG['lessons'][name];layout=lesson['root_layout'];family=FORMATS['families'][FORMATS['layouts'][layout]];prefix='showcase/capri/story/exports/'+name+'-'+layout
-    extension='png' if static or lesson.get('static_only') or layout in lesson.get('static_layouts',[]) else 'gif'
-    # Source dimension attributes can also force a CSS height in hosted wrappers.
-    # A numeric width cap plus the actual file's intrinsic ratio survives sanitizing.
-    return f'<picture><source media="(prefers-reduced-motion: reduce)" srcset="{prefix}.png"><img src="{prefix}.{extension}" alt="{html.escape(ALTS[name],quote=True)}" width="{family["display_width"]}"></picture>'
+    lesson=CONFIG['lessons'][name];layout=lesson['root_layout'];family=FORMATS['families'][FORMATS['layouts'][layout]]
+    def source(which,still=False):
+        extension='png' if still or static or lesson.get('static_only') or which in lesson.get('static_layouts',[]) else 'gif'
+        return 'showcase/capri/story/exports/'+name+'-'+which+'.'+extension
+    sources=[]
+    if 'mobile_layout' in lesson:
+        mobile=lesson['mobile_layout'];cap=FORMATS['families'][FORMATS['layouts'][mobile]]['display_width'];query='(max-width:'+str(FORMATS['responsive']['breakpoint_px'])+'px)'
+        sources += [f'<source media="{query} and (prefers-reduced-motion: reduce)" srcset="{source(mobile,True)}" width="{cap}">',f'<source media="{query}" srcset="{source(mobile)}" width="{cap}">']
+    sources.append(f'<source media="(prefers-reduced-motion: reduce)" srcset="{source(layout,True)}">')
+    return '<picture>'+''.join(sources)+f'<img src="{source(layout)}" alt="{html.escape(ALTS[name],quote=True)}" width="{family["display_width"]}"></picture>'
 def group(*names,static=False,single=False):
-    return '\n\n'.join('<p align="center">'+image(n,static)+'</p>' for n in names) if single else '<p align="center">'+'\n'.join(image(n,static) for n in names)+'</p>'
+    paired=any('mobile_layout' in CONFIG['lessons'][n] for n in names)
+    return '\n\n'.join('<p align="center">'+image(n,static)+'</p>' for n in names) if single and not paired else '<p align="center">'+'\n'.join(image(n,static) for n in names)+'</p>'
 def divider():
     return '<p align="center"><img src="showcase/capri/story/accent.svg" alt="" width="'+str(FORMATS['families']['divider']['display_width'])+'"></p>'
 def build(static=False):
@@ -123,7 +129,7 @@ GitHub displays media and native links/disclosures. The local companion supplies
 
 def main():
     root=build();(ROOT/'README.md').write_text(root)
-    static=build(static=True);static=re.sub(r'((?:src|srcset|href)="|\]\()((?!https?:|#)[^"\s)]+)',lambda m:m[1]+'../'+m[2],static);(ROOT/'docs/README_STATIC.md').write_text('<!-- Generated from the same compact V5 source/data. -->\n'+static)
+    static=build(static=True);static=re.sub(r'((?:src|srcset|href)="|\]\()((?!https?:|#)[^"\s)]+)',lambda m:m[1]+'../'+m[2],static);(ROOT/'docs/README_STATIC.md').write_text('<!-- Generated from the same V6 source/data. -->\n'+static)
     from build_capri_story_docs import main as docs
     docs(json.loads((STORY/'model-results.json').read_text()))
     print('Compact root and single-column static edition rebuilt')

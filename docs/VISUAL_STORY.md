@@ -1,3 +1,13 @@
+# V6 annotated panel sizing
+
+V6 changes only the four groups marked in the supplied annotations. Workflow/brief and horizon/coordination use700×600 source panels at49.5% of the README article each. The graph is a separately redrawn1200×540 full-row figure; requirements/closing use960×400 short half-row vignettes. No finished portrait is stretched or cropped into these frames.
+
+At viewport widths up to767px, picture sources select the byte-preserved V5 portrait/support assets and their original numeric caps. Source width hints are numeric and apply only to that mobile selection; neither images nor sources have forced height. The desktop49.5% pictures and native whitespace form a small gutter. GitHub's Markdown API sanitizer retains this contract; local browser measurements verify the actual emitted structure, while authenticated hosted GitHub remains a separate review.
+
+Handoff/checking remain480×640 at280px; the original hero and divider bytes, all page prose, fixture rules and numerical assumptions are preserved. Source controls and graph/H controls remain outside the scaled artwork. The wide graph uses the same per-request55k Y-domain and six actual input rows. No performance improvement or native qualification is claimed.
+
+Canonical dimensions/layout choices live in `showcase/capri/story/format.json` and `story.json`. The source record identifies the four screenshot hashes and V5 base. Default exports rebuild only the three new marked layout variants; existing mobile/unmarked exports are retained byte-for-byte. Rebuild using the existing build/export/README/manifest commands below. Capture evidence outside the checkout. Historical V5 role notes below describe the retained narrow/unmarked variants, not the new desktop caps.
+
 # CAPRI compact visual story
 
 V5 keeps V3/V4's product explanation, original hero, three poses, input assumptions and seven source families. It replaces the rejected landscape-first sizing with six compact portrait illustrations, one separate numerical graph and two small supporting artworks. Native headings carry the reading structure; two thin independently authored CAPRI rules mark chapter boundaries.

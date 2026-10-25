@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "canonical_inputs": "../source-match/source/assets/data/context-budget.json",
   "evidence_class": "ILLUSTRATIVE_INPUTS_NOT_A_CAPRI_BENCHMARK",
   "overhead": {
@@ -38,10 +38,12 @@
       "still_ms": 800,
       "families": [],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "brief": {
       "members": [
@@ -55,10 +57,12 @@
         "sharks"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "graph": {
       "members": [],
@@ -70,9 +74,14 @@
       "static_only": true,
       "family": "graph",
       "layouts": [
-        "graph"
+        "graph",
+        "graph-wide"
       ],
-      "root_layout": "graph"
+      "root_layout": "graph-wide",
+      "mobile_layout": "graph",
+      "static_layouts": [
+        "graph-wide"
+      ]
     },
     "horizon": {
       "members": [
@@ -86,10 +95,12 @@
         "horizon"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "coordination": {
       "members": [
@@ -103,10 +114,12 @@
         "dots"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "handoff": {
       "members": [
@@ -155,13 +168,16 @@
       ],
       "layouts": [
         "portrait",
-        "support"
+        "support",
+        "support-wide"
       ],
       "family": "illustration",
-      "root_layout": "support",
+      "root_layout": "support-wide",
       "static_layouts": [
-        "support"
-      ]
+        "support",
+        "support-wide"
+      ],
+      "mobile_layout": "support"
     },
     "closing": {
       "members": [
@@ -176,10 +192,15 @@
       ],
       "static_only": true,
       "layouts": [
-        "support"
+        "support",
+        "support-wide"
       ],
       "family": "support",
-      "root_layout": "support"
+      "root_layout": "support-wide",
+      "mobile_layout": "support",
+      "static_layouts": [
+        "support-wide"
+      ]
     }
   },
   "format": "format.json"

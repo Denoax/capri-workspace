@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "SOURCE_RECORD.json",
-      "bytes": 5921,
-      "sha256": "383b986523b0a628a5583001cff14987db46195c429bb6f93949412578685a14"
+      "bytes": 8067,
+      "sha256": "83f6c67dc1c0a9c14abb33ac39a93f8375f145b7a9f4be2b5cb121b4a4095455"
     },
     {
       "path": "accent.svg",
@@ -25,6 +25,21 @@
       "path": "exports/brief-landscape.png",
       "bytes": 92898,
       "sha256": "a4109c33400390faee4f3dc93f7a3a8ff5c3d8052d2fd21a17cf69e5cbebefdc"
+    },
+    {
+      "path": "exports/brief-panel-timeline.json",
+      "bytes": 127199,
+      "sha256": "1d2ce4927b36c7431ed1ce4ddbda792173c117b1be7d3b3ddacea5c4ea46564c"
+    },
+    {
+      "path": "exports/brief-panel.gif",
+      "bytes": 1892194,
+      "sha256": "57d0929bb44ea72dc3ecd7c1c202ee7e0ad485a02054e07368abee4abc975c02"
+    },
+    {
+      "path": "exports/brief-panel.png",
+      "bytes": 109484,
+      "sha256": "e2ed2100957a726d52a8d602778734b15360dcc25f19f339272d8c6549124c70"
     },
     {
       "path": "exports/brief-portrait-timeline.json",
@@ -82,6 +97,11 @@
       "sha256": "49a8c8aa3e6effda2d0214fba0cf30928207ecb2f77b03fdbdfdfb9e8f7e4c93"
     },
     {
+      "path": "exports/closing-support-wide.png",
+      "bytes": 32769,
+      "sha256": "67019caa542e76c64cb01e8bc390959573934ce5b381225d1aef8efa5e48a917"
+    },
+    {
       "path": "exports/closing-support.png",
       "bytes": 15910,
       "sha256": "79a4b3f0be3fca07d4c1b150f30dc5528b652b879eda0b4c7cdb6bb5289ba0bb"
@@ -122,6 +142,21 @@
       "sha256": "931bf9535378238fc773d1091bd223156f09c670a338252bc3f4a1955c56177f"
     },
     {
+      "path": "exports/coordination-panel-timeline.json",
+      "bytes": 40975,
+      "sha256": "76910103de127896725613672710ec49ecd29c1201bdb40232c1c06771db95f9"
+    },
+    {
+      "path": "exports/coordination-panel.gif",
+      "bytes": 702566,
+      "sha256": "0a5e12904b354e4614899a26cc8b8f9c58e25ae8c0d561c90c82d3206fbb507b"
+    },
+    {
+      "path": "exports/coordination-panel.png",
+      "bytes": 123009,
+      "sha256": "bcfc10201a9e4419eb29061844294585331e5436f5f582f77ac766b98f761008"
+    },
+    {
       "path": "exports/coordination-portrait-timeline.json",
       "bytes": 40978,
       "sha256": "2f11059a353549ad20b596ce408b81b91a262c0740f201d632cd661f9bfafd2b"
@@ -135,6 +170,11 @@
       "path": "exports/coordination-portrait.png",
       "bytes": 123654,
       "sha256": "17c62a9521ff4f828f516354a8e946029d3b2644690cb1ee381bd51a2624a98c"
+    },
+    {
+      "path": "exports/graph-graph-wide.png",
+      "bytes": 61630,
+      "sha256": "279ea1c6564b027635abcd9c94ffcd1ffbae13dbf83d53efd616709b6f228186"
     },
     {
       "path": "exports/graph-graph.png",
@@ -170,6 +210,21 @@
       "path": "exports/handoff-wide.png",
       "bytes": 224632,
       "sha256": "d43748038fd9bcfae2220a99f16d1f23ad4ea0f3111da750cd0f14629a878951"
+    },
+    {
+      "path": "exports/horizon-panel-timeline.json",
+      "bytes": 170164,
+      "sha256": "acfcfcf20d59ede8cad4cfd00cbcafa4c16624e10d3d8b7616cff40232493bf6"
+    },
+    {
+      "path": "exports/horizon-panel.gif",
+      "bytes": 3712496,
+      "sha256": "90db7527e16d357741a2602cc10e0efc750bb430ab66227a8729e07acd38bb51"
+    },
+    {
+      "path": "exports/horizon-panel.png",
+      "bytes": 360983,
+      "sha256": "252123a16d9a448cb21e460ea4148147197ce0324452b5f8b8ded8feaafd3bf1"
     },
     {
       "path": "exports/horizon-portrait-timeline.json",
@@ -232,6 +287,11 @@
       "sha256": "07f6dec153c9e35a093e633c3ce1da887b238f76843e1259bad3e48fa413f75c"
     },
     {
+      "path": "exports/requirements-support-wide.png",
+      "bytes": 154717,
+      "sha256": "117edbc187b633c36037ade076ac40a1e1f1cfc7b8d123664daf2a74d345093b"
+    },
+    {
       "path": "exports/requirements-support.png",
       "bytes": 78602,
       "sha256": "69be69392c8564cf9e04460416681e4e212028f9821b2d1f47707dadc30aec2a"
@@ -282,6 +342,21 @@
       "sha256": "0fcc58ce1026d44cfa978a57f5b76b04c960d74bde4d643d1aa1dc15a6cc3dca"
     },
     {
+      "path": "exports/workflow-panel-timeline.json",
+      "bytes": 372721,
+      "sha256": "d77cda02b08b4f30d822d415b64923b9c73ee443547cf882fdc8f16430f51618"
+    },
+    {
+      "path": "exports/workflow-panel.gif",
+      "bytes": 802396,
+      "sha256": "b9f6ad38049f5a70c8d0632567e3f8ca68abf11effbabbc641ca6234285b0b91"
+    },
+    {
+      "path": "exports/workflow-panel.png",
+      "bytes": 86275,
+      "sha256": "28dcc02ad4bc3b047172434147731ee7580be506662b09b5661e247ba2a7f1f3"
+    },
+    {
       "path": "exports/workflow-portrait-timeline.json",
       "bytes": 372698,
       "sha256": "abd3ecc7065693b569aec32b3e9d5ba54354381c80a96d53196688bf8cfcdbe7"
@@ -313,8 +388,13 @@
     },
     {
       "path": "format.json",
-      "bytes": 3359,
-      "sha256": "4ce7a24f52f5562fa046b4c0703e4625232d332f8c19ee72a9451eb1eacf535a"
+      "bytes": 6412,
+      "sha256": "d7be98991bf3ecb6da8da548650ec351c0ed6fbd7ee19ed3affa57acf060600c"
+    },
+    {
+      "path": "input-panel.svg",
+      "bytes": 4066,
+      "sha256": "da373ddcc623c6d9e14dfcfc70d721c17185bf19fa91724205a0e309fed68e71"
     },
     {
       "path": "input-portrait.svg",
@@ -333,23 +413,23 @@
     },
     {
       "path": "scenes.js",
-      "bytes": 25012,
-      "sha256": "5091ae4486e44a27de2119d373b4e982067809df1f9332e30d989997e187fece"
+      "bytes": 25308,
+      "sha256": "7060ac2e13f39612c19d46eb0f1d24a27daad9e82562ed52c9f3aeedb787fcb9"
     },
     {
       "path": "story-ui.js",
-      "bytes": 7580,
-      "sha256": "e8b096e59f41ead5d441567f49aef7e0524673e00e33e31fe82551b0561baa85"
+      "bytes": 7739,
+      "sha256": "693606f6fff48bc414134de71c12f7271e262e00bd85a94f39fb12b98a7de3c7"
     },
     {
       "path": "story.css",
-      "bytes": 6787,
-      "sha256": "2686c7aaa27213d317171decfa9a98ce77a39bb35fddd483fa76984f396118a5"
+      "bytes": 9488,
+      "sha256": "c16178969c138be17c750aed907981aede4ce9f10db5e2863be0d3d300305f61"
     },
     {
       "path": "story.json",
-      "bytes": 3669,
-      "sha256": "9d3e8d2c9a29fe7f2758837c241d0364240ae75c1e83f509e1feefc9bb1bd83f"
+      "bytes": 4188,
+      "sha256": "10aa415e27c4acbc11620842a4a05986a658d8fd5236258d92cd4589b5300ace"
     }
   ],
   "scope": "File identities; export provenance/timing are in each timeline. No perceptual acceptance.",
@@ -357,16 +437,29 @@
     "exports/workflow-portrait.png",
     "exports/workflow-portrait.gif",
     "exports/workflow-portrait-timeline.json",
+    "exports/workflow-panel.png",
+    "exports/workflow-panel.gif",
+    "exports/workflow-panel-timeline.json",
     "exports/brief-portrait.png",
     "exports/brief-portrait.gif",
     "exports/brief-portrait-timeline.json",
+    "exports/brief-panel.png",
+    "exports/brief-panel.gif",
+    "exports/brief-panel-timeline.json",
     "exports/graph-graph.png",
+    "exports/graph-graph-wide.png",
     "exports/horizon-portrait.png",
     "exports/horizon-portrait.gif",
     "exports/horizon-portrait-timeline.json",
+    "exports/horizon-panel.png",
+    "exports/horizon-panel.gif",
+    "exports/horizon-panel-timeline.json",
     "exports/coordination-portrait.png",
     "exports/coordination-portrait.gif",
     "exports/coordination-portrait-timeline.json",
+    "exports/coordination-panel.png",
+    "exports/coordination-panel.gif",
+    "exports/coordination-panel-timeline.json",
     "exports/handoff-portrait.png",
     "exports/handoff-portrait.gif",
     "exports/handoff-portrait-timeline.json",
@@ -377,18 +470,20 @@
     "exports/requirements-portrait.gif",
     "exports/requirements-portrait-timeline.json",
     "exports/requirements-support.png",
-    "exports/closing-support.png"
+    "exports/requirements-support-wide.png",
+    "exports/closing-support.png",
+    "exports/closing-support-wide.png"
   ],
   "root_exports": [
-    "exports/workflow-portrait.gif",
-    "exports/brief-portrait.gif",
-    "exports/graph-graph.png",
-    "exports/horizon-portrait.gif",
-    "exports/coordination-portrait.gif",
+    "exports/workflow-panel.gif",
+    "exports/brief-panel.gif",
+    "exports/graph-graph-wide.png",
+    "exports/horizon-panel.gif",
+    "exports/coordination-panel.gif",
     "exports/handoff-portrait.gif",
     "exports/checking-portrait.gif",
-    "exports/requirements-support.png",
-    "exports/closing-support.png"
+    "exports/requirements-support-wide.png",
+    "exports/closing-support-wide.png"
   ],
   "historical_exports": [
     "exports/brief-landscape-timeline.json",

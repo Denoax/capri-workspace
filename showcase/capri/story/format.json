@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "hero": {
     "width": 1000,
     "height": 343,
@@ -43,12 +43,48 @@
       "width": 1200,
       "height": 48,
       "display_width": 900
+    },
+    "panel": {
+      "width": 700,
+      "height": 600,
+      "display_width": "49.5%",
+      "inset": 24,
+      "gap": 12,
+      "heading": 36,
+      "body": 28,
+      "stage_width": 640,
+      "small_stage_width": 440,
+      "workflow_model_width": 208,
+      "workflow_model_height": 300
+    },
+    "graph-wide": {
+      "width": 1200,
+      "height": 540,
+      "display_width": "100%",
+      "inset": 0,
+      "gap": 12,
+      "heading": 36,
+      "body": 28
+    },
+    "support-wide": {
+      "width": 960,
+      "height": 400,
+      "display_width": "49.5%",
+      "inset": 32,
+      "gap": 16,
+      "heading": 36,
+      "body": 34,
+      "stage_width": 568,
+      "small_stage_width": 336
     }
   },
   "layouts": {
     "portrait": "illustration",
     "graph": "graph",
-    "support": "support"
+    "support": "support",
+    "panel": "panel",
+    "graph-wide": "graph-wide",
+    "support-wide": "support-wide"
   },
   "root_groups": [
     [
@@ -161,5 +197,96 @@
       "observation": "Native thematic rules and headings separate chapters."
     }
   },
-  "sizing_rule": "Numeric fallback width cap; no forced height on img or picture sources. Intrinsic ratio after decode; native pending/error states measured separately."
+  "sizing_rule": "Width-only desktop percentages on marked image fallbacks; selected mobile source numeric cap preserves the original portrait/support layout. No forced image/source height.",
+  "responsive": {
+    "breakpoint_px": 767,
+    "build_layouts": [
+      "panel",
+      "graph-wide",
+      "support-wide"
+    ],
+    "pair_width": "49.5%",
+    "graph_width": "100%",
+    "rule": "Width only; mobile selected source uses original numeric cap, no height hints. Native inline pictures wrap; no media tables or custom CSS required."
+  },
+  "variants": {
+    "panel": {
+      "native_world": {
+        "sharks": [
+          1100,
+          760
+        ],
+        "horizon": [
+          1100,
+          760
+        ]
+      },
+      "actor_placement": {
+        "sharks": {
+          "pose": "plan",
+          "x": 780,
+          "y": 350,
+          "scale": 0.35
+        },
+        "horizon": {
+          "pose": "plan",
+          "x": 700,
+          "x_travel": 120,
+          "y": 300,
+          "y_travel": 60,
+          "scale": 0.38
+        },
+        "workflow": {
+          "x": 120,
+          "y": 70,
+          "scale": 0.1555
+        }
+      }
+    }
+  },
+  "annotation_source": {
+    "packet_sha256": "d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b",
+    "authority": "Four original orange-marked screenshots; coordinates are cropped screenshot pixels, not CSS positions.",
+    "groups": [
+      [
+        "workflow",
+        "brief"
+      ],
+      [
+        "graph"
+      ],
+      [
+        "horizon",
+        "coordination"
+      ],
+      [
+        "requirements",
+        "closing"
+      ]
+    ],
+    "unmarked": [
+      "handoff",
+      "checking",
+      "hero",
+      "accent.svg"
+    ],
+    "screenshots": {
+      "annotations/image(20261024-144712).png": {
+        "bytes": 128210,
+        "sha256": "30f4e4cc16d53fdf771ff4ec8a3d92d3016b6853c9046f36c2083a1cae45704f"
+      },
+      "annotations/image(20261024-144733).png": {
+        "bytes": 65521,
+        "sha256": "485c17fadcff7907f8154f1732eceb334610e346514700f49949061b694ec95d"
+      },
+      "annotations/image(20261024-144758).png": {
+        "bytes": 240766,
+        "sha256": "b51edf916d13214f8ae7f8c2a1eae11902980e90197ce37b96e6068ee71015ee"
+      },
+      "annotations/image(20261024-144825).png": {
+        "bytes": 51930,
+        "sha256": "d93af0d1cb93283eb21db1ffe8c7467c39d7cf70ebfe66362c9cf1a42508d3d9"
+      }
+    }
+  }
 }

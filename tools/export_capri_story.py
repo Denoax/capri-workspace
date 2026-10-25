@@ -41,7 +41,10 @@ async def export(port,url,evidence,names,layouts,stills_only):
                     await c.evaluate((ROOT/'tools/capri_actor_bounds.js').read_text())
                     poster=OUT/f'{name}-{layout}.png';await capture(poster)
                     if stills_only or CONFIG['lessons'][name].get('static_only') or layout in CONFIG['lessons'][name].get('static_layouts',[]):
-                        records.append({'lesson':name,'layout':layout,'static':True,'size':[box['width'],box['height']],'poster_sha256':sha(poster)});print('Still',name,layout,box,flush=True);continue
+                        await c.evaluate(f'storyApp.renderLesson({json.dumps(name)},{CONFIG["lessons"][name]["still_ms"]})');bounds=await c.evaluate('capriActorBounds');
+                        if any(min(item['margins'])<0 or not item['uniform_surface'] for item in bounds):raise ValueError({'lesson':name,'layout':layout,'actor_bounds':bounds})
+                        await capture(poster)
+                        records.append({'actor_bounds':bounds,'lesson':name,'layout':layout,'static':True,'size':[box['width'],box['height']],'poster_sha256':sha(poster)});print('Still',name,layout,box,flush=True);continue
                     folder=evidence/layout/name;folder.mkdir(parents=True,exist_ok=True);frames=[];count=round(duration*fps/1000)
                     for i in range(count):
                         ms=i*1000/fps;await c.evaluate('window.capriActorBounds=[]');state=await c.evaluate(f'storyApp.renderLesson({json.dumps(name)},{ms})');path=folder/f'{i:04d}.png';await capture(path);bounds=await c.evaluate('capriActorBounds');
@@ -57,7 +60,7 @@ async def export(port,url,evidence,names,layouts,stills_only):
         finally:pump.cancel()
     return {'status':'PASS','records':records,'browser':browser,'scope':'Actual browser exports, not perceptual/human/native qualification'}
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--evidence',required=True,type=Path);p.add_argument('--lessons',nargs='+',choices=LESSONS,default=list(LESSONS));p.add_argument('--layouts',nargs='+',choices=['portrait','graph','support'],default=['portrait','graph','support']);p.add_argument('--stills-only',action='store_true');args=p.parse_args();OUT.mkdir(exist_ok=True);args.evidence.mkdir(parents=True,exist_ok=True)
+    p=argparse.ArgumentParser();p.add_argument('--evidence',required=True,type=Path);p.add_argument('--lessons',nargs='+',choices=LESSONS,default=list(LESSONS));p.add_argument('--layouts',nargs='+',choices=list(FORMATS['layouts']),default=FORMATS['responsive']['build_layouts']);p.add_argument('--stills-only',action='store_true');args=p.parse_args();OUT.mkdir(exist_ok=True);args.evidence.mkdir(parents=True,exist_ok=True)
     server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(ROOT)));Thread(target=server.serve_forever,daemon=True).start();profile=Path(tempfile.mkdtemp(prefix='owned-story-',dir=args.evidence));chrome=Path(os.environ.get('CAPRI_CHROMIUM',str(Path.home()/'.cache/ms-playwright/chromium-1243/chrome-linux64/chrome')))
     with (args.evidence/'chromium.log').open('w') as log:
         process=subprocess.Popen([str(chrome),'--headless=new','--use-angle=swiftshader','--enable-unsafe-swiftshader','--disable-extensions','--no-first-run','--no-default-browser-check','--remote-debugging-port=0','--user-data-dir='+str(profile),'about:blank'],stdout=log,stderr=log)

@@ -53,3 +53,6 @@ The [V3 story record](VISUAL_STORY.md) connects the preserved assets to the curr
 ## Compact format V5
 
 The original hero/source records remain. Six480×640 portrait compositions reuse the three-pose rig, native sharks/horizon and credited hands/dots/cat footage. A separate480×540 deterministic graph retains the canonical inputs. Rain and stack use small480×320 root vignettes; their source lessons remain interactive. `showcase/capri/story/format.json` defines numeric display caps and fixed uniform placements, and `SOURCE_RECORD.json` maps root/companion roles. The thin `accent.svg` is independently authored CAPRI geometry informed by published separator roles; it contains no third-party art. Source masks, anatomy, originals and notices are unchanged; keep private.
+
+
+V6 annotated sizing adds marked panel/graph-wide/support-wide derivatives from the same editable source. Original V5 portrait/mobile and unmarked handoff/checking, hero and accent files retain their byte identities. Screenshot authority/hashes and explicit root/mobile mapping are recorded in story/format.json and SOURCE_RECORD.json; no new generated visual media or source assets.

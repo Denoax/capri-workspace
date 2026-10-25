@@ -24,23 +24,31 @@ def check():
     require('id="story-request"' in page and 'id="story-overhead"' in page,'Missing actual local controls')
     graph=(STORY/'input-portrait.svg').read_text();ET.fromstring(graph)
     for term in ['illustrative inputs','not a capri benchmark','thousand tokens','request number',*[p['label'].lower() for p in model['policies']],*[str(p['total']//1000)+'k total' for p in model['policies']]]:require(term in graph.lower(),'Missing graph label: '+term)
-    expected={'illustration':(480,640,280),'graph':(480,540,320),'support':(480,320,240),'divider':(1200,48,900)}
+    expected={'illustration':(480,640,280),'graph':(480,540,320),'support':(480,320,240),'divider':(1200,48,900),'panel':(700,600,'49.5%'),'graph-wide':(1200,540,'100%'),'support-wide':(960,400,'49.5%')}
     require({name:tuple(item[k] for k in ['width','height','display_width']) for name,item in formats['families'].items()}==expected,'Compact family contract changed without reconciliation')
+    for filename,layout in [('input-portrait.svg','portrait'),('input-panel.svg','wide')]:
+        svg=ET.fromstring((STORY/filename).read_text());geometry=live['graphs'][layout];require(len(geometry['x'])==6 and len(set(geometry['x']))==6,'Graph X positions lost')
+        require(all(abs(geometry['x'][i+1]-geometry['x'][i]-(geometry['x'][1]-geometry['x'][0]))<.01 for i in range(5)),'Graph request spacing differs')
+        for policy in model['policies']:
+            for i,v in enumerate(policy['values']):
+                expected_y=geometry['bottom']-(geometry['bottom']-geometry['top'])*v/55000
+                require(abs(geometry['points'][policy['id']][i][1]-expected_y)<.001,'Graph per-request Y scale or inputs changed')
+            require(policy['label'] in ''.join(svg.itertext()) and str(policy['total']//1000)+'k total' in ''.join(svg.itertext()),'Wide graph label/total missing')
     root=(ROOT/'README.md').read_text();static=(ROOT/'docs/README_STATIC.md').read_text();markup=Markup();markup.feed(root)
     require(all('height' not in attrs for _,attrs in markup.media),'Forced image/source height can distort production sizing')
-    require(all(attrs.get('width','').isdigit() for tag,attrs in markup.media if tag=='img'),'Main image cap must be numeric')
-    require(all('width' not in attrs for tag,attrs in markup.media if tag=='source'),'Source hints must not override numeric display caps')
+    require(all(attrs.get('width','').isdigit() or attrs.get('width') in ['49.5%','100%'] for tag,attrs in markup.media if tag=='img'),'Main image cap must be numeric')
+    require(all('width' not in attrs or (attrs['width'].isdigit() and '(max-width:767px)' in attrs.get('media','')) for tag,attrs in markup.media if tag=='source'),'Only numeric mobile source width overrides are allowed')
     require(root.count('accent.svg')<=3 and '<!-- portrait-pair:' not in root and '<table>' not in root,'Custom/legacy media table remains')
     require(not re.search(r'(?:src|srcset)="[^"]+\.gif',static),'Static edition embeds animation')
     for row in model['requests']:require(f"| {row['request']} | {row['values']['growing']:,} | {row['values']['curated']:,} | {row['values']['scoped']:,} |" in root,'Missing native exact input table')
     for term in ['label.py','Untitled','TypeError','MiX  Case','66.7','33.3','60k + H','H = 30k','UNKNOWN','not a CAPRI benchmark','Prefix caching'] :require(term in root,'Essential native meaning missing: '+term)
-    require(root.index('CAPRI gives planning')<root.index('/workflow-portrait')<root.index('/graph-graph')<root.index('/horizon-portrait')<root.index('/handoff-portrait'),'Reading order drifted')
+    require(root.index('CAPRI gives planning')<root.index('/workflow-panel')<root.index('/graph-graph-wide')<root.index('/horizon-panel')<root.index('/handoff-portrait'),'Reading order drifted')
     families={f for lesson in config['lessons'].values() for f in lesson['families']};require(families=={'sharks','horizon','hands','rain','dots','cat','stack'},'Source family lost')
     records=[];alpha_samples=0;selected=[]
     for name,lesson in config['lessons'].items():
         role=formats['layouts'][lesson['root_layout']];cap=formats['families'][role]['display_width'];root_static=lesson.get('static_only') or lesson['root_layout'] in lesson.get('static_layouts',[]);selected_path=f"exports/{name}-{lesson['root_layout']}.{'png' if root_static else 'gif'}"
         require('/'+selected_path in root,'Root mapping omitted: '+name)
-        node=next((attrs for tag,attrs in markup.media if tag=='img' and attrs.get('src','').endswith('/'+selected_path)),None);require(node and int(node['width'])==cap,'Display cap mismatch: '+name);selected.append(STORY/selected_path)
+        node=next((attrs for tag,attrs in markup.media if tag=='img' and attrs.get('src','').endswith('/'+selected_path)),None);require(node and node['width']==str(cap),'Display cap mismatch: '+name);selected.append(STORY/selected_path)
         for layout in lesson['layouts']:
             d=formats['families'][formats['layouts'][layout]];size=[d['width'],d['height']];base=STORY/'exports'/f'{name}-{layout}';poster=base.with_suffix('.png');require(list(Image.open(poster).size)==size,'Actual still bounds differ: '+str(base))
             if lesson.get('static_only') or layout in lesson.get('static_layouts',[]):continue

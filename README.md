@@ -8,8 +8,8 @@ CAPRI gives planning, coding and review their own Codex sessions. Explicit hando
 
 ## How the loop works
 
-<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/workflow-portrait.png"><img src="showcase/capri/story/exports/workflow-portrait.gif" alt="Three full-body poses: Plan returns scope/checks, Build returns a patch, Review returns findings. One writer; the human decides." width="280"></picture>
-<picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/brief-portrait.png"><img src="showcase/capri/story/exports/brief-portrait.gif" alt="Actual native shark field, full-body Capri and a persistent brief: request/correction, relevant source, scope/checks and retrievable originals." width="280"></picture></p>
+<p align="center"><picture><source media="(max-width:767px) and (prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/workflow-portrait.png" width="280"><source media="(max-width:767px)" srcset="showcase/capri/story/exports/workflow-portrait.gif" width="280"><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/workflow-panel.png"><img src="showcase/capri/story/exports/workflow-panel.gif" alt="Three full-body poses: Plan returns scope/checks, Build returns a patch, Review returns findings. One writer; the human decides." width="49.5%"></picture>
+<picture><source media="(max-width:767px) and (prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/brief-portrait.png" width="280"><source media="(max-width:767px)" srcset="showcase/capri/story/exports/brief-portrait.gif" width="280"><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/brief-panel.png"><img src="showcase/capri/story/exports/brief-panel.gif" alt="Actual native shark field, full-body Capri and a persistent brief: request/correction, relevant source, scope/checks and retrievable originals." width="49.5%"></picture></p>
 
 A scoped brief carries the request, latest correction, relevant source, allowed files and expected checks. Authoritative originals remain retrievable.
 
@@ -33,7 +33,7 @@ All three roles request `gpt-6.1-sol`. The selected profile uses medium Thinker/
 
 ## Why scope the input
 
-<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/graph-graph.png"><img src="showcase/capri/story/exports/graph-graph.png" alt="Illustrative inputs, not a CAPRI benchmark: six assumed requests, thousand tokens per request. Growing history180k, curated 90k, scoped60k." width="320"></picture></p>
+<p align="center"><picture><source media="(max-width:767px) and (prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/graph-graph.png" width="320"><source media="(max-width:767px)" srcset="showcase/capri/story/exports/graph-graph.png" width="320"><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/graph-graph-wide.png"><img src="showcase/capri/story/exports/graph-graph-wide.png" alt="Illustrative inputs, not a CAPRI benchmark: six assumed requests, thousand tokens per request. Growing history180k, curated 90k, scoped60k." width="100%"></picture></p>
 
 **Illustrative inputs — not a CAPRI benchmark.** Across six assumed requests: growing history **180k**, a curated single session **90k**, scoped roles **60k** including already-budgeted instructions and handoffs.
 
@@ -60,8 +60,8 @@ Equal work, sufficient information and equal quality remain untested. The 180k t
 
 </details>
 
-<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/horizon-portrait.png"><img src="showcase/capri/story/exports/horizon-portrait.gif" alt="The original native ray-traced ASCII horizon with full-body Capri; credited illustration of selective input, not a measured context window." width="280"></picture>
-<picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/coordination-portrait.png"><img src="showcase/capri/story/exports/coordination-portrait.gif" alt="The supplied dotted loop carries60k+H. Additional H30k yields90k, equal to the curated input assumption." width="280"></picture></p>
+<p align="center"><picture><source media="(max-width:767px) and (prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/horizon-portrait.png" width="280"><source media="(max-width:767px)" srcset="showcase/capri/story/exports/horizon-portrait.gif" width="280"><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/horizon-panel.png"><img src="showcase/capri/story/exports/horizon-panel.gif" alt="The original native ray-traced ASCII horizon with full-body Capri; credited illustration of selective input, not a measured context window." width="49.5%"></picture>
+<picture><source media="(max-width:767px) and (prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/coordination-portrait.png" width="280"><source media="(max-width:767px)" srcset="showcase/capri/story/exports/coordination-portrait.gif" width="280"><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/coordination-panel.png"><img src="showcase/capri/story/exports/coordination-panel.gif" alt="The supplied dotted loop carries60k+H. Additional H30k yields90k, equal to the curated input assumption." width="49.5%"></picture></p>
 
 Focused input can avoid replaying discarded exploration; it still needs enough information. Extra coordination must earn its cost: **60k + H** adds input beyond the handoffs already counted. At **H = 30k**, scoped and curated input are equal; the margin is **30k − H**. Do not count a handoff twice.
 
@@ -101,8 +101,8 @@ The checking context compares request, correction, patch and evidence. Findings 
 
 ## Start with offline checks
 
-<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/requirements-support.png"><img src="showcase/capri/story/exports/requirements-support.png" alt="Small source skull/sword/rain vignette: keep original rules, correction and checks retrievable." width="240"></picture>
-<picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/closing-support.png"><img src="showcase/capri/story/exports/closing-support.png" alt="Small source elastic-stack vignette with Capri: keep evidence together and continue to offline checks." width="240"></picture></p>
+<p align="center"><picture><source media="(max-width:767px) and (prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/requirements-support.png" width="240"><source media="(max-width:767px)" srcset="showcase/capri/story/exports/requirements-support.png" width="240"><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/requirements-support-wide.png"><img src="showcase/capri/story/exports/requirements-support-wide.png" alt="Small source skull/sword/rain vignette: keep original rules, correction and checks retrievable." width="49.5%"></picture>
+<picture><source media="(max-width:767px) and (prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/closing-support.png" width="240"><source media="(max-width:767px)" srcset="showcase/capri/story/exports/closing-support.png" width="240"><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/exports/closing-support-wide.png"><img src="showcase/capri/story/exports/closing-support-wide.png" alt="Small source elastic-stack vignette with Capri: keep evidence together and continue to offline checks." width="49.5%"></picture></p>
 
 Keep original requirements and evidence accessible; full source interactions remain in the companion.
 
