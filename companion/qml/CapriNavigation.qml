@@ -19,8 +19,6 @@ Rectangle {
                 }));
     }
     signal selected(int index)
-    // Cache segment paint and labels together during software-rendered pane swaps.
-    layer.enabled: true
     color: Theme.raised
     radius: 16
     implicitHeight: Math.max(52, 30 * textScale + 22)
@@ -31,7 +29,7 @@ Rectangle {
         spacing: 0
         Repeater {
             model: ['Talk', 'Activity', 'Settings']
-            delegate: Item {
+            delegate: CapriButton {
                 id: segment
                 objectName: "nav-segment"
                 readonly property color labelColor: caption.color
@@ -42,33 +40,14 @@ Rectangle {
                 Layout.fillWidth: true
                 Layout.preferredWidth: 1
                 Layout.fillHeight: true
-                CapriButton {
-                    id: button
-                    anchors.fill: parent
-                    text: ''
-                    flat: true
-                    Accessible.name: segment.modelData
-                    Accessible.role: Accessible.PageTab
-                    Accessible.selected: nav.currentIndex === segment.index
-                    contentItem: Item {}
-                    background: Rectangle {
-                        radius: 12
-                        color: nav.currentIndex === segment.index ? Theme.green : button.hovered ? Theme.surface : 'transparent'
-                        border.width: 2
-                        border.color: button.visualFocus ? Theme.pink : 'transparent'
-                        Behavior on color {
-                            ColorAnimation {
-                                duration: nav.reduced ? 0 : 180
-                            }
-                        }
-                    }
-                    onClicked: nav.selected(segment.index)
-                }
-                Text {
+                text: modelData
+                flat: true
+                Accessible.role: Accessible.PageTab
+                Accessible.selected: nav.currentIndex === index
+                contentItem: Text {
                     id: caption
-                    anchors.fill: parent
-                    z: 1
-                    text: segment.modelData
+                    text: segment.text
+                    textFormat: Text.PlainText
                     font.family: 'Inter'
                     font.pixelSize: 14 * nav.textScale
                     font.weight: Font.Medium
@@ -77,6 +56,18 @@ Rectangle {
                     verticalAlignment: Text.AlignVCenter
                     Accessible.ignored: true
                 }
+                background: Rectangle {
+                    radius: 12
+                    color: nav.currentIndex === segment.index ? Theme.green : segment.hovered ? Theme.surface : 'transparent'
+                    border.width: 2
+                    border.color: segment.visualFocus ? Theme.pink : 'transparent'
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: nav.reduced ? 0 : 180
+                        }
+                    }
+                }
+                onClicked: nav.selected(index)
             }
         }
     }

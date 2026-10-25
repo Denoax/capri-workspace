@@ -76,141 +76,147 @@ FloatingWindow {
             radius: 26
             border.color: Theme.outline
         }
-        ColumnLayout {
+        ScrollView {
+            id: reviewScroll
             anchors.fill: parent
-            spacing: 16
-            RowLayout {
-                Layout.fillWidth: true
+            clip: true
+            contentWidth: availableWidth
+            contentHeight: reviewColumn.implicitHeight
+            ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
+            ColumnLayout {
+                id: reviewColumn
+                width: reviewScroll.availableWidth
+                spacing: 16
+                RowLayout {
+                    Layout.fillWidth: true
+                    Text {
+                        text: 'Motion review'
+                        font.pixelSize: 22
+                        color: Theme.ink
+                        Layout.fillWidth: true
+                    }
+                    CloseButton {
+                        onClicked: review.closeReview()
+                    }
+                }
+                CapriComboBox {
+                    id: clips
+                    Layout.fillWidth: true
+                    model: review.actor.catalog
+                    textRole: 'id'
+                    onActivated: review.choose()
+                }
                 Text {
-                    text: 'Motion review'
-                    font.pixelSize: 22
-                    color: Theme.ink
+                    text: review.actor.catalog[clips.currentIndex]?.silhouette || ''
+                    color: Theme.muted
+                    wrapMode: Text.Wrap
                     Layout.fillWidth: true
                 }
-                CloseButton {
-                    onClicked: review.closeReview()
+                Text {
+                    visible: review.actor.catalog[clips.currentIndex]?.asset_status !== 'AVAILABLE'
+                    text: 'Matching view unavailable. This brief is not counted as an implemented animation.'
+                    color: Theme.pink
+                    wrapMode: Text.Wrap
+                    Layout.fillWidth: true
                 }
-            }
-            CapriComboBox {
-                id: clips
-                Layout.fillWidth: true
-                model: review.actor.catalog
-                textRole: 'id'
-                onActivated: review.choose()
-            }
-            Text {
-                text: review.actor.catalog[clips.currentIndex]?.silhouette || ''
-                color: Theme.muted
-                wrapMode: Text.Wrap
-                Layout.fillWidth: true
-            }
-            Text {
-                visible: review.actor.catalog[clips.currentIndex]?.asset_status !== 'AVAILABLE'
-                text: 'Matching view unavailable. This brief is not counted as an implemented animation.'
-                color: Theme.pink
-                wrapMode: Text.Wrap
-                Layout.fillWidth: true
-            }
-            Text {
-                text: review.actor.clipId + ' · ' + Math.round(review.actor.clock) + 'ms'
-                textFormat: Text.PlainText
-                color: Theme.ink
-                wrapMode: Text.Wrap
-                Layout.fillWidth: true
-            }
-            Slider {
-                Layout.fillWidth: true
-                from: 0
-                to: review.actor.currentClip?.duration_ms || 1
-                value: review.actor.clock
-                onMoved: {
-                    review.coverage = false;
-                    review.actor.review(review.actor.clipId, Math.round(value), true);
+                Text {
+                    text: review.actor.clipId + ' · ' + Math.round(review.actor.clock) + 'ms'
+                    textFormat: Text.PlainText
+                    color: Theme.ink
+                    wrapMode: Text.Wrap
+                    Layout.fillWidth: true
                 }
-                Accessible.name: 'Scrub authored clip phases'
-            }
-            Flow {
-                Layout.fillWidth: true
-                spacing: 8
-                CapriButton {
-                    text: review.actor.reviewPaused ? 'Play' : 'Pause'
-                    onClicked: {
+                Slider {
+                    Layout.fillWidth: true
+                    from: 0
+                    to: review.actor.currentClip?.duration_ms || 1
+                    value: review.actor.clock
+                    onMoved: {
                         review.coverage = false;
-                        if (!review.actor.currentClip)
+                        review.actor.review(review.actor.clipId, Math.round(value), true);
+                    }
+                    Accessible.name: 'Scrub authored clip phases'
+                }
+                Flow {
+                    Layout.fillWidth: true
+                    spacing: 8
+                    CapriButton {
+                        text: review.actor.reviewPaused ? 'Play' : 'Pause'
+                        onClicked: {
+                            review.coverage = false;
+                            if (!review.actor.currentClip)
+                                review.choose();
+                            review.actor.reviewPaused = !review.actor.reviewPaused;
+                            review.actor.moving = true;
+                        }
+                    }
+                    CapriButton {
+                        text: 'From start'
+                        onClicked: {
+                            review.coverage = false;
+                            review.actor.reviewing = true;
+                            review.actor.reviewPaused = false;
+                            review.actor.play(review.actor.clipId);
+                        }
+                    }
+                    CapriButton {
+                        text: 'Next clip'
+                        onClicked: {
+                            coverage = false;
+                            clips.currentIndex = (clips.currentIndex + 1) % actor.catalog.length;
                             review.choose();
-                        review.actor.reviewPaused = !review.actor.reviewPaused;
-                        review.actor.moving = true;
+                        }
+                    }
+                    CapriButton {
+                        text: 'Seeded coverage'
+                        onClicked: review.startCoverage()
                     }
                 }
-                CapriButton {
-                    text: 'From start'
-                    onClicked: {
-                        review.coverage = false;
-                        review.actor.reviewing = true;
-                        review.actor.reviewPaused = false;
-                        review.actor.play(review.actor.clipId);
-                    }
+                Text {
+                    text: review.coverage ? 'Coverage ' + (review.sequenceIndex + 1) + ' / ' + review.sequence.length : 'Review changes presentation only. Native work and Stop remain independent.'
+                    color: Theme.muted
+                    wrapMode: Text.Wrap
+                    Layout.fillWidth: true
                 }
-                CapriButton {
-                    text: 'Next clip'
-                    onClicked: {
-                        coverage = false;
-                        clips.currentIndex = (clips.currentIndex + 1) % actor.catalog.length;
-                        review.choose();
-                    }
+                CapriComboBox {
+                    Layout.fillWidth: true
+                    model: ['Clip expression', 'happy', 'curious', 'puzzled', 'amused', 'annoyed', 'startled', 'focused', 'sleepy']
+                    onActivated: review.actor.reviewEmotion = currentIndex ? currentText : ''
+                    Accessible.name: 'Authored facial expression'
                 }
-                CapriButton {
-                    text: 'Seeded coverage'
-                    onClicked: review.startCoverage()
+                Text {
+                    text: 'Review angle'
+                    color: Theme.muted
                 }
-            }
-            Text {
-                text: review.coverage ? 'Coverage ' + (review.sequenceIndex + 1) + ' / ' + review.sequence.length : 'Review changes presentation only. Native work and Stop remain independent.'
-                color: Theme.muted
-                wrapMode: Text.Wrap
-                Layout.fillWidth: true
-            }
-            CapriComboBox {
-                Layout.fillWidth: true
-                model: ['Clip expression', 'happy', 'curious', 'puzzled', 'amused', 'annoyed', 'startled', 'focused', 'sleepy']
-                onActivated: review.actor.reviewEmotion = currentIndex ? currentText : ''
-                Accessible.name: 'Authored facial expression'
-            }
-            Text {
-                text: 'Review angle'
-                color: Theme.muted
-            }
-            Slider {
-                Layout.fillWidth: true
-                from: -180
-                to: 180
-                stepSize: 5
-                value: review.actor.reviewAngle
-                onMoved: review.actor.reviewAngle = value
-                Accessible.name: 'Review angle, degrees'
-            }
-            Text {
-                text: 'Owner size'
-                color: Theme.muted
-            }
-            Slider {
-                Layout.fillWidth: true
-                from: 160
-                to: 420
-                stepSize: 10
-                value: owner.profile.character_size || 280
-                onMoved: owner.preference('character_size', Math.round(value))
-                Accessible.name: 'Character review size'
-            }
-            Item {
-                Layout.fillHeight: true
-            }
-            Text {
-                text: 'Source catalogue:48 briefs. ' + review.actor.catalog.filter(c => c.asset_status === 'AVAILABLE').length + ' authored sequences; native and owner review are separate.'
-                color: Theme.muted
-                wrapMode: Text.Wrap
-                Layout.fillWidth: true
-                font.pixelSize: 13
+                Slider {
+                    Layout.fillWidth: true
+                    from: -180
+                    to: 180
+                    stepSize: 5
+                    value: review.actor.reviewAngle
+                    onMoved: review.actor.reviewAngle = value
+                    Accessible.name: 'Review angle, degrees'
+                }
+                Text {
+                    text: 'Owner size'
+                    color: Theme.muted
+                }
+                Slider {
+                    Layout.fillWidth: true
+                    from: 160
+                    to: 420
+                    stepSize: 10
+                    value: owner.profile.character_size || 280
+                    onMoved: owner.preference('character_size', Math.round(value))
+                    Accessible.name: 'Character review size'
+                }
+                Text {
+                    text: 'Source catalogue:48 briefs. ' + review.actor.catalog.filter(c => c.asset_status === 'AVAILABLE').length + ' authored sequences; native and owner review are separate.'
+                    color: Theme.muted
+                    wrapMode: Text.Wrap
+                    Layout.fillWidth: true
+                    font.pixelSize: 13
+                }
             }
         }
     }
