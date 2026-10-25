@@ -36,7 +36,7 @@ def main():
             total=0
             for i in range(im.n_frames):im.seek(i);im.load();total+=im.info.get('duration',0)
             assets.append({'path':name,'size':list(im.size),'bytes':p.stat().st_size,'frames':im.n_frames,'duration_ms':total})
-            if name=='hero.gif' and (im.size!=(1000,343) or total!=4000 or im.info.get('loop')!=0):errors.append('Hero delivery/timing mismatch')
+            if name=='hero.gif' and (im.size!=(1000,343) or im.n_frames!=300 or total!=10000 or im.info.get('loop')!=0):errors.append('Hero delivery/timing mismatch')
             if name=='social.png' and (im.size!=(1280,640) or p.stat().st_size>=1000000):errors.append('Social card target mismatch')
     for name in ['hero.svg','hero-overlay.svg','workflow.svg','social.svg']:
         if '<text' in (MEDIA/name).read_text():errors.append('Unoutlined display text: '+name)

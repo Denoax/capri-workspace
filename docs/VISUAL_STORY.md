@@ -1,3 +1,19 @@
+# V9 cloud/terminal takeover hero
+
+The active hero is now one ten-second shared-clock scene: supplied blue halftone cloud image, original terminal-code/fragment reconstruction and one specifically requested generated Capri portrait. The original CAPRI/Agentic Loop Prompting Barlow glyph groups, diagonal, 1400×480 master and 1000×343 delivery remain. All 89 lesson exports, the V8 separator and pinned V7 originals are unchanged.
+
+The three user inputs, exact hashes, original footage catalogue, actual source excerpt and portrait generation prompts/inputs/master hash are recorded in [hero source record](../showcase/capri/hero-scene/SOURCE_RECORD.json), [pose record](../showcase/capri/hero-scene/POSE_GENERATION.json) and [scene configuration](../showcase/capri/hero-scene/scene.json). The new portrait is generated fan-art reconstruction, not an official sheet or extracted anime frame. The selected padded alpha master is fixed; a rebuild never generates another image.
+
+tools/capri_hero_scene.py samples all layers from one seeded pure-time model. It preserves the actual cloud crop and grid phase, reconstructs measured ragged terminal layouts using pinned non-sensitive arithmetic source, clips local portrait slices, sparks, advances the environmental color front, holds the hacked scene and recovers downward into the same geometry. Code content and the periodic recovery differ from literal source playback; no pixel-exact or live-session claim.
+
+Run tools/build_capri_presentation.py to rebuild the hero only. It produces 300 distinct samples and repeating 30/30/40 ms GIF delays totaling 10,000 ms, one stable 192-color palette with no dithering, unchanged-pixel transparent deltas and disposal 1. No fps/size-gate reduction. A representative 90-frame proof fell from 9.62 to 1.20 MB without changing any decoded RGB pixel. Final GIF size/timing/hash are in BUILD.json; all media retain the 8,000,000-byte cap. Matching hacked-hold PNG, layered SVG, original glyph overlay and a no-audio offline video master are supplied. [Offline hero preview](../showcase/capri/hero-scene/preview.html) shows the actual GIF separately from that master.
+
+Use the declared media-only requirements plus system rsvg-convert and FFmpeg. Build the current companion, README/static and source manifests using the existing story generators. Those steps reuse lesson exports, not rerender them. tools/check_capri_hero.py now checks the new input/alpha/typography/phase/encoded contracts and keeps pinned original identity checks; obsolete48frame/4s/outside-subtitle freezes are superseded only for this authorized hero change.
+
+Primary technique references actually consulted: [Codrops local image slices](https://tympanus.net/codrops/2017/12/21/css-glitch-effect/), [Pillow GIF](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#gif), [W3C flash guidance](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html). Localized spark/slices and a gradual front avoid a full-banner strobe; pixel measurements are not a certification. Continuous perceptual, hosted/device review, original rights/qualification and historical performance gaps remain separately stated in the review.
+
+## Historical V8 and earlier records
+
 # V8 hero and separator correction
 
 V8 supersedes the rejected V7 detached identity strips: none remain on active routes. The native project name and explanation remain. One AGENTIC LOOP PROMPTING subtitle is outlined from the original bundled Barlow Condensed ExtraBold Italic font inside the original 1400×480 hero. Its size55, baseline415 and visible-left52.83 align with CAPRI; conservative diagonal clearance is31.426px. The unmodified V7 hero SVG, overlay, PNG and GIF are pinned in showcase/capri/sources/hero-v7/. Original OFL/source-rights notices remain.

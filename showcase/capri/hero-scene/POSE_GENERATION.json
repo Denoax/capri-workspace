@@ -1,0 +1,51 @@
+{
+  "mode": "built-in imagegen",
+  "scope": "One specifically requested character-only portrait; no generated scene/video",
+  "prompt": "Use case: identity-preserve. Asset type: ONE clean, isolated transparent character portrait for a software project's hero banner, NOT a finished banner.\n\nInput roles, in supplied order:\nImage 1 (identity-face-frame5.png): the actual Capri anime face and colors. This is the identity authority.\nImage 2 (hero.png): actual existing Capri character, angular hair/shoulders and color language. Ignore ALL lettering, city background, banner layout; these must not appear in output.\nImage 3 (03-pose.jpg): POSE AND CAMERA ONLY. This is a different character. Use her backward three-quarter look over a turned shoulder, tilted head, large near eye and cheek-to-neck-to-shoulder relationship. Do not import her white hair, skin, ears, costume, prose or white backdrop.\n\nCreate Capri herself in Image 3's pose as closely as her angular model permits: torso/near shoulder turning away toward the right, head looking back toward camera and inward toward the left. Close three-quarter bust, dominant near eye looking at the viewer, head tilted, coherent neck/shoulder anatomy. Preserve Capri's sharply angular BLACK holographic face, bright GREEN angular eye planes, round concentric BLUE eyes with white centers, small sharp WHITE triangular mouth, HUGE asymmetric jagged MAGENTA/RED hair with sparse tiny light speckles, black/magenta angular shoulders, green costume accents and crisp purple edge details. Match the actual flat 2D anime/cel geometry. NOT a generic human anime girl or a white-haired character; keep the geometric non-human black/green face and circular blue eyes unmistakable.\n\nOne coherent head-and-shoulders/bust figure. Show the complete jagged hair silhouette with GENEROUS clear alpha padding around ALL hair tips, face and shoulders; include enough lower torso for an intentional later bottom crop. Portrait will occupy the lower right of a wide banner but the tool should output ONLY the padded character, on true transparency. Keep the overall pose close to Image 3 rather than a frontal face or pointing/action pose.\n\nBackground: genuine alpha transparency. No clouds, city, terminal, typography, caption, UI, speech bubble, border, fake checkerboard or watermark. No spark, glow haze, distortion or duplicate face baked into this clean master. No photorealism, painterly shading, rounded/chibi redesign, soft skin or new accessories. Preserve sharp flat color blocks, distinctive hair shape, face identity and the over-shoulder gaze.",
+  "inputs": [
+    {
+      "path": "identity-face-frame5.png",
+      "sha256": "7dd2ae25f09314dc1e67d797e8a9b742fe9980eaea3bf275d50032178094a2ea"
+    },
+    {
+      "path": "hero.png",
+      "sha256": "b8b74bc4f8501e33748da9515a39e9ffa70e76fa682b9b238e8f579183546df3"
+    },
+    {
+      "path": "03-pose.jpg",
+      "sha256": "97b5fd5e68db030dee4becf3af48eca38619ea98443442989149cc22620c0d6f"
+    }
+  ],
+  "transparency_requested": true,
+  "status": "SELECTED_PENDING_HUMAN_REVIEW",
+  "refinement_prompt": "Edit target: Image 1 is the newly generated transparent Capri portrait. Keep this EXACT character identity, turned-over-shoulder pose, dominant circular blue eye, head tilt, angular black/green face, white triangular mouth, jagged magenta hair, costume, linework, relative anatomy and color blocks. This is a single targeted framing/padding refinement, not a redesign.\n\nProblem: the current portrait's upper hair tips touch the top/side canvas and its lower bust touches the bottom. Deliver a clean isolated alpha master where ALL hair tips and shoulder outer contours fit entirely within the image with generous real transparent padding on every side. Uniformly reduce/reframe the SAME figure to occupy about 70 percent of canvas width and 75 percent of canvas height, leaving around 12\u201315 percent transparent margins. Complete any hair tips currently cut by the boundary, preserving their existing angular shape; retain enough lower torso for later deliberate banner-bottom cropping. Do not crop the head or shoulder to get a close composition; close camera proportions should remain within the smaller padded figure. The banner layout will be authored separately.\n\nRetain genuine alpha transparency. No white/black/checkerboard background, cloud, city, text, logo, frame, border, spark, distortion, glow haze, accessories, second face, or other scene content. Crisp original cel/anime silhouette and colors; same facial features and posture. Only extend/reframe/pad the clean master.",
+  "first_output": "generation/portrait-candidate-1.png",
+  "selected_project_asset": "showcase/capri/hero-scene/portrait-master.png",
+  "selected_sha256": "b70de4910092b34a710d01d461cd14684e5266e1affeb66c5e8ed3b71b3248ee",
+  "alpha": {
+    "size": [
+      1383,
+      1137
+    ],
+    "extrema": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1351,
+      1119
+    ],
+    "visible_bbox": [
+      150,
+      77,
+      1245,
+      1073
+    ],
+    "border_alpha_max": 1,
+    "transparent_fraction": 0.5885749244342185,
+    "note": "Visible silhouette has >=64px padding. Raw generated border contains alpha1 noise, not an opaque cutoff; raw bytes preserved."
+  },
+  "review": "Generated fan-art reconstruction; visually inspected actual Capri identity and pose-only reference. Black/green angular face, circular blue eyes, triangular white mouth, magenta hair and turned shoulder retained. Padding refinement selected; human visual acceptance pending."
+}

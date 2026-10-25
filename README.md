@@ -1,4 +1,4 @@
-<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.gif" alt="CAPRI — Agentic Loop Prompting, integrated in the original magenta Barlow hero." width="1000"></picture></p>
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.gif" alt="CAPRI — Agentic Loop Prompting. Blue halftone clouds and reconstructed code turn magenta and green after Capri sparks a takeover." width="1000"></picture></p>
 
 # CAPRI — Agentic Loop Prompting
 

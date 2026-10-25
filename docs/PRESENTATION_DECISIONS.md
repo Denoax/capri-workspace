@@ -18,3 +18,8 @@ Existing installation, security, architecture and evaluation documents remain ac
 ## 2026-10-25 — V8 user correction
 
 The user rejected the repeated V7 branding strips and retained the rest of the direction. Remove every detached strip; integrate one original-Barlow magenta subtitle inside the hero; extend the separator wake to288logicalpx with a broad color fade and cleaner edges. This supersedes V7 footer/hero freezes only. Other V7 lesson media, native explanation/math, qualification, About and runtime remain protected. Technical delivery is not visual acceptance.
+
+
+## 2026-10-25 — V9 cloud takeover request
+
+One replacement hero uses the supplied terminal/cloud/pose files closely. The user specifically permits one new character-only Capri portrait with identity-preserving refinements; this does not permit a generated banner, clouds, motion video or lesson art. Keep the V8 glyphs/diagonal/footprint, separator and all 89 lesson exports. One seeded ten-second clock drives blue hold, local slices, spark, outward color change, hacked hold and downward recovery. Target 300 distinct samples within 8 MB; no main/About or runtime change. Generated fan-art and technical evidence are separate from human visual acceptance.

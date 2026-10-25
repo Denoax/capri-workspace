@@ -54,6 +54,17 @@
     "original": "sources/hero-v7/",
     "original_gif_sha256": "e505d35ebb8eea5daa13fda24ed32db7a6a64aabda3e63835ee4cf8813f39517",
     "font": "fonts/BarlowCondensed-ExtraBoldItalic.ttf",
-    "method": "One magenta outlined subtitle inside original hero. Pinned SVG/overlay/PNG/GIF preserved. Original decoded footage/frames/palette/timing retained outside added letters. Build and independent frame checks in tools/build_capri_presentation.py and tools/check_capri_hero.py."
+    "method": "One magenta outlined subtitle inside original hero. Pinned SVG/overlay/PNG/GIF preserved. Original decoded footage/frames/palette/timing retained outside added letters. Build and independent frame checks in tools/build_capri_presentation.py and tools/check_capri_hero.py.",
+    "status": "Historical V8 subtitle derivative; pinned original inputs remain unchanged. V9 active scene documented separately."
+  },
+  "hero_scene": {
+    "base_commit": "27cc4a938c9d2b1cd5ff46c35312fd23c6088216",
+    "directory": "hero-scene/",
+    "source_record": "hero-scene/SOURCE_RECORD.json",
+    "pose_record": "hero-scene/POSE_GENERATION.json",
+    "configuration": "hero-scene/scene.json",
+    "timeline": "hero-scene/timeline.json",
+    "method": "Supplied fixed-grid cloud crop plus original code/fragment texture and one specifically requested generated character-only portrait. Pure-time original compositor; preserved original Barlow glyph groups.",
+    "scope": "Private review; generated fan-art portrait, not official source or observed runtime/model result. Historical selected anime clip catalogue is unchanged."
   }
 }
