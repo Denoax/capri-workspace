@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compose localized V6 panel variants around the existing source renderer; no new media sources."""
+"""Compose V7 motion and identity around the existing source renderer; no new media sources."""
 from pathlib import Path
 import hashlib,html,json,re
 from capri_context_budget import story_model
@@ -66,6 +66,10 @@ def main():
     config=json.loads((STORY/'story.json').read_text());formats=json.loads((STORY/config['format']).read_text());source=(STORY/config['canonical_inputs']).resolve()
     model=story_model(json.loads(source.read_text()),config);STORY.mkdir(exist_ok=True)
     (STORY/'model-results.json').write_text(json.dumps(model,indent=2)+'\n')
+    from capri_story_identity import build_identity,identity_markup
+    build_identity(formats)
+    from build_capri_separator import main as build_separator
+    build_separator()
     previous=(COMP/'index.html').read_bytes() if (COMP/'index.html').exists() else None
     try:
         build_original();original=(COMP/'index.html').read_text()
@@ -107,17 +111,20 @@ def main():
     sharks=sharks.replace('A focused context.','Keep the brief.').replace('Keep the brief in sight.','').replace('<strong>Request + latest correction</strong><br>Relevant source<br>Allowed files + checks<br>Originals retrievable','Request + correction<br>Relevant source<br>Scope + checks<br>Retrievable originals')
     sharks=re.sub(r'<div class="cs-caption"><h3>.*?</h3><p>.*?</p>', '<div class="cs-caption"><h3>Keep the brief.</h3><p>Originals stay retrievable.</p>',sharks,flags=re.S)
     horizon=horizon.replace("Don't lose the thread.",'Choose the input.').replace('Capri crosses a page that bends around the hole.','Enough context for the next decision.')
-    hands=re.sub(r'<div class="cp-copy">.*?</div>','<div class="cp-copy"><h3>Carry the correction.</h3><p>Authored fixture A</p></div>',hands,flags=re.S)
+    hands=re.sub(r'<div class="cp-copy">.*?</div>','<div class="cp-copy"><h3>Carry the complete brief.</h3><p>Authored fixture A</p></div>',hands,flags=re.S)
     hands=re.sub(r'<div class="story-packet">.*?</div>','',hands,flags=re.S)
-    cat=re.sub(r'<div class="cp-copy">.*?</div>','<div class="cp-copy"><h3>Check the candidate.</h3><p>Request + patch + evidence</p></div>',cat,flags=re.S)
+    cat=re.sub(r'<div class="cp-copy">.*?</div>','<div class="cp-copy"><h3>Check against the request.</h3><p>Request + patch + evidence</p></div>',cat,flags=re.S)
     rain=re.sub(r'<div class="cp-copy">.*?</div>','<div class="cp-copy"><h3>Keep the source.</h3><p>Rules, correction and checks</p></div>',rain,flags=re.S)
     dots=re.sub(r'<div class="cp-copy">.*?</div>','<div class="cp-copy"><h3>Count coordination.</h3><p>Additional input beyond the brief</p></div>',dots,flags=re.S)
     stack=panels['stack'].replace('Bring the brief together.','Keep the evidence.').replace('Scope, correction and evidence arrive as one handoff.','Continue with offline checks.')
     workflow='<div id="handoff-comic-full-sprites" data-lesson="workflow" data-family="illustration">'+frame(workflow,'workflow',formats,outer=False)+'</div>'
-    pairs='<div class="story-pair story-wide">'+workflow+frame(sharks,'brief',formats)+'</div>'+math+'<div class="story-pair story-wide">'+frame(horizon,'horizon',formats)+frame(dots,'coordination',formats)+'</div><div class="story-pair">'+frame(hands,'handoff',formats)+frame(cat,'checking',formats)+'</div><div class="story-pair story-support story-wide">'+frame(rain,'requirements',formats)+frame(stack,'closing',formats)+'</div>'
+    pairs='<div class="story-pair story-wide">'+workflow+frame(sharks,'brief',formats)+'</div>'+math+'<div class="story-pair story-wide">'+frame(horizon,'horizon',formats)+frame(dots,'coordination',formats)+'</div><div class="story-pair story-wide">'+frame(hands,'handoff',formats)+frame(cat,'checking',formats)+'</div><div class="story-pair story-support story-wide">'+frame(rain,'requirements',formats)+frame(stack,'closing',formats)+'</div>'
+    lockup='<div class="story-identity">'+identity_markup(formats,'../../story/')+'</div>'
+    pairs=pairs.replace('</div>'+math,'</div>'+lockup+math).replace('</div><div class="story-pair', '</div>'+lockup+'<div class="story-pair')+lockup
+    pairs=pairs.replace('</div></div></div><div class="story-controls"><label for="story-request">','</div></div></div>'+lockup+'<div class="story-controls"><label for="story-request">')
     lessons='<div id="capri-source-scenes"><div id="capri-reference-composites">'+pairs+'</div></div>'
-    intro='<header class="story-intro native-text"><h1>CAPRI</h1><p>Planning, coding and review get their own Codex sessions. Explicit handoffs carry current decisions, relevant files, scope and checks. One worker edits; a separate reviewer checks the candidate; you decide what ships.</p><nav><a href="#handoff-comic-full-sprites">Workflow</a><a href="#scene-horizon">Inputs</a><a href="#scene-hands">Correction</a><a href="#scene-dots">Coordination</a><a href="#scene-cat">Checking</a><a href="../../../../docs/QUICKSTART.md">Setup</a></nav><p><a href="../../../../README.md">Repository README</a> · <a href="../../../../docs/README_STATIC.md">Complete static edition</a> · <a href="../../../../docs/VISUAL_STORY.md">Sources and build record</a></p></header>'
-    body=intro+lessons+'<footer class="native-text"><p>Illustrative inputs and credited source-reference art; no model result is depicted. <a href="../../../../docs/STATUS.md">Native qualification remains pending.</a> <a href="source-match.html">Preserved source player</a></p></footer>'
+    intro='<header class="story-intro native-text"><h1>CAPRI — Agentic Loop Prompting</h1><p>Focused inputs, scoped execution and a separate review pass. Planning, implementation and review use their own Codex sessions, connected by the current request, correction, source, allowed changes and expected checks. The goal is less repeated exploration and clearer checking; the human decides what ships.</p><nav><a href="#handoff-comic-full-sprites">Workflow</a><a href="#scene-horizon">Inputs</a><a href="#scene-hands">Correction</a><a href="#scene-dots">Coordination</a><a href="#scene-cat">Checking</a><a href="../../../../docs/QUICKSTART.md">Setup</a></nav><p><a href="../../../../README.md">Repository README</a> · <a href="../../../../docs/README_STATIC.md">Complete static edition</a> · <a href="../../../../docs/VISUAL_STORY.md">Sources and build record</a></p></header>'
+    body=intro+lockup+lessons+'<footer class="native-text"><p>Illustrative inputs and credited source-reference art; no model result is depicted. <a href="../../../../docs/STATUS.md">Native qualification remains pending.</a> <a href="source-match.html">Preserved source player</a></p></footer>'
     page=re.sub(r'<main>.*?</main>',lambda m:'<main>'+body+'</main>',original,count=1,flags=re.S)
     old_js=(COMP/'scenes.js').read_text();adapted=old_js.replace("nativeRoot.querySelector('.cs-panel')","nativeRoot.querySelector('[data-story-scene=\"sharks\"]')").replace("nativeRoot.querySelectorAll('.cs-panel')[1]","nativeRoot.querySelector('[data-story-scene=\"horizon\"]')")
     adapted=adapted.replace("this.controls.querySelector('input').value =", "window.capriStory?.paint(this, t);\n      this.controls.querySelector('input').value =")
@@ -142,7 +149,7 @@ def main():
     adapted=adapted.replace("data.rig = window.CAPRI_RIG;", "data.rig = window.CAPRI_RIG; data.storyFormats = JSON.parse(document.getElementById('story-data').textContent).formats;")
     helper="function storyVariant(scene, key, name = scene.name) { const f=data.storyFormats, layout=scene.element.querySelector('.story-frame')?.dataset.layout; return f.variants?.[layout]?.[key]?.[name] ?? f[key][name]; }\n"
     adapted=adapted.replace('  class Scene {',helper+'  class Scene {')
-    for name in ['horizon','sharks','workflow']:
+    for name in ['horizon','sharks','workflow','hands','cat']:
         adapted=adapted.replace('data.storyFormats.actor_placement.'+name, "storyVariant(this, 'actor_placement', '"+name+"')")
     for name in ['horizon','sharks']:
         adapted=adapted.replace('data.storyFormats.native_world.'+name, "storyVariant(this, 'native_world', '"+name+"')")
@@ -150,8 +157,8 @@ def main():
     ui=(STORY/'story-ui.js').read_text();style='\n'.join(re.findall(r'<style>(.*?)</style>',original,re.S)[1:])+'\n'+(STORY/'story.css').read_text()+'\n'+format_css(formats);(STORY/'scenes.js').write_text('\n'.join(line.rstrip() for line in adapted.splitlines())+'\n')
     page=replace_once(page,'<script>'+old_js+'</script>','<script type="application/json" id="story-data">'+json.dumps(story_data,separators=(',',':'))+'</script><script>'+ui+'</script><script>'+adapted+'</script>')
     page=re.sub(r'<style>(.*?)</style>',lambda m:'<style>'+re.sub(r'\.export[^{}]*\{[^{}]*\}','',m[1])+'</style>',page,count=1,flags=re.S)
-    page=page.replace('</style>','\n'+style+'</style>',1);page=page.replace('CAPRI · source-match companion','CAPRI · visual story')
+    page=page.replace('</style>','\n'+style+'</style>',1);page=page.replace('CAPRI · source-match companion','CAPRI — Agentic Loop Prompting')
     (COMP/'index.html').write_text('\n'.join(line.rstrip() for line in page.splitlines())+'\n')
-    (STORY/'SOURCE_RECORD.json').write_text(json.dumps({'base':'8caee8b71c9bffb67e475e6693bdcfccc0cd8bb9','handoff_sha256':'d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b','method':'V6 annotated wide variants for marked groups; V5 mobile/unmarked art preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.','lessons':config['lessons'],'root_selection':{name:{'layout':lesson['root_layout'],'role':formats['layouts'][lesson['root_layout']],'display_width':formats['families'][formats['layouts'][lesson['root_layout']]]['display_width'],'mobile_layout':lesson.get('mobile_layout')} for name,lesson in config['lessons'].items()},'accent':{'file':'accent.svg','method':'Independent geometric CAPRI rule/interruption; no third-party art copied.'},'format_file':'format.json','format_sha256':hashlib.sha256((STORY/'format.json').read_bytes()).hexdigest(),'annotation_source':formats['annotation_source'],'format_reference':formats['references'],'canonical_input':str(source.relative_to(ROOT)),'canonical_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'legacy_companion':'../source-match/companion/source-match.html','rights':'Original notices, OFL/MIT and unresolved media/character/shark rights unchanged; private review only.'},indent=2)+'\n')
-    print('V6 annotated variants composed; original renderer and all source assets preserved')
+    (STORY/'SOURCE_RECORD.json').write_text(json.dumps({'base':'114c24e56586aa82c4be696feaa3d80e8926d29f','handoff_sha256':'d8db5db1f2455f91c72cd917322c36cc8a2dee5fadc3d976d6b93679be2d4a00','method':'V7 handoff/checking reflow, authored separator, restored source support motion and shared identity; other V6 art preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.','lessons':config['lessons'],'root_selection':{name:{'layout':lesson['root_layout'],'role':formats['layouts'][lesson['root_layout']],'display_width':formats['families'][formats['layouts'][lesson['root_layout']]]['display_width'],'mobile_layout':lesson.get('mobile_layout')} for name,lesson in config['lessons'].items()},'accent':formats['separator'],'identity':formats['identity'],'format_file':'format.json','format_sha256':hashlib.sha256((STORY/'format.json').read_bytes()).hexdigest(),'annotation_source':formats['annotation_source'],'format_reference':formats['references'],'canonical_input':str(source.relative_to(ROOT)),'canonical_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'legacy_companion':'../source-match/companion/source-match.html','rights':'Original notices, OFL/MIT and unresolved media/character/shark rights unchanged; private review only.'},indent=2)+'\n')
+    print('V7 motion and identity composed; original renderer and all source assets preserved')
 if __name__=='__main__':main()

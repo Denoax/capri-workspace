@@ -45,11 +45,15 @@ def main():
     try:source_match=check()
     except Exception as error:
         source_match={'status':'FAIL','error':str(error)};errors.append('Source match: '+str(error))
+    from check_capri_separator import check as check_separator
+    try:separator=check_separator()
+    except Exception as error:
+        separator={'status':'FAIL','error':str(error)};errors.append('Separator: '+str(error))
     from check_capri_story import check as check_story
     try:story=check_story()
     except Exception as error:
         story={'status':'FAIL','error':str(error)};errors.append('Visual story: '+str(error))
-    result={'visual_story':story,'source_match':source_match,'status':'FAIL' if errors else 'PASS','local_links':links,'assets':assets,'errors':errors,'scope':'Documentation targets and delivery formats/timing; not runtime qualification or visual acceptance'}
+    result={'separator':separator,'visual_story':story,'source_match':source_match,'status':'FAIL' if errors else 'PASS','local_links':links,'assets':assets,'errors':errors,'scope':'Documentation targets and delivery formats/timing; not runtime qualification or visual acceptance'}
     print(json.dumps(result,indent=2));return bool(errors)
 
 

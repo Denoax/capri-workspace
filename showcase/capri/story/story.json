@@ -1,5 +1,5 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "canonical_inputs": "../source-match/source/assets/data/context-budget.json",
   "evidence_class": "ILLUSTRATIVE_INPUTS_NOT_A_CAPRI_BENCHMARK",
   "overhead": {
@@ -133,10 +133,12 @@
         "hands"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "checking": {
       "members": [
@@ -150,47 +152,45 @@
         "cat"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "requirements": {
       "members": [
         "rain"
       ],
-      "duration_ms": 2000,
-      "fps": 25,
+      "duration_ms": 500,
+      "fps": 30,
       "export_scene": "rain",
-      "still_ms": 1000,
+      "still_ms": 250,
       "families": [
         "rain"
       ],
       "layouts": [
-        "portrait",
         "support",
         "support-wide"
       ],
       "family": "illustration",
       "root_layout": "support-wide",
-      "static_layouts": [
-        "support",
-        "support-wide"
-      ],
-      "mobile_layout": "support"
+      "mobile_layout": "support",
+      "source_fps": 30,
+      "source_duration_ms": 500
     },
     "closing": {
       "members": [
         "stack"
       ],
       "duration_ms": 10800,
-      "fps": 25,
+      "fps": 30,
       "export_scene": "stack",
       "still_ms": 2200,
       "families": [
         "stack"
       ],
-      "static_only": true,
       "layouts": [
         "support",
         "support-wide"
@@ -198,10 +198,27 @@
       "family": "support",
       "root_layout": "support-wide",
       "mobile_layout": "support",
-      "static_layouts": [
-        "support-wide"
-      ]
+      "source_fps": 30,
+      "source_duration_ms": 10800
     }
   },
-  "format": "format.json"
+  "format": "format.json",
+  "build_exports": {
+    "handoff": [
+      "portrait",
+      "panel"
+    ],
+    "checking": [
+      "portrait",
+      "panel"
+    ],
+    "requirements": [
+      "support",
+      "support-wide"
+    ],
+    "closing": [
+      "support",
+      "support-wide"
+    ]
+  }
 }

@@ -6,6 +6,7 @@ from http.server import ThreadingHTTPServer
 from threading import Thread
 import argparse,asyncio,base64,hashlib,json,os,subprocess,tempfile,time,urllib.request
 import websockets
+from PIL import Image
 from capri_media_cdp import CDP
 from export_capri_source_match import Quiet,sha
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'showcase/capri/story/exports'
@@ -52,15 +53,23 @@ async def export(port,url,evidence,names,layouts,stills_only):
                         frames.append({'time_ms':ms,'sha256':sha(path),'state':state,'actor_bounds':bounds})
                     palette=folder/'palette.png';gif=OUT/f'{name}-{layout}.gif';colors=128 if name in ['horizon','checking','brief'] else 256
                     subprocess.run(['ffmpeg','-v','error','-y','-framerate',str(fps),'-i',str(folder/'%04d.png'),'-vf',f'palettegen=stats_mode=diff:max_colors={colors}',str(palette)],check=True)
-                    subprocess.run(['ffmpeg','-v','error','-y','-framerate',str(fps),'-i',str(folder/'%04d.png'),'-i',str(palette),'-lavfi','paletteuse=dither=none:diff_mode=rectangle','-loop','0',str(gif)],check=True)
-                    record={'lesson':name,'layout':layout,'duration_ms':duration,'sample_fps':fps,'sample_count':count,'size':[box['width'],box['height']],'bytes':gif.stat().st_size,'gif_sha256':sha(gif),'poster_sha256':sha(poster),'palette_colors':colors,'frames':frames,'scope':'Shared companion scene clocks; native sources and recorded footage remain distinct. Sample FPS is not source acting or perceived smoothness.'}
+                    if fps==30:
+                        with Image.open(palette) as im:palette_image=im.convert('RGB').quantize(colors=colors)
+                        encoded=[]
+                        for path in sorted(folder.glob('[0-9][0-9][0-9][0-9].png')):
+                            with Image.open(path) as im:encoded.append(im.convert('RGB').quantize(palette=palette_image,dither=Image.Dither.NONE))
+                        delays=[round((i+1)*100/fps)*10-round(i*100/fps)*10 for i in range(count)]
+                        encoded[0].save(gif,save_all=True,append_images=encoded[1:],duration=delays,loop=0,disposal=1,optimize=False)
+                    else:
+                        subprocess.run(['ffmpeg','-v','error','-y','-framerate',str(fps),'-i',str(folder/'%04d.png'),'-i',str(palette),'-lavfi','paletteuse=dither=none:diff_mode=rectangle','-loop','0',str(gif)],check=True)
+                    record={'lesson':name,'layout':layout,'duration_ms':duration,'sample_fps':fps,'source_fps':CONFIG['lessons'][name].get('source_fps'),'source_duration_ms':CONFIG['lessons'][name].get('source_duration_ms'),'sample_count':count,'size':[box['width'],box['height']],'bytes':gif.stat().st_size,'gif_sha256':sha(gif),'poster_sha256':sha(poster),'palette_colors':colors,'frames':frames,'scope':'Shared companion scene clocks; native sources and recorded footage remain distinct. Sample FPS is not source acting or perceived smoothness.'}
                     (OUT/f'{name}-{layout}-timeline.json').write_text(json.dumps(record,indent=2)+'\n');records.append({k:v for k,v in record.items() if k!='frames'});print(name,layout,count,'samples',gif.stat().st_size,'bytes',flush=True)
                     if gif.stat().st_size>8_000_000:raise ValueError('Presentation export exceeds unchanged8MB checkout bound: '+gif.name)
             if c.exceptions:raise ValueError('Runtime exceptions: '+str(c.exceptions))
         finally:pump.cancel()
     return {'status':'PASS','records':records,'browser':browser,'scope':'Actual browser exports, not perceptual/human/native qualification'}
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--evidence',required=True,type=Path);p.add_argument('--lessons',nargs='+',choices=LESSONS,default=list(LESSONS));p.add_argument('--layouts',nargs='+',choices=list(FORMATS['layouts']),default=FORMATS['responsive']['build_layouts']);p.add_argument('--stills-only',action='store_true');args=p.parse_args();OUT.mkdir(exist_ok=True);args.evidence.mkdir(parents=True,exist_ok=True)
+    p=argparse.ArgumentParser();p.add_argument('--evidence',required=True,type=Path);p.add_argument('--lessons',nargs='+',choices=LESSONS,default=list(CONFIG.get('build_exports',LESSONS)));p.add_argument('--layouts',nargs='+',choices=list(FORMATS['layouts']),default=FORMATS['responsive']['build_layouts']);p.add_argument('--stills-only',action='store_true');args=p.parse_args();OUT.mkdir(exist_ok=True);args.evidence.mkdir(parents=True,exist_ok=True)
     server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(ROOT)));Thread(target=server.serve_forever,daemon=True).start();profile=Path(tempfile.mkdtemp(prefix='owned-story-',dir=args.evidence));chrome=Path(os.environ.get('CAPRI_CHROMIUM',str(Path.home()/'.cache/ms-playwright/chromium-1243/chrome-linux64/chrome')))
     with (args.evidence/'chromium.log').open('w') as log:
         process=subprocess.Popen([str(chrome),'--headless=new','--use-angle=swiftshader','--enable-unsafe-swiftshader','--disable-extensions','--no-first-run','--no-default-browser-check','--remote-debugging-port=0','--user-data-dir='+str(profile),'about:blank'],stdout=log,stderr=log)

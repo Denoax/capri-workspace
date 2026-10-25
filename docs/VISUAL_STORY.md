@@ -1,3 +1,19 @@
+# CAPRI — Agentic Loop Prompting: V7 motion and identity
+
+V7 reopens the handoff/checking pair, divider, support animation and positioning requested after V6. Handoff/checking now share the700×600 desktop panel grammar and readable480×640 mobile variants. Persistent unboxed anchors retain request/correction, source, scope/checks and the findings/human-decision chain; source contact and cat eye anchors remain intact. Other approved V6 artwork and geometry are unchanged.
+
+Six shared identity footers sit directly beneath the original hero and each media group, including the graph. The script-free SVGs embed the supplied Manrope/Inter fonts and retain their OFL notices. Mobile identity reflows at320×78 instead of shrinking a long label. The original hero remains byte-identical; the repo slug stays Denoax/capri.
+
+The actual separator is a transparent1200×48 GIF:200authored positions,20ms delays,4000ms loop,6px travel/sample and192px periodic green wake. Red remains ahead and farther behind the right-facing arrow. A matching PNG is selected for reduced motion/static views. Two existing occurrences share one canonical source; the old accent.svg remains historical, not active.
+
+Both normal desktop/mobile support groups now select real GIFs. Rain uses15original30fps frames over500ms; stack uses324original30fps frames over10800ms, retaining its forward/reverse source edit. GIF centisecond timing alternates30/40ms to preserve pace; output sampling is not new acting. The graph remains static. Reduced-motion and static editions select posters everywhere.
+
+Canonical fields live in format.json/story.json. build_capri_story.py also rebuilds the shared identity and authored separator. Default source exports rebuild the explicitly changed handoff/checking/support layouts; older unaffected V6 media stay byte-identical. The presentation suite checks actual selection, arithmetic, source clocks, decoded GIF cadence, body bounds and the separator pixels/disposal/wake independently. Normal browser recordings and selected frames do not establish human perceptual approval or physical-device performance.
+
+The short introduction names the efficiency/quality mechanisms as goals, alongside the unchanged assumed-input example, single-session alternative, coordination and shared-blind-spot limits. Primary-source rationale is in [the explanation](CAPRI_EXPLAINS.md) and [benchmark protocol](BENCHMARK_PROTOCOL.md). No CAPRI superiority, paid-model result or performance improvement is claimed. Native/runtime/CI/confinement/profile/evaluation sources remain protected.
+
+The following V6/V5 notes describe retained source generations; their prior freezes on handoff, static supports and dividers were superseded by V7.
+
 # V6 annotated panel sizing
 
 V6 changes only the four groups marked in the supplied annotations. Workflow/brief and horizon/coordination use700×600 source panels at49.5% of the README article each. The graph is a separately redrawn1200×540 full-row figure; requirements/closing use960×400 short half-row vignettes. No finished portrait is stretched or cropped into these frames.

@@ -35,3 +35,15 @@
 [data-lesson="requirements"] .story-frame[data-layout="support-wide"] .cp-brief{display:none}
 
 [data-lesson="coordination"] .story-frame[data-layout="panel"] .cp-scene::after{content:"";position:absolute;left:31.5%;top:55.5%;width:36.5%;height:25.7%;background:var(--story-ink);z-index:1;pointer-events:none}
+
+/* Requested V7 handoff/review reflow; other V6 scenes are unchanged. */
+[data-lesson="handoff"] .story-frame[data-layout="panel"] .story-artboard,[data-lesson="checking"] .story-frame[data-layout="panel"] .story-artboard{display:grid;grid-template-columns:420px 1fr;grid-template-rows:auto 1fr;gap:12px 20px}
+[data-lesson="handoff"] .story-frame[data-layout="panel"] .story-title,[data-lesson="checking"] .story-frame[data-layout="panel"] .story-title{grid-column:1/-1}
+[data-lesson="handoff"] .story-frame[data-layout="panel"] .story-visual,[data-lesson="checking"] .story-frame[data-layout="panel"] .story-visual{grid-column:1;width:420px;margin:0;align-self:center}
+[data-lesson="handoff"] .story-frame[data-layout="panel"] .story-label,[data-lesson="checking"] .story-frame[data-layout="panel"] .story-label{grid-column:2;align-self:center}
+.story-payload{display:flex;flex-direction:column;gap:12px}.story-artboard .story-payload p{font-size:26px!important;line-height:1.3!important}.story-payload .payload-correction{color:#28fb86;font-weight:500}.story-payload small{font:400 20px/1.3 Inter,sans-serif;color:#c9c3d4}
+[data-lesson="handoff"] .story-frame[data-layout="portrait"] .story-visual,[data-lesson="checking"] .story-frame[data-layout="portrait"] .story-visual{width:360px;margin-inline:40px}
+.story-frame[data-layout="portrait"] .story-payload{gap:4px}
+.story-frame[data-layout="portrait"] .story-label .story-payload p{font-size:24px!important;line-height:1.2!important}
+#capri-reference-composites [data-lesson="handoff"] .cp-packet{background:#100a19;color:#28fb86;border:0;font-size:23px;white-space:nowrap;padding:4px 7px}
+.story-identity{width:100%;line-height:0;margin:0 auto 24px}.story-identity img{display:inline-block;max-width:100%;height:auto}.story-wide{margin-bottom:0}.export .story-identity{display:none!important}

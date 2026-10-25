@@ -3,19 +3,21 @@
   "layout": "portrait",
   "duration_ms": 5040,
   "sample_fps": 50,
+  "source_fps": null,
+  "source_duration_ms": null,
   "sample_count": 252,
   "size": [
     480,
     640
   ],
-  "bytes": 2850353,
-  "gif_sha256": "10c380811a470d06f8ffef9472130343779332785d84befaf40de5dd94046787",
-  "poster_sha256": "3408ec93cff813bf90912e701ccaea2398cbe13e049e30c3d43f71cba659ecd5",
+  "bytes": 1583987,
+  "gif_sha256": "2ed9210dfc90900d80fb78d48e4cc5c430e6d614e52c45c77d409d18884ce46e",
+  "poster_sha256": "3f90d84525ce490b77570c9d04a12d5043034635b7c0c74bed9bfcd512d68306",
   "palette_colors": 256,
   "frames": [
     {
       "time_ms": 0.0,
-      "sha256": "b222e1ca16f8db55bfc832d6e1d222323962069f4adf8489f515c622e9b6d217",
+      "sha256": "96ee9723d8f0cc060589adc1ba989cb07cd8a836d33a4c00e612fd2b28d0e674",
       "state": {
         "lesson": "handoff",
         "time": 0,
@@ -46,14 +48,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            253,
+            221,
+            21
           ],
           "size": [
-            260,
-            197
+            116,
+            86
           ],
           "uniform_surface": true
         }
@@ -61,7 +63,7 @@
     },
     {
       "time_ms": 20.0,
-      "sha256": "7b3538c6c0cb85d0cf6d2b153836c25a0f9547b08890a09c6fc34b5990664543",
+      "sha256": "b2b1f99f81cd689b44297347d1d5ac593f6ad74d67f7379220147cf5fb92291c",
       "state": {
         "lesson": "handoff",
         "time": 20,
@@ -92,14 +94,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            253,
+            221,
+            21
           ],
           "size": [
-            260,
-            197
+            116,
+            86
           ],
           "uniform_surface": true
         }
@@ -107,7 +109,7 @@
     },
     {
       "time_ms": 40.0,
-      "sha256": "b2c4a2f9d5bf7a68230a9cfdac718c68c9681fd4b03c2eb3e93fb0f4686f766e",
+      "sha256": "70ac34e6555406e2ebd4062062ae018357233303310aab9ad4e7d480d9de3505",
       "state": {
         "lesson": "handoff",
         "time": 40,
@@ -138,14 +140,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -153,7 +155,7 @@
     },
     {
       "time_ms": 60.0,
-      "sha256": "36e64ae17fa36c7f314921e45eab3d58e475b006e5a29511445479a9202486dc",
+      "sha256": "c0c83d3da0ab460dce14b10cd356c281de9a00aa6026f710adeb0f2b849ca05a",
       "state": {
         "lesson": "handoff",
         "time": 60,
@@ -184,14 +186,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            184,
-            164,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            262,
-            196
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -199,7 +201,7 @@
     },
     {
       "time_ms": 80.0,
-      "sha256": "fa62f6062ab888ae362996e6f90e5ea2d77b50809924697025153b5f56c6366a",
+      "sha256": "1d3f87fa70653a01a60c2548c813d9f0e12933617c80a8315139079dfcc9ebc2",
       "state": {
         "lesson": "handoff",
         "time": 80,
@@ -230,14 +232,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            262,
-            195
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -245,7 +247,7 @@
     },
     {
       "time_ms": 100.0,
-      "sha256": "32310700e1405e0768ee76961d0e4fd47803484beb26c1b22769622be75c1866",
+      "sha256": "db48bc24ec485810f38cd113f8104c079f35f748b97aa484057098f5111a92b7",
       "state": {
         "lesson": "handoff",
         "time": 100,
@@ -276,14 +278,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            262,
-            195
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -291,7 +293,7 @@
     },
     {
       "time_ms": 120.0,
-      "sha256": "bf197f334b57c3342a4ad2b909f5ff0c3efa34f1bc7101401955e6e2a8273583",
+      "sha256": "493c64dc6fb80fae63eb3ef7ee10b727d827dc07b878fb0bdd86c6ee814d7e17",
       "state": {
         "lesson": "handoff",
         "time": 120,
@@ -322,14 +324,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            85
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            262,
-            194
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -337,7 +339,7 @@
     },
     {
       "time_ms": 140.0,
-      "sha256": "05b47b66644c0f7efb7a8bfe847863fd4c4f1ff08e6a083a386e3ed89dc9f64f",
+      "sha256": "d1c43c36aab249338e9586872dfb3f834d8db66d573e15be5ae6cdc8749962d8",
       "state": {
         "lesson": "handoff",
         "time": 140,
@@ -368,14 +370,14 @@
         {
           "pose": "build",
           "margins": [
-            37,
-            185,
-            164,
-            85
+            22,
+            252,
+            221,
+            21
           ],
           "size": [
-            263,
-            194
+            117,
+            87
           ],
           "uniform_surface": true
         }
@@ -383,7 +385,7 @@
     },
     {
       "time_ms": 160.0,
-      "sha256": "b8fb5b0003406a3bf14735b5986bc8ff11eebeda8c8c9996ece1c3c14f131f59",
+      "sha256": "6d9bd89439b4ada6693f88e1d7ba1dd4116ed3f02eaae1e232d40b1b8715c8ee",
       "state": {
         "lesson": "handoff",
         "time": 160,
@@ -414,14 +416,14 @@
         {
           "pose": "build",
           "margins": [
-            37,
-            185,
-            164,
-            85
+            22,
+            252,
+            221,
+            21
           ],
           "size": [
-            263,
-            194
+            117,
+            87
           ],
           "uniform_surface": true
         }
@@ -429,7 +431,7 @@
     },
     {
       "time_ms": 180.0,
-      "sha256": "a7201c330eaab5acd5a8c6ee2a916e021e6778d1b8d68853f45b19f1f7648903",
+      "sha256": "21836807f697b8d96303c4dfdd7136ee1d73a5c5864195ab9c5f199c5d0210e6",
       "state": {
         "lesson": "handoff",
         "time": 180,
@@ -460,14 +462,14 @@
         {
           "pose": "build",
           "margins": [
-            37,
-            186,
-            164,
-            85
+            22,
+            252,
+            221,
+            21
           ],
           "size": [
-            263,
-            193
+            117,
+            87
           ],
           "uniform_surface": true
         }
@@ -475,7 +477,7 @@
     },
     {
       "time_ms": 200.0,
-      "sha256": "1b1ef94413b8d11b5ae27fe2ea19aefc75463e6fb613630ae4b01838686b2fd1",
+      "sha256": "7706889a66e27bcc58bbc9057837be3dcb219b90c2a29c1d3f86beee60279a3e",
       "state": {
         "lesson": "handoff",
         "time": 200,
@@ -506,14 +508,14 @@
         {
           "pose": "build",
           "margins": [
-            37,
-            185,
-            164,
-            85
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            263,
-            194
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -521,7 +523,7 @@
     },
     {
       "time_ms": 220.0,
-      "sha256": "aee8ac18b2e4de0152f0f59d01085f850f15fc132e0fb0238c4c957bfacd03c0",
+      "sha256": "2d09be9fdd8a826f5e1569814ee447da3a6a3310e3038e7140a9bd110423f912",
       "state": {
         "lesson": "handoff",
         "time": 220,
@@ -552,14 +554,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            165,
-            85
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            194
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -567,7 +569,7 @@
     },
     {
       "time_ms": 240.0,
-      "sha256": "c804fbc0cd9bab0c14aa0017ef540687c0b8452264483bc2e8d5ded4d3bdd2b6",
+      "sha256": "c02a23cb24becb4384d7310d64668e0997a50395891e4caff3315d8f4eafd1ae",
       "state": {
         "lesson": "handoff",
         "time": 240,
@@ -598,14 +600,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            165,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            195
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -613,7 +615,7 @@
     },
     {
       "time_ms": 260.0,
-      "sha256": "4c8a7236d4869714ed88ec38c8c641e071864703bfef79bc2c5406d01af465de",
+      "sha256": "990a9f7613cf3ae605bff3b8651da62b1ec151f23e0d2dc71ca6fe60098491db",
       "state": {
         "lesson": "handoff",
         "time": 260,
@@ -644,14 +646,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            184,
-            165,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -659,7 +661,7 @@
     },
     {
       "time_ms": 280.0,
-      "sha256": "5bad732f4e876eb81c0fc59986b24c4f3acf7fe5c359179a54278abf06b67a1b",
+      "sha256": "787f1e828c639898615197789535e74d10583724cdbfdae79bae9a1db79d1b4c",
       "state": {
         "lesson": "handoff",
         "time": 280,
@@ -690,14 +692,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            82
+            22,
+            252,
+            221,
+            19
           ],
           "size": [
-            260,
-            198
+            117,
+            89
           ],
           "uniform_surface": true
         }
@@ -705,7 +707,7 @@
     },
     {
       "time_ms": 300.0,
-      "sha256": "bf1fa97cf71f9621b7173332f1f538acd0fa9655eb0c77c50bea79511b0b72b4",
+      "sha256": "cb79cd8e20b42033a6af12296573dd69eb61c57aa0726a66b9f55fd07099fec0",
       "state": {
         "lesson": "handoff",
         "time": 300,
@@ -736,14 +738,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            183,
-            165,
-            81
+            23,
+            251,
+            221,
+            19
           ],
           "size": [
-            260,
-            200
+            116,
+            90
           ],
           "uniform_surface": true
         }
@@ -751,7 +753,7 @@
     },
     {
       "time_ms": 320.0,
-      "sha256": "67458e4d059961a4d4c85f9d7bedab7ca517efab4e74f5400394e9600f46aa5e",
+      "sha256": "c696c00e4d78fcfa64c4f91ec7589c9028438c5e37f68de2466c609db40de46a",
       "state": {
         "lesson": "handoff",
         "time": 320,
@@ -782,14 +784,14 @@
         {
           "pose": "build",
           "margins": [
-            40,
-            183,
-            165,
-            80
+            23,
+            251,
+            221,
+            18
           ],
           "size": [
-            259,
-            201
+            116,
+            91
           ],
           "uniform_surface": true
         }
@@ -797,7 +799,7 @@
     },
     {
       "time_ms": 340.0,
-      "sha256": "0d22223aa71fbcce7bff040f88856c134571527f93064b0372ba24c5b87eb434",
+      "sha256": "b49912e63d6db9643ca55f42cdf0f8638c828151b1b2a98912e800f37a80f018",
       "state": {
         "lesson": "handoff",
         "time": 340,
@@ -828,14 +830,14 @@
         {
           "pose": "build",
           "margins": [
-            40,
-            183,
-            166,
-            79
+            23,
+            251,
+            221,
+            18
           ],
           "size": [
-            258,
-            202
+            116,
+            91
           ],
           "uniform_surface": true
         }
@@ -843,7 +845,7 @@
     },
     {
       "time_ms": 360.0,
-      "sha256": "ba89cee2f24603a865a499296cc7df8ffac77222a4eb5940b2da6d7c48577eb7",
+      "sha256": "445aab181792dd48ee28b28a3d641b357241497267c3f778a6bee4c132b706bb",
       "state": {
         "lesson": "handoff",
         "time": 360,
@@ -874,14 +876,14 @@
         {
           "pose": "build",
           "margins": [
-            41,
-            182,
-            166,
-            78
+            23,
+            251,
+            221,
+            17
           ],
           "size": [
-            257,
-            204
+            116,
+            92
           ],
           "uniform_surface": true
         }
@@ -889,7 +891,7 @@
     },
     {
       "time_ms": 380.0,
-      "sha256": "7baac9fd6d41541757c220a2ee74b9f49fce3598e8075e5bec3c95eb3d37ff7f",
+      "sha256": "1517d7f9f2646a0673d5c0df8286500d1fef7dd82d1d2b71e040e99939e375f2",
       "state": {
         "lesson": "handoff",
         "time": 380,
@@ -920,14 +922,14 @@
         {
           "pose": "build",
           "margins": [
-            41,
-            182,
-            166,
-            78
+            23,
+            251,
+            221,
+            17
           ],
           "size": [
-            257,
-            204
+            116,
+            92
           ],
           "uniform_surface": true
         }
@@ -935,7 +937,7 @@
     },
     {
       "time_ms": 400.0,
-      "sha256": "6c255f0cdb6eeee7341c92ea2425f4513e8c293db3c3275c9d50e41a49fa758b",
+      "sha256": "549ea6189c102587864b3e13aaac8650835e72eb98d0c6fe6549f53f3d8690f9",
       "state": {
         "lesson": "handoff",
         "time": 400,
@@ -966,14 +968,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            166,
-            77
+            23,
+            251,
+            222,
+            17
           ],
           "size": [
-            256,
-            205
+            115,
+            92
           ],
           "uniform_surface": true
         }
@@ -981,7 +983,7 @@
     },
     {
       "time_ms": 420.0,
-      "sha256": "773d0cdd43c2c83ccf2f376fae2a4dd8766aee3c3c48d548670681b56f0a35e7",
+      "sha256": "de5d4db6430cdca7b89d3cdfcb4a0ff7a8b53fe638751e6b9d7cdebef48a4828",
       "state": {
         "lesson": "handoff",
         "time": 420,
@@ -1012,14 +1014,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            181,
-            167,
-            77
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            206
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1027,7 +1029,7 @@
     },
     {
       "time_ms": 440.0,
-      "sha256": "59de0251f8ba302bc84616c0e61b8fe08777169bbb5743992bac7a1e2ef2d337",
+      "sha256": "a280ec8c1aa8e25f19d3823e0512b63e6d2943460e5a566e2ec13c0cd44cd54e",
       "state": {
         "lesson": "handoff",
         "time": 440,
@@ -1058,14 +1060,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            181,
-            167,
-            77
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            206
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1073,7 +1075,7 @@
     },
     {
       "time_ms": 460.0,
-      "sha256": "73700090154111dca3fb794ab9c8498b4198fc3f6216880f2f89930b4785b3a3",
+      "sha256": "2ba0249a8aa643fbce34f1e94f059405ae327fd71b35554e2bc179803cef7a83",
       "state": {
         "lesson": "handoff",
         "time": 460,
@@ -1104,14 +1106,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            181,
-            167,
-            77
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            206
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1119,7 +1121,7 @@
     },
     {
       "time_ms": 480.0,
-      "sha256": "c7fe0f0dca6157209d5d6ae1d2465ae0781ac4c3696daa51e0124f5d6a391497",
+      "sha256": "a3e2704ed6c482fcaa302e5d0d210643ad58d8bedc799c5edf840f638bdd1ce0",
       "state": {
         "lesson": "handoff",
         "time": 480,
@@ -1150,14 +1152,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            167,
-            77
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            205
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1165,7 +1167,7 @@
     },
     {
       "time_ms": 500.0,
-      "sha256": "5b08cf559bba4220be936b8fa9566378fd01c5cf8b086676eac99b6bf72c694d",
+      "sha256": "e43f4fcdeb771384b03129e79854b324665e833ef06c3d033f3353874ef52a5d",
       "state": {
         "lesson": "handoff",
         "time": 500,
@@ -1196,14 +1198,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            206
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1211,7 +1213,7 @@
     },
     {
       "time_ms": 520.0,
-      "sha256": "ef15eb325c37d2fa17906501c1146dbab1cdef5ff84700fb18b12d48e717a009",
+      "sha256": "96575a07b74ff8f2691aa2f5518ab37c033f5263c3ee73d04eff6e95506385b5",
       "state": {
         "lesson": "handoff",
         "time": 520,
@@ -1242,14 +1244,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1257,7 +1259,7 @@
     },
     {
       "time_ms": 540.0,
-      "sha256": "14de367670816a8d71a25c9562cf794290895bd207410384801e7f6546c3d673",
+      "sha256": "42b2124a9b66c80699c42c5eff498a904fe9bbdddd6ed5218f8b461258da7c10",
       "state": {
         "lesson": "handoff",
         "time": 540,
@@ -1288,14 +1290,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            250,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -1303,7 +1305,7 @@
     },
     {
       "time_ms": 560.0,
-      "sha256": "9536e4ebc59b3717b072aca77ec301c1a8585ae5de44798fde5ef92925c3fc05",
+      "sha256": "d16bbd2cba35da76e3eed42b94908abff1958965964d19b5152bcfa068a3fa3c",
       "state": {
         "lesson": "handoff",
         "time": 560,
@@ -1334,14 +1336,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -1349,7 +1351,7 @@
     },
     {
       "time_ms": 580.0,
-      "sha256": "e99dddd2ef05c6fece7308c1dbbcbbc04e617ae034a01f7aaaaf401b789cd380",
+      "sha256": "8e25b18b7d428212ebea029f8d798fa6e9ab38a1b97c5b4ed43f7304f796d3a9",
       "state": {
         "lesson": "handoff",
         "time": 580,
@@ -1380,14 +1382,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -1395,7 +1397,7 @@
     },
     {
       "time_ms": 600.0,
-      "sha256": "f63a90c26a4224c9f8508f419eb6e30f8e40cb441eb345cf7a154a4a862edb47",
+      "sha256": "b11ff241fb9f2f2d54123a277f27083176a786c9e6580d9cf8f3cc06bc2ec452",
       "state": {
         "lesson": "handoff",
         "time": 600,
@@ -1426,14 +1428,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -1441,7 +1443,7 @@
     },
     {
       "time_ms": 620.0,
-      "sha256": "f63a90c26a4224c9f8508f419eb6e30f8e40cb441eb345cf7a154a4a862edb47",
+      "sha256": "b11ff241fb9f2f2d54123a277f27083176a786c9e6580d9cf8f3cc06bc2ec452",
       "state": {
         "lesson": "handoff",
         "time": 620,
@@ -1472,14 +1474,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1487,7 +1489,7 @@
     },
     {
       "time_ms": 640.0,
-      "sha256": "a7ef8d3c3e634e40d5014027a1bb851df70276b08252f61b43658df26ad66894",
+      "sha256": "8530adafd8ea20c6a7ec77f02dd2cda013b9b8e1bcb2143441dd704454dfa24b",
       "state": {
         "lesson": "handoff",
         "time": 640,
@@ -1518,14 +1520,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1533,7 +1535,7 @@
     },
     {
       "time_ms": 660.0,
-      "sha256": "a7ef8d3c3e634e40d5014027a1bb851df70276b08252f61b43658df26ad66894",
+      "sha256": "8530adafd8ea20c6a7ec77f02dd2cda013b9b8e1bcb2143441dd704454dfa24b",
       "state": {
         "lesson": "handoff",
         "time": 660,
@@ -1564,14 +1566,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1579,7 +1581,7 @@
     },
     {
       "time_ms": 680.0,
-      "sha256": "fb269f61eef0b39a770bfcaa7de78bfc46b915519f6da55856f7b1bd8d473fe6",
+      "sha256": "4b6420690a4e621fd66040fca3b2e58bc37bfb88c9a629727970a19f14be1088",
       "state": {
         "lesson": "handoff",
         "time": 680,
@@ -1610,14 +1612,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -1625,7 +1627,7 @@
     },
     {
       "time_ms": 700.0,
-      "sha256": "d91d0abc771996286c8e5e96367533823e1ef323a104911fdbba2603e2b9ce4a",
+      "sha256": "5d73d81c828186e0d4b44eeaf32db157e4e6e294e427611946f909350e9b0e4a",
       "state": {
         "lesson": "handoff",
         "time": 700,
@@ -1656,14 +1658,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1671,7 +1673,7 @@
     },
     {
       "time_ms": 720.0,
-      "sha256": "d91d0abc771996286c8e5e96367533823e1ef323a104911fdbba2603e2b9ce4a",
+      "sha256": "5d73d81c828186e0d4b44eeaf32db157e4e6e294e427611946f909350e9b0e4a",
       "state": {
         "lesson": "handoff",
         "time": 720,
@@ -1702,14 +1704,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1717,7 +1719,7 @@
     },
     {
       "time_ms": 740.0,
-      "sha256": "537ea11f9273bf78e5f0481a4f62e9b5e0819258174c675c219b1b05d03dde3f",
+      "sha256": "540be8323b2deb38a24240b836e0c4e4c398c3161ecc370ab8012b77592fa2d3",
       "state": {
         "lesson": "handoff",
         "time": 740,
@@ -1748,14 +1750,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1763,7 +1765,7 @@
     },
     {
       "time_ms": 760.0,
-      "sha256": "537ea11f9273bf78e5f0481a4f62e9b5e0819258174c675c219b1b05d03dde3f",
+      "sha256": "540be8323b2deb38a24240b836e0c4e4c398c3161ecc370ab8012b77592fa2d3",
       "state": {
         "lesson": "handoff",
         "time": 760,
@@ -1794,14 +1796,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1809,7 +1811,7 @@
     },
     {
       "time_ms": 780.0,
-      "sha256": "d608ac01266c58100df3f7530f445e16c07488e374e197761213b6f2655e9330",
+      "sha256": "feb9e386b0f14a1fd3e3af1dbe753a2671e2dd749e09e1264f1b0c5e1eacae5d",
       "state": {
         "lesson": "handoff",
         "time": 780,
@@ -1840,14 +1842,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1855,7 +1857,7 @@
     },
     {
       "time_ms": 800.0,
-      "sha256": "137e16c26ef2c710d1b9dc2be3c06c8e48f3b6951686f911f806cd149a07bbf2",
+      "sha256": "daf2ab24efd6d24bf48545c77e49b2577bb2eb333f8a2703c182f2cc9e89e8d9",
       "state": {
         "lesson": "handoff",
         "time": 800,
@@ -1886,14 +1888,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1901,7 +1903,7 @@
     },
     {
       "time_ms": 820.0,
-      "sha256": "137e16c26ef2c710d1b9dc2be3c06c8e48f3b6951686f911f806cd149a07bbf2",
+      "sha256": "daf2ab24efd6d24bf48545c77e49b2577bb2eb333f8a2703c182f2cc9e89e8d9",
       "state": {
         "lesson": "handoff",
         "time": 820,
@@ -1932,14 +1934,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1947,7 +1949,7 @@
     },
     {
       "time_ms": 840.0,
-      "sha256": "b597ae82955ded4e43da7a748106d31588e1244b7780c571346be11a2a567e95",
+      "sha256": "5a8e23dd557927122e652e3e354f452e2d6df5f046285f29793b0b05383d0b42",
       "state": {
         "lesson": "handoff",
         "time": 840,
@@ -1978,14 +1980,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -1993,7 +1995,7 @@
     },
     {
       "time_ms": 860.0,
-      "sha256": "b597ae82955ded4e43da7a748106d31588e1244b7780c571346be11a2a567e95",
+      "sha256": "5a8e23dd557927122e652e3e354f452e2d6df5f046285f29793b0b05383d0b42",
       "state": {
         "lesson": "handoff",
         "time": 860,
@@ -2024,14 +2026,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -2039,7 +2041,7 @@
     },
     {
       "time_ms": 880.0,
-      "sha256": "a708bffa968e81b7e096796bba9dbd3106622d96a6d0d5b1409a16cb1eecd40b",
+      "sha256": "7367c50793a895dae9fcba8d094652fde0e5103f15afc6b3cf6da5c8fde3a467",
       "state": {
         "lesson": "handoff",
         "time": 880,
@@ -2070,14 +2072,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -2085,7 +2087,7 @@
     },
     {
       "time_ms": 900.0,
-      "sha256": "f5b12961b4fd5d024775c83ef6c79ab1233cd33c8d7fb3ebabbf0262183ad584",
+      "sha256": "e86d05b5b230d9bf2f338bbd1f43b4211132d5d5679ef214b159e102728b0ad7",
       "state": {
         "lesson": "handoff",
         "time": 900,
@@ -2116,14 +2118,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -2131,7 +2133,7 @@
     },
     {
       "time_ms": 920.0,
-      "sha256": "f5b12961b4fd5d024775c83ef6c79ab1233cd33c8d7fb3ebabbf0262183ad584",
+      "sha256": "e86d05b5b230d9bf2f338bbd1f43b4211132d5d5679ef214b159e102728b0ad7",
       "state": {
         "lesson": "handoff",
         "time": 920,
@@ -2162,14 +2164,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -2177,7 +2179,7 @@
     },
     {
       "time_ms": 940.0,
-      "sha256": "a994d5ee767a46cca8dffaae65cc1153cf95426ecb5783fbeed4b6626b9a7355",
+      "sha256": "57935a7c96399db9e9ad9c3efa9a2496e61dca30feda8505f41bfed6e53cefe2",
       "state": {
         "lesson": "handoff",
         "time": 940,
@@ -2208,14 +2210,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -2223,7 +2225,7 @@
     },
     {
       "time_ms": 960.0,
-      "sha256": "a994d5ee767a46cca8dffaae65cc1153cf95426ecb5783fbeed4b6626b9a7355",
+      "sha256": "57935a7c96399db9e9ad9c3efa9a2496e61dca30feda8505f41bfed6e53cefe2",
       "state": {
         "lesson": "handoff",
         "time": 960,
@@ -2254,14 +2256,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -2269,7 +2271,7 @@
     },
     {
       "time_ms": 980.0,
-      "sha256": "f9122969bee18e0ace13bcbada4cee8a2a092cf9044042389a21458b10673d37",
+      "sha256": "9f6a012e4547bbc472ae3d4ad77679f1c73085c81480e3d07b7a11e8affc0066",
       "state": {
         "lesson": "handoff",
         "time": 980,
@@ -2300,14 +2302,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -2315,7 +2317,7 @@
     },
     {
       "time_ms": 1000.0,
-      "sha256": "3d022b9cddfa7bda3cba042a8d30bcdc235073e4e92fc765acca77b376ed39ad",
+      "sha256": "604cc3337ea7524b89998a575034fecf606d661f41eae410635a2912caa5fe5e",
       "state": {
         "lesson": "handoff",
         "time": 1000,
@@ -2346,14 +2348,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -2361,7 +2363,7 @@
     },
     {
       "time_ms": 1020.0,
-      "sha256": "563756f7b8df1ae321fb3c650833908541279bf9f41c92e4d4aca023e19f9c66",
+      "sha256": "e183eb3440ab165f031d1520023f3ec250adea076457b4b2dc5275af86044feb",
       "state": {
         "lesson": "handoff",
         "time": 1020,
@@ -2392,14 +2394,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            166,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            255,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -2407,7 +2409,7 @@
     },
     {
       "time_ms": 1040.0,
-      "sha256": "d027fe1f10e70913277998a59ac4d2177a9663dbd7e7d7848423fd622546e294",
+      "sha256": "e84c675115ba685d5c4f5136be22846bd98f67f47a9916dc0af82b51a9bdc5ef",
       "state": {
         "lesson": "handoff",
         "time": 1040,
@@ -2438,14 +2440,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            166,
-            76
+            24,
+            251,
+            221,
+            17
           ],
           "size": [
-            255,
-            207
+            115,
+            92
           ],
           "uniform_surface": true
         }
@@ -2453,7 +2455,7 @@
     },
     {
       "time_ms": 1060.0,
-      "sha256": "591feffa80e6d77f0a04ab14ce55abed6867fb92a8fdf2ed73aeb41dba973a8c",
+      "sha256": "10644544f104eed4c27153ed289f35eae14cea6d865db4abfabff9e655d38dc6",
       "state": {
         "lesson": "handoff",
         "time": 1060,
@@ -2484,14 +2486,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            166,
-            77
+            24,
+            251,
+            221,
+            17
           ],
           "size": [
-            256,
-            205
+            115,
+            92
           ],
           "uniform_surface": true
         }
@@ -2499,7 +2501,7 @@
     },
     {
       "time_ms": 1080.0,
-      "sha256": "856d71f7849c4f077dd538f0f94b2b94e97996f49991c87097b82cfaf7a14c8c",
+      "sha256": "e02a7894d20252e6994340ccde766b6448ca29ac4cd1d9fec9b375b173a18650",
       "state": {
         "lesson": "handoff",
         "time": 1080,
@@ -2530,14 +2532,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            165,
-            78
+            24,
+            251,
+            221,
+            18
           ],
           "size": [
-            257,
-            204
+            115,
+            91
           ],
           "uniform_surface": true
         }
@@ -2545,7 +2547,7 @@
     },
     {
       "time_ms": 1100.0,
-      "sha256": "ff2e93991965771de756578c46848e6c0ec52ab29059505203888d5c642b18ec",
+      "sha256": "f41b7b510d2f21f723fea76c1a5731ab23cc4f8ae7f3acb3573c63622e1c9d13",
       "state": {
         "lesson": "handoff",
         "time": 1100,
@@ -2576,14 +2578,14 @@
         {
           "pose": "build",
           "margins": [
-            41,
-            183,
-            165,
-            80
+            23,
+            251,
+            221,
+            18
           ],
           "size": [
-            258,
-            201
+            116,
+            91
           ],
           "uniform_surface": true
         }
@@ -2591,7 +2593,7 @@
     },
     {
       "time_ms": 1120.0,
-      "sha256": "8e9ebb027ebb0222a873c4ed5b3e482535847055537d6f7dc100cfa6c3e641ed",
+      "sha256": "a2ff2c2a8d8a1ebcd57e81a2aefca5802606646806998456ff5a6f665fa8f61d",
       "state": {
         "lesson": "handoff",
         "time": 1120,
@@ -2622,14 +2624,14 @@
         {
           "pose": "build",
           "margins": [
-            40,
-            184,
-            165,
-            81
+            23,
+            252,
+            221,
+            19
           ],
           "size": [
-            259,
-            199
+            116,
+            89
           ],
           "uniform_surface": true
         }
@@ -2637,7 +2639,7 @@
     },
     {
       "time_ms": 1140.0,
-      "sha256": "122b9c9fe065453b2d16b7c0ddd2ddafb4be7fb1f0a8a64105d217ab691b7330",
+      "sha256": "7ab73374c1f4dac06f26d12bd686c217465d92eb2b21dcf06a95a0dc6e7413fe",
       "state": {
         "lesson": "handoff",
         "time": 1140,
@@ -2668,14 +2670,14 @@
         {
           "pose": "build",
           "margins": [
-            40,
-            184,
-            164,
-            82
+            23,
+            252,
+            221,
+            19
           ],
           "size": [
-            260,
-            198
+            116,
+            89
           ],
           "uniform_surface": true
         }
@@ -2683,7 +2685,7 @@
     },
     {
       "time_ms": 1160.0,
-      "sha256": "9dcec94a3ea0368498262cae56bc37fb68e9049cc6c71d87c953e6e474b4d5ae",
+      "sha256": "cd7c497257f44bd764b27d5f9d37570998020d75970faf24e8159d9bd4e4898f",
       "state": {
         "lesson": "handoff",
         "time": 1160,
@@ -2714,14 +2716,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            185,
-            164,
-            84
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            261,
-            195
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -2729,7 +2731,7 @@
     },
     {
       "time_ms": 1180.0,
-      "sha256": "30953b3e8e25b525274ea6b2ececdcec5628a76321d2b4d62a652b146d452b9e",
+      "sha256": "eee7ca529fbc06b6ce1f636768ad9691206eb247341f3e301bafb2264a837dfb",
       "state": {
         "lesson": "handoff",
         "time": 1180,
@@ -2760,14 +2762,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            185,
-            164,
-            85
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            261,
-            194
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -2775,7 +2777,7 @@
     },
     {
       "time_ms": 1200.0,
-      "sha256": "2a5c28080a424077b94cd893605f094f9f2066e171027d6bcc8edd5f2cd0be49",
+      "sha256": "90b425049e7cd81ee419dffdc7f3a2bc3b2f7be310e024ea2a3401d94f933fe3",
       "state": {
         "lesson": "handoff",
         "time": 1200,
@@ -2806,14 +2808,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            86
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            262,
-            193
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -2821,7 +2823,7 @@
     },
     {
       "time_ms": 1220.0,
-      "sha256": "5dba5098690816434682cf93169b4bd292e502db08d06cfcd4ec87234ac2d45a",
+      "sha256": "8af0313a7fa3042c5b9301ab0da2ae1d074e2716ef4b57a1cf4e5405221078a4",
       "state": {
         "lesson": "handoff",
         "time": 1220,
@@ -2852,14 +2854,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            87
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            192
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -2867,7 +2869,7 @@
     },
     {
       "time_ms": 1240.0,
-      "sha256": "80761764f3cefe434278577861310f4b0afcb404d13f5a6c92858b3e87134bd5",
+      "sha256": "d3956cc054c57ebf73ced8dd5bf763754f1f2ae1de39defb06c3a4b10a82867b",
       "state": {
         "lesson": "handoff",
         "time": 1240,
@@ -2898,14 +2900,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            87
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            192
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -2913,7 +2915,7 @@
     },
     {
       "time_ms": 1260.0,
-      "sha256": "2e1d837e5478fa01ec22221a6f20eeb759bb9a2288d4248c59b7218032b06a3b",
+      "sha256": "96069c1bb9aa1d794293d9ec2ea29d9983b1ec6da85d188b082fe532719b0a70",
       "state": {
         "lesson": "handoff",
         "time": 1260,
@@ -2944,14 +2946,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            87
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            192
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -2959,7 +2961,7 @@
     },
     {
       "time_ms": 1280.0,
-      "sha256": "cc298d310fa399f0a65d41a653c8e7faeb306b92d87c0ab5076c615254c80338",
+      "sha256": "499c16b740e3391bfaeb3622b283dec04bdccf3b0bdc9b0240c8d046e25906bc",
       "state": {
         "lesson": "handoff",
         "time": 1280,
@@ -2990,14 +2992,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            87
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            192
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -3005,7 +3007,7 @@
     },
     {
       "time_ms": 1300.0,
-      "sha256": "0c2d18ebd85bfa8c298cea7b273763a5aadcff36248a23c2906643c3a6fce9ba",
+      "sha256": "1de9e1b4525d453c89fcec51a2a239e144ccab1c05f5ab189b5b6263028eab05",
       "state": {
         "lesson": "handoff",
         "time": 1300,
@@ -3036,14 +3038,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            86
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            193
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -3051,7 +3053,7 @@
     },
     {
       "time_ms": 1320.0,
-      "sha256": "6f58193ae4f1b5a4f8d66177a87c3288b10f27d7ad3e094e78fca28a1b4b93b2",
+      "sha256": "9d1232672208c2dde408bad92f9c35d7c1353abe019f6006d8b1904dff225964",
       "state": {
         "lesson": "handoff",
         "time": 1320,
@@ -3082,14 +3084,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            86
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            262,
-            193
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -3097,7 +3099,7 @@
     },
     {
       "time_ms": 1340.0,
-      "sha256": "301fcc2a526f444f1aa790c66f9172bac509f627dad836d10fb748f9fbdefbd4",
+      "sha256": "aed5448eea4ef910aa89b920c25c3adfa86890004b73d85b0c8bf02448499fae",
       "state": {
         "lesson": "handoff",
         "time": 1340,
@@ -3128,14 +3130,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            86
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            193
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -3143,7 +3145,7 @@
     },
     {
       "time_ms": 1360.0,
-      "sha256": "37c2d83a5df72d97bf6276b55835cd481fd5a88f45fa35d92b5ac4e0e3244f4c",
+      "sha256": "bf00aca24ac2f5a6bc0e23a60446467428ed5a338b73e378670cdcbbac25cb25",
       "state": {
         "lesson": "handoff",
         "time": 1360,
@@ -3174,14 +3176,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            85
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            262,
-            194
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -3189,7 +3191,7 @@
     },
     {
       "time_ms": 1380.0,
-      "sha256": "7644a5e2317550940ccac448f7f383ecde76840de82827e548fa731be398ac93",
+      "sha256": "84494f9bf51fbae0042735ee11fb79b6db842bd18b43accf7f7545bf9f3a9370",
       "state": {
         "lesson": "handoff",
         "time": 1380,
@@ -3220,14 +3222,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            85
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            262,
-            194
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -3235,7 +3237,7 @@
     },
     {
       "time_ms": 1400.0,
-      "sha256": "3d5ecdb12f415393bc5a95d1c402c90d8dcb1c2ab82924f42023eb346dd5e77d",
+      "sha256": "6ddd83a698bfff0306ce83dace8153ea7f1068fe18c5b8ae433aad2ceeef3dad",
       "state": {
         "lesson": "handoff",
         "time": 1400,
@@ -3266,14 +3268,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            85
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            262,
-            194
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -3281,7 +3283,7 @@
     },
     {
       "time_ms": 1420.0,
-      "sha256": "84f2b0759808fa58a0d1bd976f6000d7d1227ffaed85722d6eda7d4399c83f5c",
+      "sha256": "edc9efe0363f23eb9a58de498a54b0ebae4e3c83ac75f4845cde8274c8e1608e",
       "state": {
         "lesson": "handoff",
         "time": 1420,
@@ -3312,14 +3314,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            84
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            262,
-            195
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -3327,7 +3329,7 @@
     },
     {
       "time_ms": 1440.0,
-      "sha256": "a8fea838cf3c51d6ab277491955cd8d0ba76a3af366b62e33067685da7603d08",
+      "sha256": "47b05a960cb83e40250d72b6249cec8919019e8acc2a96d365d97e1dabb2e678",
       "state": {
         "lesson": "handoff",
         "time": 1440,
@@ -3358,14 +3360,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            185,
-            164,
-            84
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            261,
-            195
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -3373,7 +3375,7 @@
     },
     {
       "time_ms": 1460.0,
-      "sha256": "7c99dc3f53b5b1e05df0d81de4db7351eea900690bfdaa780650474e3a13d6a0",
+      "sha256": "316a1efd99e594838c1651b2567784b8a16432c45ce0eb6b6da1efd8a726800c",
       "state": {
         "lesson": "handoff",
         "time": 1460,
@@ -3404,14 +3406,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            84
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            261,
-            196
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -3419,7 +3421,7 @@
     },
     {
       "time_ms": 1480.0,
-      "sha256": "aaeff41865f7460935219c04d6b23bbc95193472f10fbfbe53e49da6f0dddf88",
+      "sha256": "f896c3b42af5e5ee5bfddb0f2063218f5cf1f22c2062988e9fe18c45df7f88bf",
       "state": {
         "lesson": "handoff",
         "time": 1480,
@@ -3450,14 +3452,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            196
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -3465,7 +3467,7 @@
     },
     {
       "time_ms": 1500.0,
-      "sha256": "f7fb237f93b5bfa7b7b20a219b17bd0e7c97e55bdb7cdb2318847c53f5274a7c",
+      "sha256": "1b578cb68b68af960d1da549d966f381b0ded5ab31bb6148700abd72f9011d7c",
       "state": {
         "lesson": "handoff",
         "time": 1500,
@@ -3496,14 +3498,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -3511,7 +3513,7 @@
     },
     {
       "time_ms": 1520.0,
-      "sha256": "b0d84d17991bf2f2220daf26e0c707e14aaec407e3ca1a78f375cdf8b156be9a",
+      "sha256": "45135ba0cc19543a33fd2ed01a3d5c644634ebe83b2a85678bac852c273cfe8d",
       "state": {
         "lesson": "handoff",
         "time": 1520,
@@ -3542,14 +3544,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -3557,7 +3559,7 @@
     },
     {
       "time_ms": 1540.0,
-      "sha256": "1d4460b80e69d33c8aa1d3af2db2c843b4f0a0bdc74b8ba6dcb37cc5305d7a8e",
+      "sha256": "d84eb8bb30e902b41f7a982ef02fa675d250b0a51e534ea832ff44e220b0a566",
       "state": {
         "lesson": "handoff",
         "time": 1540,
@@ -3588,14 +3590,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -3603,7 +3605,7 @@
     },
     {
       "time_ms": 1560.0,
-      "sha256": "dc065bf0ad7e60d879f124c51259a161f030ad062bcc593d12e8ba456ffe5a80",
+      "sha256": "35f0a4e5e25aff7ac3d82772a221b3569189118ffdfaa36e859a9410c670c46f",
       "state": {
         "lesson": "handoff",
         "time": 1560,
@@ -3634,14 +3636,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -3649,7 +3651,7 @@
     },
     {
       "time_ms": 1580.0,
-      "sha256": "e390536429d14e6102c20688e9d929bbea931e5b2a255b489ebeaecb230689cc",
+      "sha256": "c50cd5f0c5ccdf01e63d71f918733bb370dde739c7aa51896a3e7d72274c858d",
       "state": {
         "lesson": "handoff",
         "time": 1580,
@@ -3680,14 +3682,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -3695,7 +3697,7 @@
     },
     {
       "time_ms": 1600.0,
-      "sha256": "a9139ec17a2935a776eece8d8a4f97e349d5648203000cf0d52dc0104923aafd",
+      "sha256": "70c6544cd1c6c5ece259c2b4dc82150589d1de752fe8ea9206750be19570df81",
       "state": {
         "lesson": "handoff",
         "time": 1600,
@@ -3726,14 +3728,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -3741,7 +3743,7 @@
     },
     {
       "time_ms": 1620.0,
-      "sha256": "a9139ec17a2935a776eece8d8a4f97e349d5648203000cf0d52dc0104923aafd",
+      "sha256": "70c6544cd1c6c5ece259c2b4dc82150589d1de752fe8ea9206750be19570df81",
       "state": {
         "lesson": "handoff",
         "time": 1620,
@@ -3772,14 +3774,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -3787,7 +3789,7 @@
     },
     {
       "time_ms": 1640.0,
-      "sha256": "4b04364327043e93e2e5ab76134f6dcf341796fec0c32dba3e3013efaa43a9c3",
+      "sha256": "03467d1d210b40816fc9ecdbd9ca238f13c130ca81a118a1a35a3c4685a974a1",
       "state": {
         "lesson": "handoff",
         "time": 1640,
@@ -3818,14 +3820,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -3833,7 +3835,7 @@
     },
     {
       "time_ms": 1660.0,
-      "sha256": "763964af7696b2c9e60b808cbedf087ef27a4d1ace436b166810514a49dcded8",
+      "sha256": "c57e9db7e7d1016193ebdc7e352d767a9d99089d9b94c17455a8e619b7223da4",
       "state": {
         "lesson": "handoff",
         "time": 1660,
@@ -3864,14 +3866,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -3879,7 +3881,7 @@
     },
     {
       "time_ms": 1680.0,
-      "sha256": "38b07b8bda97dbec6e900306e9cf2f9baeb40b60e5279cb36029ca48f45d7299",
+      "sha256": "4ed0e72e6f8d6d6559d1cc477865f413ce4efb206e6b5f08a27036ce37a92361",
       "state": {
         "lesson": "handoff",
         "time": 1680,
@@ -3910,14 +3912,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -3925,7 +3927,7 @@
     },
     {
       "time_ms": 1700.0,
-      "sha256": "e22808961c6da2aa6c6fee4f99d4e05ee7cdab47a9ff52b69385f6ecfc9aaf6e",
+      "sha256": "4e371ec0b030ef9b6b91643763e2b41ef86b31454a0be3e03ca0a643aaba9ffe",
       "state": {
         "lesson": "handoff",
         "time": 1700,
@@ -3956,14 +3958,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -3971,7 +3973,7 @@
     },
     {
       "time_ms": 1720.0,
-      "sha256": "303e61bebaf8465f58d100d24c31d460fc286b0e0ebf892efbaeb4faf2f2b93b",
+      "sha256": "d54bc48205e7c719211b302e6f9717e8076b604120d6ed1f6dc4593df93c0687",
       "state": {
         "lesson": "handoff",
         "time": 1720,
@@ -4002,14 +4004,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4017,7 +4019,7 @@
     },
     {
       "time_ms": 1740.0,
-      "sha256": "e2d6c21d03a222a55a02ee6384a20dfa04b7f69731ccd3aff51fb269bf99b741",
+      "sha256": "4f9ebc4e7f3f010503c3c29f15973662acdd9f63ecdd32df5169e9c0e2e1442d",
       "state": {
         "lesson": "handoff",
         "time": 1740,
@@ -4048,14 +4050,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4063,7 +4065,7 @@
     },
     {
       "time_ms": 1760.0,
-      "sha256": "ff2d815cd5e9a854c6cad98564304a3662c77ba2fec224293d10476992276969",
+      "sha256": "93c53428c6147fca47e5df0e04f7598b609866fa7af12169e5199d95981b0ad8",
       "state": {
         "lesson": "handoff",
         "time": 1760,
@@ -4094,14 +4096,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4109,7 +4111,7 @@
     },
     {
       "time_ms": 1780.0,
-      "sha256": "1ce35970742bb4570e7fa40170fbf92ecf892a817c6239d3e497ab2ff85ce7d6",
+      "sha256": "a15b8d05374a7f7fb6df82b8f4b06067caa7c58d747ae4547a6b10c6a68e2dbf",
       "state": {
         "lesson": "handoff",
         "time": 1780,
@@ -4140,14 +4142,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4155,7 +4157,7 @@
     },
     {
       "time_ms": 1800.0,
-      "sha256": "b7d056ff8c6d7c453c8b0dc0f0ff3a249796f432afd5a7904cca3354c437d979",
+      "sha256": "23ae412377eca7b36134a27a7e22ad0cf332050f5d394ad9efcc8d64318418ad",
       "state": {
         "lesson": "handoff",
         "time": 1800,
@@ -4186,14 +4188,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4201,7 +4203,7 @@
     },
     {
       "time_ms": 1820.0,
-      "sha256": "6c344bea06643ab65848087de1a841b233a1f2e4690841189d74fac848c88300",
+      "sha256": "0f3392663960ab3a17b8479a399719d17beee0392d685eb028f68a149453aa36",
       "state": {
         "lesson": "handoff",
         "time": 1820,
@@ -4232,14 +4234,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4247,7 +4249,7 @@
     },
     {
       "time_ms": 1840.0,
-      "sha256": "63313486b9a9965c61958770ca0b1742b50ef92cb7dac59a464e6aba47fc3920",
+      "sha256": "a902835c2f07eb6cf624d7c232b2930d0b0dc4e9644c9a524ddf09a7c67969fb",
       "state": {
         "lesson": "handoff",
         "time": 1840,
@@ -4278,14 +4280,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4293,7 +4295,7 @@
     },
     {
       "time_ms": 1860.0,
-      "sha256": "dc736b40f28a5c22ba7e0121c4b6b9d3b6a74c350b7b1935b143ae35623ac4e0",
+      "sha256": "de88ab33f3ec6cb010f16e4bc212a1d4001d661eca838b098563d9b21d46a163",
       "state": {
         "lesson": "handoff",
         "time": 1860,
@@ -4324,14 +4326,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4339,7 +4341,7 @@
     },
     {
       "time_ms": 1880.0,
-      "sha256": "a0d91dc17b2d570aed84d76e4bf74b9c97ad8245e4db8e8c83a1392f1233db23",
+      "sha256": "b0885382202e12eadda501d274de0cc24d7f8ceddc789b9eb3c7924f6e413152",
       "state": {
         "lesson": "handoff",
         "time": 1880,
@@ -4370,14 +4372,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4385,7 +4387,7 @@
     },
     {
       "time_ms": 1900.0,
-      "sha256": "c6fe84b07b802cb02e9a7e53fe03c55e99399efd189f24035f145364fb74bf40",
+      "sha256": "283b98fb5846c13d4fa24c5b7d9b63f731e92594684c379fd16b41153bd2e1b6",
       "state": {
         "lesson": "handoff",
         "time": 1900,
@@ -4416,14 +4418,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4431,7 +4433,7 @@
     },
     {
       "time_ms": 1920.0,
-      "sha256": "4602761f1ec04d9f2db4b82ae4f3283e3ce682e219ccd78694c4a2057962c817",
+      "sha256": "688354099a06ce4b9550902c7ee18f6155a615f4e64fc1b8435bccf9f371fa89",
       "state": {
         "lesson": "handoff",
         "time": 1920,
@@ -4462,14 +4464,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4477,7 +4479,7 @@
     },
     {
       "time_ms": 1940.0,
-      "sha256": "0358c874b9c49c36532f1dc620a3d8ae89f46cc6bfb5b5f22d6814ccb3b58a27",
+      "sha256": "2b1316c18e7b72346de796ec863cb4d46c3ed7d591ea91eab1b41a195554e3a6",
       "state": {
         "lesson": "handoff",
         "time": 1940,
@@ -4508,14 +4510,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4523,7 +4525,7 @@
     },
     {
       "time_ms": 1960.0,
-      "sha256": "62e5c21612445cbfd60a0e22569e6edb36b4a0b9b290ed2a4664cb39a60bdf08",
+      "sha256": "11e906242fa1757b4bfe2b6463e4336b2c508a34371fc466079e2baf1de5e14b",
       "state": {
         "lesson": "handoff",
         "time": 1960,
@@ -4554,14 +4556,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4569,7 +4571,7 @@
     },
     {
       "time_ms": 1980.0,
-      "sha256": "2efe76b1d0fd0d5d4d1e14b685217c0946e5cc67421f7ca11b0d5c99e9b33289",
+      "sha256": "2832207a73fbda6e42f3b33abf5d0f437267a6bb377dea65dd13297828c355a1",
       "state": {
         "lesson": "handoff",
         "time": 1980,
@@ -4600,14 +4602,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4615,7 +4617,7 @@
     },
     {
       "time_ms": 2000.0,
-      "sha256": "8cd63a7b77499fd23e27783de31f5d6c392a4b3c989d478b31f0d43d105f2eac",
+      "sha256": "f3dd2d02486eb74a6fba2b60a8fd3545eea04a3648b5f2158cd12bb45db6f00c",
       "state": {
         "lesson": "handoff",
         "time": 2000,
@@ -4646,14 +4648,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4661,7 +4663,7 @@
     },
     {
       "time_ms": 2020.0,
-      "sha256": "b022327558ceb0ad8859c644ccb34b059d0bb0cc654cf7d3ba03766a29087a05",
+      "sha256": "9c362b3291703fa620e498492c4a9d523e97f74a9a2dca1c99894c43e8bf0137",
       "state": {
         "lesson": "handoff",
         "time": 2020,
@@ -4692,14 +4694,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4707,7 +4709,7 @@
     },
     {
       "time_ms": 2040.0,
-      "sha256": "3166bf943c3b40e5b1ac684d950795d1754d77de88f3e27befd6a929611c7fe4",
+      "sha256": "d224cfdbfed18b619ab35c43accc56502fb2c24e20268b1de6f6315221de06ae",
       "state": {
         "lesson": "handoff",
         "time": 2040,
@@ -4738,14 +4740,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4753,7 +4755,7 @@
     },
     {
       "time_ms": 2060.0,
-      "sha256": "b505632d56bac830997bd1f9bc53a371f39ba20dc79a57037dd2b223c1f83b8b",
+      "sha256": "a61b09eabef537106ac14994152b8af57c2ed881a14c3c4b1283659f95d9ddb6",
       "state": {
         "lesson": "handoff",
         "time": 2060,
@@ -4784,14 +4786,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4799,7 +4801,7 @@
     },
     {
       "time_ms": 2080.0,
-      "sha256": "1f5c78185b8c2c8e8b96926b3759d72fd62816646c76fe241c7614beec72d204",
+      "sha256": "6871604cfd8c309f877b1071a1958a764bed6737aae99acfd89f5923832305ca",
       "state": {
         "lesson": "handoff",
         "time": 2080,
@@ -4830,14 +4832,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4845,7 +4847,7 @@
     },
     {
       "time_ms": 2100.0,
-      "sha256": "2486faced18c032495e59920778791937e1260efde5756fd780bcc62b1e1636b",
+      "sha256": "2c8dce1b3c4ad342c45874d9b7d1cc4909d7988bf0c2bdb24ca2fb32122bf325",
       "state": {
         "lesson": "handoff",
         "time": 2100,
@@ -4876,14 +4878,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4891,7 +4893,7 @@
     },
     {
       "time_ms": 2120.0,
-      "sha256": "2486faced18c032495e59920778791937e1260efde5756fd780bcc62b1e1636b",
+      "sha256": "2c8dce1b3c4ad342c45874d9b7d1cc4909d7988bf0c2bdb24ca2fb32122bf325",
       "state": {
         "lesson": "handoff",
         "time": 2120,
@@ -4922,14 +4924,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4937,7 +4939,7 @@
     },
     {
       "time_ms": 2140.0,
-      "sha256": "755f346ffcc02bf023a81bc0282a715f3d9350c2c38f5efbadbea96eb95b934f",
+      "sha256": "62fc5950ab0507f2d55767861340e5ee920d42bd75598c29d18a7af71088a8c2",
       "state": {
         "lesson": "handoff",
         "time": 2140,
@@ -4968,14 +4970,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -4983,7 +4985,7 @@
     },
     {
       "time_ms": 2160.0,
-      "sha256": "755f346ffcc02bf023a81bc0282a715f3d9350c2c38f5efbadbea96eb95b934f",
+      "sha256": "62fc5950ab0507f2d55767861340e5ee920d42bd75598c29d18a7af71088a8c2",
       "state": {
         "lesson": "handoff",
         "time": 2160,
@@ -5014,14 +5016,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5029,7 +5031,7 @@
     },
     {
       "time_ms": 2180.0,
-      "sha256": "d7c77c4e1543b3b2ea4fd455420dd711f7ddf3dd8d11e0281dbd96ff22eed0fb",
+      "sha256": "bfc2e37f1b806d1981db845614a409400f7bcf5d2485d16cb905ed233cfa28ad",
       "state": {
         "lesson": "handoff",
         "time": 2180,
@@ -5060,14 +5062,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5075,7 +5077,7 @@
     },
     {
       "time_ms": 2200.0,
-      "sha256": "d9591c76a66e00325be1b13a547c907702f505edc6f6c1630e77ed62e5ffa1df",
+      "sha256": "a38334fb6d6cca5366b424b01b0baa36ff8d1bd2744dc8c12e4d70516bc05a3b",
       "state": {
         "lesson": "handoff",
         "time": 2200,
@@ -5106,14 +5108,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5121,7 +5123,7 @@
     },
     {
       "time_ms": 2220.0,
-      "sha256": "d9591c76a66e00325be1b13a547c907702f505edc6f6c1630e77ed62e5ffa1df",
+      "sha256": "a38334fb6d6cca5366b424b01b0baa36ff8d1bd2744dc8c12e4d70516bc05a3b",
       "state": {
         "lesson": "handoff",
         "time": 2220,
@@ -5152,14 +5154,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5167,7 +5169,7 @@
     },
     {
       "time_ms": 2240.0,
-      "sha256": "1f207d9852633244776a9ac1c831176fc99a94065ce9a07cd5410f3d13e8d613",
+      "sha256": "c44e7fcbcc53d6992faa15d010dcb6f54c830863ea24c522f88ed052b662478e",
       "state": {
         "lesson": "handoff",
         "time": 2240,
@@ -5198,14 +5200,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5213,7 +5215,7 @@
     },
     {
       "time_ms": 2260.0,
-      "sha256": "1f207d9852633244776a9ac1c831176fc99a94065ce9a07cd5410f3d13e8d613",
+      "sha256": "c44e7fcbcc53d6992faa15d010dcb6f54c830863ea24c522f88ed052b662478e",
       "state": {
         "lesson": "handoff",
         "time": 2260,
@@ -5244,14 +5246,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5259,7 +5261,7 @@
     },
     {
       "time_ms": 2280.0,
-      "sha256": "d432c8cdfa295d99a6ad17da88f4f76a6a9b9aff7a444a8793ad583401693f58",
+      "sha256": "1afec1174734217104c28e6098c668a3d298d6a7925f6102114426b0e7e1a291",
       "state": {
         "lesson": "handoff",
         "time": 2280,
@@ -5290,14 +5292,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5305,7 +5307,7 @@
     },
     {
       "time_ms": 2300.0,
-      "sha256": "c52a55e10c4d714972836e9d503023c084f415b1ef25c320f9f4e0c11faaec9b",
+      "sha256": "e9e380e1280d7c160c0c84bbf2539b9b8ae9f1c6bf74e6672158a9f6d1c16781",
       "state": {
         "lesson": "handoff",
         "time": 2300,
@@ -5336,14 +5338,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5351,7 +5353,7 @@
     },
     {
       "time_ms": 2320.0,
-      "sha256": "c52a55e10c4d714972836e9d503023c084f415b1ef25c320f9f4e0c11faaec9b",
+      "sha256": "e9e380e1280d7c160c0c84bbf2539b9b8ae9f1c6bf74e6672158a9f6d1c16781",
       "state": {
         "lesson": "handoff",
         "time": 2320,
@@ -5382,14 +5384,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5397,7 +5399,7 @@
     },
     {
       "time_ms": 2340.0,
-      "sha256": "dbc90ff9ba479a4f1e7c6477a30d373796a0360c46813ced5ba011754741cf2b",
+      "sha256": "ec219fefcda337be46fa86b526c338cd7b82be426f6c0508ef741ce62978908d",
       "state": {
         "lesson": "handoff",
         "time": 2340,
@@ -5428,14 +5430,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5443,7 +5445,7 @@
     },
     {
       "time_ms": 2360.0,
-      "sha256": "dbc90ff9ba479a4f1e7c6477a30d373796a0360c46813ced5ba011754741cf2b",
+      "sha256": "ec219fefcda337be46fa86b526c338cd7b82be426f6c0508ef741ce62978908d",
       "state": {
         "lesson": "handoff",
         "time": 2360,
@@ -5474,14 +5476,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5489,7 +5491,7 @@
     },
     {
       "time_ms": 2380.0,
-      "sha256": "604495078d3c7eba16aae626d694e09de001faf5f028a535eea5384e9d46bc2b",
+      "sha256": "713fc6ef90e09da3c7cb1fa5a7aa8f6d9952c99e3c8d3f077504861792422290",
       "state": {
         "lesson": "handoff",
         "time": 2380,
@@ -5520,14 +5522,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5535,7 +5537,7 @@
     },
     {
       "time_ms": 2400.0,
-      "sha256": "a6b8f008a7fc955515fd07ec60557f19a914a4a5c86d5800f5d24e6cd75ff979",
+      "sha256": "9ccfd015ce4b4c7e9cdabb78a1369c7782a12f02cc88bb4e215274e7a9f5dd7c",
       "state": {
         "lesson": "handoff",
         "time": 2400,
@@ -5566,14 +5568,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5581,7 +5583,7 @@
     },
     {
       "time_ms": 2420.0,
-      "sha256": "a6b8f008a7fc955515fd07ec60557f19a914a4a5c86d5800f5d24e6cd75ff979",
+      "sha256": "9ccfd015ce4b4c7e9cdabb78a1369c7782a12f02cc88bb4e215274e7a9f5dd7c",
       "state": {
         "lesson": "handoff",
         "time": 2420,
@@ -5612,14 +5614,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5627,7 +5629,7 @@
     },
     {
       "time_ms": 2440.0,
-      "sha256": "184c73ba1b0ddc5cf75c0ea358b14065a5fd481c7a8c9da77a4deab7cfb96138",
+      "sha256": "ab765ea1a3ca4726e874d5f19f3c392fd24d8e39285c6bef413f2936c19be2e3",
       "state": {
         "lesson": "handoff",
         "time": 2440,
@@ -5658,14 +5660,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5673,7 +5675,7 @@
     },
     {
       "time_ms": 2460.0,
-      "sha256": "184c73ba1b0ddc5cf75c0ea358b14065a5fd481c7a8c9da77a4deab7cfb96138",
+      "sha256": "ab765ea1a3ca4726e874d5f19f3c392fd24d8e39285c6bef413f2936c19be2e3",
       "state": {
         "lesson": "handoff",
         "time": 2460,
@@ -5704,14 +5706,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5719,7 +5721,7 @@
     },
     {
       "time_ms": 2480.0,
-      "sha256": "f51caa978ff8be1c3b28d3c02317c0e10ff5b79519ea40d2871483ff5099ed49",
+      "sha256": "196e07017ac9aeac8cfa29102e8420c6c7a292d00d68046b0f91d311f79cfd16",
       "state": {
         "lesson": "handoff",
         "time": 2480,
@@ -5750,14 +5752,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5765,7 +5767,7 @@
     },
     {
       "time_ms": 2500.0,
-      "sha256": "d2c05d5dae224ff709c9d5382c0e7d92329427179433ed1dfaf31d7e43f8bd36",
+      "sha256": "b4b7a003e0cf678779e2f8fa3f112c07824652f2c48dcd63ff487fa075a13dce",
       "state": {
         "lesson": "handoff",
         "time": 2500,
@@ -5796,14 +5798,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5811,7 +5813,7 @@
     },
     {
       "time_ms": 2520.0,
-      "sha256": "d2c05d5dae224ff709c9d5382c0e7d92329427179433ed1dfaf31d7e43f8bd36",
+      "sha256": "b4b7a003e0cf678779e2f8fa3f112c07824652f2c48dcd63ff487fa075a13dce",
       "state": {
         "lesson": "handoff",
         "time": 2520,
@@ -5842,14 +5844,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -5857,7 +5859,7 @@
     },
     {
       "time_ms": 2540.0,
-      "sha256": "03058754a29b504d2856a564479161c2e1a1049920624d8804a845414361f7c4",
+      "sha256": "981878e21bdb6d8466cb19c59fb94b66b0118a522a091c49ac1e547b31b90052",
       "state": {
         "lesson": "handoff",
         "time": 2540,
@@ -5888,14 +5890,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -5903,7 +5905,7 @@
     },
     {
       "time_ms": 2560.0,
-      "sha256": "4fbaf0594977bddbae0b00cde36c384c8d9b2e7b3ea49d7c3697d2cdf3e4ac93",
+      "sha256": "dabf6c3050523cab47dc427b66fc653b9afe2dfb6cd387539517aeecf886147f",
       "state": {
         "lesson": "handoff",
         "time": 2560,
@@ -5934,14 +5936,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -5949,7 +5951,7 @@
     },
     {
       "time_ms": 2580.0,
-      "sha256": "10c22615e84822c16c601d175c1002dffabf60d076fb68453b5443d6a6039523",
+      "sha256": "34be315b788fe937c802cf340e36ce7331fddfc31686ed8254ca00ca5f3dc19c",
       "state": {
         "lesson": "handoff",
         "time": 2580,
@@ -5980,14 +5982,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            184,
-            164,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            262,
-            196
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -5995,7 +5997,7 @@
     },
     {
       "time_ms": 2600.0,
-      "sha256": "b1b0aeec5623336589396410f39603249217a3adced521dedbd636d353180bee",
+      "sha256": "6ee0a6810805482a5fbbe4e1bc2fb7de46ba37cd7dfb41c2f8c449606d4f4b23",
       "state": {
         "lesson": "handoff",
         "time": 2600,
@@ -6026,14 +6028,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            262,
-            195
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -6041,7 +6043,7 @@
     },
     {
       "time_ms": 2620.0,
-      "sha256": "3408ec93cff813bf90912e701ccaea2398cbe13e049e30c3d43f71cba659ecd5",
+      "sha256": "3f90d84525ce490b77570c9d04a12d5043034635b7c0c74bed9bfcd512d68306",
       "state": {
         "lesson": "handoff",
         "time": 2620,
@@ -6072,14 +6074,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            262,
-            195
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -6087,7 +6089,7 @@
     },
     {
       "time_ms": 2640.0,
-      "sha256": "c97d4596249251838e12c008d81d79aa2b8ec7ebaf1725ff34ca04acd4fbf434",
+      "sha256": "7bb205f1d386c2dfe725f09fc958976fb600dcccadb5a65cb91af99ee82611cb",
       "state": {
         "lesson": "handoff",
         "time": 2640,
@@ -6118,14 +6120,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            85
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            262,
-            194
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -6133,7 +6135,7 @@
     },
     {
       "time_ms": 2660.0,
-      "sha256": "5fb4177fdf5af9ed259e8bbd66a2027a04f877a46f37a08b5c2cbec4d993e6d7",
+      "sha256": "875b502fe0542083957bb660f8746e1f97ca88bba1885d3c5c4c2d6e2918890b",
       "state": {
         "lesson": "handoff",
         "time": 2660,
@@ -6164,14 +6166,14 @@
         {
           "pose": "build",
           "margins": [
-            37,
-            185,
-            164,
-            85
+            22,
+            252,
+            221,
+            21
           ],
           "size": [
-            263,
-            194
+            117,
+            87
           ],
           "uniform_surface": true
         }
@@ -6179,7 +6181,7 @@
     },
     {
       "time_ms": 2680.0,
-      "sha256": "d42bb30c5f01af93a0babb38644873ba39555fed7c399514094513ddae61a8b1",
+      "sha256": "699edba5f9282ff3306c7e6e977a7605ab765c98e17c36e232e7234d3aec4e8a",
       "state": {
         "lesson": "handoff",
         "time": 2680,
@@ -6210,14 +6212,14 @@
         {
           "pose": "build",
           "margins": [
-            37,
-            185,
-            164,
-            85
+            22,
+            252,
+            221,
+            21
           ],
           "size": [
-            263,
-            194
+            117,
+            87
           ],
           "uniform_surface": true
         }
@@ -6225,7 +6227,7 @@
     },
     {
       "time_ms": 2700.0,
-      "sha256": "9dded2b77f792686b39c89b477259738916323fc90dd3a68a0f23851e43979ef",
+      "sha256": "4d03a4c49ce7003c11301c49832110fa0be65cfb8a2db9c7149e3eea84fe53fd",
       "state": {
         "lesson": "handoff",
         "time": 2700,
@@ -6256,14 +6258,14 @@
         {
           "pose": "build",
           "margins": [
-            37,
-            186,
-            164,
-            85
+            22,
+            252,
+            221,
+            21
           ],
           "size": [
-            263,
-            193
+            117,
+            87
           ],
           "uniform_surface": true
         }
@@ -6271,7 +6273,7 @@
     },
     {
       "time_ms": 2720.0,
-      "sha256": "d00ae8c4d3bddd711e686213b5cce4143e89e4b6ab916b26297fbfd3e3e2fe10",
+      "sha256": "bc5ff205e71e1c89ca989d7ec840fa1dd29aa66b44814958571d49b249a0bdae",
       "state": {
         "lesson": "handoff",
         "time": 2720,
@@ -6302,14 +6304,14 @@
         {
           "pose": "build",
           "margins": [
-            37,
-            185,
-            164,
-            85
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            263,
-            194
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -6317,7 +6319,7 @@
     },
     {
       "time_ms": 2740.0,
-      "sha256": "b9d70d272744ce759dd7b5c67e821fc2c803124d807d749e1eac57ad707afc83",
+      "sha256": "416337df3ef3255df7642cefa3c05180fa03cd888ff903b8b5910912af66c883",
       "state": {
         "lesson": "handoff",
         "time": 2740,
@@ -6348,14 +6350,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            165,
-            85
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            194
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -6363,7 +6365,7 @@
     },
     {
       "time_ms": 2760.0,
-      "sha256": "410cf6d5638fb1b496cdfc0c78549ad44eb8beedbd7b6b9197b5c21ba80d1e9f",
+      "sha256": "6c228c023a0aa17e0566e904f4822f804575eff06f452599516936c0129e2b32",
       "state": {
         "lesson": "handoff",
         "time": 2760,
@@ -6394,14 +6396,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            165,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            195
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -6409,7 +6411,7 @@
     },
     {
       "time_ms": 2780.0,
-      "sha256": "6b133f1d1b524df4c8cabedc73045c8c0218bac441415cfb15106332b4c590eb",
+      "sha256": "6e4af89ec03c6f3e095ad8851eba6978d7e58d8e06c7d83d787550a79e606784",
       "state": {
         "lesson": "handoff",
         "time": 2780,
@@ -6440,14 +6442,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            184,
-            165,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -6455,7 +6457,7 @@
     },
     {
       "time_ms": 2800.0,
-      "sha256": "2c00e9734c7913e5323de19627da5795a803a627db4bf7b1244e0eabf4b83b39",
+      "sha256": "2eed9e4aab764e6b818401352202ff75fbcc1d3c08e52ff186acaff52941d04b",
       "state": {
         "lesson": "handoff",
         "time": 2800,
@@ -6486,14 +6488,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            82
+            22,
+            252,
+            221,
+            19
           ],
           "size": [
-            260,
-            198
+            117,
+            89
           ],
           "uniform_surface": true
         }
@@ -6501,7 +6503,7 @@
     },
     {
       "time_ms": 2820.0,
-      "sha256": "e7ff63852e49e68f7af3b5f82bc3faa34bde8d4648527e91155a56793388eafa",
+      "sha256": "a89261d04d119a7b2324ae0bd85a9780986aa09877f0b6d592aff4e5e61b3789",
       "state": {
         "lesson": "handoff",
         "time": 2820,
@@ -6532,14 +6534,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            183,
-            165,
-            81
+            23,
+            251,
+            221,
+            19
           ],
           "size": [
-            260,
-            200
+            116,
+            90
           ],
           "uniform_surface": true
         }
@@ -6547,7 +6549,7 @@
     },
     {
       "time_ms": 2840.0,
-      "sha256": "da7e22fe513479562c5d2c99517f2798ccb5730d731d68a94eb73c1415b5c83e",
+      "sha256": "a40a30a2f70219a3abd3611d819a50eff83b2a48428392c8c24b79153ec0c7d0",
       "state": {
         "lesson": "handoff",
         "time": 2840,
@@ -6578,14 +6580,14 @@
         {
           "pose": "build",
           "margins": [
-            40,
-            183,
-            165,
-            80
+            23,
+            251,
+            221,
+            18
           ],
           "size": [
-            259,
-            201
+            116,
+            91
           ],
           "uniform_surface": true
         }
@@ -6593,7 +6595,7 @@
     },
     {
       "time_ms": 2860.0,
-      "sha256": "d8aa409c58ffac87ca39c75110a4eab2af9190b8e142fbb5f09ed8e7ef5a567f",
+      "sha256": "d18ef54c5a7d2365ab28da705df8164d319d7959ba57461709001ea7e97a21de",
       "state": {
         "lesson": "handoff",
         "time": 2860,
@@ -6624,14 +6626,14 @@
         {
           "pose": "build",
           "margins": [
-            40,
-            183,
-            166,
-            79
+            23,
+            251,
+            221,
+            18
           ],
           "size": [
-            258,
-            202
+            116,
+            91
           ],
           "uniform_surface": true
         }
@@ -6639,7 +6641,7 @@
     },
     {
       "time_ms": 2880.0,
-      "sha256": "83f0ac094428d452bc4ccb2551728a606725582114b622897ba6a208ba207de8",
+      "sha256": "5161838668738f9a4233808856d80f39617f89fa487ac6c8ea29b3760fc64909",
       "state": {
         "lesson": "handoff",
         "time": 2880,
@@ -6670,14 +6672,14 @@
         {
           "pose": "build",
           "margins": [
-            41,
-            182,
-            166,
-            78
+            23,
+            251,
+            221,
+            17
           ],
           "size": [
-            257,
-            204
+            116,
+            92
           ],
           "uniform_surface": true
         }
@@ -6685,7 +6687,7 @@
     },
     {
       "time_ms": 2900.0,
-      "sha256": "3548864fb416e0e2d065c09485677a0dfe987c0c6f495bff5415beef4dbb9d60",
+      "sha256": "a3c6d8b9354188f495c46175607863ed1f4dbce65c1f754e7235e3a55c2ceb66",
       "state": {
         "lesson": "handoff",
         "time": 2900,
@@ -6716,14 +6718,14 @@
         {
           "pose": "build",
           "margins": [
-            41,
-            182,
-            166,
-            78
+            23,
+            251,
+            221,
+            17
           ],
           "size": [
-            257,
-            204
+            116,
+            92
           ],
           "uniform_surface": true
         }
@@ -6731,7 +6733,7 @@
     },
     {
       "time_ms": 2920.0,
-      "sha256": "4f3d6cbf8ddd0bb20429b15b7c7deded7099fcf1a2e254b2284c9e23361f202c",
+      "sha256": "a50202af22ce5eb8b7d14d7c37a03aedc0042e9abae2136e985ee33d6cd4a99a",
       "state": {
         "lesson": "handoff",
         "time": 2920,
@@ -6762,14 +6764,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            166,
-            77
+            23,
+            251,
+            222,
+            17
           ],
           "size": [
-            256,
-            205
+            115,
+            92
           ],
           "uniform_surface": true
         }
@@ -6777,7 +6779,7 @@
     },
     {
       "time_ms": 2940.0,
-      "sha256": "f51e71e944f298312fd17a5dcd9f2728dac80b9ffa0d1f6c634db75342e12206",
+      "sha256": "4ef2c402be088a72506bd51286414417ebf2b19bf08a055d70b0222dddb1acf0",
       "state": {
         "lesson": "handoff",
         "time": 2940,
@@ -6808,14 +6810,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            181,
-            167,
-            77
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            206
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -6823,7 +6825,7 @@
     },
     {
       "time_ms": 2960.0,
-      "sha256": "bead1037d6f192e6b222b9b67d33df916cba736a0bf4c65d5413cd519559934d",
+      "sha256": "75a5b18093283a01bbb5e880ca9054a7c8799fc96fed11d311206fc1ae7fc853",
       "state": {
         "lesson": "handoff",
         "time": 2960,
@@ -6854,14 +6856,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            181,
-            167,
-            77
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            206
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -6869,7 +6871,7 @@
     },
     {
       "time_ms": 2980.0,
-      "sha256": "379f13a6b1f7b44d207b7e7b748a2abeea6e728c752d816656d4802e2b38f7fe",
+      "sha256": "58227a8203a7f3a645a1eb35f3ceb84195f00a1371a23eebe0fa9b03554f015b",
       "state": {
         "lesson": "handoff",
         "time": 2980,
@@ -6900,14 +6902,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            181,
-            167,
-            77
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            206
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -6915,7 +6917,7 @@
     },
     {
       "time_ms": 3000.0,
-      "sha256": "75b0d03f6cf9f5d2eea113f98f6f4fc688e328e19da134e1c117e02129df1d97",
+      "sha256": "06f8dc468043c0590fcccabb879a89cd0a64483a796f0ee65a3e9ccad4759969",
       "state": {
         "lesson": "handoff",
         "time": 3000,
@@ -6946,14 +6948,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            167,
-            77
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            205
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -6961,7 +6963,7 @@
     },
     {
       "time_ms": 3020.0,
-      "sha256": "08a892b6182cccf5e011d8bced301730cf92e475dee9ac5d0e0c5a40ddeae38c",
+      "sha256": "dc7f273716df2ef50291ac565beff9fe5fd2a1a3ddc1cd6769d5f7c97058dacc",
       "state": {
         "lesson": "handoff",
         "time": 3020,
@@ -6992,14 +6994,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            206
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7007,7 +7009,7 @@
     },
     {
       "time_ms": 3040.0,
-      "sha256": "6851e191ca9b33d95536639fb7ba025928591dc4956419aa34b4e9217d680f77",
+      "sha256": "758ad3e883062df0f16195fb198b7176d540d2020891cae30878d7bad3edf6f6",
       "state": {
         "lesson": "handoff",
         "time": 3040,
@@ -7038,14 +7040,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            255,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7053,7 +7055,7 @@
     },
     {
       "time_ms": 3060.0,
-      "sha256": "fe7b60ba8bc37c0c5d5742655d1f5d6427434cf2190fdad03cc923303d17d6ec",
+      "sha256": "06b45bfaa98650f44cfab07c12b7319ea5c17f974086820e50b0b48746d737f6",
       "state": {
         "lesson": "handoff",
         "time": 3060,
@@ -7084,14 +7086,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            250,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -7099,7 +7101,7 @@
     },
     {
       "time_ms": 3080.0,
-      "sha256": "1fd2c8a6a6ad51dc7322e3c63c7ff681c6382cfb8b4a8e0c20d0f454dc9c887b",
+      "sha256": "859ba5a53099c4be56a4143ee9dfe7cf0caaf237a02958a117a9c0d25a01ad5d",
       "state": {
         "lesson": "handoff",
         "time": 3080,
@@ -7130,14 +7132,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -7145,7 +7147,7 @@
     },
     {
       "time_ms": 3100.0,
-      "sha256": "be1931f271edad12f2755a2519f48ad25e99d6de6e5d4a1af6b3836312b3b679",
+      "sha256": "cb83d73c050b57a7fdda45d95cfcab7050890ca71b2070b1cbb7f35c424db731",
       "state": {
         "lesson": "handoff",
         "time": 3100,
@@ -7176,14 +7178,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -7191,7 +7193,7 @@
     },
     {
       "time_ms": 3120.0,
-      "sha256": "9798a753b8d01dc1359ef801e0d1786593e91edf5b4775b5691f013dfdd12552",
+      "sha256": "83e1b4d69798b30eb0bd59b09e2b9a22d3a55b2fec4f58afe9557506c0330fa4",
       "state": {
         "lesson": "handoff",
         "time": 3120,
@@ -7222,14 +7224,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -7237,7 +7239,7 @@
     },
     {
       "time_ms": 3140.0,
-      "sha256": "e3163150eff08bd84ba8de8c29fc4698c90e1a526eda61aed4348baedcb4c472",
+      "sha256": "5ada0298ffdeecb23f149da64e278036a1634e468eee5042710778b40f51e3e7",
       "state": {
         "lesson": "handoff",
         "time": 3140,
@@ -7268,14 +7270,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7283,7 +7285,7 @@
     },
     {
       "time_ms": 3160.0,
-      "sha256": "e3163150eff08bd84ba8de8c29fc4698c90e1a526eda61aed4348baedcb4c472",
+      "sha256": "5ada0298ffdeecb23f149da64e278036a1634e468eee5042710778b40f51e3e7",
       "state": {
         "lesson": "handoff",
         "time": 3160,
@@ -7314,14 +7316,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7329,7 +7331,7 @@
     },
     {
       "time_ms": 3180.0,
-      "sha256": "54f31087b47ac088abe83a46dbb9efa91b306a94cd65de5e2d2b3e566f81fbb2",
+      "sha256": "c9e01dbf3d396e977bf28d5d8b57ead686d269ecbca6ac8ae1f242e5cd4b6c6e",
       "state": {
         "lesson": "handoff",
         "time": 3180,
@@ -7360,14 +7362,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7375,7 +7377,7 @@
     },
     {
       "time_ms": 3200.0,
-      "sha256": "6251b3f93ca3c363486ff0cfb2f8a70ef6fd3b5d6094268fa41e100e57cafff3",
+      "sha256": "eed1da1b41932bcadd988ab4702dec2abd8e6a7e9a5c811b63ff75374b21ee09",
       "state": {
         "lesson": "handoff",
         "time": 3200,
@@ -7406,14 +7408,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            254,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -7421,7 +7423,7 @@
     },
     {
       "time_ms": 3220.0,
-      "sha256": "6251b3f93ca3c363486ff0cfb2f8a70ef6fd3b5d6094268fa41e100e57cafff3",
+      "sha256": "eed1da1b41932bcadd988ab4702dec2abd8e6a7e9a5c811b63ff75374b21ee09",
       "state": {
         "lesson": "handoff",
         "time": 3220,
@@ -7452,14 +7454,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7467,7 +7469,7 @@
     },
     {
       "time_ms": 3240.0,
-      "sha256": "05bb63e81e0b6862cb42fc3d7c9e28b668fd4fcabcdfc77f65678195d11d202a",
+      "sha256": "192536497c597b47558a8e0be74a4b14573eacfe801fe5016238d3fc7cf5d474",
       "state": {
         "lesson": "handoff",
         "time": 3240,
@@ -7498,14 +7500,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7513,7 +7515,7 @@
     },
     {
       "time_ms": 3260.0,
-      "sha256": "05bb63e81e0b6862cb42fc3d7c9e28b668fd4fcabcdfc77f65678195d11d202a",
+      "sha256": "192536497c597b47558a8e0be74a4b14573eacfe801fe5016238d3fc7cf5d474",
       "state": {
         "lesson": "handoff",
         "time": 3260,
@@ -7544,14 +7546,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7559,7 +7561,7 @@
     },
     {
       "time_ms": 3280.0,
-      "sha256": "4c938e932bd096d30e6b9c4182aa83c70ee6c17d6c9c63841822359f212eebfa",
+      "sha256": "1b68f4a75f957cbb89415dc235c04ddb1858cd6737fea1c9a322d637c240ddf1",
       "state": {
         "lesson": "handoff",
         "time": 3280,
@@ -7590,14 +7592,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7605,7 +7607,7 @@
     },
     {
       "time_ms": 3300.0,
-      "sha256": "41f188076f0227e5fe3f6c394893f40814aba81c2311118b9e0d4f55c37f5afa",
+      "sha256": "285b2f63288c7aea0af363cde98a93cc2d8b906d93b6ed5106dd6982c5f31738",
       "state": {
         "lesson": "handoff",
         "time": 3300,
@@ -7636,14 +7638,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7651,7 +7653,7 @@
     },
     {
       "time_ms": 3320.0,
-      "sha256": "41f188076f0227e5fe3f6c394893f40814aba81c2311118b9e0d4f55c37f5afa",
+      "sha256": "285b2f63288c7aea0af363cde98a93cc2d8b906d93b6ed5106dd6982c5f31738",
       "state": {
         "lesson": "handoff",
         "time": 3320,
@@ -7682,14 +7684,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7697,7 +7699,7 @@
     },
     {
       "time_ms": 3340.0,
-      "sha256": "c2a92f9fe5158e0cc137d258c5abcfde3de5f829b2224fe6f1548ab2a261309d",
+      "sha256": "c56c739b40510b89c58339806a20c71f4710235163f75e2348648ad8baf7e962",
       "state": {
         "lesson": "handoff",
         "time": 3340,
@@ -7728,14 +7730,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7743,7 +7745,7 @@
     },
     {
       "time_ms": 3360.0,
-      "sha256": "c2a92f9fe5158e0cc137d258c5abcfde3de5f829b2224fe6f1548ab2a261309d",
+      "sha256": "c56c739b40510b89c58339806a20c71f4710235163f75e2348648ad8baf7e962",
       "state": {
         "lesson": "handoff",
         "time": 3360,
@@ -7774,14 +7776,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7789,7 +7791,7 @@
     },
     {
       "time_ms": 3380.0,
-      "sha256": "fdc66ae699916450408c3e283478413fee73e4395eb73d87e56c059a882e4335",
+      "sha256": "7a632cbec0c5bb321a871ff73cbb799e3fc87cd8333d98df91008f0c6097f31c",
       "state": {
         "lesson": "handoff",
         "time": 3380,
@@ -7820,14 +7822,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7835,7 +7837,7 @@
     },
     {
       "time_ms": 3400.0,
-      "sha256": "aaeed4884b800ccb369595ba050db1a9fc3b2406053fcb25abb679df8046b2b3",
+      "sha256": "c4ff73ef3d8b1c9f442f1619cf818c46d3df8f922f338562cc97fce3d61b08c3",
       "state": {
         "lesson": "handoff",
         "time": 3400,
@@ -7866,14 +7868,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7881,7 +7883,7 @@
     },
     {
       "time_ms": 3420.0,
-      "sha256": "aaeed4884b800ccb369595ba050db1a9fc3b2406053fcb25abb679df8046b2b3",
+      "sha256": "c4ff73ef3d8b1c9f442f1619cf818c46d3df8f922f338562cc97fce3d61b08c3",
       "state": {
         "lesson": "handoff",
         "time": 3420,
@@ -7912,14 +7914,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7927,7 +7929,7 @@
     },
     {
       "time_ms": 3440.0,
-      "sha256": "f573b4f6302c40fb1ecd5bdfe93045fdb62ec56eea230c206da1f1748c732f25",
+      "sha256": "6f9c493fccbf88acadc7af1917229b7faff4d4ec486c2990492d17c1bff41cb8",
       "state": {
         "lesson": "handoff",
         "time": 3440,
@@ -7958,14 +7960,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -7973,7 +7975,7 @@
     },
     {
       "time_ms": 3460.0,
-      "sha256": "f573b4f6302c40fb1ecd5bdfe93045fdb62ec56eea230c206da1f1748c732f25",
+      "sha256": "6f9c493fccbf88acadc7af1917229b7faff4d4ec486c2990492d17c1bff41cb8",
       "state": {
         "lesson": "handoff",
         "time": 3460,
@@ -8004,14 +8006,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -8019,7 +8021,7 @@
     },
     {
       "time_ms": 3480.0,
-      "sha256": "f573b4f6302c40fb1ecd5bdfe93045fdb62ec56eea230c206da1f1748c732f25",
+      "sha256": "6f9c493fccbf88acadc7af1917229b7faff4d4ec486c2990492d17c1bff41cb8",
       "state": {
         "lesson": "handoff",
         "time": 3480,
@@ -8050,14 +8052,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -8065,7 +8067,7 @@
     },
     {
       "time_ms": 3500.0,
-      "sha256": "0fa6829e2da574839da085d3e3a59f8e1571ed4c7a091a5272a73b2f300e79c3",
+      "sha256": "17622154cedfcd1cc769f415ae8c2a9cd3144f53d7f47697a3b1640c7e748be4",
       "state": {
         "lesson": "handoff",
         "time": 3500,
@@ -8096,14 +8098,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -8111,7 +8113,7 @@
     },
     {
       "time_ms": 3520.0,
-      "sha256": "0fa6829e2da574839da085d3e3a59f8e1571ed4c7a091a5272a73b2f300e79c3",
+      "sha256": "17622154cedfcd1cc769f415ae8c2a9cd3144f53d7f47697a3b1640c7e748be4",
       "state": {
         "lesson": "handoff",
         "time": 3520,
@@ -8142,14 +8144,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            167,
-            76
+            24,
+            251,
+            222,
+            17
           ],
           "size": [
-            254,
-            207
+            114,
+            92
           ],
           "uniform_surface": true
         }
@@ -8157,7 +8159,7 @@
     },
     {
       "time_ms": 3540.0,
-      "sha256": "b6b4b155e130a9d916b5c68b6d8ecb9f4bf3ee55ac7dc4e567b3700ca4695af7",
+      "sha256": "7baead352ae37a3204a2d88032045bbdbddda6511d7c0d19d360fd18a322e557",
       "state": {
         "lesson": "handoff",
         "time": 3540,
@@ -8188,14 +8190,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            166,
-            76
+            24,
+            251,
+            222,
+            16
           ],
           "size": [
-            255,
-            207
+            114,
+            93
           ],
           "uniform_surface": true
         }
@@ -8203,7 +8205,7 @@
     },
     {
       "time_ms": 3560.0,
-      "sha256": "34f119e90f1d28703ea5a98f60540fb3e78b8e6b9d633d84758b8e5de4f6c65b",
+      "sha256": "7c340690f88d2f4e6917e2a86723ca4a0c6d849026e5c8aba5fd66f3bc3a1171",
       "state": {
         "lesson": "handoff",
         "time": 3560,
@@ -8234,14 +8236,14 @@
         {
           "pose": "build",
           "margins": [
-            43,
-            181,
-            166,
-            76
+            24,
+            251,
+            221,
+            17
           ],
           "size": [
-            255,
-            207
+            115,
+            92
           ],
           "uniform_surface": true
         }
@@ -8249,7 +8251,7 @@
     },
     {
       "time_ms": 3580.0,
-      "sha256": "c228e832fed3392430d56b224c08d102a1e7e2d48e264d8372d8baafa28f81e8",
+      "sha256": "c40773fb216d380e2fd954c2260bf06804371f9bbbdfeb8a680f67fe8fa9ae45",
       "state": {
         "lesson": "handoff",
         "time": 3580,
@@ -8280,14 +8282,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            166,
-            77
+            24,
+            251,
+            221,
+            17
           ],
           "size": [
-            256,
-            205
+            115,
+            92
           ],
           "uniform_surface": true
         }
@@ -8295,7 +8297,7 @@
     },
     {
       "time_ms": 3600.0,
-      "sha256": "348a8a4a54932a1ebb88145f9e4c1dc03f8eacc6f19ce58b5d4664ec3841c439",
+      "sha256": "e0aa7be1e66c0021093eaccca8c27c858177fc00fdd8ffdcf9d4f27ca83dff96",
       "state": {
         "lesson": "handoff",
         "time": 3600,
@@ -8326,14 +8328,14 @@
         {
           "pose": "build",
           "margins": [
-            42,
-            182,
-            165,
-            78
+            24,
+            251,
+            221,
+            18
           ],
           "size": [
-            257,
-            204
+            115,
+            91
           ],
           "uniform_surface": true
         }
@@ -8341,7 +8343,7 @@
     },
     {
       "time_ms": 3620.0,
-      "sha256": "5eda79af63ab227a20fac277dadf2a703edcfc4c9d8e06144898b8f2a83a069b",
+      "sha256": "046f715a315a513fb729a17f0ed8a72271a7ebb9dbe913e8d6bc23d1610e40ae",
       "state": {
         "lesson": "handoff",
         "time": 3620,
@@ -8372,14 +8374,14 @@
         {
           "pose": "build",
           "margins": [
-            41,
-            183,
-            165,
-            80
+            23,
+            251,
+            221,
+            18
           ],
           "size": [
-            258,
-            201
+            116,
+            91
           ],
           "uniform_surface": true
         }
@@ -8387,7 +8389,7 @@
     },
     {
       "time_ms": 3640.0,
-      "sha256": "2268395895b8dbf6a9e10536674d78eacbeaf9457e1824f480ed1083318880a9",
+      "sha256": "e18dd903e78a0902aed605097ff0ca2fb721a0e4674094a159d369e80a75f276",
       "state": {
         "lesson": "handoff",
         "time": 3640,
@@ -8418,14 +8420,14 @@
         {
           "pose": "build",
           "margins": [
-            40,
-            184,
-            165,
-            81
+            23,
+            252,
+            221,
+            19
           ],
           "size": [
-            259,
-            199
+            116,
+            89
           ],
           "uniform_surface": true
         }
@@ -8433,7 +8435,7 @@
     },
     {
       "time_ms": 3660.0,
-      "sha256": "54aa0c3cd94a959f2a33d1599b6c4de10322e8a41e91756b8c2930bb58f37e57",
+      "sha256": "9c0df633db8c2e97940120669b2db8daabf20a4a39e58e105ff1396e6c88170a",
       "state": {
         "lesson": "handoff",
         "time": 3660,
@@ -8464,14 +8466,14 @@
         {
           "pose": "build",
           "margins": [
-            40,
-            184,
-            164,
-            82
+            23,
+            252,
+            221,
+            19
           ],
           "size": [
-            260,
-            198
+            116,
+            89
           ],
           "uniform_surface": true
         }
@@ -8479,7 +8481,7 @@
     },
     {
       "time_ms": 3680.0,
-      "sha256": "14e7060ff1893252cc19c44f9a743f33e350cfe79349de2de837fc9b565a0a09",
+      "sha256": "cb8633a1a9dd3128fb491b65992f2502daf59dbb6db7ded2a5e717704cc0ad43",
       "state": {
         "lesson": "handoff",
         "time": 3680,
@@ -8510,14 +8512,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            185,
-            164,
-            84
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            261,
-            195
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -8525,7 +8527,7 @@
     },
     {
       "time_ms": 3700.0,
-      "sha256": "262bbb5ae64135a1a554e0a0723ff93e0d31f61d97fc909a85f7e92f3069d7ce",
+      "sha256": "777665dfa1afafedce57bb3e2e36a664a09614a969b83b482b3a7cedd7c636a5",
       "state": {
         "lesson": "handoff",
         "time": 3700,
@@ -8556,14 +8558,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            185,
-            164,
-            85
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            261,
-            194
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -8571,7 +8573,7 @@
     },
     {
       "time_ms": 3720.0,
-      "sha256": "22fa695f62b28b5e3801209d6b5a1f5b92c4ace26d12f7a20563202429d45424",
+      "sha256": "ecdc6283ea2aa7615d8205b5ec48c05466d94a4b545dfd1d610b21cfe2b698d1",
       "state": {
         "lesson": "handoff",
         "time": 3720,
@@ -8602,14 +8604,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            86
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            262,
-            193
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -8617,7 +8619,7 @@
     },
     {
       "time_ms": 3740.0,
-      "sha256": "b73136ffd470dc701e880560729670b5cf54de6bba37ff7fb9cfb928b4abeadc",
+      "sha256": "b0ab0d54a33622041319a86dd964db4a0806f1250a5b53d73f1859f0408c44fc",
       "state": {
         "lesson": "handoff",
         "time": 3740,
@@ -8648,14 +8650,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            87
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            192
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -8663,7 +8665,7 @@
     },
     {
       "time_ms": 3760.0,
-      "sha256": "d704964d3a5f2ee04010e073d7b4e556c5dcd0ce40b3cc4eb85a9249001c9fa3",
+      "sha256": "538c3da0b4681d61454cf4852a60873402fafb78607f6d4b48480567a432f733",
       "state": {
         "lesson": "handoff",
         "time": 3760,
@@ -8694,14 +8696,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            87
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            192
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -8709,7 +8711,7 @@
     },
     {
       "time_ms": 3780.0,
-      "sha256": "5907601ebca30545a0ead181edfa442d7fc17fff0460b1973cbe2e6a92f78155",
+      "sha256": "9e4aa67001eb4335d80b88c053b626ae8fbf4a5885f2fccb80b2d42330ff7458",
       "state": {
         "lesson": "handoff",
         "time": 3780,
@@ -8740,14 +8742,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            87
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            192
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -8755,7 +8757,7 @@
     },
     {
       "time_ms": 3800.0,
-      "sha256": "7b040c44e3f0456f935cb9c0cf5f24948037983ddbafc06d8ba3f495fee86c90",
+      "sha256": "79f4ab2259b937807f932982953a300f491ce301ca7bbcb91c7402678d0beaff",
       "state": {
         "lesson": "handoff",
         "time": 3800,
@@ -8786,14 +8788,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            87
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            192
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -8801,7 +8803,7 @@
     },
     {
       "time_ms": 3820.0,
-      "sha256": "8b6f993ee71770024a25565d2f73c1229b2921d78fb33d43cb7bdda57c904241",
+      "sha256": "8e17ca7dfa3c0d1a308d5a2f4cf335bdb7762e7dbe35ea92d24ba72f60c4794f",
       "state": {
         "lesson": "handoff",
         "time": 3820,
@@ -8832,14 +8834,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            86
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            193
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -8847,7 +8849,7 @@
     },
     {
       "time_ms": 3840.0,
-      "sha256": "995027b1cc1beaa307faa0e0bd848a2d99f8243d0c15dc3f426d7cdc13ac9e44",
+      "sha256": "013fb67fd277801f09492ddae924ace9904cf0fd5aee6b0459003249cec862fe",
       "state": {
         "lesson": "handoff",
         "time": 3840,
@@ -8878,14 +8880,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            86
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            262,
-            193
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -8893,7 +8895,7 @@
     },
     {
       "time_ms": 3860.0,
-      "sha256": "6be676e810d71ac2ba991eba2a8c9134bf26697d16720b47ac9e933268173260",
+      "sha256": "a6d6086ee1c2af4315824b35af32614779eec340b00215b89ab11da8b98741d0",
       "state": {
         "lesson": "handoff",
         "time": 3860,
@@ -8924,14 +8926,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            86
+            22,
+            253,
+            220,
+            21
           ],
           "size": [
-            262,
-            193
+            118,
+            86
           ],
           "uniform_surface": true
         }
@@ -8939,7 +8941,7 @@
     },
     {
       "time_ms": 3880.0,
-      "sha256": "9e001b3736f2f221debdf82915ef4a742a777c749961ace4a329ecdb42e476b0",
+      "sha256": "c079305d4bb6514eefb09d97a71659ea0a02aec28073c85892aaf0c94a3f55c4",
       "state": {
         "lesson": "handoff",
         "time": 3880,
@@ -8970,14 +8972,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            85
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            262,
-            194
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -8985,7 +8987,7 @@
     },
     {
       "time_ms": 3900.0,
-      "sha256": "981767894f7a7f8c09a7cdd3787f90025a13a1a3c65cae089ac859b00ed6ef73",
+      "sha256": "cb9210b3f09c2459900de3b428d61c6521bbced99c91dd8ec9ff06c730169370",
       "state": {
         "lesson": "handoff",
         "time": 3900,
@@ -9016,14 +9018,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            85
+            22,
+            252,
+            220,
+            21
           ],
           "size": [
-            262,
-            194
+            118,
+            87
           ],
           "uniform_surface": true
         }
@@ -9031,7 +9033,7 @@
     },
     {
       "time_ms": 3920.0,
-      "sha256": "9337b030b881e49a4e93e626aaca3f461cbb8971edddce2ef2a27cf6e77bf74f",
+      "sha256": "bcc6f7b275f047f2e4b95a6c124524e8794060fe5a0d2fb036a946b1cbcff3af",
       "state": {
         "lesson": "handoff",
         "time": 3920,
@@ -9062,14 +9064,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            85
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            262,
-            194
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -9077,7 +9079,7 @@
     },
     {
       "time_ms": 3940.0,
-      "sha256": "b2f645ea5b9c48b23269b1d0ef1166e8fe7d02df379f6869c54f0bfa3713fcfb",
+      "sha256": "4f92f0dbe0eb2a6f1ac1bba27b0c926b7b936e51052a8402b69157658ddf350e",
       "state": {
         "lesson": "handoff",
         "time": 3940,
@@ -9108,14 +9110,14 @@
         {
           "pose": "build",
           "margins": [
-            38,
-            185,
-            164,
-            84
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            262,
-            195
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -9123,7 +9125,7 @@
     },
     {
       "time_ms": 3960.0,
-      "sha256": "c570868ea1494972073c47b76f54fd9fffe97c3b04c8e631089c5aff72e0311b",
+      "sha256": "26335606bbd7242ae27e0703573269598f639588dd7569fbb9b2f711a1de2119",
       "state": {
         "lesson": "handoff",
         "time": 3960,
@@ -9154,14 +9156,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            185,
-            164,
-            84
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            261,
-            195
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -9169,7 +9171,7 @@
     },
     {
       "time_ms": 3980.0,
-      "sha256": "3e6bf56f74bc50a2d7f4b6fffc7bdc639ed0e0f3ba1e19437ed695c8a281a438",
+      "sha256": "59dff09541256a0c120475fffb08c750f560ecf4d9fd0c6b0e6a99da3c61133e",
       "state": {
         "lesson": "handoff",
         "time": 3980,
@@ -9200,14 +9202,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            84
+            22,
+            252,
+            220,
+            20
           ],
           "size": [
-            261,
-            196
+            118,
+            88
           ],
           "uniform_surface": true
         }
@@ -9215,7 +9217,7 @@
     },
     {
       "time_ms": 4000.0,
-      "sha256": "9547786c5058bbc8af573bc98b45346d75f50e690a32bf806559379dbbbe8343",
+      "sha256": "fa63e9c1741c07baa9bf7d02eb901bedc493c3bdf8711b9b60f4cd2280896cd7",
       "state": {
         "lesson": "handoff",
         "time": 4000,
@@ -9246,14 +9248,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            84
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            196
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -9261,7 +9263,7 @@
     },
     {
       "time_ms": 4020.0,
-      "sha256": "62852f6c526e4b6833ff109b7868bd47d2768fda51bfed2f40070eb10b22bfa8",
+      "sha256": "ae18f0fcabdcd23d5c725088404873c2d59116db10ca7209e08066e42c79236e",
       "state": {
         "lesson": "handoff",
         "time": 4020,
@@ -9292,14 +9294,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -9307,7 +9309,7 @@
     },
     {
       "time_ms": 4040.0,
-      "sha256": "1f5297fd894a8fb3306bfea850193d1e11effbbed58e84d19b9934105821a666",
+      "sha256": "884b9121d7dd744c99b4649c9419e75b4c4c1f6cc0db1be456ddc2bd414c361a",
       "state": {
         "lesson": "handoff",
         "time": 4040,
@@ -9338,14 +9340,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -9353,7 +9355,7 @@
     },
     {
       "time_ms": 4060.0,
-      "sha256": "b5035de1ca5182d6540f5247a9f3bf2bb32cdbe4ac6bc00f046dc348e5be969c",
+      "sha256": "7672191608c0611bc333a58a758ab318c07e33e9976dd977f64c8e28c63fe12c",
       "state": {
         "lesson": "handoff",
         "time": 4060,
@@ -9384,14 +9386,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            164,
-            83
+            22,
+            252,
+            221,
+            20
           ],
           "size": [
-            261,
-            197
+            117,
+            88
           ],
           "uniform_surface": true
         }
@@ -9399,7 +9401,7 @@
     },
     {
       "time_ms": 4080.0,
-      "sha256": "168fd4744cc380356328928fc96174ca2eea33dd78cc0e7cb31c4a2e4882364e",
+      "sha256": "f86a0f6467a4ce3dec805b4fb9b463f838f8e161a17c136fcf9127f40bf9b2e0",
       "state": {
         "lesson": "handoff",
         "time": 4080,
@@ -9430,14 +9432,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9445,7 +9447,7 @@
     },
     {
       "time_ms": 4100.0,
-      "sha256": "168fd4744cc380356328928fc96174ca2eea33dd78cc0e7cb31c4a2e4882364e",
+      "sha256": "f86a0f6467a4ce3dec805b4fb9b463f838f8e161a17c136fcf9127f40bf9b2e0",
       "state": {
         "lesson": "handoff",
         "time": 4100,
@@ -9476,14 +9478,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9491,7 +9493,7 @@
     },
     {
       "time_ms": 4120.0,
-      "sha256": "ebc7c96293ec413a07a5782efa40e1ab10175db408c7072f05b750c7aecbf957",
+      "sha256": "9b61a2200c6b38d0d1cc7352e7f30b15341d5c99585ac7796cc1c9b9dbded1c3",
       "state": {
         "lesson": "handoff",
         "time": 4120,
@@ -9522,14 +9524,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9537,7 +9539,7 @@
     },
     {
       "time_ms": 4140.0,
-      "sha256": "ead9dbacefa609f0eb766cd6251c2cd47ea75a0ca91f6eae209fff88ff74f0fe",
+      "sha256": "e1efe49e5ba2a728ca124ace817337f00419c351bccbcad47d597f2b68b1acf1",
       "state": {
         "lesson": "handoff",
         "time": 4140,
@@ -9568,14 +9570,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9583,7 +9585,7 @@
     },
     {
       "time_ms": 4160.0,
-      "sha256": "ead9dbacefa609f0eb766cd6251c2cd47ea75a0ca91f6eae209fff88ff74f0fe",
+      "sha256": "e1efe49e5ba2a728ca124ace817337f00419c351bccbcad47d597f2b68b1acf1",
       "state": {
         "lesson": "handoff",
         "time": 4160,
@@ -9614,14 +9616,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9629,7 +9631,7 @@
     },
     {
       "time_ms": 4180.0,
-      "sha256": "dd6511b7413c3e5bbd4d30356a8be2869a7d3bf14effbc7b918af262c3d2acee",
+      "sha256": "5ada7063107d92e359ac6227edcd5294586ac9b76b13173ef3e67b826fadb84a",
       "state": {
         "lesson": "handoff",
         "time": 4180,
@@ -9660,14 +9662,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9675,7 +9677,7 @@
     },
     {
       "time_ms": 4200.0,
-      "sha256": "61dddd8166ce54027ad7649d08cd48e239c8ec62d1c3c154a06c327534dbf96a",
+      "sha256": "06f347c22a949d0b29ce7e9c26e1cb00ae1dce87170124d1f799d9fc66e79487",
       "state": {
         "lesson": "handoff",
         "time": 4200,
@@ -9706,14 +9708,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9721,7 +9723,7 @@
     },
     {
       "time_ms": 4220.0,
-      "sha256": "61dddd8166ce54027ad7649d08cd48e239c8ec62d1c3c154a06c327534dbf96a",
+      "sha256": "06f347c22a949d0b29ce7e9c26e1cb00ae1dce87170124d1f799d9fc66e79487",
       "state": {
         "lesson": "handoff",
         "time": 4220,
@@ -9752,14 +9754,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9767,7 +9769,7 @@
     },
     {
       "time_ms": 4240.0,
-      "sha256": "7a25cfae013ff4a53445b25371107385281525967332f58daed6f8d8df847dfb",
+      "sha256": "bf0edb3086013f7bcbdde6733e01ab5475e14ee3d7486b1126e4ab2b4d72e154",
       "state": {
         "lesson": "handoff",
         "time": 4240,
@@ -9798,14 +9800,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9813,7 +9815,7 @@
     },
     {
       "time_ms": 4260.0,
-      "sha256": "7a25cfae013ff4a53445b25371107385281525967332f58daed6f8d8df847dfb",
+      "sha256": "bf0edb3086013f7bcbdde6733e01ab5475e14ee3d7486b1126e4ab2b4d72e154",
       "state": {
         "lesson": "handoff",
         "time": 4260,
@@ -9844,14 +9846,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9859,7 +9861,7 @@
     },
     {
       "time_ms": 4280.0,
-      "sha256": "82fa656d025a0f4093d477c987c583178c22cefb3e320b546f677284c8383183",
+      "sha256": "ca3cd5ffb2c481ee3d5e48d08b25ede56bb51df8224884650863aec3c0d9ae98",
       "state": {
         "lesson": "handoff",
         "time": 4280,
@@ -9890,14 +9892,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9905,7 +9907,7 @@
     },
     {
       "time_ms": 4300.0,
-      "sha256": "246ed584f4ecc225dd2e5a1e8988153a6bb4784e2d0775e8ec769c7222da677e",
+      "sha256": "a4d13016ca1eef7a3c8739720cb83f6604cfa067deac6b38876908fbba00cb4d",
       "state": {
         "lesson": "handoff",
         "time": 4300,
@@ -9936,14 +9938,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9951,7 +9953,7 @@
     },
     {
       "time_ms": 4320.0,
-      "sha256": "246ed584f4ecc225dd2e5a1e8988153a6bb4784e2d0775e8ec769c7222da677e",
+      "sha256": "a4d13016ca1eef7a3c8739720cb83f6604cfa067deac6b38876908fbba00cb4d",
       "state": {
         "lesson": "handoff",
         "time": 4320,
@@ -9982,14 +9984,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -9997,7 +9999,7 @@
     },
     {
       "time_ms": 4340.0,
-      "sha256": "a0c7343e9bd20048abde32c91b03ade7aaa2a764d5f41517c22e1acf74f3b601",
+      "sha256": "cc6178b253ea3dda17b9c42a9bf4e0e64291beee0a7eb105d4ff01e02b7c1196",
       "state": {
         "lesson": "handoff",
         "time": 4340,
@@ -10028,14 +10030,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10043,7 +10045,7 @@
     },
     {
       "time_ms": 4360.0,
-      "sha256": "a0c7343e9bd20048abde32c91b03ade7aaa2a764d5f41517c22e1acf74f3b601",
+      "sha256": "cc6178b253ea3dda17b9c42a9bf4e0e64291beee0a7eb105d4ff01e02b7c1196",
       "state": {
         "lesson": "handoff",
         "time": 4360,
@@ -10074,14 +10076,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10089,7 +10091,7 @@
     },
     {
       "time_ms": 4380.0,
-      "sha256": "1c085296f2d2423924f8dc6f801e87309650562cfa61820ce7226e146558ab51",
+      "sha256": "7f75aa721c2e4a277ffa907a27754b3f76843682ff5d6e65f3592dfc12d305c3",
       "state": {
         "lesson": "handoff",
         "time": 4380,
@@ -10120,14 +10122,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10135,7 +10137,7 @@
     },
     {
       "time_ms": 4400.0,
-      "sha256": "1c085296f2d2423924f8dc6f801e87309650562cfa61820ce7226e146558ab51",
+      "sha256": "7f75aa721c2e4a277ffa907a27754b3f76843682ff5d6e65f3592dfc12d305c3",
       "state": {
         "lesson": "handoff",
         "time": 4400,
@@ -10166,14 +10168,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10181,7 +10183,7 @@
     },
     {
       "time_ms": 4420.0,
-      "sha256": "1c085296f2d2423924f8dc6f801e87309650562cfa61820ce7226e146558ab51",
+      "sha256": "7f75aa721c2e4a277ffa907a27754b3f76843682ff5d6e65f3592dfc12d305c3",
       "state": {
         "lesson": "handoff",
         "time": 4420,
@@ -10212,14 +10214,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10227,7 +10229,7 @@
     },
     {
       "time_ms": 4440.0,
-      "sha256": "1c085296f2d2423924f8dc6f801e87309650562cfa61820ce7226e146558ab51",
+      "sha256": "7f75aa721c2e4a277ffa907a27754b3f76843682ff5d6e65f3592dfc12d305c3",
       "state": {
         "lesson": "handoff",
         "time": 4440,
@@ -10258,14 +10260,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10273,7 +10275,7 @@
     },
     {
       "time_ms": 4460.0,
-      "sha256": "1c085296f2d2423924f8dc6f801e87309650562cfa61820ce7226e146558ab51",
+      "sha256": "7f75aa721c2e4a277ffa907a27754b3f76843682ff5d6e65f3592dfc12d305c3",
       "state": {
         "lesson": "handoff",
         "time": 4460,
@@ -10304,14 +10306,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10319,7 +10321,7 @@
     },
     {
       "time_ms": 4480.0,
-      "sha256": "1c085296f2d2423924f8dc6f801e87309650562cfa61820ce7226e146558ab51",
+      "sha256": "7f75aa721c2e4a277ffa907a27754b3f76843682ff5d6e65f3592dfc12d305c3",
       "state": {
         "lesson": "handoff",
         "time": 4480,
@@ -10350,14 +10352,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10365,7 +10367,7 @@
     },
     {
       "time_ms": 4500.0,
-      "sha256": "58b072ece874dedc6a7eead502124355a37b68fa7e8229515c1be31ecf517952",
+      "sha256": "60d4d16d4e57848f95cd8ce79308b5594f0fe3f3fba95a86e9d4d5bc6144e2d7",
       "state": {
         "lesson": "handoff",
         "time": 4500,
@@ -10396,14 +10398,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10411,7 +10413,7 @@
     },
     {
       "time_ms": 4520.0,
-      "sha256": "58b072ece874dedc6a7eead502124355a37b68fa7e8229515c1be31ecf517952",
+      "sha256": "60d4d16d4e57848f95cd8ce79308b5594f0fe3f3fba95a86e9d4d5bc6144e2d7",
       "state": {
         "lesson": "handoff",
         "time": 4520,
@@ -10442,14 +10444,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10457,7 +10459,7 @@
     },
     {
       "time_ms": 4540.0,
-      "sha256": "247bafe03dc78eb70e4f0499ef88111b0aff8241195a5a765b24937d2e0c046e",
+      "sha256": "89a837718a1b6ae9ea1eb4b8b5df358259394510a4f7a15e39405aafa6b101e0",
       "state": {
         "lesson": "handoff",
         "time": 4540,
@@ -10488,14 +10490,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10503,7 +10505,7 @@
     },
     {
       "time_ms": 4560.0,
-      "sha256": "247bafe03dc78eb70e4f0499ef88111b0aff8241195a5a765b24937d2e0c046e",
+      "sha256": "89a837718a1b6ae9ea1eb4b8b5df358259394510a4f7a15e39405aafa6b101e0",
       "state": {
         "lesson": "handoff",
         "time": 4560,
@@ -10534,14 +10536,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10549,7 +10551,7 @@
     },
     {
       "time_ms": 4580.0,
-      "sha256": "bb658150c234f1bc1dbf47568260c5d7dcf5c21511e1aaf29d9c757a4ef20aee",
+      "sha256": "28b24e5400c78238092ee57f0aaa0e5a7105c341dede9f13ad0029095b001576",
       "state": {
         "lesson": "handoff",
         "time": 4580,
@@ -10580,14 +10582,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10595,7 +10597,7 @@
     },
     {
       "time_ms": 4600.0,
-      "sha256": "215b32e20bebf73b8f0c6e4b96c99c8fb3aa141e28a52236fbf2a326a6650bed",
+      "sha256": "4cb3f7bbe72b7d78946d1899d5190d4f0f9b4afed59483ef53ca98acc6880a16",
       "state": {
         "lesson": "handoff",
         "time": 4600,
@@ -10626,14 +10628,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10641,7 +10643,7 @@
     },
     {
       "time_ms": 4620.0,
-      "sha256": "215b32e20bebf73b8f0c6e4b96c99c8fb3aa141e28a52236fbf2a326a6650bed",
+      "sha256": "4cb3f7bbe72b7d78946d1899d5190d4f0f9b4afed59483ef53ca98acc6880a16",
       "state": {
         "lesson": "handoff",
         "time": 4620,
@@ -10672,14 +10674,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10687,7 +10689,7 @@
     },
     {
       "time_ms": 4640.0,
-      "sha256": "1c085296f2d2423924f8dc6f801e87309650562cfa61820ce7226e146558ab51",
+      "sha256": "7f75aa721c2e4a277ffa907a27754b3f76843682ff5d6e65f3592dfc12d305c3",
       "state": {
         "lesson": "handoff",
         "time": 4640,
@@ -10718,14 +10720,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10733,7 +10735,7 @@
     },
     {
       "time_ms": 4660.0,
-      "sha256": "0df3db4cb9b432e0a9352a715be93fe1a5e99b4262eb6523cfbde28748845d56",
+      "sha256": "dd2ee9e75071637e21e1e962fb9b9b60df642bc39321f87d87a2ee96026a9124",
       "state": {
         "lesson": "handoff",
         "time": 4660,
@@ -10764,14 +10766,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10779,7 +10781,7 @@
     },
     {
       "time_ms": 4680.0,
-      "sha256": "5a3521346c48aa752a1874a0e9854314b01a1a4bd2010adb455a1262540b2c49",
+      "sha256": "22847be2165b0838186a37bd0cb3d15a2c567436698f21726529f44c88b884a4",
       "state": {
         "lesson": "handoff",
         "time": 4680,
@@ -10810,14 +10812,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10825,7 +10827,7 @@
     },
     {
       "time_ms": 4700.0,
-      "sha256": "7d5f188006c448c6be8c7c2b1ee26fbc8aae57386465f7718ae7a6532c48dc74",
+      "sha256": "b3f32e226cf0c947a8531f0cdf3653c72f568e37e11df661594cb13ed257b9a1",
       "state": {
         "lesson": "handoff",
         "time": 4700,
@@ -10856,14 +10858,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10871,7 +10873,7 @@
     },
     {
       "time_ms": 4720.0,
-      "sha256": "7cd940201c948626a5b3b1d09ee48cb0903370ec47837872cb7ac541da33a66c",
+      "sha256": "755e5fbbdb2e7ad39e58bed5a19934cb1d1516245480fc0c70442b7e910bd080",
       "state": {
         "lesson": "handoff",
         "time": 4720,
@@ -10902,14 +10904,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10917,7 +10919,7 @@
     },
     {
       "time_ms": 4740.0,
-      "sha256": "94c4cbb508b4d8ea9b49e1b22341edb9714f931c9fb8e8a95a188998d49ec284",
+      "sha256": "d2ade53e0d7d683e98608846db65ce04e56fa3180992c1abb927a8b9f5164e34",
       "state": {
         "lesson": "handoff",
         "time": 4740,
@@ -10948,14 +10950,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -10963,7 +10965,7 @@
     },
     {
       "time_ms": 4760.0,
-      "sha256": "4b078c45ace318141c381eba73ba401dfc68178aaddf39d4775ea30ece243388",
+      "sha256": "ef2e7202850cf87bce10a911afa9874bf10f4843d102659de57dee9eeee832af",
       "state": {
         "lesson": "handoff",
         "time": 4760,
@@ -10994,14 +10996,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11009,7 +11011,7 @@
     },
     {
       "time_ms": 4780.0,
-      "sha256": "801d5dddd125af4abe19608b9d4b60326901ba60b63372c92cc913e1156adc1c",
+      "sha256": "6b31990bfbf18f1a6f1f406b13910c4b19c666d7aa3e5236034a6ff771cba52b",
       "state": {
         "lesson": "handoff",
         "time": 4780,
@@ -11040,14 +11042,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11055,7 +11057,7 @@
     },
     {
       "time_ms": 4800.0,
-      "sha256": "578fff26edf7c18f9fc36d92ff0cf933f2ee85ae1dde6d32805f9467268bc4d6",
+      "sha256": "5a25f14238320c08d01e49a5abe6eee986c99e79fe8c3254e57a41f3a7f9d8d7",
       "state": {
         "lesson": "handoff",
         "time": 4800,
@@ -11086,14 +11088,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11101,7 +11103,7 @@
     },
     {
       "time_ms": 4820.0,
-      "sha256": "4e9a397becf4f78fe66efb7e51b4dcce555077752fbf0c626f0d708667474248",
+      "sha256": "e6e6e2b1377c1c109fc50661d43abde0661418e84384dc56d3fd80be989eee68",
       "state": {
         "lesson": "handoff",
         "time": 4820,
@@ -11132,14 +11134,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11147,7 +11149,7 @@
     },
     {
       "time_ms": 4840.0,
-      "sha256": "b1ecee1e703964994788f583a1b3baea10bf12515cd66dad2c41015be884ef49",
+      "sha256": "1f49aa0e4c738ec54e670391ef393a15cd6299617f2df7799a4fb80172be5088",
       "state": {
         "lesson": "handoff",
         "time": 4840,
@@ -11178,14 +11180,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11193,7 +11195,7 @@
     },
     {
       "time_ms": 4860.0,
-      "sha256": "d90e8c9e3ab6da5d90617046c222546a58c4b8a1c86c109c4b895d5809bc857a",
+      "sha256": "6eb29a1866600dacf1de87e2c6a264f2c4f37ab505ff1d03e8acc9f53d9f1b25",
       "state": {
         "lesson": "handoff",
         "time": 4860,
@@ -11224,14 +11226,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11239,7 +11241,7 @@
     },
     {
       "time_ms": 4880.0,
-      "sha256": "630cf9cedeb4a4c6a81e39d1b0bcf125ccc7bcfe14944fcb925d44a4ab8e4ccf",
+      "sha256": "10dc9d8c9017ef3ee47e7ef12f695e894fcedaf062e6db290b9465ba5a3f7456",
       "state": {
         "lesson": "handoff",
         "time": 4880,
@@ -11270,14 +11272,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11285,7 +11287,7 @@
     },
     {
       "time_ms": 4900.0,
-      "sha256": "6b9fa0efc12d372ed030aaf2f3c5faa196b6ef7c727b57d21fb9bb8392a79cc0",
+      "sha256": "e7eb726f74ac29ef0bc33ed5d1a8bf43a5270279bd30b2dd0cc18706184df88c",
       "state": {
         "lesson": "handoff",
         "time": 4900,
@@ -11316,14 +11318,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11331,7 +11333,7 @@
     },
     {
       "time_ms": 4920.0,
-      "sha256": "6b9fa0efc12d372ed030aaf2f3c5faa196b6ef7c727b57d21fb9bb8392a79cc0",
+      "sha256": "e7eb726f74ac29ef0bc33ed5d1a8bf43a5270279bd30b2dd0cc18706184df88c",
       "state": {
         "lesson": "handoff",
         "time": 4920,
@@ -11362,14 +11364,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11377,7 +11379,7 @@
     },
     {
       "time_ms": 4940.0,
-      "sha256": "0cd5b12ff31ed072274f3b7249b292c8b8986b7ef25f58643698e93be181dd6c",
+      "sha256": "74301e74d34667c99b429f907e9c5dd923ccffd1cd054ba633db26c0cb9bbdef",
       "state": {
         "lesson": "handoff",
         "time": 4940,
@@ -11408,14 +11410,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11423,7 +11425,7 @@
     },
     {
       "time_ms": 4960.0,
-      "sha256": "0cd5b12ff31ed072274f3b7249b292c8b8986b7ef25f58643698e93be181dd6c",
+      "sha256": "74301e74d34667c99b429f907e9c5dd923ccffd1cd054ba633db26c0cb9bbdef",
       "state": {
         "lesson": "handoff",
         "time": 4960,
@@ -11454,14 +11456,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11469,7 +11471,7 @@
     },
     {
       "time_ms": 4980.0,
-      "sha256": "f3aab31dd3387a7d962c1fa6e37644c144fcd0334a7d471ba533c7fd43444737",
+      "sha256": "9eb2a2cb9342b1d60d5a4cd6d6d23aa61edf2310103e2d236faf8ce6e319ac1a",
       "state": {
         "lesson": "handoff",
         "time": 4980,
@@ -11500,14 +11502,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11515,7 +11517,7 @@
     },
     {
       "time_ms": 5000.0,
-      "sha256": "1aef8504b0f1da267e31d5058f69388ee2867dc93ce3139838e8bdbd27aeb553",
+      "sha256": "df7d0a8bd0e7fa7bb6bef89b0b1839cead6b328a385692e23b2e6a6a540647e6",
       "state": {
         "lesson": "handoff",
         "time": 5000,
@@ -11546,14 +11548,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }
@@ -11561,7 +11563,7 @@
     },
     {
       "time_ms": 5020.0,
-      "sha256": "1aef8504b0f1da267e31d5058f69388ee2867dc93ce3139838e8bdbd27aeb553",
+      "sha256": "df7d0a8bd0e7fa7bb6bef89b0b1839cead6b328a385692e23b2e6a6a540647e6",
       "state": {
         "lesson": "handoff",
         "time": 5020,
@@ -11592,14 +11594,14 @@
         {
           "pose": "build",
           "margins": [
-            39,
-            184,
-            165,
-            83
+            23,
+            252,
+            221,
+            20
           ],
           "size": [
-            260,
-            197
+            116,
+            88
           ],
           "uniform_surface": true
         }

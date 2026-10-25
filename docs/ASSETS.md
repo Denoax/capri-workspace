@@ -56,3 +56,6 @@ The original hero/source records remain. Six480×640 portrait compositions reuse
 
 
 V6 annotated sizing adds marked panel/graph-wide/support-wide derivatives from the same editable source. Original V5 portrait/mobile and unmarked handoff/checking, hero and accent files retain their byte identities. Screenshot authority/hashes and explicit root/mobile mapping are recorded in story/format.json and SOURCE_RECORD.json; no new generated visual media or source assets.
+
+
+V7 derives the handoff/checking panel+portrait variants and restores original-paced rain/stack GIFs for both support layouts. separator.gif/png and identity.svg/identity-mobile.svg are independently authored by build_capri_separator.py/capri_story_identity.py from the user motion contract and supplied fonts. Original footage, masters/rig/masks, hero, notices and unaffected V6 exports are retained. No generated-media source added.

@@ -1,5 +1,5 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "hero": {
     "width": 1000,
     "height": 343,
@@ -164,15 +164,15 @@
     },
     "hands": {
       "pose": "build",
-      "x": 110,
-      "y": 165,
-      "scale": 0.13
+      "x": 68,
+      "y": 246,
+      "scale": 0.075
     },
     "cat": {
       "pose": "review",
-      "x": 110,
-      "y": 150,
-      "scale": 0.13
+      "x": 70,
+      "y": 245,
+      "scale": 0.075
     },
     "workflow": {
       "x": 120,
@@ -201,8 +201,9 @@
   "responsive": {
     "breakpoint_px": 767,
     "build_layouts": [
+      "portrait",
       "panel",
-      "graph-wide",
+      "support",
       "support-wide"
     ],
     "pair_width": "49.5%",
@@ -240,6 +241,18 @@
           "x": 120,
           "y": 70,
           "scale": 0.1555
+        },
+        "hands": {
+          "pose": "build",
+          "x": 68,
+          "y": 246,
+          "scale": 0.075
+        },
+        "cat": {
+          "pose": "review",
+          "x": 70,
+          "y": 245,
+          "scale": 0.075
         }
       }
     }
@@ -288,5 +301,53 @@
         "sha256": "d93af0d1cb93283eb21db1ffe8c7467c39d7cf70ebfe66362c9cf1a42508d3d9"
       }
     }
+  },
+  "identity": {
+    "display_name": "CAPRI \u2014 Agentic Loop Prompting",
+    "description": "Agentic Loop Prompting for Codex: focused contexts for planning, implementation and review, explicit handoffs, and evidence before integration.",
+    "pink": "#ff1265",
+    "green": "#28fb86",
+    "ink": "#100a19",
+    "wide": [
+      900,
+      48
+    ],
+    "mobile": [
+      320,
+      78
+    ],
+    "mobile_cap": 320,
+    "wide_cap": "100%",
+    "font_capri": "Manrope",
+    "font_method": "Bundled Manrope and Inter variable fonts, embedded in script-free SVG; OFL source notices retained."
+  },
+  "separator": {
+    "width": 1200,
+    "height": 48,
+    "period_ms": 4000,
+    "fps": 50,
+    "wake_px": 192,
+    "track_y": 24,
+    "track_width": 2,
+    "arrow_length": 24,
+    "arrow_half_height": 10,
+    "pink": "#ff1265",
+    "green": "#28fb86",
+    "poster_frame": 100,
+    "normal": "separator.gif",
+    "poster": "separator.png",
+    "method": "Periodic authored arrow/wake; full red baseline, finite wrapped green wake. Transparent palette index0, disposal2."
+  },
+  "v7_reference": {
+    "packet_sha256": "d8db5db1f2455f91c72cd917322c36cc8a2dee5fadc3d976d6b93679be2d4a00",
+    "authority": "Three original user screenshots and requested moving-arrow behavior",
+    "reopens": [
+      "handoff",
+      "checking",
+      "separator",
+      "support motion",
+      "identity/intro"
+    ],
+    "protected": "Other approved V6 composition/geometry; original hero, source factories, masters/rig, footage, arithmetic/runtime/qualification."
   }
 }

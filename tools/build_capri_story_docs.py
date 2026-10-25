@@ -43,7 +43,7 @@ Actual accounting needs disjoint ordinary-input, cached-read, cache-write and ou
 [Visual story and controls](VISUAL_STORY.md) · [Fixture explanation](CAPRI_EXPLAINS.md) · [Current qualification](STATUS.md).
 '''
     (ROOT/'docs/CONTEXT_BUDGET.md').write_text(text)
-    explanation='''# What the handoff carries
+    explanation='''# CAPRI — Agentic Loop Prompting: what the handoff carries
 
 CAPRI separates planning, coding and checking into ordered Codex sessions. The brief carries current decisions, relevant source, allowed changes and acceptance checks. One worker writes; the reviewer compares the candidate with the request and evidence; findings return through Thinker to the human decision. Separate contexts do not guarantee better answers or remove shared model blind spots.
 
@@ -76,6 +76,6 @@ One ordinary session is often appropriate for a short, clear change. Explicit ha
 
 [Interactive visual story](VISUAL_STORY.md#local-companion) · [Architecture](../ARCHITECTURE.md) · [Benchmark protocol](BENCHMARK_PROTOCOL.md) · [Native status](STATUS.md).
 '''
-    (ROOT/'docs/CAPRI_EXPLAINS.md').write_text(explanation)
+    (ROOT/'docs/CAPRI_EXPLAINS.md').write_text(explanation+'\n\n## Agentic Loop Prompting: rationale and tradeoffs'+'\n\nCAPRI uses focused stage inputs and explicit retained requirements to limit replayed exploration, followed by a separate checking pass. This is a design inference from the implementation and the techniques below, not evidence of CAPRI superiority or a measured quality/cost gain.\n\n[Building effective agents](https://www.anthropic.com/research/building-effective-agents) describes staged workflows and evaluation when criteria are clear, with added latency/cost tradeoffs. [Effective context engineering](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents) discusses focused contexts, retrieval and condensed results alongside other approaches. [When to fold subagents into the main loop](https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop) explains shared-context benefits and lossy-handoff/coordination costs. These primary sources support conditional mechanisms; their examples or percentages are not CAPRI results.\n\nA curated single session can match or beat scoped input. Additional handoffs must earn their cost, and separate review can share model blind spots. CAPRI needs its own matched end-to-end comparison before claiming relative cost, speed or quality. Stages are ordered, with one write owner and a human integration decision.\n')
 def weighted_thousands(text):return format(Decimal(text)/Decimal(1000),'.1f')
 if __name__=='__main__':main()

@@ -52,3 +52,12 @@ The unrun schedule produces no savings percentage. The twelve offline analyzer t
 - [Harness-Bench, revised 15 October 2026](https://arxiv.org/abs/2605.27922) treats the model/harness configuration as the evaluation unit and records artifacts, traces, usage and validators. It is external research, not a CAPRI benchmark result.
 - [SWE-bench documentation](https://www.swebench.com/SWE-bench/) provides a model of repository/issue/patch/test evaluation. We borrow controlled grading and isolated environments; our small fixtures are not SWE-bench scores.
 - [OpenAI prompt caching](https://developers.openai.com/api/docs/guides/prompt-caching), [model rates](https://developers.openai.com/api/docs/models/gpt-6.1-sol), and [pricing](https://developers.openai.com/api/docs/pricing) define the accounting reference. Native schema and billing compatibility still require evidence from the installed CLI/account.
+
+
+## Agentic Loop Prompting: rationale and tradeoffs
+
+CAPRI uses focused stage inputs and explicit retained requirements to limit replayed exploration, followed by a separate checking pass. This is a design inference from the implementation and the techniques below, not evidence of CAPRI superiority or a measured quality/cost gain.
+
+[Building effective agents](https://www.anthropic.com/research/building-effective-agents) describes staged workflows and evaluation when criteria are clear, with added latency/cost tradeoffs. [Effective context engineering](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents) discusses focused contexts, retrieval and condensed results alongside other approaches. [When to fold subagents into the main loop](https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop) explains shared-context benefits and lossy-handoff/coordination costs. These primary sources support conditional mechanisms; their examples or percentages are not CAPRI results.
+
+A curated single session can match or beat scoped input. Additional handoffs must earn their cost, and separate review can share model blind spots. CAPRI needs its own matched end-to-end comparison before claiming relative cost, speed or quality. Stages are ordered, with one write owner and a human integration decision.

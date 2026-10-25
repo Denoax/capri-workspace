@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "SOURCE_RECORD.json",
-      "bytes": 8067,
-      "sha256": "83f6c67dc1c0a9c14abb33ac39a93f8375f145b7a9f4be2b5cb121b4a4095455"
+      "bytes": 9075,
+      "sha256": "084d3f10e37802fd5f3f599d6456e6772cebe7edd746093f5de0722caf351b62"
     },
     {
       "path": "accent.svg",
@@ -57,19 +57,34 @@
       "sha256": "6cef426cd6d980a65bca88567a1e8427847d96924e2f8b12069079f884686dee"
     },
     {
+      "path": "exports/checking-panel-timeline.json",
+      "bytes": 218705,
+      "sha256": "3cee3089f8621a03c83b2843fd9b937a387504aab994b785ac44fd8b0c3ea4f5"
+    },
+    {
+      "path": "exports/checking-panel.gif",
+      "bytes": 3367679,
+      "sha256": "7364216feedda1daf47925624c079af89b62f06d083559d92af69c94d9d76c45"
+    },
+    {
+      "path": "exports/checking-panel.png",
+      "bytes": 105126,
+      "sha256": "e47b4dd3986344058b0e832d6aba035f45886a82017d36437ca74dff8d43f69a"
+    },
+    {
       "path": "exports/checking-portrait-timeline.json",
-      "bytes": 218928,
-      "sha256": "e134e142be13f4714c07ee74c9ee2b866a7ca21ec6d11b8bcce9850fe73255e3"
+      "bytes": 218621,
+      "sha256": "57de41491e1fee4efed5b5ee3e60eb556d5918995b356ef958cc6c6bd8ef6ce7"
     },
     {
       "path": "exports/checking-portrait.gif",
-      "bytes": 4089600,
-      "sha256": "40143df3f733ffae8735d0841532d1de6b29d2be5d383ae62691639e0bb31bfd"
+      "bytes": 2827296,
+      "sha256": "95c828bf28da474e98aa5e4d43a84757ee0fd82631a94b79a4e06482ef0ed45e"
     },
     {
       "path": "exports/checking-portrait.png",
-      "bytes": 116370,
-      "sha256": "8694b6de1a1e27556dc6678a74e38799c69ae80991dd93af7a63afc30a44000e"
+      "bytes": 88440,
+      "sha256": "b84430b558df7f6f981eab901ff33b0c939c86d8958afcaa6546d8d28657510f"
     },
     {
       "path": "exports/checking-wide-timeline.json",
@@ -97,9 +112,29 @@
       "sha256": "49a8c8aa3e6effda2d0214fba0cf30928207ecb2f77b03fdbdfdfb9e8f7e4c93"
     },
     {
+      "path": "exports/closing-support-timeline.json",
+      "bytes": 352053,
+      "sha256": "dd9bbd52be3ed5d8244cf5746161a919fceb3d344258b0661cbdb8e114c08d0b"
+    },
+    {
+      "path": "exports/closing-support-wide-timeline.json",
+      "bytes": 352383,
+      "sha256": "0021c619f79a825bfb4b123b730473c6f28c45cd7fc73699221ad38b9c40674c"
+    },
+    {
+      "path": "exports/closing-support-wide.gif",
+      "bytes": 1505948,
+      "sha256": "a2bdde85e669c317adcf0e0f0d30fac9aa737a1abb435b081a5028014cb8510b"
+    },
+    {
       "path": "exports/closing-support-wide.png",
-      "bytes": 32769,
-      "sha256": "67019caa542e76c64cb01e8bc390959573934ce5b381225d1aef8efa5e48a917"
+      "bytes": 33467,
+      "sha256": "87b9fcc8bb9acc187d93f897e5b65a3dac500015ba9a19f38a58e73c1720567c"
+    },
+    {
+      "path": "exports/closing-support.gif",
+      "bytes": 998633,
+      "sha256": "711ca9f2f611be19aa3b76157fff986ef4455b198565ca6ac475e0f1ea6350e4"
     },
     {
       "path": "exports/closing-support.png",
@@ -182,19 +217,34 @@
       "sha256": "6dcff7cb9f282f4c810c7248e1fdc8c8220139c2597035361043cebc635e254a"
     },
     {
+      "path": "exports/handoff-panel-timeline.json",
+      "bytes": 268300,
+      "sha256": "5fe90e797e1a61b78452c4689276dbda0eaa85b5c9a1f84d068ecfc45f11cde8"
+    },
+    {
+      "path": "exports/handoff-panel.gif",
+      "bytes": 2135063,
+      "sha256": "bc1add9487c26d2556efe2fbadf000ab4053c6050145162cb811bb0fac827a51"
+    },
+    {
+      "path": "exports/handoff-panel.png",
+      "bytes": 98491,
+      "sha256": "feffb007ab2de8b993b4320c2082264ad6971d6bdcdd4a66397a53fd1b1e9dd6"
+    },
+    {
       "path": "exports/handoff-portrait-timeline.json",
-      "bytes": 268251,
-      "sha256": "d8e4c977dd3173a6aa75c4fec712ec4e03ae9c3d33e5d625849111b7b8c3f2b8"
+      "bytes": 268051,
+      "sha256": "d9fed3ae7c76d1addcc505d1223bdd91295a540b9d735a0885bada2f82fd373e"
     },
     {
       "path": "exports/handoff-portrait.gif",
-      "bytes": 2850353,
-      "sha256": "10c380811a470d06f8ffef9472130343779332785d84befaf40de5dd94046787"
+      "bytes": 1583987,
+      "sha256": "2ed9210dfc90900d80fb78d48e4cc5c430e6d614e52c45c77d409d18884ce46e"
     },
     {
       "path": "exports/handoff-portrait.png",
-      "bytes": 101309,
-      "sha256": "3408ec93cff813bf90912e701ccaea2398cbe13e049e30c3d43f71cba659ecd5"
+      "bytes": 78643,
+      "sha256": "3f90d84525ce490b77570c9d04a12d5043034635b7c0c74bed9bfcd512d68306"
     },
     {
       "path": "exports/handoff-wide-timeline.json",
@@ -287,14 +337,34 @@
       "sha256": "07f6dec153c9e35a093e633c3ce1da887b238f76843e1259bad3e48fa413f75c"
     },
     {
+      "path": "exports/requirements-support-timeline.json",
+      "bytes": 16863,
+      "sha256": "d36596b354b700fbb6b6ff16e6167835b15253370b3adb5730c17ca2a2e144ab"
+    },
+    {
+      "path": "exports/requirements-support-wide-timeline.json",
+      "bytes": 16883,
+      "sha256": "2919d50502863f3936fe671b9a3b3197340eaedfaa9acbe743e5b45de11114d3"
+    },
+    {
+      "path": "exports/requirements-support-wide.gif",
+      "bytes": 485291,
+      "sha256": "118dc0b8fb5989b7b8a8e12d4b4f280d24122618674dc99615550185bc831ade"
+    },
+    {
       "path": "exports/requirements-support-wide.png",
-      "bytes": 154717,
-      "sha256": "117edbc187b633c36037ade076ac40a1e1f1cfc7b8d123664daf2a74d345093b"
+      "bytes": 150835,
+      "sha256": "a9f311de9c5e0e6252842409798e948bb24b063feda7e338e32ad181ce8f9804"
+    },
+    {
+      "path": "exports/requirements-support.gif",
+      "bytes": 242718,
+      "sha256": "309108bcaf3d443d44ebd3275dc6b58b016d15679790c4af600982456e5c2e4a"
     },
     {
       "path": "exports/requirements-support.png",
-      "bytes": 78602,
-      "sha256": "69be69392c8564cf9e04460416681e4e212028f9821b2d1f47707dadc30aec2a"
+      "bytes": 77728,
+      "sha256": "40478b45380a69bb7483a19cd89a3f1c4dad1ff93b4d8e51bec5d00ada280436"
     },
     {
       "path": "exports/retained-portrait-timeline.json",
@@ -388,8 +458,18 @@
     },
     {
       "path": "format.json",
-      "bytes": 6412,
-      "sha256": "d7be98991bf3ecb6da8da548650ec351c0ed6fbd7ee19ed3affa57acf060600c"
+      "bytes": 8215,
+      "sha256": "23fa82004522ac6c30fe176402ceae2f55064d3ed6f309f9cc10c7cbaa0f9d3b"
+    },
+    {
+      "path": "identity-mobile.svg",
+      "bytes": 1389053,
+      "sha256": "7bd672957aecfbfb2e7a4cd7b57ff6efa5b047cca1f7c12461032a3d8c6af35a"
+    },
+    {
+      "path": "identity.svg",
+      "bytes": 1389007,
+      "sha256": "5b2c21b562a03586e6850ee21b7b093fd77a108eca44163497453f4c692ef64c"
     },
     {
       "path": "input-panel.svg",
@@ -413,8 +493,23 @@
     },
     {
       "path": "scenes.js",
-      "bytes": 25308,
-      "sha256": "7060ac2e13f39612c19d46eb0f1d24a27daad9e82562ed52c9f3aeedb787fcb9"
+      "bytes": 25350,
+      "sha256": "fe341c244afd7812e62e471860364ce9e9b7b2b2a5fb34235235388ca8a0a4ed"
+    },
+    {
+      "path": "separator-timeline.json",
+      "bytes": 3096,
+      "sha256": "3f5bbf6d2fa317ce3627ec12211179d0d68a6bdd1aaca9a38ed84f5e54f910ed"
+    },
+    {
+      "path": "separator.gif",
+      "bytes": 246099,
+      "sha256": "1f0a4fd8c008257965edaa044bb1233b9439407048aa5650926abee96dc6914a"
+    },
+    {
+      "path": "separator.png",
+      "bytes": 556,
+      "sha256": "2f3dc011da58ef3f2516157a707ea4d46cc35f088e36f49605c7375577ef17f5"
     },
     {
       "path": "story-ui.js",
@@ -423,13 +518,13 @@
     },
     {
       "path": "story.css",
-      "bytes": 9488,
-      "sha256": "c16178969c138be17c750aed907981aede4ce9f10db5e2863be0d3d300305f61"
+      "bytes": 11337,
+      "sha256": "c5cb8de63371f98225be7b5d2e5663baa2e379d1d742e54644c249c0cb7f7c38"
     },
     {
       "path": "story.json",
-      "bytes": 4188,
-      "sha256": "10aa415e27c4acbc11620842a4a05986a658d8fd5236258d92cd4589b5300ace"
+      "bytes": 4485,
+      "sha256": "5b71199495b094680f2fdd770722757b0f75bde12e0b7284de3a9e98fa619672"
     }
   ],
   "scope": "File identities; export provenance/timing are in each timeline. No perceptual acceptance.",
@@ -463,16 +558,27 @@
     "exports/handoff-portrait.png",
     "exports/handoff-portrait.gif",
     "exports/handoff-portrait-timeline.json",
+    "exports/handoff-panel.png",
+    "exports/handoff-panel.gif",
+    "exports/handoff-panel-timeline.json",
     "exports/checking-portrait.png",
     "exports/checking-portrait.gif",
     "exports/checking-portrait-timeline.json",
-    "exports/requirements-portrait.png",
-    "exports/requirements-portrait.gif",
-    "exports/requirements-portrait-timeline.json",
+    "exports/checking-panel.png",
+    "exports/checking-panel.gif",
+    "exports/checking-panel-timeline.json",
     "exports/requirements-support.png",
+    "exports/requirements-support.gif",
+    "exports/requirements-support-timeline.json",
     "exports/requirements-support-wide.png",
+    "exports/requirements-support-wide.gif",
+    "exports/requirements-support-wide-timeline.json",
     "exports/closing-support.png",
-    "exports/closing-support-wide.png"
+    "exports/closing-support.gif",
+    "exports/closing-support-timeline.json",
+    "exports/closing-support-wide.png",
+    "exports/closing-support-wide.gif",
+    "exports/closing-support-wide-timeline.json"
   ],
   "root_exports": [
     "exports/workflow-panel.gif",
@@ -480,10 +586,10 @@
     "exports/graph-graph-wide.png",
     "exports/horizon-panel.gif",
     "exports/coordination-panel.gif",
-    "exports/handoff-portrait.gif",
-    "exports/checking-portrait.gif",
-    "exports/requirements-support-wide.png",
-    "exports/closing-support-wide.png"
+    "exports/handoff-panel.gif",
+    "exports/checking-panel.gif",
+    "exports/requirements-support-wide.gif",
+    "exports/closing-support-wide.gif"
   ],
   "historical_exports": [
     "exports/brief-landscape-timeline.json",
@@ -510,6 +616,9 @@
     "exports/quantitative-portrait-timeline.json",
     "exports/quantitative-portrait.gif",
     "exports/quantitative-portrait.png",
+    "exports/requirements-portrait-timeline.json",
+    "exports/requirements-portrait.gif",
+    "exports/requirements-portrait.png",
     "exports/retained-portrait-timeline.json",
     "exports/retained-portrait.gif",
     "exports/retained-portrait.png",

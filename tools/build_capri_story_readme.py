@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Generate localized V6 README/static routes from canonical data and display roles."""
+"""Generate V7 motion and identity README/static routes from canonical data and display roles."""
 from pathlib import Path
 import html,json,re
+from capri_story_identity import identity_markup
 ROOT=Path(__file__).resolve().parents[1];STORY=ROOT/'showcase/capri/story'
 FORMATS=json.loads((STORY/'format.json').read_text());CONFIG=json.loads((STORY/'story.json').read_text())
 ALTS={'workflow':'Three full-body poses: Plan returns scope/checks, Build returns a patch, Review returns findings. One writer; the human decides.','brief':'Actual native shark field, full-body Capri and a persistent brief: request/correction, relevant source, scope/checks and retrievable originals.','horizon':'The original native ray-traced ASCII horizon with full-body Capri; credited illustration of selective input, not a measured context window.','coordination':'The supplied dotted loop carries60k+H. Additional H30k yields90k, equal to the curated input assumption.','handoff':'Original reaching hands carry blank to Untitled beside full-body Capri. Authored fixture A, not an observed model failure.','checking':'The source cat takeover and eye-anchored beams accompany full-body Review Capri. This illustration does not approve or secure code.','graph':'Illustrative inputs, not a CAPRI benchmark: six assumed requests, thousand tokens per request. Growing history180k, curated 90k, scoped60k.','requirements':'Small source skull/sword/rain vignette: keep original rules, correction and checks retrievable.','closing':'Small source elastic-stack vignette with Capri: keep evidence together and continue to offline checks.'}
@@ -16,17 +17,23 @@ def image(name,static=False):
         sources += [f'<source media="{query} and (prefers-reduced-motion: reduce)" srcset="{source(mobile,True)}" width="{cap}">',f'<source media="{query}" srcset="{source(mobile)}" width="{cap}">']
     sources.append(f'<source media="(prefers-reduced-motion: reduce)" srcset="{source(layout,True)}">')
     return '<picture>'+''.join(sources)+f'<img src="{source(layout)}" alt="{html.escape(ALTS[name],quote=True)}" width="{family["display_width"]}"></picture>'
-def group(*names,static=False,single=False):
-    paired=any('mobile_layout' in CONFIG['lessons'][n] for n in names)
-    return '\n\n'.join('<p align="center">'+image(n,static)+'</p>' for n in names) if single and not paired else '<p align="center">'+'\n'.join(image(n,static) for n in names)+'</p>'
-def divider():
-    return '<p align="center"><img src="showcase/capri/story/accent.svg" alt="" width="'+str(FORMATS['families']['divider']['display_width'])+'"></p>'
+def group(*names,static=False):
+    return '<p align="center">'+'\n'.join(image(n,static) for n in names)+'<br>'+identity_markup(FORMATS)+'</p>'
+def divider(static=False):
+    c=FORMATS['separator'];src='separator.png' if static else 'separator.gif'
+    return '<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/separator.png"><img src="showcase/capri/story/'+src+'" alt="Green arrow moves right along a magenta track with a short green wake; older track turns magenta again." width="'+str(FORMATS['families']['divider']['display_width'])+'"></picture></p>'
 def build(static=False):
     m=json.loads((STORY/'model-results.json').read_text());k=lambda v:f'{v//1000}k';t=m['total_assumed_input_tokens'];g=m['derivations']['growing'];c=m['derivations']['curated'];n=m['calls'];steps='+'.join(str(i) for i in range(n))
     base=(ROOT/'showcase/capri/source-match/BASE_README.md').read_text();start=base.index('Start with offline inspection');quick=base[start:base.index('<a href="docs/AFTERIMAGE.md"><img',start)]
-    hero='png' if static else 'gif';opening=f'''<picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.{hero}" alt="CAPRI — the preserved original magenta and green banner." width="{FORMATS['hero']['display_width']}"></picture>
+    hero='png' if static else 'gif';opening=f'''<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.{hero}" alt="CAPRI — the preserved original magenta and green banner." width="{FORMATS['hero']['display_width']}"></picture><br>{identity_markup(FORMATS)}</p>
 
-CAPRI gives planning, coding and review their own Codex sessions. Explicit handoffs carry current decisions, relevant files, scope and checks. One worker edits; a separate reviewer checks the candidate against the request and evidence. **You decide what ships.**
+# CAPRI — Agentic Loop Prompting
+
+**Focused inputs. Scoped execution. A separate review pass.**
+
+CAPRI is an experimental Agentic Loop Prompting workflow for Codex. Planning, implementation and review use their own focused sessions, connected by an explicit brief: the current request, latest correction, relevant source, allowed changes and expected checks.
+
+On complex coding work, the goal is less input spent replaying discarded exploration and clearer checking of each decision. The reviewer returns to the original request and checks the candidate and its evidence. One worker owns edits. **You decide what ships.**
 
 **Experimental.** Offline checks cover implementation contracts; native launch/recovery qualification remains pending. [Setup](#quickstart) · [Architecture](ARCHITECTURE.md) · [Current status](docs/STATUS.md) · [Evaluation](EVALUATION.md).
 
@@ -34,7 +41,7 @@ CAPRI gives planning, coding and review their own Codex sessions. Explicit hando
 
 ## How the loop works
 
-'''+group('workflow','brief',static=static,single=static)+'''
+'''+group('workflow','brief',static=static)+'''
 
 A scoped brief carries the request, latest correction, relevant source, allowed files and expected checks. Authoritative originals remain retrievable.
 
@@ -52,13 +59,15 @@ All three roles request `gpt-6.1-sol`. The selected profile uses medium Thinker/
 
 </details>
 
-'''+divider()+'''
+'''+divider(static)+'''
 
 <a id="context-and-evidence"></a>
 
 ## Why scope the input
 
 '''+group('graph',static=True)+f'''
+
+**Input efficiency:** supply what the next stage needs instead of carrying unrelated exploration. The mechanism is focused input; actual cost, speed and quality gains remain unmeasured.
 
 **Illustrative inputs — not a CAPRI benchmark.** Across six assumed requests: growing history **{k(t['growing'])}**, a curated single session **{k(t['curated'])}**, scoped roles **{k(t['scoped'])}** including already-budgeted instructions and handoffs.
 
@@ -79,7 +88,7 @@ Equal work, sufficient information and equal quality remain untested. The 180k t
 
 </details>
 
-'''+group('horizon','coordination',static=static,single=static)+'''
+'''+group('horizon','coordination',static=static)+'''
 
 Focused input can avoid replaying discarded exploration; it still needs enough information. Extra coordination must earn its cost: **60k + H** adds input beyond the handoffs already counted. At **H = 30k**, scoped and curated input are equal; the margin is **30k − H**. Do not count a handoff twice.
 
@@ -95,7 +104,9 @@ A short, clear task often fits one ordinary session. Prefix caching reuses match
 
 ## What a handoff must retain
 
-'''+group('handoff','checking',static=static,single=static)+'''
+'''+group('handoff','checking',static=static)+'''
+
+**Output quality:** preserve compatible requirements and give review a separate context and explicit checks so omissions are easier to catch. This is a design goal, not a measured quality improvement; a reviewer can share model blind spots and adds work.
 
 **Authored fixture A, not a recorded model result.** The latest correction changes blank input from `Anonymous` to `Untitled`. An incomplete summary can lose compatible rules; review rereads the [original request](evaluation/fixtures/A/INITIAL.md) and [correction](evaluation/fixtures/A/CORRECTION.md).
 
@@ -108,16 +119,16 @@ A short, clear task often fits one ordinary session. Prefix caching reuses match
 
 The checking context compares request, correction, patch and evidence. Findings and limits return to the human. Shared model blind spots remain; neither the illustration nor offline CI proves CAPRI cheaper, faster or better at retaining requirements.
 
-'''+divider()+'''
+'''+divider(static)+'''
 
 <a id="quickstart"></a>
 
 ## Start with offline checks
 
-'''+group('requirements','closing',static=True,single=static)+'\n\nKeep original requirements and evidence accessible; full source interactions remain in the companion.\n\n'+quick+'''
+'''+group('requirements','closing',static=static)+'\n\nKeep original requirements and evidence accessible; full source interactions remain in the companion.\n\n'+quick+'''
 ## Explore the working source
 
-[Interactive companion](docs/VISUAL_STORY.md#local-companion) · [Single-column static edition](docs/README_STATIC.md) · [Detailed explanation](docs/CAPRI_EXPLAINS.md) · [Art studies](docs/AFTERIMAGE.md) · [Sources and rights](docs/SOURCE_MATCH.md#sources-and-rights)
+[Interactive companion](docs/VISUAL_STORY.md#local-companion) · [Static edition](docs/README_STATIC.md) · [Detailed explanation](docs/CAPRI_EXPLAINS.md) · [Art studies](docs/AFTERIMAGE.md) · [Sources and rights](docs/SOURCE_MATCH.md#sources-and-rights)
 
 GitHub displays media and native links/disclosures. The local companion supplies real request/H selection, play/pause/replay/seek and source interactions. The graph is a separate readable figure; source art remains animated.
 
@@ -129,8 +140,8 @@ GitHub displays media and native links/disclosures. The local companion supplies
 
 def main():
     root=build();(ROOT/'README.md').write_text(root)
-    static=build(static=True);static=re.sub(r'((?:src|srcset|href)="|\]\()((?!https?:|#)[^"\s)]+)',lambda m:m[1]+'../'+m[2],static);(ROOT/'docs/README_STATIC.md').write_text('<!-- Generated from the same V6 source/data. -->\n'+static)
+    static=build(static=True);static=re.sub(r'((?:src|srcset|href)="|\]\()((?!https?:|#)[^"\s)]+)',lambda m:m[1]+'../'+m[2],static);(ROOT/'docs/README_STATIC.md').write_text('<!-- Generated from the same V7 source/data. -->\n'+static)
     from build_capri_story_docs import main as docs
     docs(json.loads((STORY/'model-results.json').read_text()))
-    print('Compact root and single-column static edition rebuilt')
+    print('Agentic Loop Prompting root/static editions rebuilt')
 if __name__=='__main__':main()

@@ -38,11 +38,18 @@ def check():
     require(all('height' not in attrs for _,attrs in markup.media),'Forced image/source height can distort production sizing')
     require(all(attrs.get('width','').isdigit() or attrs.get('width') in ['49.5%','100%'] for tag,attrs in markup.media if tag=='img'),'Main image cap must be numeric')
     require(all('width' not in attrs or (attrs['width'].isdigit() and '(max-width:767px)' in attrs.get('media','')) for tag,attrs in markup.media if tag=='source'),'Only numeric mobile source width overrides are allowed')
-    require(root.count('accent.svg')<=3 and '<!-- portrait-pair:' not in root and '<table>' not in root,'Custom/legacy media table remains')
+    require(root.count('separator.gif')==2 and root.count('/identity.svg')==6 and '<!-- portrait-pair:' not in root and '<table>' not in root,'Custom/legacy media table remains')
     require(not re.search(r'(?:src|srcset)="[^"]+\.gif',static),'Static edition embeds animation')
     for row in model['requests']:require(f"| {row['request']} | {row['values']['growing']:,} | {row['values']['curated']:,} | {row['values']['scoped']:,} |" in root,'Missing native exact input table')
     for term in ['label.py','Untitled','TypeError','MiX  Case','66.7','33.3','60k + H','H = 30k','UNKNOWN','not a CAPRI benchmark','Prefix caching'] :require(term in root,'Essential native meaning missing: '+term)
-    require(root.index('CAPRI gives planning')<root.index('/workflow-panel')<root.index('/graph-graph-wide')<root.index('/horizon-panel')<root.index('/handoff-portrait'),'Reading order drifted')
+    require(root.index('CAPRI is an experimental')<root.index('/workflow-panel')<root.index('/graph-graph-wide')<root.index('/horizon-panel')<root.index('/handoff-portrait'),'Reading order drifted')
+    require(root.count('/separator.gif')==2 and len(re.findall(r'<img[^>]+src="[^"]*/separator.png"',static))==2,'Separator normal/static selection lost')
+    for name in ['requirements','closing']:
+        lesson=config['lessons'][name]
+        require(not lesson.get('static_only') and not lesson.get('static_layouts'),'Support animation still gated off')
+        require(lesson['fps']==lesson['source_fps']==30 and lesson['duration_ms']==lesson['source_duration_ms'],'Source support pace changed')
+        for layout in ['support','support-wide']:require(name+'-'+layout+'.gif' in root,'Mobile/desktop normal support must animate')
+    require('Agentic Loop Prompting' in root and root.count('/identity.svg')==6,'Requested identity missing')
     families={f for lesson in config['lessons'].values() for f in lesson['families']};require(families=={'sharks','horizon','hands','rain','dots','cat','stack'},'Source family lost')
     records=[];alpha_samples=0;selected=[]
     for name,lesson in config['lessons'].items():
@@ -57,10 +64,10 @@ def check():
             with Image.open(gif) as im:
                 require(list(im.size)==size and im.info.get('loop')==0,'Actual GIF bounds/loop differ: '+name)
                 for i in range(im.n_frames):im.seek(i);durations.append(im.info.get('duration',0));states.add(hashlib.sha256(im.convert('RGB').tobytes()).hexdigest())
-            require(sum(durations)==lesson['duration_ms'] and all(t>0 and t%delay==0 for t in durations),'Encoded cadence differs: '+name)
-            require(len(states)>1 and len(record['frames'])==lesson['duration_ms']//delay,'Frozen/incomplete source progression: '+name)
+            require(sum(durations)==lesson['duration_ms'] and all(t>0 and t%10==0 for t in durations),'Encoded cadence differs: '+name)
+            require(len(states)>1 and len(record['frames'])==round(lesson['duration_ms']*lesson['fps']/1000),'Frozen/incomplete source progression: '+name)
             for i,frame in enumerate(record['frames']):
-                t=i*delay;require(frame['time_ms']==t and abs(frame['state']['time']-t)<.001,'Shared source clock differs')
+                t=i*1000/lesson['fps'];require(frame['time_ms']==t and abs(frame['state']['time']-t)<.001,'Shared source clock differs')
                 for member,state in frame['state']['scenes'].items():
                     if state['sourceTime'] is not None:require(abs(state['sourceTime']-(t%500 if member=='rain' else t)/1000)<.021,'Source footage clock differs: '+member)
                     if member in ['horizon','sharks']:require(state['native'],'Fallback used in primary native export')
@@ -71,7 +78,7 @@ def check():
             records.append({'lesson':name,'layout':layout,'size':size,'bytes':gif.stat().st_size,'duration_ms':sum(durations),'distinct_states':len(states),'sample_fps':lesson['fps']})
     manifest=json.loads((STORY/'BUILD_MANIFEST.json').read_text())
     for item in manifest['files']:require(sha(STORY/item['path'])==item['sha256'],'Story manifest mismatch: '+item['path'])
-    hero=ROOT/'showcase/capri/hero.gif';unique={p.resolve() for p in [hero,*selected,STORY/'accent.svg']};counted=[hero,*selected,STORY/'accent.svg',STORY/'accent.svg']
+    hero=ROOT/'showcase/capri/hero.gif';unique={p.resolve() for p in [hero,*selected,STORY/'separator.gif',STORY/'identity.svg']};counted=[hero,*selected,STORY/'separator.gif',STORY/'separator.gif',*[STORY/'identity.svg']*6]
     return {'status':'PASS','evidence_class':'ILLUSTRATIVE_INPUTS_NOT_MODEL_RUN','main_reference_families':sorted(families),'root_media_unique_bytes':sum(p.stat().st_size for p in unique),'root_media_occurrence_bytes':sum(p.stat().st_size for p in counted),'root_selections':[str(p.relative_to(ROOT)) for p in selected],'actor_alpha_samples':alpha_samples,'assets':records,'scope':'Actual output dimensions/caps, math, preserved source clocks, decoded cadence and full-cycle alpha bounds. Not physical display, native qualification or human/perceptual acceptance.'}
 if __name__=='__main__':
     try:result=check()

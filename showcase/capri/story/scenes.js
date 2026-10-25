@@ -257,14 +257,14 @@ function storyVariant(scene, key, name = scene.name) { const f=data.storyFormats
       const ctx = surface(canvas, w, h); if (!ctx) return;
       const seconds = this.video.currentTime, plate = recolour(name, this.video, this.cache, seconds); ctx.drawImage(plate, 0, 0, w, h);
       if (name === 'hands') {
-        actor.draw(ctx, 'build', time * 6400 / this.duration, data.storyFormats.actor_placement.hands.x, data.storyFormats.actor_placement.hands.y, data.storyFormats.actor_placement.hands.scale);
+        actor.draw(ctx, 'build', time * 6400 / this.duration, storyVariant(this, 'actor_placement', 'hands').x, storyVariant(this, 'actor_placement', 'hands').y, storyVariant(this, 'actor_placement', 'hands').scale);
         // Measured source contact sits near (0.52, 0.48); preserve the hands,
         // not an invented arrow. The packet appears only through the contact.
         const packet = this.element.querySelector('.cp-packet'), q = smooth((seconds - 1.6) / .5), x = .46 + .10 * q, y = .48;
         packet.style.left = (x * 100) + '%'; packet.style.top = (y * 100) + '%'; packet.style.opacity = String(smooth((seconds - 1.65) / .25) * (1 - smooth((seconds - 4.65) / .25)));
       } else if (name === 'cat') {
         const arrival = smooth((seconds - .9) / .5) * (1 - smooth((seconds - 7.4) / .7));
-        ctx.save(); ctx.globalAlpha = arrival; actor.draw(ctx, 'review', time, data.storyFormats.actor_placement.cat.x - 25 * (1 - arrival), data.storyFormats.actor_placement.cat.y, data.storyFormats.actor_placement.cat.scale, -.06); ctx.restore(); showBeams(ctx, seconds, w, h, this.cache.eyes);
+        ctx.save(); ctx.globalAlpha = arrival; actor.draw(ctx, 'review', time, storyVariant(this, 'actor_placement', 'cat').x - 25 * (1 - arrival), storyVariant(this, 'actor_placement', 'cat').y, storyVariant(this, 'actor_placement', 'cat').scale, -.06); ctx.restore(); showBeams(ctx, seconds, w, h, this.cache.eyes);
       } else if (name === 'rain') actor.draw(ctx, 'review', 900, 251, 91, .088, -.04);
       else if (name === 'stack') actor.draw(ctx, 'plan', time, 535, 205, .10);
     }

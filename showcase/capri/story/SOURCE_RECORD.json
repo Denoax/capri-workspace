@@ -1,7 +1,7 @@
 {
-  "base": "8caee8b71c9bffb67e475e6693bdcfccc0cd8bb9",
-  "handoff_sha256": "d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b",
-  "method": "V6 annotated wide variants for marked groups; V5 mobile/unmarked art preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
+  "base": "114c24e56586aa82c4be696feaa3d80e8926d29f",
+  "handoff_sha256": "d8db5db1f2455f91c72cd917322c36cc8a2dee5fadc3d976d6b93679be2d4a00",
+  "method": "V7 handoff/checking reflow, authored separator, restored source support motion and shared identity; other V6 art preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
   "lessons": {
     "workflow": {
       "members": [
@@ -108,10 +108,12 @@
         "hands"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "checking": {
       "members": [
@@ -125,47 +127,45 @@
         "cat"
       ],
       "layouts": [
-        "portrait"
+        "portrait",
+        "panel"
       ],
       "family": "illustration",
-      "root_layout": "portrait"
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
     },
     "requirements": {
       "members": [
         "rain"
       ],
-      "duration_ms": 2000,
-      "fps": 25,
+      "duration_ms": 500,
+      "fps": 30,
       "export_scene": "rain",
-      "still_ms": 1000,
+      "still_ms": 250,
       "families": [
         "rain"
       ],
       "layouts": [
-        "portrait",
         "support",
         "support-wide"
       ],
       "family": "illustration",
       "root_layout": "support-wide",
-      "static_layouts": [
-        "support",
-        "support-wide"
-      ],
-      "mobile_layout": "support"
+      "mobile_layout": "support",
+      "source_fps": 30,
+      "source_duration_ms": 500
     },
     "closing": {
       "members": [
         "stack"
       ],
       "duration_ms": 10800,
-      "fps": 25,
+      "fps": 30,
       "export_scene": "stack",
       "still_ms": 2200,
       "families": [
         "stack"
       ],
-      "static_only": true,
       "layouts": [
         "support",
         "support-wide"
@@ -173,9 +173,8 @@
       "family": "support",
       "root_layout": "support-wide",
       "mobile_layout": "support",
-      "static_layouts": [
-        "support-wide"
-      ]
+      "source_fps": 30,
+      "source_duration_ms": 10800
     }
   },
   "root_selection": {
@@ -210,16 +209,16 @@
       "mobile_layout": "portrait"
     },
     "handoff": {
-      "layout": "portrait",
-      "role": "illustration",
-      "display_width": 280,
-      "mobile_layout": null
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
     },
     "checking": {
-      "layout": "portrait",
-      "role": "illustration",
-      "display_width": 280,
-      "mobile_layout": null
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
     },
     "requirements": {
       "layout": "support-wide",
@@ -235,11 +234,43 @@
     }
   },
   "accent": {
-    "file": "accent.svg",
-    "method": "Independent geometric CAPRI rule/interruption; no third-party art copied."
+    "width": 1200,
+    "height": 48,
+    "period_ms": 4000,
+    "fps": 50,
+    "wake_px": 192,
+    "track_y": 24,
+    "track_width": 2,
+    "arrow_length": 24,
+    "arrow_half_height": 10,
+    "pink": "#ff1265",
+    "green": "#28fb86",
+    "poster_frame": 100,
+    "normal": "separator.gif",
+    "poster": "separator.png",
+    "method": "Periodic authored arrow/wake; full red baseline, finite wrapped green wake. Transparent palette index0, disposal2."
+  },
+  "identity": {
+    "display_name": "CAPRI \u2014 Agentic Loop Prompting",
+    "description": "Agentic Loop Prompting for Codex: focused contexts for planning, implementation and review, explicit handoffs, and evidence before integration.",
+    "pink": "#ff1265",
+    "green": "#28fb86",
+    "ink": "#100a19",
+    "wide": [
+      900,
+      48
+    ],
+    "mobile": [
+      320,
+      78
+    ],
+    "mobile_cap": 320,
+    "wide_cap": "100%",
+    "font_capri": "Manrope",
+    "font_method": "Bundled Manrope and Inter variable fonts, embedded in script-free SVG; OFL source notices retained."
   },
   "format_file": "format.json",
-  "format_sha256": "d7be98991bf3ecb6da8da548650ec351c0ed6fbd7ee19ed3affa57acf060600c",
+  "format_sha256": "23fa82004522ac6c30fe176402ceae2f55064d3ed6f309f9cc10c7cbaa0f9d3b",
   "annotation_source": {
     "packet_sha256": "d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b",
     "authority": "Four original orange-marked screenshots; coordinates are cropped screenshot pixels, not CSS positions.",

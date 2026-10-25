@@ -25,6 +25,10 @@ def frame(markup,name,formats,outer=True):
         caption=block(markup,'div','class="cs-caption"' if is_native else 'class="cp-copy"')
         title=re.search(r'<h3>.*?</h3>',caption,re.S)[0];label=re.search(r'<p>.*?</p>',caption,re.S)[0]
         for detail in re.findall(r'<details\b.*?</details>',caption,re.S):controls+=detail
+        if name=='handoff':
+            label='<div class="story-payload"><p class="payload-correction">blank → Untitled</p><p>Request + correction</p><p>Relevant source</p><p>label.py only · checks</p><small>Authored fixture A</small></div>'
+        elif name=='checking':
+            label='<div class="story-payload"><p>Request + correction</p><p>Patch + evidence</p><p class="payload-correction">→ Findings</p><p>→ Human decision</p><small>Authored illustration</small></div>'
         stage=stage.replace('<h3></h3>','')
         content='<header class="story-title">'+title+'</header><div class="story-visual">'+stage+'</div><div class="story-label">'+label+'</div>'
     art='<div class="story-frame"><div class="story-artboard">'+content+'</div></div>'
