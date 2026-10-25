@@ -1,7 +1,7 @@
 name: Companion unit checks
 on:
   push:
-    branches: ['testing/capri-desktop-v1-*', 'testing/capri-desktop-v2-*']
+    branches: ['testing/capri-desktop-v1-*', 'testing/capri-desktop-v2-*', 'testing/capri-desktop-v3-*']
   pull_request:
     paths: ['companion/**', '.github/workflows/companion.yml']
 permissions:

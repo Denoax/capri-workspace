@@ -130,3 +130,27 @@ class Store:
     def tasks(self, partition, limit=20):
         rows=self.db.execute("SELECT id,objective,status,thread,checkpoint,updated FROM tasks WHERE partition=? ORDER BY created DESC LIMIT ?",(partition,limit)).fetchall()
         return [dict(zip(("id","objective","status","thread","checkpoint","updated"),r)) for r in rows]
+
+    def task_activity(self, partition, limit=32):
+        """Bounded owner-only presentation projection; never an action origin."""
+        if type(limit) is not int or not 1 <= limit <= 64:
+            raise ValueError("Activity limit outside supported range")
+        rows = self.db.execute(
+            "SELECT e.id,e.task,e.kind,e.detail FROM task_events e "
+            "JOIN tasks t ON e.task=t.id WHERE t.partition=? ORDER BY e.id DESC LIMIT ?",
+            (partition, limit)).fetchall()
+        return [{"id": row[0], "task": row[1], "kind": row[2],
+                 "detail": row[3][:8000], "truncated": len(row[3]) > 8000}
+                for row in rows]
+
+    def save_preferences(self, legacy, presentation):
+        """Keep the V2 profile readable during rollback; commit both groups together."""
+        values = {"profile": legacy, "presentation-profile-v3": presentation}
+        encoded = [("local-owner", key, json.dumps(value, ensure_ascii=True))
+                   for key, value in values.items()]
+        if any(len(row[2]) > 128000 for row in encoded):
+            raise ValueError("Preferences exceed128KiB")
+        with self.db:
+            self.db.executemany(
+                "INSERT INTO app_state VALUES(?,?,?) ON CONFLICT(partition,key) "
+                "DO UPDATE SET value=excluded.value", encoded)

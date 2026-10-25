@@ -2,13 +2,13 @@
 from .broker import Denied
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-DEFAULTS={"quiet":False,"pinned":False,"roam":True,"reduced_motion":False,
+DEFAULTS={"quiet":False,"pinned":False,"roam":True,"follow":True,"reduced_motion":False,
           "dnd":False,"paused":False,"mute":False,"sound_volume":15,
           "initiative":True,"min_gap_minutes":45,"max_gap_minutes":120,
           "hourly_bubbles":2,"daily_bubbles":8,"daily_model_requests":8,
-          "timezone":"America/Edmonton","quiet_start":"","quiet_end":"","send_with_ctrl":False,"character_size":280}
+          "timezone":"America/Edmonton","quiet_start":"","quiet_end":"","send_with_ctrl":False,"character_size":280,"ui_text_scale":100}
 BOOLS={k for k,v in DEFAULTS.items() if type(v) is bool}
-BOUNDS={"sound_volume":(0,100),"character_size":(160,420),"min_gap_minutes":(15,240),
+BOUNDS={"ui_text_scale":(100,200),"sound_volume":(0,100),"character_size":(160,420),"min_gap_minutes":(15,240),
         "max_gap_minutes":(30,480),"hourly_bubbles":(0,4),"daily_bubbles":(0,16),"daily_model_requests":(0,16)}
 
 def validate(changes):
@@ -31,14 +31,27 @@ def validate(changes):
     return changes
 
 
+# New presentation fields cannot be written into V2's strictly validated profile.
+PRESENTATION_KEYS = {"follow", "ui_text_scale"}
+
+
 def load(store):
-    saved=store.value("local-owner","profile",{})
-    return {**DEFAULTS,**validate(saved)} if saved else dict(DEFAULTS)
+    saved = store.value("local-owner", "profile", {})
+    presentation = store.value("local-owner", "presentation-profile-v3", {})
+    if saved:
+        validate(saved)
+    if presentation:
+        validate(presentation)
+        if not set(presentation) <= PRESENTATION_KEYS:
+            raise Denied("Unexpected presentation preference")
+    return {**DEFAULTS, **saved, **presentation}
 
 
-def update(store,changes):
-    result={**load(store),**validate(changes)}
-    if result['min_gap_minutes']>result['max_gap_minutes']:
+def update(store, changes):
+    result = {**load(store), **validate(changes)}
+    if result["min_gap_minutes"] > result["max_gap_minutes"]:
         raise Denied("Minimum cadence cannot exceed maximum cadence")
-    store.set_value("local-owner","profile",result)
+    store.save_preferences(
+        {k: v for k, v in result.items() if k not in PRESENTATION_KEYS},
+        {k: result[k] for k in PRESENTATION_KEYS})
     return result

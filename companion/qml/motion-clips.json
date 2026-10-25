@@ -1,0 +1,3215 @@
+{
+  "schema_version": 1,
+  "source": "48 supplied production briefs,12 initial numeric studies;29 additional explicitly authored phase sequences. Seven real-view gaps retained. No native acceptance inferred from data.",
+  "clips": [
+    {
+      "id": "upright_hover",
+      "family": "rest",
+      "silhouette": "Loose upright suspension; separate shoulder, hip and ankle settling.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 3,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 3600,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 900,
+          "rootY": -5,
+          "torsoRoll": 2,
+          "headRoll": -4,
+          "rLower": 9,
+          "lShin": 7,
+          "phase": "anticipation"
+        },
+        {
+          "t": 2200,
+          "rootY": 3,
+          "torsoRoll": -2,
+          "headRoll": 3,
+          "lLower": -8,
+          "rShin": -6,
+          "phase": "action"
+        },
+        {
+          "t": 3600,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": true,
+      "autonomous": true
+    },
+    {
+      "id": "side_lounge",
+      "family": "rest",
+      "silhouette": "Sideways recline, one leg relaxed and one tucked; hand supports the head.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 3,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 5000,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 1000,
+          "rootRoll": -35,
+          "torsoRoll": -6,
+          "headRoll": 12,
+          "rThigh": 20,
+          "rShin": -30,
+          "lThigh": -15,
+          "lShin": 18,
+          "lUpper": 25,
+          "lLower": -35,
+          "phase": "anticipation"
+        },
+        {
+          "t": 3800,
+          "rootRoll": -38,
+          "headRoll": 15,
+          "rThigh": 24,
+          "rShin": -34,
+          "lThigh": -12,
+          "lShin": 20,
+          "lUpper": 28,
+          "lLower": -38,
+          "phase": "action"
+        },
+        {
+          "t": 5000,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "knee_tuck",
+      "family": "rest",
+      "silhouette": "Both knees gathered toward torso; hands and head settle toward them.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 3,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 4200,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 400,
+          "phase": "anticipation",
+          "rootY": 8,
+          "pelvisRoll": -6,
+          "headRoll": -4,
+          "rThigh": -10,
+          "lThigh": -8,
+          "rShin": 16,
+          "lShin": 14
+        },
+        {
+          "t": 1100,
+          "phase": "action",
+          "rThigh": -64,
+          "rShin": 115,
+          "lThigh": -56,
+          "lShin": 108,
+          "torsoRoll": 14,
+          "headRoll": 12,
+          "rUpper": -20,
+          "rLower": -65,
+          "lUpper": 22,
+          "lLower": 42
+        },
+        {
+          "t": 2600,
+          "phase": "hold",
+          "rThigh": -68,
+          "rShin": 124,
+          "lThigh": -62,
+          "lShin": 116,
+          "torsoRoll": 18,
+          "headRoll": 14,
+          "rUpper": -24,
+          "rLower": -70,
+          "lUpper": 26,
+          "lLower": 46
+        },
+        {
+          "t": 3450,
+          "phase": "recovery",
+          "rThigh": -22,
+          "rShin": 45,
+          "lThigh": -20,
+          "lShin": 36,
+          "torsoRoll": 6,
+          "rLower": -20
+        },
+        {
+          "t": 4200,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "cross_leg_rest",
+      "family": "rest",
+      "silhouette": "Crossed legs with changing near/far order and a relaxed upright chest.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 3,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 6200,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 620,
+          "phase": "anticipation",
+          "rThigh": 2.2,
+          "rShin": -4.800000000000001,
+          "lThigh": -2.6,
+          "lShin": 5.6000000000000005,
+          "pelvisRoll": 0.5,
+          "torsoRoll": -0.6000000000000001,
+          "rUpper": -0.8,
+          "lLower": -1.8,
+          "legDepth": 1
+        },
+        {
+          "t": 1798,
+          "phase": "action",
+          "rThigh": -22,
+          "rShin": 48,
+          "lThigh": 26,
+          "lShin": -56,
+          "pelvisRoll": -5,
+          "torsoRoll": 6,
+          "rUpper": 8,
+          "lLower": 18,
+          "legDepth": 1
+        },
+        {
+          "t": 4030,
+          "phase": "hold",
+          "rThigh": -22,
+          "rShin": 48,
+          "lThigh": 26,
+          "lShin": -62,
+          "pelvisRoll": -5,
+          "torsoRoll": 6,
+          "rUpper": 8,
+          "lLower": 18,
+          "legDepth": 1,
+          "headRoll": -5
+        },
+        {
+          "t": 5084,
+          "phase": "recovery",
+          "rThigh": -5.5,
+          "rShin": 12.0,
+          "lThigh": 6.5,
+          "lShin": -15.5,
+          "pelvisRoll": -1.25,
+          "torsoRoll": 1.5,
+          "rUpper": 2.0,
+          "lLower": 4.5,
+          "headRoll": -1.25
+        },
+        {
+          "t": 6200,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "upside_down_hang",
+      "family": "rest",
+      "silhouette": "Invert with a tuck, let arms/hair settle downward, hold, then recover.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 3,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 5700,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 900,
+          "rootRoll": 75,
+          "rThigh": 18,
+          "rShin": -30,
+          "lThigh": -20,
+          "lShin": 30,
+          "rUpper": 14,
+          "lUpper": -12,
+          "phase": "anticipation"
+        },
+        {
+          "t": 1800,
+          "rootRoll": 180,
+          "rUpper": 35,
+          "rLower": 15,
+          "lUpper": -35,
+          "lLower": -15,
+          "headRoll": 8,
+          "phase": "action"
+        },
+        {
+          "t": 4100,
+          "rootRoll": 183,
+          "rUpper": 38,
+          "rLower": 12,
+          "lUpper": -36,
+          "lLower": -12,
+          "headRoll": 5,
+          "phase": "hold"
+        },
+        {
+          "t": 5700,
+          "rootRoll": 360,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "prone_hover",
+      "family": "rest",
+      "silhouette": "Belly-down suspension with bent knees and chin resting near the hands.",
+      "view": "profile",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 3,
+      "pose": "plan",
+      "assets_required": "Matching profile and occlusion/face controls",
+      "authoring_status": "BLOCKED_MATCHING_VIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "BLOCKED_VIEW",
+      "asset_gap": "No corresponding faithful profile/back or transition drawing; no portrait squeeze/mirror substitute.",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "edge_perch",
+      "family": "rest",
+      "silhouette": "Sit above a safe screen edge, legs dangle and counterbalance the torso.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 3,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 6700,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 670,
+          "phase": "anticipation",
+          "rThigh": -4.5,
+          "rShin": 7.6000000000000005,
+          "lThigh": 3.0,
+          "lShin": -5.5,
+          "torsoRoll": 1.2000000000000002,
+          "lUpper": 3.2,
+          "lLower": -2.8000000000000003,
+          "rHand": -1.2000000000000002
+        },
+        {
+          "t": 1943,
+          "phase": "action",
+          "rThigh": 45,
+          "rShin": -76,
+          "lThigh": -30,
+          "lShin": 55,
+          "torsoRoll": -12,
+          "lUpper": -32,
+          "lLower": 28,
+          "rHand": 12
+        },
+        {
+          "t": 4355,
+          "phase": "hold",
+          "rThigh": 45,
+          "rShin": -65,
+          "lThigh": -30,
+          "lShin": 55,
+          "torsoRoll": -12,
+          "lUpper": -32,
+          "lLower": 28,
+          "rHand": 12,
+          "headRoll": 9
+        },
+        {
+          "t": 5494,
+          "phase": "recovery",
+          "rThigh": 11.25,
+          "rShin": -16.25,
+          "lThigh": -7.5,
+          "lShin": 13.75,
+          "torsoRoll": -3.0,
+          "lUpper": -8.0,
+          "lLower": 7.0,
+          "rHand": 3.0,
+          "headRoll": 2.25
+        },
+        {
+          "t": 6700,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "curled_doze",
+      "family": "rest",
+      "silhouette": "Compact side curl, lowered head, held sleep pose and gentle waking exit.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 3,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "sleepy",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 8300,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 830,
+          "phase": "anticipation",
+          "rootRoll": 3.0,
+          "rThigh": -5.4,
+          "rShin": 10.0,
+          "lThigh": 4.800000000000001,
+          "lShin": -9.0,
+          "torsoRoll": -2.4000000000000004,
+          "headRoll": -1.8,
+          "rUpper": -2.4000000000000004,
+          "rLower": 6.800000000000001,
+          "lUpper": 2.0,
+          "lLower": -5.2
+        },
+        {
+          "t": 2407,
+          "phase": "action",
+          "rootRoll": -30,
+          "rThigh": 54,
+          "rShin": -100,
+          "lThigh": -48,
+          "lShin": 90,
+          "torsoRoll": 24,
+          "headRoll": 18,
+          "rUpper": 24,
+          "rLower": -68,
+          "lUpper": -20,
+          "lLower": 52
+        },
+        {
+          "t": 5395,
+          "phase": "hold",
+          "rootRoll": -30,
+          "rThigh": 54,
+          "rShin": -100,
+          "lThigh": -48,
+          "lShin": 90,
+          "torsoRoll": 26,
+          "headRoll": 24,
+          "rUpper": 24,
+          "rLower": -68,
+          "lUpper": -20,
+          "lLower": 52
+        },
+        {
+          "t": 6806,
+          "phase": "recovery",
+          "rootRoll": -7.5,
+          "rThigh": 13.5,
+          "rShin": -25.0,
+          "lThigh": -12.0,
+          "lShin": 22.5,
+          "torsoRoll": 6.5,
+          "headRoll": 6.0,
+          "rUpper": 6.0,
+          "rLower": -17.0,
+          "lUpper": -5.0,
+          "lLower": 13.0
+        },
+        {
+          "t": 8300,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "long_stretch",
+      "family": "habits",
+      "silhouette": "Arms extend in opposition, spine opens, knees unfold, then limbs relax.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 2,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 4300,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 450,
+          "rootY": 7,
+          "torsoRoll": 6,
+          "headRoll": -6,
+          "rUpper": 12,
+          "lUpper": -10,
+          "rShin": -12,
+          "phase": "anticipation"
+        },
+        {
+          "t": 1500,
+          "rootY": -14,
+          "rootRoll": -8,
+          "torsoRoll": -8,
+          "headRoll": -8,
+          "rUpper": -55,
+          "rLower": -18,
+          "lUpper": 56,
+          "lLower": 22,
+          "rThigh": -8,
+          "lThigh": 12,
+          "phase": "action"
+        },
+        {
+          "t": 2700,
+          "rootY": -8,
+          "rootRoll": -4,
+          "torsoRoll": -5,
+          "rUpper": -48,
+          "rLower": -10,
+          "lUpper": 45,
+          "lLower": 14,
+          "phase": "hold"
+        },
+        {
+          "t": 4300,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "shoulder_settle",
+      "family": "habits",
+      "silhouette": "One shoulder rolls forward while the opposite hand adjusts the pose.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 2,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": true,
+      "autonomous": true,
+      "duration_ms": 3800,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 380,
+          "phase": "anticipation",
+          "pelvisRoll": 0.4,
+          "torsoRoll": -0.9,
+          "rUpper": 1.8,
+          "rLower": -1.4000000000000001,
+          "lUpper": -1.6,
+          "headRoll": 0.8
+        },
+        {
+          "t": 1102,
+          "phase": "action",
+          "pelvisRoll": -4,
+          "torsoRoll": 9,
+          "rUpper": -18,
+          "rLower": 14,
+          "lUpper": 16,
+          "headRoll": -8
+        },
+        {
+          "t": 2470,
+          "phase": "hold",
+          "pelvisRoll": -4,
+          "torsoRoll": -6,
+          "rUpper": 14,
+          "rLower": 14,
+          "lUpper": 16,
+          "headRoll": -8,
+          "lLower": -18
+        },
+        {
+          "t": 3116,
+          "phase": "recovery",
+          "pelvisRoll": -1.0,
+          "torsoRoll": -1.5,
+          "rUpper": 3.5,
+          "rLower": 3.5,
+          "lUpper": 4.0,
+          "headRoll": -2.0,
+          "lLower": -4.5
+        },
+        {
+          "t": 3800,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "ankle_unwind",
+      "family": "habits",
+      "silhouette": "Uncross one foot, extend ankle, rotate lower leg and return to rest.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 2,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 4500,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 450,
+          "phase": "anticipation",
+          "rThigh": 1.5,
+          "rShin": -4.2,
+          "lThigh": -1.2000000000000002,
+          "lShin": 2.0,
+          "pelvisRoll": -0.5
+        },
+        {
+          "t": 1305,
+          "phase": "action",
+          "rThigh": -15,
+          "rShin": 42,
+          "lThigh": 12,
+          "lShin": -20,
+          "pelvisRoll": 5
+        },
+        {
+          "t": 2925,
+          "phase": "hold",
+          "rThigh": 10,
+          "rShin": -26,
+          "lThigh": 12,
+          "lShin": -20,
+          "pelvisRoll": 5,
+          "headRoll": 5
+        },
+        {
+          "t": 3690,
+          "phase": "recovery",
+          "rThigh": 2.5,
+          "rShin": -6.5,
+          "lThigh": 3.0,
+          "lShin": -5.0,
+          "pelvisRoll": 1.25,
+          "headRoll": 1.25
+        },
+        {
+          "t": 4500,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "wrist_flourish",
+      "family": "habits",
+      "silhouette": "Trace a small arc with the fingers and wrist while the forearm follows.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 2,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": true,
+      "autonomous": true,
+      "duration_ms": 3400,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 340,
+          "phase": "anticipation",
+          "rUpper": 1.8,
+          "rLower": 2.3000000000000003,
+          "rHand": 2.4000000000000004,
+          "headRoll": -0.6000000000000001,
+          "lUpper": -0.8
+        },
+        {
+          "t": 986,
+          "phase": "action",
+          "rUpper": -18,
+          "rLower": -23,
+          "rHand": -24,
+          "headRoll": 6,
+          "lUpper": 8
+        },
+        {
+          "t": 2210,
+          "phase": "hold",
+          "rUpper": -18,
+          "rLower": -6,
+          "rHand": 26,
+          "headRoll": -3,
+          "lUpper": 8
+        },
+        {
+          "t": 2788,
+          "phase": "recovery",
+          "rUpper": -4.5,
+          "rLower": -1.5,
+          "rHand": 6.5,
+          "headRoll": -0.75,
+          "lUpper": 2.0
+        },
+        {
+          "t": 3400,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "hair_flick",
+      "family": "habits",
+      "silhouette": "Head anticipates; hand brushes a separate hair section with delayed return.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 2,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 4100,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 410,
+          "phase": "anticipation",
+          "headRoll": 1.4000000000000001,
+          "lUpper": 4.5,
+          "lLower": 5.2,
+          "lHand": 2.0,
+          "hairRoll": 0.30000000000000004,
+          "torsoRoll": -0.4
+        },
+        {
+          "t": 1189,
+          "phase": "action",
+          "headRoll": -14,
+          "lUpper": -45,
+          "lLower": -52,
+          "lHand": -20,
+          "hairRoll": -3,
+          "torsoRoll": 4
+        },
+        {
+          "t": 2665,
+          "phase": "hold",
+          "headRoll": 12,
+          "lUpper": -45,
+          "lLower": -52,
+          "lHand": 22,
+          "hairRoll": 6,
+          "torsoRoll": 4
+        },
+        {
+          "t": 3362,
+          "phase": "recovery",
+          "headRoll": 3.0,
+          "lUpper": -11.25,
+          "lLower": -13.0,
+          "lHand": 5.5,
+          "hairRoll": 1.5,
+          "torsoRoll": 1.0
+        },
+        {
+          "t": 4100,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "cheek_rest",
+      "family": "habits",
+      "silhouette": "Shift from upright rest into one-hand cheek support and a held side glance.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 2,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 6800,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 680,
+          "phase": "anticipation",
+          "rUpper": 4.800000000000001,
+          "rLower": 9.5,
+          "rHand": -1.2000000000000002,
+          "headRoll": -0.9,
+          "torsoRoll": -0.8,
+          "lThigh": 0.8,
+          "lShin": -1.8
+        },
+        {
+          "t": 1972,
+          "phase": "action",
+          "rUpper": -48,
+          "rLower": -95,
+          "rHand": 12,
+          "headRoll": 9,
+          "torsoRoll": 8,
+          "lThigh": -8,
+          "lShin": 18
+        },
+        {
+          "t": 4420,
+          "phase": "hold",
+          "rUpper": -48,
+          "rLower": -95,
+          "rHand": 7,
+          "headRoll": 12,
+          "torsoRoll": 8,
+          "lThigh": -8,
+          "lShin": 18
+        },
+        {
+          "t": 5576,
+          "phase": "recovery",
+          "rUpper": -12.0,
+          "rLower": -23.75,
+          "rHand": 1.75,
+          "headRoll": 3.0,
+          "torsoRoll": 2.0,
+          "lThigh": -2.0,
+          "lShin": 4.5
+        },
+        {
+          "t": 6800,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "weightless_yawn",
+      "family": "habits",
+      "silhouette": "Jaw/eyelids, shoulders and arms form one readable yawn, then settle.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 2,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "sleepy",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 5600,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 560,
+          "phase": "anticipation",
+          "headRoll": 1.8,
+          "torsoRoll": 1.3,
+          "rUpper": 4.2,
+          "rLower": 6.4,
+          "rHand": 1.2000000000000002,
+          "lUpper": 3.4000000000000004,
+          "lLower": -2.8000000000000003
+        },
+        {
+          "t": 1624,
+          "phase": "action",
+          "headRoll": -18,
+          "torsoRoll": -13,
+          "rUpper": -42,
+          "rLower": -64,
+          "rHand": -12,
+          "lUpper": -34,
+          "lLower": 28
+        },
+        {
+          "t": 3640,
+          "phase": "hold",
+          "headRoll": 14,
+          "torsoRoll": -13,
+          "rUpper": -70,
+          "rLower": -64,
+          "rHand": -12,
+          "lUpper": -52,
+          "lLower": 28,
+          "hairRoll": 3
+        },
+        {
+          "t": 4592,
+          "phase": "recovery",
+          "headRoll": 3.5,
+          "torsoRoll": -3.25,
+          "rUpper": -17.5,
+          "rLower": -16.0,
+          "rHand": -3.0,
+          "lUpper": -13.0,
+          "lLower": 7.0,
+          "hairRoll": 0.75
+        },
+        {
+          "t": 5600,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "tucked_daydream",
+      "family": "habits",
+      "silhouette": "Alternating knee support and distant gaze; distinct from two-knee curl.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 2,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 7300,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 730,
+          "phase": "anticipation",
+          "rThigh": -4.800000000000001,
+          "rShin": 9.0,
+          "lThigh": 1.2000000000000002,
+          "lShin": -2.6,
+          "lUpper": 1.4000000000000001,
+          "lLower": -3.8000000000000003,
+          "headRoll": 1.1,
+          "torsoRoll": -1.2000000000000002
+        },
+        {
+          "t": 2117,
+          "phase": "action",
+          "rThigh": 48,
+          "rShin": -90,
+          "lThigh": -12,
+          "lShin": 26,
+          "lUpper": -14,
+          "lLower": 38,
+          "headRoll": -11,
+          "torsoRoll": 12
+        },
+        {
+          "t": 4745,
+          "phase": "hold",
+          "rThigh": 48,
+          "rShin": -80,
+          "lThigh": -12,
+          "lShin": 26,
+          "lUpper": -14,
+          "lLower": 38,
+          "headRoll": -4,
+          "torsoRoll": 12,
+          "rHand": 10
+        },
+        {
+          "t": 5986,
+          "phase": "recovery",
+          "rThigh": 12.0,
+          "rShin": -20.0,
+          "lThigh": -3.0,
+          "lShin": 6.5,
+          "lUpper": -3.5,
+          "lLower": 9.5,
+          "headRoll": -1.0,
+          "torsoRoll": 3.0,
+          "rHand": 2.5
+        },
+        {
+          "t": 7300,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "cursor_gaze",
+      "family": "curiosity",
+      "silhouette": "Eyes/head acquire a point with dead zone, brief hold and neutral release.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "curious",
+      "pinned_safe": true,
+      "autonomous": false,
+      "duration_ms": 3800,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 380,
+          "phase": "anticipation",
+          "headRoll": 1.1,
+          "torsoRoll": 0.30000000000000004,
+          "rHand": -0.8,
+          "lUpper": 0.5
+        },
+        {
+          "t": 1102,
+          "phase": "action",
+          "headRoll": -11,
+          "torsoRoll": -3,
+          "rHand": 8,
+          "lUpper": -5
+        },
+        {
+          "t": 2470,
+          "phase": "hold",
+          "headRoll": 13,
+          "torsoRoll": 6,
+          "rHand": -5,
+          "lUpper": -5
+        },
+        {
+          "t": 3116,
+          "phase": "recovery",
+          "headRoll": 3.25,
+          "torsoRoll": 1.5,
+          "rHand": -1.25,
+          "lUpper": -1.25
+        },
+        {
+          "t": 3800,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "pointer_stalk",
+      "family": "curiosity",
+      "silhouette": "A low compact creep, reaching hand and delayed leg follow before stopping.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 5100,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 700,
+          "rootX": 12,
+          "rootY": 12,
+          "rootRoll": -8,
+          "torsoRoll": 9,
+          "headRoll": 9,
+          "rThigh": 18,
+          "rShin": -25,
+          "lThigh": -15,
+          "lShin": 18,
+          "phase": "anticipation"
+        },
+        {
+          "t": 2100,
+          "rootX": -32,
+          "rootY": 6,
+          "rootRoll": -12,
+          "headRoll": 12,
+          "rUpper": 30,
+          "rLower": -24,
+          "lUpper": 7,
+          "lLower": 12,
+          "rThigh": 22,
+          "rShin": -35,
+          "lThigh": -20,
+          "lShin": 28,
+          "phase": "action"
+        },
+        {
+          "t": 3600,
+          "rootX": -38,
+          "rootRoll": -7,
+          "headRoll": 8,
+          "rUpper": 24,
+          "rLower": -18,
+          "rThigh": 14,
+          "rShin": -22,
+          "lThigh": -14,
+          "lShin": 20,
+          "phase": "hold"
+        },
+        {
+          "t": 5100,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "curious",
+      "pinned_safe": false,
+      "autonomous": false
+    },
+    {
+      "id": "pointer_orbit",
+      "family": "curiosity",
+      "silhouette": "One short controlled arc around a safe cursor offset, then retreat.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "curious",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 6500,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 650,
+          "phase": "anticipation",
+          "rootX": 7.0,
+          "rootY": 3.0,
+          "rootRoll": 1.2000000000000002,
+          "pelvisRoll": -1.0,
+          "torsoRoll": 1.3,
+          "rUpper": 3.2,
+          "rLower": -1.8,
+          "lThigh": -1.8,
+          "lShin": 3.4000000000000004
+        },
+        {
+          "t": 1885,
+          "phase": "action",
+          "rootX": -70,
+          "rootY": -30,
+          "rootRoll": -12,
+          "pelvisRoll": 10,
+          "torsoRoll": -13,
+          "rUpper": -32,
+          "rLower": 18,
+          "lThigh": 18,
+          "lShin": -34
+        },
+        {
+          "t": 4225,
+          "phase": "hold",
+          "rootX": 70,
+          "rootY": 30,
+          "rootRoll": 11,
+          "pelvisRoll": 10,
+          "torsoRoll": -13,
+          "rUpper": -12,
+          "rLower": 18,
+          "lThigh": 18,
+          "lShin": -34,
+          "headRoll": -14,
+          "lLower": -20
+        },
+        {
+          "t": 5330,
+          "phase": "recovery",
+          "rootX": 17.5,
+          "rootY": 7.5,
+          "rootRoll": 2.75,
+          "pelvisRoll": 2.5,
+          "torsoRoll": -3.25,
+          "rUpper": -3.0,
+          "rLower": 4.5,
+          "lThigh": 4.5,
+          "lShin": -8.5,
+          "headRoll": -3.5,
+          "lLower": -5.0
+        },
+        {
+          "t": 6500,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "peek_left",
+      "family": "curiosity",
+      "silhouette": "Brace one hand, hide part of torso behind an edge, then lean out to inspect.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 4100,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 1000,
+          "rootX": -34,
+          "rootRoll": -16,
+          "torsoRoll": -6,
+          "headRoll": 14,
+          "lUpper": 24,
+          "lLower": -20,
+          "rUpper": -14,
+          "rLower": 18,
+          "rThigh": 10,
+          "lShin": 14,
+          "phase": "anticipation"
+        },
+        {
+          "t": 2800,
+          "rootX": -38,
+          "rootRoll": -19,
+          "torsoRoll": -5,
+          "headRoll": 18,
+          "lUpper": 28,
+          "lLower": -22,
+          "rUpper": -12,
+          "rLower": 15,
+          "lShin": 18,
+          "phase": "action"
+        },
+        {
+          "t": 4100,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "curious",
+      "pinned_safe": false,
+      "autonomous": false
+    },
+    {
+      "id": "peek_right",
+      "family": "curiosity",
+      "silhouette": "Hair-led side peek with opposite shoulder forward and a different hand action.",
+      "view": "profile",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Matching profile and occlusion/face controls",
+      "authoring_status": "BLOCKED_MATCHING_VIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "BLOCKED_VIEW",
+      "asset_gap": "No corresponding faithful profile/back or transition drawing; no portrait squeeze/mirror substitute.",
+      "emotion": "curious",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "window_edge_inspect",
+      "family": "curiosity",
+      "silhouette": "Lean along an allowed window boundary, look down it, push gently away.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "curious",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 4900,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 490,
+          "phase": "anticipation",
+          "torsoRoll": -2.2,
+          "headRoll": -1.6,
+          "rUpper": -4.0,
+          "rLower": 5.2,
+          "lUpper": 2.0,
+          "lLower": -1.0,
+          "pelvisRoll": 0.8
+        },
+        {
+          "t": 1421,
+          "phase": "action",
+          "torsoRoll": 22,
+          "headRoll": 16,
+          "rUpper": 40,
+          "rLower": -52,
+          "lUpper": -20,
+          "lLower": 10,
+          "pelvisRoll": -8
+        },
+        {
+          "t": 3185,
+          "phase": "hold",
+          "torsoRoll": 22,
+          "headRoll": 24,
+          "rUpper": 40,
+          "rLower": -65,
+          "lUpper": -20,
+          "lLower": 10,
+          "pelvisRoll": -8,
+          "rHand": 18
+        },
+        {
+          "t": 4018,
+          "phase": "recovery",
+          "torsoRoll": 5.5,
+          "headRoll": 6.0,
+          "rUpper": 10.0,
+          "rLower": -16.25,
+          "lUpper": -5.0,
+          "lLower": 2.5,
+          "pelvisRoll": -2.0,
+          "rHand": 4.5
+        },
+        {
+          "t": 4900,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "listen_lean",
+      "family": "curiosity",
+      "silhouette": "Asymmetric forward lean, cupped/raised hand and focused held head angle.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "focused",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 5100,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 510,
+          "phase": "anticipation",
+          "torsoRoll": 1.0,
+          "headRoll": -0.9,
+          "lUpper": 3.3000000000000003,
+          "lLower": 5.0,
+          "lHand": -2.2,
+          "rThigh": 1.0,
+          "lThigh": -0.9
+        },
+        {
+          "t": 1479,
+          "phase": "action",
+          "torsoRoll": -10,
+          "headRoll": 9,
+          "lUpper": -33,
+          "lLower": -50,
+          "lHand": 22,
+          "rThigh": -10,
+          "lThigh": 9
+        },
+        {
+          "t": 3315,
+          "phase": "hold",
+          "torsoRoll": -13,
+          "headRoll": 14,
+          "lUpper": -33,
+          "lLower": -50,
+          "lHand": 12,
+          "rThigh": -10,
+          "lThigh": 9
+        },
+        {
+          "t": 4182,
+          "phase": "recovery",
+          "torsoRoll": -3.25,
+          "headRoll": 3.5,
+          "lUpper": -8.25,
+          "lLower": -12.5,
+          "lHand": 3.0,
+          "rThigh": -2.5,
+          "lThigh": 2.25
+        },
+        {
+          "t": 5100,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "pounce_feint",
+      "family": "curiosity",
+      "silhouette": "Crouch/tuck anticipation, short reach toward the interest point, recoil and grin.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "amused",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 4200,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 420,
+          "phase": "anticipation",
+          "rThigh": -4.800000000000001,
+          "rShin": 9.8,
+          "lThigh": 4.2,
+          "lShin": -7.800000000000001,
+          "torsoRoll": -1.8,
+          "headRoll": 0.9,
+          "rUpper": -2.2,
+          "lUpper": 1.4000000000000001
+        },
+        {
+          "t": 1218,
+          "phase": "action",
+          "rThigh": 48,
+          "rShin": -98,
+          "lThigh": -42,
+          "lShin": 78,
+          "torsoRoll": 18,
+          "headRoll": -9,
+          "rUpper": 22,
+          "lUpper": -14
+        },
+        {
+          "t": 2730,
+          "phase": "hold",
+          "rThigh": 15,
+          "rShin": -98,
+          "lThigh": -15,
+          "lShin": 78,
+          "torsoRoll": 18,
+          "headRoll": -9,
+          "rUpper": -44,
+          "lUpper": -24,
+          "rootX": 75,
+          "rootY": -30,
+          "rLower": -30,
+          "lLower": -20
+        },
+        {
+          "t": 3444,
+          "phase": "recovery",
+          "rThigh": 3.75,
+          "rShin": -24.5,
+          "lThigh": -3.75,
+          "lShin": 19.5,
+          "torsoRoll": 4.5,
+          "headRoll": -2.25,
+          "rUpper": -11.0,
+          "lUpper": -6.0,
+          "rootX": 18.75,
+          "rootY": -7.5,
+          "rLower": -7.5,
+          "lLower": -5.0
+        },
+        {
+          "t": 4200,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "short_glide",
+      "family": "travel",
+      "silhouette": "Look first, extend the leading arm, translate and decelerate into rest.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 4600,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 460,
+          "phase": "anticipation",
+          "rootX": 8.5,
+          "rootY": -1.4000000000000001,
+          "headRoll": 1.3,
+          "rUpper": 3.8000000000000003,
+          "rLower": 2.0,
+          "lUpper": -1.8,
+          "rThigh": 1.2000000000000002,
+          "lShin": 3.0
+        },
+        {
+          "t": 1334,
+          "phase": "action",
+          "rootX": -85,
+          "rootY": 14,
+          "headRoll": -13,
+          "rUpper": -38,
+          "rLower": -20,
+          "lUpper": 18,
+          "rThigh": -12,
+          "lShin": -30
+        },
+        {
+          "t": 2990,
+          "phase": "hold",
+          "rootX": 85,
+          "rootY": -12,
+          "headRoll": 6,
+          "rUpper": -38,
+          "rLower": -20,
+          "lUpper": 18,
+          "rThigh": -12,
+          "lShin": -30,
+          "rootRoll": 8,
+          "torsoRoll": -8
+        },
+        {
+          "t": 3772,
+          "phase": "recovery",
+          "rootX": 21.25,
+          "rootY": -3.0,
+          "headRoll": 1.5,
+          "rUpper": -9.5,
+          "rLower": -5.0,
+          "lUpper": 4.5,
+          "rThigh": -3.0,
+          "lShin": -7.5,
+          "rootRoll": 2.0,
+          "torsoRoll": -2.0
+        },
+        {
+          "t": 4600,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "arc_glide",
+      "family": "travel",
+      "silhouette": "Bank through a curved path with counterposed hips/head and controlled stop.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 5700,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 570,
+          "phase": "anticipation",
+          "rootX": 7.5,
+          "rootY": 6.0,
+          "rootRoll": 2.3000000000000003,
+          "pelvisRoll": -0.8,
+          "torsoRoll": 1.4000000000000001,
+          "headRoll": -1.5,
+          "rThigh": -2.0,
+          "lThigh": 1.8,
+          "lShin": -3.6
+        },
+        {
+          "t": 1653,
+          "phase": "action",
+          "rootX": -75,
+          "rootY": -60,
+          "rootRoll": -23,
+          "pelvisRoll": 8,
+          "torsoRoll": -14,
+          "headRoll": 15,
+          "rThigh": 20,
+          "lThigh": -18,
+          "lShin": 36
+        },
+        {
+          "t": 3705,
+          "phase": "hold",
+          "rootX": 80,
+          "rootY": 28,
+          "rootRoll": 18,
+          "pelvisRoll": -9,
+          "torsoRoll": -14,
+          "headRoll": -14,
+          "rThigh": 20,
+          "lThigh": -18,
+          "lShin": 36,
+          "rUpper": -25
+        },
+        {
+          "t": 4674,
+          "phase": "recovery",
+          "rootX": 20.0,
+          "rootY": 7.0,
+          "rootRoll": 4.5,
+          "pelvisRoll": -2.25,
+          "torsoRoll": -3.5,
+          "headRoll": -3.5,
+          "rThigh": 5.0,
+          "lThigh": -4.5,
+          "lShin": 9.0,
+          "rUpper": -6.25
+        },
+        {
+          "t": 5700,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "tucked_roll",
+      "family": "travel",
+      "silhouette": "Tuck limbs before a continuous full roll; unfold after completing rotation.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 4700,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 600,
+          "rThigh": -64,
+          "rShin": 115,
+          "lThigh": -58,
+          "lShin": 110,
+          "rUpper": -18,
+          "rLower": -62,
+          "lUpper": 22,
+          "lLower": 48,
+          "phase": "anticipation"
+        },
+        {
+          "t": 1500,
+          "rootRoll": 75,
+          "rootY": -8,
+          "rThigh": -64,
+          "rShin": 115,
+          "lThigh": -58,
+          "lShin": 110,
+          "rUpper": -18,
+          "rLower": -62,
+          "lUpper": 22,
+          "lLower": 48,
+          "phase": "action"
+        },
+        {
+          "t": 2600,
+          "rootRoll": 210,
+          "rootY": -14,
+          "rThigh": -64,
+          "rShin": 115,
+          "lThigh": -58,
+          "lShin": 110,
+          "rUpper": -18,
+          "rLower": -62,
+          "lUpper": 22,
+          "lLower": 48,
+          "phase": "hold"
+        },
+        {
+          "t": 3500,
+          "rootRoll": 315,
+          "rootY": -6,
+          "rThigh": -24,
+          "rShin": 50,
+          "lThigh": -20,
+          "lShin": 45,
+          "phase": "hold"
+        },
+        {
+          "t": 4700,
+          "rootRoll": 360,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "forward_somersault",
+      "family": "travel",
+      "silhouette": "Forward pitch through a true side view with visible limb order changes.",
+      "view": "profile",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Matching profile and occlusion/face controls",
+      "authoring_status": "BLOCKED_MATCHING_VIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "BLOCKED_VIEW",
+      "asset_gap": "No corresponding faithful profile/back or transition drawing; no portrait squeeze/mirror substitute.",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "reverse_somersault",
+      "family": "travel",
+      "silhouette": "Backward side rotation with a different anticipation and recovery.",
+      "view": "profile",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Matching profile and occlusion/face controls",
+      "authoring_status": "BLOCKED_MATCHING_VIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "BLOCKED_VIEW",
+      "asset_gap": "No corresponding faithful profile/back or transition drawing; no portrait squeeze/mirror substitute.",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "turn_front_threequarter",
+      "family": "travel",
+      "silhouette": "Turn head, chest and pelvis in sequence into a genuine authored angle.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "BLOCKED_MATCHING_VIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "BLOCKED_VIEW",
+      "asset_gap": "No corresponding faithful profile/back or transition drawing; no portrait squeeze/mirror substitute.",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "turn_profile",
+      "family": "travel",
+      "silhouette": "Visible facial/hair/body profile transition with occlusion and changing silhouette.",
+      "view": "profile",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Matching profile and occlusion/face controls",
+      "authoring_status": "BLOCKED_MATCHING_VIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "BLOCKED_VIEW",
+      "asset_gap": "No corresponding faithful profile/back or transition drawing; no portrait squeeze/mirror substitute.",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "turn_back_return",
+      "family": "travel",
+      "silhouette": "Complete an authored back-facing moment, then return with readable face recovery.",
+      "view": "back",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "New matching back view and occlusion slots",
+      "authoring_status": "BLOCKED_MATCHING_VIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "BLOCKED_VIEW",
+      "asset_gap": "No corresponding faithful profile/back or transition drawing; no portrait squeeze/mirror substitute.",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "happy_bounce",
+      "family": "emotion",
+      "silhouette": "Anticipation, light upward bounce, open hands, happy face and soft landing.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 3500,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 350,
+          "rootY": 10,
+          "torsoRoll": 5,
+          "rShin": -14,
+          "lShin": 12,
+          "phase": "anticipation"
+        },
+        {
+          "t": 900,
+          "rootY": -35,
+          "rootRoll": -8,
+          "rootScale": 1.05,
+          "rUpper": -25,
+          "rLower": -12,
+          "lUpper": 28,
+          "lLower": 14,
+          "rThigh": -8,
+          "lThigh": 8,
+          "headRoll": -7,
+          "phase": "action"
+        },
+        {
+          "t": 1600,
+          "rootY": 6,
+          "rShin": -12,
+          "lShin": 10,
+          "phase": "hold"
+        },
+        {
+          "t": 2250,
+          "rootY": -15,
+          "rootRoll": 4,
+          "rUpper": -12,
+          "lUpper": 15,
+          "phase": "hold"
+        },
+        {
+          "t": 3500,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "happy",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "amused_laugh",
+      "family": "emotion",
+      "silhouette": "Chest/head laugh rhythm with one hand near the mouth and readable eyes.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "amused",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 4900,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 490,
+          "phase": "anticipation",
+          "torsoRoll": -0.9,
+          "headRoll": 1.2000000000000002,
+          "rUpper": 4.800000000000001,
+          "rLower": 9.0,
+          "rHand": -0.8,
+          "lUpper": -1.0,
+          "lLower": 1.5,
+          "rShin": 1.5
+        },
+        {
+          "t": 1421,
+          "phase": "action",
+          "torsoRoll": 9,
+          "headRoll": -12,
+          "rUpper": -48,
+          "rLower": -90,
+          "rHand": 8,
+          "lUpper": 10,
+          "lLower": -15,
+          "rShin": -15
+        },
+        {
+          "t": 3185,
+          "phase": "hold",
+          "torsoRoll": -6,
+          "headRoll": 6,
+          "rUpper": -48,
+          "rLower": -82,
+          "rHand": 8,
+          "lUpper": 10,
+          "lLower": -15,
+          "rShin": -15,
+          "rootY": -12
+        },
+        {
+          "t": 4018,
+          "phase": "recovery",
+          "torsoRoll": -1.5,
+          "headRoll": 1.5,
+          "rUpper": -12.0,
+          "rLower": -20.5,
+          "rHand": 2.0,
+          "lUpper": 2.5,
+          "lLower": -3.75,
+          "rShin": -3.75,
+          "rootY": -3.0
+        },
+        {
+          "t": 4900,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "curious_tilt",
+      "family": "emotion",
+      "silhouette": "Asymmetric authored eye/eyelid shapes, head tilt and an open-hand question.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "curious",
+      "pinned_safe": true,
+      "autonomous": true,
+      "duration_ms": 4100,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 410,
+          "phase": "anticipation",
+          "headRoll": -1.9000000000000001,
+          "torsoRoll": 0.8,
+          "rUpper": 1.6,
+          "rLower": 2.2,
+          "rHand": 2.0,
+          "lThigh": 1.0
+        },
+        {
+          "t": 1189,
+          "phase": "action",
+          "headRoll": 19,
+          "torsoRoll": -8,
+          "rUpper": -16,
+          "rLower": -22,
+          "rHand": -20,
+          "lThigh": -10
+        },
+        {
+          "t": 2665,
+          "phase": "hold",
+          "headRoll": 10,
+          "torsoRoll": -8,
+          "rUpper": -16,
+          "rLower": -22,
+          "rHand": 17,
+          "lThigh": -10,
+          "lLower": 12
+        },
+        {
+          "t": 3362,
+          "phase": "recovery",
+          "headRoll": 2.5,
+          "torsoRoll": -2.0,
+          "rUpper": -4.0,
+          "rLower": -5.5,
+          "rHand": 4.25,
+          "lThigh": -2.5,
+          "lLower": 3.0
+        },
+        {
+          "t": 4100,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "puzzled_shrug",
+      "family": "emotion",
+      "silhouette": "Both shoulders rise differently; palms and face question, then relax.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "puzzled",
+      "pinned_safe": true,
+      "autonomous": true,
+      "duration_ms": 4200,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 420,
+          "phase": "anticipation",
+          "rUpper": 3.0,
+          "rLower": 3.8000000000000003,
+          "rHand": 2.4000000000000004,
+          "lUpper": -2.8000000000000003,
+          "lLower": -3.4000000000000004,
+          "lHand": -2.2,
+          "torsoRoll": -0.6000000000000001,
+          "headRoll": 1.1
+        },
+        {
+          "t": 1218,
+          "phase": "action",
+          "rUpper": -30,
+          "rLower": -38,
+          "rHand": -24,
+          "lUpper": 28,
+          "lLower": 34,
+          "lHand": 22,
+          "torsoRoll": 6,
+          "headRoll": -11
+        },
+        {
+          "t": 2730,
+          "phase": "hold",
+          "rUpper": -20,
+          "rLower": -38,
+          "rHand": -24,
+          "lUpper": 36,
+          "lLower": 34,
+          "lHand": 22,
+          "torsoRoll": 6,
+          "headRoll": 13
+        },
+        {
+          "t": 3444,
+          "phase": "recovery",
+          "rUpper": -5.0,
+          "rLower": -9.5,
+          "rHand": -6.0,
+          "lUpper": 9.0,
+          "lLower": 8.5,
+          "lHand": 5.5,
+          "torsoRoll": 1.5,
+          "headRoll": 3.25
+        },
+        {
+          "t": 4200,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "mock_annoyed",
+      "family": "emotion",
+      "silhouette": "Folded/closed arms, angled chin and authored annoyed face; harmless attitude.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 4200,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 900,
+          "rootRoll": 8,
+          "torsoRoll": 6,
+          "headRoll": -13,
+          "rUpper": 32,
+          "rLower": -42,
+          "lUpper": -30,
+          "lLower": 38,
+          "rThigh": 8,
+          "lShin": -8,
+          "phase": "anticipation"
+        },
+        {
+          "t": 2900,
+          "rootRoll": 7,
+          "torsoRoll": 6,
+          "headRoll": -15,
+          "rUpper": 34,
+          "rLower": -44,
+          "lUpper": -32,
+          "lLower": 40,
+          "rThigh": 10,
+          "lShin": -10,
+          "phase": "action"
+        },
+        {
+          "t": 4200,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "annoyed",
+      "pinned_safe": false,
+      "autonomous": true
+    },
+    {
+      "id": "startled_recoil",
+      "family": "emotion",
+      "silhouette": "Brief anticipatory catch, open fingers, recoil, eye change and recovery.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "startled",
+      "pinned_safe": false,
+      "autonomous": true,
+      "duration_ms": 3200,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 320,
+          "phase": "anticipation",
+          "rootY": -2.6,
+          "torsoRoll": -1.5,
+          "headRoll": 0.8,
+          "rThigh": -2.4000000000000004,
+          "rShin": 4.2,
+          "lThigh": 1.8,
+          "lShin": -3.6
+        },
+        {
+          "t": 928,
+          "phase": "action",
+          "rootY": 26,
+          "torsoRoll": 15,
+          "headRoll": -8,
+          "rThigh": 24,
+          "rShin": -42,
+          "lThigh": -18,
+          "lShin": 36
+        },
+        {
+          "t": 2080,
+          "phase": "hold",
+          "rootY": -55,
+          "torsoRoll": -18,
+          "headRoll": -21,
+          "rThigh": 24,
+          "rShin": -42,
+          "lThigh": -18,
+          "lShin": 36,
+          "rootX": -65,
+          "rUpper": -60,
+          "rLower": -28,
+          "lUpper": 52,
+          "lLower": 18,
+          "rHand": -22,
+          "lHand": 25
+        },
+        {
+          "t": 2624,
+          "phase": "recovery",
+          "rootY": -13.75,
+          "torsoRoll": -4.5,
+          "headRoll": -5.25,
+          "rThigh": 6.0,
+          "rShin": -10.5,
+          "lThigh": -4.5,
+          "lShin": 9.0,
+          "rootX": -16.25,
+          "rUpper": -15.0,
+          "rLower": -7.0,
+          "lUpper": 13.0,
+          "lLower": 4.5,
+          "rHand": -5.5,
+          "lHand": 6.25
+        },
+        {
+          "t": 3200,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "focused_hold",
+      "family": "emotion",
+      "silhouette": "Concentrated head/hand pose, stable torso, small deliberate gaze shifts.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 4500,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 850,
+          "torsoRoll": -4,
+          "headRoll": 9,
+          "rUpper": 20,
+          "rLower": -30,
+          "lUpper": 8,
+          "lLower": -12,
+          "rShin": -8,
+          "lThigh": -8,
+          "phase": "anticipation"
+        },
+        {
+          "t": 3300,
+          "torsoRoll": -4,
+          "headRoll": 5,
+          "rUpper": 22,
+          "rLower": -32,
+          "lUpper": 10,
+          "lLower": -14,
+          "rShin": -10,
+          "lThigh": -8,
+          "phase": "action"
+        },
+        {
+          "t": 4500,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "focused",
+      "pinned_safe": true,
+      "autonomous": true
+    },
+    {
+      "id": "sleepy_nod",
+      "family": "emotion",
+      "silhouette": "Eyelids soften, head dips and recovers with hands/shoulders following.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "sleepy",
+      "pinned_safe": true,
+      "autonomous": true,
+      "duration_ms": 7400,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 740,
+          "phase": "anticipation",
+          "headRoll": -2.2,
+          "torsoRoll": -1.2000000000000002,
+          "rUpper": -0.8,
+          "rLower": -2.4000000000000004,
+          "lUpper": 1.0,
+          "lLower": -1.8,
+          "rThigh": -1.5,
+          "rShin": 2.4000000000000004
+        },
+        {
+          "t": 2146,
+          "phase": "action",
+          "headRoll": 22,
+          "torsoRoll": 12,
+          "rUpper": 8,
+          "rLower": 24,
+          "lUpper": -10,
+          "lLower": 18,
+          "rThigh": 15,
+          "rShin": -24
+        },
+        {
+          "t": 4810,
+          "phase": "hold",
+          "headRoll": 8,
+          "torsoRoll": 5,
+          "rUpper": 8,
+          "rLower": 24,
+          "lUpper": -10,
+          "lLower": 18,
+          "rThigh": 15,
+          "rShin": -24,
+          "rootY": 9
+        },
+        {
+          "t": 6068,
+          "phase": "recovery",
+          "headRoll": 2.0,
+          "torsoRoll": 1.25,
+          "rUpper": 2.0,
+          "rLower": 6.0,
+          "lUpper": -2.5,
+          "lLower": 4.5,
+          "rThigh": 3.75,
+          "rShin": -6.0,
+          "rootY": 2.25
+        },
+        {
+          "t": 7400,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "pickup_dangle",
+      "family": "interaction",
+      "silhouette": "Drag pickup changes limb lag and hair direction without stretching anatomy.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 3600,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 360,
+          "phase": "anticipation",
+          "torsoRoll": 0.8,
+          "headRoll": 1.5,
+          "rUpper": -2.8000000000000003,
+          "rLower": -3.5,
+          "lUpper": 2.8000000000000003,
+          "lLower": 3.0,
+          "rThigh": -1.2000000000000002,
+          "rShin": -1.8,
+          "lThigh": 1.2000000000000002,
+          "lShin": 1.8,
+          "hairRoll": 0.5
+        },
+        {
+          "t": 1044,
+          "phase": "action",
+          "torsoRoll": -8,
+          "headRoll": -15,
+          "rUpper": 28,
+          "rLower": 35,
+          "lUpper": -28,
+          "lLower": -30,
+          "rThigh": 12,
+          "rShin": 18,
+          "lThigh": -12,
+          "lShin": -18,
+          "hairRoll": -5
+        },
+        {
+          "t": 2340,
+          "phase": "hold",
+          "torsoRoll": -8,
+          "headRoll": -15,
+          "rUpper": -12,
+          "rLower": 35,
+          "lUpper": 12,
+          "lLower": -30,
+          "rThigh": -15,
+          "rShin": 18,
+          "lThigh": 15,
+          "lShin": -18,
+          "hairRoll": 4
+        },
+        {
+          "t": 2952,
+          "phase": "recovery",
+          "torsoRoll": -2.0,
+          "headRoll": -3.75,
+          "rUpper": -3.0,
+          "rLower": 8.75,
+          "lUpper": 3.0,
+          "lLower": -7.5,
+          "rThigh": -3.75,
+          "rShin": 4.5,
+          "lThigh": 3.75,
+          "lShin": -4.5,
+          "hairRoll": 1.0
+        },
+        {
+          "t": 3600,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "drag_release_recover",
+      "family": "interaction",
+      "silhouette": "Release cancels pointer pursuit, absorbs displacement, regains balance.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 3500,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 350,
+          "phase": "anticipation",
+          "rootY": -3.2,
+          "pelvisRoll": -1.2000000000000002,
+          "torsoRoll": 1.8,
+          "rThigh": -3.5,
+          "rShin": 5.5,
+          "lThigh": 3.0,
+          "lShin": -4.4,
+          "rUpper": 3.0,
+          "lUpper": -2.4000000000000004
+        },
+        {
+          "t": 1015,
+          "phase": "action",
+          "rootY": 32,
+          "pelvisRoll": 12,
+          "torsoRoll": -18,
+          "rThigh": 35,
+          "rShin": -55,
+          "lThigh": -30,
+          "lShin": 44,
+          "rUpper": -30,
+          "lUpper": 24
+        },
+        {
+          "t": 2275,
+          "phase": "hold",
+          "rootY": -10,
+          "pelvisRoll": -5,
+          "torsoRoll": 7,
+          "rThigh": 35,
+          "rShin": -55,
+          "lThigh": -30,
+          "lShin": 44,
+          "rUpper": -30,
+          "lUpper": 24,
+          "headRoll": -8
+        },
+        {
+          "t": 2870,
+          "phase": "recovery",
+          "rootY": -2.5,
+          "pelvisRoll": -1.25,
+          "torsoRoll": 1.75,
+          "rThigh": 8.75,
+          "rShin": -13.75,
+          "lThigh": -7.5,
+          "lShin": 11.0,
+          "rUpper": -7.5,
+          "lUpper": 6.0,
+          "headRoll": -2.0
+        },
+        {
+          "t": 3500,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "reply_settle",
+      "family": "interaction",
+      "silhouette": "Rotate upright, recover chosen size and settle beside a readable bubble.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 2400,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 240,
+          "phase": "anticipation",
+          "torsoRoll": 0.30000000000000004,
+          "headRoll": -0.5,
+          "rUpper": 0.8,
+          "rLower": -0.6000000000000001,
+          "lUpper": -0.4,
+          "lLower": 0.4
+        },
+        {
+          "t": 696,
+          "phase": "action",
+          "torsoRoll": -3,
+          "headRoll": 5,
+          "rUpper": -8,
+          "rLower": 6,
+          "lUpper": 4,
+          "lLower": -4
+        },
+        {
+          "t": 1560,
+          "phase": "hold",
+          "torsoRoll": -3,
+          "headRoll": 2,
+          "rUpper": -8,
+          "rLower": 6,
+          "lUpper": 4,
+          "lLower": -4,
+          "rHand": 5
+        },
+        {
+          "t": 1968,
+          "phase": "recovery",
+          "torsoRoll": -0.75,
+          "headRoll": 0.5,
+          "rUpper": -2.0,
+          "rLower": 1.5,
+          "lUpper": 1.0,
+          "lLower": -1.0,
+          "rHand": 1.25
+        },
+        {
+          "t": 2400,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "listen_wait",
+      "family": "interaction",
+      "silhouette": "An attentive still pose with occasional eye/hand acknowledgement.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "curious",
+      "pinned_safe": true,
+      "autonomous": false,
+      "duration_ms": 6400,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 640,
+          "phase": "anticipation",
+          "headRoll": -0.7000000000000001,
+          "torsoRoll": 0.30000000000000004,
+          "rUpper": 1.0,
+          "rLower": 1.4000000000000001,
+          "lUpper": -0.6000000000000001,
+          "lLower": 0.8
+        },
+        {
+          "t": 1856,
+          "phase": "action",
+          "headRoll": 7,
+          "torsoRoll": -3,
+          "rUpper": -10,
+          "rLower": -14,
+          "lUpper": 6,
+          "lLower": -8
+        },
+        {
+          "t": 4160,
+          "phase": "hold",
+          "headRoll": 3,
+          "torsoRoll": -3,
+          "rUpper": -10,
+          "rLower": -14,
+          "lUpper": 6,
+          "lLower": -8,
+          "rHand": 9,
+          "lHand": -5
+        },
+        {
+          "t": 5248,
+          "phase": "recovery",
+          "headRoll": 0.75,
+          "torsoRoll": -0.75,
+          "rUpper": -2.5,
+          "rLower": -3.5,
+          "lUpper": 1.5,
+          "lLower": -2.0,
+          "rHand": 2.25,
+          "lHand": -1.25
+        },
+        {
+          "t": 6400,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "size_flourish",
+      "family": "interaction",
+      "silhouette": "Intentional small-to-large flourish with compensating posture; restore owner size.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "duration_ms": 4000,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 650,
+          "rootScale": 0.78,
+          "rootRoll": 7,
+          "rThigh": 18,
+          "rShin": -34,
+          "lThigh": -18,
+          "lShin": 30,
+          "rUpper": 12,
+          "lUpper": -12,
+          "phase": "anticipation"
+        },
+        {
+          "t": 1800,
+          "rootScale": 1.23,
+          "rootRoll": -7,
+          "torsoRoll": -6,
+          "headRoll": 5,
+          "rUpper": -22,
+          "lUpper": 24,
+          "rThigh": -6,
+          "lThigh": 8,
+          "phase": "action"
+        },
+        {
+          "t": 2850,
+          "rootScale": 1.05,
+          "rootRoll": 3,
+          "rUpper": -8,
+          "lUpper": 10,
+          "phase": "hold"
+        },
+        {
+          "t": 4000,
+          "phase": "exit"
+        }
+      ],
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": false
+    },
+    {
+      "id": "spin_greeting",
+      "family": "interaction",
+      "silhouette": "A small turn plus hand-led greeting with its own held pose and exit.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "happy",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 4500,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 450,
+          "phase": "anticipation",
+          "rootRoll": 2.8000000000000003,
+          "pelvisRoll": -1.2000000000000002,
+          "torsoRoll": 1.4000000000000001,
+          "headRoll": -1.8,
+          "rUpper": 6.6000000000000005,
+          "rLower": 3.6,
+          "rHand": 2.5,
+          "lThigh": 2.0,
+          "lShin": -3.6
+        },
+        {
+          "t": 1305,
+          "phase": "action",
+          "rootRoll": -28,
+          "pelvisRoll": 12,
+          "torsoRoll": -14,
+          "headRoll": 18,
+          "rUpper": -66,
+          "rLower": -36,
+          "rHand": -25,
+          "lThigh": -20,
+          "lShin": 36
+        },
+        {
+          "t": 2925,
+          "phase": "hold",
+          "rootRoll": 18,
+          "pelvisRoll": 12,
+          "torsoRoll": 7,
+          "headRoll": -8,
+          "rUpper": -55,
+          "rLower": -36,
+          "rHand": 26,
+          "lThigh": -20,
+          "lShin": 36
+        },
+        {
+          "t": 3690,
+          "phase": "recovery",
+          "rootRoll": 4.5,
+          "pelvisRoll": 3.0,
+          "torsoRoll": 1.75,
+          "headRoll": -2.0,
+          "rUpper": -13.75,
+          "rLower": -9.0,
+          "rHand": 6.5,
+          "lThigh": -5.0,
+          "lShin": 9.0
+        },
+        {
+          "t": 4500,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "tap_reaction",
+      "family": "interaction",
+      "silhouette": "One playful local tap response, recoil and quick curious return.",
+      "view": "front",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "puzzled",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 2900,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 290,
+          "phase": "anticipation",
+          "rootX": 1.8,
+          "headRoll": 1.7000000000000002,
+          "torsoRoll": 0.9,
+          "rUpper": 2.0,
+          "rLower": 2.4000000000000004,
+          "lUpper": -1.8,
+          "lHand": -2.4000000000000004
+        },
+        {
+          "t": 841,
+          "phase": "action",
+          "rootX": -18,
+          "headRoll": -17,
+          "torsoRoll": -9,
+          "rUpper": -20,
+          "rLower": -24,
+          "lUpper": 18,
+          "lHand": 24
+        },
+        {
+          "t": 1885,
+          "phase": "hold",
+          "rootX": 9,
+          "headRoll": 14,
+          "torsoRoll": 5,
+          "rUpper": -20,
+          "rLower": -24,
+          "lUpper": 18,
+          "lHand": 24,
+          "rHand": 15
+        },
+        {
+          "t": 2378,
+          "phase": "recovery",
+          "rootX": 2.25,
+          "headRoll": 3.5,
+          "torsoRoll": 1.25,
+          "rUpper": -5.0,
+          "rLower": -6.0,
+          "lUpper": 4.5,
+          "lHand": 6.0,
+          "rHand": 3.75
+        },
+        {
+          "t": 2900,
+          "phase": "exit"
+        }
+      ]
+    },
+    {
+      "id": "snooze_retreat",
+      "family": "interaction",
+      "silhouette": "Acknowledge dismissal, tuck/turn away and park quietly without nagging.",
+      "view": "threequarter",
+      "entry": "Anticipate from current pose, preserving position and velocity.",
+      "hold": "Readable held attitude with bounded secondary motion; never random frame jitter.",
+      "exit": "Settle into a compatible rest/reply pose; cancel immediately for owner input.",
+      "cooldown_ms": 90000,
+      "weight": 1,
+      "pose": "plan",
+      "assets_required": "Existing full-body base plus authored rig/face/overlap additions as required",
+      "authoring_status": "AUTHORED_REQUIRES_NATIVE_REVIEW",
+      "native_status": "NOT_RUN",
+      "asset_status": "AVAILABLE",
+      "asset_gap": "",
+      "emotion": "neutral",
+      "pinned_safe": false,
+      "autonomous": false,
+      "duration_ms": 5800,
+      "keys": [
+        {
+          "t": 0,
+          "phase": "entry"
+        },
+        {
+          "t": 580,
+          "phase": "anticipation",
+          "headRoll": -1.9000000000000001,
+          "torsoRoll": -1.6,
+          "rThigh": -3.8000000000000003,
+          "rShin": 6.5,
+          "lThigh": 2.8000000000000003,
+          "lShin": -5.2,
+          "lUpper": 2.0,
+          "lLower": -3.5
+        },
+        {
+          "t": 1682,
+          "phase": "action",
+          "headRoll": 19,
+          "torsoRoll": 16,
+          "rThigh": 38,
+          "rShin": -65,
+          "lThigh": -28,
+          "lShin": 52,
+          "lUpper": -20,
+          "lLower": 35
+        },
+        {
+          "t": 3770,
+          "phase": "hold",
+          "headRoll": 22,
+          "torsoRoll": 12,
+          "rThigh": 38,
+          "rShin": -65,
+          "lThigh": -28,
+          "lShin": 52,
+          "lUpper": -20,
+          "lLower": 35,
+          "rootX": -55,
+          "rootY": 20,
+          "rHand": -8
+        },
+        {
+          "t": 4756,
+          "phase": "recovery",
+          "headRoll": 5.5,
+          "torsoRoll": 3.0,
+          "rThigh": 9.5,
+          "rShin": -16.25,
+          "lThigh": -7.0,
+          "lShin": 13.0,
+          "lUpper": -5.0,
+          "lLower": 8.75,
+          "rootX": -13.75,
+          "rootY": 5.0,
+          "rHand": -2.0
+        },
+        {
+          "t": 5800,
+          "phase": "exit"
+        }
+      ]
+    }
+  ],
+  "revision": "v3-authoring-02"
+}

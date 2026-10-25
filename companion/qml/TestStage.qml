@@ -20,7 +20,7 @@ PanelWindow {
     color: "#101115"
     exclusionMode: ExclusionMode.Ignore
     WlrLayershell.namespace: "capri-v2-verification-stage"
-    WlrLayershell.layer: lowered ? WlrLayer.Bottom : WlrLayer.Top
+    WlrLayershell.layer: WlrLayer.Bottom
     WlrLayershell.keyboardFocus: lowered ? WlrKeyboardFocus.None : WlrKeyboardFocus.OnDemand
     mask: Region {
         item: stage.lowered ? null : fixture
@@ -38,7 +38,7 @@ PanelWindow {
     }
     Text {
         x: 24
-        y: 80
+        y: 900
         text: "Capri · native verification stage"
         color: "#a5a2af"
         font.pixelSize: 15

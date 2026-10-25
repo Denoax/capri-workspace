@@ -5,6 +5,8 @@ import Quickshell
 import Quickshell.Wayland
 import Quickshell.Io
 import Quickshell.Hyprland
+import "Theme.js" as Theme
+import "Pointer.js" as Pointer
 
 ShellRoot {
     id: root
@@ -27,6 +29,8 @@ ShellRoot {
     property bool replyOpen: false
     property bool conversationOpen: false
     property bool settingsOpen: false
+    property bool motionReviewOpen: false
+    readonly property var character: actor
     property bool whyOpen: false
     property bool hovered: false
     property bool dragging: false
@@ -53,18 +57,106 @@ ShellRoot {
     property real actorY: placement.actorY
     property real actorHeight: Math.min(profile.character_size || 280, currentScreen ? currentScreen.height - 80 : 280)
     property real actorWidth: actorHeight * 1856 / 1440
-    property real mouthX: actorX + actor.mouth.x
-    property real mouthY: actorY + actor.mouth.y
+    property real mouthX: actorX + (bubbleVisible ? actor.neutralMouth.x : actor.mouth.x)
+    property real mouthY: actorY + (bubbleVisible ? actor.neutralMouth.y : actor.mouth.y)
     property bool bubbleLeft: actorX >= bubbleWidth + 22 && (actorX + actorWidth + bubbleWidth + 22 > (currentScreen?.width || 1000) || mouthX > (currentScreen?.width || 1000) / 2)
     property real bubbleWidth: Math.min(390, currentScreen ? currentScreen.width - 24 : 390)
     property real bubbleX: clamp(bubbleLeft ? actorX - bubbleWidth - 22 : actorX + actorWidth + 22, 12, (currentScreen?.width || 1000) - bubbleWidth - 12)
     property real bubbleY: clamp(mouthY - bubble.height / 2, 12, (currentScreen?.height || 800) - bubble.height - 12)
     property bool bubbleVisible: bubbleOpen || replyOpen || busy || noticeActive
-    property real surfaceLeft: Math.max(0, Math.min(actorX, bubbleVisible ? bubbleX - 8 : actorX) - 8)
-    property real surfaceTop: Math.max(0, Math.min(actorY, bubbleVisible ? bubbleY : actorY) - 8)
-    property real surfaceRight: Math.max(actorX + actorWidth, bubbleVisible ? bubbleX + bubbleWidth + 8 : actorX + actorWidth) + 8
-    property real surfaceBottom: Math.max(actorY + actorHeight, bubbleVisible ? bubbleY + bubble.height : actorY + actorHeight) + 8
+    property real surfaceLeft: Math.max(0, Math.min(actorX + actor.paintBounds.x, bubbleVisible ? bubbleX - 8 : actorX + actor.paintBounds.x) - 8)
+    property real surfaceTop: Math.max(0, Math.min(actorY + actor.paintBounds.y, bubbleVisible ? bubbleY : actorY + actor.paintBounds.y) - 8)
+    property real surfaceRight: Math.max(actorX + actor.paintBounds.x + actor.paintBounds.width, bubbleVisible ? bubbleX + bubbleWidth + 8 : actorX + actor.paintBounds.x + actor.paintBounds.width) + 8
+    property real surfaceBottom: Math.max(actorY + actor.paintBounds.y + actor.paintBounds.height, bubbleVisible ? bubbleY + bubble.height : actorY + actor.paintBounds.y + actor.paintBounds.height) + 8
     property string bubbleText: noticeText || partial || (snapshot.notice?.text || latestReply() || "What's on your mind?")
+    property bool pointerValid: false
+    property real pointerX: 0
+    property real pointerY: 0
+    property real pointerAt: 0
+    property real pointerMovedAt: 0
+    property real lastPursuitAt: -100000
+    property int pointerSamples: 0
+    property bool pointerEnabled: !actor.reviewing && !presentationPaused && !bubbleVisible && !hovered && !dragging && !busy && !profile.quiet && !profile.reduced_motion && !profile.pinned && profile.follow !== false
+    function losePointer(retreatIfActive) {
+        var wasValid = pointerValid;
+        pointerValid = false;
+        pointerApproach.stop();
+        pointerRetreat.stop();
+        if (wasValid && retreatIfActive && pointerEnabled)
+            retreat();
+    }
+    function observePointer(line) {
+        try {
+            var p = JSON.parse(line);
+            pointerSamples++;
+            var local = p.valid === true && currentScreen ? Pointer.localPoint(p, currentScreen.name, currentScreen.width, currentScreen.height) : null;
+            if (!local) {
+                losePointer(true);
+                return;
+            }
+            var x = local[0], y = local[1];
+            var moved = pointerValid && (Math.abs(x - pointerX) + Math.abs(y - pointerY) > 9);
+            pointerX = x;
+            pointerY = y;
+            pointerAt = Date.now();
+            pointerValid = true;
+            if (moved)
+                pointerMovedAt = pointerAt;
+            // Looking/leaning precedes one bounded approach, never a permanent chase.
+            if (moved && pointerAt - lastPursuitAt > 18000 && pointerEnabled && !travel.running) {
+                lastPursuitAt = pointerAt;
+                actor.play("cursor_gaze");
+                pointerApproach.restart();
+            }
+        } catch (error) {
+            losePointer(true);
+        }
+    }
+    Process {
+        id: pointerReader
+        command: [Quickshell.env("CAPRI_PYTHON"), "-B", "-m", "capri.pointer"]
+        running: root.pointerEnabled
+        stdout: SplitParser {
+            onRead: data => root.observePointer(data)
+        }
+        onRunningChanged: if (!running)
+            root.losePointer(false)
+    }
+    Timer {
+        id: pointerApproach
+        interval: 1100
+        onTriggered: {
+            if (!root.pointerEnabled || !root.pointerValid || Date.now() - root.pointerMovedAt > 2500)
+                return;
+            var bodyX = root.actorX + actor.bounds.x + actor.bounds.width / 2, bodyY = root.actorY + actor.bounds.y + actor.bounds.height / 2;
+            var dx = root.pointerX - bodyX, dy = root.pointerY - bodyY, d = Math.hypot(dx, dy);
+            var clearance = Pointer.safeDistance(actor.bounds);
+            if (d < clearance || d > 900)
+                return;
+            actor.play("pointer_stalk");
+            var step = Math.min(120, d - clearance);
+            travel.toX = root.actorX + dx / d * step;
+            travel.toY = root.actorY + dy / d * step;
+            travel.restart();
+            pointerRetreat.restart();
+        }
+    }
+    Timer {
+        id: pointerRetreat
+        interval: 7200
+        onTriggered: if (root.pointerEnabled) {
+            actor.play("snooze_retreat");
+            root.retreat();
+        }
+    }
+    Timer {
+        interval: 1000
+        repeat: true
+        running: root.pointerValid
+        onTriggered: if (Date.now() - root.pointerAt > 3200) {
+            root.losePointer(true);
+        }
+    }
     signal focusQuick
     signal focusConversation
     Settings {
@@ -164,10 +256,20 @@ ShellRoot {
     }
     function openConversation() {
         flushDraft();
+        settingsOpen = false;
         hidden = false;
         conversationOpen = true;
         replyOpen = false;
         Qt.callLater(() => focusConversation());
+    }
+    function openMotionReview() {
+        flushDraft();
+        conversationOpen = false;
+        replyOpen = false;
+        bubbleOpen = false;
+        hidden = false;
+        motionReviewOpen = true;
+        actor.review("upright_hover", 0, true);
     }
     function inputKey(event) {
         if (event.key === Qt.Key_Escape) {
@@ -187,8 +289,9 @@ ShellRoot {
     function keepOnScreen() {
         if (!currentScreen)
             return;
-        actorX = clamp(actorX, 8, currentScreen.width - actorWidth - 8);
-        actorY = clamp(actorY, 8, currentScreen.height - actorHeight - 8);
+        var b = actor.paintBounds;
+        actorX = clamp(actorX, 8 - b.x, currentScreen.width - b.x - b.width - 8);
+        actorY = clamp(actorY, 8 - b.y, currentScreen.height - b.y - b.height - 8);
     }
     function savePlacement() {
         placement.actorX = actorX;
@@ -212,10 +315,18 @@ ShellRoot {
         travel.toY = clamp(actorY, 16, currentScreen.height - actorHeight - 16);
         travel.restart();
     }
-    onCurrentScreenChanged: Qt.callLater(() => {
-        keepOnScreen();
-        savePlacement();
-    })
+    onCurrentScreenChanged: {
+        losePointer(false);
+        Qt.callLater(() => {
+            keepOnScreen();
+            savePlacement();
+        });
+    }
+    onProfileChanged: if (profile.pinned || profile.quiet || profile.reduced_motion) {
+        travel.stop();
+        pointerApproach.stop();
+        pointerRetreat.stop();
+    }
     onActorWidthChanged: keepOnScreen()
     onActorHeightChanged: keepOnScreen()
     onPresentationPausedChanged: if (presentationPaused) {
@@ -237,7 +348,8 @@ ShellRoot {
         connected: true
         onConnectionStateChanged: {
             if (connected) {
-                root.sequence = 0;root.renderReported = false;
+                root.sequence = 0;
+                root.renderReported = false;
                 write(JSON.stringify({
                     version: 1,
                     role: "shell",
@@ -257,7 +369,8 @@ ShellRoot {
                     const m = JSON.parse(data);
                     if (m.event === "snapshot") {
                         const old = root.lastReply;
-                        if (m.notice && m.notice.id !== root.snapshot.notice?.id) root.noticeText = "";
+                        if (m.notice && m.notice.id !== root.snapshot.notice?.id)
+                            root.noticeText = "";
                         root.snapshot = m;
                         if (!root.draftLoaded || root.draftPartition !== m.partition) {
                             root.draftLocal = m.draft || "";
@@ -292,7 +405,7 @@ ShellRoot {
                         root.openReply();
                     } else if (m.event === "prepareQuit") {
                         root.flushDraft();
-                        root.send("ui_quit_ready",{});
+                        root.send("ui_quit_ready", {});
                     } else if (m.event === "quit") {
                         root.flushDraft();
                         Quickshell.quit();
@@ -311,9 +424,16 @@ ShellRoot {
         onTriggered: {
             root.send("heartbeat", {});
             if (!root.renderReported && actor.ready && root.draftLoaded) {
-                root.send("render_ready",{ready:true,drafts:true});root.renderReported = true;
+                root.send("render_ready", {
+                    ready: true,
+                    drafts: true
+                });
+                root.renderReported = true;
             }
-            root.send("attention", {fullscreen: root.attentionFullscreen, hidden: root.hidden});
+            root.send("attention", {
+                fullscreen: root.attentionFullscreen,
+                hidden: root.hidden
+            });
         }
     }
     Timer {
@@ -325,7 +445,7 @@ ShellRoot {
     Timer {
         interval: 88000
         repeat: true
-        running: !root.presentationPaused && !root.replyOpen && !root.conversationOpen && !root.hovered && !root.profile.pinned && !root.profile.quiet && root.profile.roam !== false && !root.busy && root.snapshot.input_idle === true
+        running: !actor.reviewing && !root.presentationPaused && !root.replyOpen && !root.conversationOpen && !root.hovered && !root.profile.pinned && !root.profile.quiet && root.profile.roam !== false && !root.busy && root.snapshot.input_idle === true
         onTriggered: {
             travel.toX = root.actorX < root.currentScreen.width / 2 ? 16 : root.currentScreen.width - root.actorWidth - 16;
             travel.toY = root.clamp(root.actorY + (root.actorY > root.currentScreen.height / 2 ? -180 : 180), 16, root.currentScreen.height - root.actorHeight - 16);
@@ -351,12 +471,6 @@ ShellRoot {
             easing.type: Easing.InOutCubic
         }
         onFinished: root.savePlacement()
-    }
-    Timer {
-        interval: 19000
-        repeat: true
-        running: !root.presentationPaused && !root.profile.quiet && !root.busy && !root.replyOpen
-        onTriggered: root.idleState = root.idleState === "curious" ? "idle" : "curious"
     }
     FileView {
         path: root.assets + "/input-regions.json"
@@ -401,13 +515,14 @@ ShellRoot {
             }
         }
         Instantiator {
-            model: root.hitRects
+            model: actor.regionData
             delegate: Region {
                 required property var modelData
-                x: actor.x + modelData[0] * actor.width
-                y: actor.y + modelData[1] * actor.height
-                width: modelData[2] * actor.width
-                height: modelData[3] * actor.height
+                property var geometry: actor.mapRegion(modelData)
+                x: actor.x + geometry[0]
+                y: actor.y + geometry[1]
+                width: geometry[2]
+                height: geometry[3]
             }
             onObjectAdded: (index, object) => inputMask.regions.push(object)
             onObjectRemoved: (index, object) => inputMask.regions = inputMask.regions.filter(v => v !== object)
@@ -415,8 +530,8 @@ ShellRoot {
         Canvas {
             id: speechTail
             visible: bubble.visible
-            property real tipX: root.mouthX - root.surfaceLeft
-            property real tipY: root.mouthY - root.surfaceTop
+            property real tipX: root.actorX + actor.mouth.x - root.surfaceLeft
+            property real tipY: root.actorY + actor.mouth.y - root.surfaceTop
             property real baseX: bubble.x + (root.bubbleLeft ? bubble.width : 0)
             property real baseY: root.clamp(tipY, bubble.y + 24, bubble.y + bubble.height - 24)
             x: Math.min(tipX, baseX) - 2
@@ -432,8 +547,8 @@ ShellRoot {
             onPaint: {
                 const c = getContext("2d");
                 c.reset();
-                c.fillStyle = "#1d1c25";
-                c.strokeStyle = "#615064";
+                c.fillStyle = Theme.surface;
+                c.strokeStyle = Theme.outline;
                 c.lineWidth = 1;
                 c.beginPath();
                 c.moveTo(tipX - x, tipY - y);
@@ -452,11 +567,20 @@ ShellRoot {
             width: root.actorWidth
             height: root.actorHeight
             state: root.dragging ? "dragged" : root.snapshot.state === "idle" ? (root.replyOpen ? "listening" : root.idleState) : root.snapshot.state
+            reading: root.bubbleVisible
+            pinned: !!root.profile.pinned
+            ownerInteracting: root.hovered || root.dragging
+            pointerValid: root.pointerValid
+            pointerTarget: Qt.point(root.pointerX - root.actorX, root.pointerY - root.actorY)
+            onClipStarted: root.keepOnScreen()
             paused: root.presentationPaused
             reduced: !!root.profile.reduced_motion || !!root.profile.quiet
             MouseArea {
                 id: drag
-                anchors.fill: parent
+                x: actor.bounds.x
+                y: actor.bounds.y
+                width: actor.bounds.width
+                height: actor.bounds.height
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                 hoverEnabled: true
                 property real startX: 0
@@ -470,20 +594,20 @@ ShellRoot {
                     travel.stop();
                     startX = root.actorX;
                     startY = root.actorY;
-                    cursorX = root.actorX + mouse.x;
-                    cursorY = root.actorY + mouse.y;
+                    cursorX = root.actorX + drag.x + mouse.x;
+                    cursorY = root.actorY + drag.y + mouse.y;
                     moved = false;
                 }
                 onPositionChanged: mouse => {
                     if (!pressed || pressedButtons !== Qt.LeftButton)
                         return;
-                    const dx = root.actorX + mouse.x - cursorX, dy = root.actorY + mouse.y - cursorY;
+                    const dx = root.actorX + drag.x + mouse.x - cursorX, dy = root.actorY + drag.y + mouse.y - cursorY;
                     if (Math.abs(dx) + Math.abs(dy) > 6)
                         moved = true;
                     if (moved) {
                         root.dragging = true;
-                        root.actorX = root.clamp(startX + dx, 8, root.currentScreen.width - root.actorWidth - 8);
-                        root.actorY = root.clamp(startY + dy, 8, root.currentScreen.height - root.actorHeight - 8);
+                        root.actorX = root.clamp(startX + dx, 8 - actor.bounds.x, root.currentScreen.width - actor.bounds.x - actor.bounds.width - 8);
+                        root.actorY = root.clamp(startY + dy, 8 - actor.bounds.y, root.currentScreen.height - actor.bounds.y - actor.bounds.height - 8);
                     }
                 }
                 onReleased: {
@@ -526,7 +650,16 @@ ShellRoot {
         // Draft and transcript live in the root/core, so a closed window need not stay resident.
         active: root.conversationOpen
         onLoaded: Qt.callLater(() => root.focusConversation())
-        sourceComponent: Conversation { owner: root }
+        sourceComponent: Conversation {
+            owner: root
+        }
+    }
+    Loader {
+        active: root.motionReviewOpen
+        sourceComponent: MotionReview {
+            owner: root
+            actor: root.character
+        }
     }
     IpcHandler {
         target: "capri"
@@ -546,16 +679,76 @@ ShellRoot {
             root.flushDraft();
             root.send("quit", {});
         }
-        function settings(): void { root.openConversation(); root.settingsOpen = true; }
-        function revealScope(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") if (conversationLoader.item) conversationLoader.item.revealScope(); }
-        function revealScopeSave(): void { if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1") if (conversationLoader.item) conversationLoader.item.revealScopeSave(); }
-        function transcriptMetrics(): string { return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" && conversationLoader.item ? conversationLoader.item.transcriptMetrics() : "{}"; }
-        function scopePoints(): string { return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" ? (conversationLoader.item ? conversationLoader.item.scopePoints() : "{}") : "{}"; }
+        function conversation(): void {
+            root.settingsOpen = false;
+            root.openConversation();
+        }
+        function revealTextSize(): void {
+            if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" && conversationLoader.item)
+                conversationLoader.item.revealTextSize();
+        }
+        function uiPoints(): string {
+            return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" && conversationLoader.item ? conversationLoader.item.reviewPoints() : "{}";
+        }
+        function uiState(): string {
+            return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" && conversationLoader.item ? conversationLoader.item.reviewState() : "{}";
+        }
+        function settings(): void {
+            root.openConversation();
+            root.settingsOpen = true;
+        }
+        function revealScope(): void {
+            if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1")
+                if (conversationLoader.item)
+                    conversationLoader.item.revealScope();
+        }
+        function revealScopeSave(): void {
+            if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1")
+                if (conversationLoader.item)
+                    conversationLoader.item.revealScopeSave();
+        }
+        function transcriptMetrics(): string {
+            return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" && conversationLoader.item ? conversationLoader.item.transcriptMetrics() : "{}";
+        }
+        function scopePoints(): string {
+            return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" ? (conversationLoader.item ? conversationLoader.item.scopePoints() : "{}") : "{}";
+        }
         function presence(): void {
             root.replyOpen = false;
             root.bubbleOpen = false;
             root.conversationOpen = false;
             root.hidden = false;
+        }
+        function reviewClip(name: string, time: int, paused: bool): bool {
+            return Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1" ? actor.review(name, time, paused) : false;
+        }
+        function reviewTransition(name: string): bool {
+            if (Quickshell.env("CAPRI_EVIDENCE_STAGE") !== "1")
+                return false;
+            actor.reviewing = true;
+            actor.reviewPaused = false;
+            return actor.play(name);
+        }
+        function endReview(): void {
+            if (Quickshell.env("CAPRI_EVIDENCE_STAGE") === "1")
+                actor.endReview();
+        }
+        function motionStatus(): string {
+            return JSON.stringify({
+                clip: actor.clipId,
+                emotion: actor.emotion,
+                time: actor.clock,
+                moving: actor.moving,
+                ready: actor.ready,
+                regions: actor.regionData.length,
+                bounds: actor.bounds,
+                paintBounds: actor.paintBounds,
+                handover: actor.handover,
+                implemented: actor.catalog.filter(c => c.asset_status === "AVAILABLE").length,
+                pointerEnabled: root.pointerEnabled,
+                pointerValid: root.pointerValid,
+                pointerSamples: root.pointerSamples
+            });
         }
         function actorGeometry(): string {
             return JSON.stringify({

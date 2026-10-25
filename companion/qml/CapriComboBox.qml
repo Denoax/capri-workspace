@@ -1,51 +1,54 @@
 import QtQuick
 import QtQuick.Controls
+import "Theme.js" as Theme
 
 ComboBox {
     id: control
-    implicitHeight: 34
-    implicitWidth: 150
+    implicitHeight: Math.max(44, contentItem.implicitHeight + 20)
+    implicitWidth: 180
     font.family: "Inter"
-    font.pixelSize: 13
+    ToolTip.visible: hovered
+    ToolTip.text: displayText
     contentItem: Text {
         textFormat: Text.PlainText
         text: control.displayText
         leftPadding: 10
         rightPadding: 26
-        color: "#efedf2"
+        color: Theme.ink
         font: control.font
         verticalAlignment: Text.AlignVCenter
         elide: Text.ElideRight
     }
     background: Rectangle {
         color: control.down ? "#303039" : "#24242c"
-        radius: 8
-        border.color: control.visualFocus ? "#43fba5" : "#514655"
+        radius: Theme.controlRadius
+        border.color: control.visualFocus ? Theme.green : Theme.outline
     }
     indicator: Text {
         x: control.width - 22
-        y: 7
+        y: (control.height - height) / 2
         text: "▾"
-        color: "#bdb4c6"
+        color: Theme.muted
         font.pixelSize: 16
     }
     delegate: ItemDelegate {
         required property var modelData
         required property int index
-        width: control.width
+        width: control.popup.width
+        implicitHeight: Math.max(44, contentItem.implicitHeight + 20)
         text: control.textRole ? modelData[control.textRole] : modelData
         highlighted: control.highlightedIndex === index
         contentItem: Text {
             textFormat: Text.PlainText
             text: parent.text
-            color: "#efedf2"
+            color: Theme.ink
             font: control.font
             elide: Text.ElideRight
             verticalAlignment: Text.AlignVCenter
         }
         background: Rectangle {
-            color: parent.highlighted ? "#39313e" : "#1d1c25"
-            radius: 5
+            color: parent.highlighted ? "#39313e" : Theme.surface
+            radius: 8
         }
     }
     popup: Popup {
@@ -61,9 +64,9 @@ ComboBox {
             ScrollIndicator.vertical: ScrollIndicator {}
         }
         background: Rectangle {
-            color: "#1d1c25"
-            border.color: "#615064"
-            radius: 8
+            color: Theme.surface
+            border.color: Theme.outline
+            radius: Theme.controlRadius
         }
     }
 }

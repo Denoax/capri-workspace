@@ -140,7 +140,7 @@ class Service:
                 "notice": None if self.scheduler.blocked(self.attention(),require_idle=False) else self.scheduler.current_notice(),
                 "observation_sources": self.projects.active_sources(),"initiative_status": self.background_error,
                 "sources_text": '\n'.join(s['root']+' · local save events'+(' + selected metadata to model' if s['cloud'] else '') for s in self.projects.active_sources()) or 'No selected project observation.',
-                "activity": [{'kind':r[0],'detail':r[1]} for r in self.store.db.execute('SELECT e.kind,e.detail FROM task_events e JOIN tasks t ON e.task=t.id WHERE t.partition=? AND e.kind IN (?,?,?) ORDER BY e.id DESC LIMIT 12',(self.provider.partition,'verification','verified-terminal','native-scope-approved'))],
+                "activity": self.store.task_activity(self.provider.partition),
                 "desktop_dnd": self.desktop_dnd, "idle_status":self.idle_status, "sound_status":self.sound.status,
                 "update_status":self.maintenance.status,"maintenance_review":self.maintenance_review,
                 "rollback_target":self.rollback_target,

@@ -76,7 +76,7 @@ def main():
     if not python.is_file():
         raise SystemExit('Create the isolated Python environment first; see companion/README.md.')
     env=os.environ.copy()
-    env.update(CAPRI_ASSETS=str(assets.resolve()),CAPRI_SOCKET=str(RUNTIME/'core.sock'),
+    env.update(CAPRI_PYTHON=str(python),CAPRI_ASSETS=str(assets.resolve()),CAPRI_SOCKET=str(RUNTIME/'core.sock'),
                CAPRI_SETTINGS=os.environ.get('CAPRI_SETTINGS',(config/'preferences.ini').as_uri()),CAPRI_SCREEN=args.screen,
                CAPRI_EVIDENCE_STAGE='1' if args.evidence_stage else '0')
     RUNTIME.mkdir(mode=0o700,parents=True,exist_ok=True)
