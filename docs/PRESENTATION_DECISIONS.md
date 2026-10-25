@@ -13,3 +13,8 @@ Only selected sources belong in the branch; excluded D-only/meme clips and the b
 Mani's next review requests a much more visual README and decorative Capri art. Preserve the approved hero, keep CAPRI's existing repository identity, and continue its visual language through linked navigation, theme-aware chapter lettering, a proper handoff map and an art appendix. Decorative character composition is explicitly requested; its captions must not invent lore, runtime proof or benchmarks. No extra project/repository is created.
 
 Existing installation, security, architecture and evaluation documents remain accessible. Details/summary holds long technical explanations; it does not hide the current experimental status. The README's visual map includes the Thinker report before the human decision and does not draw an automatic successor task. Runtime/CI behavior is outside this presentation diff.
+
+
+## 2026-10-25 — V8 user correction
+
+The user rejected the repeated V7 branding strips and retained the rest of the direction. Remove every detached strip; integrate one original-Barlow magenta subtitle inside the hero; extend the separator wake to288logicalpx with a broad color fade and cleaner edges. This supersedes V7 footer/hero freezes only. Other V7 lesson media, native explanation/math, qualification, About and runtime remain protected. Technical delivery is not visual acceptance.

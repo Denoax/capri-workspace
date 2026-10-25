@@ -48,5 +48,12 @@
   ],
   "source_collection": "20 downloaded files with overlapping scenes; only sources 19 and 12 used here",
   "rights": "PRIVATE_REVIEW_ONLY; anime public redistribution unverified",
-  "font": "Barlow Condensed ExtraBold Italic, OFL-1.1; included notice"
+  "font": "Barlow Condensed ExtraBold Italic, OFL-1.1; included notice",
+  "hero_derivative": {
+    "base_commit": "fd8d198f3c24483cebef9b4bff0daa10f44eabf8",
+    "original": "sources/hero-v7/",
+    "original_gif_sha256": "e505d35ebb8eea5daa13fda24ed32db7a6a64aabda3e63835ee4cf8813f39517",
+    "font": "fonts/BarlowCondensed-ExtraBoldItalic.ttf",
+    "method": "One magenta outlined subtitle inside original hero. Pinned SVG/overlay/PNG/GIF preserved. Original decoded footage/frames/palette/timing retained outside added letters. Build and independent frame checks in tools/build_capri_presentation.py and tools/check_capri_hero.py."
+  }
 }

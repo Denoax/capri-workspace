@@ -1,30 +1,45 @@
-#!/usr/bin/env python3
-"""Decode the actual GIF and verify finite wake, wrap, transparency and cadence."""
+"""Independently inspect the delivered GIF's finite color ramp, geometry, cadence and wrap."""
 from pathlib import Path
 import hashlib,json
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1];STORY=ROOT/'showcase/capri/story'
 def check():
- c=json.loads((STORY/'format.json').read_text())['separator'];rgb=lambda s:tuple(bytes.fromhex(s[1:]));pink,green=rgb(c['pink']),rgb(c['green']);frames=[];delays=[];heads=[];colors=[];outside=[]
- with Image.open(STORY/'separator.gif') as gif:
-  assert gif.info.get('loop')==0 and list(gif.size)==[c['width'],c['height']]
-  assert gif.n_frames==c['period_ms']*c['fps']//1000
-  for i in range(gif.n_frames):
-   gif.seek(i);im=gif.convert('RGBA');delays.append(gif.info['duration']);assert gif.disposal_method==2
-   pixels=im.load();head=i*c['width']/gif.n_frames;y=c['track_y'];count=0;offtrack=0
-   for x in range(c['width']):
-    rgba=pixels[x,y];assert rgba[3]==255 and rgba[:3] in [pink,green]
-    if rgba[:3]==green:count+=1
-    for yy in range(c['height']):
-     rgba=pixels[x,yy]
-     if yy<y-c['arrow_half_height']-2 or yy>y+c['arrow_half_height']+2:assert rgba[3]==0,'Opaque matte/ghost outside track/arrow'
-     if rgba[3]:assert rgba[:3] in [pink,green] and rgba[3]==255
-     if yy not in [y,y+1] and rgba[:3]==green and rgba[3]:offtrack+=1
-   assert offtrack>=40 and c['wake_px']-2<=count<=c['wake_px']+4,(i,count,offtrack)
-   for offset,color in [(40,pink),(-c['wake_px']/2,green),(-c['wake_px']-40,pink)]:assert pixels[round((head+offset)%c['width']),y][:3]==color,('Wake/ahead/old-track mismatch',i,offset)
-   frames.append(hashlib.sha256(im.tobytes()).hexdigest());heads.append(head);colors.append(pixels[600,y][:3])
-  assert len(set(frames))==gif.n_frames and set(delays)=={20} and sum(delays)==c['period_ms']
-  assert green in colors and pink in colors
-  gif.seek(c['poster_frame']);assert Image.open(STORY/'separator.png').convert('RGBA').tobytes()==gif.convert('RGBA').tobytes()
- return {'status':'PASS','size':[c['width'],c['height']],'frames':len(frames),'unique_decoded_frames':len(set(frames)),'duration_ms':sum(delays),'delays_ms':sorted(set(delays)),'wake_px':c['wake_px'],'pixels_per_sample':c['width']/len(frames),'loop':0,'transparency':'No matte/ghost outside the actual track/arrow','wake':'Green immediately behind; red ahead and older track, every decoded phase including wrap','scope':'Decoded objective pixel/cadence checks; not perceptual or physical-display approval.'}
+    c=json.loads((STORY/'format.json').read_text())['separator'];s=c['delivery_scale'];w=c['width'];h=c['height'];y=c['track_y']*s
+    pink=tuple(bytes.fromhex(c['pink'][1:]));green=tuple(bytes.fromhex(c['green'][1:]))
+    frames=[];delays=[];profiles=[];ramp_colors=set();green_positions=[]
+    with Image.open(STORY/'separator.gif') as gif:
+        assert gif.info.get('loop')==0 and gif.size==(w*s,h*s)
+        assert gif.n_frames==200 and c['wake_px']==288
+        for i in range(gif.n_frames):
+            gif.seek(i);im=gif.convert('RGBA');assert gif.disposal_method==2
+            delays.append(gif.info['duration']);head=i*w/gif.n_frames;pixels=im.load()
+            def color(distance):return pixels[round(((head-distance)%w)*s)%(w*s),y]
+            assert color(-40)==(*pink,255) and color(320)==(*pink,255),'Ahead/older track changed'
+            assert color(48)==(*green,255),'Near wake not green'
+            samples=[color(d) for d in [96,120,144,168,192,216,240,264,280,300]]
+            weights=[(x[1]-pink[1])/(green[1]-pink[1]) for x in samples]
+            assert all(a>=b for a,b in zip(weights,weights[1:])),'Fade is not monotone'
+            assert len(set(samples))>=9 and .03<weights[-3]<.08 and .003<weights[-2]<.02 and weights[-1]==0,'Fade not broad/gradual'
+            # Every intermediate stays on the red-green color segment; never fades toward black.
+            colored=0
+            for x in range(w*s):
+                rgba=pixels[x,y];assert rgba[3]==255
+                if rgba[:3]!=pink:colored+=1
+                ramp_colors.add(rgba[:3]);t=(rgba[1]-pink[1])/(green[1]-pink[1])
+                assert 0<=t<=1
+                assert all(abs(rgba[k]-(pink[k]+(green[k]-pink[k])*t))<=1.1 for k in [0,2])
+            assert 278*s<=colored<=290*s,(i,colored)
+            # Binary alpha with a tight transparent envelope prohibits matte and disposal ghosts.
+            a=im.getchannel('A');assert a.crop((0,0,w*s,(c['track_y']-12)*s)).getbbox() is None
+            assert a.crop((0,(c['track_y']+12)*s,w*s,h*s)).getbbox() is None
+            offtrack=im.crop((0,(c['track_y']-9)*s,w*s,(c['track_y']-3)*s))
+            assert offtrack.getbbox() is not None,'Arrow head missing'
+            positions=[x for x in range(w*s) if pixels[x,(c['track_y']-5)*s]==(*green,255)]
+            assert positions and all(0<=((head-x/s)%w)<=27 for x in positions),'Head/edge wrap discontinuity'
+            frames.append(hashlib.sha256(im.tobytes()).hexdigest())
+            if i in [0,1,50,100,199]:profiles.append(dict(frame=i,head_logical=head,distances=[96,120,144,168,192,216,240,264,280,300],colors=samples))
+        assert len(set(frames))==200 and set(delays)=={20} and sum(delays)==4000
+        assert len(ramp_colors)>=100,'Insufficient smooth multi-tone palette'
+        gif.seek(c['poster_frame']);assert Image.open(STORY/'separator.png').convert('RGBA').tobytes()==gif.convert('RGBA').tobytes()
+    return dict(status='PASS',logical_size=[w,h],encoded_size=[w*s,h*s],frames=200,unique_decoded_frames=len(set(frames)),duration_ms=sum(delays),delays_ms=sorted(set(delays)),old_wake_px=192,wake_px=288,wake_ratio=1.5,fade_px=192,center_row_colors=len(ramp_colors),pixels_per_sample=6,loop=0,profiles=profiles,transparency='No matte/ghost outside track and arrow; binary GIF alpha at2x delivery',scope='Actual decoded behavior including wrap; browser/playback and human perceptual approval separate.')
 if __name__=='__main__':print(json.dumps(check(),indent=2))

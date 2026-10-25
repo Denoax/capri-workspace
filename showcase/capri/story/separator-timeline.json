@@ -4,7 +4,7 @@
     "height": 48,
     "period_ms": 4000,
     "fps": 50,
-    "wake_px": 192,
+    "wake_px": 288,
     "track_y": 24,
     "track_width": 2,
     "arrow_length": 24,
@@ -14,13 +14,24 @@
     "poster_frame": 100,
     "normal": "separator.gif",
     "poster": "separator.png",
-    "method": "Periodic authored arrow/wake; full red baseline, finite wrapped green wake. Transparent palette index0, disposal2."
+    "method": "2x transparent GIF from supersampled geometry; fixed 128-tone red/green palette, no dithering. Smoothstep color ramp over trailing two-thirds of a finite periodic 288px wake; binary GIF alpha, no matte.",
+    "delivery_scale": 2,
+    "supersample": 4,
+    "fade_fraction": 0.6666666666666666
   },
+  "logical_size": [
+    1200,
+    48
+  ],
+  "encoded_size": [
+    2400,
+    96
+  ],
   "sample_count": 200,
   "sample_fps": 50,
   "duration_ms": 4000,
-  "gif_sha256": "1f0a4fd8c008257965edaa044bb1233b9439407048aa5650926abee96dc6914a",
-  "poster_sha256": "2f3dc011da58ef3f2516157a707ea4d46cc35f088e36f49605c7375577ef17f5",
+  "gif_sha256": "e6b2d6940e57d71c5100582a4a8a845d7e7216a6fc4ac9ef056eeb33c51b6226",
+  "poster_sha256": "a5286c48085cb3ab8043664b8b901c76921988a53357fd5d206bf7bb89d69259",
   "head_positions": [
     0.0,
     6.0,
@@ -223,5 +234,6 @@
     1188.0,
     1194.0
   ],
-  "scope": "Original deterministic palette animation; finite periodic wake, not accumulated progress. Decode/browser checks are separate."
+  "color_profile": "128 fixed red-to-green tones; smoothstep over trailing two-thirds; no dithering; binary transparent index0, disposal2",
+  "scope": "Original deterministic geometry/color animation; actual GIF/browser checks separately required."
 }

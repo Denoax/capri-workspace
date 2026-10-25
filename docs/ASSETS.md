@@ -21,7 +21,7 @@ No standalone model or rig is claimed. The earlier incomplete cropped-head exper
 
 ## Rebuild
 
-Use Pillow 12.3.0 and the system `rsvg-convert` executable. Outlined SVGs are the editable composition source; source footage and the OFL/font files are included.
+Install the media-only packages with `python -m pip install -r requirements-media.txt` and provide the system `rsvg-convert` executable. Outlined SVGs are the editable composition source; source footage and the OFL/font files are included.
 
 ```sh
 python tools/build_capri_presentation.py
@@ -32,7 +32,7 @@ The builder has no collector, live-state or network side effects. It does not in
 
 ## V4 repository identity
 
-The V4 README adds [graphic navigation and chapters](../showcase/capri/identity), a branching role map, an [Afterimage art page](AFTERIMAGE.md), a staggered triptych and an optional *Off the Grid* poster. They reuse sources 12 and 19 above; no new character source or permission grant is introduced. The original hero bytes remain untouched.
+The V4 README adds [graphic navigation and chapters](../showcase/capri/identity), a branching role map, an [Afterimage art page](AFTERIMAGE.md), a staggered triptych and an optional *Off the Grid* poster. They reuse sources 12 and 19 above; no new character source or permission grant is introduced. The V4 pass retained the original hero bytes. V8 later adds one in-art subtitle; its unmodified input is pinned in sources/hero-v7/.
 
 Whole source-image boxes are retained in the new still compositions. Source 19 frames 12, 54 and 92 form the triptych; frame 54 forms the poster. Source 12 frame 5 is the diagram/chapter expression. The original footage remains available for comparison. The stills are encoded as embedded JPEGs inside the SVGs to keep payload small; display lettering is outlined from the existing Barlow font. *Off the Grid* is original editorial copy, not a show quote or product claim.
 
@@ -41,7 +41,7 @@ python tools/build_capri_identity.py
 python tools/check_capri_presentation.py
 ```
 
-The identity builder requires Pillow and fontTools in a media-only environment. It does not alter controller dependency files, start models or replace the V3 hero builder. See [presentation references](DESIGN_REFERENCES.md) for the inspected design sources and [identity BUILD.json](../showcase/capri/identity/BUILD.json) for export details.
+The identity builder requires Pillow and fontTools in a media-only environment. It does not alter controller dependency files or start models. The current hero-only derivative builder is documented in [V8 build notes](VISUAL_STORY.md). See [presentation references](DESIGN_REFERENCES.md) for the inspected design sources and [identity BUILD.json](../showcase/capri/identity/BUILD.json) for export details.
 
 
 ## Source-match presentation candidate

@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "SOURCE_RECORD.json",
-      "bytes": 9075,
-      "sha256": "084d3f10e37802fd5f3f599d6456e6772cebe7edd746093f5de0722caf351b62"
+      "bytes": 9000,
+      "sha256": "4266b8b8527b60070550e3dd3a943ede65a5900c3919d58c09793ac61b4c3f7f"
     },
     {
       "path": "accent.svg",
@@ -458,18 +458,8 @@
     },
     {
       "path": "format.json",
-      "bytes": 8215,
-      "sha256": "23fa82004522ac6c30fe176402ceae2f55064d3ed6f309f9cc10c7cbaa0f9d3b"
-    },
-    {
-      "path": "identity-mobile.svg",
-      "bytes": 1389053,
-      "sha256": "7bd672957aecfbfb2e7a4cd7b57ff6efa5b047cca1f7c12461032a3d8c6af35a"
-    },
-    {
-      "path": "identity.svg",
-      "bytes": 1389007,
-      "sha256": "5b2c21b562a03586e6850ee21b7b093fd77a108eca44163497453f4c692ef64c"
+      "bytes": 8537,
+      "sha256": "718185643e816a6061e5bbb06f8d5f6b53f474b29f0f6ac153bad8d5cb7d15f3"
     },
     {
       "path": "input-panel.svg",
@@ -498,18 +488,18 @@
     },
     {
       "path": "separator-timeline.json",
-      "bytes": 3096,
-      "sha256": "3f5bbf6d2fa317ce3627ec12211179d0d68a6bdd1aaca9a38ed84f5e54f910ed"
+      "bytes": 3466,
+      "sha256": "4b9dbba1d946e1c5fb9f8eed1ecc3577778571656570e8379cd874c734431e40"
     },
     {
       "path": "separator.gif",
-      "bytes": 246099,
-      "sha256": "1f0a4fd8c008257965edaa044bb1233b9439407048aa5650926abee96dc6914a"
+      "bytes": 522830,
+      "sha256": "e6b2d6940e57d71c5100582a4a8a845d7e7216a6fc4ac9ef056eeb33c51b6226"
     },
     {
       "path": "separator.png",
-      "bytes": 556,
-      "sha256": "2f3dc011da58ef3f2516157a707ea4d46cc35f088e36f49605c7375577ef17f5"
+      "bytes": 1627,
+      "sha256": "a5286c48085cb3ab8043664b8b901c76921988a53357fd5d206bf7bb89d69259"
     },
     {
       "path": "story-ui.js",
@@ -518,8 +508,8 @@
     },
     {
       "path": "story.css",
-      "bytes": 11337,
-      "sha256": "c5cb8de63371f98225be7b5d2e5663baa2e379d1d742e54644c249c0cb7f7c38"
+      "bytes": 11133,
+      "sha256": "e6d68114bc187071078e957cf4a261cd5590e9abdacd7ea6365273c6d86115c0"
     },
     {
       "path": "story.json",

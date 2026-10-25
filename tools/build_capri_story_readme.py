@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Generate V7 motion and identity README/static routes from canonical data and display roles."""
+"""Generate V8 hero and trail correction README/static routes from canonical data and display roles."""
 from pathlib import Path
 import html,json,re
-from capri_story_identity import identity_markup
 ROOT=Path(__file__).resolve().parents[1];STORY=ROOT/'showcase/capri/story'
 FORMATS=json.loads((STORY/'format.json').read_text());CONFIG=json.loads((STORY/'story.json').read_text())
 ALTS={'workflow':'Three full-body poses: Plan returns scope/checks, Build returns a patch, Review returns findings. One writer; the human decides.','brief':'Actual native shark field, full-body Capri and a persistent brief: request/correction, relevant source, scope/checks and retrievable originals.','horizon':'The original native ray-traced ASCII horizon with full-body Capri; credited illustration of selective input, not a measured context window.','coordination':'The supplied dotted loop carries60k+H. Additional H30k yields90k, equal to the curated input assumption.','handoff':'Original reaching hands carry blank to Untitled beside full-body Capri. Authored fixture A, not an observed model failure.','checking':'The source cat takeover and eye-anchored beams accompany full-body Review Capri. This illustration does not approve or secure code.','graph':'Illustrative inputs, not a CAPRI benchmark: six assumed requests, thousand tokens per request. Growing history180k, curated 90k, scoped60k.','requirements':'Small source skull/sword/rain vignette: keep original rules, correction and checks retrievable.','closing':'Small source elastic-stack vignette with Capri: keep evidence together and continue to offline checks.'}
@@ -18,14 +17,14 @@ def image(name,static=False):
     sources.append(f'<source media="(prefers-reduced-motion: reduce)" srcset="{source(layout,True)}">')
     return '<picture>'+''.join(sources)+f'<img src="{source(layout)}" alt="{html.escape(ALTS[name],quote=True)}" width="{family["display_width"]}"></picture>'
 def group(*names,static=False):
-    return '<p align="center">'+'\n'.join(image(n,static) for n in names)+'<br>'+identity_markup(FORMATS)+'</p>'
+    return '<p align="center">'+'\n'.join(image(n,static) for n in names)+'</p>'
 def divider(static=False):
     c=FORMATS['separator'];src='separator.png' if static else 'separator.gif'
-    return '<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/separator.png"><img src="showcase/capri/story/'+src+'" alt="Green arrow moves right along a magenta track with a short green wake; older track turns magenta again." width="'+str(FORMATS['families']['divider']['display_width'])+'"></picture></p>'
+    return '<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/story/separator.png"><img src="showcase/capri/story/'+src+'" alt="Green arrow moves right along a magenta track with a long, gradually fading green wake; older track turns magenta again." width="'+str(FORMATS['families']['divider']['display_width'])+'"></picture></p>'
 def build(static=False):
     m=json.loads((STORY/'model-results.json').read_text());k=lambda v:f'{v//1000}k';t=m['total_assumed_input_tokens'];g=m['derivations']['growing'];c=m['derivations']['curated'];n=m['calls'];steps='+'.join(str(i) for i in range(n))
     base=(ROOT/'showcase/capri/source-match/BASE_README.md').read_text();start=base.index('Start with offline inspection');quick=base[start:base.index('<a href="docs/AFTERIMAGE.md"><img',start)]
-    hero='png' if static else 'gif';opening=f'''<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.{hero}" alt="CAPRI — the preserved original magenta and green banner." width="{FORMATS['hero']['display_width']}"></picture><br>{identity_markup(FORMATS)}</p>
+    hero='png' if static else 'gif';opening=f'''<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.{hero}" alt="CAPRI — Agentic Loop Prompting, integrated in the original magenta Barlow hero." width="{FORMATS['hero']['display_width']}"></picture></p>
 
 # CAPRI — Agentic Loop Prompting
 

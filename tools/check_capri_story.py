@@ -38,7 +38,7 @@ def check():
     require(all('height' not in attrs for _,attrs in markup.media),'Forced image/source height can distort production sizing')
     require(all(attrs.get('width','').isdigit() or attrs.get('width') in ['49.5%','100%'] for tag,attrs in markup.media if tag=='img'),'Main image cap must be numeric')
     require(all('width' not in attrs or (attrs['width'].isdigit() and '(max-width:767px)' in attrs.get('media','')) for tag,attrs in markup.media if tag=='source'),'Only numeric mobile source width overrides are allowed')
-    require(root.count('separator.gif')==2 and root.count('/identity.svg')==6 and '<!-- portrait-pair:' not in root and '<table>' not in root,'Custom/legacy media table remains')
+    require(root.count('separator.gif')==2 and root.count('/identity.svg')==0 and '<!-- portrait-pair:' not in root and '<table>' not in root,'Custom/legacy media table remains')
     require(not re.search(r'(?:src|srcset)="[^"]+\.gif',static),'Static edition embeds animation')
     for row in model['requests']:require(f"| {row['request']} | {row['values']['growing']:,} | {row['values']['curated']:,} | {row['values']['scoped']:,} |" in root,'Missing native exact input table')
     for term in ['label.py','Untitled','TypeError','MiX  Case','66.7','33.3','60k + H','H = 30k','UNKNOWN','not a CAPRI benchmark','Prefix caching'] :require(term in root,'Essential native meaning missing: '+term)
@@ -49,7 +49,13 @@ def check():
         require(not lesson.get('static_only') and not lesson.get('static_layouts'),'Support animation still gated off')
         require(lesson['fps']==lesson['source_fps']==30 and lesson['duration_ms']==lesson['source_duration_ms'],'Source support pace changed')
         for layout in ['support','support-wide']:require(name+'-'+layout+'.gif' in root,'Mobile/desktop normal support must animate')
-    require('Agentic Loop Prompting' in root and root.count('/identity.svg')==6,'Requested identity missing')
+    require('Agentic Loop Prompting' in root and root.count('/identity.svg')==0,'Requested identity missing')
+    companion=(ROOT/'showcase/capri/source-match/companion/index.html').read_text()
+    for text in [root,static,companion]:
+        require(not re.search(r'(?:identity(?:-mobile)?\.svg|story-identity)',text),'Detached identity strip remains')
+    for name in ['hero.svg','hero-overlay.svg']:
+        text=(ROOT/'showcase/capri'/name).read_text()
+        require(text.count('id="hero-subtitle"')==1 and 'AGENTIC LOOP PROMPTING' in text,'In-art subtitle missing')
     families={f for lesson in config['lessons'].values() for f in lesson['families']};require(families=={'sharks','horizon','hands','rain','dots','cat','stack'},'Source family lost')
     records=[];alpha_samples=0;selected=[]
     for name,lesson in config['lessons'].items():
@@ -78,7 +84,7 @@ def check():
             records.append({'lesson':name,'layout':layout,'size':size,'bytes':gif.stat().st_size,'duration_ms':sum(durations),'distinct_states':len(states),'sample_fps':lesson['fps']})
     manifest=json.loads((STORY/'BUILD_MANIFEST.json').read_text())
     for item in manifest['files']:require(sha(STORY/item['path'])==item['sha256'],'Story manifest mismatch: '+item['path'])
-    hero=ROOT/'showcase/capri/hero.gif';unique={p.resolve() for p in [hero,*selected,STORY/'separator.gif',STORY/'identity.svg']};counted=[hero,*selected,STORY/'separator.gif',STORY/'separator.gif',*[STORY/'identity.svg']*6]
+    hero=ROOT/'showcase/capri/hero.gif';unique={p.resolve() for p in [hero,*selected,STORY/'separator.gif']};counted=[hero,*selected,STORY/'separator.gif',STORY/'separator.gif']
     return {'status':'PASS','evidence_class':'ILLUSTRATIVE_INPUTS_NOT_MODEL_RUN','main_reference_families':sorted(families),'root_media_unique_bytes':sum(p.stat().st_size for p in unique),'root_media_occurrence_bytes':sum(p.stat().st_size for p in counted),'root_selections':[str(p.relative_to(ROOT)) for p in selected],'actor_alpha_samples':alpha_samples,'assets':records,'scope':'Actual output dimensions/caps, math, preserved source clocks, decoded cadence and full-cycle alpha bounds. Not physical display, native qualification or human/perceptual acceptance.'}
 if __name__=='__main__':
     try:result=check()

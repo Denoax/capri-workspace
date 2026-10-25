@@ -1,3 +1,17 @@
+# V8 hero and separator correction
+
+V8 supersedes the rejected V7 detached identity strips: none remain on active routes. The native project name and explanation remain. One AGENTIC LOOP PROMPTING subtitle is outlined from the original bundled Barlow Condensed ExtraBold Italic font inside the original 1400×480 hero. Its size55, baseline415 and visible-left52.83 align with CAPRI; conservative diagonal clearance is31.426px. The unmodified V7 hero SVG, overlay, PNG and GIF are pinned in showcase/capri/sources/hero-v7/. Original OFL/source-rights notices remain.
+
+Run tools/build_capri_presentation.py to rebuild the hero only. It overlays the authored glyphs on pinned decoded frames, preserving the original palette indices outside the glyph mask, 1000×343 delivery,48frames and4000ms timing. Workflow/social and lesson media are not rerendered in this correction. tools/check_capri_hero.py independently checks all frames, unchanged regions, static poster and original identities.
+
+The separator retains1200×48 logical geometry and the same display cap, with2400×96 encoded delivery. The finite wake grows192→288logicalpx (1.5×); a smooth color transition spans the trailing192px. It uses a fixed128-tone red/green palette without dithering, supersampled geometry, binary GIF transparency and disposal2. No background matte is encoded. GIF alpha cannot retain partial coverage; the2× delivery improves edge sampling at the intended display sizes. It retains200distinct20msframes and a4000ms loop. Normal routes use GIF; reduced/static use the matching decoded poster. Run tools/build_capri_separator.py and tools/check_capri_separator.py.
+
+Regenerate the companion, README/static/docs and manifests with tools/build_capri_story.py, tools/build_capri_story_readme.py and tools/build_capri_source_match_manifest.py. Existing lesson exports and their timing records are reused byte-for-byte. The original tools/export_capri_story.py remains available when changing lesson source; it is not needed for strip removal.
+
+Reference: the supplied user separator screenshot and original hero lettering. Primary implementation documentation: [fontTools SVGPathPen](https://fonttools.readthedocs.io/en/latest/pens/svgPathPen.html), [Pillow GIF](https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#gif). These describe APIs/encoding limits; actual delivered pixels and playback require separate review. Human visual approval, authenticated hosted/device checks, and prior performance limitations remain separate from technical success.
+
+## Historical V7 and earlier records
+
 # CAPRI — Agentic Loop Prompting: V7 motion and identity
 
 V7 reopens the handoff/checking pair, divider, support animation and positioning requested after V6. Handoff/checking now share the700×600 desktop panel grammar and readable480×640 mobile variants. Persistent unboxed anchors retain request/correction, source, scope/checks and the findings/human-decision chain; source contact and cat eye anchors remain intact. Other approved V6 artwork and geometry are unchanged.

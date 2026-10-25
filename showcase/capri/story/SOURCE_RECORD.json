@@ -1,7 +1,7 @@
 {
-  "base": "114c24e56586aa82c4be696feaa3d80e8926d29f",
-  "handoff_sha256": "d8db5db1f2455f91c72cd917322c36cc8a2dee5fadc3d976d6b93679be2d4a00",
-  "method": "V7 handoff/checking reflow, authored separator, restored source support motion and shared identity; other V6 art preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
+  "base": "fd8d198f3c24483cebef9b4bff0daa10f44eabf8",
+  "handoff_sha256": "345371973a09ed0a4bf7cc2729ed0e96f5bae518e2b53146cfae0a91a001c305",
+  "method": "V8 removes rejected detached strips, integrates original-Barlow hero subtitle and lengthens/grades the separator; V7 lessons preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
   "lessons": {
     "workflow": {
       "members": [
@@ -238,7 +238,7 @@
     "height": 48,
     "period_ms": 4000,
     "fps": 50,
-    "wake_px": 192,
+    "wake_px": 288,
     "track_y": 24,
     "track_width": 2,
     "arrow_length": 24,
@@ -248,29 +248,18 @@
     "poster_frame": 100,
     "normal": "separator.gif",
     "poster": "separator.png",
-    "method": "Periodic authored arrow/wake; full red baseline, finite wrapped green wake. Transparent palette index0, disposal2."
+    "method": "2x transparent GIF from supersampled geometry; fixed 128-tone red/green palette, no dithering. Smoothstep color ramp over trailing two-thirds of a finite periodic 288px wake; binary GIF alpha, no matte.",
+    "delivery_scale": 2,
+    "supersample": 4,
+    "fade_fraction": 0.6666666666666666
   },
   "identity": {
     "display_name": "CAPRI \u2014 Agentic Loop Prompting",
     "description": "Agentic Loop Prompting for Codex: focused contexts for planning, implementation and review, explicit handoffs, and evidence before integration.",
-    "pink": "#ff1265",
-    "green": "#28fb86",
-    "ink": "#100a19",
-    "wide": [
-      900,
-      48
-    ],
-    "mobile": [
-      320,
-      78
-    ],
-    "mobile_cap": 320,
-    "wide_cap": "100%",
-    "font_capri": "Manrope",
-    "font_method": "Bundled Manrope and Inter variable fonts, embedded in script-free SVG; OFL source notices retained."
+    "placement": "One outlined subtitle within the original hero; no detached strips."
   },
   "format_file": "format.json",
-  "format_sha256": "23fa82004522ac6c30fe176402ceae2f55064d3ed6f309f9cc10c7cbaa0f9d3b",
+  "format_sha256": "718185643e816a6061e5bbb06f8d5f6b53f474b29f0f6ac153bad8d5cb7d15f3",
   "annotation_source": {
     "packet_sha256": "d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b",
     "authority": "Four original orange-marked screenshots; coordinates are cropped screenshot pixels, not CSS positions.",
