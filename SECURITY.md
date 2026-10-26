@@ -17,5 +17,5 @@ without its saved creation identity. Uncertain effects require reconciliation,
 not automatic retry. Reconnect and server liveness do not establish completion.
 
 Report vulnerabilities privately to the project owner using an existing trusted
-channel. No public issue tracker or private-reporting endpoint is provisioned by
-this candidate. Public visibility and licensing require later human decisions.
+channel. The owner authorized public visibility on 25 October 2026. Code licensing
+remains pending.

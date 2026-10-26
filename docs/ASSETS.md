@@ -1,6 +1,10 @@
 # Character and display sources
 
-This private repository follows Mani's supplied V3 composition. Actual Capri footage, eyes, jaw, magenta silhouette and long hands define the first image. The previous abstract graphics and the provisional V2 two-panel/head-sprite direction are not used. No generated media, synthetic substitute character or persistent face tearing is included.
+The active presentation follows the owner-approved V11 composition. Original Capri footage, eyes, jaw, magenta silhouette and city scene define the hero. V9's generated portrait and generation record remain inactive history; they are not used by the current banner. This publication adds no generated media.
+
+## Public visibility — 2026-10-25
+
+The owner approved the V11 presentation and explicitly requested public repository visibility and a linked GitHub profile banner. Historical source/build notes describe the earlier private-review stage. The existing source credits, font licences, asset-rights qualifications and pending code-licence choice remain unchanged; this visibility decision does not create a redistribution grant or runtime qualification.
 
 ## Selected footage
 
@@ -9,7 +13,7 @@ Only two sources from the larger research collection are shipped here. The colle
 - **Hero — source 19, BluRei:** [original Tenor page](https://tenor.com/view/cyberpunk-2077-cyberpunk-cyberpunk-edgerunners-capri-gif-3999370720653516186). Actual 498×281 rendition, 120 frames, 4 seconds. Source acting and complete source-image box are retained beneath the specified diagonal composition. No uploader mark is deliberately erased. The full source is in [sources](../showcase/capri/sources/capri-19.gif).
 - **Workflow — source 12, emdzejus:** [original Tenor page](https://tenor.com/view/cyberpunk-cyberpunk-edgerunners-cyberpunk-2077-capri-capricorn-gif-3649282024278917159). Actual 498×281 rendition, 11 frames, 1.1 seconds; the supplied representative still provides the eye/face edge. [Full source](../showcase/capri/sources/capri-12.gif).
 
-Uploader credit identifies the upload, not ownership of the underlying anime. Character footage belongs to the relevant creators/rights holders. No asset-specific public software-brand redistribution grant is established. The consolidated repository stays private; unclear rights do not trigger a character-free substitute. No creator has been contacted.
+Uploader credit identifies the upload, not ownership of the underlying anime. Character footage belongs to the relevant creators/rights holders. No asset-specific public software-brand redistribution grant is established. The owner approved public visibility on 25 October 2026; this does not establish additional media redistribution rights. No creator has been contacted.
 
 ## Composition and editable sources
 
@@ -46,7 +50,7 @@ The identity builder requires Pillow and fontTools in a media-only environment. 
 
 ## Source-match presentation candidate
 
-The approved first three-panel comic, Manrope/Inter typography and seven source treatments are implemented separately from the preserved banner and runtime. [Source-to-implementation, notices, acting and rebuild record](SOURCE_MATCH.md). New reference sources are registered separately; the original hero/source selection remains unchanged. Five panels are footage composites; sharks and horizon use actual supplied native source. Unresolved rights remain recorded and the repository stays private.
+The approved first three-panel comic, Manrope/Inter typography and seven source treatments are implemented separately from the preserved banner and runtime. [Source-to-implementation, notices, acting and rebuild record](SOURCE_MATCH.md). New reference sources are registered separately; the original hero/source selection remains unchanged. Five panels are footage composites; sharks and horizon use actual supplied native source. Unresolved rights remain recorded; public visibility does not grant additional media rights.
 
 The [V3 story record](VISUAL_STORY.md) connects the preserved assets to the current explanatory compositions; no new generated media is used.
 
