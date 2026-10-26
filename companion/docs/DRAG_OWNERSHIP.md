@@ -15,10 +15,11 @@ Each helper belongs to one gesture epoch; old data/exit callbacks cannot cancel 
 new gesture. It is stopped on every end and has a parent-death signal. No helper
 is added to idle operation. Tracing is off by default.
 
-The native layer surface remains bounded. Expanding it during an active grab
+The native layer surface remains bounded; its captured canvas includes the actor
+root and frozen painted footprint so edge clamping retains native input. Expanding it during an active grab
 caused early release on the installed Qt/Quickshell/Hyprland stack. Native-global
 input allows bounded surface repositioning without using those changing margins
-as input coordinates. A captured actor-sized native hit rectangle prevents animated alpha holes from
+as input coordinates. A fixed captured actor-sized canvas and native hit rectangle prevents animated alpha holes from
 ending the held grab; idle input returns to the existing alpha regions. No
 full-output input region is introduced. Speech controls are hidden during a
 grab without changing the stored draft and return after capture ends.
@@ -27,7 +28,9 @@ A moved release sends a bounded control message to its helper and waits for a
 sample acquired after that message, with a 50 ms deadline, before saving once.
 Already queued pre-release samples cannot complete release. Cancel, hide, lock, core disconnect, pointer loss and graceful shell
 destruction retain the last valid placement and revoke capture. A changed/lost
-output discards that gesture save. Cross-display transfer is not implemented:
+output discards that gesture save, aborts recovery, then resynchronizes and clamps
+the placement on the remaining output. Same-screen dimension changes and external
+IPC placement also abort recovery before clamping and saving. Cross-display transfer is not implemented:
 reaching another output ends cleanly at the captured footprint boundary. Abrupt
 process kill cannot save an in-flight gesture; the last saved placement survives.
 A moved end suppresses automatic cue changes through the bounded recovery clip,

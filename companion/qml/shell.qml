@@ -66,10 +66,17 @@ ShellRoot {
     property real bubbleX: clamp(bubbleLeft ? actorX - bubbleWidth - 22 : actorX + actorWidth + 22, 12, (currentScreen?.width || 1000) - bubbleWidth - 12)
     property real bubbleY: clamp(mouthY - bubble.height / 2, 12, (currentScreen?.height || 800) - bubble.height - 12)
     property bool bubbleVisible: !position.captured && (bubbleOpen || replyOpen || busy || noticeActive)
-    property real surfaceLeft: Math.max(0, Math.min(actorX + actor.paintBounds.x, bubbleVisible ? bubbleX - 8 : actorX + actor.paintBounds.x) - 8)
-    property real surfaceTop: Math.max(0, Math.min(actorY + actor.paintBounds.y, bubbleVisible ? bubbleY : actorY + actor.paintBounds.y) - 8)
-    property real surfaceRight: Math.max(actorX + actor.paintBounds.x + actor.paintBounds.width, bubbleVisible ? bubbleX + bubbleWidth + 8 : actorX + actor.paintBounds.x + actor.paintBounds.width) + 8
-    property real surfaceBottom: Math.max(actorY + actor.paintBounds.y + actor.paintBounds.height, bubbleVisible ? bubbleY + bubble.height : actorY + actor.paintBounds.y + actor.paintBounds.height) + 8
+    readonly property var surfaceActorBounds: {
+        if (!position.model.capture)
+            return [actor.paintBounds.x, actor.paintBounds.y, actor.paintBounds.width, actor.paintBounds.height];
+        const b = position.model.capture.footprint;
+        const left = Math.min(0, b[0]), top = Math.min(0, b[1]);
+        return [left, top, Math.max(actorWidth, b[0] + b[2]) - left, Math.max(actorHeight, b[1] + b[3]) - top];
+    }
+    property real surfaceLeft: Math.max(0, Math.min(actorX + surfaceActorBounds[0], bubbleVisible ? bubbleX - 8 : actorX + surfaceActorBounds[0]) - 8)
+    property real surfaceTop: Math.max(0, Math.min(actorY + surfaceActorBounds[1], bubbleVisible ? bubbleY : actorY + surfaceActorBounds[1]) - 8)
+    property real surfaceRight: Math.max(actorX + surfaceActorBounds[0] + surfaceActorBounds[2], bubbleVisible ? bubbleX + bubbleWidth + 8 : actorX + surfaceActorBounds[0] + surfaceActorBounds[2]) + 8
+    property real surfaceBottom: Math.max(actorY + surfaceActorBounds[1] + surfaceActorBounds[3], bubbleVisible ? bubbleY + bubble.height : actorY + surfaceActorBounds[1] + surfaceActorBounds[3]) + 8
     property string bubbleText: noticeText || partial || (snapshot.notice?.text || latestReply() || "What's on your mind?")
     property bool pointerValid: false
     property real pointerX: 0
@@ -246,7 +253,10 @@ ShellRoot {
                 moved: moved,
                 reason: reason
             });
-            if (moved)
+            if (["output-change", "output-changed", "output-unavailable"].includes(reason)) {
+                root.abortRecovery();
+                root.resyncPlacement();
+            } else if (moved)
                 Qt.callLater(() => {
                     if (!position.captured && !root.presentationPaused)
                         actor.play("drag_release_recover");
@@ -415,15 +425,39 @@ ShellRoot {
         placement.actorY = actorY;
         placement.output = currentScreen ? currentScreen.name : "";
     }
+    function abortRecovery() {
+        if (actor.recovering) {
+            actor.recovering = false;
+            actor.freeze();
+        }
+    }
+    function resyncPlacement() {
+        Qt.callLater(() => {
+            if (!position.captured) {
+                root.abortRecovery();
+                keepOnScreen();
+                savePlacement();
+            }
+        });
+    }
+    Connections {
+        target: root.currentScreen
+        function onWidthChanged() {
+            position.end("output-changed", false);
+            root.resyncPlacement();
+        }
+        function onHeightChanged() {
+            position.end("output-changed", false);
+            root.resyncPlacement();
+        }
+    }
     function chooseOutput(name) {
         position.end("output-change", false);
         travel.stop();
+        abortRecovery();
         selectedOutput = name;
         placement.output = name;
-        Qt.callLater(() => {
-            keepOnScreen();
-            savePlacement();
-        });
+        resyncPlacement();
     }
     function retreat() {
         if (position.captured)
@@ -437,11 +471,9 @@ ShellRoot {
     }
     onCurrentScreenChanged: {
         position.end("output-change", false);
+        abortRecovery();
         losePointer(false);
-        Qt.callLater(() => {
-            keepOnScreen();
-            savePlacement();
-        });
+        resyncPlacement();
     }
     onProfileChanged: if (profile.pinned || profile.quiet || profile.reduced_motion) {
         travel.stop();
@@ -637,13 +669,13 @@ ShellRoot {
                 item: bubble
                 intersection: bubble.visible ? Intersection.Combine : Intersection.Subtract
             }
-            // Keep the captured, actor-sized native hit frame while its rig animates.
-            // The live alpha regions resume sole ownership immediately on release.
+            // This bounded canvas includes the captured pointer at clamped edges.
+            // Idle immediately returns to the live alpha input regions below.
             Region {
-                x: actor.x + (position.model.capture ? position.model.capture.hit[0] : 0)
-                y: actor.y + (position.model.capture ? position.model.capture.hit[1] : 0)
-                width: position.model.capture ? position.model.capture.hit[2] : 0
-                height: position.model.capture ? position.model.capture.hit[3] : 0
+                x: actor.x + root.surfaceActorBounds[0]
+                y: actor.y + root.surfaceActorBounds[1]
+                width: position.captured ? root.surfaceActorBounds[2] : 0
+                height: position.captured ? root.surfaceActorBounds[3] : 0
             }
             Region {
                 item: stopButton
@@ -963,6 +995,9 @@ ShellRoot {
         }
         function placement(x: int, y: int): void {
             travel.stop();
+            if (position.captured)
+                return;
+            root.abortRecovery();
             if (!position.place(x, y, "ipc"))
                 return;
             root.keepOnScreen();

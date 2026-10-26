@@ -246,7 +246,13 @@ Item {
             cue();
     }
     onReadingChanged: cue()
-    onOwnerInteractingChanged: cue()
+    onOwnerInteractingChanged: {
+        // A late hover exit after release must not choose/reclamp a new idle clip.
+        if (!ownerInteracting && state === "idle" && !reading && !reviewing)
+            scheduleRest();
+        else
+            cue();
+    }
     onPausedChanged: {
         if (paused)
             settle();
