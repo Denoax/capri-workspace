@@ -30,7 +30,9 @@ Already queued pre-release samples cannot complete release. Cancel, hide, lock, 
 destruction retain the last valid placement and revoke capture. A changed/lost
 output discards that gesture save, aborts recovery, then resynchronizes and clamps
 the placement on the remaining output. Same-screen dimension changes and external
-IPC placement also abort recovery before clamping and saving. Cross-display transfer is not implemented:
+IPC placement also abort recovery before clamping and saving. A character-size
+change cancels capture without a gesture save, then clamps the resized actor.
+Aborting recovery restarts eligible idle scheduling after resynchronization. Cross-display transfer is not implemented:
 reaching another output ends cleanly at the captured footprint boundary. Abrupt
 process kill cannot save an in-flight gesture; the last saved placement survives.
 A moved end suppresses automatic cue changes through the bounded recovery clip,

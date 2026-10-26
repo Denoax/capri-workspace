@@ -253,7 +253,7 @@ ShellRoot {
                 moved: moved,
                 reason: reason
             });
-            if (["output-change", "output-changed", "output-unavailable"].includes(reason)) {
+            if (["output-change", "output-changed", "output-unavailable", "size-change"].includes(reason)) {
                 root.abortRecovery();
                 root.resyncPlacement();
             } else if (moved)
@@ -429,6 +429,7 @@ ShellRoot {
         if (actor.recovering) {
             actor.recovering = false;
             actor.freeze();
+            actor.scheduleRest();
         }
     }
     function resyncPlacement() {
@@ -475,13 +476,22 @@ ShellRoot {
         losePointer(false);
         resyncPlacement();
     }
-    onProfileChanged: if (profile.pinned || profile.quiet || profile.reduced_motion) {
-        travel.stop();
-        pointerApproach.stop();
-        pointerRetreat.stop();
+    onProfileChanged: {
+        if (position.model.capture) {
+            const height = Math.min(profile.character_size || 280, currentScreen ? currentScreen.height - 80 : 280);
+            if (Math.abs(height - position.model.capture.actorHeight) > .01)
+                position.end("size-change", false);
+        }
+        if (profile.pinned || profile.quiet || profile.reduced_motion) {
+            travel.stop();
+            pointerApproach.stop();
+            pointerRetreat.stop();
+        }
     }
-    onActorWidthChanged: keepOnScreen()
-    onActorHeightChanged: keepOnScreen()
+    onActorWidthChanged: if (!position.captured)
+        resyncPlacement()
+    onActorHeightChanged: if (!position.captured)
+        resyncPlacement()
     onPresentationPausedChanged: if (presentationPaused) {
         position.end(snapshot.locked ? "lock" : "hidden", true);
         travel.stop();
