@@ -1,0 +1,17 @@
+{
+  "snapshot_files": 92541,
+  "file_bytes": 36915175475,
+  "unique_archive_objects": 25749,
+  "unique_archive_bytes": 15723371386,
+  "aliases": {
+    "git": 24199,
+    "duplicate": 42587
+  },
+  "excluded_records": 355,
+  "excluded_reasons": {
+    "private runtime, browser profile or reproducible cache": 221,
+    "backup task output excluded from its own snapshot": 1,
+    "browser profile": 129,
+    "private state/credential filename or unrelated shared Git bundle": 4
+  }
+}

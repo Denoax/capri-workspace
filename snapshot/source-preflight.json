@@ -1,0 +1,9 @@
+{
+  "refs": 33,
+  "unique_blobs": 1419,
+  "unique_blob_bytes": 564071862,
+  "credential_signature_findings": [],
+  "source_status": "READY",
+  "destination": "https://github.com/Denoax/capri-workspace",
+  "private": true
+}

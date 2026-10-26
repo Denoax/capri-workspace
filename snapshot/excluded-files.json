@@ -1,0 +1,1777 @@
+[
+  {
+    "path": "handoffs/repo-first-v2-01a1688d/CAPRI_REPO_FIRST_V2/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "handoffs/desktop-v2-01a16d59/CAPRI_DESKTOP_V2_AUTONOMY/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/github-backup-20261026-01a16d59",
+    "reason": "backup task output excluded from its own snapshot",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/format-v4-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/panel-sizing-v6-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/panel-sizing-v6-01a1688d/owned-probe-e3q4o8l8",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/compact-v5-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v7-01a1688d/browser-v6-d0pa_m30",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v7-01a1688d/browser-v6-6z5d2oyw",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v7-01a1688d/browser-v6-7th0fzrf",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v7-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v7-01a1688d/alpha-playback/browser-extra-_rzvzuty",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v7-01a1688d/alpha-playback/browser-extra-8jrr06qq",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v7-01a1688d/source-playback/browser-extra-03p9zen3",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/hero-trail-v8-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v4-01a16d59/private-baseline-drag",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v4-01a16d59/private-candidate-drag",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v4-01a16d59/private-withheld",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v8-01a1688d/browser-v8-inqc2eqj",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v8-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v8-01a1688d/browser-v8-w5ag5km5",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v8-01a1688d/playback-wide/browser-v6-ggzr3exk",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v8-01a1688d/playback-portrait-final/browser-v6-o6_orgqw",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v8-01a1688d/playback-portrait/browser-v6-dc6022tn",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v8-01a1688d/playback-wide-final/browser-v6-dfvynq3y",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/motion-identity-v7-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/split-restore-v10-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/source-match-v1-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l6c",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-l6-delivery-proactive-30m",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-roam-probe",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-pre-v2-backup",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-fresh-recovery-source",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l1c",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-l6-calm-allocator",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-l6-final-calm-30m",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l5a",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-native-test",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-playback-proof",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-live-engine-edit",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-measured-l1",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-l6-delivery-calm-30m",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l3a",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l1b",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-bootstrap-before-final",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l1",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-deliberate-recovery-source",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l6a",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l6b",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-proof-final-ec",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-live-engine-arithmetic",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-live-native-v2-final",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-l6-final-proactive-30m",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-engine-spike",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-live-native-v2",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-proof-final-ec-2",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-l6-calm-preflight",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-proof-final-228",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-pre-v2-cutover",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-controlled-l3b",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-proof-final-ec-3",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-l6-calm-long",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/private-live-test-state",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/private-test-config",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/private-test-state",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/pkg_resources/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/tomli_w/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/pygments/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/pygments/styles/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/pygments/lexers/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/pygments/formatters/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/pygments/filters/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/urllib3/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/urllib3/util/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/urllib3/contrib/emscripten/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/urllib3/http2/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/cachecontrol/caches/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/distro/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/truststore/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/distlib/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/msgpack/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/requests/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/tomli/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/packaging/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/packaging/licenses/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/idna/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/resolvelib/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/resolvelib/resolvers/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/platformdirs/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/certifi/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/pyproject_hooks/_in_process/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/rich/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/resolution/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/resolution/resolvelib/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/resolution/legacy/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/metadata/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/metadata/importlib/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/distributions/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/network/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/commands/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/build_env/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/models/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/cli/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/vcs/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/utils/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/operations/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/operations/install/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/operations/build/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/req/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/locations/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_internal/index/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/websockets/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/websockets/asyncio/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/websockets/extensions/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/websockets/sync/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/websockets/trio/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/websockets/legacy/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v5-658c788/private",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/frame-unify-v11-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-same-output-retry-software",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-same-output-rhi",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-native-v3review01",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-sequential-renderer-software",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-withheld-segments",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-native-v3nav02",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-v3-ab-software",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-withheld-ui-inspection",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-sequential-renderer-retry-rhi",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-sequential-renderer-retry-software",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-native-v3ui04",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-live-v3",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-same-output-software",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-l1-v2-software",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-native-v3ui03",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-v3-final-active-retry-30m",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-native-v3final01",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-withheld-native-final-source",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-v3-final-active-30m",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-v3-ab-software-qualified",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-preserved-native-slice-input",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-native-v3ui05",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-native-ui-02",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-same-output-retry-rhi",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-native-slice",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-withheld-native-final-playback",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-l1-v2-rhi",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-v3-cutover",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-v3-final-calm-30m",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-v3-ab-rhi",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/desktop-v3-01a16d59/private-v3-final-ui-cutover",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/visual-story-v3-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/cloud-takeover-v9-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v6-01a1688d/browser-v6-t9kzztty",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v6-01a1688d/browser-v6-4gx5va7q",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v6-01a1688d/browser-v6-w32b123z",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v6-01a1688d/browser-v6-nm8ut0bg",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v6-01a1688d/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/v6-01a1688d/browser-v6-1faausrg",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/public-profile-20261025-01a1688d/profile-browser/owned-profile-sg7pujiu",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/diagnostic-quant/owned-story-p_ie8k9p",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/quantitative-loop-final/owned-story-q9k2hnk4",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-kzuvl1mm",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-87hyujfa",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-djqbyfgc",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-2rdjtdq6",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-irtozkwf",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-mxoonisj",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-9rh0u2wj",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-eer0_jep",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/browser/owned-profile-xy1a6nfw",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/final-export/owned-story-oae9aq91",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/portable-browser/owned-portable-e0srsd2n",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/performance/owned-encoded-control-8yukgwgk",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/performance/baseline-corrected/owned-profile-scvngk84",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/performance/candidate-final/owned-profile-pcqk_gkv",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/performance/candidate/owned-profile-_dl4lavh",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/performance/baseline/owned-profile-f7ywspyw",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/performance/baseline-graph-steady/owned-profile-yfpo4532",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/first-stills/owned-story-wvb5tqtl",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/final-media-02/owned-story-e9_gnoc8",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/special-browser/owned-special-0e1u940g",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/portable-clean-extraction/worktrees/format-v4-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/composed-stills/owned-story-zsg931o0",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/reproduction-clean/export-evidence/owned-story-u8nwglls",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/format-v4-01a1688d/playback/owned-playback-mnq0_x3o",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/owned-inspect-vo1f4jmi",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/owned-layout-b5c0v1dk",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/owned-inspect-1uncmvnd",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/owned-inspect-55ahbshi",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/owned-layout-rwzm8wea",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/validated-media/owned-story-rgdxzcq9",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/browser/owned-matrix-sstlvx4n",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/browser/owned-profile-uqavkqca",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/support-bounds/owned-story-6rmmphuf",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/portable-browser/owned-portable-m6x_ufri",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/first-stills/owned-story-6elxailn",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/refined-stills/owned-story-5t8bcpob",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/special-browser/owned-special-_vt4sx32",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/portable-final-browser/owned-portable-teopweet",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/portable-clean-extraction/worktrees/panel-sizing-v6-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/portable-final-extraction/worktrees/panel-sizing-v6-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/reproduction-clean/export-evidence/owned-story-u7ipl8z8",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/validated-media-final/owned-story-ntjyjc1q",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/panel-sizing-v6-01a1688d/playback/owned-playback-azuuu5ov",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/owned-inspect-m29iafxg",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/owned-layout-selfivxd",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/owned-inspect-3hp6c8xb",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/owned-inspect-irkaobcv",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/owned-layout-d56llpoz",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/validated-media/owned-story-ii_ylg_g",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/support-stills/owned-story-5k_thyd_",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/reproduction-1105402/export-evidence/owned-story-cx6v5s32",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/reproduction-1105402/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/settled-stills/owned-story-xe_0fibb",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/browser/owned-profile-22wn0o80",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/browser/owned-matrix-c5285jtf",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/browser/owned-profile-ngs79moc",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/portable-browser/owned-portable-_0tkafhx",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/first-stills/owned-story-r4gd_hfs",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/refined-stills/owned-story-8_tdgggo",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/special-browser/owned-special-xy7fx52a",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/special-browser/owned-special-qxftmex5",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/portable-clean-extraction/worktrees/compact-v5-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/reproduction-clean/export-evidence/owned-story-feo3gryc",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/compact-v5-01a1688d/playback/owned-playback-vegliait",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/owned-layout-2671od3n",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/browser/owned-matrix-wfy3t8gu",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/browser/owned-profile-gbcpqph5",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/browser/owned-profile-4dqa_bn0",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/browser/owned-profile-t92spst8",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/browser/owned-profile-5480u11l",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/special-browser/owned-special-dytd2gbf",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/portable-final-browser/owned-portable-_me30i50",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/portable-final-extraction/worktrees/hero-trail-v8-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/playback/owned-playback-uc807lt4",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/playback/owned-playback-8g1jcj6p",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/hero-trail-v8-01a1688d/playback/owned-playback-8fotovg7",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/owned-inspect-i7mt7jye",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/owned-layout-jouw67zu",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/validated-media/owned-story-37xwc5zm",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/browser/owned-matrix-jab_pdjf",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/browser/owned-profile-g62wy0i4",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/browser/owned-matrix-78o0k7eo",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/first-stills/owned-story-kwue3btk",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/special-browser/owned-special-uegno6w4",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/portable-final-browser/owned-portable-a6hgbl1o",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/portable-final-extraction/worktrees/motion-identity-v7-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/reproduction-clean/export-evidence/owned-story-y3bipbtm",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/playback/owned-playback-qtdf6r4d",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/playback/owned-playback-n9nfy39k",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/motion-identity-v7-01a1688d/playback/owned-playback-l88ouvg_",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/browser/owned-matrix-9brvo480",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/portable-final-hero-browser/owned-hero-hyve_dyb",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/portable-final-browser/owned-portable-lv6pzb_y",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/hero-browser/owned-hero-h73lz8fl",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/portable-final-extraction/worktrees/split-restore-v10-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/playback/owned-playback-kg8q5xov",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/playback/owned-playback-b22aaxzn",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/playback/owned-playback-ctnvgsbv",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/playback-initial-palette/owned-playback-8j9wapbs",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/playback-initial-palette/owned-playback-66zcvghz",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/split-restore-v10-01a1688d/playback-initial-palette/owned-playback-nx5mza36",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/cat-eye-final/capri-export-vs8o4x92",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/cat-anchored/capri-export-ym0_3kzz",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/final-motion/capri-export-8vih0y1s",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/alpha-final/capri-export-ezk38yke",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/settled-packets/capri-export-0egq11d_",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/portable-final-extracted/worktrees/source-match-v1-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/browser/owned-profile-i2bsvstl",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/browser/owned-profile-fcko04w3",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/browser/owned-profile-obbj3lvg",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/browser/owned-profile-_09t54i7",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/browser/owned-profile-j5_8romb",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/browser/owned-profile-l8fn8wd5",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/browser/owned-profile-2305fi53",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/browser/owned-profile-10brsvgh",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/cat-seek-fixed/capri-export-7e1lcd8q",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/reproduction-clean-02/exports/capri-export-mjrg2wkw",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/reproduction-clean-02/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/cat-inspection-2/capri-export-r_wzrg22",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/cat-inspection/capri-export-_gob86ua",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/final-stills/capri-export-0iefhpaz",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/reproduction-clean-01/exports/capri-export-puf3lbvm",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/reproduction-clean-01/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/portable-final-browser/owned-portable-80oxucfv",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/still-build/capri-export-xc1h1skf",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/settled-packets-independent/capri-export-ibsi1jl3",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/alpha-export/capri-export-grbu12ot",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/refined-motion/capri-export-6x_ghj6n",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/playback/owned-playback-ike2bbr6",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/playback/owned-playback-_v20h5ul",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/source-match-v1-01a1688d/playback/owned-playback-5s7ee5n2",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/browser/owned-matrix-jlrhrhno",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/portable-final-hero-browser/owned-hero-fogui7xn",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/portable-final-browser/owned-portable-c4zq6z8k",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/hero-browser/owned-hero-d2tf1pd8",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/portable-final-extraction/worktrees/frame-unify-v11-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/playback/owned-playback-d_f1vtbs",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/playback/owned-playback-dasae_nk",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/frame-unify-v11-01a1688d/playback/owned-playback-tedbzwhg",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/context-legibility/owned-story-4te5hmwd",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/svg-contract-stills/owned-story-4s1j9b2y",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/browser/owned-profile-euq1z206",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/browser/owned-profile-szxs7qa1",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/browser/owned-profile-95qri4xw",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/context-wide-final/owned-story-qlbjjkxf",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/portable-browser/owned-portable-uqnu4esi",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/styled-stills/owned-story-66j92ad_",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/motion-plates/owned-story-5arlmzk2",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/first-stills/owned-story-tpwdnve0",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/context-final/owned-story-xwym40x7",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/special-browser/owned-special-wn85lj_5",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/context-layout/owned-story-q04hxrbs",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/portable-clean-extraction/worktrees/visual-story-v3-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/motion-plates-refined/owned-story-__fzirt9",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/motion-contexts/owned-story-hjawvo93",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/reproduction-clean/export-evidence/owned-story-_dzxvimf",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/visual-story-v3-01a1688d/playback/owned-playback-y0ptmmt4",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/owned-layout-pybxg0if",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/browser/owned-matrix-lytq9e7c",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/browser/owned-profile-uhyexat3",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/portable-final-hero-browser/owned-hero-9zi0khnp",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/portable-final-browser/owned-portable-hy9j8a2a",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/hero-browser/owned-hero-evnbr8x4",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/compact-512mb/offline-browser/owned-portable-catgr2kh",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/compact-512mb/extracted/worktrees/cloud-takeover-v9-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/compact-512mb/hero-browser/owned-hero-zwjt8ktk",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/portable-final-extraction/worktrees/cloud-takeover-v9-01a1688d/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/reproduction-clean/source/tools/__pycache__",
+    "reason": "private runtime, browser profile or reproducible cache",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/playback/owned-playback-qgnc30ls",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/playback/owned-playback-3it0gu79",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/playback/owned-playback-4onwnk3r",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/playback/owned-playback-avlzgv6j",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "evidence/cloud-takeover-v9-01a1688d/playback/owned-playback-eba2ec51",
+    "reason": "browser profile",
+    "bytes": 0
+  },
+  {
+    "path": "reviews/branch-retirement-20261024-01a1688d/original-branches.bundle",
+    "reason": "private state/credential filename or unrelated shared Git bundle",
+    "bytes": 366072450
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-test-env.json",
+    "reason": "private state/credential filename or unrelated shared Git bundle",
+    "bytes": 583
+  },
+  {
+    "path": "reviews/desktop-v2-01a16d59/private-native-scope-first.png",
+    "reason": "private state/credential filename or unrelated shared Git bundle",
+    "bytes": 227471
+  },
+  {
+    "path": "reviews/desktop-v1-01a16d59/checks-venv/lib/python3.14/site-packages/pip/_vendor/certifi/cacert.pem",
+    "reason": "private state/credential filename or unrelated shared Git bundle",
+    "bytes": 234354
+  }
+]

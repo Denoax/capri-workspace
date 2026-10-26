@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "refs_verified": 33,
+  "mismatches": [],
+  "v4_remote_sha": "0bd4a5c47e36a80b3635ccea13426f6d189c2662",
+  "destination": "https://github.com/Denoax/capri-workspace",
+  "private": true
+}
