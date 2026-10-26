@@ -69,6 +69,7 @@ FloatingWindow {
     Pane {
         anchors.fill: parent
         padding: 20
+        enabled: !owner.gestureActive
         font.family: 'Inter'
         font.pixelSize: 15 * (owner.profile.ui_text_scale || 100) / 100
         background: Rectangle {

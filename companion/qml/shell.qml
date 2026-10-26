@@ -7,6 +7,7 @@ import Quickshell.Io
 import Quickshell.Hyprland
 import "Theme.js" as Theme
 import "Pointer.js" as Pointer
+import "Position.js" as PositionAxis
 
 ShellRoot {
     id: root
@@ -33,7 +34,8 @@ ShellRoot {
     readonly property var character: actor
     property bool whyOpen: false
     property bool hovered: false
-    property bool dragging: false
+    readonly property bool dragging: position.dragging
+    readonly property bool gestureActive: position.captured
     property bool busy: snapshot.state === "thinking" || snapshot.state === "working"
     property bool fullscreen: Hyprland.monitors.values.find(m => m.name === currentScreen?.name)?.activeWorkspace?.hasFullscreen ?? false
     property bool attentionFullscreen: Hyprland.focusedWorkspace?.hasFullscreen ?? false
@@ -53,9 +55,9 @@ ShellRoot {
     property int lastReply: 0
     property string idleState: "idle"
     property var hitRects: []
-    property real actorX: placement.actorX
-    property real actorY: placement.actorY
-    property real actorHeight: Math.min(profile.character_size || 280, currentScreen ? currentScreen.height - 80 : 280)
+    readonly property real actorX: position.x
+    readonly property real actorY: position.y
+    property real actorHeight: position.model.capture ? position.model.capture.actorHeight : Math.min(profile.character_size || 280, currentScreen ? currentScreen.height - 80 : 280)
     property real actorWidth: actorHeight * 1856 / 1440
     property real mouthX: actorX + (bubbleVisible ? actor.neutralMouth.x : actor.mouth.x)
     property real mouthY: actorY + (bubbleVisible ? actor.neutralMouth.y : actor.mouth.y)
@@ -63,7 +65,7 @@ ShellRoot {
     property real bubbleWidth: Math.min(390, currentScreen ? currentScreen.width - 24 : 390)
     property real bubbleX: clamp(bubbleLeft ? actorX - bubbleWidth - 22 : actorX + actorWidth + 22, 12, (currentScreen?.width || 1000) - bubbleWidth - 12)
     property real bubbleY: clamp(mouthY - bubble.height / 2, 12, (currentScreen?.height || 800) - bubble.height - 12)
-    property bool bubbleVisible: bubbleOpen || replyOpen || busy || noticeActive
+    property bool bubbleVisible: !position.captured && (bubbleOpen || replyOpen || busy || noticeActive)
     property real surfaceLeft: Math.max(0, Math.min(actorX + actor.paintBounds.x, bubbleVisible ? bubbleX - 8 : actorX + actor.paintBounds.x) - 8)
     property real surfaceTop: Math.max(0, Math.min(actorY + actor.paintBounds.y, bubbleVisible ? bubbleY : actorY + actor.paintBounds.y) - 8)
     property real surfaceRight: Math.max(actorX + actor.paintBounds.x + actor.paintBounds.width, bubbleVisible ? bubbleX + bubbleWidth + 8 : actorX + actor.paintBounds.x + actor.paintBounds.width) + 8
@@ -76,7 +78,7 @@ ShellRoot {
     property real pointerMovedAt: 0
     property real lastPursuitAt: -100000
     property int pointerSamples: 0
-    property bool pointerEnabled: !actor.reviewing && !presentationPaused && !bubbleVisible && !hovered && !dragging && !busy && !profile.quiet && !profile.reduced_motion && !profile.pinned && profile.follow !== false
+    property bool pointerEnabled: !actor.recovering && !actor.reviewing && !presentationPaused && !bubbleVisible && !hovered && !position.captured && !busy && !profile.quiet && !profile.reduced_motion && !profile.pinned && profile.follow !== false
     function losePointer(retreatIfActive) {
         var wasValid = pointerValid;
         pointerValid = false;
@@ -122,6 +124,51 @@ ShellRoot {
         onRunningChanged: if (!running)
             root.losePointer(false)
     }
+    property var gestureReader: null
+    Component {
+        id: gestureReaderComponent
+        Process {
+            property int gestureEpoch
+            stdinEnabled: true
+            command: [Quickshell.env("CAPRI_PYTHON"), "-B", "-m", "capri.pointer", "--gesture", String(gestureEpoch)]
+            running: true
+            stdout: SplitParser {
+                onRead: data => {
+                    if (!position.captured || position.epoch !== gestureEpoch)
+                        return;
+                    try {
+                        position.sample(JSON.parse(data));
+                    } catch (error) {
+                        position.end("invalid-pointer", true);
+                    }
+                }
+            }
+            onExited: {
+                if (position.captured && position.epoch === gestureEpoch)
+                    position.end("pointer-exited", true);
+                destroy();
+            }
+        }
+    }
+    Timer {
+        interval: 4500
+        running: actor.recovering
+        onTriggered: {
+            actor.recovering = false;
+            actor.scheduleRest();
+        }
+    }
+    Timer {
+        interval: 50
+        running: position.releasePending
+        onTriggered: position.end("release-timeout", true)
+    }
+    Component.onDestruction: position.end("shutdown", true)
+    Timer {
+        interval: 300
+        running: position.captured && !position.model.capture?.frame
+        onTriggered: position.end("pointer-timeout", true)
+    }
     Timer {
         id: pointerApproach
         interval: 1100
@@ -165,6 +212,75 @@ ShellRoot {
         property string output: ""
         property real actorX: 100
         property real actorY: 420
+    }
+    PositionController {
+        id: position
+        Component.onCompleted: place(placement.actorX, placement.actorY, "restore")
+        onReleaseRequested: {
+            if (root.gestureReader)
+                root.gestureReader.write("release\n");
+        }
+        onCaptureStarted: epoch => {
+            actor.recovering = false;
+            root.gestureReader = gestureReaderComponent.createObject(root, {
+                gestureEpoch: epoch
+            });
+            travel.stop();
+            pointerApproach.stop();
+            pointerRetreat.stop();
+            root.losePointer(false);
+        }
+        onCaptureEnding: moved => actor.recovering = moved
+        onCaptureEnded: (epoch, moved, reason) => {
+            if (root.gestureReader) {
+                root.gestureReader.running = false;
+                root.gestureReader = null;
+            }
+            drag.moved = moved || reason !== "release";
+            if (reason !== "release") {
+                drag.enabled = false;
+                Qt.callLater(() => drag.enabled = true);
+            }
+            root.dragTrace("end", {
+                epoch: epoch,
+                moved: moved,
+                reason: reason
+            });
+            if (moved)
+                Qt.callLater(() => {
+                    if (!position.captured && !root.presentationPaused)
+                        actor.play("drag_release_recover");
+                    else
+                        actor.recovering = false;
+                });
+        }
+        onCommitRequested: (output, reason) => {
+            if (root.currentScreen?.name === output)
+                root.savePlacement();
+        }
+        onDiagnostic: (event, data) => root.dragTrace(event, data)
+    }
+    function dragTrace(event, data) {
+        if (Quickshell.env("CAPRI_DRAG_TRACE") !== "1")
+            return;
+        console.warn("CAPRI_DRAG " + JSON.stringify(Object.assign({
+            kind: event,
+            wall_ms: Date.now(),
+            anchor: [actorX, actorY],
+            epoch: position.epoch,
+            writer: position.model.writer,
+            captured: position.captured,
+            dragging: dragging,
+            pressed: drag.pressed,
+            clip: actor.clipId,
+            travel: travel.running,
+            output: currentScreen?.name,
+            dpr: currentScreen?.devicePixelRatio,
+            logicalOutput: [currentScreen?.width, currentScreen?.height],
+            surface: [surfaceLeft, surfaceTop, panel.width, panel.height],
+            bounds: [actor.bounds.x, actor.bounds.y, actor.bounds.width, actor.bounds.height],
+            saves: position.gestureSaves
+        }, data)));
     }
     FontLoader {
         source: "file://" + root.assets + "/fonts/Inter/Inter-Variable.ttf"
@@ -287,18 +403,20 @@ ShellRoot {
         }
     }
     function keepOnScreen() {
-        if (!currentScreen)
+        if (!currentScreen || position.captured || actor.recovering)
             return;
         var b = actor.paintBounds;
-        actorX = clamp(actorX, 8 - b.x, currentScreen.width - b.x - b.width - 8);
-        actorY = clamp(actorY, 8 - b.y, currentScreen.height - b.y - b.height - 8);
+        position.place(PositionAxis.axis(actorX, 8 - b.x, currentScreen.width - b.x - b.width - 8), PositionAxis.axis(actorY, 8 - b.y, currentScreen.height - b.y - b.height - 8), "bounds");
     }
     function savePlacement() {
+        if (position.captured || !currentScreen)
+            return;
         placement.actorX = actorX;
         placement.actorY = actorY;
         placement.output = currentScreen ? currentScreen.name : "";
     }
     function chooseOutput(name) {
+        position.end("output-change", false);
         travel.stop();
         selectedOutput = name;
         placement.output = name;
@@ -308,6 +426,8 @@ ShellRoot {
         });
     }
     function retreat() {
+        if (position.captured)
+            return;
         travel.stop();
         if (!currentScreen)
             return;
@@ -316,6 +436,7 @@ ShellRoot {
         travel.restart();
     }
     onCurrentScreenChanged: {
+        position.end("output-change", false);
         losePointer(false);
         Qt.callLater(() => {
             keepOnScreen();
@@ -330,6 +451,7 @@ ShellRoot {
     onActorWidthChanged: keepOnScreen()
     onActorHeightChanged: keepOnScreen()
     onPresentationPausedChanged: if (presentationPaused) {
+        position.end(snapshot.locked ? "lock" : "hidden", true);
         travel.stop();
         flushDraft();
     }
@@ -357,6 +479,7 @@ ShellRoot {
                 }) + "\n");
                 flush();
             } else {
+                position.end("disconnect", true);
                 root.snapshot = Object.assign({}, root.snapshot, {
                     locked: true
                 });
@@ -445,7 +568,7 @@ ShellRoot {
     Timer {
         interval: 88000
         repeat: true
-        running: !actor.reviewing && !root.presentationPaused && !root.replyOpen && !root.conversationOpen && !root.hovered && !root.profile.pinned && !root.profile.quiet && root.profile.roam !== false && !root.busy && root.snapshot.input_idle === true
+        running: !actor.recovering && !actor.reviewing && !root.presentationPaused && !root.replyOpen && !root.conversationOpen && !position.captured && !root.hovered && !root.profile.pinned && !root.profile.quiet && root.profile.roam !== false && !root.busy && root.snapshot.input_idle === true
         onTriggered: {
             travel.toX = root.actorX < root.currentScreen.width / 2 ? 16 : root.currentScreen.width - root.actorWidth - 16;
             travel.toY = root.clamp(root.actorY + (root.actorY > root.currentScreen.height / 2 ? -180 : 180), 16, root.currentScreen.height - root.actorHeight - 16);
@@ -457,20 +580,25 @@ ShellRoot {
         property real toX: 0
         property real toY: 0
         NumberAnimation {
-            target: root
-            property: "actorX"
+            target: position
+            property: "travelX"
             to: travel.toX
             duration: 1400
             easing.type: Easing.InOutCubic
         }
         NumberAnimation {
-            target: root
-            property: "actorY"
+            target: position
+            property: "travelY"
             to: travel.toY
             duration: 1400
             easing.type: Easing.InOutCubic
         }
-        onFinished: root.savePlacement()
+        onStarted: if (!position.prepareTravel())
+            stop()
+        onRunningChanged: if (!running)
+            position.traveling = false
+        onFinished: if (!position.captured && position.travelEpoch === position.model.epoch)
+            root.savePlacement()
     }
     FileView {
         path: root.assets + "/input-regions.json"
@@ -508,6 +636,14 @@ ShellRoot {
             Region {
                 item: bubble
                 intersection: bubble.visible ? Intersection.Combine : Intersection.Subtract
+            }
+            // Keep the captured, actor-sized native hit frame while its rig animates.
+            // The live alpha regions resume sole ownership immediately on release.
+            Region {
+                x: actor.x + (position.model.capture ? position.model.capture.hit[0] : 0)
+                y: actor.y + (position.model.capture ? position.model.capture.hit[1] : 0)
+                width: position.model.capture ? position.model.capture.hit[2] : 0
+                height: position.model.capture ? position.model.capture.hit[3] : 0
             }
             Region {
                 item: stopButton
@@ -569,50 +705,50 @@ ShellRoot {
             state: root.dragging ? "dragged" : root.snapshot.state === "idle" ? (root.replyOpen ? "listening" : root.idleState) : root.snapshot.state
             reading: root.bubbleVisible
             pinned: !!root.profile.pinned
-            ownerInteracting: root.hovered || root.dragging
+            ownerInteracting: root.hovered || position.captured
+            grabbed: position.captured
             pointerValid: root.pointerValid
             pointerTarget: Qt.point(root.pointerX - root.actorX, root.pointerY - root.actorY)
             onClipStarted: root.keepOnScreen()
+            onClipFinished: name => {
+                if (recovering && name === "drag_release_recover") {
+                    recovering = false;
+                    scheduleRest();
+                }
+            }
             paused: root.presentationPaused
             reduced: !!root.profile.reduced_motion || !!root.profile.quiet
             MouseArea {
                 id: drag
-                x: actor.bounds.x
-                y: actor.bounds.y
-                width: actor.bounds.width
-                height: actor.bounds.height
+                x: position.model.capture ? position.model.capture.hit[0] : actor.bounds.x
+                y: position.model.capture ? position.model.capture.hit[1] : actor.bounds.y
+                width: position.model.capture ? position.model.capture.hit[2] : actor.bounds.width
+                height: position.model.capture ? position.model.capture.hit[3] : actor.bounds.height
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                 hoverEnabled: true
-                property real startX: 0
-                property real startY: 0
-                property real cursorX: 0
-                property real cursorY: 0
                 property bool moved: false
                 onEntered: root.hovered = true
                 onExited: root.hovered = false
                 onPressed: mouse => {
-                    travel.stop();
-                    startX = root.actorX;
-                    startY = root.actorY;
-                    cursorX = root.actorX + drag.x + mouse.x;
-                    cursorY = root.actorY + drag.y + mouse.y;
                     moved = false;
-                }
-                onPositionChanged: mouse => {
-                    if (!pressed || pressedButtons !== Qt.LeftButton)
+                    if (mouse.button !== Qt.LeftButton || !root.currentScreen)
                         return;
-                    const dx = root.actorX + drag.x + mouse.x - cursorX, dy = root.actorY + drag.y + mouse.y - cursorY;
-                    if (Math.abs(dx) + Math.abs(dy) > 6)
+                    const local = actor.mapFromItem(drag, mouse.x, mouse.y), b = actor.bounds;
+                    if (!position.begin(root.currentScreen.name, root.currentScreen.width, root.currentScreen.height, actor.grabFootprint(), [local.x, local.y], root.actorHeight, [b.x, b.y, b.width, b.height]))
                         moved = true;
-                    if (moved) {
-                        root.dragging = true;
-                        root.actorX = root.clamp(startX + dx, 8 - actor.bounds.x, root.currentScreen.width - actor.bounds.x - actor.bounds.width - 8);
-                        root.actorY = root.clamp(startY + dy, 8 - actor.bounds.y, root.currentScreen.height - actor.bounds.y - actor.bounds.height - 8);
-                    }
+                    root.dragTrace("press", {
+                        accepted: position.captured
+                    });
                 }
-                onReleased: {
-                    root.dragging = false;
-                    root.savePlacement();
+                onReleased: mouse => {
+                    if (mouse.button !== Qt.LeftButton || !position.captured)
+                        return;
+                    moved = position.model.moved;
+                    position.release();
+                }
+                onCanceled: {
+                    moved = true;
+                    position.end("cancel", true);
                 }
                 onClicked: mouse => {
                     if (moved)
@@ -623,7 +759,8 @@ ShellRoot {
                     } else
                         root.replyOpen ? root.dismiss() : root.openReply();
                 }
-                onDoubleClicked: root.openConversation()
+                onDoubleClicked: if (!moved)
+                    root.openConversation()
             }
         }
         Bubble {
@@ -750,6 +887,37 @@ ShellRoot {
                 pointerSamples: root.pointerSamples
             });
         }
+        function dragDiagnostic(): string {
+            return Quickshell.env("CAPRI_DRAG_TRACE") === "1" ? JSON.stringify({
+                pressed: drag.pressed,
+                dragging: root.dragging,
+                captured: position.captured,
+                epoch: position.epoch,
+                writer: position.model.writer,
+                hidden: root.hidden,
+                replyOpen: root.replyOpen,
+                conversationOpen: root.conversationOpen,
+                settingsOpen: root.settingsOpen,
+                anchor: [root.actorX, root.actorY],
+                clip: actor.clipId,
+                reviewing: actor.reviewing,
+                saves: position.gestureSaves,
+                surface: [root.surfaceLeft, root.surfaceTop, panel.width, panel.height]
+            }) : "{}";
+        }
+        function dragTestPoint(): string {
+            if (Quickshell.env("CAPRI_EVIDENCE_STAGE") !== "1")
+                return "{}";
+            const regions = actor.regionData.filter(r => r.tag === 1).map(r => actor.mapRegion(r)).sort((a, b) => b[2] * b[3] - a[2] * a[3]);
+            const b = regions[0];
+            return JSON.stringify({
+                x: root.actorX + b[0] + b[2] / 2,
+                y: root.actorY + b[1] + b[3] / 2,
+                anchor: [root.actorX, root.actorY],
+                actor: [actor.width, actor.height],
+                bounds: [actor.bounds.x, actor.bounds.y, actor.bounds.width, actor.bounds.height]
+            });
+        }
         function actorGeometry(): string {
             return JSON.stringify({
                 x: root.actorX,
@@ -795,8 +963,8 @@ ShellRoot {
         }
         function placement(x: int, y: int): void {
             travel.stop();
-            root.actorX = x;
-            root.actorY = y;
+            if (!position.place(x, y, "ipc"))
+                return;
             root.keepOnScreen();
             root.savePlacement();
         }

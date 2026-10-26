@@ -11,6 +11,8 @@ Item {
     property bool reading: false
     property bool pinned: false
     property bool ownerInteracting: false
+    property bool grabbed: false
+    property bool recovering: false
     property bool pointerValid: false
     property point pointerTarget: Qt.point(0, 0)
     property var rig: null
@@ -102,6 +104,8 @@ Item {
         poseValue = next;
     }
     function play(name) {
+        if (grabbed && name !== "pickup_dangle")
+            return false;
         var c = catalog.find(v => v.id === name && v.asset_status === "AVAILABLE");
         if (!c)
             return false;
@@ -127,6 +131,25 @@ Item {
         moving = true;
         clipStarted(name);
         return true;
+    }
+    function grabFootprint() {
+        // Snapshot both the current presentation and every pickup extreme once.
+        // Subsequent animation cannot move the drag clamp or input frame.
+        var r = [paintBounds.x, paintBounds.y, paintBounds.width, paintBounds.height];
+        var clips = catalog.filter(v => ["pickup_dangle", "drag_release_recover"].includes(v.id) && v.asset_status === "AVAILABLE");
+        if (pose)
+            for (var c of clips)
+                for (var n = 0; n <= 48; n++) {
+                    var b = Motion.bounds(pose, Motion.sample(c, c.duration_ms * n / 48));
+                    var q = [(160 + b[0]) * factor, (160 + b[1]) * factor, b[2] * factor, b[3] * factor];
+                    var right = Math.max(r[0] + r[2], q[0] + q[2]), bottom = Math.max(r[1] + r[3], q[1] + q[3]);
+                    r[0] = Math.min(r[0], q[0]);
+                    r[1] = Math.min(r[1], q[1]);
+                    r[2] = right - r[0];
+                    r[3] = bottom - r[1];
+                }
+        // Match the play() paint envelope padding, including release recovery.
+        return [r[0] - 8, r[1] - 8, r[2] + 16, r[3] + 16];
     }
     function freeze() {
         rest.stop();
@@ -159,6 +182,8 @@ Item {
             actor.scheduleRest();
     }
     function cue() {
+        if (recovering)
+            return;
         if (!ready || reviewing)
             return;
         if (paused || reduced) {
@@ -190,6 +215,8 @@ Item {
             chooseNext();
     }
     function review(name, time, pause) {
+        if (grabbed)
+            return false;
         if (!catalog.some(c => c.id === name && c.asset_status === "AVAILABLE"))
             return false;
         reviewing = true;

@@ -112,6 +112,30 @@ class Sampling:
         return 0.125 if now - self.last_move < 2.5 else 1.0
 
 
+def gesture_samples(path, epoch, *, clock=time.monotonic, wait=time.sleep, final_requested=lambda: False):
+    """Independent on-demand 120Hz global-input clock for a held gesture.
+
+    No scene/window coordinates, key hooks, input injection or stored trace.
+    Failure ends the gesture instead of replaying an old coordinate.
+    """
+    outputs = []
+    geometry_at = float("-inf")
+    while True:
+        started = clock()
+        try:
+            final = final_requested()
+            if started - geometry_at >= 0.25:
+                outputs = read_outputs(path)
+                geometry_at = started
+            x, y = read_position(path)
+        except (OSError, PointerUnavailable):
+            yield {"kind": "drag", "epoch": epoch, "valid": False, "monotonic": clock()}
+            return
+        yield {"kind": "drag", "epoch": epoch, "valid": True,
+               "x": x, "y": y, "outputs": outputs, "monotonic": clock(), "final": final}
+        wait(max(0.0, 1 / 120 - (clock() - started)))
+
+
 def main():
     parent = os.getppid()
     if parent <= 1 or ctypes.CDLL(None, use_errno=True).prctl(1, signal.SIGTERM, 0, 0, 0) != 0 or os.getppid() != parent:
@@ -120,6 +144,28 @@ def main():
     if not re.fullmatch(r"[A-Za-z0-9._-]{1,200}", signature):
         return 1
     path = Path(os.environ.get("XDG_RUNTIME_DIR", "/run/user/" + str(os.getuid()))) / "hypr" / signature / ".socket.sock"
+    if len(sys.argv) > 1:
+        if len(sys.argv) != 3 or sys.argv[1] != "--gesture" or not re.fullmatch(r"[1-9][0-9]{0,9}", sys.argv[2]):
+            return 2
+        epoch = int(sys.argv[2])
+        if epoch > 2147483647:
+            return 2
+        os.set_blocking(sys.stdin.fileno(), False)
+        release = bytearray()
+        def final_requested():
+            try:
+                release.extend(os.read(sys.stdin.fileno(), 64))
+            except BlockingIOError:
+                pass
+            if not b"release\n".startswith(release):
+                raise PointerUnavailable("Invalid gesture control")
+            return release == b"release\n"
+        try:
+            for packet in gesture_samples(path, epoch, final_requested=final_requested):
+                print(json.dumps(packet), flush=True)
+        except BrokenPipeError:
+            return 0
+        return 0
     sampling = Sampling()
     outputs = []
     geometry_at = -100.0

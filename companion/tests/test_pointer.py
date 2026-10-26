@@ -65,3 +65,25 @@ class OutputGeometryTests(unittest.TestCase):
                 thread = threading.Thread(target=serve); thread.start()
                 self.assertEqual(read_outputs(path), [{'name': 'DP-1', 'x': -864, 'y': -400, 'width': 864, 'height': 1536}])
                 thread.join(timeout=2); self.assertFalse(thread.is_alive())
+
+
+class GestureSamplingTests(unittest.TestCase):
+    def test_gesture_clock_is_bounded_and_loss_ends_without_stale_replay(self):
+        from unittest.mock import patch
+        from capri.pointer import gesture_samples
+        now, waits = [100.0], []
+        def wait(seconds):
+            waits.append(seconds)
+            now[0] += seconds
+        with patch('capri.pointer.read_outputs', return_value=[]) as outputs, patch('capri.pointer.read_position', side_effect=[(8, 9), (8, 9), OSError('lost')]):
+            stream = gesture_samples('owned-socket', 47, clock=lambda: now[0], wait=wait)
+            first, second, lost = next(stream), next(stream), next(stream)
+            self.assertEqual((first['x'], second['x']), (8, 8))
+            self.assertTrue(second['valid'])
+            self.assertEqual(first['epoch'], 47)
+            self.assertGreater(second['monotonic'], first['monotonic'])
+            self.assertTrue(all(0 <= v <= 1 / 120 for v in waits))
+            self.assertEqual(outputs.call_count, 1)
+            self.assertFalse(lost['valid'])
+            self.assertNotIn('x', lost)
+            with self.assertRaises(StopIteration): next(stream)
