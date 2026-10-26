@@ -1,60 +1,4 @@
 {
-  "version": 11,
-  "base": "b62b8ee64697d77ee9fe6a72682632c57788baf6",
-  "original_v9_record": "history/v9/SOURCE_RECORD.json",
-  "source_inputs": [
-    {
-      "original_filename": "a13bda9305e5fe775ba5ca8801f19fd5.mp4",
-      "path": "references/user/01-terminal.mp4",
-      "role": "motion and code-texture reference",
-      "bytes": 3444468,
-      "sha256": "41e16e3fbf294f65a2310e9cf43f437b04e84df8f63927e91b09cbf027a97865",
-      "provenance": "User supplied; original creator and public reuse licence not established here; retain existing private-review status.",
-      "dimensions": [
-        1280,
-        720
-      ],
-      "video_frames": 300,
-      "video_fps": "30/1",
-      "duration_ms": 10000,
-      "audio_present": true,
-      "audio_use": "none"
-    },
-    {
-      "original_filename": "24e38e2d508c470982e042e79c757589.jpg",
-      "path": "references/user/02-clouds.jpg",
-      "role": "cloud form, original blue palette and fixed halftone reference",
-      "bytes": 115981,
-      "sha256": "6f9783c5eb8be26f2a8a799a6638f5b1c94550c75114d657e54fbc8bc11511de",
-      "provenance": "User supplied; original creator and public reuse licence not established here; retain existing private-review status.",
-      "dimensions": [
-        1200,
-        400
-      ]
-    },
-    {
-      "original_filename": "440188b2fb18884493493eee054cb752.jpg",
-      "path": "references/user/03-pose.jpg",
-      "role": "pose/camera only; different character",
-      "bytes": 44149,
-      "sha256": "97b5fd5e68db030dee4becf3af48eca38619ea98443442989149cc22620c0d6f",
-      "provenance": "User supplied; original creator and public reuse licence not established here; retain existing private-review status.",
-      "dimensions": [
-        1200,
-        740
-      ]
-    }
-  ],
-  "terminal_substitution": {
-    "source": "tools/capri_context_budget.py",
-    "source_sha256": "14b82d74d02568ad6913e2839192d7ad3a6ebfca6084db0ea19391c9791cc295",
-    "lines": [
-      20,
-      76
-    ],
-    "snippet_sha256": "fff6014f26fd42d6af4d209a5e96d45475014bcc3e83b0e2e1ec786af73b6f94",
-    "status": "Verified actual non-sensitive arithmetic/model source; decorative source texture only, no runtime session claim"
-  },
   "right": {
     "source": "../sources/capri-19.gif",
     "sha256": "f40d1e6b1c3fdb1374d988fe07f18b6c3f2a42010aabc72ed5bcb30d79dac17b",
@@ -71,48 +15,6 @@
     "frames": 120,
     "duration_ms": 4000,
     "mapping": "Native encoded source delays; evaluate left at each cumulative timestamp; no interpolated anime poses"
-  },
-  "cloud": {
-    "source": "02-clouds.jpg",
-    "scaled_size": [
-      1440,
-      480
-    ],
-    "crop": [
-      360,
-      0,
-      1050,
-      480
-    ],
-    "fixed_grid": true,
-    "ink_grade": 0.4
-  },
-  "terminal": {
-    "source": "terminal-snippets.txt",
-    "layouts": "terminal-layouts.json",
-    "font": "../source-match/source/assets/fonts/MartianMono/MartianMono-Variable.ttf",
-    "source_canvas": [
-      1280,
-      720
-    ],
-    "scaled_size": [
-      853,
-      480
-    ],
-    "crop": [
-      81,
-      0,
-      771,
-      480
-    ],
-    "font_size": 12,
-    "fragments": 72
-  },
-  "portrait": {
-    "status": "Historical only, never opened by active renderer",
-    "master": "portrait-master.png",
-    "record": "POSE_GENERATION.json",
-    "sha256": "b70de4910092b34a710d01d461cd14684e5266e1affeb66c5e8ed3b71b3248ee"
   },
   "type": {
     "wordmark": "Original Barlow paths and scale; separate display translation28px upward; fill-only gradient, no persistent outline",
@@ -149,97 +51,24 @@
         }
       ]
     },
-    "contrast": "Broad40%ink environment grade; no per-glyph outline, duplicate, dilation, glow or shadow"
+    "contrast": "Original fill-only gradients retained; page background shows through the left field."
   },
-  "research": [
-    "https://github.com/cadsondemak/Chakra-Petch",
-    "https://magicui.design/docs/components/animated-gradient-text",
-    "https://reactbits.dev/text-animations/shiny-text",
-    "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/linearGradient"
-  ],
+  "portrait": {
+    "status": "Historical only, never opened by active renderer",
+    "master": "portrait-master.png",
+    "record": "POSE_GENERATION.json",
+    "sha256": "b70de4910092b34a710d01d461cd14684e5266e1affeb66c5e8ed3b71b3248ee"
+  },
   "implementation": "Original deterministic Pillow/SVG code; adapt bounded gradient/sheen principles, no upstream component copied",
+  "version": 12,
+  "base": "d115d5af71e694d8cf2a5abb60b7d0b15964b5d3",
+  "previous_record": "history/v11/SOURCE_RECORD.json",
+  "user_direction": "Transparent left with only CAPRI / AGENTIC LOOPING; restore pre-V11 unframed edge; profile above Codex x Hermes",
+  "left_background": "No cloud, code, backdrop, outer frame, diagonal rail or seam blend. Genuine alpha outside the existing lettering.",
+  "frame": "Removed V11 frame and rail; original unframed diagonal geometry restored.",
+  "original_footage": "All 120 original samples and native 30/40 ms delays retained without interpolation.",
+  "gif_alpha": "Index255 reserved; threshold128 for binary GIF alpha; compact unchanged-pixel deltas and disposal2 before opaque pixels disappear. Full decoded RGBA equality checks every frame for trails.",
+  "video_matte": "MP4 preview composites on #0d1117 because H.264 does not carry alpha; GIF/PNG/SVG carry transparency.",
   "human_visual_approval": "PENDING",
-  "original_v10_record": "history/v10/SOURCE_RECORD.json",
-  "profile_reference": {
-    "repository": "Denoax/Denoax",
-    "commit": "2face02d6c562315c7edb49087cb8145f08f2388",
-    "readonly": true,
-    "files": [
-      {
-        "upstream_path": "README.md",
-        "pack_path": "references/profile/README.md",
-        "bytes": 3197,
-        "sha256": "da9f209fc1958a1863d5378e0b10e295bdb9bb56ec974ca4a85cb1884cb8e377",
-        "git_blob_sha1": "44cb1082f67a9c8b36df515984ec58c128f82257"
-      },
-      {
-        "upstream_path": "assets/tabs/project-divider-gradient.svg",
-        "pack_path": "references/profile/assets/tabs/project-divider-gradient.svg",
-        "bytes": 365,
-        "sha256": "67c01e2145738a93eef16f8b5a7d6332f384d876931fef5761e8f44db2e38cf8",
-        "git_blob_sha1": "76f01b14382d9e313cf9cb351fc4f5065253cb46"
-      },
-      {
-        "upstream_path": "assets/tabs/project-divider-gradient-source.json",
-        "pack_path": "references/profile/assets/tabs/project-divider-gradient-source.json",
-        "bytes": 478,
-        "sha256": "2afbf0e1939d87b724312caa41c66bc2bcc584022881c60bd49b529e12093f12",
-        "git_blob_sha1": "fbb89dea9fcdd19f3fec9764cc6351d55e072c03"
-      },
-      {
-        "upstream_path": "assets/tabs/PROJECT_BANNER_SOURCES.md",
-        "pack_path": "references/profile/assets/tabs/PROJECT_BANNER_SOURCES.md",
-        "bytes": 10809,
-        "sha256": "4b4d3f33d7f7371dcef903f4c685523fae9b4825dbce47d0b89179da9c51f5db",
-        "git_blob_sha1": "9a282bc9bf66aaa9930bccf6c85ac313a0821ec7"
-      },
-      {
-        "upstream_path": "assets/tabs/hermes-local-model-banner.png",
-        "pack_path": "references/profile/assets/tabs/hermes-local-model-banner.png",
-        "bytes": 61379,
-        "sha256": "33c88c7c66afbd9d8594d6a6086abbd2b370d7f9bcefe5545d261771b1758178",
-        "git_blob_sha1": "e39585f2cb5aa9901d2e4cb63239b44bf6bf7393"
-      },
-      {
-        "upstream_path": "assets/tabs/visual-music-loop-poster.webp",
-        "pack_path": "references/profile/assets/tabs/visual-music-loop-poster.webp",
-        "bytes": 104240,
-        "sha256": "9c8f8729e866204b7ae3987e19684dcf40334ee42798f1d389be9eb44d455606",
-        "git_blob_sha1": "8cd6ac5bcd379b1d2607f1d81e1e97de2171734a"
-      }
-    ],
-    "observed": "Aligned full-width banners and thin gradient rails, not an identical existing outer frame",
-    "adaptation": "Shared-coordinate Capri-color steady outer and diagonal rails, with a narrow smooth blend"
-  },
-  "frame": {
-    "x": 4,
-    "y": 4,
-    "width": 1392,
-    "height": 472,
-    "stroke_width": 4,
-    "support_width": 6,
-    "support_opacity": 0.45,
-    "colors": [
-      "#441435",
-      "#ff1265",
-      "#eefff6"
-    ],
-    "gradient": [
-      4,
-      4,
-      1396,
-      476
-    ]
-  },
-  "seam": {
-    "centerline_x0": 690,
-    "slope": -0.225,
-    "transition_width": 24,
-    "rail_width": 4,
-    "support_width": 6
-  },
-  "source_fidelity": {
-    "seam_halfwidth": 16,
-    "perimeter_depth": 10
-  }
+  "source_scope": "Unchanged original anime/city source and licensed type. Historical cloud/code/generated portrait records retained; no new visual media generated."
 }

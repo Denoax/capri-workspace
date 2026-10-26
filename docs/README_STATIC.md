@@ -1,5 +1,5 @@
 <!-- Generated from the same V7 source/data. -->
-<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/hero.png"><img src="../showcase/capri/hero.png" alt="CAPRI — AGENTIC LOOPING. Original animated Capri and city on the right; blue cloud and code in the left cutout rupture into red." width="1000"></picture></p>
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="../showcase/capri/hero.png"><img src="../showcase/capri/hero.png" alt="CAPRI — AGENTIC LOOPING. Original animated Capri and city on the right; CAPRI and AGENTIC LOOPING over a transparent left field, without a frame." width="1000"></picture></p>
 
 # CAPRI — Agentic Loop Prompting
 

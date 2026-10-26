@@ -1,6 +1,6 @@
-"""Verify restored source playback, narrow frame/seam effects, fill-only type and actual GIF delivery."""
+"""Verify transparent-left delivery, unframed source playback and unchanged approved type."""
 from pathlib import Path
-import hashlib,json,xml.etree.ElementTree as ET
+import hashlib,json,subprocess,tempfile,xml.etree.ElementTree as ET
 from unittest.mock import patch
 import numpy as np
 from PIL import Image,ImageChops
@@ -10,11 +10,11 @@ def check():
     from capri_hero_scene import HeroScene
     pinned={'sources/hero-v7/hero.gif':'e505d35ebb8eea5daa13fda24ed32db7a6a64aabda3e63835ee4cf8813f39517','sources/capri-19.gif':'f40d1e6b1c3fdb1374d988fe07f18b6c3f2a42010aabc72ed5bcb30d79dac17b','hero-scene/01-terminal.mp4':'41e16e3fbf294f65a2310e9cf43f437b04e84df8f63927e91b09cbf027a97865','hero-scene/02-clouds.jpg':'6f9783c5eb8be26f2a8a799a6638f5b1c94550c75114d657e54fbc8bc11511de','hero-scene/portrait-master.png':'b70de4910092b34a710d01d461cd14684e5266e1affeb66c5e8ed3b71b3248ee','fonts/chakra-petch/ChakraPetch-SemiBoldItalic.ttf':'4e11c1bec71511bbea8a3bc3f4cebff479bb9681961d691a36f99e5234d8fe89','fonts/chakra-petch/OFL.txt':'13831d02389d917d22fcfa6c79f98f8acbf61d230add0e73a4d4dc5f3bfb9e56'}
     for name,h in pinned.items():assert sha(MEDIA/name)==h,('Fixed source changed',name)
-    record=json.loads((MEDIA/'BUILD.json').read_text());timeline=json.loads((SCENE/'timeline.json').read_text());cfg=json.loads((SCENE/'scene.json').read_text());source=json.loads((SCENE/'SOURCE_RECORD.json').read_text())
+    record=json.loads((MEDIA/'BUILD.json').read_text());timeline=json.loads((SCENE/'timeline.json').read_text());cfg=json.loads((SCENE/'scene.json').read_text())
     assert cfg['active_generated_portrait'] is False and record['active_generated_portrait'] is False
     original_open=Image.open
     def fixed_open(path,*args,**kwargs):
-        assert not isinstance(path,(str,Path)) or Path(path).name!='portrait-master.png','Historical portrait loaded by active scene'
+        assert not isinstance(path,(str,Path)) or Path(path).name not in ['portrait-master.png','02-clouds.jpg','frame.png'],'Removed historical background or frame loaded by active scene'
         return original_open(path,*args,**kwargs)
     with patch('PIL.Image.open',side_effect=fixed_open):scene=HeroScene(MEDIA)
     assert scene.right_placement==(550,0,850,480) and cfg['left_polygon']==[[0,0],[690,0],[582,480],[0,480]]
@@ -37,47 +37,52 @@ def check():
     assert not word_alpha[333:].any(),'Mask remained at old display location'
     assert not ImageChops.difference(scene.brand_at(scene.state(0)).convert('RGB'),scene.brand_at(scene.state(2500)).convert('RGB')).getbbox(),'Persistent type copy/effect outside brief rupture/sheen'
     assert ImageChops.difference(scene.brand.convert('RGB'),scene.brand_at(scene.state(1800)).convert('RGB')).getbbox(),'Sheen no longer follows moved wordmark'
-    frame_svg=ET.parse(SCENE/'frame.svg').getroot();assert frame_svg.find('s:g[@id="outer-frame"]',ns) is not None and frame_svg.find('s:g[@id="internal-rail"]',ns) is not None
-    frame_alpha=np.asarray(scene.frame.getchannel('A'));assert all(np.any(frame_alpha[region]>0) for region in [(slice(2,7),slice(8,-8)),(slice(-7,-2),slice(8,-8)),(slice(8,-8),slice(2,7)),(slice(8,-8),slice(-7,-2))])
-    yy,xx=np.mgrid[0:480,0:1400];center=cfg['seam']['centerline_x0']+cfg['seam']['slope']*(yy+.5);depth=cfg['source_fidelity']['perimeter_depth'];half=cfg['source_fidelity']['seam_halfwidth']
-    assert half==16 and depth==10 and cfg['seam']['transition_width']==24
-    untouched=(xx>center+half)&(xx>=depth)&(xx<1400-depth)&(yy>=depth)&(yy<480-depth)
-    assert untouched.sum()>.90*(np.asarray(scene.mask)==0).sum(),'Right-source fidelity exemption too broad'
-    blend=np.asarray(scene.blend_mask);assert np.all(blend[xx<center-13]==255) and np.all(blend[xx>center+13]==0)
-    assert np.any((blend>0)&(blend<255)),'Seam is still a hard join'
+    assert cfg['left_background']=='transparent' and cfg['frame']=='none' and cfg['join']=='pre-V11 hard diagonal'
+    assert not (SCENE/'frame.png').exists() and not (SCENE/'frame.svg').exists()
+    left=np.asarray(scene.mask)>0;right=~left
+    assert right.sum()==366192,'Original hard diagonal footprint changed'
     type_record=json.loads((SCENE/'type.json').read_text());assert all(abs(line['ink_box'][0]-52.83)<.001 and line['diagonal_clearance']>80 for line in type_record['lines'])
     for n in ['hero.svg','hero-overlay.svg']:
         text=(MEDIA/n).read_text();assert text.count('id="hero-subtitle"')==1 and 'AGENTIC LOOPING' in text and 'PROMPTING' not in text and '<text' not in text
-    snippets=(SCENE/'terminal-snippets.txt').read_text();assert snippets=='\n'.join((ROOT/'tools/capri_context_budget.py').read_text().splitlines()[19:76])+'\n';assert source['terminal_substitution']['snippet_sha256']==sha(SCENE/'terminal-snippets.txt')
-    expected_cloud=Image.open(SCENE/'02-clouds.jpg').convert('RGB').resize((1440,480),Image.Resampling.LANCZOS).crop((360,0,1050,480));assert not ImageChops.difference(scene.cloud_image,expected_cloud).getbbox()
-    source_delays=[];source_hashes=[];right_checks=[];outside=untouched
+        assert all(token not in text for token in ['outer-frame','internal-rail','left-environment','plate-gradient'])
+    source_delays=[];source_hashes=[];transparent_counts=[]
     with Image.open(MEDIA/'sources/capri-19.gif') as clip:
         for i,t in enumerate(scene.timestamps):
             clip.seek(i);source_delays.append(clip.info['duration']);source_hashes.append(hashlib.sha256(clip.convert('RGB').tobytes()).hexdigest())
-            expected=Image.new('RGB',(1400,480),'#100a19');expected.paste(clip.convert('RGB').resize((850,480),Image.Resampling.LANCZOS),(550,0));actual=scene.render(t)
-            assert np.array_equal(np.asarray(actual)[outside],np.asarray(expected)[outside]),('Authored effect leaked into original right',i)
+            expected=Image.new('RGB',(1400,480));expected.paste(clip.convert('RGB').resize((850,480),Image.Resampling.LANCZOS),(550,0));actual=scene.render(t);pixels=np.asarray(actual)
+            assert np.array_equal(pixels[:,:,:3][right],np.asarray(expected)[right]),('Original right footage changed',i)
+            assert np.all(pixels[:,:,3][right]==255),('Hole in right footage',i)
+            brand=np.asarray(scene.brand_at(scene.state(t)));assert np.array_equal(pixels[:,:,3][left],brand[:,:,3][left]),('Background/frame behind left typography',i)
+            empty=left&(brand[:,:,3]==0);assert np.all(pixels[:,:,3][empty]==0) and empty.sum()>left.sum()*.6,('Left is not transparent',i)
+            # Top, bottom and far-left probes catch the removed enclosing frame independently of title shape.
+            assert pixels[0,:680,3].max()==pixels[-1,:570,3].max()==pixels[:,:25,3].max()==0,('Frame restored unexpectedly',i)
+            transparent_counts.append(int(empty.sum()))
             assert scene.state(t)['source_frame']==i and scene.state(t+source_delays[-1]/2)['source_frame']==i
-            right_checks.append(i)
-    delays=[];hashes=[];red_shares={}
+    delays=[];hashes=[];disposals=set();alpha_counts=[]
     with Image.open(MEDIA/'hero.gif') as gif:
         assert gif.size==(1000,343) and gif.n_frames==120 and gif.info.get('loop')==0
-        left=np.asarray(scene.mask.resize((1000,343),Image.Resampling.NEAREST))>0
         for i in range(gif.n_frames):
-            gif.seek(i);rgb=gif.convert('RGB');delays.append(gif.info['duration']);assert gif.disposal_method==1
-            h=hashlib.sha256(rgb.tobytes()).hexdigest();hashes.append(h);assert h==timeline['quantized_rgb_sha256'][i],('Delta ghost or palette drift',i)
-            if i in [0,30,31,32,33,75,119]:
-                pixels=np.asarray(rgb).astype(float);red=(pixels[:,:,0]>pixels[:,:,2]*1.4)&(pixels[:,:,0]>pixels[:,:,1]*1.4)&(pixels[:,:,0]>45);red_shares[i]=float(red[left].mean())
+            gif.seek(i);rgba=gif.convert('RGBA');delays.append(gif.info['duration']);disposals.add(gif.disposal_method)
+            canonical=rgba.copy();canonical.paste((0,0,0,0),mask=canonical.getchannel('A').point(lambda a:255 if a==0 else 0))
+            h=hashlib.sha256(canonical.tobytes()).hexdigest();hashes.append(h);assert h==timeline['quantized_rgba_sha256'][i],('Encoded alpha trails or palette drift',i)
+            alpha=np.asarray(rgba.getchannel('A'));assert set(np.unique(alpha))=={0,255};assert not alpha[:,:17].any() and not alpha[:2,:480].any(),('Opaque GIF background/frame',i)
+            alpha_counts.append(int((alpha==0).sum()))
+    assert disposals=={1,2},'Retain compact deltas and clear disappearing alpha'
+    assert record['disposal_methods'].count(2)>0
     assert delays==source_delays==timeline['delays_ms'] and len(delays)==120 and sum(delays)==4000
     assert len(set(hashes))==120 and (MEDIA/'hero.gif').stat().st_size<=8000000
     assert record['frames']==120 and record['duration_ms']==4000 and timeline['source_timestamps_ms']==scene.timestamps
-    assert red_shares[32]>red_shares[0]+.15,'Actual encoded left sky failed to turn red'
-    assert scene.state(1000)['red_fraction']==0 and scene.state(1070)['red_fraction']==1 and scene.state(1100)['rupture'] is False
-    state=scene.state(1070);red=scene.left_environment({**state,'red_fraction':1});assert not ImageChops.difference(red,scene.left_environment(state)).getbbox()
-    assert scene.state(3500)['red_fraction']==1 and scene.state(3970)['red_fraction']==0
     assert not ImageChops.difference(scene.render(0),scene.render(4000)).getbbox()
-    assert not ImageChops.difference(scene.render(cfg['poster_ms']),Image.open(MEDIA/'hero.png').convert('RGB')).getbbox()
+    assert scene.render(cfg['poster_ms']).tobytes()==Image.open(MEDIA/'hero.png').convert('RGBA').tobytes()
+    # Render the actual SVG on both page colors to catch accidental opaque fills or stale exports.
+    with tempfile.TemporaryDirectory() as temporary:
+        output=Path(temporary)/'hero.png';subprocess.run(['rsvg-convert',str(MEDIA/'hero.svg'),'-o',str(output)],check=True)
+        svg=Image.open(output).convert('RGBA');poster=Image.open(MEDIA/'hero.png').convert('RGBA');parity=[]
+        for color in ['#ffffff','#0d1117']:
+            bg=Image.new('RGBA',scene.size,color);a=np.asarray(Image.alpha_composite(bg,svg)).astype(int);b=np.asarray(Image.alpha_composite(bg,poster)).astype(int);difference=np.abs(a-b)
+            assert difference.max()<=2,('SVG/PNG mismatch',color,int(difference.max()));parity.append({'background':color,'maximum_channel_error':int(difference.max())})
     for n,h in record['derived'].items():assert sha(MEDIA/n)==h,('Stale derivative',n)
-    assert sha(SCENE/'frame.png')==record['frame_png_sha256'] and sha(SCENE/'wordmark-mask.png')==record['wordmark_mask_sha256']
+    assert sha(SCENE/'wordmark-mask.png')==record['wordmark_mask_sha256']
     assert sha(SCENE/'scene.json')==record['scene_sha256'] and sha(SCENE/'brand.svg')==record['brand_svg_sha256'] and sha(SCENE/'brand.png')==record['brand_png_sha256']
-    return {'status':'PASS','delivery':[1000,343],'frames':120,'distinct_decoded_frames':len(set(hashes)),'duration_ms':4000,'delays_match_original_source':True,'source_sample_hashes':source_hashes,'right_region_exact_source_checks':len(right_checks),'untouched_right_interior_pixels':int(untouched.sum()),'original_right_region_pixels':int((np.asarray(scene.mask)==0).sum()),'seam_exclusion_halfwidth':half,'perimeter_exclusion_depth':depth,'effect_leakage_pixels':0,'fill_only_type_and_moved_mask':True,'frame_four_sides':True,'smooth_seam_mask':True,'active_portrait_loaded':False,'wordmark_geometry_preserved':True,'descriptor_font_and_ink_alignment':'PASS','cloud_crop_exact':True,'actual_encoded_left_red_shares':red_shares,'attack_to_red_ms':70,'shared_scene_loop_exact':True,'bytes':(MEDIA/'hero.gif').stat().st_size,'palette_colors':record['palette_colors'],'scope':'Encoded/source/geometry checks; palette quantization changes colors. Continuous human perceptual, device, hosted UI and artistic approval remain separate.'}
+    return {'status':'PASS','delivery':[1000,343],'frames':120,'distinct_decoded_frames':len(set(hashes)),'duration_ms':4000,'delays_match_original_source':True,'source_sample_hashes':source_hashes,'right_exact_source_checks':120,'right_pixels_checked_per_frame':int(right.sum()),'right_region_exclusions':0,'transparent_master_pixels_minimum':min(transparent_counts),'transparent_gif_pixels_minimum':min(alpha_counts),'gif_disposal':sorted(disposals),'frame_removed':True,'fill_only_type_and_moved_mask':True,'active_portrait_loaded':False,'wordmark_geometry_preserved':True,'descriptor_font_and_ink_alignment':'PASS','shared_scene_loop_exact':True,'svg_png_compositing_parity':parity,'bytes':(MEDIA/'hero.gif').stat().st_size,'palette_colors':record['palette_colors'],'scope':'Actual encoded/source/alpha/geometry checks; continuous human perceptual, physical-device and artistic approval remain separate.'}
 if __name__=='__main__':print(json.dumps(check(),indent=2))

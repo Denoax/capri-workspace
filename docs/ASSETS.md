@@ -63,3 +63,7 @@ V6 annotated sizing adds marked panel/graph-wide/support-wide derivatives from t
 
 
 V7 derives the handoff/checking panel+portrait variants and restores original-paced rain/stack GIFs for both support layouts. separator.gif/png and identity.svg/identity-mobile.svg are independently authored by build_capri_separator.py/capri_story_identity.py from the user motion contract and supplied fonts. Original footage, masters/rig/masks, hero, notices and unaffected V6 exports are retained. No generated-media source added.
+
+## Current transparent hero — 2026-10-26
+
+At Mani’s direction, the active hero keeps the approved V11 CAPRI / AGENTIC LOOPING lettering and all 120 original right-side samples, removes the left cloud/code background, and restores the pre-V11 unframed diagonal edge. GIF, PNG and SVG have a genuinely transparent left field; the H.264 MP4 preview uses a documented #0d1117 matte. GIF deltas retain unchanged pixels, with disposal2 before opaque pixels disappear; full decoded RGBA checks guard against trails. The earlier frame and scene records remain under `showcase/capri/hero-scene/history/v11`; all original sources, notices and qualifications remain. No new imagery was generated. Build with `python tools/build_capri_presentation.py`; validate with `python tools/check_capri_hero.py` and the existing presentation checks.

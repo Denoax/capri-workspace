@@ -1,6 +1,6 @@
 {
   "configuration": {
-    "version": 11,
+    "version": 12,
     "master": [
       1400,
       480
@@ -12,7 +12,6 @@
     "duration_ms": 4000,
     "frames": 120,
     "poster_ms": 2500,
-    "seed": 19091,
     "left_polygon": [
       [
         0,
@@ -31,43 +30,6 @@
         480
       ]
     ],
-    "left_width": 690,
-    "cloud": {
-      "source": "02-clouds.jpg",
-      "scaled_size": [
-        1440,
-        480
-      ],
-      "crop": [
-        360,
-        0,
-        1050,
-        480
-      ],
-      "fixed_grid": true,
-      "ink_grade": 0.4
-    },
-    "terminal": {
-      "source": "terminal-snippets.txt",
-      "layouts": "terminal-layouts.json",
-      "font": "../source-match/source/assets/fonts/MartianMono/MartianMono-Variable.ttf",
-      "source_canvas": [
-        1280,
-        720
-      ],
-      "scaled_size": [
-        853,
-        480
-      ],
-      "crop": [
-        81,
-        0,
-        771,
-        480
-      ],
-      "font_size": 12,
-      "fragments": 72
-    },
     "right": {
       "source": "../sources/capri-19.gif",
       "box": [
@@ -110,1022 +72,743 @@
       "persistent_outline": false
     },
     "timeline": {
-      "blue": [
-        0,
-        1000
-      ],
-      "rupture": [
+      "type_rupture": [
         1000,
         1100
-      ],
-      "red_reached_ms": 1070,
-      "red": [
-        1100,
-        3500
       ],
       "sheen": [
         1600,
         2400
-      ],
-      "recovery": [
-        3500,
-        4000
       ]
     },
     "active_generated_portrait": false,
-    "rights": "Private review; existing source/anime rights qualifications unchanged. No new generated media.",
+    "rights": "Owner-authorized public presentation; original source and font qualifications remain in docs/ASSETS.md. No new generated media.",
     "palette_colors": 94,
-    "frame": {
-      "x": 4,
-      "y": 4,
-      "width": 1392,
-      "height": 472,
-      "stroke_width": 4,
-      "support_width": 6,
-      "support_opacity": 0.45,
-      "colors": [
-        "#441435",
-        "#ff1265",
-        "#eefff6"
-      ],
-      "gradient": [
-        4,
-        4,
-        1396,
-        476
-      ]
-    },
-    "seam": {
-      "centerline_x0": 690,
-      "slope": -0.225,
-      "transition_width": 24,
-      "rail_width": 4,
-      "support_width": 6
-    },
-    "source_fidelity": {
-      "seam_halfwidth": 16,
-      "perimeter_depth": 10
-    },
-    "active_banner_label": "CAPRI \u2014 AGENTIC LOOPING"
+    "active_banner_label": "CAPRI \u2014 AGENTIC LOOPING",
+    "left_background": "transparent",
+    "frame": "none",
+    "join": "pre-V11 hard diagonal",
+    "gif_alpha_threshold": 128,
+    "video_matte": "#0d1117"
   },
   "frames": [
     {
       "time_ms": 0.0,
-      "phase": "blue",
       "source_frame": 0,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 30.0,
-      "phase": "blue",
       "source_frame": 1,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 70.0,
-      "phase": "blue",
       "source_frame": 2,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 100.0,
-      "phase": "blue",
       "source_frame": 3,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 130.0,
-      "phase": "blue",
       "source_frame": 4,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 170.0,
-      "phase": "blue",
       "source_frame": 5,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 200.0,
-      "phase": "blue",
       "source_frame": 6,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 230.0,
-      "phase": "blue",
       "source_frame": 7,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 270.0,
-      "phase": "blue",
       "source_frame": 8,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 300.0,
-      "phase": "blue",
       "source_frame": 9,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 330.0,
-      "phase": "blue",
       "source_frame": 10,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 370.0,
-      "phase": "blue",
       "source_frame": 11,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 400.0,
-      "phase": "blue",
       "source_frame": 12,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 430.0,
-      "phase": "blue",
       "source_frame": 13,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 470.0,
-      "phase": "blue",
       "source_frame": 14,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 500.0,
-      "phase": "blue",
       "source_frame": 15,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 530.0,
-      "phase": "blue",
       "source_frame": 16,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 570.0,
-      "phase": "blue",
       "source_frame": 17,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 600.0,
-      "phase": "blue",
       "source_frame": 18,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 630.0,
-      "phase": "blue",
       "source_frame": 19,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 670.0,
-      "phase": "blue",
       "source_frame": 20,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 700.0,
-      "phase": "blue",
       "source_frame": 21,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 730.0,
-      "phase": "blue",
       "source_frame": 22,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 770.0,
-      "phase": "blue",
       "source_frame": 23,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 800.0,
-      "phase": "blue",
       "source_frame": 24,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 830.0,
-      "phase": "blue",
       "source_frame": 25,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 870.0,
-      "phase": "blue",
       "source_frame": 26,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 900.0,
-      "phase": "blue",
       "source_frame": 27,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 930.0,
-      "phase": "blue",
       "source_frame": 28,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 970.0,
-      "phase": "blue",
       "source_frame": 29,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1000.0,
-      "phase": "rupture",
       "source_frame": 30,
-      "red_fraction": 0.0,
       "rupture": true,
       "sheen": false
     },
     {
       "time_ms": 1030.0,
-      "phase": "rupture",
       "source_frame": 31,
-      "red_fraction": 0.39358600583090375,
       "rupture": true,
       "sheen": false
     },
     {
       "time_ms": 1070.0,
-      "phase": "rupture",
       "source_frame": 32,
-      "red_fraction": 1.0,
       "rupture": true,
       "sheen": false
     },
     {
       "time_ms": 1100.0,
-      "phase": "red",
       "source_frame": 33,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1130.0,
-      "phase": "red",
       "source_frame": 34,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1170.0,
-      "phase": "red",
       "source_frame": 35,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1200.0,
-      "phase": "red",
       "source_frame": 36,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1230.0,
-      "phase": "red",
       "source_frame": 37,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1270.0,
-      "phase": "red",
       "source_frame": 38,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1300.0,
-      "phase": "red",
       "source_frame": 39,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1330.0,
-      "phase": "red",
       "source_frame": 40,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1370.0,
-      "phase": "red",
       "source_frame": 41,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1400.0,
-      "phase": "red",
       "source_frame": 42,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1430.0,
-      "phase": "red",
       "source_frame": 43,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1470.0,
-      "phase": "red",
       "source_frame": 44,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1500.0,
-      "phase": "red",
       "source_frame": 45,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1530.0,
-      "phase": "red",
       "source_frame": 46,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1570.0,
-      "phase": "red",
       "source_frame": 47,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 1600.0,
-      "phase": "red",
       "source_frame": 48,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1630.0,
-      "phase": "red",
       "source_frame": 49,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1670.0,
-      "phase": "red",
       "source_frame": 50,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1700.0,
-      "phase": "red",
       "source_frame": 51,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1730.0,
-      "phase": "red",
       "source_frame": 52,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1770.0,
-      "phase": "red",
       "source_frame": 53,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1800.0,
-      "phase": "red",
       "source_frame": 54,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1830.0,
-      "phase": "red",
       "source_frame": 55,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1870.0,
-      "phase": "red",
       "source_frame": 56,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1900.0,
-      "phase": "red",
       "source_frame": 57,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1930.0,
-      "phase": "red",
       "source_frame": 58,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 1970.0,
-      "phase": "red",
       "source_frame": 59,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2000.0,
-      "phase": "red",
       "source_frame": 60,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2030.0,
-      "phase": "red",
       "source_frame": 61,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2070.0,
-      "phase": "red",
       "source_frame": 62,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2100.0,
-      "phase": "red",
       "source_frame": 63,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2130.0,
-      "phase": "red",
       "source_frame": 64,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2170.0,
-      "phase": "red",
       "source_frame": 65,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2200.0,
-      "phase": "red",
       "source_frame": 66,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2230.0,
-      "phase": "red",
       "source_frame": 67,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2270.0,
-      "phase": "red",
       "source_frame": 68,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2300.0,
-      "phase": "red",
       "source_frame": 69,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2330.0,
-      "phase": "red",
       "source_frame": 70,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2370.0,
-      "phase": "red",
       "source_frame": 71,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": true
     },
     {
       "time_ms": 2400.0,
-      "phase": "red",
       "source_frame": 72,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2430.0,
-      "phase": "red",
       "source_frame": 73,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2470.0,
-      "phase": "red",
       "source_frame": 74,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2500.0,
-      "phase": "red",
       "source_frame": 75,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2530.0,
-      "phase": "red",
       "source_frame": 76,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2570.0,
-      "phase": "red",
       "source_frame": 77,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2600.0,
-      "phase": "red",
       "source_frame": 78,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2630.0,
-      "phase": "red",
       "source_frame": 79,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2670.0,
-      "phase": "red",
       "source_frame": 80,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2700.0,
-      "phase": "red",
       "source_frame": 81,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2730.0,
-      "phase": "red",
       "source_frame": 82,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2770.0,
-      "phase": "red",
       "source_frame": 83,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2800.0,
-      "phase": "red",
       "source_frame": 84,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2830.0,
-      "phase": "red",
       "source_frame": 85,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2870.0,
-      "phase": "red",
       "source_frame": 86,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2900.0,
-      "phase": "red",
       "source_frame": 87,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2930.0,
-      "phase": "red",
       "source_frame": 88,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 2970.0,
-      "phase": "red",
       "source_frame": 89,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3000.0,
-      "phase": "red",
       "source_frame": 90,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3030.0,
-      "phase": "red",
       "source_frame": 91,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3070.0,
-      "phase": "red",
       "source_frame": 92,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3100.0,
-      "phase": "red",
       "source_frame": 93,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3130.0,
-      "phase": "red",
       "source_frame": 94,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3170.0,
-      "phase": "red",
       "source_frame": 95,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3200.0,
-      "phase": "red",
       "source_frame": 96,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3230.0,
-      "phase": "red",
       "source_frame": 97,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3270.0,
-      "phase": "red",
       "source_frame": 98,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3300.0,
-      "phase": "red",
       "source_frame": 99,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3330.0,
-      "phase": "red",
       "source_frame": 100,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3370.0,
-      "phase": "red",
       "source_frame": 101,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3400.0,
-      "phase": "red",
       "source_frame": 102,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3430.0,
-      "phase": "red",
       "source_frame": 103,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3470.0,
-      "phase": "red",
       "source_frame": 104,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3500.0,
-      "phase": "recovery",
       "source_frame": 105,
-      "red_fraction": 1.0,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3530.0,
-      "phase": "recovery",
       "source_frame": 106,
-      "red_fraction": 0.9882973907515675,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3570.0,
-      "phase": "recovery",
       "source_frame": 107,
-      "red_fraction": 0.9400614507382757,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3600.0,
-      "phase": "recovery",
       "source_frame": 108,
-      "red_fraction": 0.883455496373636,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3630.0,
-      "phase": "recovery",
       "source_frame": 109,
-      "red_fraction": 0.8128064109108771,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3670.0,
-      "phase": "recovery",
       "source_frame": 110,
-      "red_fraction": 0.7021565549059456,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3700.0,
-      "phase": "recovery",
       "source_frame": 111,
-      "red_fraction": 0.6108762027681728,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3730.0,
-      "phase": "recovery",
       "source_frame": 112,
-      "red_fraction": 0.5159550388642209,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3770.0,
-      "phase": "recovery",
       "source_frame": 113,
-      "red_fraction": 0.3891237972318272,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3800.0,
-      "phase": "recovery",
       "source_frame": 114,
-      "red_fraction": 0.29784344509405425,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3830.0,
-      "phase": "recovery",
       "source_frame": 115,
-      "red_fraction": 0.21332460052204227,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3870.0,
-      "phase": "recovery",
       "source_frame": 116,
-      "red_fraction": 0.11654450362636404,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3900.0,
-      "phase": "recovery",
       "source_frame": 117,
-      "red_fraction": 0.05993854926172437,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3930.0,
-      "phase": "recovery",
       "source_frame": 118,
-      "red_fraction": 0.02049642179478539,
       "rupture": false,
       "sheen": false
     },
     {
       "time_ms": 3970.0,
-      "phase": "recovery",
       "source_frame": 119,
-      "red_fraction": 0.0,
       "rupture": false,
       "sheen": false
     }
@@ -1374,127 +1057,127 @@
     40,
     30
   ],
-  "quantized_rgb_sha256": [
-    "7a3a62b073acb2a493cce32cd84d11dc953b2e4de5822fd13d953151c54b528b",
-    "7c05c63bb122ea945ee1fbff2ac20972f3969e90f4be07c5e45fb0a6eb6e11ba",
-    "d5d91c560796c5f0c3638ac274781ce4a8328f2855f55f1eb84cba2c17a08d91",
-    "dd84acb49f0d479db5bac8cdf876818a04c00babb700aebf4991142e21d48c2b",
-    "b0ba14aa2b83af33bd4f746e5df1d4a7ed8a24ae67afb6d5c23192a7ab8728b3",
-    "1887366cd1272f8f43868af977c1541bb8c953c7117ef0a8dba8e834bcb2059b",
-    "bc28b6f771d04fdfaa13e6affbd1f68d07261c999a6d2cd524a2cbf6e2bf564c",
-    "83f2cc7fd2ad4fb7ea4685008373c34cdebc45d9ce7714ac80b13dab86669521",
-    "44b0ea3222dce6d6fc3527ccff101a7daf2db8c1b7f40484a733e0542f12272f",
-    "db64a85302f3908381d841f006606d0bf5eef3210785477e23bb3aae7280e8cb",
-    "d22838883076b0576dd685189b86aa7ef539d770b453abe13c1d672f1d7a822f",
-    "bdc000c2b4a4d527ac193f2d994660f5a4b5b3a24261121ce0b26072dccdeb4d",
-    "e3e975ee9a6a8587f5edec1d9d5f4fe6069bc061429deb66645f2e2733e61b19",
-    "567da0630ecf2300e806d34c373efa0dc59f1394951c52c29e76af794e8bcca9",
-    "d4894b14e1f0e5b6f61ecf88f8673ab96912d6a9011a128f630558a067229583",
-    "851344273d4ca462857c178e05fbc8b902db4433a6bb80a0a60b1e331fa3b544",
-    "d7654f4f9c350417c5577dba63fc203c5e1d86349674c09c6bb59d343fa70425",
-    "671bb694dc640179df834e904fb72a37be69398f0633d327531a39fe386de9a2",
-    "316145ee1a6ee6362a289e049527967b56cb56d60c2c9682aa924b331aa4aa74",
-    "bf33a5bfd993e965537db09041baaa39dc5b914b7fa60480f6fc3742e1b9f362",
-    "9f7d5ccda15fed261db671ed0d95e8b808869a6a4908537b379f043a13deb849",
-    "0f417e4cfe02013dfa122d724c4a10ed5c74bd00424c468840efff7e11667c66",
-    "6220ccfaa4b8a3211f25291d4ff17dbfa91ee1d18c31e87e62a797f4a227c686",
-    "aee3a48cabb3985a4e08063c291cee3bfaced7b7e04e0f239798d21c79d2e00d",
-    "03e9ce1ce19e3e1e4495ffda049c4758f17a5890b3d29067b49e6923b527d381",
-    "f9ae964f139da6586e89c03479c128dacd8233cdf25688372c1073c4ca496ca5",
-    "8453b5662856b5e289bd225e98a6dd1ab27e6ee9ac98cdb7f962e95c46cf2b54",
-    "e5a2dc1b1fa729df18ca02d77e8a0421d912f8cd1d8f30c549c69fc355045014",
-    "3d4263ec04418d4de5839683647be4e94309025cf749b1bc929c8919c9d7c5ae",
-    "8c648949953282f61ddf1a33a2b6d658996d5b841c8b2f5b61467e37ee9e22e0",
-    "cd9a6583e438f86cb2f49a8d98286ed2e1838361d3f03fc3b0119ad5d8fd014b",
-    "93b20adc85c242edd09d802d3d6e33be671562e376153fdaaab8484b0e428017",
-    "e98e2ea42565d2e076cb188ec1d9adb7766bdb9437774f3e5eba84632dd13c61",
-    "f08d91f7ff88e4e5774c443b9b110a2a09af9980119e65128e0f96cbcb188bf4",
-    "68e834bffc9d393c0527cb933e2cddd14b464542f96cd47ba147c1cf5b5fadd0",
-    "1a8749b86d2d6768b02efb5f77be792d0565d746bb5eb52883d58a5c0c496047",
-    "91bdd1bdeb97d31260b203def50277ec58b80a3b249aa63771b16b67981e6832",
-    "2dede212504cdb884ce6d5b6b1b2ef41ced8f90c266a3645fc6eb9522de26fc0",
-    "0ae2821f5e0571580e365076ddb67ff160b33dbe5a27624135a0bfcf944bae07",
-    "df0b6da628d319f3074e0fd8321c368b1b46a0eb5fc0ebc7c2cc1ca33b8bf337",
-    "f42bdb0a29556712335e2977190441084d582720495b00f7f976490a813d2912",
-    "a51cd9ddfc3b78b8914832ca1d0cdd9d023e199a17cb13f9c0eb0d3d06a7821d",
-    "6c9a0425e6c89ce8e330aec36375bcf9a0041bfd556b818da3b879a1bc687847",
-    "a2977e39fd5e9d58afa1c611b0095b1a8de953dcbfe2a3c54ea14817aba4c1b5",
-    "7d8922d6cb0bdbd4b5f536fa3617768d0aa95dc2a90dfbe10c09788f3ea0c109",
-    "1d3f5bc9a23ff0ec4545ca00208989c130d2b2d8fa9584d7fd2121f1008ac90a",
-    "7d76d8d97264682e1ce16f01ea870b08159a25f4b83c356cf11f4f82edc24efc",
-    "28654152801a8ef3fd840b99f19a30fc23909c25e8e1d6b3e4fabd711b97da90",
-    "be47db8d64224d3d6ed2a8a84ab157ea3e6d4d89458e2db348c67e3f4df55684",
-    "0bb625042a8458df24c0b9b2ef6e5c87b29a3bf88429cec5393ee76d3cee5af8",
-    "d51887813762b1b64495265e12042ed90dbd3f7453413243c7d3e4d98f46084c",
-    "e215629101a32b44d1c4fca741b588d3dd4040902e106a367545d9f610ec1e37",
-    "4673aeb726246095c1b95fa36b8a3dc76488751f387e2b5d8affd21a2437bdba",
-    "6788e4d95273d5ec8a07e4aca6850a169b3ca071e133e1ea1d7c0d73daaf8487",
-    "48a9c3659f3f5c8b654c3494fc234f9f504598d92db7af12fae3c798fe879f02",
-    "47b4b995649a8c8793984cda39e0e496ba0ac1c6bb045efe211373d83ef909a2",
-    "90a20b060c9055f47603dafd90c8de298e1c7ea02f66afd8f8908302cd6dcf9c",
-    "69c8cbe77fbc2c21bf0394a2032bf510acd7a173111c506bf49a36f942dc6b03",
-    "24133387462ecf964093e29fb684725cb3428b196d959379886d0acb7f840123",
-    "3ba4622bb777da5df51d38a214f31ca809d2af4312848276d1f6b56389888ba1",
-    "17c61671457bd60a2d26586967dcec413ca5fce9260f763fd27fc1a4d854ce05",
-    "a1d82955aa2a682f74dc6fac3e6164893b28b6ac76d5e571c7c5e8d6461d0f8d",
-    "e9cde46371c9597a5b3ec05e1ca340a74d79742aaa112deb04afabc93d60c62a",
-    "94067c56fd9685f1f8bf54d920433584194356822ab5a434ed37d24381a9772f",
-    "c70f33d7aa6f0932e1ce2f76e7e3261e9832bea4d077a4597d2952bb77f1e0f8",
-    "5072aeaa0ce4109f10926f745ce602a2b36a7311c7b0ec9a25b1a3a14b3402b2",
-    "7709d559fa56b63af42369c82c8e5f60dfb6e8c363da2507e088142e738a4034",
-    "426fe0d4adbc21c97739e801bfae07b79166c8ed2e205005ee8943d145eea4b7",
-    "a0c739895b02265f0709c580d91e500ff4e714ea4ad3bc9835502615a222ac65",
-    "2437e83dc206a79e43eaaea45525e8217db436c304585a5ec87920e939561f36",
-    "b12a0ef5ff607a35ce3618ae61aa98be4254edab8391a6dfc7e40dcef8873bd9",
-    "947d3ee664366e9ec09d5ea74de6b59d96bd5770c0cfa2bf5cab09deecf66709",
-    "140bda671a6e4de8f65fb5cc78020c1a9cd0076821fde8e07cc205cd7a1bf4a6",
-    "924498f6f8809951216715ffc46461c545ffd0bc2f806a0d108e7680fd7fc000",
-    "c3534491884266a9fea8e82e8e5fa0c5c93288abfbbba6bae1eb29ff5f6e208a",
-    "aa625e0a3896bd294526d89d719ed3ef86769a85893b11bdbe938a2172f4d4ee",
-    "b55f2a9f89ed9c045f6f65f44fe21883b58dddaba0434a89b6a114efd4db88ee",
-    "50110ce729626c3794871997aeff66f952d462cf1f0884aba89313313a836b2a",
-    "c28c69b96b248190570fa9c1fa3aab0488d342d008f913f26f1ba501b861733d",
-    "00bf012220ad4cd40fbcb4bb1676e0958dfb70c4f5052a2c55d7cef5eeb26b32",
-    "beb3f533c8dc261b4f70c66f3157ec80c78bfebfe33640f18a853f3214800688",
-    "087c65195e8539f4f1c87413e7d52311de6ea7f9b7c1b133fa9cd78dfae9a49c",
-    "13b0e8afa3be89582ca3e9340c2577345d1edcdf54b6fc051e7b0e142acd5302",
-    "df81219331799e521b3447d17dbb858d0d1478e74d3121743b727cfa1b67402b",
-    "b6d2402ece2dd75b58395fc0f33d5af534f104b11c77a608ac28dfc879c47401",
-    "c10c348ed5457ff081a74334c9ed0455d62d38cf7647bb512fd0bc7f00ce6058",
-    "8d23370c1327a198c90d1202fc1bc201bf87debffd1d12c4469fa34152ddd10e",
-    "81b322cb190e9aa915a177707e9c04032781de975ab34e5562551d10dd53e379",
-    "01f5fd092bf38ad1d97b181571c99ea47fa6780a93677f249cba76e7be36bb2a",
-    "560a6604b5388a85e06c37a7506687fa5015a49b17e3f30502535ebffab706b1",
-    "7573d016912a46f2ef245d50209f051e73081e8199baa5cd23508083ec7da2b9",
-    "d5840da1e54be14f7132c7e06d118348c7f9841ccc3ea87171466507217e5041",
-    "f509b3289020fd1bcedec9aae1645a94606e3c745e4cf26f57e02363292a484d",
-    "53d2a43fa6dc8e7a8f372d4ac003da9a1c125048e70fa4e4b0ae3a8fd8edf54c",
-    "3cb63eb176f55584d03f5b144502b74c6b9f50b370fc12e2bf388e6069c09ed7",
-    "2795497f54e63383c6a560c48bbbb1c4d616cbfa75cfd7759ae3ce09c2029121",
-    "4d0c41de7a725b4376d1ecef177954a2a81615e659e165ec19ee254d8a5f60d6",
-    "cb1615e78e2778629efe16f8b5c90570ec686dd99c668d2c0c5ce230eaa15e25",
-    "235b63ec66b2dccafa09a871f3ee1f5602e4f1c4fdbf4ee24e4f89b68241b04d",
-    "c55fdb4e3c4082007d9a7b25ab40e00708e5c0fa718238d52004664f2c44fbc7",
-    "7fedf7ff0d762e94766f8f6ab87da5a93fa072231a31e2c852078614cdd36727",
-    "d34eed353f1081cb82297b77c45310a6f322bc74d5ca2c2a6edcf6ddb5404b10",
-    "c161bcec1897eeddb685da5b7fc6f23506cbed0ce9cf1e9b9eafedb1188197f2",
-    "d4c5320f44b286e883a2ba9d5d04d321a8f1bf5cc8b1b6da7b38c0bb81750341",
-    "0382916ab6b7cce61cd00aaab6b51dfa10c4a3d27a598dd1908d9aaadf61aeda",
-    "b63be72136be3e4fffead4e4576cbbbe139b7922c9c92cc98e2b67e1ac661361",
-    "ae4f0cb0b4e678279e6c5a773ab0b136160afd28bc84cc036b383d39a8265059",
-    "5d43a4d01469d27a5773e9dddc993ded0bc397f2b74fbfb17039e6a91f012194",
-    "6d0e3556ff7d45f37d470d852c211a3e1a69f24dbcc3511a6f68f889506fb01f",
-    "3a98f090653b94bdf8e3b61dedde084223c46391291ddccb4977174cd6849029",
-    "1c6c33bb610f93f3f60066bf493a193af762eb13ae253ee77698140eed9455fe",
-    "9ea9d0e590fc77c8751b5cb648ffe37c95205a351fc5b3b4e96f53ad632aef5a",
-    "20338dc48c02be7547c51a80b7bb436b6e2a223f9db0275f6ee8eb2280502211",
-    "7725b730d812f45c1b07fe663949ea40ef69a59088a53d82bfcee81f7350d107",
-    "4e52db4f85bac94fa7f85f64da58ab611145266946e1e3cb0d045785ef7c977c",
-    "10ff4a05a6a069d7a92a367ec7c15539c0eac55e8881849c49cba5a3887e7be3",
-    "6161a7d01b0b2f024abf868e5d72eff1be1e7b35e5a8e901ddd88e76486be6d5",
-    "81d3ac5764224e7cef8b99174f6b73fa643c73f9d60d9e476670a8bd003cb43c",
-    "18978c0a5249f980cf5b3c52dfdfa2df6c831c9443024ab6a05d86bf0609e4f3",
-    "63be6ce606f98a290085125303d3a4f20b918fa713224250fd023c695241c15f"
+  "quantized_rgba_sha256": [
+    "7f698bb5813fb977393f35eb7e0adbf61075d59a9097c1d45493e447d555fecf",
+    "3267219a113a2464e58f7ede9902037ba628071b439f588abc236d72f73fc8ca",
+    "0922c860647ffbb0403ff504563db97661aca3ca651e29937f063acd8f20e1a6",
+    "20e5e13d7039434b0ea402f72682f2adec0f5e27fb4e8a3919941d1ca301840b",
+    "2999f5a0f364f94b8a97de874df4dc04fe6aa29df0309d18df6a207b3d6bbd94",
+    "7ed4dac8c968d359343e264e437187d5e6ccf378e87951691f567c39d88412da",
+    "090a3d1650af0d1ae3dee42a1932326d4bf7afdba1a09ddabab8e17212a92fd1",
+    "6d6d6524d478da012868a4050031b04d7b67077004e19431524e7a740427ec07",
+    "1029ecb21d2410a2856a3a8a2ec00474f20a7d75bbe6475cb25034c8dee47f84",
+    "d2c4a1c3f5f2e8ce00a9647136a7e1de4e19d7db3f27b48235744934a2cddddd",
+    "ef51dfd5ac2e500836e0ada523c2e11375b470f40783f5e50a65c6663887bc59",
+    "4ecbc68616f8a50cbdcd160a06dd7d24d971cefb66870a46b2425cfa6ad01945",
+    "8a4c120175dcbd5186c469e360b793196ede90a4efe395b66e04b1395a05aabb",
+    "39d99e6544630db53c8f81fc3c538832aba5d0a6c47be3201d5ffb7c43ec1520",
+    "d91ea684df9be746a42c4495efca6386121f45ce71fb3b614fbf8b077f708e1c",
+    "94c1206dbf77fa4202ca21340dea40bff4b381ae96b682a9fe52e909cdf5b3a9",
+    "adb12e9094f040832da21c3dc7e5e7d624d6804ae416cf1b973487d167d16445",
+    "daf146086518eff0999a36da7068e7d665fb41e18101849989aa5772bf8683b6",
+    "7695c8a78d7d3797c0772b6a5e2aaf9b0597454086e37a668daae3d9e49b597e",
+    "2a7924ef475a1b707e4eadf83b3d10eb54775325b7141b35ef4ddaeaa28d165d",
+    "1f2def59b268494b21c866531a3e23b2e1400ba52fea263b68b7d3168ba87ff3",
+    "4c0acf0073eaec2a468bc57504881429646646f4e16481ba8d315c4d384e7674",
+    "14eb0ccc4c3a0fee28558dbf96a87b4b29174bcb3d849682d0fab84db856a5f5",
+    "35c5d130ef97622ea648e83642ab7d97bad5f1d6faac6bbadb5df20076f61857",
+    "e0b270ad968d69d80c9b1801524f74e29763051cd32eb96da23b674f9c555d0f",
+    "2dd35322a4ececceea11de882333a4887e871b6d0a05710df23aa880fbe1b80d",
+    "7606848a7e7fc64b2b98ffafd866799af66ca40af2317353f8b1f5ca588b0108",
+    "d3886f976622c5a7779be29df90634ba0a99c870b133f1c7d0b9bb4bdf332eed",
+    "d24094ae85fc6e1dbe3c9834a091c9914506f2c4a811d6ebc811bc742ad57db0",
+    "e03ec840347860edb11b30cef30f52f62087b3eb7774e0bc949de1025b77e200",
+    "0e87fe4a9db01e7565bf515a5e4b56280c642cbe6df36c78d213c7a2e487d00b",
+    "ee64d79a0e8a552a095b00119eff56902b62ae71eb1db196e4c8f01aff5a5683",
+    "a53435c629cc233143307b67a2d82c0d27bf2a168e6b564684e6e1be2f6a1489",
+    "f85ec8f24edc179e75688b73593e6e90f0a669f4c636080e3cf6d11fd669f854",
+    "c531a78c5a31f61837b2948f9c8045ed29eaebbd9d4ed06bc3e882239ad08c64",
+    "f497a2e064b51768cc921ad7605a725e16bc981b37db851f0025439a793512c2",
+    "fe769a313838e69f210dc15572d295a45f35e4758b4a8558eb93ed402ce4f8d3",
+    "19016da7179400c86ec967c60b1387cc43f0651078fbb49fc613d594f22b81b2",
+    "ce6cd19fed6bc67d82d9f95926a15faeff52463395405dccd730b2e504ac89c9",
+    "b583b2b6b28746950c431e261f18c2ba6d867002b0e0019b08048d7aa80a378f",
+    "dcedad21a49da4fa2a2d1ffc2f1f54337f10e3b61c447ef1c724d751fc527f48",
+    "b55692499e3f1e7e6b6f54c3ac662065be0c7d7748c993910438e6b263972fb4",
+    "fa9cf4a67099ff725244e39e48edc0e88f0b827b2b7c6b12200ffcf4c8432436",
+    "482aedab27a5a3d432912ebe794eacebad375d40a4a886e2657f5b568d43f148",
+    "5190b65b9b969e85e9109c4b9cef88d6d3f1fc63d6001d41739c3c47a3150436",
+    "b4b762e435f8ee26111e9be3eb9afe0a04af13c4c539ae157dddda5945031fa6",
+    "1c806ffcdca190fb14f12ccc26c3cc0d22778116d08098b62a284db6a8720ad4",
+    "e17f9317e774c711ea00eb793a4658ce08b8bfb448c3d7394502ebba37d0ddc4",
+    "7ee460ef203690d76df5daaf44bb944725985bd2c6f9ba9cb403fc1c4d6dd2d7",
+    "22d30f39c0b3302b337130e694838de8ab9747b4da50c04fef7b1ea63bba07f3",
+    "6498f5fe5b53bdfd843841772a147a7dde9338b281fdc2d339ee9ea9a83d318c",
+    "fb265b7dd84df791fc53728ff100fa00ccb607e0b43b914873705e270dd8817a",
+    "59163dd87e3019af7c486eb3f56c2e0f6cafdb4d829729aa6d21341bc977c678",
+    "bf4a1da6f9cdd081410bfc5c09d7523672c5b056ebed2da81a713ff9ab2e3e81",
+    "e1bdcc7b6b002eb7e644059ac44cf958f754747e9d6b729f3aae50512b0e833a",
+    "57039407d2e93b66886e5233cadaf89cf0b44d9de1f1cecf34cd9bc9e05afa02",
+    "ea62c56cfd2c58cd9dbf4279ab20d341f7c442b9a9b0b4d48a7fc43a8e2be8b7",
+    "daa2925979045aa24d17245291aaae7fdc74e66ddf71c7d01819e293cfab5674",
+    "c6edf135f3c76ffdb24314ef43e81520cf5ac2f178d698dc9252152ae75b7afc",
+    "343a9c67a4444412ad7441a942a1b4e8031c6fc0aa2d75e2d4af8bbb1051fd3c",
+    "d635228b7afd824311cd8a37f59d5468174d58dea487ad9b8453a631bb2315ee",
+    "5bc9ff0d1d64b217a373b0ad214622e5034d2950d0f8525bec07011bcb71549e",
+    "20bb0112c50d6d863672357d571d8214e463fcfe69dccdc892361c65a8b3f6f5",
+    "932f194facddedafd9ef17e9b7022858656f27ea87ae5640349753718b73c1b0",
+    "931d30c354c7b99a2afd8eb425e269fe4304b0d517ba0c9f77c9a0094784a4a9",
+    "76d96b857a26cfceb3d78432f74d71d8ba9b39cfeec1b3c931a51965c2715cb1",
+    "4c62d46b59ccad0d374825cf190081481d45151896c5b9f0727c21c6ed56eb58",
+    "94b346a62472a75f8b8963d5a1627b56c3a78039479dbdf1e9208d6582e9da33",
+    "1b9a375c5cd0982d968e10d07cd7f314c1973cb0d37e107d4db0cdbf197c31d7",
+    "25db037645742e97d8b1a224e6b0c37a6184c60a8583e24b77a9087b8c53f309",
+    "fc50c69ff06bb6483d286a927e5422f6986a9a6f70f6549149c7d700c4d9c742",
+    "dc4d586797e7ac9a868550c50795d97321d842c77c447565d4895272d4ebcc5b",
+    "cfc68581ee6574bb98ace51cc13023dc26ce2760e96e518e50846fae0cb0d470",
+    "fd1a64b239fbfd3f31d3788e37ede74825c85c668dcf33846820e4306bb2efdd",
+    "4f724f8988cb4d71a4b4728fde1c9f74a793cc9a69b085984f5e55a16c551457",
+    "d1b702b842b5e89649ba6b8b0c7b3b4777de6d357ecd07d1b6a68feff9189db8",
+    "9de6610e1a680c313e7b254a724bff25f94a8a4cd4d85d499eeac6b5b9074a51",
+    "251604cca4fec84649f42ce972f2df3a0cb255d22e290762317154031eacde97",
+    "e15f32c1ac1de52257b23b3a859601d32376fad98e0eb803d89e3f62e56a4901",
+    "5943a97f96163a420183433777f18604cfe409f35782e7145de242bf1a0fc3fe",
+    "dae401b68ae12e33c7a24736cc7ac397a2f3ad4708ea2c144d63a9a8d4d19a0e",
+    "baa72da26de1b91abc0382ba73f3f6135d289469e1553bc52d025713db4d7e35",
+    "97eda0ea5628f5282cf933e617c4d9cb0710ba28d98de210c0882382f1d342dd",
+    "cf635500e1ef4f7fec8a86f25192bde46f9239e11f2c25490458e735e0c36a9b",
+    "711f6ae8c5c07d6b6eef252482970fc7f567b16f25d46c174a6d1576de722cef",
+    "769b74fe32251a8891fd9ef3b1b725e6d9a9b6ecc9f6ac707c21ddd55de3074b",
+    "e9e5609a233e5f8839dcdda390549dea86a67db4c726da7e2398d0d008289467",
+    "f7ba9cd02c22de491f2b9280d7bbd88174faae88e245a95a2f8d79acd6e11846",
+    "e4e9a2028caabd33d914d0b93937de03d5394402c3c00972e0ddd3a853cb7c1b",
+    "586fbed84a98f9030f2a58e2533c782528a098915b5cadfa8657cf6cdb428b0e",
+    "60da739043395f3cd2719b92591eebe20cfb3a872ccc95d4cece67d1646d7372",
+    "d53170c6f1cb51c36e91cd2bcc53cd9be6016836240a0939483fa78f0bc70ccc",
+    "e822980c838e141d03e4ba1431b5385879c76043f5b43b6a3cc0d487fe306820",
+    "069d7092a7b128a5e9144c9bebe735fd1d073264c5415cc17df142b33b8e94f2",
+    "7057827a4f32c5eed3dfa94cc9d0147331e574a9d1d9a1c6201dcea754c942d0",
+    "6cad23703ae97dd9a155a3fa12196f4661ada39fc167078f2e2afe847c24137b",
+    "42627b0352fa989eb0b548d39d74192b5bf45446fd63cad2bfecd4f42b0efc7f",
+    "fe267e5c3748894a16957797fd06c4f7115ec858b741cc550a5b884d253baae5",
+    "e48f85769fae736aef52c80d8490535cc7408bf32a8b9594748217f7df3b555c",
+    "94e446ba332d9d187e48b41531225e6add6a1e77a156b13f7749990c0bb499e4",
+    "c97e2df0f1e863919621a305b86fdc6e0be085ba84b8aeb2a009d8faf2f49800",
+    "bc74ef7565e33dfba21fccb3b43647270686362f6289694e9bd9df26a5ce6f26",
+    "2591b2961fe9225f92ef0a57e6b0306a01e7b428d27086fd9007a46e866821ea",
+    "0cdb893ba5ac2a7e630172d098e5a41ddcd19c422374db524ea861b8ec72a965",
+    "a2a2263d1bb7fccd594456e4e334a4a66c7f809c43200d02ff33d0c46a84f9a6",
+    "c8063aa42507f5fcdb8b6e306f380c300938830652a934135cff329e3fd509ee",
+    "1143b45520b16969a5d3d29eb927592865e566968332588da36daec9782502fd",
+    "3903728a3e080407b5d37df8aa0c1a00b04abce9706c43653f1f611b52754b09",
+    "2db49056e06f29aff1d3df0d9cfdcafb2f8112714801b1e5b79d4d25235042dc",
+    "6cf7f56f759f1ba3ab516d99db88451f86d186d082fbeb045e10b7293f7a7d36",
+    "36c0d969f5bc631de5ff0be3f3dbf0b2c0afb7fda2c9de0304087553bbff4e90",
+    "fb75c2015fbb988fdaa630e426902e828b28e690eeaa6764f8d6197332249301",
+    "47303c27b3ea4b7c911548d2c47ddda5f05cd27786f546907c57c36e1655e73d",
+    "7936cc3760db596f1c2449e7f241fcf643b1b56ec3ba6fca78809a704a1fa46b",
+    "1f2c6eeecfab75cbef33249b229b271d3e2ccf02cadb2bdb35eb111009354ed5",
+    "09382ad8b41826564e48c280100ba68e2cc6bdbffc839055f0d6abf3a9940012",
+    "112787855c676f6b2629b803ac19b2060f6a7b8c998136dc103517267f807187",
+    "7919838a838d555e75ca4f59672c1d16ede0fcadd1910294852e980166a47135",
+    "270e00af2a46d00fcca37529a8a0230c27ffe106767a8e1f733db952afc3f3d7",
+    "d18251d796d66665b79161f31f21af9cda8e924b95315c483f2049a1f74970fc"
   ],
-  "gif_sha256": "2c3746734f7875ea8950218cd94f2be23ba9d01f1794f03f47444f936b29495f"
+  "gif_sha256": "426a7c6cf1af9d74371476f3c37dfe6018734e31a80972b4d39b1dcc91afa353"
 }
