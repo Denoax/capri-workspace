@@ -23,3 +23,7 @@ The user rejected the repeated V7 branding strips and retained the rest of the d
 ## 2026-10-25 — V9 cloud takeover request
 
 One replacement hero uses the supplied terminal/cloud/pose files closely. The user specifically permits one new character-only Capri portrait with identity-preserving refinements; this does not permit a generated banner, clouds, motion video or lesson art. Keep the V8 glyphs/diagonal/footprint, separator and all 89 lesson exports. One seeded ten-second clock drives blue hold, local slices, spark, outward color change, hacked hold and downward recovery. Target 300 distinct samples within 8 MB; no main/About or runtime change. Generated fan-art and technical evidence are separate from human visual acceptance.
+
+## 2026-10-25 — V10 split restore correction
+
+The user prefers the original energetic animated Capri/city right side and V9’s cloud/code design. Restore the actual original-speed source on the right, move the environment into the original left polygon, replace the slow takeover with a compact signal break, and refine gradients/type using the supplied licensed Chakra descriptor. V9’s portrait is historical and inactive; no new generated media is authorized. Preserve all lower panels, 89 exports, V8 separator, math, runtime and metadata. Testing delivery remains separate from human visual approval.

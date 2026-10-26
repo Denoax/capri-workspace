@@ -1,6 +1,6 @@
 {
   "configuration": {
-    "schema_version": 1,
+    "version": 10,
     "master": [
       1400,
       480
@@ -9,29 +9,43 @@
       1000,
       343
     ],
-    "duration_ms": 10000,
-    "fps": 30,
-    "frames": 300,
-    "delays_ms": [
-      30,
-      30,
-      40
-    ],
-    "poster_ms": 6200,
+    "duration_ms": 4000,
+    "frames": 120,
+    "poster_ms": 2500,
     "seed": 19091,
-    "ink": "#100a19",
-    "pink": "#ff1265",
-    "green": "#28fb86",
-    "cloud": {
-      "source": "02-clouds.jpg",
-      "scale": 1.2,
-      "crop": [
-        20,
+    "left_polygon": [
+      [
         0,
-        1420,
+        0
+      ],
+      [
+        690,
+        0
+      ],
+      [
+        582,
         480
       ],
-      "fixed_grid": true
+      [
+        0,
+        480
+      ]
+    ],
+    "left_width": 690,
+    "cloud": {
+      "source": "02-clouds.jpg",
+      "scaled_size": [
+        1440,
+        480
+      ],
+      "crop": [
+        360,
+        0,
+        1050,
+        480
+      ],
+      "fixed_grid": true,
+      "ink_grade": 0.32
     },
     "terminal": {
       "source": "terminal-snippets.txt",
@@ -41,3672 +55,1416 @@
         1280,
         720
       ],
-      "master_box": [
-        547,
-        0,
+      "scaled_size": [
         853,
         480
       ],
+      "crop": [
+        81,
+        0,
+        771,
+        480
+      ],
       "font_size": 12,
-      "fragments": 96
+      "fragments": 72
     },
-    "portrait": {
-      "source": "portrait-master.png",
-      "alpha_bbox": [
-        150,
-        77,
-        1245,
-        1073
+    "right": {
+      "source": "../sources/capri-19.gif",
+      "box": [
+        550,
+        0,
+        850,
+        480
       ],
-      "master_height": 490,
-      "right": 1390,
-      "top": 18,
-      "eye_anchor": [
-        1122.3694779116468,
-        236.92570281124497
+      "fit": "xMidYMid meet",
+      "native_samples": true
+    },
+    "wordmark": {
+      "text": "CAPRI",
+      "original_transform": "translate(45,345) scale(0.27,-0.27)",
+      "gradient": [
+        "#ff76af",
+        "#ff1265",
+        "#a20a50"
       ],
-      "spark": [
-        1217.3694779116468,
-        141.92570281124497
+      "ink_edge_master_px": 5.94
+    },
+    "descriptor": {
+      "text": "AGENTIC LOOP PROMPTING",
+      "font": "../fonts/chakra-petch/ChakraPetch-SemiBoldItalic.ttf",
+      "size": 52,
+      "tracking": 1,
+      "ink_left": 52.83,
+      "lines": [
+        {
+          "text": "AGENTIC LOOP",
+          "baseline": 392
+        },
+        {
+          "text": "PROMPTING",
+          "baseline": 440
+        }
+      ],
+      "gradient": [
+        "#eefff6",
+        "#b1ffcf",
+        "#28fb86"
       ]
     },
     "timeline": {
       "blue": [
         0,
-        2200
+        1000
       ],
-      "bursts": [
-        [
-          2240,
-          2400
-        ],
-        [
-          2820,
-          3040
-        ]
+      "rupture": [
+        1000,
+        1100
       ],
-      "spark": [
-        3200,
+      "red_reached_ms": 1070,
+      "red": [
+        1100,
         3500
       ],
-      "propagation": [
-        3500,
-        4700
-      ],
-      "hacked": [
-        4700,
-        8500
+      "sheen": [
+        1600,
+        2400
       ],
       "recovery": [
-        8500,
-        10000
+        3500,
+        4000
       ]
     },
-    "rights": "Private review only; original source qualifications and generated fan-art provenance retained."
+    "active_generated_portrait": false,
+    "rights": "Private review; existing source/anime rights qualifications unchanged. No new generated media.",
+    "palette_colors": 96
   },
   "frames": [
     {
       "time_ms": 0.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 0,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 33.333333333333336,
+      "time_ms": 30.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 1,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 66.66666666666667,
+      "time_ms": 70.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 2,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 100.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 3,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 133.33333333333334,
+      "time_ms": 130.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 4,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 166.66666666666666,
+      "time_ms": 170.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 5,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 200.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 6,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 233.33333333333334,
+      "time_ms": 230.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 7,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 266.6666666666667,
+      "time_ms": 270.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 8,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 300.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 9,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 333.3333333333333,
+      "time_ms": 330.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 10,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 366.6666666666667,
+      "time_ms": 370.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 11,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 400.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 12,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 433.3333333333333,
+      "time_ms": 430.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 13,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 466.6666666666667,
+      "time_ms": 470.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 14,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 500.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 15,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 533.3333333333334,
+      "time_ms": 530.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 16,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 566.6666666666666,
+      "time_ms": 570.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 17,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 600.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 18,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 633.3333333333334,
+      "time_ms": 630.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 19,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 666.6666666666666,
+      "time_ms": 670.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 20,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 700.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 21,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 733.3333333333334,
+      "time_ms": 730.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 22,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 766.6666666666666,
+      "time_ms": 770.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 23,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 800.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 24,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 833.3333333333334,
+      "time_ms": 830.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 25,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 866.6666666666666,
+      "time_ms": 870.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 26,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 900.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 27,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 933.3333333333334,
+      "time_ms": 930.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 28,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 966.6666666666666,
+      "time_ms": 970.0,
       "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 29,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 1000.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "rupture",
+      "source_frame": 30,
+      "red_fraction": 0.0,
+      "rupture": true,
+      "sheen": false
     },
     {
-      "time_ms": 1033.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1030.0,
+      "phase": "rupture",
+      "source_frame": 31,
+      "red_fraction": 0.39358600583090375,
+      "rupture": true,
+      "sheen": false
     },
     {
-      "time_ms": 1066.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1070.0,
+      "phase": "rupture",
+      "source_frame": 32,
+      "red_fraction": 1.0,
+      "rupture": true,
+      "sheen": false
     },
     {
       "time_ms": 1100.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 33,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1133.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1130.0,
+      "phase": "red",
+      "source_frame": 34,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1166.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1170.0,
+      "phase": "red",
+      "source_frame": 35,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 1200.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 36,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1233.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1230.0,
+      "phase": "red",
+      "source_frame": 37,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1266.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1270.0,
+      "phase": "red",
+      "source_frame": 38,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 1300.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 39,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1333.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1330.0,
+      "phase": "red",
+      "source_frame": 40,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1366.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1370.0,
+      "phase": "red",
+      "source_frame": 41,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 1400.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 42,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1433.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1430.0,
+      "phase": "red",
+      "source_frame": 43,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1466.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1470.0,
+      "phase": "red",
+      "source_frame": 44,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 1500.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 45,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1533.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1530.0,
+      "phase": "red",
+      "source_frame": 46,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 1566.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1570.0,
+      "phase": "red",
+      "source_frame": 47,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 1600.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 48,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 1633.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1630.0,
+      "phase": "red",
+      "source_frame": 49,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 1666.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1670.0,
+      "phase": "red",
+      "source_frame": 50,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
       "time_ms": 1700.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 51,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 1733.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1730.0,
+      "phase": "red",
+      "source_frame": 52,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 1766.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1770.0,
+      "phase": "red",
+      "source_frame": 53,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
       "time_ms": 1800.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 54,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 1833.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1830.0,
+      "phase": "red",
+      "source_frame": 55,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 1866.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1870.0,
+      "phase": "red",
+      "source_frame": 56,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
       "time_ms": 1900.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 57,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 1933.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1930.0,
+      "phase": "red",
+      "source_frame": 58,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 1966.6666666666667,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 1970.0,
+      "phase": "red",
+      "source_frame": 59,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
       "time_ms": 2000.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 60,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 2033.3333333333333,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2030.0,
+      "phase": "red",
+      "source_frame": 61,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 2066.6666666666665,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2070.0,
+      "phase": "red",
+      "source_frame": 62,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
       "time_ms": 2100.0,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 63,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 2133.3333333333335,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2130.0,
+      "phase": "red",
+      "source_frame": 64,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 2166.6666666666665,
-      "phase": "blue",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2170.0,
+      "phase": "red",
+      "source_frame": 65,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
       "time_ms": 2200.0,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 66,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 2233.3333333333335,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2230.0,
+      "phase": "red",
+      "source_frame": 67,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 2266.6666666666665,
-      "phase": "interference",
-      "burst": 0,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2270.0,
+      "phase": "red",
+      "source_frame": 68,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
       "time_ms": 2300.0,
-      "phase": "interference",
-      "burst": 0,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 69,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 2333.3333333333335,
-      "phase": "interference",
-      "burst": 0,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2330.0,
+      "phase": "red",
+      "source_frame": 70,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
-      "time_ms": 2366.6666666666665,
-      "phase": "interference",
-      "burst": 0,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2370.0,
+      "phase": "red",
+      "source_frame": 71,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": true
     },
     {
       "time_ms": 2400.0,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 72,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2433.3333333333335,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2430.0,
+      "phase": "red",
+      "source_frame": 73,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2466.6666666666665,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2470.0,
+      "phase": "red",
+      "source_frame": 74,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 2500.0,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 75,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2533.3333333333335,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2530.0,
+      "phase": "red",
+      "source_frame": 76,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2566.6666666666665,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2570.0,
+      "phase": "red",
+      "source_frame": 77,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 2600.0,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 78,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2633.3333333333335,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2630.0,
+      "phase": "red",
+      "source_frame": 79,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2666.6666666666665,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2670.0,
+      "phase": "red",
+      "source_frame": 80,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 2700.0,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 81,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2733.3333333333335,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2730.0,
+      "phase": "red",
+      "source_frame": 82,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2766.6666666666665,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2770.0,
+      "phase": "red",
+      "source_frame": 83,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 2800.0,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 84,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2833.3333333333335,
-      "phase": "interference",
-      "burst": 1,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2830.0,
+      "phase": "red",
+      "source_frame": 85,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2866.6666666666665,
-      "phase": "interference",
-      "burst": 1,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2870.0,
+      "phase": "red",
+      "source_frame": 86,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 2900.0,
-      "phase": "interference",
-      "burst": 1,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 87,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2933.3333333333335,
-      "phase": "interference",
-      "burst": 1,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2930.0,
+      "phase": "red",
+      "source_frame": 88,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 2966.6666666666665,
-      "phase": "interference",
-      "burst": 1,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 2970.0,
+      "phase": "red",
+      "source_frame": 89,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3000.0,
-      "phase": "interference",
-      "burst": 1,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 90,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3033.3333333333335,
-      "phase": "interference",
-      "burst": 1,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3030.0,
+      "phase": "red",
+      "source_frame": 91,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3066.6666666666665,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3070.0,
+      "phase": "red",
+      "source_frame": 92,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3100.0,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 93,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3133.3333333333335,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3130.0,
+      "phase": "red",
+      "source_frame": 94,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3166.6666666666665,
-      "phase": "interference",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3170.0,
+      "phase": "red",
+      "source_frame": 95,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3200.0,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 96,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3233.3333333333335,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3230.0,
+      "phase": "red",
+      "source_frame": 97,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3266.6666666666665,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3270.0,
+      "phase": "red",
+      "source_frame": 98,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3300.0,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 99,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3333.3333333333335,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3330.0,
+      "phase": "red",
+      "source_frame": 100,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3366.6666666666665,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3370.0,
+      "phase": "red",
+      "source_frame": 101,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3400.0,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "red",
+      "source_frame": 102,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3433.3333333333335,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3430.0,
+      "phase": "red",
+      "source_frame": 103,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3466.6666666666665,
-      "phase": "spark",
-      "burst": null,
-      "spark": true,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3470.0,
+      "phase": "red",
+      "source_frame": 104,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3500.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "recovery",
+      "source_frame": 105,
+      "red_fraction": 1.0,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3533.3333333333335,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3530.0,
+      "phase": "recovery",
+      "source_frame": 106,
+      "red_fraction": 0.9882973907515675,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3566.6666666666665,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3570.0,
+      "phase": "recovery",
+      "source_frame": 107,
+      "red_fraction": 0.9400614507382757,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3600.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "recovery",
+      "source_frame": 108,
+      "red_fraction": 0.883455496373636,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3633.3333333333335,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3630.0,
+      "phase": "recovery",
+      "source_frame": 109,
+      "red_fraction": 0.8128064109108771,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3666.6666666666665,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3670.0,
+      "phase": "recovery",
+      "source_frame": 110,
+      "red_fraction": 0.7021565549059456,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3700.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "recovery",
+      "source_frame": 111,
+      "red_fraction": 0.6108762027681728,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3733.3333333333335,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3730.0,
+      "phase": "recovery",
+      "source_frame": 112,
+      "red_fraction": 0.5159550388642209,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3766.6666666666665,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3770.0,
+      "phase": "recovery",
+      "source_frame": 113,
+      "red_fraction": 0.3891237972318272,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3800.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "phase": "recovery",
+      "source_frame": 114,
+      "red_fraction": 0.29784344509405425,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3833.3333333333335,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3830.0,
+      "phase": "recovery",
+      "source_frame": 115,
+      "red_fraction": 0.21332460052204227,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 3866.6666666666665,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "time_ms": 3870.0,
+      "phase": "recovery",
+      "source_frame": 116,
+      "red_fraction": 0.11654450362636404,
+      "rupture": false,
+      "sheen": false
     },
     {
       "time_ms": 3900.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 3933.3333333333335,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 3966.6666666666665,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4000.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4033.333333333333,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4066.6666666666665,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4100.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4133.333333333333,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4166.666666666667,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4200.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4233.333333333333,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4266.666666666667,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4300.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4333.333333333333,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4366.666666666667,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4400.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4433.333333333333,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4466.666666666667,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4500.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4533.333333333333,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4566.666666666667,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4600.0,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4633.333333333333,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4666.666666666667,
-      "phase": "propagation",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4700.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4733.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4766.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4800.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4833.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4866.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4900.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4933.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 4966.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5000.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5033.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5066.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5100.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5133.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5166.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5200.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5233.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5266.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5300.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5333.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5366.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5400.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5433.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5466.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5500.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5533.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5566.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5600.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5633.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5666.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5700.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5733.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5766.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5800.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5833.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5866.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5900.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5933.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 5966.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6000.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6033.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6066.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6100.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6133.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6166.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6200.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6233.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6266.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6300.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6333.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6366.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6400.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6433.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6466.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6500.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6533.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6566.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6600.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6633.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6666.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6700.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6733.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6766.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6800.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6833.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6866.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6900.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6933.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 6966.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7000.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7033.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7066.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7100.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7133.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7166.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7200.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7233.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7266.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7300.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7333.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7366.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7400.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7433.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7466.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7500.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7533.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7566.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7600.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7633.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7666.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7700.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7733.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7766.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7800.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7833.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7866.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7900.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7933.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 7966.666666666667,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8000.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8033.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8066.666666666666,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8100.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8133.333333333333,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8166.666666666668,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8200.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8233.333333333334,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8266.666666666666,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8300.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8333.333333333334,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8366.666666666666,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8400.0,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8433.333333333334,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8466.666666666666,
-      "phase": "hacked",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8500.0,
       "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 117,
+      "red_fraction": 0.05993854926172437,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 8533.333333333334,
+      "time_ms": 3930.0,
       "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 118,
+      "red_fraction": 0.02049642179478539,
+      "rupture": false,
+      "sheen": false
     },
     {
-      "time_ms": 8566.666666666666,
+      "time_ms": 3970.0,
       "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8600.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8633.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8666.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8700.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8733.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8766.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8800.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8833.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8866.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8900.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8933.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 8966.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9000.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9033.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9066.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9100.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9133.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9166.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9200.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9233.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9266.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9300.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9333.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9366.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9400.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9433.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9466.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9500.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9533.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9566.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9600.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9633.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9666.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9700.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9733.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9766.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9800.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9833.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9866.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9900.0,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9933.333333333334,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
-    },
-    {
-      "time_ms": 9966.666666666666,
-      "phase": "recovery",
-      "burst": null,
-      "spark": false,
-      "portrait_anchor": [
-        1122.3694779116468,
-        236.92570281124497
-      ],
-      "portrait_scale": 1
+      "source_frame": 119,
+      "red_fraction": 0.0,
+      "rupture": false,
+      "sheen": false
     }
   ],
-  "quantized_rgb_sha256": [
-    "75f5b3c77ae7d5ef9193ba34b2a953ef056bd3bb8382d0810951e51836447229",
-    "4509d1731f090c58b4fdb474700591e9520e297516869c2799f22e6641fa7628",
-    "6100137556ba1d87d06474044b2a3bc609b6fbbda7a4954a4059ff779a9cbaad",
-    "0ef133aad42139995680901cf72665ae6c5b1ab5d6796b05d42d48b728276f34",
-    "5fda91bdb7973897d4ce2419ce3f162fcfeb5c660ddbc961603bb95139970321",
-    "2fc5499db7fb1a9b8151ddc90659a2f76f8204879a6ce4f3668d544766670003",
-    "42e1b96c51c6669ce4e0fae8d3d42d9a4eefa16e8b72051c251b80dbf9c258df",
-    "6ba84048219eeea9e902390f8917f1ae4f8c3d1219636fc56806b95695cfd530",
-    "bdf2b9083f6eecb7d8bd74b68f3674df79ee937fef42956b29ba9558e5fe11f7",
-    "7dacd7c461b038ab4bc221460cae147fa360ffddad2e58980ecdb2a5e5f35b78",
-    "ee50e6bc3216e1aa69a7f543415fce08dd4681c4eca2dd00c84c9d0107d22bac",
-    "2d0a86d5b2d643952010dc93460f5a8c744209f89112f6059861307df0c1dbf1",
-    "04dd3f4a935be4866fe152fde1fbbd9968497b541c6e691106772bbca415d5d5",
-    "508c3d69ebb77dc2d68d526e8f4b5d1939883ed9395d6ca32881d38858f9f54f",
-    "2549ec2bfe8c41de6fccee88c58443c315e58a9a61be2b4811c6efb75eb1f054",
-    "3868c42a8268a8a8c3e9ef7d0bf64887738b3b48e6e0fb45896d8e47317df987",
-    "dc2088c3ef17b15cdeb5174ad5cfc9a28ea03fba391ac894c1acd28edfcf1b69",
-    "46184de509e88e70d1a81013abf09bc367d84e88ed26ceef360266c28c2730e2",
-    "64f53a4897383d9d81ab5b2a086254246031e6231bd39b4643cf5673995e262e",
-    "66cb6284e58bf791c3bcaf998ae3fa9a154d2b1a511ecd019e7b6c1ef123ecff",
-    "439a124dd20e3126eaf81f4d484aaa4a411ead29514e3fb3f53048008c863d48",
-    "de1163897ed7ed8fcaa46c2aceabbd696aa6818de17e910a2d94d73a595f2965",
-    "b848037825fa0f05d6e1a1a7676ad699ea610a34d8c3c7f47c6ad882be74ef86",
-    "7c3a54d1344f3dcbb124906316d5469e616fbe7739b24b4f5697ce5bd1680e90",
-    "bde8e2a8f553b4fa50606b564b52789c147bf9b4d1fbf5f7acb66b74c4af3003",
-    "ef9bb8d59c83df1896226d9eb270bb681eb45596b89ac128e50bdcea097b395b",
-    "f7c52c61ac8bf4801772a122668c0e5af1191b5210631bd225ea5042a804bd61",
-    "2a98db42c474e3db035df71c8fa76bfbc8023519aacfe8067c2d214f68d92486",
-    "ae538eb148bebaa4a2c1acd845230e77147ea9f9744aead96f9fc383b32d1ead",
-    "35307fd1d429992702042cabadf45b47c8edbbfe4b76d96021a8ea98e3a88b88",
-    "81f17c40694c975f629d1880005f5e9789a1ae5e3cb6f87f34b623ed5af03d58",
-    "ce0add788636526a7dd64459b4ad7c7f4ff0c7cd244965899b2f1c11a31ce525",
-    "dd188394fd1579daab7f0f479e3bfde3dc739d84a26d0001d60dad2a84c56298",
-    "ba7f22785aabfb142d9e7afebd9e17d078a9acc7370b681933cf1df2b8348883",
-    "d76cd4fd072a4cb327e7dc948e9f2e545aa3031e98446c1aeee868725cd266c3",
-    "407f29d939ed906bf1f7e063bf72c23e4008c2e50cc32c1faaa66d2fc1a9b4a3",
-    "c15f3e9216a31a05d1d59935cb8dd2809624246d4aac0a366d6b232589f8b972",
-    "03587f7a8c70e074a83ec4a49b0fba323c81b1b3a3c959b625714dbe6b60d3bd",
-    "7c2cab4825cd807ddc9b696f2208547b9f42d4c519bf22c7bbc8492c55039690",
-    "4cd5d06ff3234cbddba290742f28764bf48ce3af04628b13243d048c67277bc9",
-    "acd12ddbe5791a22a6d9b57af5fd52811575bcbf11d02a100328bbba985e894e",
-    "3e6cf5e06011f56b4f84480f85777dc46e919e63fa28223cfca0c6b5d7823769",
-    "0671f091da804314b282ef06132e68c983aa80b7c721b1b72120251e12e947bc",
-    "8e8e9acd578fe11add5206140505d575036746815c6fed1a1e8dee2a3a206748",
-    "410105317b68963ea82fbbe5b9069052f891cd3a5bba24b176df23f99763991f",
-    "56410d22eed3951efbb656630044dbae1c3b2f19cb5c03e85770100b1d20d808",
-    "729d862b164e65f018b7de8538f1d8c34e9c8e9cb89c5d249134be9ee7e6cf35",
-    "22f01a1d75b45daa54eee356042d4f959864aa351b76871c39fdc17eac4c0c01",
-    "bf0433d810fff9381dbc24d8ad94d0180824e4c343cfaa9d4ec9461aed41364b",
-    "6749073c196c6ef0fe89c8e809ed1d898fc507e88699b7cb8bd46550743e0c27",
-    "0e63c0fd670218aa6f01fc40086ef48775f572d9f5e9bf5f15c2effc6b238fb3",
-    "ef70d5811e847ada02c73cb2419eb1cc3b2f99989befd74a4569b7c543fb7115",
-    "ce79971dd2516f65001e3ae7cd8400384791a15323554aaf3c00caae8edb148b",
-    "8e6eb7eb944151c570f96a2b37fbeb5824d1685d16a91152bb0807385931c7ca",
-    "7d59c631a93ef923ec73eb9e975b85465e69d078cd27c16ee42bc34e6160b510",
-    "f48242c456b8cabcfd1cd7ee40ffe5bbfdfb88642b7e92bd79b4dbd32e2d9cc1",
-    "e0737bb1d44ed86fcdb4dd00de957919fdecb11c93d325b5dc9115384f5e483c",
-    "22724574edee545a03c7b5d0cea686cd67d36485556d7f22f0d5791d026b2cac",
-    "912641a7815d9f1866edb7be8be0e768ee5f00d198836e06fa29a9320cdba194",
-    "aab268e333320fed9d8396bf1f4a09e26446be92c6fcfd1e5212170e397c7e81",
-    "4f54838cfca9ea136ac79caca6e33715c261c542ff878f615d47885e2b2d8f73",
-    "ca38622f32955648354b7f685df582235f5fdd9fe21dc3ef639422d95b470b02",
-    "3b2fa3e206af9ac936afbb81b9583caa59febfd418160eb8f8b5f1960bb73c23",
-    "13e36ab8962244004cd370bf37f4e0595ef5889e2b772481a2c26325be864dbf",
-    "d1be7694ae4de00e77850b83c4d4cbe8eb9bea4dcf53f8e2b73a3d2fa3fafb57",
-    "26a0457a89c898645a67bd6c8cb751f30c282135cf6c47e27a998f3651c672dc",
-    "568cd703618710a6510c3c5e9cf30ba4a9b3bde4df33f79b7826f87a26402ce2",
-    "b6c3833c47eb1fa8d1410d568f09d46f05194f144cc6a3576461226ccfe9fe27",
-    "61b6c039fd3ee5b308efc54faff04442f0170d178be7ce8dda7512d36859f124",
-    "86b35565ec011963549b867798dce52db12a617db2cdcce371537e541a8ac0ec",
-    "e8615c345123f56993619b9c9e4bdb58aa519417dcd30dd890e454cd75d30c45",
-    "2f443d77f124d9b6869c2b6d1005ab8201f5652cb2835b68b56d20746e4854c1",
-    "3c6d6b3766d1a9eb449f619f4356639b10d0f07abb8ea34b7a4c59fff267a1fc",
-    "9d08e4c4250891010e911893d20b4f900a99062f8e214b4fc5b045cdf998a4ac",
-    "30fb96463b1eea426cf6e91b582cf3815af73aca8763bff4802030b66df9fccc",
-    "936bfcb461f5c899e3f7c34f91fe13b5b69d937d4034616a37f05697ee649b55",
-    "42704ce367d6423a46610c23e62269f99afdd055f109b403bfb3f58c60e46d59",
-    "3cbf26e305de36d3772a2bf10247dccf934bcdcc0c2e1ddc8c2800cf85245ed5",
-    "beba7e9c3133add6111a026ca6eb60b305f24bd351f131a7375169a89876b50f",
-    "ae8478ff8036664b9bb24e1db15dd245e861b3405bc1b49328f3643ede4ecdc9",
-    "61afe121d6466c6a99d11134c45964a35e9413b7cdfce4efc8eb1e01b4f06e6e",
-    "e30a1751beda68e03bb6c66b0c9a8e5c827ad63d01482ccda716f7c551dc3f25",
-    "36ebc96f7633fdd80eae10e06ec5b955997c917952196bf5a8232e7d19cc82a8",
-    "77ce39973a99e8e7ecb457781b042d28326846f1775fa29d95e9821d7ce9cbc3",
-    "630e97b57a5ab0e1f3495237356cc18bad840ec2ba04639d0e0eca790f4c313e",
-    "b23f9826b7f38e0834eb5bb2c58d2c439eb3e57342baad7ba3dd5e83802283c8",
-    "33b4bdffd5ce2c02083f1ff207793abe6ef6856ac65caf33a1b79e38f5193b1b",
-    "4e2e4e31ca5f4d53b9dcfa735ad16c3bdb3f67b41863fef7a95a57cd092cea66",
-    "96c2bf3a67cd4b6a629018df6acad2312f0febe2ab2b46a16ac9ff87f21fc582",
-    "7cdf31b2902ae6284cb78ed6059e8a96a52c6996eafc886fe196f1a65af07b3c",
-    "b1346a672279d256a5d6e2b08ca814c7cb98a9088279fd2ff66bce1d13e992ab",
-    "3ad6cea9b3fce9907ec77e16c95911b3b9bab53ca4cc8e40e54fce6e13351fa0",
-    "18dd28440a03040fc27f4e270daba18751b1328c676835d06ba8505f29c4aa9c",
-    "1cd7cedac5945bd5555d0a04afd3005995e3fa8c9a8c6ffd2cc36c59db01b075",
-    "ec8e0cfcd217f523b44632d0023807c82c3b2b88300626227d948d2c786189eb",
-    "beab6cc36cf3b2a580304c6bc8ffa596e54e9f64641f650f1c2a10babf35d17c",
-    "5ecf39cd7134223cd7ea7f66da703539e9e0eb69c87a7a2624999cc2d387c77c",
-    "3b936407289e01cd2ade031e25df3519a970d8e8aee51e3be618983e91f6f387",
-    "b5c09ed4269f308f994a5dbe72d188c19f1f393200e4cc801bff568add1dca69",
-    "026846042ff48dbf149b01361a0de863931dae6d07d6934b0388a455569e49ce",
-    "d8e90b8b548f1b9a8949c4784cc06635077cfa3ccf7fba5fea0920b78b6d9f21",
-    "b72d2642b637c4c6a4e270ef33f1187dae1ac4a8d2dccdaf261fb2117a757c25",
-    "1986b453f39ad53d73e8ee7d1a6bbc2e6875963ec105d1132b48a52f1b55f390",
-    "db1c9c808578a2bafba10b825c3afc1bfc8deeae91eb69150eadc46e76906b2a",
-    "5f99408d1edce0225380728847a73867625bc24338532cd0e9f33b3ead940336",
-    "6a38e73fcbf316b032dccafcfe59b6da925740469170e4759a312be4f6947d72",
-    "2212b452c7b3448d86906c4aca20db86c156a9fd68df390c47708f329d04be08",
-    "3ee2c4da5fe09c21745459c6c1ebf2af1ba02604a8f985447da0a7cbd39fade2",
-    "dece3d95814ec440066afd8e4767ccf4833d211499ada7c88bd57aaddcfa3f96",
-    "1ecc89a84befeca78b39ef918cdb1ee65ec4c47dcd56097530196780a63be17e",
-    "81ecb10f1a1d81be9b29ae04874bed80174196c97d5b1cc2db36c582c56d0f11",
-    "d91bede2e01cd44204c70b85a0a0ca10aead6a40355f282baf5d52109ffc2319",
-    "cf5a02b93c3d8f828425ad5df57eee8996de9f12e3b367f66d118f3bee56e601",
-    "1d727c53a2d3bfe9aac04523280c6c94c67531f411939773ab20a6040fe948cf",
-    "ec813fbd4ed71de2156f2ea2afda238dcf01824a70641c9bb5f9878ca2a903c8",
-    "d660d5ffb8cc1e43d1076071089cd7ac7eea831f9d9c73474fc0e74593568015",
-    "9acc8da6f5ef7a451f3df3c2275fe10a412e3d6dfdfc888c65355322ab2397fd",
-    "c1d225fa41f747f4198dd24c3e8234cc115494873c2c3908e23a2b2400c73a0d",
-    "7049b58f36bde287138aa5ea1d12d624e68f35aa446b345bd477ed22672ec31b",
-    "c3ae86b3629932f5eecd9b68eee4c1c1bfd1ec314d2196ffd7621777ca5f8985",
-    "801e241d6f100132f13aad17314b3278cb7d4a510231131ffb58b07b0df27a62",
-    "766419fc022482479431ca6c3b37ac876ded4db7701e96b7a3082356e1ea37e9",
-    "cffbcff9445258e12cf806efc7f9a84b083ba4467ba91f12e7a436bd6cde5257",
-    "141aa3364f71970c0c0ab2a5a0d8a2ed2600655dbee88973ec8ff0a251cd4af5",
-    "c759ccdeb22773613bbb4411fc51cfc19b3488b4ce885bcefded8825633c9fe6",
-    "de2659c18a0c4dacf626d4e1ce072be07907e76cb53e61f36fd9d3c7fda7d0cd",
-    "ccb8b4a3fb5c89f7cd6709e64d8801b7e289a39243f3ddda44b501068ca47138",
-    "eebe635a9741ecec85a6d0b04a55822f72489248be5e5311017bd32983363b80",
-    "9b1c8dca41e246f77bc8789d0c3a75d8e51fec8fbcd2bbd074cc3e8e24a8af2d",
-    "c9331ecfa4e93541e76807e49b15c9eed907c7756799d9c23e98e3777ff4defe",
-    "ae0859d1c4b3ce02cbdddc03af8e6d8832a15e2e2fe83b103c0e849616445718",
-    "7f9d22739013d3937977bef62543227199619d3e7a148d9774af1f001dd802d0",
-    "3b1dbe128402cccb16f3d930d154d26591827556be9b03f7fd69ef6788c570b6",
-    "299113e4e7af152a86832333d8f147c2976f87a49622ea7eefef389b2205d24e",
-    "8e00227d308706159305f008c9ae1c6809c44c8ede32514d04b3e9149e650466",
-    "212df13a5ac69bfea7faf864f9558011df21fa3b7afe0268768fe623aa950ef2",
-    "b3d7f38eab1291597386aaf65054385b7808672cc37d15e6773f109274ce9d8c",
-    "2bf8ca138c9901ceaab76cf3d9e3bbaff81bb9d0ee774450a44f072d311256b8",
-    "53740fb44334bb1763b3266828f34f5e10cb9f353abeeb7c35566d16f4981e72",
-    "a35626a9fba58a11ce3daf8f0d31768d0f0062c77937bac4bc49f09f5215809c",
-    "d1695814890a738322764c47e5b08238b227985c410459506214087e61dc39c0",
-    "c81ead1ef0c157862cd04ae5c94707da55f627fa4b9e65828fcf94c4ddf1989e",
-    "71020cf3a7698df5197d9d90df16f65c7c75ece2f6ebdcb4ff991c4562c50bad",
-    "dd9f974367d79192858b4199eaa62884daeb920e16b6342eac01815ebc45837f",
-    "92c5ffdaaa74486599b7e37870b5a1d97004e443d08b35846bbbe0e3fbca0689",
-    "fbf7936505051444dce74987d1badcec91762ae084e238c8df16cb7942229663",
-    "63f08ad1cfb6e32e495428ff649aaf5f3feb71661d94c33b080a5d12528d0d04",
-    "f97a68d3a8c5adc8d130c60260a800d3698b2eb2f9697e420cbed39b6a2b6de6",
-    "eb3e2b94c5899dcec860ca6ab017ada62c91b91c5ce4d8c28ffa7f5be5ba55d9",
-    "e6f37b14662b0db61a53d02fa046ebce8370a7dae956c8a7654e4af248c47ca5",
-    "7659668f4aba5fd25cfc1e1645cede3409879aba122e1128bccbabf8844faa96",
-    "092c2778f92be5fafb6dc06b7de88542f154d2d05b9167ffdbf5af838a7d2a7c",
-    "08dd82ef1ec65732789f1b46d7bbd567ca3dabb5c52695db1a63bdf7ec6e7354",
-    "39dd800d5d17f27d6fe7c491ca698282f6a54c433d44ceed56cd84fdbe10fbba",
-    "23270d18484d2a911869670f03c99d31647c678de2394e7347e544e1116b17b1",
-    "7b0c4a08919b50864bde34f0b0937fea4695aa584e54f81d8045cb33033e20ae",
-    "c3a979c3feb9f9ff4a54994dcc021577118d6f9d372b54e60715361919222c7b",
-    "5be846c7c727c887563999f99950b53b30ef5a3d419d517e94067a0e1dc9788c",
-    "6ff4f7f474615071f33086e3c3526af724d9638a2951deb24dafc56a5228614a",
-    "fad0298c99e39d3462cd266537443c7c353b62548da060ede34a4efdbb491bf9",
-    "9f48ad289185e098b8235b5f6e2b2fe654adba5704d90af29ebafa9938a2ffa0",
-    "93d137951c05400fe1989f36aab0e32e6b89ed4ae829e5506ea7d637972844a7",
-    "6bfa63dd0279fe19b8f690fe197895be832cd6c162b4d689fb9eaa1db63c480d",
-    "ae13d2ff1b4a6bcf492611f8845f0ef76108621da19b2500b984e947423b2e13",
-    "a4714ecd2b89b46fa336b4754adb5f0f998b17d1f02e11ea1b27aa497e61257b",
-    "160cfe4c85522a1c2a917714e9bd9bb7236bbd4f2f634f5e0328acc67780551f",
-    "25e0a1b6681b021ff538bbdde8c79fb8e9c82d4ee9bde40c04722a7ab1253dd2",
-    "c687f504066d8a5cb6f8f22fbc60d0d87036277dfb6439662fb7c448c1fadf27",
-    "ab373c1ecafdaaf0620eb9d6630b40ad66248eead576d9175fe8745557dd85b9",
-    "15d963040c86f35fb22481ef66a41aac25280529831ff92c7bcb787c4bf9fa25",
-    "92eb0fde96f2a199f90194e9ff192e95aa70151666af9d5858ddbf358db7c655",
-    "94615f5196ad5b6997315242ed7a1aae12aa2f0f888a50b66b44f5eb6a5e08d4",
-    "10dada839125ce2380d1275cbcb5665e47baf7f908a4d579ab69189ed473473d",
-    "9ad184b67ac99b0290939641547439ef44dedb2bdd862c653f8bcece39b08a06",
-    "68398287823e375b4b0503ede9c6e34c68e49e360583b04c7e28cb188c844454",
-    "d53a9362867ee65c77273749e28e93c7e020f132de28912f7c8f68fb2e1781de",
-    "3ec29de741eec75609f93d19a5be71c67c9e3e003c7d727cb827baca28008b3c",
-    "ec200b828112ea15615e7b45bc4c01d97ea3725165320cc25586e75d7ef6ec42",
-    "46aa87b01b2c666ebb050abf3814a7148e9cb7363d094c4286483fb4fdf6702f",
-    "095778fc9b08b34e8ebefce4930173b58c5a5fabe54002d31c0cb5444ac5ceca",
-    "079bc9be13dc8961748be2ef8c779262c7e74ec34290d61b22fc474107fe4f18",
-    "01b477df3b529ff01e71024001119bdb3e71ae0367dca919e5c939f81252882e",
-    "c960a984783051bd9f20c1f48fcb5aa29d07b1d7744e9b2a47ce773dcb44410b",
-    "806c9e76b1089632d4e031e9800404fa63a717e808e5470d1f58b58a14d1846f",
-    "8be4d86f9d4e58cdee601d39a7529f2a32dce5a8e1957b0df303db6f97c7abe4",
-    "b7cf8a3e0b4e29f2631d8b74a5aa9811c0753ba088bf1ad0203e9a8bfd267cc7",
-    "08315e428e2bdffdd519afaf1c2f1b70ac939d88b9ccb1747931850cffb1fdfc",
-    "3b4fa75b4db5d2e609aa92b6380edc1ff54a3e3dbfe4f888d7919860a8241a34",
-    "af86f7bec02939b2f59ad5403033b879e3fab92562ec159e0901459fb926b817",
-    "5a755ded72a779c0a9e8643cf094366d50f9eb1ba29d1a2c691bbaf428509e59",
-    "d643532949dae7a749bd95deb29ceac9b685809bb952317d8131d3d8f1c50a97",
-    "ea741956a07ee0420866e9bc5789c953f1465719522e126dd3ebe55a6b8ea11a",
-    "b9f0a5a07aeb31e0a151e36ec1ff5624a46d643f32550161323878f7407806c6",
-    "61197d69973b2c07d695c08133041b9749e798224e38b958261d641df0de0ed5",
-    "28de555b4113487bd5c9d0938ae68a7d3a25d0ef7cb7985d85989d6ab0db5a06",
-    "5bb1542c2f3a35f4f45fd68f0a0aef891837eaaf683caf284eaff6694306ee6b",
-    "a53f257009dfb49475121cada3cc6858ba565a1cfffb94861987f45580d464ff",
-    "42d878d31e7724d4aa4a47b20b0395a72e020f938110f7de012558b63a9029bb",
-    "bd4b6e8a1d39638ec6624dcae2def3b8239635bb2e3fc1f53855c64bf7f8ce57",
-    "7aad6befcae645892fe6e3750f6c4f42b4d496f4320babbb1935d7e77086084d",
-    "824eab7bcc181645079808feeca9b662ca151bb015361790a4891fd025ddfb14",
-    "fb2793f3a02ff9a61bdfdac5d2864504830320daf107e232e9fda0b76796c6f9",
-    "87044fdf3d2b6a8359ceac73160ed224afbcb3a15e54b8003b551baa9a5082ed",
-    "11f90b65f007ebf16005245ef404bec787543558caa4487dea3b573cdc2f8b32",
-    "28089a08b3eb77732d019e0ba0971bc70e6e308aaa47b255162491a62da344c9",
-    "937d8cf3191b599ca5fe70b686546365739c79d1a80be330470d81ce41a106f2",
-    "593fbed7d8c139c5087ceaad792fa584b56f744b5df86ca503ab881024752f4e",
-    "47922d4f9fa31349d2c38f265942ebb208d8582e31f34452ae63587af3d664fb",
-    "b4bd11a0b7af775ca13076e68a9de275e19f7147820a4081082bd5b3ea49ea98",
-    "b9da394dac7bcce5e7b9f5a7a9aedecc6a6dce0fd7e3864cee1e56150280f8e6",
-    "7203c894770be474d0fa134f109d2d68c3e1b693816414e043e8a6b5d041543d",
-    "2ef1dff9bf30180223be12afe91164240beea547e51cae5e5d320e042c4e6f7d",
-    "a12246c245106ec65fa078cba83b1ce1a3f861c0fc848e0304a78a7774a9e675",
-    "20227874aedfcab7b07c1b928d5b611d4b47c8818b906101cb30952d1f01e70b",
-    "07f07989c5811279ae6d17c92f8c84ebd0421e57fcb581c2cb8cee251bec1610",
-    "e7865aa3491fa43265a64f3034858db43b307e5f5e433f5ee1eab91754be1a2f",
-    "34b15263f66f81112761dcb760c94f38d7ba6449dd2b7e9428bcea23a8ed2448",
-    "f9e51dcdc2c0560902df93a7b87b3c9a3e777aef6d4a871da3d3324e4abe163f",
-    "ab5452826024c93d65e128d6f95ea1e036e29b07512b2926b0a6b8a58801eaf2",
-    "c21c5d8cebd15b100a03cb9bc18d9a9e15d3d4e4e48eb629e7e496228126d462",
-    "fb1e2b6f0f201c3882f9b83a153e499ea1713d99fe70eb51955dc80e39bf98b5",
-    "1b1710307636f71c97bd945534c560dd90fd7bd63b94ecd009abb3adb76cbb19",
-    "aa3e89b565d96d47faac15abeca3ddc7490516316fa625c7b94bee86c764b315",
-    "75ed7982005164b034af10cd7cf22d95cce71fc5f56fa233427afd38d790a587",
-    "70cd05ef5a9f446c8f3b97d9677ddd538db974248baf5088b714e55674a7f343",
-    "73656caa85c04f0768bfcac6f60c4eac645e2a19538c617c8943576936653afe",
-    "b984f095ee0e941c099f758fdb84b54d2efb425cecae74c30f50399eb57171a6",
-    "dfa5af19653550c693fd19f0d5064800eb8998f1ba7cf1d60f2307c27ab5916b",
-    "bf98cc08c23e0daaf22b4b074609a82cb14f55e0c5f0c6ca78197f98e4482647",
-    "4a2b7d6cefa3940a1b59c5a6117762c0cb9453d6995412c04aa801cb19556f05",
-    "de48c1d030493c146e66f672438a8c96b82e33479510391c39ef8fafca2b30f1",
-    "e19e3ab6f8f266b021f517e3feeca7cea1e630ec108d65d4481f312158a3eeb6",
-    "8bc988b19bfd63eed56475e5c3589604661d67718392124cd0fc0440d6507b38",
-    "42b8e110e2db205949abc0496e389a0bf467cda856dad684ae60b519d0b048c0",
-    "b65ae2e797315c3aa59ae082fcc08560a691a481e30141d5bb424e12ca7d3b9a",
-    "35735e855899f1c0f408d5a49beb699241647be724c9c2c804f4429338558fad",
-    "967cb6b9f79f394802ee56390d817264dd79d61ec2260d9812f613d6c7a772a4",
-    "1c38f56a00192004cb1f7c5d73df31d596edf51797d9986a2098bf5c40a88cb1",
-    "5e96a21219cd46dd8c2c02b6cb79d7c2f9974c3d05f6903b7b5ba8820c3a259b",
-    "570f99d7228705145ce66e7705179e0159b6a11ec77d418a9b0422a5361899f2",
-    "6d78261e228caa819b11f799324b399e1d7bd654650b60a7fdf5a0938e143e58",
-    "ee382ced99aeddf2fe97dfcbe69d02cb55d887df2b1af4df0001bba74e84bbdf",
-    "89e9c5d849407d5c121b94d9a2753a67b4dfdd1472b85ae658b193e676e454ab",
-    "890cafbb7263c85a7fe4487a41f1c54e08fa4f692968eca61196b37887b044bc",
-    "3fe2eb5b8288743dd48874b11b8b880de90567b0e000ce6c6da9c8a11f4ba4db",
-    "5dd9e155e92e66400100f9987023c63b1a73339f79adf8eedb0353cee157ca76",
-    "e3cbe8e1b894bad901b78126fa1618ff0ee0aeba37ca2dc49bfadfc2f2367c38",
-    "f1dd38e78984cea60d1a4a688d1fdcf18057b7fdf7c8629641025a664b964bc6",
-    "b4b094c3ef76ecad1dff728b13d272886e68c68fb7e0591410426f7a65687e19",
-    "8850c4ac8070a75d7fda20214b94f9a07063e694b12c40617d13da0e1b8a06d3",
-    "a41fc86e93f5632a4790b450394a2efa621d53b6a2338b0c639c6a0af3bbf1ce",
-    "3583c4d12c09ed02b33b0c5f24180cc2350934bb9874399875f0e8db30999d06",
-    "c853a764749a537f284349536e158afed8bf845a1f09aed103a31ef3c7daa0a9",
-    "4d9453f224644d225024701b66cafaaaf4de75ae845aa1b95f95c9ad3e080a7d",
-    "b604d3ffa6267b6fb3d0a5467aab1f1b83855505866378f0bd032c908868db04",
-    "ec3f620b16f68cb2a0e4a49b96cb0babf165d8e2f48207b38958c6d9cfc6da9b",
-    "a4ca4200b7cc15bd6f59d1e975e225443bc671d1f8845228467fa9612e5f5e3c",
-    "e35e6975b3a4fa50b7606ac2230ef1f129f12e1f29ca04da8c843975c10bbb95",
-    "ff84ffea09007223fe4709af3450ce340a0838c2e905708a60be5ee97675c425",
-    "f01099d31b0dce1895e8c569019a2a98c727dda5500bc7e397ba6e8088cacebc",
-    "97ac60b5119b32bfb352f21ec9994f3eafc222224d8ec683802f448ee97275d4",
-    "7b9cde0cecf6ba5533967e59f4b9af63a3c66f69d60a745f8c39769ebf942b3e",
-    "3a3981687f1919c1d7d3aa2f84db48d85a232689b97e29fa4d6ea0f5774ac6f8",
-    "1ceca56f75caf6363a1eabdcdf2a53e39d995669a90bc3ce73dad1aeaccac22c",
-    "d5ad12182f737c7e77dc6d2882c589cca5be5b3a6ad57685efe83fef3c901aa3",
-    "47c5fe6be9773f8bd8a6c3c8521f1cdc5586be402fc1dafd0f18d9c69c19a8e5",
-    "049fad860a17abf8a4c307c4282cd7222c13023daa8eaccbc9cbc9430adfe6ed",
-    "497f06383456250a9f95d51da92bc4b6d6ef961148d594de6a1efe2d0f94393c",
-    "e44a4ef1960b77fab915140025d8aa7f22251aa2c12d385f91ea7443be519907",
-    "a293e8e8d771a85e60798ac31236ac06a1b45a95c5e12f3bcc43ab35f057460c",
-    "17de4543cf36983d7411b378cc55dde2d9deebc4a1973ec4c23101766d93b5e4",
-    "8da647424008406fed80db521c6e695a12683723311ac5c0651d2fc995e5979f",
-    "6919de99077b58acb4b66ba65bc0557b8bfb6bfb939bf9546c98294945e1040c",
-    "71e03e8d79af7acc31b5c9a5578e7255d7820e8a27347a0c514d200db7848742",
-    "49651ccce3eea753dfee3ea2272a93916f29c8c74fe52c76663551983a00f2f6",
-    "fdc97ce2d35f7a3c619f3a87937dfd2c3ebd0b6ef56dee0f59806262a3e0a8f9",
-    "a7b67d9043a2d0166a649ebbf14a175be3ec13e2c58a2cb9f144d492e945829b",
-    "2e069fc83f2b36930a279b8577f7e0ba7936728384850f34e8fa5e5445ed86a7",
-    "b7336a665e129b43f5ff28072e4cc6d4732a6feccdbb196732d96387ea7d6844",
-    "7cbebe903788e2163f6e0dc7a7811d6e2ceef80e8a09edc4df19c697b0fab485",
-    "ee1d8736881f2ea432a6f71138eee15c90eb8b7f06eefcd3dc831cfcba7d0785",
-    "b0a9f47fe17735bb5d16b8633cf314159e213a12710c8e17a9016e061ad0b878",
-    "4bfe136aa0ff3c5052340132f78605276f971b7f18c907a78ad6d2cd645f3f68",
-    "a5d50eeba691cc4e65f39686af46e5a94369e9457f5452c62c23cc8f53c8220d",
-    "0a9d1d2fb3c1bb086196520cd5aceb54dcfeaa67dd2df98f42e07c536ecf63ca",
-    "444a843f5bf1393830c7156d3859d57786fabefc77f195493e3a06cc7f4b6c9f",
-    "9bb2aa47721b08bae59acdd2eaf1f092457e46c8443d24eed58dc85f65a0068d",
-    "c4b0f666f88cc962876ba548e175eb30dbd473f382262f219aade5544a0c94c3",
-    "32d9bae2d0d307e9d5696b678d1227fc8f83859301df540c93462aa562f2eca8",
-    "d815ca11cd963a8a48edcddaaa78bb43e729c7a084e2b89e51b09b5b947481ce",
-    "79354aaf4b5f7c165fe0c692659743736648b58831d56e9044fc58648eb536d2",
-    "aa2252a40ab669f1cb66f15928f1e1cad9dcf0a0f7b279f4a434b0f7d5bd41b1",
-    "7c37f6dd141cd3c8c9ef07f0cd92543e5d2344a395ed1f6df9afa4123b16c9c9",
-    "becf5af91de2abbcc470791eaf809f5781a3a1eddf9e6c07703049e860116966",
-    "bc5f46eef7ba00253219fc89107966f194c87c54716014700c498c8755af70c8",
-    "670af63cbc6c8bcd47f19018db53aa691591566d5011ed685fd526e5d02788ab",
-    "e1357d5506f818882405230491d59aba6f58e0ca57a200252556cd13129a63a1",
-    "75fd29d8be97d5bfb9d863e0aafeb28aeed64e05db23e7f9a5a92d51339cde0e",
-    "bfdc2ab5a4d9ed4a4b6575f7bc4b035ac4d0e5c0f85fe36b1bb0822d257fa77f",
-    "1a54e5638a5de37e9ca8c01a19e477b1b27d807789b4402c263ff0eaf37dc2d8"
+  "source_timestamps_ms": [
+    0,
+    30,
+    70,
+    100,
+    130,
+    170,
+    200,
+    230,
+    270,
+    300,
+    330,
+    370,
+    400,
+    430,
+    470,
+    500,
+    530,
+    570,
+    600,
+    630,
+    670,
+    700,
+    730,
+    770,
+    800,
+    830,
+    870,
+    900,
+    930,
+    970,
+    1000,
+    1030,
+    1070,
+    1100,
+    1130,
+    1170,
+    1200,
+    1230,
+    1270,
+    1300,
+    1330,
+    1370,
+    1400,
+    1430,
+    1470,
+    1500,
+    1530,
+    1570,
+    1600,
+    1630,
+    1670,
+    1700,
+    1730,
+    1770,
+    1800,
+    1830,
+    1870,
+    1900,
+    1930,
+    1970,
+    2000,
+    2030,
+    2070,
+    2100,
+    2130,
+    2170,
+    2200,
+    2230,
+    2270,
+    2300,
+    2330,
+    2370,
+    2400,
+    2430,
+    2470,
+    2500,
+    2530,
+    2570,
+    2600,
+    2630,
+    2670,
+    2700,
+    2730,
+    2770,
+    2800,
+    2830,
+    2870,
+    2900,
+    2930,
+    2970,
+    3000,
+    3030,
+    3070,
+    3100,
+    3130,
+    3170,
+    3200,
+    3230,
+    3270,
+    3300,
+    3330,
+    3370,
+    3400,
+    3430,
+    3470,
+    3500,
+    3530,
+    3570,
+    3600,
+    3630,
+    3670,
+    3700,
+    3730,
+    3770,
+    3800,
+    3830,
+    3870,
+    3900,
+    3930,
+    3970
   ],
-  "gif_sha256": "f63e58eb8b013c1f6ac7619c5d671d64a45a6ce6d52506ec126aa9fe8306d7d9"
+  "delays_ms": [
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30,
+    30,
+    40,
+    30
+  ],
+  "quantized_rgb_sha256": [
+    "b30a440b784c88d72f9018e31ea598f2372df7f468c16dcc88786515414d01a5",
+    "8677e4d7b0092abab61695bac3b588ea50798ce80d15ef54fcc197164ac132c8",
+    "47f6488be0b8f44dc1b0cde34a4ac38c7c2436b5e8456e76dedd183c0742e00e",
+    "749fa69b4c841ad9375d57d522610d78069e969ad930bf9c2ef96daaae188ddf",
+    "f10561e92fc850448c56cf0c0454743fe3598c222cff8389566abe8951b8970b",
+    "ad2176e1215080100323bf1e140dbb355df6dcacbebd1f0a1d91abeb25688e0e",
+    "9696a46f911489c9329810c3df57079cdcfb61f80fb305779f4c38de6c434ac5",
+    "a1e623a94290fca4a100004e4ccf6c7508033113bb080f9f9a67b2d7f60d36ec",
+    "6f26cec8c4d2db1119fba7b3e8ff83de36f9b4f359f56efdd3b47c72e95cc8bf",
+    "ed229dec411bea67314b21cc70047a1d15758b0cdf19979c9fdffca22cdfa10f",
+    "bb96fd8d7ca704afadbb8cba4cff337e8b3b09127a4370f71e6f7a3511030881",
+    "fb5d167c849d8d7e7d9521a90a8af81366748ccd0e56481df85a879c016790bb",
+    "a24bd731543dc0ae049d217960f8202f67d4fe687661b278aa4c0308e8cc2a15",
+    "19afdc00b35088535fbd3f87ab8ef2df96cc3736c8ee7fd281115071bde7e05f",
+    "7d121452e08e70f622759afa6b1a6a4e18a1c263b61052de951bd667c85b81f5",
+    "b6196610a36a1b2ed25229f1c7d46febb70a6ee5e4722a665c4325b1a1921101",
+    "566c6d9b0b79ae35004c0ede64d36421d6641171e90ace9015f83e3086af2b6f",
+    "3b1c6f58ab877193de480520079939ca155b9b45f84302beb35d2b017e3ec103",
+    "678d1fc6436ec34966c160b8e7270dce20e9d223dd1891a4b338f7c0f7de73e9",
+    "afabd7eddca087bb96a527f39757d6c028fbbc7b124b20b93fb0e01b18881cc1",
+    "56892cd9be255139ac7ce0a1bb7f96a6e46d0dab878317cc2f1a54a872be96cf",
+    "e34bea4024b45718ed27c5eb20a4367d7bf6849123dcb6ce67e34eab2f4128e4",
+    "f789f16b18746d8730b6111faa5013aed4b92dbc673288d369367d1b14077df1",
+    "fb61e97a37bf6d31d373ba5ba961c04bd90ec47c04221ee761c057eb653c19ef",
+    "a422a58113ed7854b08bba11391a36435d063823623421dd699b1bcf951deadc",
+    "b762089336985a4ff2c753ecb29122ca81b1584d118c2a1a42040240e13fad46",
+    "035a2dd1863b029d5b6bc196af284c4ed2fdafb43e3c30ee873fe776b9511405",
+    "c7743c54d7971a15019b19075cb9b50316fcfaaa628f272458d11ab9e7578478",
+    "643334e718f18b600518c11ded26fe0e9659488bfe30b3280532e9447a303535",
+    "9b5fcc8b98ea2d7c0a24c8fbcf197f93b3055018154ff0def4e228206a6d21fd",
+    "cea49fb0a54f1e8900a3051d8c2f559ea4f6f0e03e0c10da242ef9213ac996dc",
+    "80939d9d8245d59ab8cf7ac5620a992950f2ae0a3b172200101b54280d398da1",
+    "68115791cf2aa6b4045aaf765c5d51c3b7d6904132636aaae6ae7d369a40e53e",
+    "2733ce31093a542b669b07a03e3485a3a0ecfd97b023745bea1d98ab8823cd4b",
+    "0187cfa8401e85228f7e288699dd8f38978f64d7e5c690a4ded26a8fe43d3028",
+    "4001c509230d537473db211e212d37546e57221841a3a53f1a5df4a6198efedc",
+    "6ea2f70901acf07402ababcabca7dc78b4891cf39890ff9708ecad38b9be846e",
+    "ec9fb2c95447acca60c60352b973ab284b1511c29ad001c4dc01fdd027f0bd0f",
+    "f0d0571732f888177e6083631fd5f3c20b07f4e25decfea3ad7a926c843402db",
+    "967e0ff2a534b855e898de6b892d6096393b5a826c74a1c8a26062c915a110c4",
+    "53fdb27ad4581aa17c26c4a4af911d0cc3e54a392a48844c52ccc55ee0ff3365",
+    "9c85d9a18e12cdb97d9cf46e6666812eff414827e788d1a277f61b249917874f",
+    "b53ac4258289753aa02af878f7bbf72e23f9b205a9bdcd8cccbba65a52edd37c",
+    "5f0bb79f1124de8c2229f1a7d06493668ba0d49c94504e1219907c9917058367",
+    "ab6431a66879181461a45f44c303aaa2263f172f5e51334d24dda1d7d128541f",
+    "5733639a61815933cbb604e7df583c15cba599e4cda3d38711505c4971fb62cc",
+    "f96bfdfab298b4f04be0061eb33c7a2307904ab5ce2cbe29d434c0e26cddb29a",
+    "491019259a6f09f6025023fa8a9c737609c01821c4cce3d207c650413620e5f1",
+    "1127a60b588374ba76a1879de035e52dc968e5c852037c350c8be25b59c8dae6",
+    "4ce9ec463606f28de6054eb2f5fd558f6b374281f8d96c380f1b60b1c98d6556",
+    "f1d0122e02418c6c8417ddabee221f3bc54a956f342475c9c68ef648d82784e8",
+    "0f6b8f7d4e0f8ba804438e4dbb03d4f815de922ea6e2671b9312a9cd28d54721",
+    "8990b29b4596c91e4ef309622c622122fe9b1792d513cd8f3d49106587188cb4",
+    "39fc465d65eb415cbe70e41ab9396d38e423c478b0e5339cec5c78cd77add150",
+    "9c690e80f3b0f4f8edddd65efd3056f8e2171b94b2bc2cac366680c57584c54c",
+    "2123459e63c3907c6d9fa5406591c44fdeb040a369ea6d8f9d4a8a786296cf18",
+    "cae6bafe00ae22e9494e084ef9634438f7aebf246a70adbb2ad652a5a2acf045",
+    "e188eb0f2405ecccccbc151749cb25a3a5508b08e2351bea6b900f532fc9763c",
+    "59c765153cf61e6d57bec82d44343cdc02fd58adfce6e6004e4bcf2e08d08532",
+    "295b6ee9edcae7d861737c1b008edd7f03a9feec029073e715d50fe19a68aeae",
+    "1efe52459f224c9a76c86b07c565a71f94f513572624acb6955b897eb13cf0d8",
+    "2ef0f502053c350640151a609be70225832fd9debd98e97ada18eead5b9c192d",
+    "3b609fe368a3b648624c0c95beb13c29cab0b39a9fff18fb19caa553aeadd915",
+    "29481ff03b77c96ed4ee9494905f580fc9293014e9f52e0be4952135da392fda",
+    "6fc78442971887b07f2f05ab9733f133526c09c0174139b415781f6d933a5f0c",
+    "120c59a408393d8c3f749975933a151ff20162a598eb71de020ec99499e94805",
+    "423c9cdf4fbcd00fc8de234feb65f460521d1109a39e6daae5509150fbfdd85d",
+    "09848a09a7862eebd8a30f4faa43724e9d8f9dc0446c92cd31f67ff4cb528044",
+    "6319763e7bc46f350cdc21dc3a27e5f38f7713653fd9304b53e8444bd677f822",
+    "385d999d10b3ad03bcd7e78c5fc31bbc3a6c10acced85a9335556aec5d1804b0",
+    "c2e9adaf58bf9a8537f5afa313b9136b1967f88785dc24a6442f3876fb542dd1",
+    "e5471700b899cc127b3908ff18a4f8d161a008d234227719baa4da545cc0147f",
+    "11de0ccb0de42fa72060b7eccb1675da3c9eb126cb2be4287737a74dfd86d00b",
+    "6455d7dde051dea281f6fb517f91aa75014f0dc7348b9b674ab379f349aece75",
+    "91c2df5ca61433be0792650b4d29b0d24917639c36e7b0449ef5b5dd549a62b9",
+    "604917c4a1a3c4f85c4f932ab79cb8a0dcc39548d05cf24d8d17543a6ee54d44",
+    "b6c334b20eab728d68050ec7b82af86529da0395cad95767e6b91d99439d2bfd",
+    "1a9e2ee2f15276764a186024669745f6e4db7fa0a69675f4a1ca906637885c17",
+    "718e251cda7b59f360d9d332ccf4d7684041adb30bd2b05c9a90b3033211b2d7",
+    "c228ca2c25e955dc45d4624ba12d923b79e1b39652baaa2169e83d02f1223adc",
+    "f7054dbe869795ffeb1204ee0c2b7aa3799939180f9a9379f077e2f18ba92e16",
+    "332be645fe41f16788b578d5bbe9aafbe6539f14c90f9f11aa7d8f3ecdd030df",
+    "7e463da22c8ca07addf8e5a5600c500e614abf7b2401281b6841defac0859706",
+    "8ec1e34c2ab3df8a08beb003f104f71832f07a3bae85bfa12ab2a78115ba8252",
+    "51f211a94f808ab1fea5f5d50deee899b889c78746fb857f20b4f84289444f28",
+    "247fd989f347e07d6769e6e0687eff89e5eb1c3992abbb2f841ee88a0a6ac078",
+    "9e16d59ffd3143c894a142a0b7076e9050da855733db10a04729e6fcf70f01c1",
+    "6aaf7f6eb6ded3d702e110d4a71da22fc263447e0c33a488008a2bab4657983e",
+    "3c5091e7c28969ce4fe0909e66c30da5e95ff0e066d66adec34e160a611b97ee",
+    "85f578501da2a3a98453079a02cce18a0501d12a7b8266734673982bcfee6d0a",
+    "2dbecae58dae1b68c8062b50148672fd92ebf583f2200c8db002891c80160c99",
+    "995bcb74a043c324c428373d14a7ec662b64da3170fc43d46c3b9b366a855fbd",
+    "cea7b7cb3c2fc45046c254785e525b9f3cbe3d380082998c7d6d32cfc2cc8cd7",
+    "ae384cdd57ae4ae18725cec7450a77155cedab083ce0e449ab2d5dcc394430f7",
+    "39732826e7bcf98e29ac5eaa758acfc8a97a53f18588c6698c1c8ed3f8f7f5c8",
+    "770f077b69b3659bf22e0e42346d8d2a3ede17a7a492518da1ecfd04a338c7e0",
+    "03fc15e64d306be8236475c66cbffb2563a25b809a2a0569e91a33bff3624e0d",
+    "8913a9cb06c8f56e22b0f207e703ddc73374e3b4b211d237d044af3328a7303a",
+    "2a86a2b4c4a182fd2eff411afe9b053b44a7d41574aaca319420baf55ece1dd4",
+    "ac60ce66f2578c5d5af831574cc28377fbff64570a0dd8e44f51d5ef9c6f45b6",
+    "e12990e11b0a5e342a33177d2805073e01b2c99cb8a21d1d2e77b65f029ba74b",
+    "551d48db0adf15c2bd47bac052e12f0345c2b8e5d3c95e3a9de95321f6dbad71",
+    "c6580143491ffb6db732f7352e6cb62c6ae79db7c8ac58308ca074979d69aaee",
+    "56203c7a410d392fd18c2c84330bbdade0ddedeea4618bc1b493f5c8b3aa1c2e",
+    "56454d5d1ca7828fb3136b96b521db069dccd65895785953f6df5b9a9dfdfdc8",
+    "b34950485d3aad4dba725e5fc23f4802928b0eac9eee2a75f4aa3065897d9439",
+    "c34ae9d5cd8299c9e79a28d90626e0fccbe581e2266846c253cef905ecf81bf2",
+    "f63f8f7fc4a5e1231249adb5f805d4b517ea9e39c5d1843d60e9d09b6a8ac98f",
+    "6a70fab3c38e4fc811126a628c1dd2041c14f790ef3eeff8d94d7e5ad70d4250",
+    "bc2686ed935e4fc6c640c967f3312adeaec37f219a4615173f0248e23d771790",
+    "ce400d8dad6bfcacad0b1c7616330a638e57b49040175e8cfc5feae3baef6f9f",
+    "81f9b749ee0b67f6de931be7d9b87c31d9b7c5991f5f894457386f0654222ed6",
+    "5e376211b76264510f2ac553fd5622067c65dae76a13552ffc41bb042d65d7cf",
+    "a831e74ce1fa0582fa59e92229f49362c556148a001ad623a4a3712038291b34",
+    "4528c567ee35097888cf2beafb77c3f120c100d2326b15fb3ac85f12c2730442",
+    "34c548c65aa300aa9a0032b9d3a60aca7036113c91daa0d364b15914af0ac510",
+    "7a8c381b32a46e58b5bff514291896afd895fd6b270aa612ff90b0984d63bba8",
+    "4b4680ba48cc777aa448cc6a4b877623263c5c1a8511cbc603ef0a69501f41d2",
+    "f8bb7fe8160949e40f26f2b5f5914ff496a4b944e343afc0c1a8dc91d4c9af43",
+    "2bf8f37ff6a38b17f9b9e4b7291bee56a1062efa8e38037537ca63f6178999b7"
+  ],
+  "gif_sha256": "dac94ea0e596a3ab636a8a17f67d2d6e9647f1c16445edfdd768c9b057807bba"
 }

@@ -1,3 +1,17 @@
+# V10 split restore hero
+
+The active hero restores the real Capri/city clip on the right at its original proportional placement, x550/y0 in an 850×480 box. V9’s supplied cloud shapes, fixed halftone grid, source-derived code and fragments now occupy only the original left diagonal cutout. No generated portrait is opened by the active compositor. The V9 portrait, generation record and scene history remain recoverable in [hero sources](../showcase/capri/hero-scene/SOURCE_RECORD.json).
+
+One four-second pure-time scene uses all 120 original source samples and their exact 30/40 ms GIF delays. Blue holds until 1000 ms, one left-only rupture reaches red by 1070 ms, clean red holds through 3500 ms, and recovery returns blue by 3970 ms. A single title sheen runs 1600–2400 ms. All authored effects share the left clip mask; unquantized right pixels are checked against the source at every sample. Re-encoding changes colors; no source-perfect GIF color claim is made.
+
+The original Barlow CAPRI outlines and placement receive a shared pink gradient and crisp ink edge. The two-line descriptor is outlined from unmodified Chakra Petch SemiBold Italic, with its [SIL OFL notice](../showcase/capri/fonts/chakra-petch/OFL.txt). [Type measurements](../showcase/capri/hero-scene/type.json) record optical ink alignment and diagonal clearance. No web component framework or upstream effect implementation was copied.
+
+Run `python3 tools/build_capri_presentation.py` with the declared media dependencies and installed ffmpeg/rsvg-convert. The fixed inputs rebuild without generation or network requests. The 1400×480 editable master, 1000×343 GIF, clean red-hold PNG at 2500 ms, SVG layers, font outlines and scene/timeline records share the source model. The GIF preserves exact native delays; the no-audio MP4 carries the same 120 sampled states at nominal 30 fps, with the measured small PTS offset recorded in BUILD.json. The stable 116-color global palette and transparent deltas keep delivery below the unchanged 8,000,000-byte gate without dropping source samples or adding interpolated poses.
+
+All 89 lesson exports, the V8 separator, existing math/native text and protected runtime/CI remain unchanged. Existing device/runtime/performance gaps remain. Automated checks, local captures and recorded loops do not grant human artistic or continuous perceptual approval. [Offline hero player](../showcase/capri/hero-scene/preview.html).
+
+---
+
 # V9 cloud/terminal takeover hero
 
 The active hero is now one ten-second shared-clock scene: supplied blue halftone cloud image, original terminal-code/fragment reconstruction and one specifically requested generated Capri portrait. The original CAPRI/Agentic Loop Prompting Barlow glyph groups, diagonal, 1400×480 master and 1000×343 delivery remain. All 89 lesson exports, the V8 separator and pinned V7 originals are unchanged.

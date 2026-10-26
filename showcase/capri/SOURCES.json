@@ -58,13 +58,11 @@
     "status": "Historical V8 subtitle derivative; pinned original inputs remain unchanged. V9 active scene documented separately."
   },
   "hero_scene": {
-    "base_commit": "27cc4a938c9d2b1cd5ff46c35312fd23c6088216",
-    "directory": "hero-scene/",
+    "version": 10,
     "source_record": "hero-scene/SOURCE_RECORD.json",
-    "pose_record": "hero-scene/POSE_GENERATION.json",
-    "configuration": "hero-scene/scene.json",
-    "timeline": "hero-scene/timeline.json",
-    "method": "Supplied fixed-grid cloud crop plus original code/fragment texture and one specifically requested generated character-only portrait. Pure-time original compositor; preserved original Barlow glyph groups.",
-    "scope": "Private review; generated fan-art portrait, not official source or observed runtime/model result. Historical selected anime clip catalogue is unchanged."
+    "composition": "Original Capri/city right; V9 cloud/code left, gradient Barlow and Chakra descriptor",
+    "active_portrait": false,
+    "original_source": "sources/capri-19.gif",
+    "preserved_v9_history": "hero-scene/history/v9/"
   }
 }

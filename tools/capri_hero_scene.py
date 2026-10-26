@@ -1,4 +1,4 @@
-"""Pure-time V9 hero compositor: fixed source layers and one deterministic clock."""
+"""V10 pure-time split compositor: real source right, authored signal left."""
 from pathlib import Path
 import bisect,json,math
 import numpy as np
@@ -11,118 +11,84 @@ def smooth(value):
 class HeroScene:
     def __init__(self,root):
         self.root=Path(root);self.scene=self.root/'hero-scene'
-        self.config=json.loads((self.scene/'scene.json').read_text());self.size=tuple(self.config['master'])
-        self.width,self.height=self.size
-        cloud=Image.open(self.scene/'02-clouds.jpg').convert('RGB').resize((1440,480),Image.Resampling.LANCZOS).crop((20,0,1420,480))
-        self.cloud_image=cloud;self.blue=np.asarray(cloud).astype('float32')
-        gray=np.asarray(cloud.convert('L')).astype('float32')/255
-        # Preserve the supplied shapes and single fixed print grid in both color states.
-        stops=np.array([0,.10,.27,.52,.78,1])
-        ramp=np.array([[10,5,20],[31,7,30],[91,6,39],[208,12,68],[255,35,104],[255,136,178]],dtype='float32')
+        self.config=json.loads((self.scene/'scene.json').read_text());self.size=tuple(self.config['master']);self.width,self.height=self.size
+        self.left_width=self.config['left_width'];cfg=self.config['cloud']
+        self.cloud_image=Image.open(self.scene/cfg['source']).convert('RGB').resize(tuple(cfg['scaled_size']),Image.Resampling.LANCZOS).crop(tuple(cfg['crop']))
+        self.blue=np.asarray(self.cloud_image).astype('float32');gray=np.asarray(self.cloud_image.convert('L')).astype('float32')/255
+        stops=np.array([0,.10,.27,.52,.78,1]);ramp=np.array([[10,5,20],[31,7,30],[91,6,39],[208,12,68],[255,35,104],[255,136,178]],dtype='float32')
         hacked=np.stack([np.interp(gray,stops,ramp[:,i]) for i in range(3)],axis=2)
-        form=np.asarray(cloud.convert('L').filter(ImageFilter.GaussianBlur(8))).astype('float32')/255
-        dy,dx=np.gradient(form);edge=np.clip(np.hypot(dx,dy)*30,0,.72)
+        form=np.asarray(self.cloud_image.convert('L').filter(ImageFilter.GaussianBlur(8))).astype('float32')/255;dy,dx=np.gradient(form);edge=np.clip(np.hypot(dx,dy)*30,0,.72)
         self.hacked=hacked*(1-edge[:,:,None])+np.array([40,251,134])*edge[:,:,None]
-        self.yy,self.xx=np.mgrid[0:self.height,0:self.width].astype('float32')
-        self.spark=tuple(self.config['portrait']['spark'])
-        self.distance=np.hypot(self.xx-self.spark[0],self.yy-self.spark[1])
-        self.distance+=12*np.sin(self.yy/23)+8*np.sin(self.xx/39)
-        self.brand=Image.open(self.scene/'brand.png').convert('RGBA')
-        field=Image.new('RGBA',self.size);ImageDraw.Draw(field).polygon([(0,0),(690,0),(582,480),(0,480)],fill=(16,10,25,242));self.field=field
-        self.portrait=Image.new('RGBA',self.size)
-        cfg=self.config['portrait'];portrait=Image.open(self.scene/cfg['source']).convert('RGBA').crop(tuple(cfg['alpha_bbox']))
-        scale=cfg['master_height']/portrait.height;portrait=portrait.resize((round(portrait.width*scale),cfg['master_height']),Image.Resampling.LANCZOS)
-        self.portrait.alpha_composite(portrait,(round(cfg['right']-portrait.width),cfg['top']))
+        self.brand=Image.open(self.scene/'brand.png').convert('RGBA');self.word_mask=Image.open(self.scene/'wordmark-mask.png').getchannel('A')
+        self.mask=Image.new('L',self.size);ImageDraw.Draw(self.mask).polygon(self.config['left_polygon'],fill=255)
         self.terminal_masks=self.make_terminal_masks()
-        rng=np.random.default_rng(self.config['seed'])
-        self.fragments=[(float(rng.uniform(570,1400)),float(rng.uniform(0,480)),int(rng.integers(4,31)),int(rng.integers(3,17)),float(rng.uniform(0,2*math.pi))) for _ in range(self.config['terminal']['fragments'])]
+        rng=np.random.default_rng(self.config['seed']);self.fragments=[(float(rng.uniform(0,self.left_width)),float(rng.uniform(0,480)),int(rng.integers(5,32)),int(rng.integers(3,17)),float(rng.uniform(0,2*math.pi))) for _ in range(self.config['terminal']['fragments'])]
+        self.source_frames=[];self.durations=[];self.timestamps=[];total=0
+        with Image.open(self.scene/self.config['right']['source']) as clip:
+            self.source_size=clip.size
+            for i in range(clip.n_frames):
+                clip.seek(i);self.timestamps.append(total);self.source_frames.append(clip.convert('RGB'));delay=clip.info['duration'];self.durations.append(delay);total+=delay
+        assert total==self.config['duration_ms']
+        x,y,w,h=self.config['right']['box'];scale=min(w/self.source_size[0],h/self.source_size[1]);scaled=(round(self.source_size[0]*scale),round(self.source_size[1]*scale))
+        self.right_placement=(x+(w-scaled[0])//2,y+(h-scaled[1])//2,*scaled)
+        self.right_frames=[]
+        for image in self.source_frames:
+            frame=Image.new('RGB',self.size,'#100a19');frame.paste(image.resize(scaled,Image.Resampling.LANCZOS),self.right_placement[:2]);self.right_frames.append(frame)
 
     def make_terminal_masks(self):
-        cfg=self.config['terminal'];font=ImageFont.truetype(str(self.scene/cfg['font']),cfg['font_size'])
-        lines=[line.lstrip() for line in (self.scene/cfg['source']).read_text().splitlines() if line.strip()]
-        layouts=json.loads((self.scene/cfg['layouts']).read_text())['keyframes'];result=[]
-        for li,layout in enumerate(layouts):
-            im=Image.new('L',(1280,720));draw=ImageDraw.Draw(im)
+        cfg=self.config['terminal'];font=ImageFont.truetype(str(self.scene/cfg['font']),cfg['font_size']);lines=[line.lstrip() for line in (self.scene/cfg['source']).read_text().splitlines() if line.strip()]
+        result=[]
+        for li,layout in enumerate(json.loads((self.scene/cfg['layouts']).read_text())['keyframes']):
+            image=Image.new('L',tuple(cfg['source_canvas']));draw=ImageDraw.Draw(image)
             for ri,row in enumerate(layout['rows']):
                 for si,(left,right) in enumerate(row['segments']):
-                    text=lines[(ri+li*5+si*11)%len(lines)]
-                    # Source-derived ragged extents, actual repository glyphs and no copied source-video text.
-                    maxchars=max(1,int((right-left)/7.1));text=text[:maxchars]
-                    draw.text((left,row['y']),text,font=font,fill=225,stroke_width=0)
-            result.append(im.resize((853,480),Image.Resampling.LANCZOS))
+                    text=lines[(ri+li*5+si*11)%len(lines)][:max(1,int((right-left)/7.1))];draw.text((left,row['y']),text,font=font,fill=225)
+            result.append(image.resize(tuple(cfg['scaled_size']),Image.Resampling.LANCZOS).crop(tuple(cfg['crop'])))
         return result
 
     def state(self,time_ms):
-        t=(float(time_ms)%self.config['duration_ms'])/1000
-        phase='blue' if t<2.2 else 'interference' if t<3.2 else 'spark' if t<3.5 else 'propagation' if t<4.7 else 'hacked' if t<8.5 else 'recovery'
-        burst=next((i for i,(a,b) in enumerate(self.config['timeline']['bursts']) if a<=t*1000<b),None)
-        return dict(time_ms=t*1000,phase=phase,burst=burst,spark=3.2<=t<3.5,portrait_anchor=self.config['portrait']['eye_anchor'],portrait_scale=1)
-
-    def takeover(self,t):
-        if t<3.5:return np.zeros(self.size[::-1],dtype='float32')
-        if t<4.7:
-            radius=float(smooth((t-3.5)/1.2))*1540
-            return smooth((radius-self.distance+35)/70)
-        if t<8.5:return np.ones(self.size[::-1],dtype='float32')
-        # A downward signal-recovery pass, distinct from reversing the outward story.
-        progress=float(smooth((t-8.5)/1.5));front=-100+progress*700
-        irregular=10*np.sin(self.xx/90)*math.sin(progress*math.pi)
-        return 1-smooth((front-self.yy+irregular)/90)
+        t=float(time_ms)%self.config['duration_ms'];source=max(0,bisect.bisect_right(self.timestamps,t)-1)
+        phase='blue' if t<1000 else 'rupture' if t<1100 else 'red' if t<3500 else 'recovery'
+        red=float(smooth((t-1000)/70)) if t<3500 else 1-float(smooth((t-3500)/470))
+        return {'time_ms':t,'phase':phase,'source_frame':source,'red_fraction':red,'rupture':1000<=t<1100,'sheen':1600<=t<2400}
 
     def terminal(self,t):
-        # Content and transforms join periodically; no independent animation timer or random frame state.
-        keys=[0,1.4,2.8,4.2,5.6,7,8.5,10];ids=[0,1,2,3,4,5,6,0]
-        i=min(bisect.bisect_right(keys,t)-1,6);u=(t-keys[i])/(keys[i+1]-keys[i]);blend=float(smooth((u-.72)/.28))
-        mask=Image.blend(self.terminal_masks[ids[i]],self.terminal_masks[ids[i+1]],blend)
-        angle=2*math.pi*t/10;scale=1+.012*math.sin(angle);ox=4*math.sin(angle);oy=8*math.sin(angle)
-        mask=mask.transform((853,480),Image.Transform.AFFINE,(1/scale,0,-ox,0,1/scale,-oy),resample=Image.Resampling.BICUBIC)
-        out=Image.new('L',self.size);out.paste(mask,(547,0));return out
+        angle=2*math.pi*t/4;position=t/4*len(self.terminal_masks);i=int(position)%len(self.terminal_masks);blend=float(smooth((position%1-.72)/.28))
+        mask=Image.blend(self.terminal_masks[i],self.terminal_masks[(i+1)%len(self.terminal_masks)],blend)
+        scale=1+.012*math.sin(angle);ox=4*math.sin(angle);oy=8*math.sin(angle)
+        return mask.transform((self.left_width,480),Image.Transform.AFFINE,(1/scale,0,-ox,0,1/scale,-oy),resample=Image.Resampling.BICUBIC)
 
-    def portrait_at(self,t,state):
-        image=self.portrait.copy()
-        if state['burst'] is not None:
-            # Replace a few local samples of the same cutout; do not move/rotate/scale the whole pose.
-            frame=round(t*30);data=np.asarray(image).copy();source=np.asarray(self.portrait)
-            for n,y in enumerate([178,239,326]):
-                offset=(-1 if (frame+n)%2 else 1)*(5+state['burst']*3)
-                band=source[y:y+6];data[y:y+6]=0
-                if offset>0:data[y:y+6,offset:]=band[:,:-offset]
-                else:data[y:y+6,:offset]=band[:,-offset:]
-            image=Image.fromarray(data)
-            draw=ImageDraw.Draw(image);x=int(self.config['portrait']['eye_anchor'][0])
-            for n in range(7):
-                y=178+n*3+(frame%3);draw.line((x-55+n*9,y,x-39+n*9,y),fill=(40,251,134,130),width=1)
+    def left_environment(self,state):
+        t=state['time_ms']/1000;red=state['red_fraction'];array=np.rint(self.blue*(1-red)+self.hacked*red).astype('uint8');cloud=Image.fromarray(array).convert('RGBA');glyph=self.terminal(t)
+        shadow=Image.new('RGBA',cloud.size,(10,9,20));shadow.putalpha(glyph.filter(ImageFilter.MaxFilter(3)).point(lambda a:round(a*.45)));cloud=Image.alpha_composite(cloud,shadow)
+        color=tuple(int(v) for v in np.rint(np.array([216,225,228])*(1-red)+np.array([40,251,134])*red));signal=Image.new('RGBA',cloud.size,color);signal.putalpha(glyph.point(lambda a:round(a*.65)));cloud=Image.alpha_composite(cloud,signal)
+        bits=Image.new('RGBA',cloud.size);draw=ImageDraw.Draw(bits);density=.25+.75*math.sin(math.pi*t/4)**2
+        for x,y,w,h,phase in self.fragments:
+            a=round((6+65*density)*(.65+.35*math.sin(2*math.pi*t/4+phase)));x+=2*math.sin(2*math.pi*t/4+phase)
+            if state['rupture']:x+=24*math.sin(phase+state['source_frame'])
+            draw.rectangle((x,y,x+w,y+h),fill=(round(30+10*red),round(36+75*red),round(60+15*red),a))
+        cloud=Image.alpha_composite(cloud,bits)
+        # A restrained ink grade preserves visible clouds, unlike the former almost-opaque title field.
+        cloud=Image.alpha_composite(cloud,Image.new('RGBA',cloud.size,(16,10,25,round(self.config['cloud']['ink_grade']*255))))
+        if state['rupture']:
+            data=np.asarray(cloud).copy()
+            for n,(y,h,offset) in enumerate([(38,12,32),(128,9,-24),(244,18,38),(362,11,-30)]):data[y:y+h]=np.roll(data[y:y+h],offset*(1 if state['source_frame']%2 else -1),axis=1)
+            cloud=Image.fromarray(data)
+        return cloud
+
+    def brand_at(self,state):
+        image=self.brand.copy()
+        if state['sheen']:
+            progress=(state['time_ms']-1600)/800;yy,xx=np.mgrid[0:480,0:1400];center=-100+progress*900;amount=np.exp(-((xx+.35*yy-center)/23)**2)*.52
+            mask=np.asarray(self.word_mask)/255;data=np.asarray(image).copy();rgb=data[:,:,:3].astype(float);rgb=rgb+(np.array([255,245,250])-rgb)*amount[:,:,None]*mask[:,:,None];data[:,:,:3]=np.rint(rgb).astype('uint8');image=Image.fromarray(data)
+        if state['rupture']:
+            edge=Image.new('RGBA',self.size,(40,251,134));offset=10 if state['source_frame']%2 else -10;alpha=Image.new('L',self.size);alpha.paste(self.word_mask,(offset,0));edge.putalpha(alpha.point(lambda a:round(a*.85)));image=Image.alpha_composite(edge,image)
         return image
 
     def render(self,time_ms,delivery=False,layers=False):
-        state=self.state(time_ms);t=state['time_ms']/1000;change=self.takeover(t)
-        cloud=Image.fromarray(np.rint(self.blue*(1-change[:,:,None])+self.hacked*change[:,:,None]).astype('uint8')).convert('RGBA')
-        glyph=self.terminal(t)
-        shadow=Image.new('RGBA',self.size,(10,9,20));shadow.putalpha(glyph.filter(ImageFilter.MaxFilter(3)).point(lambda a:round(a*.50)))
-        cloud=Image.alpha_composite(cloud,shadow)
-        normal=np.array([216,225,228]);green=np.array([40,251,134])
-        color=np.rint(normal[None,None,:]*(1-change[:,:,None])+green[None,None,:]*change[:,:,None]).astype('uint8')
-        signal=Image.fromarray(color).convert('RGBA');signal.putalpha(glyph.point(lambda a:round(a*.77)))
-        cloud=Image.alpha_composite(cloud,signal)
-        bits=Image.new('RGBA',self.size);draw=ImageDraw.Draw(bits);density=.20+.80*math.sin(math.pi*t/10)**2
-        for n,(x,y,w,h,phase) in enumerate(self.fragments):
-            a=round((6+65*density)*(0.65+0.35*math.sin(2*math.pi*t/10+phase)))
-            x+=2*math.sin(2*math.pi*t/10+phase);shift=float(change[min(479,int(y)),min(1399,int(x))])
-            fill=(round(30+shift*10),round(36+shift*75),round(60+shift*15),a)
-            draw.rectangle((x,y,x+w,y+h),fill=fill)
-        cloud=Image.alpha_composite(cloud,bits)
-        environment=cloud.copy();cloud=Image.alpha_composite(cloud,self.field);cloud=Image.alpha_composite(cloud,self.brand)
-        portrait=self.portrait_at(t,state);cloud=Image.alpha_composite(cloud,portrait)
-        spark=Image.new('RGBA',self.size)
-        if state['spark']:
-            amount=math.sin((t-3.2)/.3*math.pi);draw=ImageDraw.Draw(spark);x,y=self.spark
-            for n in range(8):
-                angle=n*math.pi/4;length=(12 if n%2 else 25)*amount
-                draw.line((x-math.cos(angle)*3,y-math.sin(angle)*3,x+math.cos(angle)*length,y+math.sin(angle)*length),fill=(40,251,134,round(245*amount)),width=2 if n%2 else 3)
-            draw.ellipse((x-3,y-3,x+3,y+3),fill=(255,18,101,round(255*amount)))
-            draw.line([(x,y),(x-25,y+8),(x-20,y+17),(x-64,y+30)],fill=(40,251,134,round(180*amount)),width=2)
-            cloud=Image.alpha_composite(cloud,spark)
-        result=cloud.convert('RGB')
+        state=self.state(time_ms);right=self.right_frames[state['source_frame']];environment=Image.new('RGBA',self.size);environment.paste(self.left_environment(state),(0,0));left=Image.alpha_composite(environment,self.brand_at(state))
+        # All authored layers, including displaced type, share this final polygon clip.
+        result=Image.composite(left.convert('RGB'),right,self.mask)
         if delivery:result=result.resize(tuple(self.config['delivery']),Image.Resampling.LANCZOS)
-        if layers:return result,dict(environment=environment,portrait=portrait,spark=spark,terminal=signal,fragments=bits,change=change,state=state)
+        if layers:return result,{'right':right,'left':left,'mask':self.mask,'state':state}
         return result

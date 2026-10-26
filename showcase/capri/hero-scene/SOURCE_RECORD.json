@@ -1,5 +1,7 @@
 {
-  "base_commit": "27cc4a938c9d2b1cd5ff46c35312fd23c6088216",
+  "version": 10,
+  "base": "7deb460c806fa960bc94bbbfb804165a61c6f9a5",
+  "original_v9_record": "history/v9/SOURCE_RECORD.json",
   "source_inputs": [
     {
       "original_filename": "a13bda9305e5fe775ba5ca8801f19fd5.mp4",
@@ -53,21 +55,107 @@
     "snippet_sha256": "fff6014f26fd42d6af4d209a5e96d45475014bcc3e83b0e2e1ec786af73b6f94",
     "status": "Verified actual non-sensitive arithmetic/model source; decorative source texture only, no runtime session claim"
   },
-  "brand": {
-    "source": "V8 hero-overlay.svg at exact base",
-    "groups": 2,
-    "preserved": "Exact original CAPRI and integrated subtitle path groups; no lettering generation"
+  "right": {
+    "source": "../sources/capri-19.gif",
+    "sha256": "f40d1e6b1c3fdb1374d988fe07f18b6c3f2a42010aabc72ed5bcb30d79dac17b",
+    "placement": [
+      550,
+      0,
+      850,
+      480
+    ],
+    "source_size": [
+      498,
+      281
+    ],
+    "frames": 120,
+    "duration_ms": 4000,
+    "mapping": "Native encoded source delays; evaluate left at each cumulative timestamp; no interpolated anime poses"
   },
-  "layout": "Measured source row extents plus original seeded periodic code/fragment motion; not a pixel-exact reconstruction",
+  "cloud": {
+    "source": "02-clouds.jpg",
+    "scaled_size": [
+      1440,
+      480
+    ],
+    "crop": [
+      360,
+      0,
+      1050,
+      480
+    ],
+    "fixed_grid": true,
+    "ink_grade": 0.32
+  },
+  "terminal": {
+    "source": "terminal-snippets.txt",
+    "layouts": "terminal-layouts.json",
+    "font": "../source-match/source/assets/fonts/MartianMono/MartianMono-Variable.ttf",
+    "source_canvas": [
+      1280,
+      720
+    ],
+    "scaled_size": [
+      853,
+      480
+    ],
+    "crop": [
+      81,
+      0,
+      771,
+      480
+    ],
+    "font_size": 12,
+    "fragments": 72
+  },
   "portrait": {
+    "status": "Historical only, never opened by active renderer",
     "master": "portrait-master.png",
-    "sha256": "b70de4910092b34a710d01d461cd14684e5266e1affeb66c5e8ed3b71b3248ee",
-    "generation_record": "POSE_GENERATION.json",
-    "status": "Generated fan-art reconstruction; built-in tool with one padding refinement; human visual approval pending"
+    "record": "POSE_GENERATION.json",
+    "sha256": "b70de4910092b34a710d01d461cd14684e5266e1affeb66c5e8ed3b71b3248ee"
+  },
+  "type": {
+    "wordmark": "Existing Barlow outlines; new shared-coordinate pink gradient and ink edge",
+    "descriptor": "Chakra Petch SemiBold Italic, two outlined lines; unmodified OFL font",
+    "font_source": {
+      "family": "Chakra Petch",
+      "style": "SemiBold Italic",
+      "creator_reference": "https://github.com/cadsondemak/Chakra-Petch",
+      "repository": "google/fonts",
+      "commit": "e7db6ca603fd4862010383ff17ffd6cc4ffac1c0",
+      "licence": "SIL Open Font License, bundled unmodified",
+      "modified": false,
+      "files": [
+        {
+          "path": "assets/fonts/chakra-petch/ChakraPetch-SemiBoldItalic.ttf",
+          "upstream_path": "ofl/chakrapetch/ChakraPetch-SemiBoldItalic.ttf",
+          "bytes": 81000,
+          "git_blob_sha1": "83d9cf6c00abbc329cd9e1586bbcecb8f34e63ab",
+          "sha256": "4e11c1bec71511bbea8a3bc3f4cebff479bb9681961d691a36f99e5234d8fe89"
+        },
+        {
+          "path": "assets/fonts/chakra-petch/OFL.txt",
+          "upstream_path": "ofl/chakrapetch/OFL.txt",
+          "bytes": 4396,
+          "git_blob_sha1": "9cee5a5b7f6f704414504ac9df37ae3b11b45264",
+          "sha256": "13831d02389d917d22fcfa6c79f98f8acbf61d230add0e73a4d4dc5f3bfb9e56"
+        },
+        {
+          "path": "assets/fonts/chakra-petch/METADATA.pb",
+          "upstream_path": "ofl/chakrapetch/METADATA.pb",
+          "bytes": 3328,
+          "git_blob_sha1": "ab090e52a3458e5764520b3dc6e2e5fb04548c2b",
+          "sha256": "d008cbaed83da54bb765bbcdc33f913a57a110b1e59e381b1d424797cf33f5a2"
+        }
+      ]
+    }
   },
   "research": [
-    "https://tympanus.net/codrops/2017/12/21/css-glitch-effect/",
-    "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
-    "https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#gif"
-  ]
+    "https://github.com/cadsondemak/Chakra-Petch",
+    "https://magicui.design/docs/components/animated-gradient-text",
+    "https://reactbits.dev/text-animations/shiny-text",
+    "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/linearGradient"
+  ],
+  "implementation": "Original deterministic Pillow/SVG code; adapt bounded gradient/sheen principles, no upstream component copied",
+  "human_visual_approval": "PENDING"
 }
