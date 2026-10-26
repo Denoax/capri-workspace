@@ -1,4 +1,4 @@
-<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.gif" alt="CAPRI — Agentic Loop Prompting. Original animated Capri and city on the right; blue cloud and code in the left cutout rupture into red." width="1000"></picture></p>
+<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.gif" alt="CAPRI — AGENTIC LOOPING. Original animated Capri and city on the right; blue cloud and code in the left cutout rupture into red." width="1000"></picture></p>
 
 # CAPRI — Agentic Loop Prompting
 

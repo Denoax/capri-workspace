@@ -58,11 +58,14 @@
     "status": "Historical V8 subtitle derivative; pinned original inputs remain unchanged. V9 active scene documented separately."
   },
   "hero_scene": {
-    "version": 10,
+    "version": 11,
     "source_record": "hero-scene/SOURCE_RECORD.json",
-    "composition": "Original Capri/city right; V9 cloud/code left, gradient Barlow and Chakra descriptor",
+    "composition": "Fill-only raised CAPRI and AGENTIC LOOPING; shared thin frame and smooth diagonal seam; original film right/cloud-code left",
     "active_portrait": false,
     "original_source": "sources/capri-19.gif",
-    "preserved_v9_history": "hero-scene/history/v9/"
+    "preserved_history": [
+      "hero-scene/history/v9/",
+      "hero-scene/history/v10/"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
-  "version": 10,
-  "composition": "Original Capri/city footage right; V9 clouds/source-derived code left; gradient Barlow and two-line Chakra descriptor",
+  "version": 11,
+  "composition": "Framed original Capri/city right and cloud/code left; fill-only raised Barlow and one-line AGENTIC LOOPING; steady rail with narrow seam blend",
   "master": [
     1400,
     480
@@ -136,14 +136,18 @@
   "sampling": "All120 actual source samples at cumulative encoded source timestamps; no interpolated poses",
   "source_gif_sha256": "f40d1e6b1c3fdb1374d988fe07f18b6c3f2a42010aabc72ed5bcb30d79dac17b",
   "original_gif_sha256": "e505d35ebb8eea5daa13fda24ed32db7a6a64aabda3e63835ee4cf8813f39517",
-  "palette_colors": 116,
-  "palette_base_colors": 96,
-  "palette_strategy": "Fixed global blue/red/anime palette plus20 reserved type-gradient colors; no dithering, unchanged-pixel transparent deltas",
+  "palette_colors": 117,
+  "palette_base_colors": 94,
+  "palette_strategy": "Fixed global blue/red/anime palette plus20 reserved type-gradient and3 frame colors; no dithering, unchanged-pixel transparent deltas",
   "renderer": "Pillow 12.3.0",
   "poster_ms": 2500,
-  "scene_sha256": "52fb0e10f305b49d547f4e8c7bf5f58621eb52e511c029760f18aaa29557364a",
-  "brand_svg_sha256": "5a6f8cc40d7bf060c4a7a0eaf6ac0ddd2872b0a14376ba4378aa2940f7dcdb5f",
-  "brand_png_sha256": "9356aca38e3dc75e4593dafd0d9f369c13167e227cc60afcdb47ea7639c09020",
+  "scene_sha256": "3f2460b1f3558b67431d07c2a0539f9ee1dd292eb6ed2dacb18d0cc152c71940",
+  "brand_svg_sha256": "c82a3735ecfd89de8083ba90323757418ebdc41c4d22f6e0212e9d5dc3fbe578",
+  "brand_png_sha256": "749ad7c595e855a161ae096a668f216f42514fb3f815805d16311d9098764031",
+  "wordmark_mask_sha256": "a36e92d7ed56dab54ca84a9da9c2c28d940b83118e241265e5a8f0b04d3065ae",
+  "frame_png_sha256": "55db2c3f3afc86217b202929b2705cf94ac2b36dda28776515ee420211fbf6ee",
+  "frame_svg_sha256": "a5646f596c570c552f367f3db3a8d381c0848eb17fb5cc34d2c3e9d328185ddb",
+  "active_banner_label": "CAPRI \u2014 AGENTIC LOOPING",
   "source_record": "hero-scene/SOURCE_RECORD.json",
   "active_generated_portrait": false,
   "native_video": {
@@ -157,11 +161,11 @@
   "rights": "Private review; existing original source and font notices retained",
   "human_visual_approval": "PENDING",
   "derived": {
-    "hero.svg": "f5b7670011e2ec70bb00c3b13bcc0c05a294f0145be539591f5f684eb8fffd0b",
-    "hero-overlay.svg": "5a6f8cc40d7bf060c4a7a0eaf6ac0ddd2872b0a14376ba4378aa2940f7dcdb5f",
-    "hero-overlay.png": "9356aca38e3dc75e4593dafd0d9f369c13167e227cc60afcdb47ea7639c09020",
-    "hero.png": "93f26614b4f36ad043b8d37755946f115a982905a15ae458a603a6e55e8b6e47",
-    "hero.gif": "dac94ea0e596a3ab636a8a17f67d2d6e9647f1c16445edfdd768c9b057807bba",
-    "hero-scene/master.mp4": "0de196463e522c314e3a4c4cbf81c13ab419e5cb1d102852e1b79e2e3b9609f6"
+    "hero.svg": "19877748d943097f5c4f70a6f2f283ccf7e266ad6e80586f675c54e1f54bf8a3",
+    "hero-overlay.svg": "86169411ebc4e73f2ef8334d85432ea6aec7ce1b1b5d94060aeee548c01c994c",
+    "hero-overlay.png": "80be62982a1de7b3fe7905bdad43260b2d1898f6458ac949e54db4d0cc0aed65",
+    "hero.png": "fab17e7bad1bccc904c395aa854917181842f88b41640c2c12f46d7806fe0589",
+    "hero.gif": "2c3746734f7875ea8950218cd94f2be23ba9d01f1794f03f47444f936b29495f",
+    "hero-scene/master.mp4": "0d602d72a8451f6c48dafb86c6e614d4a31791ae0173e708f9633f49799ef4a2"
   }
 }

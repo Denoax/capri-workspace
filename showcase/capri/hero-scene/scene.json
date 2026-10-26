@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "master": [
     1400,
     480
@@ -44,7 +44,7 @@
       480
     ],
     "fixed_grid": true,
-    "ink_grade": 0.32
+    "ink_grade": 0.4
   },
   "terminal": {
     "source": "terminal-snippets.txt",
@@ -86,29 +86,27 @@
       "#ff1265",
       "#a20a50"
     ],
-    "ink_edge_master_px": 5.94
+    "display_transform": "translate(45,317) scale(0.27,-0.27)",
+    "persistent_outline": false
   },
   "descriptor": {
-    "text": "AGENTIC LOOP PROMPTING",
+    "text": "AGENTIC LOOPING",
     "font": "../fonts/chakra-petch/ChakraPetch-SemiBoldItalic.ttf",
     "size": 52,
     "tracking": 1,
     "ink_left": 52.83,
     "lines": [
       {
-        "text": "AGENTIC LOOP",
-        "baseline": 392
-      },
-      {
-        "text": "PROMPTING",
-        "baseline": 440
+        "text": "AGENTIC LOOPING",
+        "baseline": 386
       }
     ],
     "gradient": [
       "#eefff6",
       "#b1ffcf",
       "#28fb86"
-    ]
+    ],
+    "persistent_outline": false
   },
   "timeline": {
     "blue": [
@@ -135,5 +133,37 @@
   },
   "active_generated_portrait": false,
   "rights": "Private review; existing source/anime rights qualifications unchanged. No new generated media.",
-  "palette_colors": 96
+  "palette_colors": 94,
+  "frame": {
+    "x": 4,
+    "y": 4,
+    "width": 1392,
+    "height": 472,
+    "stroke_width": 4,
+    "support_width": 6,
+    "support_opacity": 0.45,
+    "colors": [
+      "#441435",
+      "#ff1265",
+      "#eefff6"
+    ],
+    "gradient": [
+      4,
+      4,
+      1396,
+      476
+    ]
+  },
+  "seam": {
+    "centerline_x0": 690,
+    "slope": -0.225,
+    "transition_width": 24,
+    "rail_width": 4,
+    "support_width": 6
+  },
+  "source_fidelity": {
+    "seam_halfwidth": 16,
+    "perimeter_depth": 10
+  },
+  "active_banner_label": "CAPRI \u2014 AGENTIC LOOPING"
 }

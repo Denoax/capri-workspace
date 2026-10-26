@@ -1,3 +1,17 @@
+# V11 frame and type finish
+
+The active banner reads **CAPRI — AGENTIC LOOPING**. The native repository H1 and Agentic Loop Prompting explanation remain unchanged. The original Barlow glyph geometry and scale are retained; only its display baseline moves 345→317, while the pinned-source lookup stays 345. A single 52px Chakra line uses baseline 386 and visible left edge 52.83. All persistent per-glyph strokes are removed from the generator and raster layer; there is no replacement halo, shadow or expanded silhouette. A broad 40%environment ink grade supports the fill-only gradients while leaving cloud/code visible.
+
+The owner’s [pinned DENOAX profile](https://github.com/Denoax/Denoax/blob/2face02d6c562315c7edb49087cb8145f08f2388/README.md) supplies the aligned-edge/thin-gradient-rail reference. It is read-only; no profile artwork is transplanted. The CAPRI adaptation is a steady 4-master-pixel outer frame inset 4px, with the same plum/pink/mint gradient field on the diagonal rail. Its 24px smooth blend remains centered on x=690−0.225y; the original film is unchanged away from the narrow seam/perimeter. Source comparisons exclude only 16px around the seam and 10px perimeter, retaining over 90% of the original right-region pixels at all 120 native times.
+
+The frame/mask generator feeds the raster compositor and the independent SVG exporter. The actual GIF, matching PNG, layered SVG/overlay and silent native video contain the same finishing. The 117-color export retains all 120 original samples and exact 30/40 ms delays over 4000 ms, with the unchanged 1000×343 delivery, 1400×480 master and 8,000,000-byte gate. The initial 8,031,094-byte draft was retained as evidence; two fewer base colors plus the broad grade produced a final 7,838,639-byte GIF. No cadence reduction or source rescale. Palette quantization changes colors; physical display thickness is not fixed CSS thickness.
+
+Rebuild with `python3 tools/build_capri_presentation.py` using declared pinned media dependencies and installed ffmpeg/rsvg-convert. Fixed sources, existing fonts and [source/type/frame records](../showcase/capri/hero-scene/SOURCE_RECORD.json) rebuild without generation or network access. [Offline hero player](../showcase/capri/hero-scene/preview.html). Original four-second acting and left rupture/hold/recovery remain; the MP4 uses the same 120 samples at nominal 30 fps with the inherited maximum 3.333 ms source-PTS offset, while GIF timing is exact.
+
+All 89 lesson exports, V8 separator, source/rig/font data, V9 portrait history, body prose/math and protected runtime/CI remain unchanged. Prior qualification/performance gaps remain. Local rendered checks and recordings are technical evidence; human visual approval remains pending.
+
+---
+
 # V10 split restore hero
 
 The active hero restores the real Capri/city clip on the right at its original proportional placement, x550/y0 in an 850×480 box. V9’s supplied cloud shapes, fixed halftone grid, source-derived code and fragments now occupy only the original left diagonal cutout. No generated portrait is opened by the active compositor. The V9 portrait, generation record and scene history remain recoverable in [hero sources](../showcase/capri/hero-scene/SOURCE_RECORD.json).

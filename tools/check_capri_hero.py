@@ -1,4 +1,4 @@
-"""Verify restored source playback, clipped effects, outlined type and actual GIF delivery."""
+"""Verify restored source playback, narrow frame/seam effects, fill-only type and actual GIF delivery."""
 from pathlib import Path
 import hashlib,json,xml.etree.ElementTree as ET
 from unittest.mock import patch
@@ -20,18 +20,37 @@ def check():
     assert scene.right_placement==(550,0,850,480) and cfg['left_polygon']==[[0,0],[690,0],[582,480],[0,480]]
     old=ET.parse(MEDIA/'sources/hero-v7/hero-overlay.svg').getroot();new=ET.parse(SCENE/'brand.svg').getroot();ns={'s':'http://www.w3.org/2000/svg'}
     prior=next(g for g in old if g.get('transform')=='translate(45,345) scale(0.27,-0.27)');word=new.find('s:g[@id="hero-wordmark"]',ns)
-    assert word.get('transform')==prior.get('transform')
+    assert cfg['wordmark']['original_transform']==prior.get('transform')
+    assert word.get('transform')==cfg['wordmark']['display_transform']=='translate(45,317) scale(0.27,-0.27)'
     assert [g.get('d') for g in word.iter() if g.tag.endswith('path')]==[g.get('d') for g in prior.iter() if g.tag.endswith('path')],'Barlow shape changed'
-    descriptor=new.find('s:g[@id="hero-subtitle"]',ns);assert descriptor.get('aria-label')=='AGENTIC LOOP PROMPTING'
-    assert [g.get('data-text') for g in descriptor]==['AGENTIC LOOP','PROMPTING']
+    descriptor=new.find('s:g[@id="hero-subtitle"]',ns);assert descriptor.get('aria-label')=='AGENTIC LOOPING'
+    assert [g.get('data-text') for g in descriptor]==['AGENTIC LOOPING']
     for gradient,expected in [('word-gradient',['#ff76af','#ff1265','#a20a50']),('descriptor-gradient',['#eefff6','#b1ffcf','#28fb86'])]:
         g=new.find(f's:defs/s:linearGradient[@id="{gradient}"]',ns);assert g.get('gradientUnits')=='userSpaceOnUse' and [s.get('stop-color') for s in g]==expected
-    type_record=json.loads((SCENE/'type.json').read_text());assert all(abs(line['ink_box'][0]-52.83)<.001 and line['diagonal_clearance']>150 for line in type_record['lines'])
+    for element in new.iter():
+        assert element.get('stroke') in (None,'none') and not any(k in element.attrib for k in ['stroke-width','filter','paint-order']),'Persistent type outline/effect'
+    mask_svg=ET.parse(SCENE/'wordmark-mask.svg').getroot();mask_word=next(g for g in mask_svg if g.get('transform'))
+    assert mask_word.get('transform')==word.get('transform')
+    assert [g.get('d') for g in mask_word.iter() if g.tag.endswith('path')]==[g.get('d') for g in word.iter() if g.tag.endswith('path')]
+    word_alpha=np.asarray(Image.open(SCENE/'wordmark-mask.png').getchannel('A'));brand_alpha=np.asarray(Image.open(SCENE/'brand.png').getchannel('A'))
+    assert np.array_equal(word_alpha[:333],brand_alpha[:333]),'Brand raster has expanded outline/ghost around wordmark'
+    assert not word_alpha[333:].any(),'Mask remained at old display location'
+    assert not ImageChops.difference(scene.brand_at(scene.state(0)).convert('RGB'),scene.brand_at(scene.state(2500)).convert('RGB')).getbbox(),'Persistent type copy/effect outside brief rupture/sheen'
+    assert ImageChops.difference(scene.brand.convert('RGB'),scene.brand_at(scene.state(1800)).convert('RGB')).getbbox(),'Sheen no longer follows moved wordmark'
+    frame_svg=ET.parse(SCENE/'frame.svg').getroot();assert frame_svg.find('s:g[@id="outer-frame"]',ns) is not None and frame_svg.find('s:g[@id="internal-rail"]',ns) is not None
+    frame_alpha=np.asarray(scene.frame.getchannel('A'));assert all(np.any(frame_alpha[region]>0) for region in [(slice(2,7),slice(8,-8)),(slice(-7,-2),slice(8,-8)),(slice(8,-8),slice(2,7)),(slice(8,-8),slice(-7,-2))])
+    yy,xx=np.mgrid[0:480,0:1400];center=cfg['seam']['centerline_x0']+cfg['seam']['slope']*(yy+.5);depth=cfg['source_fidelity']['perimeter_depth'];half=cfg['source_fidelity']['seam_halfwidth']
+    assert half==16 and depth==10 and cfg['seam']['transition_width']==24
+    untouched=(xx>center+half)&(xx>=depth)&(xx<1400-depth)&(yy>=depth)&(yy<480-depth)
+    assert untouched.sum()>.90*(np.asarray(scene.mask)==0).sum(),'Right-source fidelity exemption too broad'
+    blend=np.asarray(scene.blend_mask);assert np.all(blend[xx<center-13]==255) and np.all(blend[xx>center+13]==0)
+    assert np.any((blend>0)&(blend<255)),'Seam is still a hard join'
+    type_record=json.loads((SCENE/'type.json').read_text());assert all(abs(line['ink_box'][0]-52.83)<.001 and line['diagonal_clearance']>80 for line in type_record['lines'])
     for n in ['hero.svg','hero-overlay.svg']:
-        text=(MEDIA/n).read_text();assert text.count('id="hero-subtitle"')==1 and 'AGENTIC LOOP PROMPTING' in text and '<text' not in text
+        text=(MEDIA/n).read_text();assert text.count('id="hero-subtitle"')==1 and 'AGENTIC LOOPING' in text and 'PROMPTING' not in text and '<text' not in text
     snippets=(SCENE/'terminal-snippets.txt').read_text();assert snippets=='\n'.join((ROOT/'tools/capri_context_budget.py').read_text().splitlines()[19:76])+'\n';assert source['terminal_substitution']['snippet_sha256']==sha(SCENE/'terminal-snippets.txt')
     expected_cloud=Image.open(SCENE/'02-clouds.jpg').convert('RGB').resize((1440,480),Image.Resampling.LANCZOS).crop((360,0,1050,480));assert not ImageChops.difference(scene.cloud_image,expected_cloud).getbbox()
-    source_delays=[];source_hashes=[];right_checks=[];outside=np.asarray(scene.mask)==0
+    source_delays=[];source_hashes=[];right_checks=[];outside=untouched
     with Image.open(MEDIA/'sources/capri-19.gif') as clip:
         for i,t in enumerate(scene.timestamps):
             clip.seek(i);source_delays.append(clip.info['duration']);source_hashes.append(hashlib.sha256(clip.convert('RGB').tobytes()).hexdigest())
@@ -58,6 +77,7 @@ def check():
     assert not ImageChops.difference(scene.render(0),scene.render(4000)).getbbox()
     assert not ImageChops.difference(scene.render(cfg['poster_ms']),Image.open(MEDIA/'hero.png').convert('RGB')).getbbox()
     for n,h in record['derived'].items():assert sha(MEDIA/n)==h,('Stale derivative',n)
+    assert sha(SCENE/'frame.png')==record['frame_png_sha256'] and sha(SCENE/'wordmark-mask.png')==record['wordmark_mask_sha256']
     assert sha(SCENE/'scene.json')==record['scene_sha256'] and sha(SCENE/'brand.svg')==record['brand_svg_sha256'] and sha(SCENE/'brand.png')==record['brand_png_sha256']
-    return {'status':'PASS','delivery':[1000,343],'frames':120,'distinct_decoded_frames':len(set(hashes)),'duration_ms':4000,'delays_match_original_source':True,'source_sample_hashes':source_hashes,'right_region_exact_source_checks':len(right_checks),'effect_leakage_pixels':0,'active_portrait_loaded':False,'wordmark_geometry_preserved':True,'descriptor_font_and_ink_alignment':'PASS','cloud_crop_exact':True,'actual_encoded_left_red_shares':red_shares,'attack_to_red_ms':70,'shared_scene_loop_exact':True,'bytes':(MEDIA/'hero.gif').stat().st_size,'palette_colors':record['palette_colors'],'scope':'Encoded/source/geometry checks; palette quantization changes colors. Continuous human perceptual, device, hosted UI and artistic approval remain separate.'}
+    return {'status':'PASS','delivery':[1000,343],'frames':120,'distinct_decoded_frames':len(set(hashes)),'duration_ms':4000,'delays_match_original_source':True,'source_sample_hashes':source_hashes,'right_region_exact_source_checks':len(right_checks),'untouched_right_interior_pixels':int(untouched.sum()),'original_right_region_pixels':int((np.asarray(scene.mask)==0).sum()),'seam_exclusion_halfwidth':half,'perimeter_exclusion_depth':depth,'effect_leakage_pixels':0,'fill_only_type_and_moved_mask':True,'frame_four_sides':True,'smooth_seam_mask':True,'active_portrait_loaded':False,'wordmark_geometry_preserved':True,'descriptor_font_and_ink_alignment':'PASS','cloud_crop_exact':True,'actual_encoded_left_red_shares':red_shares,'attack_to_red_ms':70,'shared_scene_loop_exact':True,'bytes':(MEDIA/'hero.gif').stat().st_size,'palette_colors':record['palette_colors'],'scope':'Encoded/source/geometry checks; palette quantization changes colors. Continuous human perceptual, device, hosted UI and artistic approval remain separate.'}
 if __name__=='__main__':print(json.dumps(check(),indent=2))

@@ -55,7 +55,7 @@ def check():
         require(not re.search(r'(?:identity(?:-mobile)?\.svg|story-identity)',text),'Detached identity strip remains')
     for name in ['hero.svg','hero-overlay.svg']:
         text=(ROOT/'showcase/capri'/name).read_text()
-        require(text.count('id="hero-subtitle"')==1 and 'AGENTIC LOOP PROMPTING' in text,'In-art subtitle missing')
+        require(text.count('id="hero-subtitle"')==1 and 'AGENTIC LOOPING' in text,'In-art subtitle missing')
     families={f for lesson in config['lessons'].values() for f in lesson['families']};require(families=={'sharks','horizon','hands','rain','dots','cat','stack'},'Source family lost')
     records=[];alpha_samples=0;selected=[]
     for name,lesson in config['lessons'].items():

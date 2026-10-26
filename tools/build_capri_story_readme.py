@@ -24,7 +24,7 @@ def divider(static=False):
 def build(static=False):
     m=json.loads((STORY/'model-results.json').read_text());k=lambda v:f'{v//1000}k';t=m['total_assumed_input_tokens'];g=m['derivations']['growing'];c=m['derivations']['curated'];n=m['calls'];steps='+'.join(str(i) for i in range(n))
     base=(ROOT/'showcase/capri/source-match/BASE_README.md').read_text();start=base.index('Start with offline inspection');quick=base[start:base.index('<a href="docs/AFTERIMAGE.md"><img',start)]
-    hero='png' if static else 'gif';opening=f'''<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.{hero}" alt="CAPRI — Agentic Loop Prompting. Original animated Capri and city on the right; blue cloud and code in the left cutout rupture into red." width="{FORMATS['hero']['display_width']}"></picture></p>
+    hero='png' if static else 'gif';opening=f'''<p align="center"><picture><source media="(prefers-reduced-motion: reduce)" srcset="showcase/capri/hero.png"><img src="showcase/capri/hero.{hero}" alt="CAPRI — AGENTIC LOOPING. Original animated Capri and city on the right; blue cloud and code in the left cutout rupture into red." width="{FORMATS['hero']['display_width']}"></picture></p>
 
 # CAPRI — Agentic Loop Prompting
 

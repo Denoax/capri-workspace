@@ -1,4 +1,4 @@
-"""V10 pure-time split compositor: real source right, authored signal left."""
+"""V11 pure-time framed split compositor: real source right, authored signal left."""
 from pathlib import Path
 import bisect,json,math
 import numpy as np
@@ -21,6 +21,10 @@ class HeroScene:
         self.hacked=hacked*(1-edge[:,:,None])+np.array([40,251,134])*edge[:,:,None]
         self.brand=Image.open(self.scene/'brand.png').convert('RGBA');self.word_mask=Image.open(self.scene/'wordmark-mask.png').getchannel('A')
         self.mask=Image.new('L',self.size);ImageDraw.Draw(self.mask).polygon(self.config['left_polygon'],fill=255)
+        yy,xx=np.mgrid[0:self.height,0:self.width];center=self.config['seam']['centerline_x0']+self.config['seam']['slope']*(yy+.5)
+        half=self.config['seam']['transition_width']/2
+        self.blend_mask=Image.fromarray(np.rint(smooth((center+half-(xx+.5))/(2*half))*255).astype('uint8'))
+        self.frame=Image.open(self.scene/'frame.png').convert('RGBA')
         self.terminal_masks=self.make_terminal_masks()
         rng=np.random.default_rng(self.config['seed']);self.fragments=[(float(rng.uniform(0,self.left_width)),float(rng.uniform(0,480)),int(rng.integers(5,32)),int(rng.integers(3,17)),float(rng.uniform(0,2*math.pi))) for _ in range(self.config['terminal']['fragments'])]
         self.source_frames=[];self.durations=[];self.timestamps=[];total=0
@@ -86,9 +90,13 @@ class HeroScene:
         return image
 
     def render(self,time_ms,delivery=False,layers=False):
-        state=self.state(time_ms);right=self.right_frames[state['source_frame']];environment=Image.new('RGBA',self.size);environment.paste(self.left_environment(state),(0,0));left=Image.alpha_composite(environment,self.brand_at(state))
-        # All authored layers, including displaced type, share this final polygon clip.
-        result=Image.composite(left.convert('RGB'),right,self.mask)
+        state=self.state(time_ms);right=self.right_frames[state['source_frame']];environment=Image.new('RGBA',self.size);local=self.left_environment(state);environment.paste(local,(0,0))
+        # Continue the edge sample only through the declared blend band, without squeezing the cloud.
+        extension=round(self.config['seam']['transition_width']/2)+2
+        environment.paste(local.crop((self.left_width-1,0,self.left_width,480)).resize((extension,480)),(self.left_width,0))
+        left=Image.alpha_composite(environment,self.brand_at(state))
+        result=Image.composite(left.convert('RGB'),right,self.blend_mask)
+        result=Image.alpha_composite(result.convert('RGBA'),self.frame).convert('RGB')
         if delivery:result=result.resize(tuple(self.config['delivery']),Image.Resampling.LANCZOS)
-        if layers:return result,{'right':right,'left':left,'mask':self.mask,'state':state}
+        if layers:return result,{'right':right,'left':left,'environment':environment,'mask':self.blend_mask,'frame':self.frame,'state':state}
         return result

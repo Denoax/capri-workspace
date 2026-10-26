@@ -27,3 +27,7 @@ One replacement hero uses the supplied terminal/cloud/pose files closely. The us
 ## 2026-10-25 — V10 split restore correction
 
 The user prefers the original energetic animated Capri/city right side and V9’s cloud/code design. Restore the actual original-speed source on the right, move the environment into the original left polygon, replace the slow takeover with a compact signal break, and refine gradients/type using the supplied licensed Chakra descriptor. V9’s portrait is historical and inactive; no new generated media is authorized. Preserve all lower panels, 89 exports, V8 separator, math, runtime and metadata. Testing delivery remains separate from human visual approval.
+
+## 2026-10-25 — V11 frame/type correction
+
+The user rejects V10’s persistent black letter edging. Remove it in the generator, raise the original CAPRI shapes 28px, use exactly AGENTIC LOOPING on one line, and unify the two scenes with a restrained outer frame and diagonal transition/rail inspired by the owner’s read-only profile. Keep native product explanations unchanged. Preserve motion/source speed, 120 native samples, all 89 lesson exports, separator, runtime and metadata. No generated media, profile edits or main integration. Technical delivery is not human visual approval.
