@@ -1,0 +1,219 @@
+{
+  "client_date": "2026-10-23",
+  "native_code": [
+    {
+      "project": "stackedlol/ascii-sharks",
+      "path": "src/math.ts",
+      "blob_sha": "f03a7cfb880b3e181a04523838aa1c7a00af8d43",
+      "url": "https://github.com/stackedlol/ascii-sharks/blob/main/src/math.ts",
+      "bundled_path": "upstream/ascii-sharks/math.ts",
+      "bundled_sha256": "26ac33ad8d8c923acf5d216353f1a98c7cdedb28f288e6911d033b313d89dfb7",
+      "bundled_git_blob_sha": "5a91f48cfe06a0f52ba434823603c7bec0beaed9",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "stackedlol/ascii-sharks",
+      "path": "src/renderer.ts",
+      "blob_sha": "bdae80b653f8a8327664746d6077c489c1e707a7",
+      "url": "https://github.com/stackedlol/ascii-sharks/blob/main/src/renderer.ts",
+      "bundled_path": "upstream/ascii-sharks/renderer.ts",
+      "bundled_sha256": "055280fe71deef10362fc5da98a4bbf2e2e3c60a30e5c9ad537431d6c84b1faa",
+      "bundled_git_blob_sha": "ec652a16c384fb9cf7cb5beb65e0864a60627b29",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "stackedlol/ascii-sharks",
+      "path": "src/species.ts",
+      "blob_sha": "cb161ccc07bb570a4ad5b630f8612e279ae04ace",
+      "url": "https://github.com/stackedlol/ascii-sharks/blob/main/src/species.ts",
+      "bundled_path": "upstream/ascii-sharks/species.ts",
+      "bundled_sha256": "a46a73d7c23b023f56390cce2507d42d4734e4a271c98219d044318bc9977b25",
+      "bundled_git_blob_sha": "78a03da01c3a24f2ee246c106ada9db28627f468",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "stackedlol/ascii-sharks",
+      "path": "src/world.ts",
+      "blob_sha": "7e177492ca45e963fdb2bd3da9709c5611e3408b",
+      "url": "https://github.com/stackedlol/ascii-sharks/blob/main/src/world.ts",
+      "bundled_path": "upstream/ascii-sharks/world.ts",
+      "bundled_sha256": "3519484a49b43ca711822307df61977cb8d788d447592c5f6050b89e8606c42f",
+      "bundled_git_blob_sha": "d7f3d3c15eaf780db49c19b3528778cc5676ff59",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/config.js",
+      "blob_sha": "7182917bf7ac452993f424e894678c6a55912e04",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/config.js",
+      "bundled_path": "upstream/horizon/config.js",
+      "bundled_sha256": "ca1ee3e59b570abf29e624b800a02c5c53f09bca4f6ce783e1d27382f73102e0",
+      "bundled_git_blob_sha": "4e47d5d2286af6dca03ab7fc1d50336b9b4fc868",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/layout.js",
+      "blob_sha": "e062a197adf79aa66dc911b58ab7f4d60eb66326",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/layout.js",
+      "bundled_path": "upstream/horizon/layout.js",
+      "bundled_sha256": "63c2a7b4fb15c4fd9dc9a429b7352518db897935bfb11a2fa86a63920a103007",
+      "bundled_git_blob_sha": "f58c2e0e3ecafb4104782ba9ed5cdf6971e0251a",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/main.js",
+      "blob_sha": "644cf0c06866e1ae2e191d74f6345257ed791735",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/main.js",
+      "bundled_path": "upstream/horizon/main.js",
+      "bundled_sha256": "459b5f4edb3db204b61e5580fbd3acfa1768efc272030408e5b8b8faec3fa5ed",
+      "bundled_git_blob_sha": "9448b1eb462ce5ff52b976d2de53f94fd842f1c2",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/page.js",
+      "blob_sha": "4d785b1d0946e7d6fdad3259b2aa2a9d414b0e95",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/page.js",
+      "bundled_path": "upstream/horizon/page.js",
+      "bundled_sha256": "dc160181df5823eefea15f007eee45c4b353f6db08181ffef20c7267a71a9acb",
+      "bundled_git_blob_sha": "3f3fc572f3e1781891bef6fe805887790ed15fa6",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/settings.js",
+      "blob_sha": "42570c7365b14495eb08e45ce1933e5e4c5b3146",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/settings.js",
+      "bundled_path": "upstream/horizon/settings.js",
+      "bundled_sha256": "5b99bdfa24390db62e0029ce7132b1de94b41c1a9d8caf792d2624959ccae82d",
+      "bundled_git_blob_sha": "61b6b249d96647d91b881812cdb362cafe9ad868",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/state.js",
+      "blob_sha": "1397863b18cc70a2decc8f11fe34e14822264a15",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/state.js",
+      "bundled_path": "upstream/horizon/state.js",
+      "bundled_sha256": "1a74cfc6056a1142bc069d9ac89c89cc4df6af9a1f2469aeb79a512f4a90bfb0",
+      "bundled_git_blob_sha": "749dc243112e91bdfd51b38497802437de0ff727",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/util.js",
+      "blob_sha": "81b1c0f8e87cff917ff2b7683bf80c79f2823629",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/util.js",
+      "bundled_path": "upstream/horizon/util.js",
+      "bundled_sha256": "853fbb2d189b07932a2f9de2f8b90778a4cf07d2d21b63d1cc08f3485fa627aa",
+      "bundled_git_blob_sha": "a74436e61a81ac35de7a1ee2ba978d76f0f846fd",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/gl/context.js",
+      "blob_sha": "daac60cfbf82b472b78bd96311b1de9ecfda1183",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/gl/context.js",
+      "bundled_path": "upstream/horizon/gl/context.js",
+      "bundled_sha256": "6b494f1621d92bfb4c411e75c524e8091330a2be916d8ab09e4f69be159ecc47",
+      "bundled_git_blob_sha": "8b43701db044795b749c1334fc5e4718031b2482",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/gl/glyphs.js",
+      "blob_sha": "bc3b5133079ad3d26505c9655e78db7b560dd97f",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/gl/glyphs.js",
+      "bundled_path": "upstream/horizon/gl/glyphs.js",
+      "bundled_sha256": "e68163c8b4c2dda94d5f384c86314fefda9e97f45ef1157d1a6a2ca46e7a0c1e",
+      "bundled_git_blob_sha": "f249b608d48654a70214746a645af802c1e0e7f5",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/gl/renderer.js",
+      "blob_sha": "5efe4650ac39f1672c80ce9770e0bac4248246cf",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/gl/renderer.js",
+      "bundled_path": "upstream/horizon/gl/renderer.js",
+      "bundled_sha256": "559535702041b57a92ca1c3ae7f256e94bc473adeaf113aa427a9235513fd1fc",
+      "bundled_git_blob_sha": "65517228c88e3fc965a1728c671aa4b476399429",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/sim/eat.js",
+      "blob_sha": "2ed84ffe790e5e928b8882f99e6b494b94c4b25b",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/sim/eat.js",
+      "bundled_path": "upstream/horizon/sim/eat.js",
+      "bundled_sha256": "325683a10433e9fb0a2f40e3db8eb463cf5017a62bb5c5799592aeffa8012858",
+      "bundled_git_blob_sha": "27567db26471adb7388e63ecb2ef1cbc2886ffac",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/sim/hole.js",
+      "blob_sha": "9ee8add14080765a45aed3b2b2fed80bb619fd3c",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/sim/hole.js",
+      "bundled_path": "upstream/horizon/sim/hole.js",
+      "bundled_sha256": "cf24d6d688c1e51b694716d5308ab145a835b6b16f5443d307582882f7507c9d",
+      "bundled_git_blob_sha": "60243cf4a4c85559c375470563b94760c4a5e1da",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/sim/tick.js",
+      "blob_sha": "94fab01ae62a208da66a6abab1868b6c08d9723e",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/sim/tick.js",
+      "bundled_path": "upstream/horizon/sim/tick.js",
+      "bundled_sha256": "75962a7fbbe08857acf5845b712a0d7b92af3ab5ef86760b6e0b277d2cae895b",
+      "bundled_git_blob_sha": "008ff70155f9ae9117e63acf1ef0e4a4b51b166f",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/gl/shaders/fullscreen.vert.js",
+      "blob_sha": "aab07151d19904fc9086bb023eff54a73d419609",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/gl/shaders/fullscreen.vert.js",
+      "bundled_path": "upstream/horizon/gl/shaders/fullscreen.vert.js",
+      "bundled_sha256": "a6ad8e757e1c461e039d021bccd8161b6ad68662960ccb05ea4f3db83b816489",
+      "bundled_git_blob_sha": "b1da27379d0bed7e9f3bca49dff385cba7507a46",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/gl/shaders/glyph.frag.js",
+      "blob_sha": "ed6fd021b9e2c7b40411ea68703f33d130993ba1",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/gl/shaders/glyph.frag.js",
+      "bundled_path": "upstream/horizon/gl/shaders/glyph.frag.js",
+      "bundled_sha256": "7608050260fb6ff2d982639ace2c5d30e6d169ca44dabbdb50c6abf4c54ac756",
+      "bundled_git_blob_sha": "16e473c35e70fa9fb4494e6d6a59bb2efd5de4b6",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/gl/shaders/particles.js",
+      "blob_sha": "999bec165f49c67813b1c573e2f35877102f34d2",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/gl/shaders/particles.js",
+      "bundled_path": "upstream/horizon/gl/shaders/particles.js",
+      "bundled_sha256": "25a980d1f9a8a4993c1489c217607d904854364ee8bba822fcbdd805d27c0fe1",
+      "bundled_git_blob_sha": "d9529136de3bb55e2e6258d9b34ddf01e85b408b",
+      "upstream_bytes_equal": false
+    },
+    {
+      "project": "SiddDevZ/horizon",
+      "path": "src/gl/shaders/scene.frag.js",
+      "blob_sha": "0dead209e70f2df051f2c8dc158d8f910774d9f8",
+      "url": "https://github.com/SiddDevZ/horizon/blob/main/src/gl/shaders/scene.frag.js",
+      "bundled_path": "upstream/horizon/gl/shaders/scene.frag.js",
+      "bundled_sha256": "13f36bea2aac85f290095d58cac923f1542ced1d6868a81dd3330a0c518e0f29",
+      "bundled_git_blob_sha": "d098c6a4d5bfe230e8762f108a53060163372a15",
+      "upstream_bytes_equal": false
+    }
+  ],
+  "media": "research/inspora/SELECTED_SOURCES.json",
+  "fonts": "assets/fonts/SOURCES.json",
+  "characters": "assets/characters/provenance/ASSET_RECORD.json",
+  "basis": "Approved private review source; permissions are recorded separately in SOURCES.md."
+}

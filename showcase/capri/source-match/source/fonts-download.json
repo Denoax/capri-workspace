@@ -1,0 +1,44 @@
+[
+  {
+    "family": "Manrope",
+    "name": "Manrope[wght].ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/Manrope%5Bwght%5D.ttf",
+    "size": 164700,
+    "sha": "75274da58537d6123b14f2cd0c355ad4681fc2b3"
+  },
+  {
+    "family": "Manrope",
+    "name": "OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt",
+    "size": 4387,
+    "sha": "e271172a9ed0cddc895aabb6509f1c7d880b492d"
+  },
+  {
+    "family": "Inter",
+    "name": "Inter[opsz,wght].ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf",
+    "size": 876576,
+    "sha": "047c92f6e2212473dc436020afed689527076d44"
+  },
+  {
+    "family": "Inter",
+    "name": "OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+    "size": 4377,
+    "sha": "21f6aff961064c2e429f570995e446bcdd555422"
+  },
+  {
+    "family": "MartianMono",
+    "name": "MartianMono[wdth,wght].ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/martianmono/MartianMono%5Bwdth%2Cwght%5D.ttf",
+    "size": 148460,
+    "sha": "1dbec63b6d3a76f0eb2d63f3a6f921efbe66769c"
+  },
+  {
+    "family": "MartianMono",
+    "name": "OFL.txt",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/martianmono/OFL.txt",
+    "size": 4390,
+    "sha": "3d86611f3660e09781ef246830e82374cbd7dfab"
+  }
+]

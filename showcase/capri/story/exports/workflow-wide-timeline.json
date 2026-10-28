@@ -1,0 +1,5538 @@
+{
+  "lesson": "workflow",
+  "layout": "wide",
+  "duration_ms": 9600,
+  "sample_fps": 25,
+  "sample_count": 240,
+  "size": [
+    1000,
+    723
+  ],
+  "bytes": 1189078,
+  "gif_sha256": "6d88ee27248132f4dc6e11f5168cddb0abecbf9e3df470726e4214b2c6c682e2",
+  "poster_sha256": "aa00d64085957ef4eeb230bdb847f4d310164eb6b0b9053444b56f4c73797c19",
+  "palette_colors": 256,
+  "frames": [
+    {
+      "time_ms": 0.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 0,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 0,
+            "running": false,
+            "visible": true,
+            "frames": 3,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 3
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 40.0,
+      "sha256": "ada4ad9c4c211a4270a198ccecbefb27107ba2f6e7f8d8f07bf9b05d0337813c",
+      "state": {
+        "lesson": "workflow",
+        "time": 40,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 40,
+            "running": false,
+            "visible": true,
+            "frames": 4,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 4
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 80.0,
+      "sha256": "411d5c681debae2cd14f6dbf8e9aecef0283af4b951d0030b1e6c4d83bdb1363",
+      "state": {
+        "lesson": "workflow",
+        "time": 80,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 80,
+            "running": false,
+            "visible": true,
+            "frames": 5,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 5
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 120.0,
+      "sha256": "f5c3f2fb0fdb59da6c1ef75f3e338fe658cbe7281b1aa4c258f9afaecfe1c2f0",
+      "state": {
+        "lesson": "workflow",
+        "time": 120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 120,
+            "running": false,
+            "visible": true,
+            "frames": 6,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 6
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 160.0,
+      "sha256": "08de253e7e4e588bfde23b6f12ade677ee24ba93fa20035275b8896a1a02b5bb",
+      "state": {
+        "lesson": "workflow",
+        "time": 160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 160,
+            "running": false,
+            "visible": true,
+            "frames": 7,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 7
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 200.0,
+      "sha256": "9b8fe15231230b39a6863df8e63d3e919f9bb31c1e635a1c106d6c0b0f1cd682",
+      "state": {
+        "lesson": "workflow",
+        "time": 200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 200,
+            "running": false,
+            "visible": true,
+            "frames": 8,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 8
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 240.0,
+      "sha256": "04c30157f0d1274a4be7c4c99c965069b42882f9b9b71f6bb9fd384154359b85",
+      "state": {
+        "lesson": "workflow",
+        "time": 240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 240,
+            "running": false,
+            "visible": true,
+            "frames": 9,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 9
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 280.0,
+      "sha256": "759aa31df8534ad65ab1c02b2b30263c8f7e0fcbe80d994dd8a8b957b3de982d",
+      "state": {
+        "lesson": "workflow",
+        "time": 280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 280,
+            "running": false,
+            "visible": true,
+            "frames": 10,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 10
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 320.0,
+      "sha256": "49f1ea7e37343404dbb6aa1ac0cb68c90aebac044d160f04afc73444bee8e186",
+      "state": {
+        "lesson": "workflow",
+        "time": 320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 320,
+            "running": false,
+            "visible": true,
+            "frames": 11,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 11
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 360.0,
+      "sha256": "1ee407af760f1fadf12c7d7fa5397a77f6f724503cf68ef568a176442adc2f85",
+      "state": {
+        "lesson": "workflow",
+        "time": 360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 360,
+            "running": false,
+            "visible": true,
+            "frames": 12,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 12
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 400.0,
+      "sha256": "bb4d2f74631606bf6f22db84743c96e4bac94bc47073d2909af9ea60cf7365c4",
+      "state": {
+        "lesson": "workflow",
+        "time": 400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 400,
+            "running": false,
+            "visible": true,
+            "frames": 13,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 13
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 440.0,
+      "sha256": "d99a2530202d52b61ee95f6108dcddd13a9694bdc5ba62162c2dda6a229ca5aa",
+      "state": {
+        "lesson": "workflow",
+        "time": 440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 440,
+            "running": false,
+            "visible": true,
+            "frames": 14,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 14
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 480.0,
+      "sha256": "019a70b72cc8244d81db82a49da3106bd71eb949f016203dece19d5d00dabc8a",
+      "state": {
+        "lesson": "workflow",
+        "time": 480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 480,
+            "running": false,
+            "visible": true,
+            "frames": 15,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 15
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 520.0,
+      "sha256": "718bebf4fb6588143b560ede7ed0987163ec371ed3364d61302e4c120d40261e",
+      "state": {
+        "lesson": "workflow",
+        "time": 520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 520,
+            "running": false,
+            "visible": true,
+            "frames": 16,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 16
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 560.0,
+      "sha256": "685acc753e6c0976114d3153aab4de26577e536b6631f933e9773f2459a048ff",
+      "state": {
+        "lesson": "workflow",
+        "time": 560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 560,
+            "running": false,
+            "visible": true,
+            "frames": 17,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 17
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 600.0,
+      "sha256": "f69a04aee036ee50fad0c9a578d04abd5e2b1e0367e1246ef9e41bfdcc24c353",
+      "state": {
+        "lesson": "workflow",
+        "time": 600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 600,
+            "running": false,
+            "visible": true,
+            "frames": 18,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 18
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 640.0,
+      "sha256": "99dc0a730747e2307be4842359e332a794b3bf01b519bc5e25e36423bf0392a6",
+      "state": {
+        "lesson": "workflow",
+        "time": 640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 640,
+            "running": false,
+            "visible": true,
+            "frames": 19,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 19
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 680.0,
+      "sha256": "8e31ad637619c9ef1ea169b465081f6667c41d65c49ecf50305ec438f217a16f",
+      "state": {
+        "lesson": "workflow",
+        "time": 680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 680,
+            "running": false,
+            "visible": true,
+            "frames": 20,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 20
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 720.0,
+      "sha256": "135b6c04ad1fd28aaf9a0e246bad5904fec61adcbda2292ad22c446c2441fb03",
+      "state": {
+        "lesson": "workflow",
+        "time": 720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 720,
+            "running": false,
+            "visible": true,
+            "frames": 21,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 21
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 760.0,
+      "sha256": "bd563912c2b360032ddf69469a89cca16a320775740b409910f4b89d056c91a8",
+      "state": {
+        "lesson": "workflow",
+        "time": 760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 760,
+            "running": false,
+            "visible": true,
+            "frames": 22,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 22
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 800.0,
+      "sha256": "aa00d64085957ef4eeb230bdb847f4d310164eb6b0b9053444b56f4c73797c19",
+      "state": {
+        "lesson": "workflow",
+        "time": 800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 800,
+            "running": false,
+            "visible": true,
+            "frames": 23,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 23
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 840.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 840,
+            "running": false,
+            "visible": true,
+            "frames": 24,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 24
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 880.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 880,
+            "running": false,
+            "visible": true,
+            "frames": 25,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 25
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 920.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 920,
+            "running": false,
+            "visible": true,
+            "frames": 26,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 26
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 960.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 960,
+            "running": false,
+            "visible": true,
+            "frames": 27,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 27
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1000.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 1000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1000,
+            "running": false,
+            "visible": true,
+            "frames": 28,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 28
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1040.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 1040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1040,
+            "running": false,
+            "visible": true,
+            "frames": 29,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 29
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1080.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 1080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1080,
+            "running": false,
+            "visible": true,
+            "frames": 30,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 30
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1120.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 1120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1120,
+            "running": false,
+            "visible": true,
+            "frames": 31,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 31
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1160.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 1160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1160,
+            "running": false,
+            "visible": true,
+            "frames": 32,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 32
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1200.0,
+      "sha256": "c1c8ffbb9725b55c1f9c888f39ba9b9f2b646e6f38c36162110a0e4f2b79943d",
+      "state": {
+        "lesson": "workflow",
+        "time": 1200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1200,
+            "running": false,
+            "visible": true,
+            "frames": 33,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 33
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1240.0,
+      "sha256": "4ddfc6d3e33250417d36950424e9baf583782592058dc4bdca115d9d4436597d",
+      "state": {
+        "lesson": "workflow",
+        "time": 1240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1240,
+            "running": false,
+            "visible": true,
+            "frames": 34,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 34
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1280.0,
+      "sha256": "5d05c1d1a0002872607cacc2ff097f1411aaa0a3f96a35cce98e69143956ee39",
+      "state": {
+        "lesson": "workflow",
+        "time": 1280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1280,
+            "running": false,
+            "visible": true,
+            "frames": 35,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 35
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1320.0,
+      "sha256": "b69f0eb9cfa107f7e19f40357b81afb0d6ec410565ab5126ef3670ffc88a7cbf",
+      "state": {
+        "lesson": "workflow",
+        "time": 1320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1320,
+            "running": false,
+            "visible": true,
+            "frames": 36,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 36
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1360.0,
+      "sha256": "d9e40fc09ab35dde4689175b759b051eb0081ac5e9acfaa4302f2473ed01e059",
+      "state": {
+        "lesson": "workflow",
+        "time": 1360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1360,
+            "running": false,
+            "visible": true,
+            "frames": 37,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 37
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1400.0,
+      "sha256": "4b6adc19799324d47a8244f4da446e8059fbe9ad2836476bee047f69543f0c36",
+      "state": {
+        "lesson": "workflow",
+        "time": 1400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1400,
+            "running": false,
+            "visible": true,
+            "frames": 38,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 38
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1440.0,
+      "sha256": "ff64a3db984b0cb4487dacdd1cbd2ba3db907a6e45c5bbe88ca531c9237ea977",
+      "state": {
+        "lesson": "workflow",
+        "time": 1440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1440,
+            "running": false,
+            "visible": true,
+            "frames": 39,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 39
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1480.0,
+      "sha256": "006cf54fdfdffc3052d88207fc0e0bdafa28524f10410545a97ed275e4fa1e66",
+      "state": {
+        "lesson": "workflow",
+        "time": 1480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1480,
+            "running": false,
+            "visible": true,
+            "frames": 40,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 40
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1520.0,
+      "sha256": "67c406d33e1b9af362543960dab0981b287c6047ccbfd96899a442faac8f8a46",
+      "state": {
+        "lesson": "workflow",
+        "time": 1520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1520,
+            "running": false,
+            "visible": true,
+            "frames": 41,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 41
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1560.0,
+      "sha256": "7971d6f009679b5ae56864592a0bcfd7debc8648f7cefb30c68f4c72a705431b",
+      "state": {
+        "lesson": "workflow",
+        "time": 1560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1560,
+            "running": false,
+            "visible": true,
+            "frames": 42,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 42
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1600.0,
+      "sha256": "ccaeb3674aeeeb3ad7dd96816989f57d3e18bc23e42f23befc7d794ddcfe3235",
+      "state": {
+        "lesson": "workflow",
+        "time": 1600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1600,
+            "running": false,
+            "visible": true,
+            "frames": 43,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 43
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1640.0,
+      "sha256": "050596adaad14196e3dfcda350f78bcd140291c19df5ffef8e5683cc71f31bac",
+      "state": {
+        "lesson": "workflow",
+        "time": 1640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1640,
+            "running": false,
+            "visible": true,
+            "frames": 44,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 44
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1680.0,
+      "sha256": "63c445d07bb41ec6df0e07608d511eb8d0104e6de651755c9201f895ef74ec5e",
+      "state": {
+        "lesson": "workflow",
+        "time": 1680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1680,
+            "running": false,
+            "visible": true,
+            "frames": 45,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 45
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1720.0,
+      "sha256": "6a243895719681cdb603ab80e6d495f82dad82dd30520e632cf06167b1d44bec",
+      "state": {
+        "lesson": "workflow",
+        "time": 1720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1720,
+            "running": false,
+            "visible": true,
+            "frames": 46,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 46
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1760.0,
+      "sha256": "d27536f96440f215fea6436e552bababda04a7b8a6c702d1d44bf87aa02f668c",
+      "state": {
+        "lesson": "workflow",
+        "time": 1760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1760,
+            "running": false,
+            "visible": true,
+            "frames": 47,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 47
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1800.0,
+      "sha256": "7391936d52314e254daca98724279dc19d6a36d59b958814463a7f6dd1c52f75",
+      "state": {
+        "lesson": "workflow",
+        "time": 1800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1800,
+            "running": false,
+            "visible": true,
+            "frames": 48,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 48
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1840.0,
+      "sha256": "69d810e3a96e83f2bc255d993c185da5ac1f4d249df587aff01ec7b42955cfc7",
+      "state": {
+        "lesson": "workflow",
+        "time": 1840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1840,
+            "running": false,
+            "visible": true,
+            "frames": 49,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 49
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1880.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 1880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1880,
+            "running": false,
+            "visible": true,
+            "frames": 50,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 50
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1920.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 1920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1920,
+            "running": false,
+            "visible": true,
+            "frames": 51,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 51
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 1960.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 1960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 1960,
+            "running": false,
+            "visible": true,
+            "frames": 52,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 52
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2000.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2000,
+            "running": false,
+            "visible": true,
+            "frames": 53,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 53
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2040.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2040,
+            "running": false,
+            "visible": true,
+            "frames": 54,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 54
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2080.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2080,
+            "running": false,
+            "visible": true,
+            "frames": 55,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 55
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2120.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2120,
+            "running": false,
+            "visible": true,
+            "frames": 56,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 56
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2160.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2160,
+            "running": false,
+            "visible": true,
+            "frames": 57,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 57
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2200.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2200,
+            "running": false,
+            "visible": true,
+            "frames": 58,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 58
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2240.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2240,
+            "running": false,
+            "visible": true,
+            "frames": 59,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 59
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2280.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2280,
+            "running": false,
+            "visible": true,
+            "frames": 60,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 60
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2320.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2320,
+            "running": false,
+            "visible": true,
+            "frames": 61,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 61
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2360.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2360,
+            "running": false,
+            "visible": true,
+            "frames": 62,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 62
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2400.0,
+      "sha256": "7e8e41271aa504833b49c5b07d48f37eb7162b1bc515f1a4ddc626b9184f8b29",
+      "state": {
+        "lesson": "workflow",
+        "time": 2400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2400,
+            "running": false,
+            "visible": true,
+            "frames": 63,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 63
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2440.0,
+      "sha256": "2d492c737bbc2af72595433ca315f26cb68ea7f14b2b1dedd246392f4b314daa",
+      "state": {
+        "lesson": "workflow",
+        "time": 2440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2440,
+            "running": false,
+            "visible": true,
+            "frames": 64,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 64
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2480.0,
+      "sha256": "8544cdf1db482201d23ca9a31cdadfe18e3c3264b6ecf97413bd44f570ce950b",
+      "state": {
+        "lesson": "workflow",
+        "time": 2480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2480,
+            "running": false,
+            "visible": true,
+            "frames": 65,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 65
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2520.0,
+      "sha256": "5b7d0ed12d78fcd9524dd5e9978a53711298c82e4522a58fb93368a72dc8e8c0",
+      "state": {
+        "lesson": "workflow",
+        "time": 2520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2520,
+            "running": false,
+            "visible": true,
+            "frames": 66,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 66
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2560.0,
+      "sha256": "8c6444ed722025b17c044e220de2e1f0127982b76b729a69b8d9070c97d23090",
+      "state": {
+        "lesson": "workflow",
+        "time": 2560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2560,
+            "running": false,
+            "visible": true,
+            "frames": 67,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 67
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2600.0,
+      "sha256": "0f7c0678230cb479573cd20730d01368dcb6557aea135c20351fc88bd9104929",
+      "state": {
+        "lesson": "workflow",
+        "time": 2600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2600,
+            "running": false,
+            "visible": true,
+            "frames": 68,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 68
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2640.0,
+      "sha256": "5296a855a7dcc4a9832432a1e90eb0bdfc9ceacc500f1734fe186ffd3d195c14",
+      "state": {
+        "lesson": "workflow",
+        "time": 2640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2640,
+            "running": false,
+            "visible": true,
+            "frames": 69,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 69
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2680.0,
+      "sha256": "e348d4f9047a56bdf07c035f538bd2881f7e9822efee44291467bc9bbdf90a5e",
+      "state": {
+        "lesson": "workflow",
+        "time": 2680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2680,
+            "running": false,
+            "visible": true,
+            "frames": 70,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 70
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2720.0,
+      "sha256": "ec71cf12c4e640b73e73c529501a551a903f79b5e4a41fe93c141ac449d3776b",
+      "state": {
+        "lesson": "workflow",
+        "time": 2720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2720,
+            "running": false,
+            "visible": true,
+            "frames": 71,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 71
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2760.0,
+      "sha256": "8164b6ae0e5e1b6e533e300cd70579a24567999c9007928883af34144a506aab",
+      "state": {
+        "lesson": "workflow",
+        "time": 2760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2760,
+            "running": false,
+            "visible": true,
+            "frames": 72,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 72
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2800.0,
+      "sha256": "3718826db2ee42b6b3db7317c19dd2529c7a2b8be5027aa57339c8e77241b176",
+      "state": {
+        "lesson": "workflow",
+        "time": 2800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2800,
+            "running": false,
+            "visible": true,
+            "frames": 73,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 73
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2840.0,
+      "sha256": "4bcf8cbcfdeccef169228522340c04af9be10d50d967ca1b829ad63aabfdb210",
+      "state": {
+        "lesson": "workflow",
+        "time": 2840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2840,
+            "running": false,
+            "visible": true,
+            "frames": 74,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 74
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2880.0,
+      "sha256": "0e7ecf2dbb970410406b06ad0b072853d5b53c78de8faeb4a2ff28b4bc107481",
+      "state": {
+        "lesson": "workflow",
+        "time": 2880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2880,
+            "running": false,
+            "visible": true,
+            "frames": 75,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 75
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2920.0,
+      "sha256": "edff932ba43b8836319194e28a5ea10f5af4bf9ba3053033e2e3ed8a7ff233af",
+      "state": {
+        "lesson": "workflow",
+        "time": 2920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2920,
+            "running": false,
+            "visible": true,
+            "frames": 76,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 76
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 2960.0,
+      "sha256": "eb45816ab651fdd660b759f9e040b0e25f71d609750018a0bacf50f736022a27",
+      "state": {
+        "lesson": "workflow",
+        "time": 2960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 2960,
+            "running": false,
+            "visible": true,
+            "frames": 77,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 77
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3000.0,
+      "sha256": "f9d41fd3ed8ac10186025eebde420f4ead3e5b1020c9890125a2495905458d05",
+      "state": {
+        "lesson": "workflow",
+        "time": 3000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3000,
+            "running": false,
+            "visible": true,
+            "frames": 78,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 78
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3040.0,
+      "sha256": "1736188f7eead8672c5d569d36e47cca73039cbd0e0655f122016e2e827e73bd",
+      "state": {
+        "lesson": "workflow",
+        "time": 3040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3040,
+            "running": false,
+            "visible": true,
+            "frames": 79,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 79
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3080.0,
+      "sha256": "a111ad4d0f8d6374ecc40826f1cd92cb32cb925fb86c3525895b436a26c8dff0",
+      "state": {
+        "lesson": "workflow",
+        "time": 3080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3080,
+            "running": false,
+            "visible": true,
+            "frames": 80,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 80
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3120.0,
+      "sha256": "63f0519b9b8e27aa2b4a08751840ff586db15dbfbc4d36bc4a9fa32e314ebc14",
+      "state": {
+        "lesson": "workflow",
+        "time": 3120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3120,
+            "running": false,
+            "visible": true,
+            "frames": 81,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 81
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3160.0,
+      "sha256": "372c3d2384639bab86c0e060d8d678836cacd50f3067f992c0d1bb31b17fc005",
+      "state": {
+        "lesson": "workflow",
+        "time": 3160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3160,
+            "running": false,
+            "visible": true,
+            "frames": 82,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 82
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3200.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 3200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3200,
+            "running": false,
+            "visible": true,
+            "frames": 83,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 83
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3240.0,
+      "sha256": "6d2dfee65692a5ff3c07ad17fbec23833fa030c133d2d719719f621eb0de17f4",
+      "state": {
+        "lesson": "workflow",
+        "time": 3240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3240,
+            "running": false,
+            "visible": true,
+            "frames": 84,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 84
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3280.0,
+      "sha256": "58b300c5f0fd913fe5e6987a7f67cd998c157350bf79539bc2b9ca30bb5d5a8c",
+      "state": {
+        "lesson": "workflow",
+        "time": 3280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3280,
+            "running": false,
+            "visible": true,
+            "frames": 85,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 85
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3320.0,
+      "sha256": "64a7f2bb82a653c8c3dc9f368a03ee27cfe7603b4cc68ea6df25b1761bda7b8b",
+      "state": {
+        "lesson": "workflow",
+        "time": 3320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3320,
+            "running": false,
+            "visible": true,
+            "frames": 86,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 86
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3360.0,
+      "sha256": "033fb0db568bacbeba8fbbfe2355208e94a13938a287bacfb382b508b7a5b255",
+      "state": {
+        "lesson": "workflow",
+        "time": 3360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3360,
+            "running": false,
+            "visible": true,
+            "frames": 87,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 87
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3400.0,
+      "sha256": "d7341c9ca5e9b7eeaf029b2ae304d549a1b1c4cf0bfd474509d427cf9aa3f23e",
+      "state": {
+        "lesson": "workflow",
+        "time": 3400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3400,
+            "running": false,
+            "visible": true,
+            "frames": 88,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 88
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3440.0,
+      "sha256": "09132085ecb5e191ecc7e195d6dd4a03953b312df6800dd7df1d091b7c5d49ff",
+      "state": {
+        "lesson": "workflow",
+        "time": 3440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3440,
+            "running": false,
+            "visible": true,
+            "frames": 89,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 89
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3480.0,
+      "sha256": "51ba934a214624bdc270811ac65c550af3adec1dceeced6025c5e814d5868117",
+      "state": {
+        "lesson": "workflow",
+        "time": 3480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3480,
+            "running": false,
+            "visible": true,
+            "frames": 90,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 90
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3520.0,
+      "sha256": "e887b517e036b1ae3e06ea624c3179ac866b8650b784a05c5ffe94621585f022",
+      "state": {
+        "lesson": "workflow",
+        "time": 3520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3520,
+            "running": false,
+            "visible": true,
+            "frames": 91,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 91
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3560.0,
+      "sha256": "f96c503eada06809f67b32632f991a871b5ece01f7215d3e8cfe2364443ec94a",
+      "state": {
+        "lesson": "workflow",
+        "time": 3560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3560,
+            "running": false,
+            "visible": true,
+            "frames": 92,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 92
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3600.0,
+      "sha256": "8968905c2f8a3f553aba51715d39d0628cd1e0abf7841180f9b07a2b4203c38c",
+      "state": {
+        "lesson": "workflow",
+        "time": 3600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3600,
+            "running": false,
+            "visible": true,
+            "frames": 93,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 93
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3640.0,
+      "sha256": "2b7ae6585c1e3c49bda483f193a6e8d805860c0afcada0088ae628f07ca2b732",
+      "state": {
+        "lesson": "workflow",
+        "time": 3640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3640,
+            "running": false,
+            "visible": true,
+            "frames": 94,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 94
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3680.0,
+      "sha256": "89b5d4b3af9e46f74a62a102fb68f294cbef1c0ee22469c3bd1c00aa1e2290c4",
+      "state": {
+        "lesson": "workflow",
+        "time": 3680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3680,
+            "running": false,
+            "visible": true,
+            "frames": 95,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 95
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3720.0,
+      "sha256": "ee3874a6263d9e9685b8e6d52dfc2d7b4ef512f414ad062cb7d40612d8038fff",
+      "state": {
+        "lesson": "workflow",
+        "time": 3720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3720,
+            "running": false,
+            "visible": true,
+            "frames": 96,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 96
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3760.0,
+      "sha256": "b2ceb92678603e8f1ad32dd171ed67541abaaceb5c9d399c4c43177d8c2da71d",
+      "state": {
+        "lesson": "workflow",
+        "time": 3760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3760,
+            "running": false,
+            "visible": true,
+            "frames": 97,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 97
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3800.0,
+      "sha256": "05fed8317f3fcb1c0bfe25630a81fa00da07fa73f758a9ecd8a9a2e018221494",
+      "state": {
+        "lesson": "workflow",
+        "time": 3800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3800,
+            "running": false,
+            "visible": true,
+            "frames": 98,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 98
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3840.0,
+      "sha256": "ed12542a1e3869f12bd7394aa8b9987d9ae8685106ba7266cb4d90420ac88959",
+      "state": {
+        "lesson": "workflow",
+        "time": 3840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3840,
+            "running": false,
+            "visible": true,
+            "frames": 99,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 99
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3880.0,
+      "sha256": "10956355f1c8c898c97ce8b0463cb00ada76da6917ec7e405da629ad3e8766b3",
+      "state": {
+        "lesson": "workflow",
+        "time": 3880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3880,
+            "running": false,
+            "visible": true,
+            "frames": 100,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 100
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3920.0,
+      "sha256": "f7972a67bba47aedf737823758e3d957037d063173dcf85207c12764c679dfb6",
+      "state": {
+        "lesson": "workflow",
+        "time": 3920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3920,
+            "running": false,
+            "visible": true,
+            "frames": 101,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 101
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 3960.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 3960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 3960,
+            "running": false,
+            "visible": true,
+            "frames": 102,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 102
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4000.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4000,
+            "running": false,
+            "visible": true,
+            "frames": 103,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 103
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4040.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4040,
+            "running": false,
+            "visible": true,
+            "frames": 104,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 104
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4080.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4080,
+            "running": false,
+            "visible": true,
+            "frames": 105,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 105
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4120.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4120,
+            "running": false,
+            "visible": true,
+            "frames": 106,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 106
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4160.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4160,
+            "running": false,
+            "visible": true,
+            "frames": 107,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 107
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4200.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4200,
+            "running": false,
+            "visible": true,
+            "frames": 108,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 108
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4240.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4240,
+            "running": false,
+            "visible": true,
+            "frames": 109,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 109
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4280.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4280,
+            "running": false,
+            "visible": true,
+            "frames": 110,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 110
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4320.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4320,
+            "running": false,
+            "visible": true,
+            "frames": 111,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 111
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4360.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4360,
+            "running": false,
+            "visible": true,
+            "frames": 112,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 112
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4400.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4400,
+            "running": false,
+            "visible": true,
+            "frames": 113,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 113
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4440.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4440,
+            "running": false,
+            "visible": true,
+            "frames": 114,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 114
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4480.0,
+      "sha256": "037ba0c43a7e20b165ae5f6b2739f5929ee51f230ff86afa1c0d2e1973ba640a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4480,
+            "running": false,
+            "visible": true,
+            "frames": 115,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 115
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4520.0,
+      "sha256": "ed28fbbfc7f2fe61d9c701cbf31159c44a7440847f85ead4b865d1d1d8205eeb",
+      "state": {
+        "lesson": "workflow",
+        "time": 4520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4520,
+            "running": false,
+            "visible": true,
+            "frames": 116,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 116
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4560.0,
+      "sha256": "f3f5f6c6954aeaafbc3a1111ba46e0d361ff594e8c3865b1b5160a3fdcb7b52b",
+      "state": {
+        "lesson": "workflow",
+        "time": 4560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4560,
+            "running": false,
+            "visible": true,
+            "frames": 117,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 117
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4600.0,
+      "sha256": "8e8371fd64dd38ba628dbeb345252c9aaa54b4dfbfebb25e4872f973c8e8bf37",
+      "state": {
+        "lesson": "workflow",
+        "time": 4600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4600,
+            "running": false,
+            "visible": true,
+            "frames": 118,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 118
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4640.0,
+      "sha256": "325531d4e066812c19ac2b1fc1674ada29c671d695ac5b92ea7972779b05c715",
+      "state": {
+        "lesson": "workflow",
+        "time": 4640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4640,
+            "running": false,
+            "visible": true,
+            "frames": 119,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 119
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4680.0,
+      "sha256": "933a7f32a04b2636fbbfc21ca3e3aec198f3ed91b959fd37740edaa2b58ad91f",
+      "state": {
+        "lesson": "workflow",
+        "time": 4680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4680,
+            "running": false,
+            "visible": true,
+            "frames": 120,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 120
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4720.0,
+      "sha256": "e615b2d07768b28f5cf98aee23d1d0a7ba37cfc5ca85d76df062539555a4309a",
+      "state": {
+        "lesson": "workflow",
+        "time": 4720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4720,
+            "running": false,
+            "visible": true,
+            "frames": 121,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 121
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4760.0,
+      "sha256": "284beab0c8381cfc20b50490095b0aa6ffbd8b1b4491e9b6bffdabd26ed27886",
+      "state": {
+        "lesson": "workflow",
+        "time": 4760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4760,
+            "running": false,
+            "visible": true,
+            "frames": 122,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 122
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4800.0,
+      "sha256": "00c81a8679fe1dc70143947ddd86743251973023670713b2454f316d5203ccf7",
+      "state": {
+        "lesson": "workflow",
+        "time": 4800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4800,
+            "running": false,
+            "visible": true,
+            "frames": 123,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 123
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4840.0,
+      "sha256": "22dc5aff29b7d729fc29bb2a8e584910f4c150656b2a2c0a0a3fa67f5af81b72",
+      "state": {
+        "lesson": "workflow",
+        "time": 4840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4840,
+            "running": false,
+            "visible": true,
+            "frames": 124,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 124
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4880.0,
+      "sha256": "0ae4fa0d116f7542531ad1119d9ed82e657450e55be0c0a0eaaa6b70577af5fd",
+      "state": {
+        "lesson": "workflow",
+        "time": 4880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4880,
+            "running": false,
+            "visible": true,
+            "frames": 125,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 125
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4920.0,
+      "sha256": "c5ab92dc4f7d3ed546930b53404f0d407c09630c62e740c89923f90260945737",
+      "state": {
+        "lesson": "workflow",
+        "time": 4920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4920,
+            "running": false,
+            "visible": true,
+            "frames": 126,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 126
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 4960.0,
+      "sha256": "b45f27a2b2a5b4e625cb14b04650071ce113d925c9efdde7088b4ac239064bb8",
+      "state": {
+        "lesson": "workflow",
+        "time": 4960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 4960,
+            "running": false,
+            "visible": true,
+            "frames": 127,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 127
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5000.0,
+      "sha256": "da0d5dc364ee86a31be334609ac3a191c6515f6c3445e291c6e963220e73127b",
+      "state": {
+        "lesson": "workflow",
+        "time": 5000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5000,
+            "running": false,
+            "visible": true,
+            "frames": 128,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 128
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5040.0,
+      "sha256": "a79589c3ca5a9943c7efd3483a5ed6bfdf8b9294aaeab36edcf5f9b7c61c3930",
+      "state": {
+        "lesson": "workflow",
+        "time": 5040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5040,
+            "running": false,
+            "visible": true,
+            "frames": 129,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 129
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5080.0,
+      "sha256": "2cdb739ad532601c2377e40a02d4d6fd593de3c16d242daf7c2455c5bb4305f1",
+      "state": {
+        "lesson": "workflow",
+        "time": 5080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5080,
+            "running": false,
+            "visible": true,
+            "frames": 130,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 130
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5120.0,
+      "sha256": "d6663bb6d0f4a6f71a0bd1f2e7158335d310a9a15346a4a192ce0f74e062cdde",
+      "state": {
+        "lesson": "workflow",
+        "time": 5120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5120,
+            "running": false,
+            "visible": true,
+            "frames": 131,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 131
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5160.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5160,
+            "running": false,
+            "visible": true,
+            "frames": 132,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 132
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5200.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5200,
+            "running": false,
+            "visible": true,
+            "frames": 133,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 133
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5240.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5240,
+            "running": false,
+            "visible": true,
+            "frames": 134,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 134
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5280.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5280,
+            "running": false,
+            "visible": true,
+            "frames": 135,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 135
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5320.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5320,
+            "running": false,
+            "visible": true,
+            "frames": 136,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 136
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5360.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5360,
+            "running": false,
+            "visible": true,
+            "frames": 137,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 137
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5400.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5400,
+            "running": false,
+            "visible": true,
+            "frames": 138,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 138
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5440.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5440,
+            "running": false,
+            "visible": true,
+            "frames": 139,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 139
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5480.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5480,
+            "running": false,
+            "visible": true,
+            "frames": 140,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 140
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5520.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5520,
+            "running": false,
+            "visible": true,
+            "frames": 141,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 141
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5560.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5560,
+            "running": false,
+            "visible": true,
+            "frames": 142,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 142
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5600.0,
+      "sha256": "59f72780f5ce5d6e79e9d023e3f84455b3babf6f5a5f8def4f6669b70b547b22",
+      "state": {
+        "lesson": "workflow",
+        "time": 5600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5600,
+            "running": false,
+            "visible": true,
+            "frames": 143,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 143
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5640.0,
+      "sha256": "5989aeecbf2d06421f0d7447249d430663b42e05d3d4d21bd31a204ef1f4ff7e",
+      "state": {
+        "lesson": "workflow",
+        "time": 5640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5640,
+            "running": false,
+            "visible": true,
+            "frames": 144,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 144
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5680.0,
+      "sha256": "40f9739891c916538c8b1d356a2d66fed5ac4ff6ac642de4bd9d86224e20afef",
+      "state": {
+        "lesson": "workflow",
+        "time": 5680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5680,
+            "running": false,
+            "visible": true,
+            "frames": 145,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 145
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5720.0,
+      "sha256": "ff01138dfa4cf3a1341784de7f8a4f98c4e9d2d9af39c9b76d2087ce375ff3f7",
+      "state": {
+        "lesson": "workflow",
+        "time": 5720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5720,
+            "running": false,
+            "visible": true,
+            "frames": 146,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 146
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5760.0,
+      "sha256": "48e51b63c0a0798e115eeeb0da30df5305f10a4e6f97c47a2a68998dca601ab4",
+      "state": {
+        "lesson": "workflow",
+        "time": 5760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5760,
+            "running": false,
+            "visible": true,
+            "frames": 147,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 147
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5800.0,
+      "sha256": "87716d5e4ff6c2eff68d2b218222e9e0d4e7e2ef6ae9c936ab9cf9fe0d4cd3d6",
+      "state": {
+        "lesson": "workflow",
+        "time": 5800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5800,
+            "running": false,
+            "visible": true,
+            "frames": 148,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 148
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5840.0,
+      "sha256": "cbcf5d5d84fa9e974fc7ff6fab2e846feb066d00587bb00fc7a22f298e98a3fd",
+      "state": {
+        "lesson": "workflow",
+        "time": 5840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5840,
+            "running": false,
+            "visible": true,
+            "frames": 149,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 149
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5880.0,
+      "sha256": "fb172766947751d6774f614462f380d353048e93ee0e63d379fbab19b2a74e42",
+      "state": {
+        "lesson": "workflow",
+        "time": 5880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5880,
+            "running": false,
+            "visible": true,
+            "frames": 150,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 150
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5920.0,
+      "sha256": "86ba0e89078f75e24a11dc7bbd85406515a46d1a8fc9127279b1b2936226cdfc",
+      "state": {
+        "lesson": "workflow",
+        "time": 5920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5920,
+            "running": false,
+            "visible": true,
+            "frames": 151,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 151
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 5960.0,
+      "sha256": "252cce438e46a189125e5c905927dfe3d7f1e60bab6e3d97368ddee7c6960459",
+      "state": {
+        "lesson": "workflow",
+        "time": 5960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 5960,
+            "running": false,
+            "visible": true,
+            "frames": 152,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 152
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6000.0,
+      "sha256": "71a13459ca3477966a53789bba3db37ba1c267a30e6bbfb8fcdf296b474c0144",
+      "state": {
+        "lesson": "workflow",
+        "time": 6000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6000,
+            "running": false,
+            "visible": true,
+            "frames": 153,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 153
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6040.0,
+      "sha256": "0a49e0672cd6f894eb4a56f992aa20b3a75992ab715b1fa2be43df539fe9c9b4",
+      "state": {
+        "lesson": "workflow",
+        "time": 6040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6040,
+            "running": false,
+            "visible": true,
+            "frames": 154,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 154
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6080.0,
+      "sha256": "55f03893295e9bdbfc18bc8aa43566d18f9d556303c5861a0f612141a2903d98",
+      "state": {
+        "lesson": "workflow",
+        "time": 6080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6080,
+            "running": false,
+            "visible": true,
+            "frames": 155,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 155
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6120.0,
+      "sha256": "60a6c825bcb8c9db06f66dd04ccfa084f1574bd9cc0c22fd048ef078a759a8f3",
+      "state": {
+        "lesson": "workflow",
+        "time": 6120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6120,
+            "running": false,
+            "visible": true,
+            "frames": 156,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 156
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6160.0,
+      "sha256": "4b82863efc7f1c2f8246abc8d54767cfa348f4d0403f8d0d000cfec7ab2dc1ad",
+      "state": {
+        "lesson": "workflow",
+        "time": 6160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6160,
+            "running": false,
+            "visible": true,
+            "frames": 157,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 157
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6200.0,
+      "sha256": "7c14b93c455a14f509445044c472a7d6037e8f87bce9166f9f3f9d486d9793d8",
+      "state": {
+        "lesson": "workflow",
+        "time": 6200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6200,
+            "running": false,
+            "visible": true,
+            "frames": 158,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 158
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6240.0,
+      "sha256": "d6c596fe068bcd72333b4e5a33dd666637c05751099d40fca4cce66288d853b0",
+      "state": {
+        "lesson": "workflow",
+        "time": 6240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6240,
+            "running": false,
+            "visible": true,
+            "frames": 159,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 159
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6280.0,
+      "sha256": "3ad8b05bdbfb6d0c82c0b24d8a1cef18d2aafe2ec7899199a30be2e20fceeb17",
+      "state": {
+        "lesson": "workflow",
+        "time": 6280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6280,
+            "running": false,
+            "visible": true,
+            "frames": 160,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 160
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6320.0,
+      "sha256": "484f66272982ba140a00bc3c3bbd83aa48468a2630be2595b96ca4b07333eaca",
+      "state": {
+        "lesson": "workflow",
+        "time": 6320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6320,
+            "running": false,
+            "visible": true,
+            "frames": 161,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 161
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6360.0,
+      "sha256": "7679bc0bd18ec87ee560aa85603decf597c6791a75e5f1192277dd5ba519738e",
+      "state": {
+        "lesson": "workflow",
+        "time": 6360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6360,
+            "running": false,
+            "visible": true,
+            "frames": 162,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 162
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6400.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 6400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6400,
+            "running": false,
+            "visible": true,
+            "frames": 163,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 163
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6440.0,
+      "sha256": "48deecddad516164a85eede03db5d7bb033513d494d5ad3c2b85bdb172440190",
+      "state": {
+        "lesson": "workflow",
+        "time": 6440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6440,
+            "running": false,
+            "visible": true,
+            "frames": 164,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 164
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6480.0,
+      "sha256": "a825e878736dd9e575240641b24738d7e20f51a6b189e89606ef803217b5985a",
+      "state": {
+        "lesson": "workflow",
+        "time": 6480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6480,
+            "running": false,
+            "visible": true,
+            "frames": 165,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 165
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6520.0,
+      "sha256": "b9f11b96f5adaaec2b63ba89ca2b884a02119fe820d71e25ca0bcd4a5bdc539c",
+      "state": {
+        "lesson": "workflow",
+        "time": 6520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6520,
+            "running": false,
+            "visible": true,
+            "frames": 166,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 166
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6560.0,
+      "sha256": "8c1acb4708ba5d0ccf55dc874604722f094a39cd50517ad650578e3d974592a1",
+      "state": {
+        "lesson": "workflow",
+        "time": 6560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6560,
+            "running": false,
+            "visible": true,
+            "frames": 167,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 167
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6600.0,
+      "sha256": "fe1d4b3aacd9a0ceea1564aba20b24bb4d8265476752e272432e80651a60d2bd",
+      "state": {
+        "lesson": "workflow",
+        "time": 6600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6600,
+            "running": false,
+            "visible": true,
+            "frames": 168,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 168
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6640.0,
+      "sha256": "5abd31bc232f958cf7150753da70cc90deb9a09c290142cb1b57e017d4f73983",
+      "state": {
+        "lesson": "workflow",
+        "time": 6640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6640,
+            "running": false,
+            "visible": true,
+            "frames": 169,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 169
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6680.0,
+      "sha256": "37754440894a6d5d3f84a12e65f37de6eb1efeed98e5a70054b591e619a02c2d",
+      "state": {
+        "lesson": "workflow",
+        "time": 6680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6680,
+            "running": false,
+            "visible": true,
+            "frames": 170,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 170
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6720.0,
+      "sha256": "0a4630e97f23d0d47e6cd1d5f5815f17ddc1b244acb37caab320d37c5f0784ff",
+      "state": {
+        "lesson": "workflow",
+        "time": 6720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6720,
+            "running": false,
+            "visible": true,
+            "frames": 171,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 171
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6760.0,
+      "sha256": "a8ee0c67c1f66f70c8994a9495e7d84904c4eedc1c9c58dc4b6326a2017feda5",
+      "state": {
+        "lesson": "workflow",
+        "time": 6760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6760,
+            "running": false,
+            "visible": true,
+            "frames": 172,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 172
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6800.0,
+      "sha256": "405d271fed3a5aacb0203959a938dac0cc2525d99bbd140f8ad78e58b8bcc2a9",
+      "state": {
+        "lesson": "workflow",
+        "time": 6800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6800,
+            "running": false,
+            "visible": true,
+            "frames": 173,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 173
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6840.0,
+      "sha256": "9f83c1cb7ea96e932946e8dabf9cfe257b2515e3547f4c8169715b77819bb78d",
+      "state": {
+        "lesson": "workflow",
+        "time": 6840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6840,
+            "running": false,
+            "visible": true,
+            "frames": 174,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 174
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6880.0,
+      "sha256": "42c198ce1a0542f6ff54b5027ef3ae8bc947875e23797604965051f20ec20ca5",
+      "state": {
+        "lesson": "workflow",
+        "time": 6880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6880,
+            "running": false,
+            "visible": true,
+            "frames": 175,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 175
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6920.0,
+      "sha256": "b2799e2c7259a2bfc4f49688eaf1ae05f34e5d9ebf8ce5bd07f07e47afe70a0e",
+      "state": {
+        "lesson": "workflow",
+        "time": 6920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6920,
+            "running": false,
+            "visible": true,
+            "frames": 176,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 176
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 6960.0,
+      "sha256": "c0efa5d50790ced420a8673789f73b0fee8606639b8769688a02ecd73b736a98",
+      "state": {
+        "lesson": "workflow",
+        "time": 6960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 6960,
+            "running": false,
+            "visible": true,
+            "frames": 177,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 177
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7000.0,
+      "sha256": "506ebdd71529e2188d8f7a6324312c91c052f0dd02145cbe3e880d1b335f4cfd",
+      "state": {
+        "lesson": "workflow",
+        "time": 7000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7000,
+            "running": false,
+            "visible": true,
+            "frames": 178,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 178
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7040.0,
+      "sha256": "639ea05103c7c42071b28df4cb6df5b61b734379af516eb29b54bd2862c8cdd1",
+      "state": {
+        "lesson": "workflow",
+        "time": 7040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7040,
+            "running": false,
+            "visible": true,
+            "frames": 179,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 179
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7080.0,
+      "sha256": "0c6c95a869506da2626a6d12e2b28fba4c4ddd68eafbf3b016b6a5d755b3f070",
+      "state": {
+        "lesson": "workflow",
+        "time": 7080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7080,
+            "running": false,
+            "visible": true,
+            "frames": 180,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 180
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7120.0,
+      "sha256": "b584add9c5340f8290b5864f1c542fbd90530c34fdb60cc4cb48e31b34e22947",
+      "state": {
+        "lesson": "workflow",
+        "time": 7120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7120,
+            "running": false,
+            "visible": true,
+            "frames": 181,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 181
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7160.0,
+      "sha256": "038bc88d631cf47078bb1fe2fb5cc637d0175c0f9aed15c3a4cd418a923d367f",
+      "state": {
+        "lesson": "workflow",
+        "time": 7160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7160,
+            "running": false,
+            "visible": true,
+            "frames": 182,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 182
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7200.0,
+      "sha256": "32decdea12a8f92d0139b7639b9fb24dd56712b1307316f12c336d1107d4af83",
+      "state": {
+        "lesson": "workflow",
+        "time": 7200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7200,
+            "running": false,
+            "visible": true,
+            "frames": 183,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 183
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7240.0,
+      "sha256": "2a0c9d90bb6d3334bb6edccee07681e8028fca83a35cbb73f8b58b0d5122a449",
+      "state": {
+        "lesson": "workflow",
+        "time": 7240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7240,
+            "running": false,
+            "visible": true,
+            "frames": 184,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 184
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7280.0,
+      "sha256": "14e01c02e05e46178ebac6a6559fd731f832d99a83991e269512df9edf3e8174",
+      "state": {
+        "lesson": "workflow",
+        "time": 7280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7280,
+            "running": false,
+            "visible": true,
+            "frames": 185,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 185
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7320.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7320,
+            "running": false,
+            "visible": true,
+            "frames": 186,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 186
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7360.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7360,
+            "running": false,
+            "visible": true,
+            "frames": 187,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 187
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7400.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7400,
+            "running": false,
+            "visible": true,
+            "frames": 188,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 188
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7440.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7440,
+            "running": false,
+            "visible": true,
+            "frames": 189,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 189
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7480.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7480,
+            "running": false,
+            "visible": true,
+            "frames": 190,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 190
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7520.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7520,
+            "running": false,
+            "visible": true,
+            "frames": 191,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 191
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7560.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7560,
+            "running": false,
+            "visible": true,
+            "frames": 192,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 192
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7600.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7600,
+            "running": false,
+            "visible": true,
+            "frames": 193,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 193
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7640.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7640,
+            "running": false,
+            "visible": true,
+            "frames": 194,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 194
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7680.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7680,
+            "running": false,
+            "visible": true,
+            "frames": 195,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 195
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7720.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7720,
+            "running": false,
+            "visible": true,
+            "frames": 196,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 196
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7760.0,
+      "sha256": "84043ced23489d29d43f09ef68b8d9384d46f88da61ea3af5e27f2f81a14b484",
+      "state": {
+        "lesson": "workflow",
+        "time": 7760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7760,
+            "running": false,
+            "visible": true,
+            "frames": 197,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 197
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7800.0,
+      "sha256": "d64a60966588501d1dbb580492d10946558ebb3022c37ef816e87236d896777d",
+      "state": {
+        "lesson": "workflow",
+        "time": 7800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7800,
+            "running": false,
+            "visible": true,
+            "frames": 198,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 198
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7840.0,
+      "sha256": "de24f61d60952aa70ae944cc4938d902d3d4a75d3c92c454d7a41d85d693b4c3",
+      "state": {
+        "lesson": "workflow",
+        "time": 7840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7840,
+            "running": false,
+            "visible": true,
+            "frames": 199,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 199
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7880.0,
+      "sha256": "a4e6e2ec3b4b22cc7e4fb65b7919d003596c5872fe79d1aeeaf4990f8a29a456",
+      "state": {
+        "lesson": "workflow",
+        "time": 7880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7880,
+            "running": false,
+            "visible": true,
+            "frames": 200,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 200
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7920.0,
+      "sha256": "bf8a10b636320bd5728e501cd5c3bfb68491e372432c6f869733a37c7589764c",
+      "state": {
+        "lesson": "workflow",
+        "time": 7920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7920,
+            "running": false,
+            "visible": true,
+            "frames": 201,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 201
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 7960.0,
+      "sha256": "bb3e52949596b53c3fab166afc81addaa39ea752908eb5ae34e7a11c39dbc913",
+      "state": {
+        "lesson": "workflow",
+        "time": 7960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 7960,
+            "running": false,
+            "visible": true,
+            "frames": 202,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 202
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8000.0,
+      "sha256": "bb995028275bd5f26613b298301e8a242586a0721d753b22502247e3197bd7cd",
+      "state": {
+        "lesson": "workflow",
+        "time": 8000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8000,
+            "running": false,
+            "visible": true,
+            "frames": 203,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 203
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8040.0,
+      "sha256": "3fcb4294c4f8b08d0025a7e3a3fe6f5c4e78cbe5022a362887de5366e3fffb9c",
+      "state": {
+        "lesson": "workflow",
+        "time": 8040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8040,
+            "running": false,
+            "visible": true,
+            "frames": 204,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 204
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8080.0,
+      "sha256": "e02778e42f7af7edaa44aadc9e01db6cc96f2a75e08ba516511720de4a9264fd",
+      "state": {
+        "lesson": "workflow",
+        "time": 8080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8080,
+            "running": false,
+            "visible": true,
+            "frames": 205,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 205
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8120.0,
+      "sha256": "04ebf4993ec3663b79eff2ade09852ca98ccdffec3ea78c4d6b43b60289b379b",
+      "state": {
+        "lesson": "workflow",
+        "time": 8120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8120,
+            "running": false,
+            "visible": true,
+            "frames": 206,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 206
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8160.0,
+      "sha256": "96af584f1a305a225fd30b1abec0c9332272fa1b9f775a74a3aaf02dd295b40e",
+      "state": {
+        "lesson": "workflow",
+        "time": 8160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8160,
+            "running": false,
+            "visible": true,
+            "frames": 207,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 207
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8200.0,
+      "sha256": "8842d48b27c9701bf07f003627dd9112d69a9625a201292f6f7f0a6d4475f92a",
+      "state": {
+        "lesson": "workflow",
+        "time": 8200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8200,
+            "running": false,
+            "visible": true,
+            "frames": 208,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 208
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8240.0,
+      "sha256": "13099c92bcca4b129b5533c156d74a56599c34df340017df9b06871c9891217d",
+      "state": {
+        "lesson": "workflow",
+        "time": 8240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8240,
+            "running": false,
+            "visible": true,
+            "frames": 209,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 209
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8280.0,
+      "sha256": "c14ff325879bef4d04be0e6bdc37d31ea57e3cee8b5d93147cd826e0486ad795",
+      "state": {
+        "lesson": "workflow",
+        "time": 8280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8280,
+            "running": false,
+            "visible": true,
+            "frames": 210,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 210
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8320.0,
+      "sha256": "f0bc418016bba51d40c12f94bba66d3b35b9e367a62efcc632fe25cbf7d71e09",
+      "state": {
+        "lesson": "workflow",
+        "time": 8320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8320,
+            "running": false,
+            "visible": true,
+            "frames": 211,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 211
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8360.0,
+      "sha256": "9abbf3802137e41f341989a3e60f85b2741fdec03025289f77a814d123397245",
+      "state": {
+        "lesson": "workflow",
+        "time": 8360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8360,
+            "running": false,
+            "visible": true,
+            "frames": 212,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 212
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8400.0,
+      "sha256": "7ab19db6b7ea76b931799a3ea1772cf7cdbe87d16bd54b3fbe2dfb3150a4bced",
+      "state": {
+        "lesson": "workflow",
+        "time": 8400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8400,
+            "running": false,
+            "visible": true,
+            "frames": 213,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 213
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8440.0,
+      "sha256": "89313d5dff1fd9ccdd41223355c390f257dacb4be3db5bcdddf6e82953f1349f",
+      "state": {
+        "lesson": "workflow",
+        "time": 8440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8440,
+            "running": false,
+            "visible": true,
+            "frames": 214,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 214
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8480.0,
+      "sha256": "66e23c230477ce2e70e94ccceb8d7b91412ecda6bef87a6e89ae9f0bace59eb2",
+      "state": {
+        "lesson": "workflow",
+        "time": 8480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8480,
+            "running": false,
+            "visible": true,
+            "frames": 215,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 215
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8520.0,
+      "sha256": "e4a16f726e94c0b27e83f06ce979d32194343c841b3b592740841bdc45c48f33",
+      "state": {
+        "lesson": "workflow",
+        "time": 8520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8520,
+            "running": false,
+            "visible": true,
+            "frames": 216,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 216
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8560.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8560,
+            "running": false,
+            "visible": true,
+            "frames": 217,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 217
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8600.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8600,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8600,
+            "running": false,
+            "visible": true,
+            "frames": 218,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 218
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8640.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8640,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8640,
+            "running": false,
+            "visible": true,
+            "frames": 219,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 219
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8680.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8680,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8680,
+            "running": false,
+            "visible": true,
+            "frames": 220,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 220
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8720.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8720,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8720,
+            "running": false,
+            "visible": true,
+            "frames": 221,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 221
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8760.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8760,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8760,
+            "running": false,
+            "visible": true,
+            "frames": 222,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 222
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8800.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8800,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8800,
+            "running": false,
+            "visible": true,
+            "frames": 223,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 223
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8840.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8840,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8840,
+            "running": false,
+            "visible": true,
+            "frames": 224,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 224
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8880.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 8880,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8880,
+            "running": false,
+            "visible": true,
+            "frames": 225,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 225
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8920.0,
+      "sha256": "56cf9ecb7ab1c38a5dad128c74a057b22e9e4856fb83229b967c55b363eced44",
+      "state": {
+        "lesson": "workflow",
+        "time": 8920,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8920,
+            "running": false,
+            "visible": true,
+            "frames": 226,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 226
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 8960.0,
+      "sha256": "56cf9ecb7ab1c38a5dad128c74a057b22e9e4856fb83229b967c55b363eced44",
+      "state": {
+        "lesson": "workflow",
+        "time": 8960,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 8960,
+            "running": false,
+            "visible": true,
+            "frames": 227,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 227
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9000.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9000,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9000,
+            "running": false,
+            "visible": true,
+            "frames": 228,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 228
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9040.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9040,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9040,
+            "running": false,
+            "visible": true,
+            "frames": 229,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 229
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9080.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9080,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9080,
+            "running": false,
+            "visible": true,
+            "frames": 230,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 230
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9120.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9120,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9120,
+            "running": false,
+            "visible": true,
+            "frames": 231,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 231
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9160.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9160,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9160,
+            "running": false,
+            "visible": true,
+            "frames": 232,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 232
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9200.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9200,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9200,
+            "running": false,
+            "visible": true,
+            "frames": 233,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 233
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9240.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9240,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9240,
+            "running": false,
+            "visible": true,
+            "frames": 234,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 234
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9280.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9280,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9280,
+            "running": false,
+            "visible": true,
+            "frames": 235,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 235
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9320.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9320,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9320,
+            "running": false,
+            "visible": true,
+            "frames": 236,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 236
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9360.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9360,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9360,
+            "running": false,
+            "visible": true,
+            "frames": 237,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 237
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9400.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9400,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9400,
+            "running": false,
+            "visible": true,
+            "frames": 238,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 238
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9440.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9440,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9440,
+            "running": false,
+            "visible": true,
+            "frames": 239,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 239
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9480.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9480,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9480,
+            "running": false,
+            "visible": true,
+            "frames": 240,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 240
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9520.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9520,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9520,
+            "running": false,
+            "visible": true,
+            "frames": 241,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 241
+          }
+        }
+      }
+    },
+    {
+      "time_ms": 9560.0,
+      "sha256": "2a0f3b77e3059dd8de53d73490ddf19a20ca868741af521c26f29e7781660f36",
+      "state": {
+        "lesson": "workflow",
+        "time": 9560,
+        "request": null,
+        "budget": null,
+        "scenes": {
+          "comic": {
+            "time": 9560,
+            "running": false,
+            "visible": true,
+            "frames": 242,
+            "native": null,
+            "sourceTime": null,
+            "sourceDuration": null,
+            "sceneDuration": 9600,
+            "seekVersion": 242
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Shared companion scene clocks; native sources and recorded footage remain distinct. Sample FPS is not source acting or perceived smoothness."
+}

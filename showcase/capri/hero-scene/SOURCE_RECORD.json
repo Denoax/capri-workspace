@@ -1,0 +1,74 @@
+{
+  "right": {
+    "source": "../sources/capri-19.gif",
+    "sha256": "f40d1e6b1c3fdb1374d988fe07f18b6c3f2a42010aabc72ed5bcb30d79dac17b",
+    "placement": [
+      550,
+      0,
+      850,
+      480
+    ],
+    "source_size": [
+      498,
+      281
+    ],
+    "frames": 120,
+    "duration_ms": 4000,
+    "mapping": "Native encoded source delays; evaluate left at each cumulative timestamp; no interpolated anime poses"
+  },
+  "type": {
+    "wordmark": "Original Barlow paths and scale; separate display translation28px upward; fill-only gradient, no persistent outline",
+    "descriptor": "AGENTIC LOOPING on one line in fixed Chakra Petch; no outline",
+    "font_source": {
+      "family": "Chakra Petch",
+      "style": "SemiBold Italic",
+      "creator_reference": "https://github.com/cadsondemak/Chakra-Petch",
+      "repository": "google/fonts",
+      "commit": "e7db6ca603fd4862010383ff17ffd6cc4ffac1c0",
+      "licence": "SIL Open Font License, bundled unmodified",
+      "modified": false,
+      "files": [
+        {
+          "path": "assets/fonts/chakra-petch/ChakraPetch-SemiBoldItalic.ttf",
+          "upstream_path": "ofl/chakrapetch/ChakraPetch-SemiBoldItalic.ttf",
+          "bytes": 81000,
+          "git_blob_sha1": "83d9cf6c00abbc329cd9e1586bbcecb8f34e63ab",
+          "sha256": "4e11c1bec71511bbea8a3bc3f4cebff479bb9681961d691a36f99e5234d8fe89"
+        },
+        {
+          "path": "assets/fonts/chakra-petch/OFL.txt",
+          "upstream_path": "ofl/chakrapetch/OFL.txt",
+          "bytes": 4396,
+          "git_blob_sha1": "9cee5a5b7f6f704414504ac9df37ae3b11b45264",
+          "sha256": "13831d02389d917d22fcfa6c79f98f8acbf61d230add0e73a4d4dc5f3bfb9e56"
+        },
+        {
+          "path": "assets/fonts/chakra-petch/METADATA.pb",
+          "upstream_path": "ofl/chakrapetch/METADATA.pb",
+          "bytes": 3328,
+          "git_blob_sha1": "ab090e52a3458e5764520b3dc6e2e5fb04548c2b",
+          "sha256": "d008cbaed83da54bb765bbcdc33f913a57a110b1e59e381b1d424797cf33f5a2"
+        }
+      ]
+    },
+    "contrast": "Original fill-only gradients retained; page background shows through the left field."
+  },
+  "portrait": {
+    "status": "Historical only, never opened by active renderer",
+    "master": "portrait-master.png",
+    "record": "POSE_GENERATION.json",
+    "sha256": "b70de4910092b34a710d01d461cd14684e5266e1affeb66c5e8ed3b71b3248ee"
+  },
+  "implementation": "Original deterministic Pillow/SVG code; adapt bounded gradient/sheen principles, no upstream component copied",
+  "version": 12,
+  "base": "d115d5af71e694d8cf2a5abb60b7d0b15964b5d3",
+  "previous_record": "history/v11/SOURCE_RECORD.json",
+  "user_direction": "Transparent left with only CAPRI / AGENTIC LOOPING; restore pre-V11 unframed edge; profile above Codex x Hermes",
+  "left_background": "No cloud, code, backdrop, outer frame, diagonal rail or seam blend. Genuine alpha outside the existing lettering.",
+  "frame": "Removed V11 frame and rail; original unframed diagonal geometry restored.",
+  "original_footage": "All 120 original samples and native 30/40 ms delays retained without interpolation.",
+  "gif_alpha": "Index255 reserved; threshold128 for binary GIF alpha; compact unchanged-pixel deltas and disposal2 before opaque pixels disappear. Full decoded RGBA equality checks every frame for trails.",
+  "video_matte": "MP4 preview composites on #0d1117 because H.264 does not carry alpha; GIF/PNG/SVG carry transparency.",
+  "human_visual_approval": "PENDING",
+  "source_scope": "Unchanged original anime/city source and licensed type. Historical cloud/code/generated portrait records retained; no new visual media generated."
+}

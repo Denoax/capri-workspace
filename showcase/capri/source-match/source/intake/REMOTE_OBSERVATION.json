@@ -1,0 +1,109 @@
+{
+  "client_date": "2026-10-23",
+  "repo": "Denoax/capri",
+  "private": true,
+  "default_branch": "main",
+  "observed_main_sha": "521598688be57fdc56a26ff15a4b4eddb65d6433",
+  "historical_presentation_branch": "testing/capri-v8-composition-01a1688d",
+  "historical_presentation_sha": "d6a738b631d458d32f1857d8a42e4c091ecb655c",
+  "hero": {
+    "path": "showcase/capri/hero.gif",
+    "size": 3620775,
+    "git_blob_sha": "0c33f27d2776c9038ad4b5702bc8677e2fc90d07",
+    "sha256": "e505d35ebb8eea5daa13fda24ed32db7a6a64aabda3e63835ee4cf8813f39517"
+  },
+  "protected_root_entries": [
+    {
+      "name": ".github",
+      "type": "dir",
+      "git_object_sha": "c3817f69796d39c0715f7613a563112068886db4"
+    },
+    {
+      "name": "ARCHITECTURE.md",
+      "type": "file",
+      "git_object_sha": "ed441d5822e8c1f36a3cb86e276b57b04319fd15"
+    },
+    {
+      "name": "CLIENT_SUPPORT.md",
+      "type": "file",
+      "git_object_sha": "9a70f484377706f507478b69369c7dc9a079b1d1"
+    },
+    {
+      "name": "EVALUATION.md",
+      "type": "file",
+      "git_object_sha": "a73602fc51a137710a2d09264b0ed598a48fc213"
+    },
+    {
+      "name": "IMPLEMENTATION_README.md",
+      "type": "file",
+      "git_object_sha": "0339428edcb4df703df7be844bd3105c80f0e34c"
+    },
+    {
+      "name": "NATIVE_PROFILE.md",
+      "type": "file",
+      "git_object_sha": "c7ea14240d5cf4fc84ec19596b1f1f89dbcaf58b"
+    },
+    {
+      "name": "controller",
+      "type": "dir",
+      "git_object_sha": "11dd6113e1c13918d9adb184540470dcb4d6415a"
+    },
+    {
+      "name": "evaluation",
+      "type": "dir",
+      "git_object_sha": "328e4e9205fc65c9def1c5aa414f085423f7b131"
+    },
+    {
+      "name": "examples",
+      "type": "dir",
+      "git_object_sha": "c5e1973136ef0d310a3e8a64932212e2a1186d06"
+    },
+    {
+      "name": "pyproject.toml",
+      "type": "file",
+      "git_object_sha": "6916e9b3c8478ca3b1c74d429828e44b2ca9d795"
+    },
+    {
+      "name": "requirements-media.txt",
+      "type": "file",
+      "git_object_sha": "e7cc6c178b542946a555ad07fa55b5dde3fca566"
+    },
+    {
+      "name": "requirements.lock",
+      "type": "file",
+      "git_object_sha": "15e0010ce991c401bce70ab503f038daf6d23799"
+    },
+    {
+      "name": "requirements.txt",
+      "type": "file",
+      "git_object_sha": "3fa64b801c20213e6ff7631b1738b7046bbdd673"
+    },
+    {
+      "name": "tests",
+      "type": "dir",
+      "git_object_sha": "a8f8f82ffe7726f7c71f139abb0402086d149d9f"
+    }
+  ],
+  "ci_runs": [
+    {
+      "id": 40059382675,
+      "name": "Offline tests",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "521598688be57fdc56a26ff15a4b4eddb65d6433",
+      "url": "https://github.com/Denoax/capri/actions/runs/40059382675",
+      "updated_at": "2026-10-24T03:43:02Z"
+    },
+    {
+      "id": 40059286456,
+      "name": "Offline tests",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "521598688be57fdc56a26ff15a4b4eddb65d6433",
+      "url": "https://github.com/Denoax/capri/actions/runs/40059286456",
+      "updated_at": "2026-10-24T03:41:46Z"
+    }
+  ],
+  "runtime_note": "Current source status says experimental and BLOCKED pending native launch/recovery qualification. Successful offline CI is not native qualification.",
+  "write_scope": "presentation and companion only; runtime and main integration not authorized by this handoff"
+}

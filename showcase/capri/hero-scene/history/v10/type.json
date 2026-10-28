@@ -1,0 +1,45 @@
+{
+  "wordmark_transform": "translate(45,345) scale(0.27,-0.27)",
+  "wordmark_gradient": [
+    "#ff76af",
+    "#ff1265",
+    "#a20a50"
+  ],
+  "descriptor_gradient": [
+    "#eefff6",
+    "#b1ffcf",
+    "#28fb86"
+  ],
+  "gradient_coordinates": "One userSpaceOnUse vertical gradient per entire word/line,710\u21920 font units; corresponding transformed master coordinates, no per-glyph restart",
+  "lines": [
+    {
+      "text": "AGENTIC LOOP",
+      "origin_x": 54.598,
+      "baseline": 392,
+      "size": 52,
+      "tracking": 1,
+      "ink_box": [
+        52.83,
+        355.6,
+        426.42600000000004,
+        392.0
+      ],
+      "diagonal_clearance": 175.3739999999999
+    },
+    {
+      "text": "PROMPTING",
+      "origin_x": 51.426,
+      "baseline": 440,
+      "size": 52,
+      "tracking": 1,
+      "ink_box": [
+        52.83,
+        403.6,
+        352.446,
+        440.0
+      ],
+      "diagonal_clearance": 238.55399999999997
+    }
+  ],
+  "font_unchanged": true
+}

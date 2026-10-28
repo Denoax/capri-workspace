@@ -1,0 +1,329 @@
+{
+  "base": "fd8d198f3c24483cebef9b4bff0daa10f44eabf8",
+  "handoff_sha256": "345371973a09ed0a4bf7cc2729ed0e96f5bae518e2b53146cfae0a91a001c305",
+  "method": "V8 removes rejected detached strips, integrates original-Barlow hero subtitle and lengthens/grades the separator; V7 lessons preserved. Isolated graph selection around the V3 composition/data overlay around original scenes, native factories, footage and30part rig. No new visual generation. V2 implementation excluded.",
+  "lessons": {
+    "workflow": {
+      "members": [
+        "comic"
+      ],
+      "duration_ms": 9600,
+      "fps": 25,
+      "export_scene": "comic",
+      "still_ms": 800,
+      "families": [],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "brief": {
+      "members": [
+        "sharks"
+      ],
+      "duration_ms": 4800,
+      "fps": 25,
+      "export_scene": "sharks",
+      "still_ms": 1200,
+      "families": [
+        "sharks"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "graph": {
+      "members": [],
+      "duration_ms": 1000,
+      "fps": 25,
+      "export_scene": "comic",
+      "still_ms": 0,
+      "families": [],
+      "static_only": true,
+      "family": "graph",
+      "layouts": [
+        "graph",
+        "graph-wide"
+      ],
+      "root_layout": "graph-wide",
+      "mobile_layout": "graph",
+      "static_layouts": [
+        "graph-wide"
+      ]
+    },
+    "horizon": {
+      "members": [
+        "horizon"
+      ],
+      "duration_ms": 6400,
+      "fps": 25,
+      "export_scene": "horizon",
+      "still_ms": 2600,
+      "families": [
+        "horizon"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "coordination": {
+      "members": [
+        "dots"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "export_scene": "dots",
+      "still_ms": 1000,
+      "families": [
+        "dots"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "handoff": {
+      "members": [
+        "hands"
+      ],
+      "duration_ms": 5040,
+      "fps": 50,
+      "export_scene": "hands",
+      "still_ms": 2620,
+      "families": [
+        "hands"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "checking": {
+      "members": [
+        "cat"
+      ],
+      "duration_ms": 8600,
+      "fps": 25,
+      "export_scene": "cat",
+      "still_ms": 3800,
+      "families": [
+        "cat"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "requirements": {
+      "members": [
+        "rain"
+      ],
+      "duration_ms": 500,
+      "fps": 30,
+      "export_scene": "rain",
+      "still_ms": 250,
+      "families": [
+        "rain"
+      ],
+      "layouts": [
+        "support",
+        "support-wide"
+      ],
+      "family": "illustration",
+      "root_layout": "support-wide",
+      "mobile_layout": "support",
+      "source_fps": 30,
+      "source_duration_ms": 500
+    },
+    "closing": {
+      "members": [
+        "stack"
+      ],
+      "duration_ms": 10800,
+      "fps": 30,
+      "export_scene": "stack",
+      "still_ms": 2200,
+      "families": [
+        "stack"
+      ],
+      "layouts": [
+        "support",
+        "support-wide"
+      ],
+      "family": "support",
+      "root_layout": "support-wide",
+      "mobile_layout": "support",
+      "source_fps": 30,
+      "source_duration_ms": 10800
+    }
+  },
+  "root_selection": {
+    "workflow": {
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
+    },
+    "brief": {
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
+    },
+    "graph": {
+      "layout": "graph-wide",
+      "role": "graph-wide",
+      "display_width": "100%",
+      "mobile_layout": "graph"
+    },
+    "horizon": {
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
+    },
+    "coordination": {
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
+    },
+    "handoff": {
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
+    },
+    "checking": {
+      "layout": "panel",
+      "role": "panel",
+      "display_width": "49.5%",
+      "mobile_layout": "portrait"
+    },
+    "requirements": {
+      "layout": "support-wide",
+      "role": "support-wide",
+      "display_width": "49.5%",
+      "mobile_layout": "support"
+    },
+    "closing": {
+      "layout": "support-wide",
+      "role": "support-wide",
+      "display_width": "49.5%",
+      "mobile_layout": "support"
+    }
+  },
+  "accent": {
+    "width": 1200,
+    "height": 48,
+    "period_ms": 4000,
+    "fps": 50,
+    "wake_px": 288,
+    "track_y": 24,
+    "track_width": 2,
+    "arrow_length": 24,
+    "arrow_half_height": 10,
+    "pink": "#ff1265",
+    "green": "#28fb86",
+    "poster_frame": 100,
+    "normal": "separator.gif",
+    "poster": "separator.png",
+    "method": "2x transparent GIF from supersampled geometry; fixed 128-tone red/green palette, no dithering. Smoothstep color ramp over trailing two-thirds of a finite periodic 288px wake; binary GIF alpha, no matte.",
+    "delivery_scale": 2,
+    "supersample": 4,
+    "fade_fraction": 0.6666666666666666
+  },
+  "identity": {
+    "display_name": "CAPRI \u2014 Agentic Loop Prompting",
+    "description": "Agentic Loop Prompting for Codex: focused contexts for planning, implementation and review, explicit handoffs, and evidence before integration.",
+    "placement": "One outlined subtitle within the original hero; no detached strips."
+  },
+  "format_file": "format.json",
+  "format_sha256": "718185643e816a6061e5bbb06f8d5f6b53f474b29f0f6ac153bad8d5cb7d15f3",
+  "annotation_source": {
+    "packet_sha256": "d3a9c24ad77da90b67fd75d9dca0c9aa85e5b94f7b4aabfcf1f17ba7fdf9f86b",
+    "authority": "Four original orange-marked screenshots; coordinates are cropped screenshot pixels, not CSS positions.",
+    "groups": [
+      [
+        "workflow",
+        "brief"
+      ],
+      [
+        "graph"
+      ],
+      [
+        "horizon",
+        "coordination"
+      ],
+      [
+        "requirements",
+        "closing"
+      ]
+    ],
+    "unmarked": [
+      "handoff",
+      "checking",
+      "hero",
+      "accent.svg"
+    ],
+    "screenshots": {
+      "annotations/image(20261024-144712).png": {
+        "bytes": 128210,
+        "sha256": "30f4e4cc16d53fdf771ff4ec8a3d92d3016b6853c9046f36c2083a1cae45704f"
+      },
+      "annotations/image(20261024-144733).png": {
+        "bytes": 65521,
+        "sha256": "485c17fadcff7907f8154f1732eceb334610e346514700f49949061b694ec95d"
+      },
+      "annotations/image(20261024-144758).png": {
+        "bytes": 240766,
+        "sha256": "b51edf916d13214f8ae7f8c2a1eae11902980e90197ce37b96e6068ee71015ee"
+      },
+      "annotations/image(20261024-144825).png": {
+        "bytes": 51930,
+        "sha256": "d93af0d1cb93283eb21db1ffe8c7467c39d7cf70ebfe66362c9cf1a42508d3d9"
+      }
+    }
+  },
+  "format_reference": {
+    "konata": {
+      "url": "https://github.com/Denoax/konata-hyprland-dotfiles/tree/a9f433ad9cf5b870ee18ceed72d7200f402008e8",
+      "readme_blob": "ea674c406f946b0929b225265d0bbe5b568d893a",
+      "observed": "Width100% images and paired native tables; four actual1600x900 screenshot frames.",
+      "adaptation": "Related media pairs and short native captions. V5 authored480x640 portraits at280px caps; source screenshots are not a geometry prescription."
+    },
+    "catppuccin": {
+      "url": "https://github.com/catppuccin/catppuccin/blob/d09787dd98ca6fba08af5ef2ae94a7e09f17daca/assets/footers/gray0_ctp_on_line.svg",
+      "blob": "daf8384befb6b41427b46e8266fd718d4945ff93",
+      "observation": "Small identity silhouette meets a thin line; no third-party art imported."
+    },
+    "hyprland": {
+      "url": "https://github.com/hyprwm/Hyprland",
+      "observation": "Native thematic rules and headings separate chapters."
+    }
+  },
+  "canonical_input": "showcase/capri/source-match/source/assets/data/context-budget.json",
+  "canonical_sha256": "2fb6b1e2cd3a0221a08e16948759d94ceff8e2568bf4fd8a1bd57d1e52e76784",
+  "legacy_companion": "../source-match/companion/source-match.html",
+  "rights": "Original notices, OFL/MIT and unresolved media/character/shark rights unchanged; private review only."
+}

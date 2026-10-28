@@ -1,0 +1,139 @@
+{
+  "version": 10,
+  "master": [
+    1400,
+    480
+  ],
+  "delivery": [
+    1000,
+    343
+  ],
+  "duration_ms": 4000,
+  "frames": 120,
+  "poster_ms": 2500,
+  "seed": 19091,
+  "left_polygon": [
+    [
+      0,
+      0
+    ],
+    [
+      690,
+      0
+    ],
+    [
+      582,
+      480
+    ],
+    [
+      0,
+      480
+    ]
+  ],
+  "left_width": 690,
+  "cloud": {
+    "source": "02-clouds.jpg",
+    "scaled_size": [
+      1440,
+      480
+    ],
+    "crop": [
+      360,
+      0,
+      1050,
+      480
+    ],
+    "fixed_grid": true,
+    "ink_grade": 0.32
+  },
+  "terminal": {
+    "source": "terminal-snippets.txt",
+    "layouts": "terminal-layouts.json",
+    "font": "../source-match/source/assets/fonts/MartianMono/MartianMono-Variable.ttf",
+    "source_canvas": [
+      1280,
+      720
+    ],
+    "scaled_size": [
+      853,
+      480
+    ],
+    "crop": [
+      81,
+      0,
+      771,
+      480
+    ],
+    "font_size": 12,
+    "fragments": 72
+  },
+  "right": {
+    "source": "../sources/capri-19.gif",
+    "box": [
+      550,
+      0,
+      850,
+      480
+    ],
+    "fit": "xMidYMid meet",
+    "native_samples": true
+  },
+  "wordmark": {
+    "text": "CAPRI",
+    "original_transform": "translate(45,345) scale(0.27,-0.27)",
+    "gradient": [
+      "#ff76af",
+      "#ff1265",
+      "#a20a50"
+    ],
+    "ink_edge_master_px": 5.94
+  },
+  "descriptor": {
+    "text": "AGENTIC LOOP PROMPTING",
+    "font": "../fonts/chakra-petch/ChakraPetch-SemiBoldItalic.ttf",
+    "size": 52,
+    "tracking": 1,
+    "ink_left": 52.83,
+    "lines": [
+      {
+        "text": "AGENTIC LOOP",
+        "baseline": 392
+      },
+      {
+        "text": "PROMPTING",
+        "baseline": 440
+      }
+    ],
+    "gradient": [
+      "#eefff6",
+      "#b1ffcf",
+      "#28fb86"
+    ]
+  },
+  "timeline": {
+    "blue": [
+      0,
+      1000
+    ],
+    "rupture": [
+      1000,
+      1100
+    ],
+    "red_reached_ms": 1070,
+    "red": [
+      1100,
+      3500
+    ],
+    "sheen": [
+      1600,
+      2400
+    ],
+    "recovery": [
+      3500,
+      4000
+    ]
+  },
+  "active_generated_portrait": false,
+  "rights": "Private review; existing source/anime rights qualifications unchanged. No new generated media.",
+  "palette_colors": 96
+}

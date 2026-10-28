@@ -1,0 +1,19 @@
+{
+  "fragments": [
+    {
+      "name": "capri-source-scenes",
+      "bytes": 248747,
+      "sha256": "f639c3d96eaaad8d5fc60342a805bbe50176f2964fba6afb4949983a1cff643b"
+    },
+    {
+      "name": "capri-reference-composites",
+      "bytes": 866450,
+      "sha256": "04c8d3f3562e0cf5685bdd6ce5865c7fb00cef26c7928030bc09e64137897c9c"
+    }
+  ],
+  "javascript_syntax": "checked",
+  "browser_review": "unverified",
+  "continuous_motion": "unverified",
+  "zip_created": false,
+  "repository_changed": false
+}

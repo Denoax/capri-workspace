@@ -1,0 +1,125 @@
+{
+  "scope": "Package portability and reproducible inputs only",
+  "previews": [
+    {
+      "path": "preview/INDEX.html",
+      "bytes": 1338,
+      "external_required_resources": 0
+    },
+    {
+      "path": "preview/capri-reference-composites.html",
+      "bytes": 3336340,
+      "external_required_resources": 0
+    },
+    {
+      "path": "preview/capri-source-scenes.html",
+      "bytes": 2718039,
+      "external_required_resources": 0
+    },
+    {
+      "path": "preview/handoff-comic-full-sprites.html",
+      "bytes": 2682767,
+      "external_required_resources": 0
+    }
+  ],
+  "source_factories": "identical rebuild",
+  "rig_assets": "identical rebuild",
+  "media": [
+    {
+      "file": "cat.mp4",
+      "sha256": "c0bf4d5f8615fde0ed39dab0842dfc7c1df69a4ef8729453e7771966ce05b681",
+      "bytes": 173734
+    },
+    {
+      "file": "dots.mp4",
+      "sha256": "ee003622f126ed4d3194db9591fb19d84596529ed6c50560cb06aee68e26372a",
+      "bytes": 152080
+    },
+    {
+      "file": "hands.mp4",
+      "sha256": "d3d8527e1bab12e361dcd7bbd3cfae6744cd1b5a15332e6047be71a202becb2e",
+      "bytes": 87414
+    },
+    {
+      "file": "rain.mp4",
+      "sha256": "0644a1cc48715babb1f436201c06edd6814ba9c043ea7ecdd470dfb085acf6b0",
+      "bytes": 62167
+    },
+    {
+      "file": "stack.mp4",
+      "sha256": "f91a141750c95b44cbc0128f0200317dca98ebcdc31996ebd78b25fa4d5fcd32",
+      "bytes": 72506
+    }
+  ],
+  "cat_eye_samples": 129,
+  "original_media_probe": [
+    {
+      "name": "1-23.mp4",
+      "duration": 12.433333
+    },
+    {
+      "name": "1-40.mp4",
+      "duration": 4.673333
+    },
+    {
+      "name": "2-8.mp4",
+      "duration": 5.041667
+    },
+    {
+      "name": "black-hole-mp4.mp4",
+      "duration": 48.042667
+    },
+    {
+      "name": "hero-section.mp4",
+      "duration": 8.618667
+    },
+    {
+      "name": "i-will-survive.mp4",
+      "duration": 0.5
+    },
+    {
+      "name": "shark-ascii-animation.mp4",
+      "duration": 24.525
+    }
+  ],
+  "character_alpha": [
+    {
+      "name": "build.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ]
+    },
+    {
+      "name": "plan.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ]
+    },
+    {
+      "name": "review.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ]
+    }
+  ],
+  "javascript_syntax": "PASS: native factories, rig and three approved fragments",
+  "python_parse": "PASS",
+  "browser_visual_review": "unverified",
+  "continuous_perceptual_review": "unverified",
+  "runtime_tests": "not run by this packaging task"
+}

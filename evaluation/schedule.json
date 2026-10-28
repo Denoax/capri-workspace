@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "frozen_at_utc": "2026-10-22T08:47:37.348774+00:00",
+  "origin": "TRUSTED_PARENT_PRETRIAL_PLAN_NOT_RESULTS",
+  "trials": [
+    {
+      "sequence": 1,
+      "trial_id": "A-1-baseline",
+      "fixture": "A",
+      "repeat": 1,
+      "policy": "baseline",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "limits": {
+        "seconds": 240,
+        "exposed_tools": 12
+      },
+      "source_sha256": "d39ba5c63dce3893017d469121fa79949ca06024f1827117899d6f48890a2792",
+      "boundary": "actual native compaction after read-only intake before implementation"
+    },
+    {
+      "sequence": 2,
+      "trial_id": "A-1-managed",
+      "fixture": "A",
+      "repeat": 1,
+      "policy": "managed",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "limits": {
+        "seconds": 240,
+        "exposed_tools": 12
+      },
+      "source_sha256": "d39ba5c63dce3893017d469121fa79949ca06024f1827117899d6f48890a2792",
+      "boundary": "actual native compaction after read-only intake before implementation"
+    },
+    {
+      "sequence": 3,
+      "trial_id": "B-1-managed",
+      "fixture": "B",
+      "repeat": 1,
+      "policy": "managed",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "limits": {
+        "seconds": 240,
+        "exposed_tools": 12
+      },
+      "source_sha256": "fe57bb81c818ca80f19062318e045b532f33475ab8bed7650320638a8970f029",
+      "boundary": "actual native backend/controller restart at a completed read-only turn boundary before implementation; no interrupted child-process claim"
+    },
+    {
+      "sequence": 4,
+      "trial_id": "B-1-baseline",
+      "fixture": "B",
+      "repeat": 1,
+      "policy": "baseline",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "limits": {
+        "seconds": 240,
+        "exposed_tools": 12
+      },
+      "source_sha256": "fe57bb81c818ca80f19062318e045b532f33475ab8bed7650320638a8970f029",
+      "boundary": "actual native backend/controller restart at a completed read-only turn boundary before implementation; no interrupted child-process claim"
+    },
+    {
+      "sequence": 5,
+      "trial_id": "A-2-baseline",
+      "fixture": "A",
+      "repeat": 2,
+      "policy": "baseline",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "limits": {
+        "seconds": 240,
+        "exposed_tools": 12
+      },
+      "source_sha256": "d39ba5c63dce3893017d469121fa79949ca06024f1827117899d6f48890a2792",
+      "boundary": "actual native compaction after read-only intake before implementation"
+    },
+    {
+      "sequence": 6,
+      "trial_id": "A-2-managed",
+      "fixture": "A",
+      "repeat": 2,
+      "policy": "managed",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "limits": {
+        "seconds": 240,
+        "exposed_tools": 12
+      },
+      "source_sha256": "d39ba5c63dce3893017d469121fa79949ca06024f1827117899d6f48890a2792",
+      "boundary": "actual native compaction after read-only intake before implementation"
+    },
+    {
+      "sequence": 7,
+      "trial_id": "B-2-managed",
+      "fixture": "B",
+      "repeat": 2,
+      "policy": "managed",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "limits": {
+        "seconds": 240,
+        "exposed_tools": 12
+      },
+      "source_sha256": "fe57bb81c818ca80f19062318e045b532f33475ab8bed7650320638a8970f029",
+      "boundary": "actual native backend/controller restart at a completed read-only turn boundary before implementation; no interrupted child-process claim"
+    },
+    {
+      "sequence": 8,
+      "trial_id": "B-2-baseline",
+      "fixture": "B",
+      "repeat": 2,
+      "policy": "baseline",
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "limits": {
+        "seconds": 240,
+        "exposed_tools": 12
+      },
+      "source_sha256": "fe57bb81c818ca80f19062318e045b532f33475ab8bed7650320638a8970f029",
+      "boundary": "actual native backend/controller restart at a completed read-only turn boundary before implementation; no interrupted child-process claim"
+    }
+  ],
+  "common_controls": [
+    "same installed CLI identity, model, effort and tool permissions",
+    "native safety gates and passive usage observer both conditions",
+    "one writer; exact same fixture source and human-readable requirements/correction/checks",
+    "no retries erase a failed/aborted attempt; report unavailable execution separately",
+    "synthetic scripted correction; no human-origin claim",
+    "managed adds measured admission/checkpoint/deterministic recovery; baseline keeps native compaction and gates"
+  ],
+  "denominators": {
+    "trials": 8,
+    "per_policy": 4,
+    "per_fixture_policy": 2
+  },
+  "limits": [
+    "small development evaluation; no broad quality, hallucination, threshold optimality or statistical superiority claim",
+    "fixture B tests restart at safe turn boundary and domain-event idempotence; active uncertain command reconciliation must be separately qualified"
+  ],
+  "results": "NOT_RUN"
+}

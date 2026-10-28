@@ -1,0 +1,92 @@
+{
+  "version": 12,
+  "master": [
+    1400,
+    480
+  ],
+  "delivery": [
+    1000,
+    343
+  ],
+  "duration_ms": 4000,
+  "frames": 120,
+  "poster_ms": 2500,
+  "left_polygon": [
+    [
+      0,
+      0
+    ],
+    [
+      690,
+      0
+    ],
+    [
+      582,
+      480
+    ],
+    [
+      0,
+      480
+    ]
+  ],
+  "right": {
+    "source": "../sources/capri-19.gif",
+    "box": [
+      550,
+      0,
+      850,
+      480
+    ],
+    "fit": "xMidYMid meet",
+    "native_samples": true
+  },
+  "wordmark": {
+    "text": "CAPRI",
+    "original_transform": "translate(45,345) scale(0.27,-0.27)",
+    "gradient": [
+      "#ff76af",
+      "#ff1265",
+      "#a20a50"
+    ],
+    "display_transform": "translate(45,317) scale(0.27,-0.27)",
+    "persistent_outline": false
+  },
+  "descriptor": {
+    "text": "AGENTIC LOOPING",
+    "font": "../fonts/chakra-petch/ChakraPetch-SemiBoldItalic.ttf",
+    "size": 52,
+    "tracking": 1,
+    "ink_left": 52.83,
+    "lines": [
+      {
+        "text": "AGENTIC LOOPING",
+        "baseline": 386
+      }
+    ],
+    "gradient": [
+      "#eefff6",
+      "#b1ffcf",
+      "#28fb86"
+    ],
+    "persistent_outline": false
+  },
+  "timeline": {
+    "type_rupture": [
+      1000,
+      1100
+    ],
+    "sheen": [
+      1600,
+      2400
+    ]
+  },
+  "active_generated_portrait": false,
+  "rights": "Owner-authorized public presentation; original source and font qualifications remain in docs/ASSETS.md. No new generated media.",
+  "palette_colors": 94,
+  "active_banner_label": "CAPRI \u2014 AGENTIC LOOPING",
+  "left_background": "transparent",
+  "frame": "none",
+  "join": "pre-V11 hard diagonal",
+  "gif_alpha_threshold": 128,
+  "video_matte": "#0d1117"
+}

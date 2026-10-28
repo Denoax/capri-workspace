@@ -1,0 +1,47 @@
+name: Offline tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install declared Python and isolation prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends python3 python3-venv bubblewrap libcap2-bin
+          python3 -m venv "$RUNNER_TEMP/workflow-venv"
+          "$RUNNER_TEMP/workflow-venv/bin/python" -m pip install --require-hashes -r requirements.lock
+      - name: Install scoped ephemeral bwrap policy
+        run: |
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/ci_bwrap_profile.py install --output "$RUNNER_TEMP/ci-evidence"
+      - name: Diagnose and probe unchanged collector confinement
+        run: |
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/collector_diagnostics.py --ci-kernel-logs --require-ci-profile --output "$RUNNER_TEMP/ci-evidence"
+      - name: Required supported-host suite
+        run: |
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B -m unittest discover -s controller/tests -v
+      - name: Benchmark accounting tests
+        run: |
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B -m unittest discover -s tests -v
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/benchmark_report.py evaluation/benchmark-v1/schedule.json
+      - name: Required collector repeat with explicit host-only integration mapping
+        run: |
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/run_offline_collector.py --suite runtime-unit --output "$RUNNER_TEMP/ci-evidence/runtime-suite"
+          "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/run_offline_collector.py --suite benchmark --output "$RUNNER_TEMP/ci-evidence/benchmark-suite"
+      - name: Remove only the job's scoped policy
+        if: always()
+        run: |
+          if test -f "$RUNNER_TEMP/ci-evidence/ci-apparmor-profile.json"; then
+            "$RUNNER_TEMP/workflow-venv/bin/python" -B tools/ci_bwrap_profile.py remove --output "$RUNNER_TEMP/ci-evidence"
+          fi
+      - name: Preserve namespace diagnostics even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: collector-diagnostics
+          path: ${{ runner.temp }}/ci-evidence
+          if-no-files-found: error

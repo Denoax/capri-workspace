@@ -1,0 +1,33 @@
+{
+  "source_lookup_transform": "translate(45,345) scale(0.27,-0.27)",
+  "wordmark_transform": "translate(45,317) scale(0.27,-0.27)",
+  "persistent_outline": false,
+  "wordmark_gradient": [
+    "#ff76af",
+    "#ff1265",
+    "#a20a50"
+  ],
+  "descriptor_gradient": [
+    "#eefff6",
+    "#b1ffcf",
+    "#28fb86"
+  ],
+  "gradient_coordinates": "One userSpaceOnUse vertical gradient per entire word/line,710\u21920 font units; corresponding transformed master coordinates, no per-glyph restart",
+  "lines": [
+    {
+      "text": "AGENTIC LOOPING",
+      "origin_x": 54.598,
+      "baseline": 386,
+      "size": 52,
+      "tracking": 1,
+      "ink_box": [
+        52.83,
+        349.6,
+        513.1980000000001,
+        386.0
+      ],
+      "diagonal_clearance": 89.95199999999988
+    }
+  ],
+  "font_unchanged": true
+}

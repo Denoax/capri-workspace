@@ -1,0 +1,224 @@
+{
+  "schema_version": 5,
+  "canonical_inputs": "../source-match/source/assets/data/context-budget.json",
+  "evidence_class": "ILLUSTRATIVE_INPUTS_NOT_A_CAPRI_BENCHMARK",
+  "overhead": {
+    "minimum": 0,
+    "maximum": 60000,
+    "step": 1000,
+    "samples": [
+      0,
+      15000,
+      30000,
+      45000
+    ],
+    "initial": 30000
+  },
+  "fixture": {
+    "scope": "label.py only",
+    "correction": "blank \u2192 Untitled",
+    "rules": [
+      "Trim outer whitespace",
+      "Preserve case and internal spaces",
+      "Non-strings raise TypeError"
+    ],
+    "authority": [
+      "evaluation/fixtures/A/INITIAL.md",
+      "evaluation/fixtures/A/CORRECTION.md"
+    ]
+  },
+  "lessons": {
+    "workflow": {
+      "members": [
+        "comic"
+      ],
+      "duration_ms": 9600,
+      "fps": 25,
+      "export_scene": "comic",
+      "still_ms": 800,
+      "families": [],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "brief": {
+      "members": [
+        "sharks"
+      ],
+      "duration_ms": 4800,
+      "fps": 25,
+      "export_scene": "sharks",
+      "still_ms": 1200,
+      "families": [
+        "sharks"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "graph": {
+      "members": [],
+      "duration_ms": 1000,
+      "fps": 25,
+      "export_scene": "comic",
+      "still_ms": 0,
+      "families": [],
+      "static_only": true,
+      "family": "graph",
+      "layouts": [
+        "graph",
+        "graph-wide"
+      ],
+      "root_layout": "graph-wide",
+      "mobile_layout": "graph",
+      "static_layouts": [
+        "graph-wide"
+      ]
+    },
+    "horizon": {
+      "members": [
+        "horizon"
+      ],
+      "duration_ms": 6400,
+      "fps": 25,
+      "export_scene": "horizon",
+      "still_ms": 2600,
+      "families": [
+        "horizon"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "coordination": {
+      "members": [
+        "dots"
+      ],
+      "duration_ms": 2000,
+      "fps": 25,
+      "export_scene": "dots",
+      "still_ms": 1000,
+      "families": [
+        "dots"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "handoff": {
+      "members": [
+        "hands"
+      ],
+      "duration_ms": 5040,
+      "fps": 50,
+      "export_scene": "hands",
+      "still_ms": 2620,
+      "families": [
+        "hands"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "checking": {
+      "members": [
+        "cat"
+      ],
+      "duration_ms": 8600,
+      "fps": 25,
+      "export_scene": "cat",
+      "still_ms": 3800,
+      "families": [
+        "cat"
+      ],
+      "layouts": [
+        "portrait",
+        "panel"
+      ],
+      "family": "illustration",
+      "root_layout": "panel",
+      "mobile_layout": "portrait"
+    },
+    "requirements": {
+      "members": [
+        "rain"
+      ],
+      "duration_ms": 500,
+      "fps": 30,
+      "export_scene": "rain",
+      "still_ms": 250,
+      "families": [
+        "rain"
+      ],
+      "layouts": [
+        "support",
+        "support-wide"
+      ],
+      "family": "illustration",
+      "root_layout": "support-wide",
+      "mobile_layout": "support",
+      "source_fps": 30,
+      "source_duration_ms": 500
+    },
+    "closing": {
+      "members": [
+        "stack"
+      ],
+      "duration_ms": 10800,
+      "fps": 30,
+      "export_scene": "stack",
+      "still_ms": 2200,
+      "families": [
+        "stack"
+      ],
+      "layouts": [
+        "support",
+        "support-wide"
+      ],
+      "family": "support",
+      "root_layout": "support-wide",
+      "mobile_layout": "support",
+      "source_fps": 30,
+      "source_duration_ms": 10800
+    }
+  },
+  "format": "format.json",
+  "build_exports": {
+    "handoff": [
+      "portrait",
+      "panel"
+    ],
+    "checking": [
+      "portrait",
+      "panel"
+    ],
+    "requirements": [
+      "support",
+      "support-wide"
+    ],
+    "closing": [
+      "support",
+      "support-wide"
+    ]
+  }
+}
