@@ -1,8 +1,10 @@
 import contextlib
 import fcntl
 import json
+import os
 from pathlib import Path
 import sqlite3
+import stat
 import uuid
 
 from .util import NeedsInput, Rejected, canonical, identity, now
@@ -52,7 +54,23 @@ class Store:
         self.home = Path(home)
         self.state = self.home / "state"
         self.state.mkdir(parents=True, exist_ok=True, mode=0o700)
-        self.db = sqlite3.connect(self.state / "workflow.sqlite3", timeout=15, isolation_level=None)
+        metadata = self.state.lstat()
+        if (not stat.S_ISDIR(metadata.st_mode) or metadata.st_uid != os.getuid() or
+                stat.S_IMODE(metadata.st_mode) & 0o077):
+            raise Rejected('Controller state must be an owner-only non-symlink directory')
+        database = self.state / 'workflow.sqlite3'
+        for suffix in ('', '-wal', '-shm', '-journal'):
+            path = Path(str(database) + suffix)
+            if os.path.lexists(path):
+                metadata = path.lstat()
+                if not stat.S_ISREG(metadata.st_mode) or metadata.st_uid != os.getuid():
+                    raise Rejected('Controller database/sidecar must be an owned regular file')
+        if not database.exists():
+            # SQLite sidecars inherit database permissions; avoid a shared umask
+            # change, which would race with concurrent threads in this process.
+            descriptor = os.open(database, os.O_RDWR | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
+            os.close(descriptor)
+        self.db = sqlite3.connect(database, timeout=15, isolation_level=None)
         self.db.row_factory = sqlite3.Row
         self.db.execute("PRAGMA foreign_keys=ON")
         self.db.execute("PRAGMA busy_timeout=15000")

@@ -1,6 +1,6 @@
 # Security boundaries
 
-This project has not received an independent security audit or certification.
+An independent source assessment covers the source-labelled implementation base; release coverage remains partial. No certification or blanket security clearance is claimed.
 Use an isolated candidate and private owner-only state. Keep auth, runtime,
 SQLite/WAL, sessions, capabilities, conversations and raw evidence outside Git.
 Pattern scans and .gitignore do not establish that exported history is clean.
@@ -17,5 +17,5 @@ without its saved creation identity. Uncertain effects require reconciliation,
 not automatic retry. Reconnect and server liveness do not establish completion.
 
 Report vulnerabilities privately to the project owner using an existing trusted
-channel. The owner authorized public visibility on 25 October 2026. Code licensing
-remains pending.
+channel. No public issue tracker or private-reporting endpoint is provisioned by
+this candidate. The owner authorized the public review branch; code and third-party artwork licensing remain separate release decisions.

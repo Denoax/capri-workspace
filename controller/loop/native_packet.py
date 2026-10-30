@@ -5,14 +5,74 @@ record, not an automated claim of semantic equivalence. Integrity, public tool
 delivery and behavioral success are deliberately separate observations.
 """
 import json
+import io
 from pathlib import Path
 import shlex
+import stat
+import zipfile
 
 from .util import Rejected, atomic, canonical, digest, identity, safe_path
 
 PACKET_LIMIT = 60000
 SECTION_LIMIT = 16384
 CATEGORIES = {'current', 'duplicate', 'reference', 'history'}
+
+
+def source_delivery(binding, originals):
+    """Current source has a separate namespace; history is never overwritten."""
+    selected=binding.get('source_delivery')
+    if selected is None:return None  # Preserve already frozen legacy packets.
+    if not isinstance(selected,dict) or set(selected)!={'manifest','archive'}:
+        raise Rejected('Exact current-source delivery paths required')
+    archives=selected['archive']
+    if isinstance(archives,str):archives=[archives]
+    if not isinstance(archives,list) or not 0<len(archives)<=8 or any(not isinstance(n,str) for n in archives) or len(set(archives))!=len(archives):
+        raise Rejected('One archive or an ordered set of bounded archive parts required')
+    for name in [selected['manifest'],*archives]:
+        if not isinstance(name,str):raise Rejected('Current source path must be text')
+        safe_path('/inputs',name)
+        if not name.startswith('current-source/') or name not in originals or originals[name]['category']!='reference':
+            raise Rejected('Current source must use bound reference originals in its own namespace')
+    return selected
+
+
+def verify_source_bytes(manifest_raw, archive_raw, expected):
+    """Pure exact inventory/content/mode validation, shared by parent and role."""
+    if len(manifest_raw)>1_000_000 or len(archive_raw)>32_000_000:
+        raise Rejected('Source bundle exceeds bounded evidence allowance')
+    manifest=json.loads(manifest_raw);files=manifest['files']
+    if not isinstance(files,dict) or not 0<len(files)<=1000 or manifest['source']!=expected or identity(files)!=expected:
+        raise Rejected('Current source inventory identity differs')
+    for name,row in files.items():
+        safe_path('/source',name)
+        if not isinstance(row,dict) or set(row)!={'sha256','mode'} or type(row['mode']) is not int or not 0<=row['mode']<=0o777:
+            raise Rejected('Invalid current source inventory entry')
+    try:
+        with zipfile.ZipFile(io.BytesIO(archive_raw)) as archive:
+            infos=archive.infolist()
+            if len(infos)!=len(files) or set(archive.namelist())!=set(files) or sum(r.file_size for r in infos)>64_000_000:
+                raise Rejected('Current source archive inventory/size differs')
+            for name,row in files.items():
+                info=archive.getinfo(name)
+                if digest(archive.read(name))!=row['sha256'] or (info.external_attr>>16)&0o777!=row['mode'] or stat.S_IFMT(info.external_attr>>16)!=stat.S_IFREG:
+                    raise Rejected('Current source archive content/mode differs')
+    except (zipfile.BadZipFile, ValueError) as ex:
+        raise Rejected('Invalid current source archive') from ex
+    return dict(verified_source=expected,files=len(files))
+
+
+def verify_source_bundle(manifest_path, archive_path, expected):
+    paths=archive_path if isinstance(archive_path,list) else [archive_path]
+    if not 0<len(paths)<=8 or any(Path(p).stat().st_size>8_000_000 for p in paths) or sum(Path(p).stat().st_size for p in paths)>32_000_000:
+        raise Rejected('Source archive parts exceed native input bounds')
+    return verify_source_bytes(Path(manifest_path).read_bytes(),b''.join(Path(p).read_bytes() for p in paths),expected)
+
+
+def verify_source_materials(material, index):
+    selected=source_delivery(index['binding'],index['originals'])
+    if selected is None:raise Rejected('Explicit current source delivery required')
+    paths=selected['archive'] if isinstance(selected['archive'],list) else [selected['archive']]
+    return verify_source_bytes(material[selected['manifest']],b''.join(material[p] for p in paths),index['binding']['controller_source_hash'])
 
 
 def check_complete_packet(packet):
@@ -62,14 +122,17 @@ def prepare(folder, *, originals, classifications, requirements, proposal,
             current_request, answers, binding, section_limit=SECTION_LIMIT):
     if not 1024 <= section_limit <= SECTION_LIMIT:
         raise Rejected('Unqualified section size')
-    if [r.get('id') for r in requirements] != ['N01','N02','N03','N04','N05','N06','N07','N08']:
-        raise Rejected('Complete ordered N01-N08 requirements required')
+    ids = [r.get('id') for r in requirements]
+    required_ids = ['N01','N02','N03','N04','N05','N06','N07','N08']
+    if ids not in (required_ids, required_ids+['SCOPE']):
+        raise Rejected('Complete ordered N01-N08 and optional explicit SCOPE required')
     if proposal.get('requirements') != requirements:
         raise Rejected('Proposal requirements differ from exact authoritative values')
     if answers != current_request.get('human_answers', []):
         raise Rejected('Current bound human answers differ')
     if set(originals) != set(classifications):
         raise Rejected('Every original needs an explicit classification')
+    source_delivery(binding,classifications)
     active=binding.get('active_originals')
     if not isinstance(active,list) or not active or not set(active)<=set(originals):
         raise Rejected('Exact current instruction originals must be declared')
@@ -149,6 +212,10 @@ def load(folder):
     if not {'current_request','answers','task_view',*('requirements.N0'+str(i) for i in range(1,9))}<=set(seen):
         raise Rejected('Incomplete current-context units')
     requirements=[values['requirements.N0'+str(i)] for i in range(1,9)]
+    if 'requirements.SCOPE' in values:
+        requirements.append(values['requirements.SCOPE'])
+    if {name for name in values if name.startswith('requirements.')} != {'requirements.'+r['id'] for r in requirements}:
+        raise Rejected('Unexpected current-context requirement')
     if (identity(requirements)!=index['requirements_hash'] or identity(values['answers'])!=index['answers_hash']
             or values['answers']!=values['current_request'].get('human_answers',[])
             or values['task_view']['requirements_reference']['value_sha256']!=index['requirements_hash']):
@@ -158,6 +225,7 @@ def load(folder):
         text=values.get('original.'+name)
         if record['category']!='current' or not isinstance(text,str) or digest(text.encode())!=record['sha256']:
             raise Rejected('Current authoritative instruction unit missing or altered')
+    source_delivery(index['binding'],index['originals'])
     return index
 
 
@@ -177,6 +245,19 @@ def read_guide(index):
 
 def work_guide(index):
     expected=index['binding']['controller_source_hash']
+    selected=source_delivery(index['binding'],index['originals']) if index['binding'].get('source_delivery') else None
+    if selected:
+        archives=selected['archive']
+        archive_paths=['/inputs/'+p for p in archives] if isinstance(archives,list) else '/inputs/'+archives
+        script=("import sys,json;sys.path.insert(0,'/controller');from loop.native_packet import verify_source_bundle; "
+            "print(json.dumps(verify_source_bundle("+repr('/inputs/'+selected['manifest'])+","+
+            repr(archive_paths)+","+repr(expected)+")))")
+        return ('Verify the exact CURRENT source bundle; retained authority/source.zip and its manifest are historical data. '
+            'Then use up to three hosted research calls (search, original-page open and relevant inspection), '
+            'and one full ordinary submission. Preserve two contingency calls within the shared stage. '
+            'Source-integrity command:\n'+shlex.join(['python3','-c',script])+
+            '\nIf current originals cannot support the fact, return {"outcome":"INSUFFICIENT_SOURCE","detail":"specific gap"}. '
+            'For a budget gap return {"outcome":"BUDGET_INFEASIBLE","detail":"specific gap"}. No hold grants dispatch authority.')
     script=("import pathlib,json,zipfile,hashlib; m=json.loads(pathlib.Path('/inputs/authority/SOURCE_MANIFEST.json').read_text()); "
         "assert m['source']=="+repr(expected)+"; z=zipfile.ZipFile('/inputs/authority/source.zip'); "
         "assert hashlib.sha256(json.dumps(m['files'],sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()==m['source']; "

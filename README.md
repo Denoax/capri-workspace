@@ -8,7 +8,7 @@ CAPRI is an experimental Agentic Loop Prompting workflow for Codex. Planning, im
 
 On complex coding work, the goal is less input spent replaying discarded exploration and clearer checking of each decision. The reviewer returns to the original request and checks the candidate and its evidence. One worker owns edits. **You decide what ships.**
 
-**Experimental.** Offline checks cover implementation contracts; native launch/recovery qualification remains pending. [Setup](#quickstart) · [Architecture](ARCHITECTURE.md) · [Current status](docs/STATUS.md) · [Evaluation](EVALUATION.md).
+**Experimental.** The base runtime completed native lifecycle/recovery and eight mechanism smoke rows. Final curated-source security, clean-install, CI, licensing and formal review gates remain pending. [Setup](#quickstart) · [Architecture](ARCHITECTURE.md) · [Current status](docs/STATUS.md) · [Evaluation](EVALUATION.md).
 
 <a id="the-loop"></a>
 
@@ -119,8 +119,8 @@ Keep original requirements and evidence accessible; full source interactions rem
 Start with offline inspection from your checkout. Linux x86_64, Python 3.11+ with pip/venv, bubblewrap and working user, mount, PID and network namespaces are required.
 
 ```sh
-python3 -m venv .venv
-. .venv/bin/activate
+python3 -m venv ../capri-venv
+. ../capri-venv/bin/activate
 python -m pip install --require-hashes -r requirements.lock
 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s controller/tests -v
 ```
@@ -147,7 +147,7 @@ GitHub displays media and native links/disclosures. The local companion supplies
 
 [Architecture](ARCHITECTURE.md) · [Implementation guide](IMPLEMENTATION_README.md) · [Benchmark protocol](docs/BENCHMARK_PROTOCOL.md) · [Status](docs/STATUS.md) · [Presentation build](docs/VISUAL_STORY.md) · [Contributing](CONTRIBUTING.md)
 
-**Mani Marami Milani.** Unofficial Capri-inspired fan project; unaffiliated with CD PROJEKT RED, TRIGGER or Netflix. Original credits and MIT/OFL notices remain. Native sharks/horizon use supplied source implementations; the five other effects are credited footage composites. Character acting is a fan-art reconstruction. Underlying character/media rights remain as recorded; keep private.
+**Mani Marami Milani.** Unofficial Capri-inspired fan project; unaffiliated with CD PROJEKT RED, TRIGGER or Netflix. Original credits and MIT/OFL notices remain. Native sharks/horizon use supplied source implementations; the five other effects are credited footage composites. Character acting is a fan-art reconstruction. [MIT license for original code; third-party exclusions](LICENSING.md). Underlying character/media rights remain as recorded; the public repository update does not resolve those rights or authorize a release.
 
 ## Workspace backup and recovery
 

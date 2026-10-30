@@ -14,7 +14,12 @@ from loop.util import identity, tree, digest, Rejected
 
 
 def fixture(self):
-    self.controller=Path(__file__).resolve().parents[1]
+    # This is a synthetic product, not the operator's entire checkout. Keep its
+    # exact controller bytes without inheriting local venv symlinks, presentation
+    # exports or unrelated files from the checkout's parent source inventory.
+    self.controller=self.root/'current-source/controller'
+    shutil.copytree(Path(__file__).resolve().parents[1],self.controller,
+                    ignore=shutil.ignore_patterns('__pycache__'))
     old=self.root/'old-source';(old/'controller').mkdir(parents=True)
     (old/'controller/old.py').write_text('historical controller')
     self.workspace=self.root/'candidate';shutil.copytree(old,self.workspace)
@@ -24,8 +29,11 @@ def fixture(self):
     self.store.transition(self.tid,'DOER_RUNNING','CANDIDATE_SEALED',seal=json.dumps(dict(source_hash=identity(tree(old)),files=tree(old))))
     t=self.store.task(self.tid)
     root=self.root/'runtime';root.mkdir()
-    self.config=dict(home=str(self.root),controller=str(old/'controller'),settings=dict(binary='/bin/false',auth_file=str(self.root/'absent-auth'),state_dir=str(root)))
+    self.config=dict(home=str(self.root),controller=str(old/'controller'),settings=dict(binary='/bin/false',binary_sha256=digest(Path('/bin/false').read_bytes()),auth_file=str(self.root/'absent-auth'),state_dir=str(root)))
+    self.config['workflow']=dict(notes=str(self.root/'notes'),authorized_repositories=[],production_automation='DISABLED')
+    core=self.root/'core-receipt.json';core.write_text(json.dumps(dict(prepared=dict(lineage=dict(human_answers=[])))))
     binding=dict(owner=t['owner'],home=str(self.root),source_hash=identity(tree(old)),controller=str(old/'controller'),controller_hash=identity(tree(old/'controller')),config_hash=identity(self.config))
+    binding['predecessor_receipt']=dict(path=str(core),sha256=digest(core.read_bytes()))
     operation='synthetic-startup'
     request_binding=dict(task=self.tid,version=t['version'],owner=t['owner'],packet_hash=t['content_hash'],source_hash=identity(tree(old)),controller_hash=identity(tree(old/'controller')),supervisor_pid=900010,supervisor_identity='supervisor-start',role='doer',thread='synthetic-thread',role_generation=107)
     request=dict(action='compact-role',binding=request_binding);key=identity(request)

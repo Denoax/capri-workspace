@@ -1,4 +1,5 @@
 import json
+import hashlib
 from pathlib import Path
 import subprocess
 import re
@@ -10,7 +11,7 @@ def git(repo, *args):
     r = subprocess.run(["git", "-c", "core.hooksPath=/dev/null", "-C", str(repo), *args], capture_output=True, text=True, timeout=30)
     if r.returncode:
         raise Rejected("Git operation failed: " + r.stderr)
-    return r.stdout.strip()
+    return r.stdout if '-z' in args else r.stdout.strip()
 
 
 def source(repo):
@@ -20,6 +21,27 @@ def source(repo):
     if (repo / ".gitmodules").exists() or (repo / ".gitattributes").exists():
         raise Rejected("Submodule/LFS/attribute qualification required before this repository")
     files = tree(repo)
+    committed = {}
+    for record in git(repo, 'ls-tree', '-r', '-z', '--full-tree', 'HEAD').split('\0'):
+        if not record:
+            continue
+        header, name = record.split('\t', 1)
+        mode, kind, object_id = header.split()
+        if kind != 'blob' or mode not in ('100644', '100755'):
+            raise Rejected('Non-regular Git source needs explicit qualification')
+        committed[name] = object_id
+    tracked = set(committed)
+    extra, missing = set(files) - tracked, tracked - set(files)
+    if extra or missing:
+        raise Rejected('Original source differs from committed file inventory; preserve and qualify private/ignored extras before intake')
+    algorithm = git(repo, 'rev-parse', '--show-object-format')
+    if algorithm not in ('sha1', 'sha256'):
+        raise Rejected('Unsupported Git object identity')
+    for name, record in files.items():
+        data = (repo / name).read_bytes()
+        object_id = hashlib.new(algorithm, b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+        if object_id != committed[name] or digest(data) != record['sha256']:
+            raise Rejected('Original source bytes differ from the committed inventory')
     for name in files:
         if ".codex" in Path(name).parts or Path(name).name in (".env", ".env.local", ".npmrc", ".git-credentials"):
             raise Rejected("Source contains executable configuration or private inputs needing explicit qualification: " + name)

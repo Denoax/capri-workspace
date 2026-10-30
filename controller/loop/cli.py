@@ -102,14 +102,23 @@ def _terminal_question_answers(store, owner, tty):
 
 
 def snapshot(home, repo, owner, config=None):
-    import shutil
+    frozen = source(repo)
     workspace = home / "workspace/thinker" / owner
-    shutil.copytree(repo, workspace, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+    workspace.mkdir(parents=True)
+    for name, record in frozen['files'].items():
+        data = safe_path(repo, name).read_bytes()
+        if digest(data) != record['sha256']:
+            raise Rejected('Original source changed while creating the role snapshot')
+        target = safe_path(workspace, name)
+        atomic(target, data)
+        target.chmod(record['mode'])
+    if source(repo) != frozen:
+        raise Rejected('Original source changed before role snapshot admission')
     subprocess.run(["git", "init", "-q", str(workspace)], check=True)
     inputs = home / "inputs/thinker" / owner
     inputs.mkdir(parents=True)
     atomic(inputs / "REFERENCE_LED_DESIGN.md", policy_path(config if config is not None else load(home)).read_bytes())
-    write_json(inputs / "source.json", source(repo))
+    write_json(inputs / "source.json", frozen)
     return workspace, inputs
 
 
