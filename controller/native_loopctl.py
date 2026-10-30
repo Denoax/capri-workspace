@@ -20,7 +20,7 @@ from loop.util import Rejected, atomic, redact, now, tree, identity
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', required=True, type=Path)
-    parser.add_argument('command', choices=('start', 'status', 'attach', 'stop', 'recontract', 'continue', 'prepare-maintenance', 'recover-startup', 'finish-review', 'maintenance', 'resume-runtime', 'fence-owner-intake', 'inspect-stopped-maintenance', 'fence-stopped-maintenance', 'prepare-stopped-qualification'))
+    parser.add_argument('command', choices=('inspect-read-recovery', 'prepare-read-recovery', 'publish-read-recovery', 'start', 'status', 'attach', 'stop', 'recontract', 'continue', 'prepare-maintenance', 'recover-startup', 'finish-review', 'maintenance', 'resume-runtime', 'fence-owner-intake', 'inspect-stopped-maintenance', 'fence-stopped-maintenance', 'prepare-stopped-qualification', 'launch-stopped-qualification', 'inspect-startup-repair', 'prepare-startup-repair', 'launch-startup-repair', 'inspect-owner-material', 'prepare-owner-material', 'launch-owner-material'))
     parser.add_argument('--role', choices=ROLES)
     parser.add_argument('--action',choices=('compact-role','replace-role','checkpoint-runtime','reconcile-maintenance'))
     parser.add_argument('--prepared', type=Path)
@@ -32,9 +32,22 @@ def main():
     parser.add_argument('--new-runtime', type=Path, help='Unused disposable runtime for a proposed source condition')
     args = parser.parse_args()
     config = json.loads(args.config.read_text())
+    if args.command in ('inspect-read-recovery','prepare-read-recovery','publish-read-recovery'):
+        if not args.binding: raise Rejected('Exact completed-read recovery binding required')
+        from loop.native_read_recovery import run_cli
+        return run_cli(config, args, Path(__file__).resolve().parent)
+    if args.command in ('inspect-owner-material','prepare-owner-material','launch-owner-material'):
+        from loop.native_owner_material import run_cli
+        return run_cli(config,args,Path(__file__).resolve().parent)
+    if args.command in ('inspect-startup-repair','prepare-startup-repair','launch-startup-repair'):
+        from loop.native_startup_repair import run_cli
+        return run_cli(config,args,Path(__file__).resolve().parent)
     if args.command in ('inspect-stopped-maintenance', 'fence-stopped-maintenance', 'prepare-stopped-qualification'):
         from loop.native_stopped import run_cli
         return run_cli(config, args, Path(__file__).resolve().parent)
+    if args.command == 'launch-stopped-qualification':
+        from loop.native_qualification import run_cli
+        return run_cli(config,args,Path(__file__).resolve().parent)
     settings = Settings(**config['settings'])
     root = Path(settings.state_dir).resolve()
     registry = root / 'registry.json'

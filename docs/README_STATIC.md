@@ -120,8 +120,8 @@ Keep original requirements and evidence accessible; full source interactions rem
 Start with offline inspection from your checkout. Linux x86_64, Python 3.11+ with pip/venv, bubblewrap and working user, mount, PID and network namespaces are required.
 
 ```sh
-python3 -m venv .venv
-. .venv/bin/activate
+python3 -m venv ../capri-venv
+. ../capri-venv/bin/activate
 python -m pip install --require-hashes -r requirements.lock
 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s controller/tests -v
 ```

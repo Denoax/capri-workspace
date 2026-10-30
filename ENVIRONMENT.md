@@ -1,3 +1,5 @@
+> Historical detail below retains its original source/cutoff. For the30 October 2026 candidate, repository identity, qualification results and open gates, use [current status](docs/STATUS.md). Earlier counts and pending labels do not supersede that source-bound record.
+
 # Environment and host qualification
 
 The preserved October 21 exec setup and its private `runtime.lock.json` are

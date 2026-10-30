@@ -1,14 +1,16 @@
 # Start with the existing project
 
-Use `main` in the private [Denoax/capri](https://github.com/Denoax/capri) repository, ID 1429595311. It combines the current committed stabilization source and V3 presentation on the original implementation history. The previous public snapshot is preserved as [capri-presentation-v1-retired](https://github.com/Denoax/capri-presentation-v1-retired); see the [consolidation record](CONSOLIDATION.md).
+Use the reviewed commit in [Denoax/capri-workspace](https://github.com/Denoax/capri-workspace), repository ID1434122449. This is the native three-role workflow. `Denoax/capri` is a separate desktop companion. Do not replace its source or use it as an installation target.
+
+The repository is public. A review branch and successful CI are evidence for that commit; they do not accept a candidate, merge it, authorize a release, or resolve third-party artwork rights. Historical consolidation notes describe their own cutoff.
 
 ## Offline inspection
 
 Use Linux x86_64, Python 3.11+ with pip/venv, Git, bubblewrap and working user/mount/PID/network namespaces. From the project root:
 
 ```sh
-python3 -m venv .venv
-. .venv/bin/activate
+python3 -m venv ../capri-venv
+. ../capri-venv/bin/activate
 python -m pip install --require-hashes -r requirements.lock
 python3 -B tools/collector_diagnostics.py --output /absolute/private/checks
 PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s controller/tests -v

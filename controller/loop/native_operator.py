@@ -13,6 +13,17 @@ from .native_startup import checked_file
 from .util import Rejected,atomic,digest,identity,safe_path,tree
 
 
+def unresolved_maintenance(rows):
+    """Only a controller-recorded completed replacement resolves its prior hold.
+
+    A fence alone, an unrelated recovery, or an old unkeyed uncertainty still
+    holds. This predicate is shared by live operations and stopped restart.
+    """
+    done={r['details'].get('prior_key') for r in rows if r['milestone']=='MAINTENANCE_RECOVERED'}
+    return [r for r in rows if r['milestone']=='MAINTENANCE_UNCERTAIN' and
+            (not r['details'].get('key') or r['details']['key'] not in done)]
+
+
 class NativeOperator:
     def __init__(self,engine,adapter,binding,controller,journal):
         self.engine,self.adapter,self.binding,self.controller,self.journal=engine,adapter,binding,Path(controller),journal
@@ -100,8 +111,7 @@ class NativeOperator:
             raise
 
     def unresolved(self):
-        rows=self.journal.records();done={r['details']['prior_key'] for r in rows if r['milestone']=='MAINTENANCE_RECOVERED'}
-        return [r for r in rows if r['milestone']=='MAINTENANCE_UNCERTAIN' and r['details']['key'] not in done]
+        return unresolved_maintenance(self.journal.records())
 
     def reconcile(self,b,task,backend):
         rows=self.journal.records();key=b['uncertain_key']
@@ -154,6 +164,10 @@ class NativeOperator:
                 self.journal.append('RUNTIME_CHECKPOINTED',result);self.stop_requested=True
             else:
                 if not reconciled and (state.restart or state.rehydrating or state.decision()['reason'] in ('UNKNOWN','STALE_OR_WRONG_IDENTITY')):
+                    # A stale observation is a read-only recovery hold, not an
+                    # ordinary dispatch. Keep the probe's existing safety gate.
+                    state.rehydrating=True
+                    state.persist()
                     self.adapter.probe(task['id'],role,checkpoint);self.adapter.rehydrate(task['id'],role,checkpoint)
                 if action=='replace-role':
                     replaced=self.adapter.replace_fenced_readonly(task['id'],role,checkpoint,reconciled) if reconciled else self.adapter.replace_role(task['id'],role,checkpoint)

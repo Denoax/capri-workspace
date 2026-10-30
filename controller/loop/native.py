@@ -1423,11 +1423,19 @@ class NativeAdapter:
         if state.compaction or state.restart or not state.reading:
             raise Rejected('Complete compaction reconciliation and fresh recovery probe first')
         payload,expected,originals=rehydration_payload(t,b,authority,seal)
-        operation_key = identity(dict(checkpoint=seal, role=role, thread=b.thread, generation=b.generation))
-        operation_path = Path(self.settings.state_dir)/role/('rehydration-'+operation_key+'.intent')
+        legacy_key = identity(dict(checkpoint=seal, role=role, thread=b.thread, generation=b.generation))
+        operation_root = Path(self.settings.state_dir)/role
+        if (operation_root/('rehydration-'+legacy_key+'.intent')).exists():
+            raise Rejected('Legacy rehydration intent requires explicit reconciliation')
+        # A completed compaction creates a new epoch, while another probe does
+        # not. Keep one-shot recovery within an epoch without colliding with the
+        # successful preparatory reread on the same checkpoint and backend.
+        operation_key = identity(dict(checkpoint=seal, role=role, thread=b.thread,
+                                      generation=b.generation, epoch=state.identity.epoch))
+        operation_path = operation_root/('rehydration-'+operation_key+'.intent')
         if operation_path.exists():
             raise Rejected('Rehydration already attempted; reconcile retained operation before retry')
-        atomic(operation_path,json.dumps(dict(checkpoint=seal,thread=b.thread,generation=b.generation)),exclusive=True)
+        atomic(operation_path,json.dumps(dict(checkpoint=seal,thread=b.thread,generation=b.generation,epoch=state.identity.epoch)),exclusive=True)
         capture = self.store.home/'artifacts'/task/'rehydration'/str(__import__('uuid').uuid4())
         capture.mkdir(mode=0o700, parents=True)
         binding = Binding(role,b.thread,b.generation,t['content_hash'],expected['source_hash'],t['revision'],'rehydration',b.phase)
@@ -1965,7 +1973,33 @@ class NativeTerminals:
         if not server or not server.get('process_identity') or process_identity(server['pid'])!=server['process_identity']:
             raise Rejected('Terminal cleanup requires exact owned server identity')
         self.owned_panes()
+        before=None
+        if os.path.lexists(self.socket):
+            st=self.socket.lstat();before=dict(device=st.st_dev,inode=st.st_ino,uid=st.st_uid,ctime_ns=st.st_ctime_ns)
+            original=server.get('socket_identity',{})
+            if (not stat.S_ISSOCK(st.st_mode) or st.st_uid!=os.getuid() or
+                    any(before[k]!=original.get(k) for k in ('device','inode','uid'))):
+                raise Rejected('Owned terminal socket inode changed before close')
         self.tmux('kill-session','-t','roles')
+        if before is not None:
+            # tmux may update socket mode/ctime as clients attach or detach.
+            # Observe the same inode after the verified owner's session exits;
+            # never rewrite an already closed historical ownership record.
+            deadline=time.monotonic()+2
+            while any(str(self.socket)==line.split()[-1] for line in Path('/proc/net/unix').read_text().splitlines()[1:] if len(line.split())>=8):
+                if time.monotonic()>=deadline:raise Rejected('Terminal listener remains after owned session close')
+                time.sleep(.01)
+            if process_identity(server['pid']) not in (None,server['process_identity']):raise Rejected('Terminal owner PID reused during close')
+            if os.path.lexists(self.socket):
+                st=self.socket.lstat();after=dict(device=st.st_dev,inode=st.st_ino,uid=st.st_uid,ctime_ns=st.st_ctime_ns)
+                if not stat.S_ISSOCK(st.st_mode) or any(after[k]!=before[k] for k in ('device','inode','uid')):
+                    raise Rejected('Terminal socket inode changed during close')
+                server.setdefault('socket_creation_identity',server['socket_identity'])
+                server['socket_identity']=after
+                server['socket_close_observation']=dict(before=before,after=after,classification='VERIFIED_OWNER_SESSION_CLOSED_NO_LISTENER')
+            else:
+                server['socket_close_observation']=dict(before=before,classification='VERIFIED_OWNER_SESSION_CLOSED_ENDPOINT_ABSENT')
+            self.persist()
         self.path.rename(self.path.with_name('terminal-registry-closed-'+str(__import__('uuid').uuid4())+'.json'))
         self.records={}
 

@@ -31,7 +31,7 @@ def remove_loader_alias(plan):
 def runner_guard(environment, os_release, restricted):
     if (environment.get('GITHUB_ACTIONS') != 'true'
             or environment.get('RUNNER_ENVIRONMENT') != 'github-hosted'
-            or environment.get('GITHUB_REPOSITORY') != 'Denoax/capri'
+            or environment.get('GITHUB_REPOSITORY') != 'Denoax/capri-workspace'
             or not environment.get('GITHUB_RUN_ID')
             or 'ID=ubuntu' not in os_release.splitlines()
             or 'VERSION_ID="24.04"' not in os_release.splitlines()

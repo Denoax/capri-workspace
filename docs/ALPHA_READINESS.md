@@ -1,18 +1,16 @@
-# Path to a usable alpha
+# Alpha review gates
 
-CAPRI is an experimental three-role native Codex controller. Updating `main` publishes the source revision inside the repository; it does not accept the preserved candidate, start the stopped runtime or qualify a release.
+The current engineering scope ends at a source-bound human decision. The repository remains experimental.
 
-| Gate | Current evidence | Remaining work |
+| Gate | Evidence at this preparation cutoff | Remaining boundary |
 | --- | --- | --- |
-| Deterministic controller correctness | V3 records 343 host and 343 isolated-collector tests on its supported local host. Ubuntu CI runs all 343 on host and repeats 339 under the unchanged collector; four sandbox-launch integration cases are explicitly host-only. | Keep every required test and isolation check green on the exact shipped commit; do not equate the Ubuntu repeat with a full 343 collector run. |
-| Stopped compaction accounting | Pure inspection, typed fence/preparation support and synthetic atomicity/identity tests exist. Actual fence has not executed. | Use the supported source-bound route on the user's installation after integration is concrete. |
-| Fresh native launch | V3 intentionally has no launch handler for the new prepared condition. | Connect the checked preparation to existing startup admission without old-intent replay or weaker guards. |
-| Context and recovery | Prior run produced a task and sealed source; compaction started but lacked its completion lifecycle before timeout. | Actual completion, reread, replacement, controller restart and negative controls on the final profile. |
-| Measured value | A versioned benchmark protocol and receipt analyzer exist. | Native comparison, full usage coverage and representative task outcomes. Savings and superiority remain unknown. |
-| First-run usability | Offline setup is documented; qualified native CLI is pinned to 0.163.0. | Test a clean supported Linux setup with an owned disposable repository and make one supported start/check/status/stop route clear. |
-| Final review | The sole fresh qualification Reviewer and same-Thinker report remain unused. | Run them on the final frozen candidate/evidence after qualification and evaluation. |
-| Release packaging | Repository remains private; code and character-art licensing are unresolved. | Choose an explicit code license and resolve redistribution of shipped assets before a public release. |
+| Runtime correctness | Base-source466 host/full-collector and18 accounting checks passed; topology462 repeat is separate | Exact curated commit CI and install checks |
+| Native lifecycle | Bound compaction, reread, checkpoint/stop, actual controller restart and safe shutdown completed on the base | Preserve source/closure mapping and live isolation limitations |
+| Original smoke study | Eight executed and graded rows,64/64 held-out assertions; failures and gaps retained | No broad performance or cost claim |
+| Security | Managed base-source scan sealed; reported optional Pillow dependency independently verified fixed | Final export/artifact and untested presentation surfaces |
+| Clean Linux setup | Fresh signed Arch VM;466 host/full-collector runtime and18 accounting checks passed | Native first-use/start/status/task/stop/rollback and final changed-artifact verification |
+| Distribution and CI | Correct public workflow repository authorized; action SHAs pinned and token read-only | Privacy scan and exact commit-bound CI |
+| Licensing | Original owned code under MIT; font/third-party notices preserved | Public release pending artwork rights by owner decision |
+| Formal review | Actual root candidate remains sealed | Fresh native Reviewer and same Thinker after prerequisites; AWAITING_HUMAN, no automatic acceptance |
 
-For the first alpha, retain exactly three visible native sessions, the same requested model, one writer and the explicit human acceptance boundary. Keep optional model routing, broader client support and production automation on the roadmap. Do not restore a legacy background-exec route to bypass native qualification.
-
-The next implementation priority is the fresh disposable native launch route, followed by useful measurement. Avoid adding additional recovery wrappers without a demonstrated case, or optimizing byte counts while original requirements become unavailable. A smaller packet is useful only if behavior and trace-backed coverage remain sound.
+Manual launch only. No production autostart, desktop companion changes, new model/provider route or automatic successor work is authorized. A passed test, posted branch, CI result or restored terminal does not open the human gate.

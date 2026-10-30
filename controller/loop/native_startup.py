@@ -442,15 +442,34 @@ def run_recovery(config,args,controller):
     if plan.get('status')=='HELD_RECONCILIATION_REQUIRED' or args.check:
         print(json.dumps(dict(status=plan.get('status','NATIVE_MAINTENANCE_LAUNCH_CHECKED'),plan=plan,model_dispatch='NOT_STARTED')),flush=True)
         return
-    binding=receipt['binding'];store=Store(Path(config['home']));adapter=intake=terminals=operator=None
+    binding=receipt['binding']
+    material,request=startup_materials(config,binding,receipt,args.prepared,args.prepared_sha256)
+    def admit():
+        _, current=inspect_prepared(config,args.prepared,args.prepared_sha256,controller)
+        if current.get('status')=='HELD_RECONCILIATION_REQUIRED':
+            raise Rejected('Derived launch intent already consumed')
+    return run_session(config,args,controller,receipt,plan,binding,material,request,admit)
+
+
+def run_session(config,args,controller,receipt,plan,binding,material,request,admit):
+    """Shared native session effects, called only after route-specific admission.
+
+    This is the existing maintenance session, not another scheduler. A fresh
+    qualification route commits its old-home admission before entering here.
+    """
+    import signal
+    import threading
+    import time
+    from .engine import Engine,COMMON
+    from .native import NativeAdapter,NativeIntake,NativeTerminals,capture_complete
+    from .settings import Settings
+    from .cli import PROPOSAL_GUIDE
+    store=Store(Path(config['home']));adapter=intake=terminals=operator=None
     journal=StartupJournal(store,binding['operation'],binding)
     stopped=threading.Event();task_id=None
     try:
         with store.lock('native-startup'):
-            receipt,plan=inspect_prepared(config,args.prepared,args.prepared_sha256,controller)
-            if plan.get('status')=='HELD_RECONCILIATION_REQUIRED':
-                raise Rejected('Derived launch intent already consumed')
-            material,request=startup_materials(config,binding,receipt,args.prepared,args.prepared_sha256)
+            admit()
             journal.append('LAUNCH_INTENT',dict(old_core_claim='PRESERVED_CONSUMED',source=binding['source_hash']))
             repo=Path(plan['original_repo']);workspace=Path(binding['workspace']);inputs=Path(binding['inputs'])
             import shutil
@@ -469,7 +488,8 @@ def run_recovery(config,args,controller):
                     generation=rows[role]['generation']+1,phase='read',
                     **(dict(mcp=token,intake_socket=intake.path) if role=='thinker' else {}))
             adapter.register_thinker(binding['owner'],token,held=True)
-            adapter.prepared_owner=binding['owner'];adapter.prepared_hash=binding['predecessor_receipt']['sha256']
+            if binding.get('predecessor_receipt') and not binding.get('fresh_qualification'):
+                adapter.prepared_owner=binding['owner'];adapter.prepared_hash=binding['predecessor_receipt']['sha256']
             adapter.owner_recovery_names=binding.get('owner_recovery_names',[])
             root=adapter.slots.root
             atomic(root/'supervisor.json',json.dumps(dict(pid=os.getpid(),process_identity=process_identity(os.getpid()),cmdline_hex=Path('/proc/self/cmdline').read_bytes().hex(),source=binding['source_hash'],maintenance_operation=binding['operation'])),exclusive=True)
@@ -480,6 +500,9 @@ def run_recovery(config,args,controller):
             deadline=time.monotonic()+15
             while not stopped.is_set() and time.monotonic()<deadline and any(not b.clients for b in adapter.slots.backends.values()):stopped.wait(.05)
             if stopped.is_set() or any(not b.clients for b in adapter.slots.backends.values()):raise Rejected('Native attachment timeout; explicit recovery required')
+            if binding.get('verify_visible_clients'):
+                from .native_qualification import verify_clients
+                verify_clients(adapter,terminals)
             if identity(tree(controller))!=binding['controller_hash'] or identity(tree(Path(controller).parent))!=binding['source_hash']:
                 raise Rejected('Frozen source changed after startup intent; hold before probe')
             journal.append('CLIENTS_ATTACHED')
@@ -502,6 +525,8 @@ def run_recovery(config,args,controller):
             adapter.thinker_turn(COMMON+PROPOSAL_GUIDE+'\n'+reading+'Perform restricted hosted research and original-page inspection. Submit one coherent task preserving the exact original eight requirements and full core lineage. Current scoped instruction:\n'+receipt['scope_text'])
             tasks=store.db.execute('SELECT id FROM tasks WHERE owner=?',(binding['owner'],)).fetchall()
             if len(tasks)!=1:raise Rejected('Exactly one native maintenance submission required')
+            if binding.get('required_requirements') is not None and store.task(tasks[0]['id'])['packet']['requirements'] != binding['required_requirements']:
+                raise Rejected('Fresh qualification must preserve every exact original requirement including SCOPE')
             task_id=tasks[0]['id'];journal.append('TASK_SUBMITTED',dict(task=task_id,thread=adapter.slots.backends['thinker'].thread))
             adapter.hold_thinker_tools()
             engine.run(task_id)
